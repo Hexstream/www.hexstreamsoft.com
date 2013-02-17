@@ -1,0 +1,77 @@
+<html>
+  <head><title>anaphoric-variants</title>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1783234-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <p><a href="/">HexstreamSoft</a> &rarr; <a href="../">Projects</a> &rarr; anaphoric-variants</p>
+    <p>anaphoric-variants gives access to anaphoric variants of operators through one macro: ANAPHORIC. The user explicitly provides a variable name, preserving sanity, in contrast to the traditional use of an evil implicit variable (\"IT\"). Some operators can bind additional handy variables when explicitly requested. <b>This project was formerly called "explicit-anaphora".</b></p>
+
+<p>Here's a trivial example:
+<pre>
+(anaphoric tail
+  (when (member 'b '(a b c d))
+    (cdr tail)))
+==>
+(LET ((TAIL (MEMBER 'B '(A B C D))))
+  (DECLARE (IGNORABLE TAIL))
+  (WHEN TAIL (CDR TAIL)))
+=> (C D)
+</pre>
+</p>
+
+<p>And here's a bit more interesting one:
+<pre>
+(anaphoric (key :type type :index index)
+  (etypecase '(a b c)
+    (list (list* index type key))
+    (t (list index "Not a list." key))))
+==>
+(LET ((KEY '(A B C)))
+  (DECLARE (IGNORABLE KEY))
+  (ETYPECASE KEY
+    (LIST
+     (LET ((TYPE 'LIST))
+       (DECLARE (IGNORABLE TYPE))
+       (LET ((INDEX 0))
+         (DECLARE (IGNORABLE INDEX))
+         (LIST* INDEX TYPE KEY))))
+    (T
+     (LET ((TYPE 'T))
+       (DECLARE (IGNORABLE TYPE))
+       (LET ((INDEX 1))
+         (DECLARE (IGNORABLE INDEX))
+         (LIST INDEX "Not a list." KEY))))))
+=> (0 LIST A B C)
+</pre>
+</p>
+
+<p><b>To use anaphoric-variants, simply (:import-from #:anaphoric-variants #:anaphoric). Don't (:use)!</b></p>
+
+<p>Currently supported anaphoric variants:</br>
+<code>(and or cond if when unless prog1 case ccase ecase typecase ctypecase etypecase)</code></p>
+
+<p>It's also possible to make your own variants.
+Check <a href="https://github.com/Hexstream/anaphoric-variants/blob/master/definitions.lisp">definitions.lisp</a> in particular for inspiration.
+
+<!--<p><b><code>(ql:quickload "anaphoric-variants")</code></b> (October 2012 quicklisp dist (or later) required, run <code>(ql:update-dist "quicklisp")</code> first if necessary.)</p>-->
+
+    <p><a href="http://github.com/Hexstream/anaphoric-variants">The source code for anaphoric-variants is hosted on GitHub.</a></p>
+    <p><a href="https://github.com/Hexstream/anaphoric-variants/blob/master/UNLICENSE">anaphoric-variants is in the Public Domain.</a><br />Do anything you want with it.</p>
+    <h1><a href="anaphoric-variants_latest.tar.gz">Download latest anaphoric-variants.</a></h1>
+    <p><i>Version 1.0.1 released 22 september 2012.</i></p>
+
+    <blockquote class="twitter-tweet tw-align-center"><p>"New" library: anaphoric-variants gives access to (sane) anaphoric variants of operators through one macro: ANAPHORIC. <a href="http://t.co/yrwiXcwB" title="http://www.hexstreamsoft.com/projects/anaphoric-variants/">hexstreamsoft.com/projects/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/249607424414199808" data-datetime="2012-09-22T20:33:42+00:00">September 22, 2012</a></blockquote>
+</html>

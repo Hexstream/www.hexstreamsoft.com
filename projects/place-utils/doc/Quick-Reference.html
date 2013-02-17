@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+<title>Quick Reference - Place-utils Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="Place-utils Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Reference.html#Reference" title="Reference">
+<link rel="next" href="SETF_002dEXPANDERLET.html#SETF_002dEXPANDERLET" title="SETF-EXPANDERLET">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual documents place-utils, which is a Common Lisp library that
+provides a few utilities relating to setfable places.
+
+The project's home is `http://www.hexstreamsoft.com/projects/place-utils'.
+
+Originally authored by Jean-Philippe Paradis <hexstream@gmail.com>.
+
+This project is in the public domain.
+See the Unlicense appendix for details.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="Quick-Reference"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="SETF_002dEXPANDERLET.html#SETF_002dEXPANDERLET">SETF-EXPANDERLET</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Reference.html#Reference">Reference</a>
+<hr>
+</div>
+
+<h3 class="section">1.1 Quick Reference</h3>
+
+<p>Here are all the symbols exported by place-utils.
+
+   <p><table summary=""><tr align="left"><th valign="top">Type </th><th valign="top">Symbol </th><th valign="top">Description
+<br></th></tr><tr align="left"><td valign="top">Macro </td><td valign="top"><code>setf-expanderlet</code> </td><td valign="top">Introduce local setf-expanders. 
+<br></td></tr><tr align="left"><td valign="top"><br></td></tr><tr align="left"><td valign="top">Macro </td><td valign="top"><code>with-resolved-places</code> </td><td valign="top">Evaluate subforms once, then access repeatedly safely. 
+<br></td></tr><tr align="left"><td valign="top"><br></td></tr><tr align="left"><td valign="top"><br></td></tr><tr align="left"><td valign="top">Modify Macro </td><td valign="top"><code>updatef</code> </td><td valign="top">Like <code>setf</code>, except supply update functions<br>(to be called with old values) instead of new values. 
+<br></td></tr><tr align="left"><td valign="top"><br></td></tr><tr align="left"><td valign="top">Modify Macro </td><td valign="top"><code>bulkf</code> </td><td valign="top">Flexible mass updating of places.<br>An update function receives the old values as arguments<br>and returns the values to write back as multiple values. 
+<br></td></tr><tr align="left"><td valign="top"><br></td></tr><tr align="left"><td valign="top">Modify Macro </td><td valign="top"><code>funcallf</code> </td><td valign="top">Store into a place the result of calling<br>an update function with the old value of the place,<br>possibly along with additional regular arguments. 
+<br></td></tr><tr align="left"><td valign="top">Modify Macro </td><td valign="top"><code>applyf</code> </td><td valign="top">Same as <code>funcallf</code> except <code>apply</code> is used. 
+<br></td></tr><tr align="left"><td valign="top"><br></td></tr><tr align="left"><td valign="top"><!-- @item Accessor Modif @tab @code{proxyf} @tab Customize the behavior of a place. -->
+<!-- @item Function @tab @code{call-next-customizer} @tab Use in @code{proxyf} around customizers. -->
+<br></td></tr><tr align="left"><td valign="top">Accessor Modif </td><td valign="top"><code>cachef</code> </td><td valign="top">Compute the value of a place only when it's first read. 
+<br></td></tr><tr align="left"><td valign="top">Accessor Modif </td><td valign="top"><code>oldf</code> </td><td valign="top">Make the storing form of a place return old value(s). 
+<br></td></tr><tr align="left"><td valign="top">Accessor Modif </td><td valign="top"><code>readf</code> </td><td valign="top">Easily make a place work in non-place contexts. 
+<br></td></tr><tr align="left"><td valign="top">Accessor Modif </td><td valign="top"><code>tracef</code> </td><td valign="top">Output debug info when a particular place is accessed.
+   <br></td></tr></table>
+
+<p class="noindent">In this documentation, the term &ldquo;Modify Macro&rdquo; is used in a more
+general sense than traditional modify macros that have restrictions
+such as accepting only one place and then only as the first argument.
+
+<p class="noindent">An &ldquo;Accessor Modif[ier]&rdquo; is a place that:
+
+     <ol type=1 start=1>
+<li>is implemented as a macro;
+<li>takes at least one place as argument;
+<li>returns the setf-expander of this (these) inner place(s) with some modifications.
+        </ol>
+
+   </body></html>
+

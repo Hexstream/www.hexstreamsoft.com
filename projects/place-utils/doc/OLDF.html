@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+<title>OLDF - Place-utils Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="Place-utils Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Reference.html#Reference" title="Reference">
+<link rel="prev" href="CACHEF.html#CACHEF" title="CACHEF">
+<link rel="next" href="READF.html#READF" title="READF">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual documents place-utils, which is a Common Lisp library that
+provides a few utilities relating to setfable places.
+
+The project's home is `http://www.hexstreamsoft.com/projects/place-utils'.
+
+Originally authored by Jean-Philippe Paradis <hexstream@gmail.com>.
+
+This project is in the public domain.
+See the Unlicense appendix for details.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="OLDF"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="READF.html#READF">READF</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="CACHEF.html#CACHEF">CACHEF</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Reference.html#Reference">Reference</a>
+<hr>
+</div>
+
+<h3 class="section">1.8 <code>oldf</code></h3>
+
+<div class="defun">
+&mdash; Accessor Modifier: <b>oldf</b><var> place<a name="index-oldf-8"></a></var><br>
+<blockquote><p><var>oldf</var> simply modifies the behavior of the storing form of
+<var>place</var> so that it returns the old values of the place instead of
+the new ones.
+
+     <pre class="lisp">          (let ((a 5))
+            (values (incf (oldf a) 2)
+                    a))
+          &rArr; 5, 7
+          
+          (let ((a 5))
+            (values (setf (oldf a) 10)
+                    a))
+          &rArr; 5, 10
+          
+          (let ((list '(1 2 3)))
+            (values (push 0 (oldf list))
+                    list))
+          &rArr; (1 2 3), (0 1 2 3)
+</pre>
+        </blockquote></div>
+
+   </body></html>
+

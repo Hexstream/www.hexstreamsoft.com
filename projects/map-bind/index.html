@@ -1,0 +1,71 @@
+<html>
+  <head><title>MAP-BIND</title>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1783234-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <style>
+      .prologue {background: lightgoldenrodyellow}
+      .arg {background: #FFEEEE}
+      .val {background: #DDFFDD}
+      .lambda-body {background: #EEEEFF}
+    </style>
+  </head>
+  <body>
+    <p><a href="/">HexstreamSoft</a> &rarr; <a href="../">Projects</a> &rarr; map-bind</p>
+    <p>MAP-BIND is a macro that allows visual grouping of variables with
+their corresponding values (not necessarily 1:1) in calls to mapping
+operators when using an inline LAMBDA. It does so in a way that
+automatically supports virtually every existing and future mapping
+operator, all lambda keywords and FUNCALL/APPLY/MULTIPLE-VALUE-CALL
+variations.</p>
+
+<p>It does all this with a surprisingly simple <a href="https://github.com/Hexstream/map-bind/blob/master/main.lisp">implementation</a>!</p>
+
+<p>Here's an example designed to show many features at once:<br />
+  (color key: <span class="prologue">prologue</span> <span class="arg">arguments</span> <span class="val">values</span> <span class="lambda-body">lambda-body</span>)
+  <pre>
+(map-bind (<span class="prologue">multiple-value-call #'map 'vector</span>)
+    ((<span class="arg">symbol</span> <span class="val">#(a b c)</span>)
+     (<span class="arg">number</span> <span class="val">'(1 2 3)</span>)
+     ((<span class="arg">&rest others &key &allow-other-keys</span>) <span class="val">(values '(d e f) #(4 5 6))</span>)
+     ((<span class="arg">&aux (plus-ten (+ number 10))</span>)))
+  <span class="lambda-body">(list (1- number) symbol plus-ten (reverse others))</span>)
+==
+(<span class="prologue">multiple-value-call #'map 'vector</span>
+                     (lambda (<span class="arg">symbol</span> <span class="arg">number</span>
+                              <span class="arg">&rest others &key &allow-other-keys</span>
+                              <span class="arg">&aux (plus-ten (+ number 10))</span>)
+                       <span class="lambda-body">(list (1- number) symbol plus-ten (reverse others))</span>)
+                     <span class="val">#(a b c)</span>
+                     <span class="val">'(1 2 3)</span>
+                     <span class="val">(values '(d e f) #(4 5 6))</span>)
+=>
+#((0 A 11 (4 D)) (1 B 12 (5 E)) (2 C 13 (6 F)))
+</pre>
+</p>
+
+<p><b>To use map-bind, simply (:import-from #:map-bind #:map-bind). Don't (:use)!</b></p>
+
+<p><b><code>(ql:quickload "map-bind")</code></b></p>
+
+    <p><a href="http://github.com/Hexstream/map-bind">The source code for map-bind is hosted on GitHub.</a></p>
+    <p><a href="https://github.com/Hexstream/map-bind/blob/master/UNLICENSE">map-bind is in the Public Domain.</a><br />Do anything you want with it.</p>
+    <h1><a href="map-bind_latest.tar.gz">Download latest map-bind.</a></h1>
+    <p><i>Version 1.0 released 8 august 2012.</i></p>
+    <p><i>Added color in the example on 6 october 2012.</i></p>
+    <blockquote class="twitter-tweet tw-align-center"><p>New library: MAP-BIND macro visually groups variables/values in calls to mapping operators when using an inline LAMBDA. <a href="http://t.co/S6LuOjrN" title="http://www.hexstreamsoft.com/projects/map-bind/">hexstreamsoft.com/projects/map-</a></p>&mdash; Hexstream (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/233398221857255425" data-datetime="2012-08-09T03:04:07+00:00">August 9, 2012</a></blockquote>
+    <blockquote class="twitter-tweet tw-align-center"><p>Hilariously, turns out MAP-BIND also improves readability of REDUCE calls. Didn't design for this! Some actual usage: <a href="https://t.co/MoiB6LIZ" title="https://github.com/Hexstream/cartesian-product-case/blob/master/main.lisp">github.com/Hexstream/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/241231868240990210" data-datetime="2012-08-30T17:52:13+00:00">August 30, 2012</a></blockquote>
+    <blockquote class="twitter-tweet tw-align-center"><p>Added color to MAP-BIND example, highlighting semantics and correspondance between parts. The difference is dramatic! <a href="http://t.co/S6LuOjrN" title="http://www.hexstreamsoft.com/projects/map-bind/">hexstreamsoft.com/projects/map-</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/254600920187428865" data-datetime="2012-10-06T15:16:04+00:00">October 6, 2012</a></blockquote>
+  </body>
+</html>

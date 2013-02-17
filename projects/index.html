@@ -1,0 +1,198 @@
+<html>
+  <head><title>Original Public Domain Programming Projects (mostly Common Lisp) by Jean-Philippe Paradis</title>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1783234-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <style>
+      td {padding-top: 1.5em}
+      .ok {color: green}
+      .minor-fail {color: gray}
+      .fail {color: red}
+      .test-star {text-decoration: none}
+    </style>
+  </head>
+  <body>
+    <p><a href="/">HexstreamSoft</a> &rarr; Projects</p>
+    <p>These Common Lisp projects have been released into the Public Domain by their original author, Jean-Philippe Paradis. Do anything you want with them.</p>
+    <h1 id="ready-to-use">Ready-to-use projects (15)</h1>
+    <table>
+      <col />
+      <col />
+      <col />
+      <col width="50%"/>
+      <thead>
+	<th>Project name<br />Library type<br />Project complexity</th>
+	<th>Latest version</th>
+	<th><p><a href="http://www.quicklisp.org">Quicklisp</a> availability</p><p><a href="http://www.cliki.net/">cliki</a> page, <a href="http://common-lisp.net/project/cl-test-grid/library/">cl-test-grid results</a></p></th>
+	<th>Description</th>
+      </thead>
+      <tbody>
+	<tr>
+	  <td><a href="clhs/">clhs (trivial ASDF wrapper)</a><br />Installation helper<br />Simple</td>
+	  <td><a href="clhs/clhs_latest.tar.gz">0.6.1</a><br />23 sept 2012</td>
+	  <td>
+	    <p><code>(ql:quickload "clhs")</code></p>
+	    <p><a href="http://cliki.net/clhs ASDF wrapper">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/clhs.html"><span class="ok">All OK</span> <span class="minor-fail">except 1 version.</span></a><a href="#ignored-test-failure" class="test-star">*</a></p>
+	  </td>
+	  <td>Intends to make it even easier to install a copy of the <a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">CLHS</a> locally.</td>
+	</tr>
+	<tr>
+	  <td><a href="macro-level/">macro-level</a><br />Visual Macro<br />Embarassingly trivial</td>
+	  <td><a href="macro-level/macro-level_latest.tar.gz">1.0.1</a><br />4 oct 2012</td>
+	  <td>
+	    <p><code>(ql:quickload "macro-level")</code></p>
+	    <p><a href="http://cliki.net/macro-level">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/macro-level.html"><span class="ok">All OK</span></a></p>
+	  </td>
+	  <td>Saves on indentation while being more concise and direct.<br /><code>(macro-level ...)</code> == <code>(macrolet ((m () ...)) (m))</code></td>
+	</tr>
+	<tr>
+	  <td><a href="map-bind/">map-bind</a><br />Visual Macro<br />Trivial</td>
+	  <td><a href="map-bind/map-bind_latest.tar.gz">1.0</a><br />8 aug 2012</td>
+	  <td>
+	    <p><code>(ql:quickload "map-bind")</code></p>
+	    <p><a href="http://cliki.net/map-bind">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/map-bind.html"><span class="ok">All OK</span></a></p>
+	  </td>
+	  <td>Allows visual grouping of variables with their corresponding values (not necessarily 1:1) in calls to mapping operators when using an inline LAMBDA. Does so in a way that automatically supports virtually every existing and future mapping operator, all lambda keywords and FUNCALL/APPLY/MULTIPLE-VALUE-CALL variations.</td>
+	</tr>
+	<tr>
+	  <td><a href="positional-lambda/">positional-lambda</a><br />Concision Macro<br />Simple/Medium</td>
+	  <td><a href="positional-lambda/positional-lambda_latest.tar.gz">2.0</a><br />30 sept 2012</td>
+	  <td>
+	    <code><pre>(ql:quickload
+  "positional-lambda")</pre></code>
+	    <p><a href="http://cliki.net/positional-lambda">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/positional-lambda.html"><span class="ok">All OK</span></a></p>
+	  </td>
+	  <td>A concise, intuitive and flexible syntax for trivial lambdas that eschews explicit (and often contextually-redundant) naming of parameter variables in favor of positional references, with support for a used or ignored &amp;rest parameter and automatic declaration of ignored parameters when logical "gaps" are left in the positional references. Further convenience features are provided. </td>
+	</tr>
+	<tr>
+	  <td><a href="place-modifiers/">place-modifiers</a><br />Pun Macro<br />Medium</td>
+	  <td><a href="place-modifiers/place-modifiers_latest.tar.gz">2.1</a><br />22 oct 2012</td>
+	  <td>
+	    <code><pre>(ql:quickload
+  "place-modifiers")</pre></code>
+	    <p><a href="http://cliki.net/place-modifiers">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/place-modifiers.html"><span class="ok">All OK</span> <span class="minor-fail">except 1 version.</span></a><a href="#ignored-test-failure" class="test-star">*</a></p>
+	  </td>
+	  <td>Essentially gives access to hundreds of modify-macros through one single macro: MODIFY.</td>
+	</tr>
+	<tr>
+	  <td><a href="anaphoric-variants/">anaphoric-variants</a><br />Operator Overlay Macro<br />Simple</td>
+	  <td><a href="anaphoric-variants/anaphoric-variants_latest.tar.gz">1.0.1</a><br />22 sept 2012</td>
+	  <td>
+	    <code><pre>(ql:quickload
+  "anaphoric-variants")</pre></code>
+	    <p><a href="http://cliki.net/anaphoric-variants">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/anaphoric-variants.html"><span class="ok">All OK</span></a></p>
+	  </td>
+	  <td>Gives access to anaphoric variants of operators through one macro: ANAPHORIC. The user explicitly provides a variable name, preserving sanity, in contrast to the traditional use of an evil implicit variable ("IT"). Some operators can bind additional handy variables when explicitly requested.</td>
+	</tr>
+	<tr>
+	  <td><a href="cartesian-product-switch/">cartesian-product-switch</a><br />Combinations Macro<br />Simple</td>
+	  <td><a href="cartesian-product-switch/cartesian-product-switch_latest.tar.gz">2.0</a><br />2 sept 2012</td>
+	  <td>
+	    <code><pre>(ql:quickload
+  "cartesian-product-switch")</pre></code>
+	    <p><a href="http://cliki.net/cartesian-product-switch">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/cartesian-product-switch.html"><span class="ok">All OK</span></a></p>
+	  </td>
+	  <td>Chooses the appropriate form to execute according to the combined results of multiple tests. This is a straightforward and efficient alternative to the convoluted ad-hoc conditionals one might otherwise resort to.</td>
+	</tr>
+	<tr>
+	  <td><a href="enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a><br />Wrapper Macro<br />Embarassingly trivial</td>
+	  <td><a href="enhanced-multiple-value-bind/enhanced-multiple-value-bind_latest.tar.gz">1.0.1</a><br />23 oct 2012</td>
+	  <td>
+	    <code><pre>(ql:quickload
+"enhanced-multiple-value-bind")</pre></code>
+	    <p><a href="http://cliki.net/enhanced-multiple-value-bind">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/enhanced-multiple-value-bind.html"><span class="ok">All OK</span></a></p>
+	  </td>
+	  <td>Provides an enhanced MULTIPLE-VALUE-BIND macro that adds support for lambda keywords by expanding to a MULTIPLE-VALUE-CALL when necessary. This makes catching multiple-value &amp;rest and &amp;key much more lightweight and convenient. A MULTIPLE-VALUE-&amp;BIND alias is supported.</td>
+	</tr>
+	<tr>
+	  <td><a href="enhanced-eval-when/">enhanced-eval-when</a><br />Wrapper Macro<br />Embarassingly trivial</td>
+	  <td><a href="enhanced-eval-when/enhanced-eval-when_latest.tar.gz">1.0</a><br />29 oct 2012</td>
+	  <td>
+	    <code><pre>(ql:quickload
+  "enhanced-eval-when")</pre></code>
+	    <p><a href="http://cliki.net/enhanced-eval-when">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/enhanced-eval-when.html"><span class="ok">All OK</span></a></p>
+	  </td>
+	  <td>Provides an enhanced EVAL-WHEN macro that supports<br /><code>(eval-when t ...)</code> as a shorthand for<br /><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code>, addressing concerns about verbosity. An ENHANCED-EVAL-WHEN alias is also supported, as well as an EVAL-ALWAYS macro and package nickname, for good measure.</td>
+	</tr>
+	<tr>
+	  <td><a href="parse-number-range/">parse-number-range</a><br />Thematic Utilities<br />Simple</td>
+	  <td><a href="parse-number-range/parse-number-range_latest.tar.gz">1.0</a><br />26 oct 2012</td>
+	  <td>
+	    <code><pre>(ql:quickload
+  "parse-number-range")</pre></code>
+	    <p><a href="http://cliki.net/parse-number-range">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/parse-number-range.html"><span class="ok">All OK</span> <span class="minor-fail">except 1 version.</span></a></p>
+	  </td>
+	  <td>Parses LOOP's convenient "for-as-arithmetic" syntax into 5 simple values: from, to, limit-kind (:inclusive, :exclusive or nil if unbounded), by (step) and direction (+ or -)). Further related utilities are provided. Intended for easy implementation of analogous functionality in other constructs.</td>
+	</tr>
+	<tr>
+	  <td><a href="incognito-keywords/">incognito-keywords</a><br />Independent Cooperation<br />Trivial</td>
+	  <td><a href="incognito-keywords/incognito-keywords_latest.tar.gz">1.1</a><br />21 dec 2012</td>
+	  <td>
+	    <code><pre>(ql:quickload
+  "incognito-keywords")</pre></code>
+	    <small><b>(Updated in December dist,<br />
+		from version 1.0.1 to 1.1)</b></small>
+	    <p><a href="http://cliki.net/incognito-keywords">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/incognito-keywords.html"><span class="ok">All OK</span></a></p>
+	  </td>
+	  <td>Introduces a new kind of keyword that looks just like any non-keyword symbol and allows safe usage of convenient but clashy symbol names by multiple libraries without conflicts through sharing. Some names that might benefit are (alist blist plist macro operator index &amp;doc &amp;decl &amp;rest+ &amp;destructure &amp;ignored &amp;ignorable).</td>
+	</tr>
+	<tr>
+	  <td><a href="bubble-operator-upwards/">bubble-operator-upwards</a><br />Utility Function<br />Trivial</td>
+	  <td><a href="bubble-operator-upwards/bubble-operator-upwards_latest.tar.gz">1.0</a><br />4 nov 2012</td>
+	  <td>
+	    <code><pre>(ql:quickload
+  "bubble-operator-upwards")</pre></code>
+	    <p><a href="http://cliki.net/bubble-operator-upwards">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/bubble-operator-upwards.html"><span class="ok">All OK</span></a><a href="#ignored-test-failure" class="test-star">*</a></p>
+	  </td>
+	  <td>Demultiplexes all alternative branches in a form by way of cartesian product. This operation is notably useful for easy implementation of certain kinds of shorthand notations in macros. A cartesian-product function is also exported, as it's needed to implement the main function.</td>
+	</tr>
+	<tr>
+	  <td><a href="multiple-value-variants/">multiple-value-variants</a><br />Operator Overlay Macro<br />Simple/Medium</td>
+	  <td><a href="multiple-value-variants/multiple-value-variants_latest.tar.gz">1.0</a><br />10 nov 2012</td>
+	  <td>
+	    <code><pre>(ql:quickload
+  "multiple-value-variants")</pre></code>
+	    <p><a href="http://cliki.net/multiple-value-variants">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/multiple-value-variants.html"><span class="ok">All OK</span></a></p>
+	  </td>
+	  <td>Gives access to multiple-value variants of operators through one macro: MULTIPLE-VALUE. There are built-in variants for some standard operators; it's easy to create your own variants for other operators. The multiple-value mapping operators are especially useful.</td>
+	</tr>
+	<tr>
+	  <td><a href="symbol-namespaces/">symbol-namespaces</a><br />Data Structure<br />Simple</td>
+	  <td><a href="symbol-namespaces/symbol-namespaces_latest.tar.gz">1.0</a><br />9 dec 2012</td>
+	  <td>
+	    <code><pre>(ql:quickload
+  "symbol-namespaces")</pre></code>
+	    <small><b>(New in December dist)</b></small>
+	    <p><a href="http://cliki.net/symbol-namespaces">cliki</a>, <a href="http://common-lisp.net/project/cl-test-grid/library/symbol-namespaces.html"><span class="ok">All OK</span></a></p></td>
+	  <td>Defines a new kind of package that's named by a symbol rather than a string and that maps from existing symbols to their respective "implicitly managed" counterparts. The motivating use-case is to conceptually allow multiple definitions of the same kind on a single symbol, without conflicts.</td>
+	</tr>
+	<tr>
+	  <td><a href="place-utils/">place-utils</a><br />Thematic Utilities<br />Simple</td>
+	  <td><a href="place-modifiers/place-modifiers_latest.tar.gz">0.1</a><br />16 april 2011</td>
+	  <td><code>(ql:quickload "place-utils")</code></td>
+	  <td>Provides a few utilities relating to setfable places.</td>
+	</tr>
+      </tbody>
+    </table>
+    <p>(Don't get fooled by the low complexity of these projects, I do have many complex projects (some of which I considered "complete" and used successfully for years before open-sourcing), but they're in-progress and undocumented.)</p>
+
+    <p id="ignored-test-failure"><small>* A star besides a cl-test-grid result means I ignored a failed test in the tally because I believe the failure did not originate with my library but rather with the test harness itself.<br>I also consistently ignored the ecl-12.7.1-ce653d88-linux-x86-lisp-to-c crash because it would appear there is a problem with that specific version.</small></p>
+    <h1 id="work-in-progress">Work-in-progress projects (~50)</h1>
+    <p>I have many more published libraries in <a href="http://github.com/Hexstream">my Github account</a>, however those are as of yet unpolished, undocumented and unsupported. I used to have many interesting private projects in various states of (un)completion pending public release, but after a change of philosophy I decided to work entirely in public, publishing all my ongoing projects on Github regardless of their state of completion (even project stubs), with many changes to my development process to come, so I no longer have private "secret" projects. My projects have traditionally been published under an MIT license but I'm slowly converting everything to Public Domain for your enjoyment.</p>
+    <p><i>This page was last updated on 6 january 2013.</i></p>
+      <blockquote class="twitter-tweet tw-align-center"><p>Working on flexiconf, unconv obj DB: will support direct def of circ deps, live editable views, incomplete/redundant/invalid data tolerance.</p>&mdash; Hexstream (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226405539381391360" data-datetime="2012-07-20T19:57:41+00:00">July 20, 2012</a></blockquote></p>
+  <blockquote class="twitter-tweet tw-align-center"><p>I have ~50 WIP projects. Won't fit in my head anymore, so I'll need to rethink how to work effectively again, or I'll never finish anything.</p>&mdash; Hexstream (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229655236992712704" data-datetime="2012-07-29T19:10:49+00:00">July 29, 2012</a></blockquote>
+  <blockquote class="twitter-tweet tw-align-center"><p>I used to have most projects public, some private, but there are inherent complexities. Everything public now, only successes count, really!</p>&mdash; Hexstream (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229654115393863680" data-datetime="2012-07-29T19:06:22+00:00">July 29, 2012</a></blockquote>
+  </body>
+</html>

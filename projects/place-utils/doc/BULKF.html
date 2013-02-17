@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+<title>BULKF - Place-utils Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="Place-utils Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Reference.html#Reference" title="Reference">
+<link rel="prev" href="UPDATEF.html#UPDATEF" title="UPDATEF">
+<link rel="next" href="FUNCALLF_002fAPPLYF.html#FUNCALLF_002fAPPLYF" title="FUNCALLF/APPLYF">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual documents place-utils, which is a Common Lisp library that
+provides a few utilities relating to setfable places.
+
+The project's home is `http://www.hexstreamsoft.com/projects/place-utils'.
+
+Originally authored by Jean-Philippe Paradis <hexstream@gmail.com>.
+
+This project is in the public domain.
+See the Unlicense appendix for details.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="BULKF"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="FUNCALLF_002fAPPLYF.html#FUNCALLF_002fAPPLYF">FUNCALLF/APPLYF</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="UPDATEF.html#UPDATEF">UPDATEF</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Reference.html#Reference">Reference</a>
+<hr>
+</div>
+
+<h3 class="section">1.5 <code>bulkf</code></h3>
+
+<div class="defun">
+&mdash; Modify Macro: <b>bulkf</b><var> update-function-form &amp;rest mode-markers-and-items &rArr; results<a name="index-bulkf-4"></a></var><br>
+<blockquote><p><code>bulkf</code> allows mass updating of places.
+
+        <p><var>update-function-form</var> is evaluated first to produce
+<var>update-function</var>. The arguments and return values of this
+function depend on <var>mode-markers-and-items</var> and are described
+below.
+
+        <p><var>mode-markers-and-items</var> is a list of <var>mode-markers</var> and
+<var>items</var> to be processed from left to right at
+macroexpansion-time. A <var>mode-marker</var> is one of the symbols
+<code>:access</code>, <code>:read</code>, <code>:write</code> or <code>:pass</code>. Any other
+form is an <var>item</var>. Whenever a <var>mode-marker</var> is encountered,
+the mode with that name becomes the current mode and remains so until
+the next <var>mode-marker</var>. The current mode at the start of
+<var>mode-markers-and-items</var> is <code>:access</code> mode. There are 4
+different types of <var>items</var>, corresponding to the 4 different modes
+that can be the current mode at the time the <var>item</var> is
+encountered. Here are the semantics of each type of item:
+
+          <dl>
+<dt><code>:access</code><dd><var>item</var> is a place that will be both read from and written to. At
+runtime, the subforms of the place are evaluated and the place is
+read. The primary value is contributed as an additional argument to
+<var>update-function</var>. <var>update-function</var> also returns an
+additional value that will be written back into the place (reusing the
+temporary variables bound to the results of the subforms). 
+<br><dt><code>:read</code><dd><var>item</var> is a place that will be read from. At runtime, the subforms
+of the place are evaluated and the place is read. The primary value is
+contributed as an additional argument to <var>update-function</var>. 
+<br><dt><code>:write</code><dd><var>item</var> is a place that will be written to. <var>update-function</var>
+returns an additional value that will be written into the place. The
+evaluation of the subforms of the place happens at the same time as it
+would have happened if the place had been read from. 
+<br><dt><code>:pass</code><dd><var>item</var> is a form to be evaluated normally. Its primary value is
+passed as an additional argument to <var>update-function</var>. 
+</dl>
+
+        <p>If <var>update-function</var> returns more values than there are places to
+write to (<code>:access</code> and <code>:write</code> <var>items</var>), the
+additional values are ignored. If it returns less values than there
+are of these places, the remaining ones are set to
+<code>nil</code>. <code>bulkf</code> returns the values that were written into
+these places. This might be more or less values than were returned by
+<var>update-function</var>. If a place to be written to has more than one
+store variable, the remaining such variables are set to <code>nil</code>
+prior to evaluation of the storing form.
+
+        <p><code>bulkf</code> accepts an optional unevaluated argument before
+<var>update-function-form</var> (as very first argument). This must be the
+symbol <var>funcall</var> or <var>apply</var> and determines which operator will
+be used to call the <var>update-function</var> with its arguments. The
+default is <code>funcall</code>, which is expected to be used an
+overwhelming majority of the time. This is the reason this argument
+has not been made a normal required parameter.
+
+        <p><code>bulkf</code> is very versatile and can be used to easily implement
+many different types of modify macros. Here are just a few examples:
+
+     <pre class="lisp">          (defun bulkf-transfer (quantity source destination)
+            (values (- source quantity)
+                    (+ destination quantity)))
+          
+          (defmacro transferf (quantity source destination)
+            `(bulkf #'bulkf-transfer
+                    :pass ,quantity
+                    :access ,source ,destination))
+          
+          (let ((account-amounts (list 35 90)))
+            (multiple-value-call #'values
+              (transferf 10
+                         (first account-amounts)
+                         (second account-amounts))
+              account-amounts))
+          &rArr; 25, 100, (25 100)
+          
+          
+          (defun bulkf-init (value number-of-places)
+            (values-list (make-list number-of-places
+                                    :initial-element value)))
+          
+          (defmacro initf (value &amp;rest places)
+            `(bulkf #'bulkf-init
+                    :pass ,value ,(length places)
+                    :write ,@places))
+          
+          (let (a b (c (make-list 3 :initial-element nil)))
+            (initf 0 a b (second c))
+            (values a b c))
+          &rArr; 0, 0, (NIL 0 NIL)
+          
+          
+          (defun bulkf-spread (spread-function sum-function
+                               &amp;rest place-values)
+            (values-list
+             (let ((number-of-places (length place-values)))
+               (make-list number-of-places
+                          :initial-element
+                          (funcall spread-function
+                                   (apply sum-function place-values)
+                                   number-of-places)))))
+          
+          (defmacro spreadf (spread-function sum-function &amp;rest places)
+            `(bulkf #'bulkf-spread :pass ,spread-function ,sum-function
+                    :access ,@places))
+          
+          (let ((a 5) (b (list 10 18 20)))
+            (spreadf #'/ #'+ a (first b) (second b))
+            (values a b))
+          &rArr; 11, (11 11 20)
+          
+          (let ((a 2) (b (list 2 4 8)))
+            (spreadf #'* #'* a (first b) (second b) (third b))
+            (values a b))
+          &rArr; 512, (512, 512, 512)
+          
+          
+          (defun bulkf-map (function &amp;rest place-values)
+            (values-list (mapcar function place-values)))
+          
+          (defmacro mapf (function &amp;rest places)
+            `(bulkf #'bulkf-map :pass ,function :access ,@places))
+          
+          (let ((a 0) (b 5) (c (list 10 15)))
+            (values (multiple-value-list (mapf #'1+ a b (second c)))
+                    a b c))
+          &rArr; (1 6 16), 1, 6, (10 16)
+          
+          
+          (defun bulkf-steal (sum-function steal-function
+                              initial-assets &amp;rest target-assets)
+            (let (stolen leftovers)
+              (mapc (lambda (assets)
+                      (multiple-value-bind (steal leftover)
+                          (funcall steal-function assets)
+                        (push steal stolen)
+                        (push leftover leftovers)))
+                    target-assets)
+              (values-list
+               (cons (apply sum-function
+                            (cons initial-assets (nreverse stolen)))
+                     (nreverse leftovers)))))
+          
+          (defmacro stealf (sum-function steal-function hideout &amp;rest targets)
+            `(bulkf #'bulkf-steal :pass ,sum-function ,steal-function
+                    :access ,hideout ,@targets))
+          
+          (let ((cave :initial-assets)
+                (museum '(:paintings :collection))
+                (house 20000)
+                (triplex (list :nothing-valuable :random-stuff 400)))
+            (stealf #'list
+                    (lambda (assets)
+                      (if (eq assets :nothing-valuable)
+                          (values nil assets)
+                          (values assets (if (numberp assets) 0 nil))))
+                    cave museum house (first triplex) (second triplex) (third triplex))
+            (values cave museum house triplex))
+          &rArr;
+          (:INITIAL-ASSETS (:PAINTINGS :COLLECTION) 20000 NIL :RANDOM-STUFF 400)
+          NIL
+          0
+          (:NOTHING-VALUABLE NIL 0)
+</pre>
+        </blockquote></div>
+
+   </body></html>
+

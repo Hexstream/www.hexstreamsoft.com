@@ -1,0 +1,64 @@
+<html>
+  <head><title>CARTESIAN-PRODUCT-SWITCH</title>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1783234-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <p><a href="/">HexstreamSoft</a> &rarr; <a href="../">Projects</a> &rarr; cartesian-product-switch</p>
+    <p>CARTESIAN-PRODUCT-SWITCH is a macro for choosing the appropriate form to execute according to the combined results of multiple tests. This is a straightforward and efficient alternative to the convoluted ad-hoc conditionals one might otherwise resort to.</p>
+
+    <p>cartesian-product-switch was born as cartesian-product-case but a fairly obvious limitation was soon discovered, prompting a redesign and library name change. Further features and extensibility were also added.</p>
+
+<p>Here's an example:
+<pre>(let ((manner :flip) (direction :backward))
+  (cartesian-product-switch ((case manner
+                               :walk
+                               :flip)
+                             (case direction
+                               :forward
+                               :in-place
+                               :backward))
+    "Walking..."
+    (error "Walking in-place is too boring!")
+    "Awkwardly walking backwards..."
+    "Frontflip!"
+    "Jumping in-place."
+    "Backflip!"
+    (t (error "Don't know how to ~A while going ~A." manner direction))))
+</pre>
+</p>
+
+    <p><b>To use cartesian-product-switch, simply (:import-from #:cartesian-product-switch #:cartesian-product-switch). Don't (:use)!</b></p>
+
+    <p>Currently supported testclause kinds:</br>
+      <code>(case ccase ecase typecase ctypecase etypecase if cond svref)</code></p>
+
+    <p>It's also possible to make your own kinds. Check <a href="https://github.com/Hexstream/cartesian-product-switch/blob/master/definitions.lisp">definitions.lisp</a> in particular for inspiration. In a nutshell, call (cartesian-product-switch:define operator (args) body), where BODY must return 3 values:</p>
+
+    <p>SELECTION-FORM:</br>A form evaluating to a non-negative integer less than SELECTION-COUNT.</p>
+
+    <p>SELECTION-COUNT:</br>The number of possibilities this testclause introduces.</p>
+
+    <p>DEFAULTP:</br>If true, then the SELECTION-FORM can evaluate to NIL to trigger the "default".</p>
+
+    <p><b><code>(ql:quickload "cartesian-product-switch")</code></b> (September 2012 quicklisp dist (or later) required, run <code>(ql:update-dist "quicklisp")</code> first if necessary.)</p>
+
+    <p><a href="http://github.com/Hexstream/cartesian-product-switch">The source code for cartesian-product-switch is hosted on GitHub.</a></p>
+    <p><a href="https://github.com/Hexstream/cartesian-product-switch/blob/master/UNLICENSE">cartesian-product-switch is in the Public Domain.</a><br />Do anything you want with it.</p>
+    <h1><a href="cartesian-product-switch_latest.tar.gz">Download latest cartesian-product-switch.</a></h1>
+    <p><i>Version 2.0 released 2 september 2012.</i></p>
+
+    <blockquote class="twitter-tweet tw-align-center"><p>New library: cartesian-product-switch chooses appropriate form to execute according to the results of multiple tests. <a href="http://t.co/5HxEp59r" title="http://www.hexstreamsoft.com/projects/cartesian-product-switch/">hexstreamsoft.com/projects/</a></p>&mdash; Hexstream (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/242159695354294272" data-datetime="2012-09-02T07:19:05+00:00">September 2, 2012</a></blockquote>
+</html>

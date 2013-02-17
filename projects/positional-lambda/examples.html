@@ -1,0 +1,40 @@
+<p><a href="./">Back to positional-lambda homepage.</a><p>
+<p>This page is ugly and incomplete. Writing HTML and CSS by hand is too depressing. I'll make a great documentation system and update my old HTML and CSS libraries and then come back to this... Thank you for your patience!</p><table><thead><tr><th>plambda</th><th>Macroexpansion</th></tr></thead><tbody><tr><td><pre>
+(plambda (values :3 :1))</pre></td><td><pre>
+(LAMBDA (#:USED1-992 #:IGNORED2-993 #:USED3-991)
+  (DECLARE (IGNORE #:IGNORED2-993))
+  (VALUES #:USED3-991 #:USED1-992))</pre></td></tr><tr><td><pre>
+(plambda (list* :2 :1 :rest))</pre></td><td><pre>
+(LAMBDA (#:USED1-995 #:USED2-994 &REST #:USED-REST-996)
+  (LIST* #:USED2-994 #:USED1-995 #:USED-REST-996))</pre></td></tr><tr><td><pre>
+(plambda :rest (list :2 :1))</pre></td><td><pre>
+(LAMBDA (#:USED1-998 #:USED2-997 &REST #:IGNORED-REST-999)
+  (DECLARE (IGNORE #:IGNORED-REST-999))
+  (LIST #:USED2-997 #:USED1-998))</pre></td></tr><tr><td><pre>
+(plambda :3 :2)</pre></td><td><pre>
+(LAMBDA (#:IGNORED1-1001 #:USED2-1000 #:IGNORED3-1002)
+  (DECLARE (IGNORE #:IGNORED1-1001 #:IGNORED3-1002))
+  #:USED2-1000)</pre></td></tr><tr><td><pre>
+(plambda :3 (mapcar :1 :rest))</pre></td><td><pre>
+(LAMBDA (#:USED1-1003 #:IGNORED2-1005 #:IGNORED3-1006 &REST #:USED-REST-1004)
+  (DECLARE (IGNORE #:IGNORED2-1005 #:IGNORED3-1006))
+  (MAPCAR #:USED1-1003 #:USED-REST-1004))</pre></td></tr><tr><td><pre>
+(plambda :2)</pre></td><td><pre>
+(LAMBDA (#:IGNORED1-1008 #:USED2-1007)
+  (DECLARE (IGNORE #:IGNORED1-1008))
+  #:USED2-1007)</pre></td></tr><tr><td><pre>
+(plambda (print :1) :2)</pre></td><td><pre>
+(LAMBDA (#:USED1-1009 #:USED2-1010) (PRINT #:USED1-1009) #:USED2-1010)</pre></td></tr><tr><td><pre>
+(plambda :2 (list :1 (:let (random))))</pre></td><td><pre>
+(LET ((#:PRECOMPUTED1-1012 (RANDOM)))
+  (LAMBDA (#:USED1-1011 #:IGNORED2-1013)
+    (DECLARE (IGNORE #:IGNORED2-1013))
+    (LIST #:USED1-1011 #:PRECOMPUTED1-1012)))</pre></td></tr><tr><td><pre>
+(plambda (write :1 :base (:cache *print-base*)))</pre></td><td><pre>
+(LET ((#:CACHE1-1015 NIL) (#:CACHEDP1-1016 NIL))
+  (LAMBDA (#:USED1-1014)
+    (WRITE #:USED1-1014 :BASE
+           (IF #:CACHEDP1-1016
+               #:CACHE1-1015
+               (PROG1 (SETF #:CACHE1-1015 *PRINT-BASE*)
+                 (SETF #:CACHEDP1-1016 T))))))</pre></td></tr></tbody></table>

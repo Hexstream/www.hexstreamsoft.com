@@ -1,0 +1,52 @@
+<html>
+  <head><title>enhanced-eval-when</title>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1783234-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <p><a href="/">HexstreamSoft</a> &rarr; <a href="../">Projects</a> &rarr; enhanced-eval-when</p>
+
+    <p>enhanced-eval-when provides an enhanced EVAL-WHEN macro that supports<br /><code>(eval-when t ...)</code> as a shorthand for<br /><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code>, addressing concerns about verbosity. An ENHANCED-EVAL-WHEN alias is also supported, as well as an EVAL-ALWAYS macro and package nickname, for good measure.</p>
+
+    <p>As EVAL-WHEN with all situations specified is used an overwhelming majority of the time by most users, these shorthands can really come handy.</p>
+
+
+    <p>The recommended way to use enhanced-eval-when is to put <code>(:shadowing-import-from #:enhanced-eval-when #:eval-when)</code> in one's DEFPACKAGE.</p>
+
+    <p>For those who would object to such shadowing, two alternatives are:</p>
+
+    <pre>(:import-from #:enhanced-eval-when #:enhanced-eval-when)
+;; and
+(:import-from #:eval-always #:eval-always)
+;; The name used for ASDF is still enhanced-eval-when.</pre>
+
+    <p>As always, it's also possible to fully qualify symbols instead, with:</p>
+    <pre>enhanced-eval-when:eval-when
+e-eval-when:eval-when
+eval-always:eval-always</pre>
+
+    <p><b>Don't (:use)!</b></p>
+
+<!-- <p><b><code>(ql:quickload "enhanced-eval-when")</code></b></p> -->
+
+    <p><a href="http://github.com/Hexstream/enhanced-eval-when">The source code for enhanced-eval-when is hosted on GitHub.</a></p>
+    <p><a href="https://github.com/Hexstream/enhanced-eval-when/blob/master/UNLICENSE">enhanced-eval-when is in the Public Domain.</a><br />Do anything you want with it.</p>
+    <h1><a href="enhanced-eval-when_latest.tar.gz">Download latest enhanced-eval-when.</a></h1>
+    <p><i>Version 1.0 released 29 october 2012.</i></p>
+
+    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (eval-when t ...) == (eval-when (:compile-toplevel :load-toplevel :execute) ...) would help preserve everyone's sanity.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/248869664938156032" data-datetime="2012-09-20T19:42:06+00:00">September 20, 2012</a></blockquote>
+    <blockquote class="twitter-tweet tw-align-center"><p>New library: enhanced-eval-when adds (eval-when t ...) == (eval-when (:compile-toplevel :load-toplevel :execute) ...) <a href="http://t.co/6i872ILE" title="http://www.hexstreamsoft.com/projects/enhanced-eval-when/">hexstreamsoft.com/projects/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/262996047993901056" data-datetime="2012-10-29T19:15:18+00:00">October 29, 2012</a></blockquote>
+  </body>
+</html>

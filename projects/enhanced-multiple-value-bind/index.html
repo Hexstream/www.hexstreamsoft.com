@@ -1,0 +1,98 @@
+<html>
+  <head><title>enhanced-multiple-value-bind</title>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1783234-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <p><a href="/">HexstreamSoft</a> &rarr; <a href="../">Projects</a> &rarr; enhanced-multiple-value-bind</p>
+
+    <p>enhanced-multiple-value-bind provides an enhanced MULTIPLE-VALUE-BIND macro that adds support for lambda keywords by expanding to a MULTIPLE-VALUE-CALL when necessary. This makes catching multiple-value &amp;rest and &amp;key much more lightweight and convenient. A MULTIPLE-VALUE-&amp;BIND alias is supported.</p>
+
+    <p>Some problems with writing out MULTIPLE-VALUE-CALL with an inline
+LAMBDA, especially with a big LAMBDA body and trivial form arguments
+to m-v-c, compared to MULTIPLE-VALUE-BIND, are:
+      <ul>
+	<li>"unnatural" order of evaluation (skip over LAMBDA, evaluate values forms, then "come back" for LAMBDA body);</li>
+	<li>significant extra indentation for the body.</li>
+      </ul>
+    </p>
+
+    <p>Multiple-value &amp;rest and &amp;key are currently not being used a lot, but
+the awkwardness of using them up to now might have something to do
+with this state of affairs. Their usefulness and convenience should
+now be reassessed.</p>
+
+    <p>If enhanced-mvb:MULTIPLE-VALUE-BIND is invoked without apparent lambda
+keywords (symbols beginning with "&amp;"), then it simply expands to
+cl:MULTIPLE-VALUE-BIND:</p>
+
+<pre>(enhanced-mvb:multiple-value-bind (a b c) (values 1 2 3)
+  ...)
+==
+(multiple-value-bind (a b c) (values 1 2 3)
+  ...)</pre>
+
+    <p>Else, it simply expands to a MULTIPLE-VALUE-CALL with inline LAMBDA:</p>
+
+    <pre>(enhanced-mvb:multiple-value-bind (a b &amp;rest rest) (values 1 2 3)
+  ...)
+==
+(multiple-value-call (lambda (a b &amp;rest rest)
+                       ...)
+  (values 1 2 3))</pre>
+
+    <p>An interesting consequence of this is that it's easy to accept an
+      exact number of return values (though I'm not sure why you'd want to):</p>
+
+    <pre>(multiple-value-bind (a b c &amp;optional) (values 1 2 3 4))
+error &rarr; "Invalid number of arguments: 4"</pre>
+
+    <p>This follows the same principle as VALUES in FUNCTION type
+specifiers. <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_values.htm">CLHS VALUES (type specifier)</a>.</p>
+
+    <p><b>To use enhanced-multiple-value-bind</b>, either refer to the provided MULTIPLE-VALUE-BIND directly:</p>
+
+<pre>;; A bit long...
+(enhanced-multiple-value-bind:multiple-value-bind
+      (x y &amp;rest others)
+    (values 1 2 3 4)
+  (values (* x y) others))
+&rarr; 2, (3 4)
+
+;; Much more managable package nickname.
+(enhanced-mvb:multiple-value-bind (x y &amp;rest others)
+    (values 1 2 3 4)
+  (values (* x y) others))
+&rarr; 2, (3 4)</pre>
+
+Or <code>(:shadowing-import-from #:enhanced-multiple-value-bind
+#:multiple-value-bind)</code> in your DEFPACKAGE (or with the package
+nickname, again). <b>Don't <code>(:use)</code></b>!
+
+<p>enhanced-multiple-value-bind also exports MULTIPLE-VALUE-&amp;BIND, with
+exactly the same functionality, so you can (:import-from
+#:enhanced-multiple-value-bind #:multiple-value-&amp;bind) in your DEFPACKAGE
+instead if you want.</p>
+
+<!-- <p><b><code>(ql:quickload "enhanced-multiple-value-bind")</code></b></p> -->
+
+    <p><a href="http://github.com/Hexstream/enhanced-multiple-value-bind">The source code for enhanced-multiple-value-bind is hosted on GitHub.</a></p>
+    <p><a href="https://github.com/Hexstream/enhanced-multiple-value-bind/blob/master/UNLICENSE">enhanced-multiple-value-bind is in the Public Domain.</a><br />Do anything you want with it.</p>
+    <h1><a href="enhanced-multiple-value-bind_latest.tar.gz">Download latest enhanced-multiple-value-bind.</a></h1>
+    <p><i>Version 1.0.1 released 23 october 2012.</i></p>
+
+    <blockquote class="twitter-tweet tw-align-center"><p>"New" library: enhanced-multiple-value-bind (formerly "fixed-multiple-value-bind") adds support for lambda keywords. <a href="http://t.co/iur8UnPI" title="http://www.hexstreamsoft.com/projects/enhanced-multiple-value-bind/">hexstreamsoft.com/projects/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/260809808695922688" data-datetime="2012-10-23T18:27:58+00:00">October 23, 2012</a></blockquote>
+  </body>
+</html>

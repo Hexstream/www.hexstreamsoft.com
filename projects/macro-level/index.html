@@ -1,0 +1,71 @@
+<html>
+  <head><title>MACRO-LEVEL</title>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1783234-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <style>.saved-indentation {background: #FFEEEE}</style>
+  </head>
+  <body>
+    <p><a href="/">HexstreamSoft</a> &rarr; <a href="../">Projects</a> &rarr; macro-level</p>
+    <p>MACRO-LEVEL is an embarassingly trivial convenience macro that saves on indentation while being more concise and direct.</p>
+
+<p><pre>(macro-level
+  ...)
+==
+;; Canonical indentation. MACRO-LEVEL saves <span class="saved-indentation">11 spaces</span>.
+(macrolet ((m ()
+  <span class="saved-indentation">           </span>...))
+  (m))
+==
+;; "Miser" indentation. MACRO-LEVEL saves <span class="saved-indentation">5 spaces</span>.
+(macrolet
+    ((m ()
+  <span class="saved-indentation">     </span>...))
+  (m))</pre></p>
+
+<p>When used as part of a macroexpansion, MACRO-LEVEL also conveniently
+relieves the macro implementor from naming and using a gensym for the
+one-shot macro when compared to writing out a MACROLET by hand, in
+addition to the other advantages.</p>
+
+<p>To use MACRO-LEVEL, simply (macro-level:macro-level ...) after loading
+the ASDF system, as this macro is not used that often and the length
+won't have any effect on the indentation:</p>
+
+<pre>(macro-level:macro-level
+  ...)
+;; VS
+(macro-level
+  ...)</pre>
+
+<p><b>Simply <code>(:import-from #:macro-level #:macro-level)</code> in your DEFPACKAGE
+if you prefer the latter form. Don't <code>(:use)</code>!</b></p>
+
+<p>Support could eventually be added to Slime so that interactive
+macroexpansion of MACRO-LEVEL calls with <kbd>C-c C-m</kbd> (<code>slime-expand-1</code>)
+would show the same expansion as interactively macroexpanding <code>(m ...)</code>
+after <code>(defmacro m () ...)</code>, assuming the lexical context is not
+important.</p>
+
+<!--<p><b><code>(ql:quickload "macro-level")</code></b></p>-->
+
+    <p><a href="http://github.com/Hexstream/macro-level">The source code for macro-level is hosted on GitHub.</a></p>
+    <p><a href="https://github.com/Hexstream/macro-level/blob/master/UNLICENSE">macro-level is in the Public Domain.</a><br />Do anything you want with it.</p>
+    <h1><a href="macro-level_latest.tar.gz">Download latest macro-level.</a></h1>
+    <p><i>Version 1.0.1 released 4 october 2012. (The miser indentation example was not indented properly.)</i></p>
+    <p><i>Version 1.0 released 3 october 2012.</i></p>
+
+    <blockquote class="twitter-tweet tw-align-center"><p>New library: MACRO-LEVEL saves indentation; more concise and direct. (macro-level ...) == (macrolet ((m () ...)) (m)) <a href="http://t.co/PMVTpZHZ" title="http://www.hexstreamsoft.com/projects/macro-level/">hexstreamsoft.com/projects/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/253617478826086400" data-datetime="2012-10-03T22:08:13+00:00">October 3, 2012</a></blockquote>
+  </body>
+</html>

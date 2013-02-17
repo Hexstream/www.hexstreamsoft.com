@@ -1,0 +1,38 @@
+<html>
+  <head><title>cl-conceptual-types</title>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1783234-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </head>
+  <body>
+    <p>cl-conceptual-types is a trivial Common Lisp library that simply creates a package that exports
+symbols for a few conceptual types "missing" from the COMMON-LISP
+package. Library authors that use and export these symbols instead of
+creating their own will avoid unnecessary symbol conflicts (or name
+mangling) for themselves and their users. These symbols are useful
+targets for various kinds of dispatching.</p>
+    <p>The conceptual type symbols "missing" from the COMMON-LISP package are:
+    <ul>
+      <li>SLOT</li>
+      <li>ACCESSOR</li>
+      <li>MACRO</li>
+      <li>SYMBOL-MACRO</li>
+      <li>READER-MACRO</li>
+      <li>PPRINT-DISPATCH-TABLE</li>
+    </ul></p>
+    <p><a href="https://github.com/Hexstream/cl-conceptual-types">The source code for cl-conceptual-types is hosted on GitHub.</a></p>
+    <p><a href="https://github.com/Hexstream/cl-conceptual-types/blob/master/UNLICENSE">cl-conceptual-types is in the Public Domain.</a><br />Do anything you want with it.</p>
+    <h1><a href="cl-conceptual-types_latest.tar.gz">Download latest cl-conceptual-types.</a></h1>
+    <p><i>Version 0.1 released 30 december 2011.</i></p>
+  </body>
+</html>
