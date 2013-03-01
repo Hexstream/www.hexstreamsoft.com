@@ -25,3 +25,8 @@ th.project-name, td {
     text-align: right;
     padding-right: 0.5em;
 }
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
