@@ -11,7 +11,7 @@ td, th {
     border: solid thin lightgray;
 }
 
-th.project-name, td {
+th.project-name, .metaproject-summary, td {
     padding: 1em 0.5em;
     
 }
@@ -23,7 +23,7 @@ th.project-name, td {
 
 #project-name-column-header {
     text-align: right;
-    padding-right: 0.5em;
+    padding: 0 0.5em;
 }
 
 ul {
