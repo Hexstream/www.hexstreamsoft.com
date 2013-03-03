@@ -16,12 +16,12 @@ th.project-name, .metaproject-summary, td {
     
 }
 
-.project-name {
+.project-name, .metaproject-summary {
     text-align: right;
     vertical-align: top;
 }
 
-#project-name-column-header {
+#project-name-column-header, #metaproject-summary-column-header {
     text-align: right;
     padding: 0 0.5em;
 }
