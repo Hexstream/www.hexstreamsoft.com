@@ -1,0 +1,15 @@
+.prologue {
+    background: lightgoldenrodyellow;
+}
+
+.arg {
+    background: #FFEEEE;
+}
+
+.val {
+    background: #DDFFDD;
+}
+
+.lambda-body {
+    background: #EEEEFF;
+}
