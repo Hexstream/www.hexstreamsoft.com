@@ -1,16 +1,8 @@
-li {
-    margin-top: 1em;
+.anchor {
+    text-decoration: none;
+    font-size: medium;
 }
 
-li li {
-    margin-top: 0.25em;
-}
-
-img {
-    float: left;
-    margin: 1.5em 1em 2em 0.5em;
-}
-
-h2 {
-    margin-top: -0.75em;
+.indented-version {
+    color: #666666;
 }

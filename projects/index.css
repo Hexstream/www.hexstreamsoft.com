@@ -1,0 +1,19 @@
+td {
+    padding-top: 1.5em;
+}
+
+.ok {
+    color: green;
+}
+
+.minor-fail {
+    color: gray;
+}
+
+.fail {
+    color: red;
+}
+
+.test-star {
+    text-decoration: none;
+}
