@@ -1,0 +1,12 @@
+.anchor {
+    text-decoration: none;
+    font-size: medium;
+}
+
+li {
+    margin-top: 1em;
+}
+
+li li {
+    margin-top: 0.25em;
+}
