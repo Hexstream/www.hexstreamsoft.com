@@ -7,19 +7,6 @@ nav > ul > li {
     margin-bottom: 2em;
 }
 
-table {
-    border-collapse: collapse;
-}
-
-th {
-    text-align: left;
-    padding-left: 0.5em;
-}
-
-td, th {
-    border: solid thin lightgray;
-}
-
 th.project-name, .metaproject-summary, td {
     padding: 1em 0.5em;
     

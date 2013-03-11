@@ -1,3 +1,21 @@
+table {
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding-left: 0.5em;
+}
+
+td, th {
+    border: solid thin lightgray;
+    padding: 1em 0.5em;
+}
+
+table tr > th:first-child {
+    text-align: right;
+}
+
 .anchor {
     text-decoration: none;
     font-size: medium;
