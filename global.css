@@ -1,9 +1,30 @@
+.anchor {
+    text-decoration: none;
+    font-size: medium;
+    opacity: 0.20;
+}
+
+.anchor:hover {
+    opacity: 1;
+}
+
 table {
     border-collapse: collapse;
 }
 
 table > thead > tr:last-child > th {
     vertical-align: bottom;
+}
+
+table > tbody > tr > th {
+    position: relative;
+}
+
+table > tbody > tr > th > .anchor {
+    position: absolute;
+    top: 0.25em;
+    left: 0.25em;
+    font-size: large;
 }
 
 th {
@@ -18,11 +39,6 @@ td, th {
 
 table tr > th:first-child {
     text-align: right;
-}
-
-.anchor {
-    text-decoration: none;
-    font-size: medium;
 }
 
 li {
