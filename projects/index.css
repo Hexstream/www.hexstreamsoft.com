@@ -1,3 +1,7 @@
+.project-name, .anchor {
+    font-weight: bold;
+}
+
 tbody > tr > th {
     font-weight: normal;
 }
