@@ -17,10 +17,6 @@ th.project-name, .metaproject-summary, td {
     vertical-align: top;
 }
 
-#project-name-column-header, #metaproject-summary-column-header {
-    text-align: right;
-}
-
 ul {
     margin-top: 0;
     margin-bottom: 0;
