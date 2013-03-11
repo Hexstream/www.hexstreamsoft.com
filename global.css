@@ -1,6 +1,7 @@
 .anchor {
     text-decoration: none;
     font-size: medium;
+    padding: 0.25em 0 0 0.25em;
     opacity: 0.20;
 }
 
@@ -22,8 +23,8 @@ table > tbody > tr > th {
 
 table > tbody > tr > th > .anchor {
     position: absolute;
-    top: 0.25em;
-    left: 0.25em;
+    top: 0;
+    left: 0;
     font-size: large;
 }
 
