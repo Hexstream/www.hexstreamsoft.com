@@ -2,6 +2,10 @@ table {
     border-collapse: collapse;
 }
 
+table > thead > tr:last-child > th {
+    vertical-align: bottom;
+}
+
 th {
     text-align: left;
     padding-left: 0.5em;
