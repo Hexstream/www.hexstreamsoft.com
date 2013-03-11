@@ -30,6 +30,11 @@ table > tbody > tr > th > .anchor {
 th {
     text-align: left;
     padding-left: 0.5em;
+    background-color: #E0E0E0;
+}
+
+td {
+    background-color: #ECECEC;
 }
 
 td, th {
