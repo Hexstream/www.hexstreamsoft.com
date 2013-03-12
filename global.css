@@ -8,8 +8,13 @@
     opacity: 1;
 }
 
+h1 {
+    margin-top: 1em;
+}
+
 table {
     border-collapse: collapse;
+    margin-bottom: 2em;
 }
 
 table > thead > tr:last-child > th {
