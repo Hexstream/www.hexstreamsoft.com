@@ -1,15 +1,18 @@
+#project-categories th {
+    text-align: center;
+}
+
+#project-categories td {
+    vertical-align: top;
+}
+
 #introduction {
     clear: left;
 }
 
-nav > ul > li {
-    float: left;
-    margin-bottom: 2em;
-}
-
 th.project-name, .metaproject-summary, td {
     padding: 1em 0.5em;
-    
+
 }
 
 .project-name, .metaproject-summary {
