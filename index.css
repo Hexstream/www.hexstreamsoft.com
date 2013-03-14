@@ -1,5 +1,9 @@
 @import "news.css";
 
+#page-header #page-title {
+    letter-spacing: 0.15em;
+}
+
 #page-header #page-description {
     margin-top: -0.15em;
 }
