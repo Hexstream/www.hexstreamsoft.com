@@ -27,6 +27,11 @@
 }
 
 
+p {
+    margin: 1em;
+}
+
+
 .panel {
     position: relative;
     border: solid medium #AAAAAA;
