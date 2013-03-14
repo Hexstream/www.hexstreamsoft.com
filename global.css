@@ -1,3 +1,89 @@
+@import "nav.css";
+
+#content {
+    margin: 1.5em 1.5em 1.5em 12.5em;
+}
+
+#page-header {
+    text-align: center;
+    margin: 0 auto 1.75em;
+    font-family: sanvito-pro-display, serif;
+}
+
+#page-header #page-title {
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-size: 4em;
+    letter-spacing: 0.15em;
+}
+
+#page-header #page-description {
+    font-size: large;
+    margin-top: 0em;
+    /* width: 65%; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.panel {
+    position: relative;
+    border: solid medium #AAAAAA;
+    background: #ECECEC;
+}
+
+
+.subsection-descriptions {
+    width: 58%;
+    margin-left: auto;
+    margin-right: auto;
+    border: thin solid;
+    text-decoration: none;
+}
+
+.subsection-descriptions li {
+    margin-top: 0;
+}
+
+.subsection-descriptions * {
+    text-decoration: inherit;
+}
+
+.subsection-descriptions :hover, .subsection-descriptions :focus {
+    background: #ECE0A5;
+    outline-style: none;
+}
+
+.subsection-descriptions + .subsection-descriptions {
+    margin-top: 1em;
+}
+
+.subsection-description {
+    list-style-type: none;
+    border: thin solid;
+}
+
+.subsection-description a {
+    display: block;
+    padding: 0.5em 1em;
+}
+
+.subsection-description .title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.subsection-description .description {
+    display: block;
+    margin-top: 0.2em;
+    font-size: smaller;
+    text-align: justify;
+    color: black;
+}
+
+
+
 .anchor {
     text-decoration: none;
     font-size: large;
@@ -15,6 +101,14 @@ h1 {
 table {
     border-collapse: collapse;
     margin-bottom: 2em;
+}
+
+table > thead > tr > th.horizontal-grouping-header,
+table > tbody > tr > th.horizontal-grouping-header{
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
 }
 
 table > thead > tr:last-child > th {

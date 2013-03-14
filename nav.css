@@ -1,0 +1,124 @@
+/* Reset doesn't actually belong here... */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+
+#crumbs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.1em 0.25em;
+    line-height: 1.6em;
+}
+
+.nav {
+    position: absolute;
+}
+
+.nav .separator  {
+    width: 65%;
+    height: 0.2em;
+    border: 3px solid black;
+    margin: -0.5em auto 0.5em;
+    background: #FFCC99;
+}
+
+#crumbs + .nav {
+    top: 2.4em;
+}
+
+.navbox {
+    margin: 0 0.5em 1em;
+    background: #FFCC99;
+    border: medium solid;
+    width: 10em;
+}
+
+.navbox a {
+    display: block;
+    text-decoration: none;
+}
+
+.navbox li {
+    margin: 0;
+}
+
+.navbox li a {
+    padding: 0.175em 0.5em;
+    position: relative;
+}
+
+.navbox li .here {
+    padding: 0.175em 0.5em;
+    position: relative;
+    background: #FFCC99;
+    color: #000000;
+}
+
+.navbox li:first-child a, .navbox li:first-child .here {
+    padding-top: 0.35em;
+}
+
+.navbox li:first-child .here-indicator-left, .navbox li:first-child .here-indicator-right {
+    top: 0.35em;
+}
+
+.navbox li.last-child a, .navbox li.last-child .here {
+    padding-bottom: 0.35em;
+}
+
+.navbox li.last-child .here-indicator-left, .navbox li.last-child .here-indicator-right {
+    bottom: 0.5em;
+}
+
+.navbox a:hover, .navbox a:focus {
+    background: #FFDD99;
+    outline-style: none;
+}
+
+.here-indicator-left, .here-indicator-right {
+    background: gray;
+    position: absolute;
+    top: 0.3em;
+    bottom: 0.35em;
+    width: 0.25em;
+}
+
+.here-indicator-left {
+    left: 0;
+}
+
+.here-indicator-right {
+    right: 0;
+    display: none;
+}
+
+.box-header {
+    position: relative;
+    border-bottom: double medium;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+.box-header .here-indicator-left, .box-header .here-indicator-right {
+    display: none;
+}
+
+.box-header a {
+    color: black;
+    text-decoration: none;
+}
+
+.box-header .here .here-indicator-left, .box-header .here .here-indicator-right {
+    top: 0.2em;
+    bottom: 0.2em;
+    display: block;
+}

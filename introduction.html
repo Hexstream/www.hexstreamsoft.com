@@ -4,6 +4,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>HexstreamSoft: Introduction</title>
+    <link href="global.css" rel="stylesheet" type="text/css" />
+    <link href="introduction.css" rel="stylesheet" type="text/css" />
+    <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -20,17 +23,45 @@
   </head>
 
   <body>
-    <p><a href="./">HexstreamSoft</a></p>
+    <p id="crumbs">
+      <a href="./">HexstreamSoft</a>
+      <span class="separator"> → </span>
+      <span class="here">Introduction</span>
+    </p>
 
-    <p>Hello, I'm Jean-Philippe Paradis and for the last ~6 years I was (and still am) intensively in Common Lisp development. During that time, I developed many very useful, novel and non-trivial libraries (notably, a big bunch of libraries which constitute a kind of web framework). I recently open-sourced (MIT license) <a href="https://github.com/Hexstream">almost 100% of my code on Github</a>.</p>
+    <div class="nav">
+      <div class="separator group"></div>
+      <div id="spa2000_main_navbox" class="navbox">
+        <h2 class="box-header">
+          <a href="./">HexstreamSoft <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a>
+        </h2>
+        <div class="box-content">
+          <ul>
+            <li><div class="here">Introduction <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></div></li>
+            <li><a href="projects/">Projects</a></li>
+            <li><a href="tweets/">Tweets</a></li>
+            <li><a href="worknotes/">Worknotes</a></li>
+            <li><a href="accounts/">Accounts</a></li>
+            <li><a href="resources/">Resources</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div id="page-header">
+        <h1 id="page-title">Introduction</h1>
+        <div id="page-description">Hello! I have 6 intensive years of Common Lisp experience.</div>
+      </div>
+      <p>Hello, I'm Jean-Philippe Paradis and for the last ~6 years I was (and still am) intensively in Common Lisp development. During that time, I developed many very useful, novel and non-trivial libraries (notably, a big bunch of libraries which constitute a kind of web framework). I recently open-sourced (MIT license) <a href="https://github.com/Hexstream">almost 100% of my code on Github</a>.</p>
 
-    <p><b>Unfortunately</b>, since I was the only user of my libraries, there are <b>several "quality issues"</b> I absolutely didn't worry about until the open-sourcing, notably they're <b>completely undocumented</b>. As a result, almost all of them are, though publicly available, <b>currently unsuitable for public consumption</b> unless you're some kind of masochist looking for a great way to waste his time.</p>
+      <p><b>Unfortunately</b>, since I was the only user of my libraries, there are <b>several "quality issues"</b> I absolutely didn't worry about until the open-sourcing, notably they're <b>completely undocumented</b>. As a result, almost all of them are, though publicly available, <b>currently unsuitable for public consumption</b> unless you're some kind of masochist looking for a great way to waste his time.</p>
 
-    <p>I have recently embarked on a long journey (at least 1 year) to <b>thoroughly cleanup and comprehensively document</b> all my libraries so that anyone can use them easily. I know this will be a <b>ton</b> of work but I am determined to do it, I'm sick of being the only user of my innovations.</p>
+      <p>I have recently embarked on a long journey (at least 1 year) to <b>thoroughly cleanup and comprehensively document</b> all my libraries so that anyone can use them easily. I know this will be a <b>ton</b> of work but I am determined to do it, I'm sick of being the only user of my innovations.</p>
 
-    <p>(Don't get fooled by this rudimentary hand-coded page (and others), I made "really nice" HTML and CSS libraries and have some good experience with web development, but these web libraries currently are in a very sorry state so I'll use them again when their cleaning up is done and I don't want to get carried away with making high-quality pages for just one or two projects.)</p>
+      <p>(Don't get fooled by this rudimentary hand-coded page (and others), I made "really nice" HTML and CSS libraries and have some good experience with web development, but these web libraries currently are in a very sorry state so I'll use them again when their cleaning up is done and I don't want to get carried away with making high-quality pages for just one or two projects.)</p>
 
-    <p><i><small>Last updated 12 august 2012</small></i></p>
+      <p><i><small>Last updated 12 august 2012</small></i></p>
+    </div>
 
   </body>
 </html>
