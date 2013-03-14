@@ -2,8 +2,8 @@
     font-weight: bold;
 }
 
-tbody > tr > th {
-    font-weight: normal;
+table > tbody > tr > th {
+    border-top: solid medium gray;
 }
 
 td {
