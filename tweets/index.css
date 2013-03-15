@@ -1,3 +1,4 @@
-h2 {
-    margin-top: -0.75em;
+#content .navbox {
+    float: left;
+    width: 13em;
 }
