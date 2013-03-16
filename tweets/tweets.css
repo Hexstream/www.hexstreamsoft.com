@@ -1,3 +1,7 @@
 .indented-version {
     color: #666666;
 }
+
+#content > h2, #content > nav > h2 {
+    text-align: center;
+}
