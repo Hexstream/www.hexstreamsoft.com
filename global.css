@@ -28,6 +28,10 @@
     font-family: sanvito-pro-display, serif;
 }
 
+#page-header + h2 {
+    margin-top: 1.5em;
+}
+
 #page-header #page-title {
     margin-top: 0.6em;
     margin-bottom: 0;
