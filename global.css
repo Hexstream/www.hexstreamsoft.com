@@ -95,8 +95,7 @@ table .link-cell a:hover, table .link-cell a:focus {
 
 
 .news-item p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
 }
 
 
