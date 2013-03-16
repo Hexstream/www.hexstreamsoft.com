@@ -51,7 +51,43 @@
 
 p {
     margin: 1em;
+    line-height: 1.4em;
 }
+
+table p {
+    margin: 0.5em;
+}
+
+table .link-cell {
+    padding: 0;
+    position: relative;
+    width: 10em;
+}
+
+table .link-cell a {
+    position: absolute;
+    display: table-cell;
+    top: 0;
+    bottom: 0;
+    width: inherit;
+    text-decoration: none;
+    text-align: center;
+}
+
+table .link-cell a > div {
+    position: absolute;
+    width: inherit;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -0.6em;
+}
+
+table .link-cell a:hover, table .link-cell a:focus {
+    background-color: #ECE0A5;
+    outline-style: none;
+}
+
 
 .news-item p {
     margin-top: 0.5em;
