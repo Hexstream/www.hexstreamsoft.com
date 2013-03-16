@@ -38,6 +38,7 @@
     font-weight: bolder;
     font-size: 3em;
     letter-spacing: 0.05em;
+    word-spacing: 0.10em;
 }
 
 #page-header #page-title a {
