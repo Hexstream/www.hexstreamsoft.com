@@ -53,6 +53,11 @@ p {
     margin: 1em;
 }
 
+.news-item p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
 
 .float-clear {
     clear: both;
