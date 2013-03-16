@@ -6,104 +6,169 @@
     <title>@HexstreamSoft tweets: Future Lisp dialect ideas</title>
     <link href="../../global.css" rel="stylesheet" type="text/css" />
     <link href="../tweets.css" rel="stylesheet" type="text/css" />
+    <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1783234-3']);
-  _gaq.push(['_trackPageview']);
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1783234-3']);
+      _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
 
     </script>
     <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   </head>
   <body>
-    <p><a href="../../">HexstreamSoft</a> &rarr; <a href="../">Tweets</a> &rarr; Future Lisp dialect ideas</p>
-    <h1 id="future-lisp-dialect-ideas">Future lisp dialect ideas (36) <a href="#future-lisp-dialect-ideas" class="anchor">&#x2693;</a></h1>
-    <nav>
-      <ul>
-	<li><a href="#disclaimers">Disclaimer</a> (1)</li>
-	<li><a href="#lambda-lists">Lambda lists</a> (10)</li>
-	<li><a href="#bindings">Bindings</a> (10)</li>
-	<li><a href="#multiple-values">Multiple values</a> (3)</li>
-	<li><a href="#misc">Miscellaneous</a> (12)</li>
-      </ul>
-    </nav>
-    <p>(You might also be interested in <a href="../cl-rants/">my rants</a>, as most of them can be seen as implicit suggestions for future dialects.)</p>
-    <h2 id="disclaimers">Disclaimer (1) <a href="#disclaimers" class="anchor">&#x2693;</a></h2>
-    <blockquote class="twitter-tweet tw-align-center"><p>Most "future dialect" ideas can be implemented in CL but won't be community-adopted because of established idiomatic style, justifiably so.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229942452889452544" data-datetime="2012-07-30T14:12:07+00:00">July 30, 2012</a></blockquote>
 
-    <h2 id="lambda-lists">Lambda lists (10) <a href="#lambda-lists" class="anchor">&#x2693;</a></h2>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defun mapcar (function &amp;rest+ lists) ...) is more direct, informative and convenient than 2 current &amp;rest workarounds.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227100854560366592" data-datetime="2012-07-22T18:00:37+00:00">July 22, 2012</a></blockquote>
-    <pre class="indented-version">(defun mapcar (function &amp;rest+ lists)
-  ...)</pre>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defmacro defun (name LL &amp;doc docstring &amp;decl declarations &amp;body body) ...) is more direct, informative and convenient.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228162402804441089" data-datetime="2012-07-25T16:18:50+00:00">July 25, 2012</a></blockquote>
-    <pre class="indented-version">(defmacro defun (name LL &amp;doc docstring &amp;decl declarations &amp;body body)
-  ...)</pre>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defun foo (bar &amp;rest all-keyword-args &amp;key baz &amp;rest all-keyword-args-except-baz another-key &amp;allow-other-keys) ...)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228504841058676736" data-datetime="2012-07-26T14:59:34+00:00">July 26, 2012</a></blockquote>
-    <pre class="indented-version">(defun foo (bar &amp;rest all-keyword-args &amp;key baz &amp;rest all-keyword-args-except-baz another-key &amp;allow-other-keys)
-  ...)</pre>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defun foo ((&amp;transform #'string-upcase s) &amp;optional (first (aref s 0))) (values s first)) (foo "hi") =&gt; "HI", #\H</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/236272376390770688" data-datetime="2012-08-17T01:24:58+00:00">August 17, 2012</a></blockquote>
-    <pre class="indented-version">(defun foo ((&amp;transform #'string-upcase s) &amp;optional (first (aref s 0)))
-  (values s first))
-(foo "hi") =&gt; "HI", #\H</pre>
-    <blockquote class="twitter-tweet tw-align-center"><p>&amp;transform: Less cognitive load while reading than post-update/new binding by immediately leaving old value inaccessible, clarifying intent.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/236276762156339200" data-datetime="2012-08-17T01:42:24+00:00">August 17, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defmacro cond (&amp;rest (clauses (condition &amp;body body))) [CONDITION/BODY advisory]) = better code self-doc/editor hints.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/239179655532400640" data-datetime="2012-08-25T01:57:28+00:00">August 25, 2012</a></blockquote>
-    <pre class="indented-version">(defmacro cond (&amp;rest (clauses (condition &amp;body body)))
-  [CONDITION/BODY advisory])</pre>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Distinguish external interface for lambda lists. Internal: &amp;whole, &amp;environment, &amp;aux, &amp;optional/&amp;key default forms.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/243066428008316929" data-datetime="2012-09-04T19:22:07+00:00">September 4, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center" data-in-reply-to="249191944293593088"><p>@<a href="https://twitter.com/vsedach">vsedach</a> First-class lambda-list objects would be a better representation than lists for inspection and manipulation, certainly.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/249225472192430080" data-datetime="2012-09-21T19:15:57+00:00">September 21, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (lambda (a &amp;rest) a) == (lambda (a &amp;rest rest) (declare (ignore rest)) a)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251742989620232194" data-datetime="2012-09-28T17:59:40+00:00">September 28, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>I oppose usage of &amp;LL-keyword-like symbols as variables, especially in lambda lists. Needless potential for confusion and undetected errors.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/253210193679241216" data-datetime="2012-10-02T19:09:49+00:00">October 2, 2012</a></blockquote>
+    <p id="crumbs">
+      <a href="../../">HexstreamSoft</a>
+      <span class="separator"> → </span>
+      <a href="../">Tweets</a>
+      <span class="separator"> → </span>
+      <span class="here">Future Lisp dialect ideas</span>
+    </p>
 
-    <h2 id="bindings">Bindings (10) <a href="#bindings" class="anchor">&#x2693;</a></h2>
-    <blockquote class="twitter-tweet tw-align-center"><p>FLET could promote functional programming with one simple upgrade: (flet ((f (compose #'list #'1+))) (values (f 42) (f 24))) =&gt; (43), (25)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226700176163758080" data-datetime="2012-07-21T15:28:28+00:00">July 21, 2012</a></blockquote>
-    <pre class="indented-version">(flet ((f (compose #'list #'1+)))
-  (values (f 42) (f 24)))
-=&gt; (43), (25)</pre>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (define #'f), (define (macro m)), (define (variable *v*)), (define (class c)), etc. Reduces symbol "duplication".</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228190316677713922" data-datetime="2012-07-25T18:09:45+00:00">July 25, 2012</a></blockquote>
-  <pre class="indented-version">(define #'f)
-(define (macro m))
-(define (variable *v*))
-(define (class c))</pre>
-    <blockquote class="twitter-tweet tw-align-center"><p>Why does default LET bind in parallel (not seq)? Because it was originally a macro: (let ((a 'a) (b 'b)) ...) == ((lambda (a b) ...) 'a 'b)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228793203967524864" data-datetime="2012-07-27T10:05:25+00:00">July 27, 2012</a></blockquote>
-    <pre class="indented-version">(let ((a 'a)
-      (b 'b))
-  ...)
-==
-((lambda (a b)
-   ...)
- 'a 'b)</pre>
-    <blockquote class="twitter-tweet tw-align-center"><p>Sequential binding might be simpler and more intuitive default, because it arises naturally when nesting multiple heterogeneous constructs.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228794430830804992" data-datetime="2012-07-27T10:10:17+00:00">July 27, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Scrap DYNAMIC decl, make *earmuffed* variables always refer to dynamic bindings. Very convenient; enforces convention.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/232950772835426305" data-datetime="2012-08-07T21:26:06+00:00">August 7, 2012</a></blockquote>
-    (Obviously I meant <code>SPECIAL</code>, not <code>DYNAMIC</code>. I had been reading too much <cite>Lisp in Small Pieces</cite>!)
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Make lexical bindings immutable unless marked otherwise, to reduce cognitive load while reading. &amp;transform desirable.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/236278436828696576" data-datetime="2012-08-17T01:49:03+00:00">August 17, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>I object to every difference between bindings in the variable and function namespaces, except for the latter requiring function designators.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/243384570081341440" data-datetime="2012-09-05T16:26:18+00:00">September 5, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (declare (type funtype #'my-fun my-var)) Consistent with IGNORE/IGNORABLE/DYNAMIC-EXTENT. One less var/fun dichotomy.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/248069055175606272" data-datetime="2012-09-18T14:40:46+00:00">September 18, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (lambda ((ignore i) (the function f)) ...) == (lambda (i f) (declare (ignore i) (type function f)) ...)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251745602931662848" data-datetime="2012-09-28T18:10:03+00:00">September 28, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defun functional-lisp-2 (#'transform datum) (values datum (transform datum))) (functional-lisp-2 #'- 42) =&gt; 42, -42</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251748233544609792" data-datetime="2012-09-28T18:20:30+00:00">September 28, 2012</a></blockquote>
-    <h2 id="multiple-values">Multiple values (3) <a href="#multiple-values" class="anchor">&#x2693;</a></h2>
-    <blockquote class="twitter-tweet tw-align-center"><p>MULTIPLE-VALUE-CALL also showed me how funargs and retvals are such close duals of each other. Future dialect: take retvals more seriously.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227068212339167232" data-datetime="2012-07-22T15:50:55+00:00">July 22, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Make DEFUN take a retval list after arglist = better code self-doc and editor hints, promote careful retvals design.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227073143246815232" data-datetime="2012-07-22T16:10:30+00:00">July 22, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Dynamic return-values count+map without reification = novel possibilities like efficient multiple-value "transformers".</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/245218676855431168" data-datetime="2012-09-10T17:54:23+00:00">September 10, 2012</a></blockquote>
-    <h2 id="misc">Miscellaneous (12) <a href="#misc" class="anchor">&#x2693;</a></h2>
-    <blockquote class="twitter-tweet tw-align-center"><p>The concept of structs is useful for performance, but DEFSTRUCT has to go. It should be reformulated in a strongly DEFCLASS-inspired way.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228187033284255744" data-datetime="2012-07-25T17:56:42+00:00">July 25, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Rename SETF to ASSIGN (suggested by Zhivago). We'd then have "assignable places", GET-ASSIGN-EXPANSION. Makes sense!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228239358300413952" data-datetime="2012-07-25T21:24:38+00:00">July 25, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: multi-phased generic-functions could dispatch on (cons (eql operator)), alleviating frequent need for ad-hoc solutions.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228792151671201793" data-datetime="2012-07-27T10:01:14+00:00">July 27, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Beyond native fractions: native square roots? Same rationale: absolute precision, unlike floating-point. &radic;(1/2) =&gt; &radic;2/2</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229660635250696192" data-datetime="2012-07-29T19:32:16+00:00">July 29, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Having an agreed-upon short name for "cadr-valued alist" would be convenient. I propose the term "blist". BSSOC/RBSSOC weird but pragmatic!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/232879198937706496" data-datetime="2012-08-07T16:41:42+00:00">August 7, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Make IF's "else" required. Eliminates "is there 'else'?" when big "then". No "else" bad style anyway: use WHEN/UNLESS.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/236564024689565696" data-datetime="2012-08-17T20:43:53+00:00">August 17, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (eval-when t ...) == (eval-when (:compile-toplevel :load-toplevel :execute) ...) would help preserve everyone's sanity.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/248869664938156032" data-datetime="2012-09-20T19:42:06+00:00">September 20, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: ((find :key k :test t) seq): k/t are part of "operator", not "data". Still lisp-2: "implicit funcall" enabled for FIND.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251374352266825730" data-datetime="2012-09-27T17:34:50+00:00">September 27, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>More about ((fun op-args...) data-args...): Varargs data-args! Old #'find now #'(find). Old (lambda (s) (find s :key k)) now #'(find :key k)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251380455717347328" data-datetime="2012-09-27T17:59:05+00:00">September 27, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center" data-in-reply-to="251375777344536576"><p>@<a href="https://twitter.com/sellout">sellout</a>: (defun (member item &amp;key (key #'identity) (test #'eql)) (list) (cl:member item list :key key :test test)) or (d name ops datas &amp;b)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251395842370580480" data-datetime="2012-09-27T19:00:14+00:00">September 27, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (lambda (&amp;rest keys &amp;key (class 'default-class) &amp;allow-other-keys) (apply #'make-instance class :class +absent+ keys))</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252042476603445248" data-datetime="2012-09-29T13:49:43+00:00">September 29, 2012</a></blockquote>
-    <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Make (intern "") =&gt; error, as zero-length symbols have no particular utility and are thus not worth the special cases.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/253229771213897728" data-datetime="2012-10-02T20:27:36+00:00">October 2, 2012</a></blockquote>
+    <div class="nav">
 
-    <p><a href="#">&uarr; Back to top.</p>
+      <div class="separator group"></div>
+
+      <div id="tweets_navbox" class="navbox">
+        <h2 class="box-header">
+          <a href="../">Tweets <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a>
+        </h2>
+        <div class="box-content">
+          <ul>
+            <li><a href="../cl-tips/">Common Lisp tips</a></li>
+            <li><a href="../cl-rants/">Common Lisp rants</a></li>
+            <li><div class="here">Future Lisp dialect ideas <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></div></li>
+
+            <li><a href="../programming-remarks/">Programming remarks</a></li>
+            <li><a href="../programming-endorsements/">Programming endorsements</a></li>
+            <li><a href="../cl-promotion/">(Common) Lisp promotion</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="separator group"></div>
+
+      <div id="main_navbox" class="navbox">
+        <h2 class="box-header">
+          <a href="../">HexstreamSoft</a>
+        </h2>
+        <div class="box-content">
+          <ul>
+            <li><a href="../../introduction.html">Introduction</a></li>
+            <li><a href="../../projects/">Projects</a></li>
+            <li><a href="../">Tweets <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
+            <li><a href="../../worknotes/">Worknotes</a></li>
+            <li><a href="../../accounts/">Accounts</a></li>
+            <li><a href="../../resources/">Resources</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="separator group"></div>
+      <div class="separator group"></div>
+
+      <div class="navbox" id="future-lisp-dialect-ideas">
+        <h2 class="box-header">
+          Future lisp dialect ideas (36)
+        </h2>
+        <div class="box-content">
+          <ul>
+            <li><a href="#disclaimers">Disclaimer (1)</a></li>
+	    <li><a href="#lambda-lists">Lambda lists (10)</a></li>
+	    <li><a href="#bindings">Bindings (10)</a></li>
+	    <li><a href="#multiple-values">Multiple values (3)</a></li>
+	    <li><a href="#misc">Miscellaneous (12)</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="page-header">
+        <h1 id="page-title">Future lisp dialect ideas (36)</h1>
+      </div>
+
+      <p>(You might also be interested in <a href="../cl-rants/">my rants</a>, as most of them can be seen as implicit suggestions for future dialects.)</p>
+      <h2 id="disclaimers">Disclaimer (1) <a href="#disclaimers" class="anchor">&#x2693;</a></h2>
+      <blockquote class="twitter-tweet tw-align-center"><p>Most "future dialect" ideas can be implemented in CL but won't be community-adopted because of established idiomatic style, justifiably so.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229942452889452544" data-datetime="2012-07-30T14:12:07+00:00">July 30, 2012</a></blockquote>
+
+      <h2 id="lambda-lists">Lambda lists (10) <a href="#lambda-lists" class="anchor">&#x2693;</a></h2>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defun mapcar (function &amp;rest+ lists) ...) is more direct, informative and convenient than 2 current &amp;rest workarounds.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227100854560366592" data-datetime="2012-07-22T18:00:37+00:00">July 22, 2012</a></blockquote>
+      <pre class="indented-version">(defun mapcar (function &amp;rest+ lists)
+        ...)</pre>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defmacro defun (name LL &amp;doc docstring &amp;decl declarations &amp;body body) ...) is more direct, informative and convenient.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228162402804441089" data-datetime="2012-07-25T16:18:50+00:00">July 25, 2012</a></blockquote>
+      <pre class="indented-version">(defmacro defun (name LL &amp;doc docstring &amp;decl declarations &amp;body body)
+        ...)</pre>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defun foo (bar &amp;rest all-keyword-args &amp;key baz &amp;rest all-keyword-args-except-baz another-key &amp;allow-other-keys) ...)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228504841058676736" data-datetime="2012-07-26T14:59:34+00:00">July 26, 2012</a></blockquote>
+      <pre class="indented-version">(defun foo (bar &amp;rest all-keyword-args &amp;key baz &amp;rest all-keyword-args-except-baz another-key &amp;allow-other-keys)
+        ...)</pre>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defun foo ((&amp;transform #'string-upcase s) &amp;optional (first (aref s 0))) (values s first)) (foo "hi") =&gt; "HI", #\H</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/236272376390770688" data-datetime="2012-08-17T01:24:58+00:00">August 17, 2012</a></blockquote>
+      <pre class="indented-version">(defun foo ((&amp;transform #'string-upcase s) &amp;optional (first (aref s 0)))
+        (values s first))
+        (foo "hi") =&gt; "HI", #\H</pre>
+      <blockquote class="twitter-tweet tw-align-center"><p>&amp;transform: Less cognitive load while reading than post-update/new binding by immediately leaving old value inaccessible, clarifying intent.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/236276762156339200" data-datetime="2012-08-17T01:42:24+00:00">August 17, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defmacro cond (&amp;rest (clauses (condition &amp;body body))) [CONDITION/BODY advisory]) = better code self-doc/editor hints.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/239179655532400640" data-datetime="2012-08-25T01:57:28+00:00">August 25, 2012</a></blockquote>
+      <pre class="indented-version">(defmacro cond (&amp;rest (clauses (condition &amp;body body)))
+        [CONDITION/BODY advisory])</pre>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Distinguish external interface for lambda lists. Internal: &amp;whole, &amp;environment, &amp;aux, &amp;optional/&amp;key default forms.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/243066428008316929" data-datetime="2012-09-04T19:22:07+00:00">September 4, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center" data-in-reply-to="249191944293593088"><p>@<a href="https://twitter.com/vsedach">vsedach</a> First-class lambda-list objects would be a better representation than lists for inspection and manipulation, certainly.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/249225472192430080" data-datetime="2012-09-21T19:15:57+00:00">September 21, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (lambda (a &amp;rest) a) == (lambda (a &amp;rest rest) (declare (ignore rest)) a)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251742989620232194" data-datetime="2012-09-28T17:59:40+00:00">September 28, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>I oppose usage of &amp;LL-keyword-like symbols as variables, especially in lambda lists. Needless potential for confusion and undetected errors.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/253210193679241216" data-datetime="2012-10-02T19:09:49+00:00">October 2, 2012</a></blockquote>
+
+      <h2 id="bindings">Bindings (10) <a href="#bindings" class="anchor">&#x2693;</a></h2>
+      <blockquote class="twitter-tweet tw-align-center"><p>FLET could promote functional programming with one simple upgrade: (flet ((f (compose #'list #'1+))) (values (f 42) (f 24))) =&gt; (43), (25)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226700176163758080" data-datetime="2012-07-21T15:28:28+00:00">July 21, 2012</a></blockquote>
+      <pre class="indented-version">(flet ((f (compose #'list #'1+)))
+        (values (f 42) (f 24)))
+        =&gt; (43), (25)</pre>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (define #'f), (define (macro m)), (define (variable *v*)), (define (class c)), etc. Reduces symbol "duplication".</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228190316677713922" data-datetime="2012-07-25T18:09:45+00:00">July 25, 2012</a></blockquote>
+      <pre class="indented-version">(define #'f)
+        (define (macro m))
+        (define (variable *v*))
+        (define (class c))</pre>
+      <blockquote class="twitter-tweet tw-align-center"><p>Why does default LET bind in parallel (not seq)? Because it was originally a macro: (let ((a 'a) (b 'b)) ...) == ((lambda (a b) ...) 'a 'b)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228793203967524864" data-datetime="2012-07-27T10:05:25+00:00">July 27, 2012</a></blockquote>
+      <pre class="indented-version">(let ((a 'a)
+        (b 'b))
+        ...)
+        ==
+        ((lambda (a b)
+        ...)
+        'a 'b)</pre>
+      <blockquote class="twitter-tweet tw-align-center"><p>Sequential binding might be simpler and more intuitive default, because it arises naturally when nesting multiple heterogeneous constructs.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228794430830804992" data-datetime="2012-07-27T10:10:17+00:00">July 27, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Scrap DYNAMIC decl, make *earmuffed* variables always refer to dynamic bindings. Very convenient; enforces convention.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/232950772835426305" data-datetime="2012-08-07T21:26:06+00:00">August 7, 2012</a></blockquote>
+      (Obviously I meant <code>SPECIAL</code>, not <code>DYNAMIC</code>. I had been reading too much <cite>Lisp in Small Pieces</cite>!)
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Make lexical bindings immutable unless marked otherwise, to reduce cognitive load while reading. &amp;transform desirable.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/236278436828696576" data-datetime="2012-08-17T01:49:03+00:00">August 17, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>I object to every difference between bindings in the variable and function namespaces, except for the latter requiring function designators.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/243384570081341440" data-datetime="2012-09-05T16:26:18+00:00">September 5, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (declare (type funtype #'my-fun my-var)) Consistent with IGNORE/IGNORABLE/DYNAMIC-EXTENT. One less var/fun dichotomy.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/248069055175606272" data-datetime="2012-09-18T14:40:46+00:00">September 18, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (lambda ((ignore i) (the function f)) ...) == (lambda (i f) (declare (ignore i) (type function f)) ...)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251745602931662848" data-datetime="2012-09-28T18:10:03+00:00">September 28, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (defun functional-lisp-2 (#'transform datum) (values datum (transform datum))) (functional-lisp-2 #'- 42) =&gt; 42, -42</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251748233544609792" data-datetime="2012-09-28T18:20:30+00:00">September 28, 2012</a></blockquote>
+      <h2 id="multiple-values">Multiple values (3) <a href="#multiple-values" class="anchor">&#x2693;</a></h2>
+      <blockquote class="twitter-tweet tw-align-center"><p>MULTIPLE-VALUE-CALL also showed me how funargs and retvals are such close duals of each other. Future dialect: take retvals more seriously.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227068212339167232" data-datetime="2012-07-22T15:50:55+00:00">July 22, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Make DEFUN take a retval list after arglist = better code self-doc and editor hints, promote careful retvals design.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227073143246815232" data-datetime="2012-07-22T16:10:30+00:00">July 22, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Dynamic return-values count+map without reification = novel possibilities like efficient multiple-value "transformers".</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/245218676855431168" data-datetime="2012-09-10T17:54:23+00:00">September 10, 2012</a></blockquote>
+      <h2 id="misc">Miscellaneous (12) <a href="#misc" class="anchor">&#x2693;</a></h2>
+      <blockquote class="twitter-tweet tw-align-center"><p>The concept of structs is useful for performance, but DEFSTRUCT has to go. It should be reformulated in a strongly DEFCLASS-inspired way.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228187033284255744" data-datetime="2012-07-25T17:56:42+00:00">July 25, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Rename SETF to ASSIGN (suggested by Zhivago). We'd then have "assignable places", GET-ASSIGN-EXPANSION. Makes sense!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228239358300413952" data-datetime="2012-07-25T21:24:38+00:00">July 25, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: multi-phased generic-functions could dispatch on (cons (eql operator)), alleviating frequent need for ad-hoc solutions.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228792151671201793" data-datetime="2012-07-27T10:01:14+00:00">July 27, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Beyond native fractions: native square roots? Same rationale: absolute precision, unlike floating-point. &radic;(1/2) =&gt; &radic;2/2</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229660635250696192" data-datetime="2012-07-29T19:32:16+00:00">July 29, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Having an agreed-upon short name for "cadr-valued alist" would be convenient. I propose the term "blist". BSSOC/RBSSOC weird but pragmatic!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/232879198937706496" data-datetime="2012-08-07T16:41:42+00:00">August 7, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Make IF's "else" required. Eliminates "is there 'else'?" when big "then". No "else" bad style anyway: use WHEN/UNLESS.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/236564024689565696" data-datetime="2012-08-17T20:43:53+00:00">August 17, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (eval-when t ...) == (eval-when (:compile-toplevel :load-toplevel :execute) ...) would help preserve everyone's sanity.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/248869664938156032" data-datetime="2012-09-20T19:42:06+00:00">September 20, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: ((find :key k :test t) seq): k/t are part of "operator", not "data". Still lisp-2: "implicit funcall" enabled for FIND.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251374352266825730" data-datetime="2012-09-27T17:34:50+00:00">September 27, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>More about ((fun op-args...) data-args...): Varargs data-args! Old #'find now #'(find). Old (lambda (s) (find s :key k)) now #'(find :key k)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251380455717347328" data-datetime="2012-09-27T17:59:05+00:00">September 27, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center" data-in-reply-to="251375777344536576"><p>@<a href="https://twitter.com/sellout">sellout</a>: (defun (member item &amp;key (key #'identity) (test #'eql)) (list) (cl:member item list :key key :test test)) or (d name ops datas &amp;b)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251395842370580480" data-datetime="2012-09-27T19:00:14+00:00">September 27, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: (lambda (&amp;rest keys &amp;key (class 'default-class) &amp;allow-other-keys) (apply #'make-instance class :class +absent+ keys))</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252042476603445248" data-datetime="2012-09-29T13:49:43+00:00">September 29, 2012</a></blockquote>
+      <blockquote class="twitter-tweet tw-align-center"><p>Future dialect idea: Make (intern "") =&gt; error, as zero-length symbols have no particular utility and are thus not worth the special cases.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/253229771213897728" data-datetime="2012-10-02T20:27:36+00:00">October 2, 2012</a></blockquote>
+
+      <p><a href="#">&uarr; Back to top.</a></p>
+    </div>
+
   </body>
 </html>

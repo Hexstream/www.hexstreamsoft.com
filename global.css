@@ -4,6 +4,16 @@
     margin: 0 1.5em 1.5em 12.5em;
 }
 
+#content > h2 {
+    padding: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    background-color: #ECECEC;
+    border: solid thin gray;
+}
+
 #page-header {
     text-align: center;
     margin: 0 auto 1.75em;
@@ -11,7 +21,7 @@
 }
 
 #page-header #page-title {
-    margin-top: 0.2em;
+    margin-top: 0.6em;
     margin-bottom: 0;
     font-weight: bolder;
     font-size: 4em;
@@ -33,13 +43,6 @@
 
 p {
     margin: 1em;
-}
-
-
-.navboxes {
-    float: left;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 
