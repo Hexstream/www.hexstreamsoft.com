@@ -13,6 +13,7 @@
 }
 
 #content > h2, #content > nav > h2 {
+    text-align: center;
     padding: 0.5em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
