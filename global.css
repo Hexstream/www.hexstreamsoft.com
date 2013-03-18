@@ -47,7 +47,7 @@ dd p {
     font-family: sanvito-pro-display, serif;
 }
 
-#page-header + h2 {
+#page-header + h2, #page-header + nav h2 {
     margin-top: 1.5em;
 }
 
