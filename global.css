@@ -1,5 +1,23 @@
 @import "nav.css";
 
+dt {
+    margin-top: 1.5em;
+    font-size: large;
+}
+
+dt a {
+    text-decoration: none;
+}
+
+dd p:first-child {
+    margin-top: 0.25em;
+}
+
+
+dd p {
+    margin: 0.8em 1.5em;
+}
+
 #last-updated {
     position: absolute;
     top: 0;
