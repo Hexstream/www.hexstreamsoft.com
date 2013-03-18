@@ -249,3 +249,10 @@ li {
 li li {
     margin-bottom: 0.25em;
 }
+
+.emacs-command {
+    border: solid thin #CCCCCC;
+    background-color: #EEEEEE;
+    color: #444444;
+    padding: 0.3em;
+}
