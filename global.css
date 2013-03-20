@@ -18,6 +18,15 @@ dd p {
     margin: 0.8em 1.5em;
 }
 
+dd ul, dd ol {
+    margin: 0.8em 3.5em;
+}
+
+dd ul li, dd ol li {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
 #last-updated {
     position: absolute;
     top: 0;
@@ -250,7 +259,7 @@ li li {
     margin-bottom: 0.25em;
 }
 
-.emacs-command {
+.modifier-key, .emacs-command {
     border: solid thin #CCCCCC;
     background-color: #EEEEEE;
     color: #444444;

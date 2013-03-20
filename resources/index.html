@@ -54,7 +54,7 @@
 
       <div id="tools-I-use_navbox" class="navbox">
         <h2 class="box-header">
-          <a href="#tools-I-use">Tools I use heavily</a>
+          <a href="#tools-I-use">Tools I use</a>
         </h2>
         <div class="box-content">
           <ul>
@@ -81,9 +81,23 @@
         </div>
       </div>
 
+      <div id="distinguished-articles_navbox" class="navbox">
+        <h2 class="box-header">
+          <a href="#distinguished-articles">Articles</a>
+        </h2>
+        <div class="box-content">
+          <ul>
+            <li><a href="#programmings-dirtiest-little-secret">Programming's Dirtiest Little Secret</a></li>
+            <li><a href="#equal-rights-and-wrongs-in-lisp">EQUAL rights</a></li>
+            <li><a href="#rule-of-least-power">Rule of Least Power</a></li>
+            <li><a href="#lisp-monad-tutorial">Lisp monad tutorial</a></li>
+          </ul>
+        </div>
+      </div>
+
       <div id="recommendations_navbox" class="navbox">
         <h2 class="box-header">
-          <a href="#recommendations">Recommendations</a>
+          <a href="#recommendations">Heartfelt Recommendations</a>
         </h2>
         <div class="box-content">
           <ul>
@@ -98,6 +112,37 @@
         </div>
       </div>
 
+      <div id="great-stuff_navbox" class="navbox">
+        <h2 class="box-header">
+          <a href="#good-stuff">Good stuff</a>
+        </h2>
+        <div class="box-content">
+          <ul>
+            <li><a href="#planet-lisp">Planet Lisp</a></li>
+            <li><a href="#lisptips">lisptips.com</a></li>
+            <li><a href="#slime-tips">Slime Tips</a></li>
+            <li><a href="#iterate">Iterate</a></li>
+            <li><a href="#lisp-in-small-parts">Lisp in Small Parts</a></li>
+            <li><a href="#features-of-common-lisp">Features of CL</a></li>
+            <li><a href="#common-lisp-type-hierarchy">CL Type Hierarchy</a></li>
+            <li><a href="#parsing-considered-harmful">Parsing Considered Harmful</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div id="fair-warnings_navbox" class="navbox">
+        <h2 class="box-header">
+          <a href="#fair-warnings">Fair warnings</a>
+        </h2>
+        <div class="box-content">
+          <ul>
+            <li><a href="#let-over-lambda">Let over Lambda</a></li>
+            <li><a href="#paul-graham">Paul Graham</a></li>
+          </ul>
+        </div>
+      </div>
+
     </div>
 
     <div id="content">
@@ -107,19 +152,21 @@
         <div id="page-description">Helpful links and recommendations.</div>
       </div>
 
-      <h2 id="tools-I-use">Tools I use heavily for programming and heartily recommend <a href="#tools-I-use" class="anchor">&#x2693;</a></h2>
+      <h2 id="tools-I-use">Tools I use heavily and heartily recommend <a href="#tools-I-use" class="anchor">&#x2693;</a></h2>
       <dl>
 
         <dt id="unlicense"><a href="http://unlicense.org/">Unlicense</a></dt>
         <dd>
           <p>I release all my projects into the Public Domain with this. The Unlicense is the <strong>most liberal</strong> open-source "license" and you should use it if you want to maximize the potential applicability, and thus <strong>relevance and impact</strong>, of your projects.</p>
           <p><strong>Avoid the GPL at all costs!</strong> You'd just silently lose users left and right for no reason!</p>
+          <p>If you feel you can't use the Unlicense for some obscure reason, then the <a href="http://opensource.org/licenses/mit-license.php">MIT license</a> is a good second choice. It's very liberal and, most importantly, very short.</p>
+          <p>Personally, I consider any license longer than 2 pages to be suspect and a liability. Maybe that's because I'm a programmer and not a lawyer.</p>
         </dd>
 
         <dt id="typematrix-2030"><a href="http://typematrix.com/">TypeMatrix 2030</a></dt>
         <dd>
           <p>I've been using this keyboard <strong>exclusively</strong> since January 2008 and I <strong>love</strong> it!</p>
-          <p>I <a href="http://steve-yegge.blogspot.ca/2008/09/programmings-dirtiest-little-secret.html">touchtype</a> <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard">Dvorak</a> (~70<abbr title="Words Per Minute">wpm</abbr>) and made some custom remappings so that I can press all modifiers in any combination <strong>with my thumbs, without alternating</strong>. This is quite a boon for <a href="#emacs">Emacs</a>! My physical right shift is a "()" key (it inserts opening and closing parentheses and puts the caret between them), which is <strong>nearly indispensable</strong> for Lisp coding.</p>
+          <p>I <a href="http://steve-yegge.blogspot.ca/2008/09/programmings-dirtiest-little-secret.html">touchtype</a> <a href="#dvorak">Dvorak</a> (~70<abbr title="Words Per Minute">wpm</abbr>) and made some custom remappings so that I can press all modifiers in any combination <strong>with my thumbs, without alternating</strong>. This is quite a boon for <a href="#emacs">Emacs</a>! My physical right shift is a "()" key (it inserts opening and closing parentheses and puts the caret between them), which is <strong>nearly indispensable</strong> for Lisp coding. Also, with <kbd class="modifier-key">CTRL</kbd> it inserts two double-quotes ("").</p>
           <p>
             See <a href="../images/hexstream-typematrix-2030.png">my layout</a>. <small>(By the way, the "Win" key means "Window Manager", not "Windows".)</small>
             <br />The <a href="../images/sources/hexstream-typematrix-2030.xcf">messy GIMP file</a> is <a href="#unlicense">released into the Public Domain</a>.
@@ -128,10 +175,25 @@
           <p><small>I'm not affiliated with TypeMatrix in any way, just an enthusiastic user!</small></p>
         </dd>
 
+        <dt id="dvorak"><a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard">Dvorak</a></dt>
+        <dd>
+          <p>A <strong>MASSIVELY</strong> superior alternative to clunky old Qwerty, in every respect except popularity. My highlights:</p>
+
+          <ul>
+            <li>70% of strokes on home row;</li>
+            <li>aoeui in a nice line on the home row on the left;</li>
+            <li>favors hand alternation;</li>
+            <li>exterior to interior rolls;</li>
+          </ul>
+
+          <p><small>I should expand on this in one or more articles...</small></p>
+        </dd>
+
         <dt id="stumpwm"><a href="http://www.nongnu.org/stumpwm/">StumpWM</a></dt>
         <dd>
           <p>"A tiling, keyboard driven X11 Window Manager written entirely in Common Lisp."</p>
-          <p>Basically, this extends <a href="#emacs">Emacs</a> to the whole <abbr title="Graphical User Interface">GUI</abbr>. Needless to say, this is freaking <strong>AWESOME</strong>! I've been using this <strong>exclusively</strong> since 2008 and <strong>I can't imagine living without it</strong> (or a superior replacement) <strong>ever again</strong>!</p>
+          <p>Basically, this extends <a href="#emacs">Emacs</a> to the whole <abbr title="Graphical User Interface">GUI</abbr>. Needless to say, this is freaking <strong>AWESOME</strong>! StumpWM also draws inspiration from the "screen" terminal multiplexer, another awesome program I use daily, albeit in basic ways.
+            I've been using this <strong>exclusively</strong> since 2008 and <strong>I can't imagine living without it</strong> (or a superior replacement) <strong>ever again</strong>!</p>
           <p>My <a href="https://github.com/Hexstream/hexstream-stumpwmrc">raw and undocumented <code>.stumpwmrc</code> init file</a> is <a href="#unlicense">released into the Public Domain</a>.</p>
         </dd>
 
@@ -177,8 +239,28 @@
         </dd>
       </dl>
 
+      <h2 id="distinguished-articles">Distinguished articles <a href="#distinguished-articles" class="anchor">&#x2693;</a></h2>
 
-      <h2 id="recommendations">My heartfelt recommendations <a href="#recommendations" class="anchor">&#x2693;</a></h2>
+      <dl id="programmings-dirtiest-little-secret">
+        <dt><a href="http://steve-yegge.blogspot.ca/2008/09/programmings-dirtiest-little-secret.html">"Programming's Dirtiest Little Secret"</a></dt>
+        <dd><p>Every professional involved with computers should learn touch-typing. Steve Yegge makes the case quite convincingly!</p></dd>
+
+        <dt id="equal-rights-and-wrongs-in-lisp"><a href="http://www.nhplace.com/kent/PS/EQUAL.html">The Best of Intentions: EQUAL rights - and Wrongs - in Lisp</a></dt>
+        <dd>
+          <p>An unmissable classic!</p>
+          <p>Kent Pitman explains some fundamental limits on copying, equality and coercion in programming languages. Also, the useful concept of "intentional types".</p></dd>
+
+        <dt id="rule-of-least-power"><a href="http://www.w3.org/2001/tag/doc/leastPower.html">Rule of Least Power</a></dt>
+        <dd><p>One of the most fundamental principles to understand to be a great programmer!</p></dd>
+
+        <dt id="lisp-monad-tutorial"><a href="http://dorophone.blogspot.ca/2011/04/deep-emacs-part-1.html">"Deep Emacs Lisp Part 1 (Basically, a Monad Tutorial)"</a></dt>
+        <dd>
+          <p>Best monads tutorial EVER for lispers! Forget burritos and space suits!
+            <br />Part 2 is less interesting, if I recall correctly.</p>
+        </dd>
+      </dl>
+
+      <h2 id="heartfelt-recommendations">My heartfelt recommendations <a href="#heartfelt-recommendations" class="anchor">&#x2693;</a></h2>
 
       <dl>
         <dt id="pcl"><a href="http://www.gigamonkeys.com/book/">Practical Common Lisp</a></dt>
@@ -201,9 +283,70 @@
 
         <dt id="codewisdom"><a href="http://twitter.com/CodeWisdom">@CodeWisdom</a></dt>
         <dd><p>Tons of great programming quotes. Extremely high-quality twitter feed!</p></dd>
+
+        <dt id="urbandictionary"><a href="http://www.urbandictionary.com/">Urban Dictionary</a></dt>
+        <dd>
+          <p>Your one-stop shop for all matters of random slang terms!</p>
+          <p>Particularly useful for more or less obscure <abbr title="Internet Relay Chat">IRC</abbr> abbreviations, <a href="http://www.urbandictionary.com/define.php?term=imho">IMHO</a>!</p></dd>
+
       </dl>
 
-      <p id="last-updated">This page was last updated on 18 march 2013.</p>
+
+      <h2 id="good-stuff">Good stuff <a href="#good-stuff" class="anchor">&#x2693;</a></h2>
+
+      <dl>
+        <dt id="planet-lisp"><a href="http://planet.lisp.org/">Planet Lisp</a></dt>
+        <dd><p>The best Common Lisp blog aggregator!</p></dd>
+
+        <dt id="lisptips"><a href="http://lisptips.com/">lisptips.com</a></dt>
+        <dd><p>A healthy source of Common Lisp tips, by <a href="http://xach.com/">Zach Beane</a>, creator of <a href="http://www.quicklisp.org/">Quicklisp</a>.</p></dd>
+
+        <dt id="slime-tips"><a href="http://slime-tips.tumblr.com/">Slime Tips</a></dt>
+        <dd><p>A healthy source of Slime tips, by Stas Boukarev (stassats), another proficient and prominent lisper.</p></dd>
+
+        <dt id="iterate"><a href="http://common-lisp.net/project/iterate/">Iterate</a></dt>
+        <dd>
+          <p>A welcome improvement over <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm">LOOP</a>!</p>
+          <p><small>Still monolithic and not better enough for successful mass migration, though. I don't use it, nor LOOP. I rely more on such things as mapping operators. I already made some libraries that make it easier to survive without LOOP, with plans for many more that will completely replace LOOP in a lispy and non-monolithic manner. I should write some articles about this...</small></p>
+        </dd>
+
+        <dt id="lisp-in-small-parts"><a href="http://lisp.plasticki.com/">Lisp in Small Parts</a></dt>
+        <dd>
+          <p>A good and recent Common Lisp learning resource for newbies without prior programming experience.</p>
+        </dd>
+
+        <dt id="features-of-common-lisp"><a href="http://random-state.net/features-of-common-lisp.html">Features of Common Lisp</a></dt>
+        <dd><p>A pretty nice showcase of distinctive Common Lisp features!</p></dd>
+
+        <dt id="common-lisp-type-hierarchy"><a href="http://sellout.github.com/2012/03/03/common-lisp-type-hierarchy/">Common Lisp Type Hierarchy</a></dt>
+        <dd>
+          <p>A pretty nice diagram of all the types in Common Lisp, with their relationships.</p>
+          <p>A bit overwhelming, but highly informative!</p>
+        </dd>
+
+        <dt id="parsing-considered-harmful"><a href="http://fare.livejournal.com/75940.html">Parsing Considered Harmful</a></dt>
+        <dd><p>I strongly agree! At least for the parts of the article directly related to parsing.</p></dd>
+
+      </dl>
+
+
+      <h2 id="fair-warnings">Fair warnings <a href="#fair-warnings" class="anchor">&#x2693;</a></h2>
+
+      <dl>
+        <dt id="let-over-lambda">Let over Lambda</dt>
+        <dd>
+          <p>Common Lisp newbies: STAY AWAY from this book, at least until you've acquired proper Common Lisp taste, lest it teach you bad habits and warp your mind.</p>
+          <p><small>I've seen my share of impressionable newbies pick up questionable tactics from this book without realizing how unconventional (and often unnecessary) they are. There's usually no good reason to use closures to make your own ad-hoc object system, for instance. Just use <abbr title="Common Lisp Object System">CLOS</abbr>.</small></p>
+        </dd>
+
+        <dt id="paul-graham"><a href="http://paulgraham.com/">Paul Graham</a></dt>
+        <dd>
+          <p>Common Lisp newbies: Beware of Paul Graham's Common Lisp coding style, it's not considered "idiomatic" by many (myself included). For example, he prefers DO over LOOP.</p>
+          <p>He's got some pretty nice essays on Lisp, though! The most well-known is "<a href="http://paulgraham.com/avg.html">Beating the Averages</a>", which introduced masses of programmers to Lisp, myself included!</p></dd>
+
+      </dl>
+
+      <p id="last-updated">This page was last updated on 19 march 2013.</p>
 
     </div>
 
