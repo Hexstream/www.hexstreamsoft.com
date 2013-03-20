@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/introduction.html</loc>
+  </url>
+
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/clhs/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/macro-level/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/map-bind/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/positional-lambda/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/positional-lambda/examples.html</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/place-modifiers/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/anaphoric-variants/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/cartesian-product-switch/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/enhanced-multiple-value-bind/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/enhanced-eval-when/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/parse-number-range/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/incognito-keywords/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/bubble-operator-upwards/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/multiple-value-variants/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/symbol-namespaces/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/projects/place-utils/</loc>
+  </url>
+
+
+
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/tweets/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/tweets/cl-tips/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/tweets/cl-rants/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/tweets/future-lisp-dialect-ideas/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/tweets/programming-remarks/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/tweets/cl-promotion/</loc>
+  </url>
+
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/worknotes/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/worknotes/introduction.html</loc>
+  </url>
+
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/accounts/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/resources</loc>
+  </url>
+
+</urlset>
