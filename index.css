@@ -11,6 +11,10 @@
     margin-top: -0.15em;
 }
 
+#page-header #page-description .author-line {
+    font-size: large;
+}
+
 #news-header {
     text-align: center;
     margin-top: 2em;
