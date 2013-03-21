@@ -177,6 +177,7 @@ table .link-cell a:hover, table .link-cell a:focus {
 .subsection-description .title {
     font-size: large;
     font-weight: bold;
+    letter-spacing: 0.1em;
 }
 
 .subsection-description .description {
