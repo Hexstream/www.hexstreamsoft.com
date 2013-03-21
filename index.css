@@ -9,10 +9,13 @@
 #page-header #page-description {
     font-size: x-large;
     margin-top: -0.15em;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
 }
 
 #page-header #page-description .author-line {
     font-size: large;
+    letter-spacing: 0.06em;
 }
 
 #news-header {
