@@ -23,3 +23,20 @@ ul {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+
+.projects-table col {
+    width: 33%;
+}
+
+#metaprojects-summary-column {
+    width: 30%;
+}
+
+#metaprojects-awaiting-processing-column {
+    width: 60%;
+}
+
+#metaprojects-psi-column {
+    width: 10%;
+}

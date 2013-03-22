@@ -39,6 +39,11 @@ dd ul li, dd ol li {
     margin: 0 1.5em 1.5em 12.5em;
 }
 
+#content + #footer > div {
+    margin-left: 12.5em;
+    margin-right: 1.5em;
+}
+
 #content > h2, #content > nav > h2 {
     text-align: center;
     padding: 0.5em;
@@ -187,6 +192,25 @@ table .link-cell a:hover, table .link-cell a:focus {
     font-size: smaller;
     text-align: justify;
     color: black;
+}
+
+
+#footer {
+    text-align: center;
+    margin-top: 2em;
+    padding: 1em 0;
+    border-top: dashed medium #DDDDDD;
+}
+
+.page-badge {
+    color: green;
+    margin: 0.5em;
+    text-decoration: none;
+}
+
+.page-badge a {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 

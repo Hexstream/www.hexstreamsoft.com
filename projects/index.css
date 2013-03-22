@@ -25,3 +25,7 @@ td {
 .test-star {
     text-decoration: none;
 }
+
+.quickload {
+    white-space: pre;
+}
