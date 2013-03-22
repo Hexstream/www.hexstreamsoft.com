@@ -122,3 +122,20 @@ ol, ul {
     bottom: 0.2em;
     display: block;
 }
+
+
+#footer .back-to-top {
+    position: absolute;
+    left: 0;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    width: 10em;
+    background: #FFCC99;
+    border: medium solid black;
+    text-decoration: none;
+}
+
+#footer .back-to-top:hover, #footer .back-to-top:focus {
+    background: #FFDD99;
+    outline-style: none;
+}

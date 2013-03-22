@@ -42,6 +42,7 @@ dd ul li, dd ol li {
 #content + #footer > div {
     margin-left: 12.5em;
     margin-right: 1.5em;
+    border: medium solid transparent;
 }
 
 #content > h2, #content > nav > h2 {
@@ -196,6 +197,7 @@ table .link-cell a:hover, table .link-cell a:focus {
 
 
 #footer {
+    position: relative;
     text-align: center;
     margin-top: 2em;
     padding: 1em 0;
