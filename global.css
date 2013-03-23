@@ -45,10 +45,6 @@ dd ul li, dd ol li {
     border: medium solid transparent;
 }
 
-h2 .anchor {
-    font-size: large;
-}
-
 #content > h2, #content > nav > h2 {
     text-align: center;
     padding: 0.5em;
@@ -225,17 +221,6 @@ table .link-cell a:hover, table .link-cell a:focus {
 }
 
 
-
-.anchor {
-    text-decoration: none;
-    font-weight: bold;
-    opacity: 0.20;
-}
-
-.anchor:hover {
-    opacity: 1;
-}
-
 h1 {
     margin-top: 1em;
 }
@@ -260,13 +245,6 @@ table > thead > tr:last-child > th {
 
 table > tbody > tr > th {
     position: relative;
-}
-
-table > tbody > tr > th > .anchor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0.25em 0 0 0.25em;
 }
 
 th {
