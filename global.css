@@ -253,6 +253,10 @@ th {
     background-color: #E0E0E0;
 }
 
+th p:last-child {
+    margin-bottom: 0;
+}
+
 td {
     background-color: #ECECEC;
 }
