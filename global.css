@@ -45,6 +45,10 @@ dd ul li, dd ol li {
     border: medium solid transparent;
 }
 
+h2 .anchor {
+    font-size: large;
+}
+
 #content > h2, #content > nav > h2 {
     text-align: center;
     padding: 0.5em;
@@ -224,7 +228,7 @@ table .link-cell a:hover, table .link-cell a:focus {
 
 .anchor {
     text-decoration: none;
-    font-size: large;
+    font-weight: bold;
     opacity: 0.20;
 }
 
