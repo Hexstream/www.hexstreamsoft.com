@@ -126,9 +126,9 @@ ol, ul {
 
 #footer .back-to-top {
     position: absolute;
+    top: 0;
     left: 0;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin: 1em 0.5em;
     width: 10em;
     background: #FFCC99;
     border: medium solid black;
