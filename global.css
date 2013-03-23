@@ -93,6 +93,11 @@ p {
     line-height: 1.4em;
 }
 
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 table p {
     margin: 0.5em;
 }
