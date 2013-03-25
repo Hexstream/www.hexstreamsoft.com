@@ -106,12 +106,16 @@ ol, ul {
     display: none;
 }
 
-.box-header {
+.navbox .box-header {
     position: relative;
     border-bottom: double medium;
     font-size: medium;
     font-weight: bold;
     text-align: center;
+}
+
+.navbox.empty .box-header {
+    border-bottom: none;
 }
 
 .box-header .here-indicator-left, .box-header .here-indicator-right {
