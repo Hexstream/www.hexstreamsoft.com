@@ -83,6 +83,12 @@ ol, ul {
     outline-style: none;
 }
 
+.navboxes {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .here-indicator-left, .here-indicator-right {
     background: gray;
     position: absolute;
