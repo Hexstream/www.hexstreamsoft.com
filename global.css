@@ -88,14 +88,59 @@ dd ul li, dd ol li {
 }
 
 
+.notice {
+    display: table;
+    max-width: 40em;
+    padding: 0;
+    margin: 0.5em auto;
+    text-align: center;
+    border: solid thick transparent;
+}
+
+.notice p {
+    line-height: 1.4em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.notice .prose {
+    text-align: justify;
+}
+
+.notice .debug {
+    position: absolute;
+    font-size: x-small;
+    margin-top: 0.1em;
+    margin-left: 0.1em;
+}
+
+.warning {
+    border-color: orange;
+}
+
+
 p {
     margin: 1em;
     line-height: 1.4em;
 }
 
 table {
+    border-collapse: collapse;
+    margin: 1em auto 2em;
     margin-left: auto;
     margin-right: auto;
+    border: solid medium gray;
+}
+
+table table {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+table td.subdivided {
+    padding: 0;
 }
 
 table p {
@@ -225,12 +270,6 @@ h1 {
     margin-top: 1em;
 }
 
-table {
-    border-collapse: collapse;
-    margin-bottom: 2em;
-    border: solid medium gray;
-}
-
 table > thead > tr > th.horizontal-grouping-header,
 table > tbody > tr > th.horizontal-grouping-header{
     text-align: center;
@@ -283,4 +322,12 @@ li li {
     background-color: #EEEEEE;
     color: #444444;
     padding: 0.3em;
+}
+
+.good-news {
+    color: green;
+}
+
+.good-news a {
+    color: inherit;
 }
