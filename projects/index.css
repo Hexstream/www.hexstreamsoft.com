@@ -29,3 +29,7 @@ td {
 .quickload {
     white-space: pre;
 }
+
+.navboxes .navbox {
+    width: 13em;
+}

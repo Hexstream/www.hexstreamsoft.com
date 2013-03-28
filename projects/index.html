@@ -31,7 +31,31 @@
     </p>
 
     <div class="nav">
+
       <div class="separator group"></div>
+
+      <div id="projects_navbox" class="navbox">
+        <h2 class="box-header">
+          Projects <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span>
+        </h2>
+        <div class="box-content">
+          <ul>
+            <li>
+              <a href="macros/" class="inlining-node">Macros</a>
+              <ul class="inlined-nodes">
+                <li><a href="macros/simple/">Simple</a></li>
+                <li><a href="macros/extensible/">Extensible</a></li>
+                <li><a href="macros/utilities/">Utilities</a></li>
+              </ul>
+            </li>
+            <li><a href="data-structures/">Data structures</a></li>
+            <li><a href="uncategorized/">Uncategorized</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="separator group"></div>
+
       <div id="main_navbox" class="navbox">
         <h2 class="box-header">
           <a href="../">HexstreamSoft <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a>
@@ -47,268 +71,112 @@
           </ul>
         </div>
       </div>
-      <div class="separator group"></div>
-      <div class="separator group"></div>
-      <div id="page_navbox" class="navbox">
-        <h2 class="box-header">
-          <a href="#ready-to-use">Projects <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a>
-        </h2>
-        <div class="box-content">
-          <ul>
-            <li><a href="#clhs">clhs</a></li>
-            <li><a href="#macro-level">macro-level</a></li>
-            <li><a href="#map-bind">map-bind</a></li>
-            <li><a href="#positional-lambda">positional-lambda</a></li>
-            <li><a href="#place-modifiers">place-modifiers</a></li>
-            <li><a href="#anaphoric-variants">anaphoric-variants</a></li>
-            <li><a href="#cartesian-product-switch">cartesian-product-switch</a></li>
-            <li><a href="#enhanced-multiple-value-bind">enhanced-multiple-value-bind</a></li>
-            <li><a href="#enhanced-eval-when">enhanced-eval-when</a></li>
-            <li><a href="#parse-number-range">parse-number-range</a></li>
-            <li><a href="#incognito-keywords">incognito-keywords</a></li>
-            <li><a href="#bubble-operator-upwards">bubble-operator-upwards</a></li>
-            <li><a href="#multiple-value-variants">multiple-value-variants</a></li>
-            <li><a href="#symbol-namespaces">symbol-namespaces</a></li>
-            <li><a href="#place-utils">place-utils</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
     <div id="content">
       <div id="page-header">
-        <h1 id="page-title">Common Lisp Projects</h1>
+        <h1 id="page-title">Public Domain Common Lisp Projects</h1>
         <div id="page-description">15 ready-to-use projects in Quicklisp, with many more to come!</div>
       </div>
-      <p>These Common Lisp projects have been released into the Public Domain by their original author, Jean&#8209;Philippe&nbsp;Paradis. Do anything you want with them.</p>
-      <table>
-        <thead>
-          <tr><th colspan="3" class="horizontal-grouping-header">Project name</th></tr>
-          <tr>
-	    <th>Latest version</th>
-	    <th>
-              <p><a href="http://www.quicklisp.org">Quicklisp</a> availability</p>
-              <p><a href="http://quickdocs.org/">Quickdocs</a> page, <a href="http://www.cliki.net/">cliki</a> page</p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/">cl-test-grid results</a></p>
-            </th>
-	    <th>
-              <p>Library type<br />Project complexity</p>
-              <p>Description</p>
-            </th>
-          </tr>
-        </thead>
-        <tbody id="clhs">
-          <tr>
-	    <th colspan="3" class="horizontal-grouping-header"><a href="#clhs" class="anchor">&#x2693;</a> <a href="clhs/" class="project-name">clhs (trivial ASDF wrapper)</a></th>
-	  </tr>
-          <tr>
-            <td><a href="clhs/clhs_latest.tar.gz">0.6.1</a><br />23&nbsp;sept&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload "clhs")</code></p>
-	      <p><a href="http://quickdocs.org/clhs">Quickdocs</a>, <a href="http://cliki.net/clhs%20ASDF%20wrapper">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/clhs.html"><span class="ok">All OK</span></a></p>
-	    </td>
-	    <td><p>Installation helper<br />Simple</p>
-              <p>Intends to make it even easier to install a copy of the <a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">CLHS</a> locally.</p></td>
-          </tr>
-        </tbody>
-        <tbody id="macro-level">
-          <tr>
-            <th colspan="3" class="horizontal-grouping-header"><a href="#macro-level" class="anchor">&#x2693;</a> <a href="macro-level/" class="project-name">macro-level</a></th>
-          </tr>
-          <tr>
-	    <td><a href="macro-level/macro-level_latest.tar.gz">1.0.1</a><br />4&nbsp;oct&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload "macro-level")</code></p>
-	      <p><a href="http://quickdocs.org/macro-level">Quickdocs</a>, <a href="http://cliki.net/macro-level">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/macro-level.html"><span class="ok">All OK</span></a></p>
-	    </td>
-	    <td>
-              <p>Visual Macro<br />Embarassingly trivial</p>
-              <p>Saves on indentation while being more concise and direct.<br /><code>(macro-level ...)</code> == <code>(macrolet ((m () ...)) (m))</code></p></td>
-	  </tr>
-        </tbody>
-        <tbody id="map-bind">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#map-bind" class="anchor">&#x2693;</a> <a href="map-bind/" class="project-name">map-bind</a></th></tr>
-          <tr>
-	    <td><a href="map-bind/map-bind_latest.tar.gz">1.0</a><br />8&nbsp;aug&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload "map-bind")</code></p>
-	      <p><a href="http://quickdocs.org/map-bind">Quickdocs</a>, <a href="http://cliki.net/map-bind">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/map-bind.html"><span class="ok">All OK</span></a></p>
-	    </td>
-	    <td><p>Visual Macro<br />Embarassingly trivial</p>
-              <p>Allows visual grouping of variables with their corresponding values (not necessarily 1:1) in calls to mapping operators when using an inline LAMBDA. Does so in a way that automatically supports virtually every existing and future mapping operator, all lambda keywords and FUNCALL/APPLY/MULTIPLE-VALUE-CALL variations.</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="positional-lambda">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#positional-lambda" class="anchor">&#x2693;</a> <a href="positional-lambda/" class="project-name">positional-lambda</a></th></tr>
-          <tr>
-	    <td><a href="positional-lambda/positional-lambda_latest.tar.gz">2.0</a><br />30&nbsp;sept&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload
-  "positional-lambda")</code></p>
-	      <p><a href="http://quickdocs.org/positional-lambda">Quickdocs</a>, <a href="http://cliki.net/positional-lambda">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/positional-lambda.html"><span class="ok">All OK</span></a></p>
-	    </td>
-	    <td><p>Visual Macro<br />Trivial</p>
-              <p>A concise, intuitive and flexible syntax for trivial lambdas that eschews explicit (and often contextually-redundant) naming of parameter variables in favor of positional references, with support for a used or ignored &amp;rest parameter and automatic declaration of ignored parameters when logical "gaps" are left in the positional references. Further convenience features are provided.</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="place-modifiers">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#place-modifiers" class="anchor">&#x2693;</a> <a href="place-modifiers/" class="project-name">place-modifiers</a></th></tr>
-          <tr>
-	    <td><a href="place-modifiers/place-modifiers_latest.tar.gz">2.1</a><br />22&nbsp;oct&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload
-  "place-modifiers")</code></p>
-	      <p><a href="http://quickdocs.org/place-modifiers">Quickdocs</a>, <a href="http://cliki.net/place-modifiers">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/place-modifiers.html"><span class="ok">All OK</span> <span class="minor-fail">except 2 versions (acl).</span></a></p>
-	    </td>
-	    <td><p>Concision Macro<br />Simple/Medium</p>
-              <p>Essentially gives access to hundreds of modify-macros through one single macro: MODIFY.</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="anaphoric-variants">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#anaphoric-variants" class="anchor">&#x2693;</a> <a href="anaphoric-variants/" class="project-name">anaphoric-variants</a></th></tr>
-          <tr>
-	    <td><a href="anaphoric-variants/anaphoric-variants_latest.tar.gz">1.0.1</a><br />22&nbsp;sept&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload
-  "anaphoric-variants")</code></p>
-	      <p><a href="http://quickdocs.org/anaphoric-variants">Quickdocs</a>, <a href="http://cliki.net/anaphoric-variants">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/anaphoric-variants.html"><span class="ok">All OK</span></a></p>
-	    </td>
-	    <td><p>Pun Macro<br />Medium</p>
-              <p>Gives access to anaphoric variants of operators through one macro: ANAPHORIC. The user explicitly provides a variable name, preserving sanity, in contrast to the traditional use of an evil implicit variable ("IT"). Some operators can bind additional handy variables when explicitly requested.</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="cartesian-product-switch">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#cartesian-product-switch" class="anchor">&#x2693;</a> <a href="cartesian-product-switch/" class="project-name">cartesian-product-switch</a></th></tr>
-          <tr>
-	    <td><a href="cartesian-product-switch/cartesian-product-switch_latest.tar.gz">2.0</a><br />2&nbsp;sept&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload
-  "cartesian-product-switch")</code></p>
-	      <p><a href="http://quickdocs.org/cartesian-product-switch">Quickdocs</a>, <a href="http://cliki.net/cartesian-product-switch">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/cartesian-product-switch.html"><span class="ok">All OK</span></a></p>
-	    </td>
-	    <td><p>Operator Overlay Macro<br />Simple</p>
-              <p>Chooses the appropriate form to execute according to the combined results of multiple tests. This is a straightforward and efficient alternative to the convoluted ad-hoc conditionals one might otherwise resort to.</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="enhanced-multiple-value-bind">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#enhanced-multiple-value-bind" class="anchor">&#x2693;</a> <a href="enhanced-multiple-value-bind/" class="project-name">enhanced-multiple-value-bind</a></th></tr>
-          <tr>
-	    <td><a href="enhanced-multiple-value-bind/enhanced-multiple-value-bind_latest.tar.gz">1.0.1</a><br />23&nbsp;oct&nbsp;2012</td>
-	    <td>
-	      <code class="quickload">(ql:quickload
-  "enhanced-multiple-value-bind")</code>
-	      <p><a href="http://quickdocs.org/enhanced-multiple-value-bind">Quickdocs</a>, <a href="http://cliki.net/enhanced-multiple-value-bind">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/enhanced-multiple-value-bind.html"><span class="ok">All OK</span></a></p>
-	    </td>
-	    <td><p>Combinations Macro<br />Simple</p>
-              <p>Provides an enhanced MULTIPLE-VALUE-BIND macro that adds support for lambda keywords by expanding to a MULTIPLE-VALUE-CALL when necessary. This makes catching multiple-value &amp;rest and &amp;key much more lightweight and convenient. A MULTIPLE-VALUE-&amp;BIND alias is supported.</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="enhanced-eval-when">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#enhanced-eval-when" class="anchor">&#x2693;</a> <a href="enhanced-eval-when/" class="project-name">enhanced-eval-when</a></th></tr>
-          <tr>
-	    <td><a href="enhanced-eval-when/enhanced-eval-when_latest.tar.gz">1.0</a><br />29&nbsp;oct&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload
-  "enhanced-eval-when")</code></p>
-	      <p><a href="http://quickdocs.org/enhanced-eval-when">Quickdocs</a>, <a href="http://cliki.net/enhanced-eval-when">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/enhanced-eval-when.html"><span class="ok">All OK</span></a></p>
-	    </td>
-	    <td><p>Wrapper Macro<br />Embarassingly trivial</p>
-              <p>Provides an enhanced EVAL-WHEN macro that supports<br /><code>(eval-when t ...)</code> as a shorthand for<br /><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code>, addressing concerns about verbosity. An ENHANCED-EVAL-WHEN alias is also supported, as well as an EVAL-ALWAYS macro and package nickname, for good measure.</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="parse-number-range">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#parse-number-range" class="anchor">&#x2693;</a> <a href="parse-number-range/" class="project-name">parse-number-range</a></th></tr>
-          <tr>
-	    <td><a href="parse-number-range/parse-number-range_latest.tar.gz">1.0</a><br />26&nbsp;oct&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload
-  "parse-number-range")</code></p>
-	      <p><a href="http://quickdocs.org/parse-number-range">Quickdocs</a>, <a href="http://cliki.net/parse-number-range">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/parse-number-range.html"><span class="ok">All OK</span> <span class="minor-fail">except 2 versions (acl).</span></a></p>
-	    </td>
-	    <td><p>Wrapper Macro<br />Embarassingly trivial</p>
-              <p>Parses LOOP's convenient "for-as-arithmetic" syntax into 5 simple values: from, to, limit-kind (:inclusive, :exclusive or nil if unbounded), by (step) and direction (+ or -)). Further related utilities are provided. Intended for easy implementation of analogous functionality in other constructs.</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="incognito-keywords">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#incognito-keywords" class="anchor">&#x2693;</a> <a href="incognito-keywords/" class="project-name">incognito-keywords</a></th></tr>
-          <tr>
-	    <td><a href="incognito-keywords/incognito-keywords_latest.tar.gz">1.1</a><br />21&nbsp;dec&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload
-  "incognito-keywords")</code></p>
-	      <p><a href="http://quickdocs.org/incognito-keywords">Quickdocs</a>, <a href="http://cliki.net/incognito-keywords">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/incognito-keywords.html"><span class="ok">All OK</span></a></p>
-	    </td>
-	    <td><p>Thematic Utilities<br />Simple</p>
-              <p>Introduces a new kind of keyword that looks just like any non-keyword symbol and allows safe usage of convenient but clashy symbol names by multiple libraries without conflicts through sharing. Some names that might benefit are (alist blist plist macro operator index &amp;doc &amp;decl &amp;rest+ &amp;destructure &amp;ignored &amp;ignorable).</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="bubble-operator-upwards">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#bubble-operator-upwards" class="anchor">&#x2693;</a> <a href="bubble-operator-upwards/" class="project-name">bubble-operator-upwards</a></th></tr>
-          <tr>
-	    <td><a href="bubble-operator-upwards/bubble-operator-upwards_latest.tar.gz">1.0</a><br />4&nbsp;nov&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload
-  "bubble-operator-upwards")</code></p>
-	      <p><a href="http://quickdocs.org/bubble-operator-upwards">Quickdocs</a>, <a href="http://cliki.net/bubble-operator-upwards">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/bubble-operator-upwards.html"><span class="ok">All OK</span></a></p>
-	    </td>
-	    <td><p>Independent Cooperation<br />Trivial</p>
-              <p>Demultiplexes all alternative branches in a form by way of cartesian product. This operation is notably useful for easy implementation of certain kinds of shorthand notations in macros. A cartesian-product function is also exported, as it's needed to implement the main function.</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="multiple-value-variants">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#multiple-value-variants" class="anchor">&#x2693;</a> <a href="multiple-value-variants/" class="project-name">multiple-value-variants</a></th></tr>
-          <tr>
-	    <td><a href="multiple-value-variants/multiple-value-variants_latest.tar.gz">1.0</a><br />10&nbsp;nov&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload
-  "multiple-value-variants")</code></p>
-	      <p><a href="http://quickdocs.org/multiple-value-variants">Quickdocs</a>, <a href="http://cliki.net/multiple-value-variants">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/multiple-value-variants.html"><span class="ok">All OK</span></a></p>
-	    </td>
-	    <td><p>Utility Function<br />Trivial</p>
-              <p>Gives access to multiple-value variants of operators through one macro: MULTIPLE-VALUE. There are built-in variants for some standard operators; it's easy to create your own variants for other operators. The multiple-value mapping operators are especially useful.</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="symbol-namespaces">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#symbol-namespaces" class="anchor">&#x2693;</a> <a href="symbol-namespaces/" class="project-name">symbol-namespaces</a></th></tr>
-          <tr>
-	    <td><a href="symbol-namespaces/symbol-namespaces_latest.tar.gz">1.0</a><br />9&nbsp;dec&nbsp;2012</td>
-	    <td>
-	      <p><code class="quickload">(ql:quickload
-  "symbol-namespaces")</code></p>
-	      <p><a href="http://quickdocs.org/symbol-namespaces">Quickdocs</a>, <a href="http://cliki.net/symbol-namespaces">cliki</a></p>
-              <p><a href="http://common-lisp.net/project/cl-test-grid/library/symbol-namespaces.html"><span class="ok">All OK</span></a></p>
-            </td>
-	    <td><p>Operator Overlay Macro<br />Simple/Medium</p>
-              <p>Defines a new kind of package that's named by a symbol rather than a string and that maps from existing symbols to their respective "implicitly managed" counterparts. The motivating use-case is to conceptually allow multiple definitions of the same kind on a single symbol, without conflicts.</p></td>
-	  </tr>
-        </tbody>
-        <tbody id="place-utils">
-          <tr><th colspan="3" class="horizontal-grouping-header"><a href="#place-utils" class="anchor">&#x2693;</a> <a href="place-utils/" class="project-name">place-utils</a></th></tr>
-          <tr>
-	    <td><a href="place-modifiers/place-modifiers_latest.tar.gz">0.1</a><br />16&nbsp;april&nbsp;2011</td>
-	    <td><p><code class="quickload">(ql:quickload "place-utils")</code></p></td>
-	    <td>
-              <p>Thematic Utilities<br />Simple</p>
-              <p>Provides a few utilities relating to setfable places.</p></td>
-	  </tr>
-        </tbody>
 
-      </table>
-      <p>(Don't get fooled by the low complexity of these projects, I do have many complex projects (some of which I considered "complete" and used successfully for years before open-sourcing), but they're in-progress and undocumented.)</p>
+      <nav>
+        <ul class="subsection-descriptions">
+          <li class="subsection-description panel">
+            <a onmouseup="this.blur();" href="macros/simple/"><span class="title">Simple macros</span>
+              <br><span class="description">Macros that don't need to be extensible.</span></a>
+          </li>
+          <li class="subsection-description panel">
+            <a onmouseup="this.blur();" href="macros/extensible/"><span class="title">Extensible macros</span>
+              <br><span class="description">Language extensions implemented as extensible macros.</span></a>
+          </li>
+          <li class="subsection-description panel">
+            <a onmouseup="this.blur();" href="macros/utilities/"><span class="title">Macro utilities</span>
+              <br><span class="description">Utilities that help write macros more easily.</span></a>
+          </li>
+          <li class="subsection-description panel">
+            <a onmouseup="this.blur();" href="data-structures/"><span class="title">Data structures</span>
+              <br><span class="description">Don't neglect your data structures, lest they become data strictures!</span></a>
+          </li>
+          <li class="subsection-description panel">
+            <a onmouseup="this.blur();" href="uncategorized/"><span class="title">Uncategorized</span>
+              <br><span class="description">Odds and ends to reach ends against all odds.</span></a>
+          </li>
+        </ul>
+      </nav>
 
-      <p id="last-updated">This page was last updated on 14 march 2013.</p>
+      <div class="navboxes">
+
+        <div id="simple-macro-projects_navbox" class="navbox">
+          <h2 class="box-header">
+            Simple macros
+          </h2>
+          <div class="box-content">
+            <ul>
+              <li><a href="map-bind/">map-bind</a></li>
+              <li><a href="positional-lambda/">positional-lambda</a></li>
+              <li><a href="enhanced-eval-when/">enhanced-eval-when</a></li>
+              <li><a href="enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a></li>
+              <li><a href="macro-level/">macro-level</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="extensible-macro-projects_navbox" class="navbox">
+          <h2 class="box-header">
+            Extensible macros
+          </h2>
+          <div class="box-content">
+            <ul>
+              <li><a href="cartesian-product-switch/">cartesian-product-switch</a></li>
+              <li><a href="place-modifiers/">place-modifiers</a></li>
+              <li><a href="anaphoric-variants/">anaphoric-variants</a></li>
+              <li><a href="multiple-value-variants/">multiple-value-variants</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="macro-utilities-projects_navbox" class="navbox">
+          <h2 class="box-header">
+            Macro utilities
+          </h2>
+          <div class="box-content">
+            <ul>
+              <li><a href="parse-number-range/">parse-number-range</a></li>
+              <li><a href="bubble-operator-upwards/">bubble-operator-upwards</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="float-clear"></div>
+
+        <div id="data-structure-projects_navbox" class="navbox">
+          <h2 class="box-header">
+            Data structures
+          </h2>
+          <div class="box-content">
+            <ul>
+              <li><a href="incognito-keywords/">incognito-keywords</a></li>
+              <li><a href="symbol-namespaces/">symbol-namespaces</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="uncategorized-projects_navbox" class="navbox">
+          <h2 class="box-header">
+            Uncategorized
+          </h2>
+          <div class="box-content">
+            <ul>
+              <li><a href="clhs/">clhs</a></li>
+              <li><a href="place-utils/">place-utils</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="float-clear"></div>
+
+      </div>
+
+      <p id="last-updated">This page was last updated on 27 march 2013.</p>
 
     </div>
 

@@ -90,6 +90,7 @@ dd ul li, dd ol li {
 
 .notice {
     display: table;
+    position: relative;
     max-width: 40em;
     padding: 0;
     margin: 0.5em auto;
@@ -187,62 +188,10 @@ table .link-cell a:hover, table .link-cell a:focus {
     clear: both;
 }
 
-
 .panel {
     position: relative;
     border: solid medium #AAAAAA;
     background: #ECECEC;
-}
-
-
-.subsection-descriptions {
-    width: 58%;
-    margin-left: auto;
-    margin-right: auto;
-    border: thin solid;
-    text-decoration: none;
-}
-
-.subsection-descriptions li {
-    margin-bottom: 0;
-}
-
-.subsection-descriptions * {
-    text-decoration: inherit;
-}
-
-.subsection-descriptions :hover, .subsection-descriptions :focus {
-    background: #ECE0A5;
-    outline-style: none;
-}
-
-.subsection-descriptions + .subsection-descriptions {
-    margin-top: 1em;
-}
-
-.subsection-description {
-    list-style-type: none;
-    border: thin solid;
-}
-
-.subsection-description a {
-    display: block;
-    padding: 0.5em 1em;
-}
-
-.subsection-description .title {
-    font-size: large;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    word-spacing: 0.06em;
-}
-
-.subsection-description .description {
-    display: block;
-    margin-top: 0.2em;
-    font-size: smaller;
-    text-align: justify;
-    color: black;
 }
 
 
