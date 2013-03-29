@@ -62,14 +62,7 @@ ol, ul {
     position: relative;
 }
 
-.navbox li .here {
-    padding: 0.175em 0.5em;
-    position: relative;
-    background: #FFCC99;
-    color: #000000;
-}
-
-.navbox li:first-child a, .navbox li:first-child .here {
+.navbox li:first-child a {
     padding-top: 0.35em;
 }
 
@@ -77,7 +70,7 @@ ol, ul {
     top: 0.35em;
 }
 
-.navbox li.last-child a, .navbox li.last-child .here {
+.navbox li.last-child a {
     padding-bottom: 0.35em;
 }
 
@@ -88,6 +81,10 @@ ol, ul {
 .navbox a:hover, .navbox a:focus {
     background: #FFDD99;
     outline-style: none;
+}
+
+.navbox a.here:hover, .navbox a.here:focus {
+    background: transparent;
 }
 
 .navbox .inlined-nodes {
@@ -111,7 +108,7 @@ ol, ul {
 .navboxes .navbox {
     float: left;
     width: auto;
-    min-width: 10em;
+    min-width: 12em;
 }
 
 .here-indicator-left, .here-indicator-right {

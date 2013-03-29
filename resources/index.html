@@ -28,14 +28,34 @@
     <p id="crumbs">
       <a href="../">HexstreamSoft</a>
       <span class="separator"> → </span>
-      <span class="here">Resources</span>
+      <a class="here">Resources</a>
     </p>
 
     <div class="nav">
+
       <div class="separator group"></div>
+
+      <div id="resources_navbox" class="navbox">
+        <h2 class="box-header">
+          <a class="here">Resources <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a>
+        </h2>
+        <div class="box-content">
+          <ul>
+            <li><a href="#tools-I-use">Tools I use</a></li>
+            <li><a href="#references-I-use">References I use</a></li>
+            <li><a href="#distinguished-articles">Distinguished articles</a></li>
+            <li><a href="#recommendations">Recommendations</a></li>
+            <li><a href="#good-stuff">Good stuff</a></li>
+            <li><a href="#fair-warnings">Fair warnings</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="separator group"></div>
+
       <div id="main_navbox" class="navbox">
         <h2 class="box-header">
-          <a href="../">HexstreamSoft <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a>
+          <a href="../">HexstreamSoft</a>
         </h2>
         <div class="box-content">
           <ul>
@@ -44,103 +64,7 @@
             <li><a href="../tweets/">Tweets</a></li>
             <li><a href="../worknotes/">Worknotes</a></li>
             <li><a href="../accounts/">Accounts</a></li>
-            <li><div class="here">Resources <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></div></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="separator group"></div>
-      <div class="separator group"></div>
-
-      <div id="tools-I-use_navbox" class="navbox">
-        <h2 class="box-header">
-          <a href="#tools-I-use">Tools I use</a>
-        </h2>
-        <div class="box-content">
-          <ul>
-            <li><a href="#unlicense">Unlicense</a></li>
-            <li><a href="#typematrix-2030">TypeMatrix</a></li>
-            <li><a href="#dvorak">Dvorak</a></li>
-            <li><a href="#stumpwm">StumpWM</a></li>
-            <li><a href="#emacs">Emacs</a></li>
-            <li><a href="#slime">Slime</a></li>
-            <li><a href="#sbcl">SBCL</a></li>
-            <li><a href="#quicklisp">Quicklisp</a></li>
-            <li><a href="#ubuntu">Ubuntu</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="references-I-use_navbox" class="navbox">
-        <h2 class="box-header">
-          <a href="#references-I-use">References I use</a>
-        </h2>
-        <div class="box-content">
-          <ul>
-            <li><a href="#clhs">CLHS</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="distinguished-articles_navbox" class="navbox">
-        <h2 class="box-header">
-          <a href="#distinguished-articles">Articles</a>
-        </h2>
-        <div class="box-content">
-          <ul>
-            <li><a href="#programmings-dirtiest-little-secret">Programming's Dirtiest Little Secret</a></li>
-            <li><a href="#equal-rights-and-wrongs-in-lisp">EQUAL rights</a></li>
-            <li><a href="#rule-of-least-power">Rule of Least Power</a></li>
-            <li><a href="#lisp-monad-tutorial">Lisp monad tutorial</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="recommendations_navbox" class="navbox">
-        <h2 class="box-header">
-          <a href="#recommendations">Heartfelt Recommendations</a>
-        </h2>
-        <div class="box-content">
-          <ul>
-            <li><a href="#pcl">PCL</a></li>
-            <li><a href="#quickdocs">Quickdocs</a></li>
-            <li><a href="#quicklisp-projects-issues">quicklisp-projects issues</a></li>
-            <li><a href="#cl-test-grid-reports">cl-test-grid reports</a></li>
-            <li><a href="#prog21">Prog 21st century</a></li>
-            <li><a href="#surprising-history-of-copyright">History of copyright</a></li>
-            <li><a href="#long-painful-history-of-time">History of Time</a></li>
-            <li><a href="#codewisdom">@CodeWisdom</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="great-stuff_navbox" class="navbox">
-        <h2 class="box-header">
-          <a href="#good-stuff">Good stuff</a>
-        </h2>
-        <div class="box-content">
-          <ul>
-            <li><a href="#planet-lisp">Planet Lisp</a></li>
-            <li><a href="#lisptips">lisptips.com</a></li>
-            <li><a href="#slime-tips">Slime Tips</a></li>
-            <li><a href="#iterate">Iterate</a></li>
-            <li><a href="#lisp-in-small-parts">Lisp in Small Parts</a></li>
-            <li><a href="#features-of-common-lisp">Features of CL</a></li>
-            <li><a href="#common-lisp-type-hierarchy">CL Type Hierarchy</a></li>
-            <li><a href="#parsing-considered-harmful">Parsing Considered Harmful</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div id="fair-warnings_navbox" class="navbox">
-        <h2 class="box-header">
-          <a href="#fair-warnings">Fair warnings</a>
-        </h2>
-        <div class="box-content">
-          <ul>
-            <li><a href="#let-over-lambda">Let over Lambda</a></li>
-            <li><a href="#paul-graham">Paul Graham</a></li>
+            <li><a class="here">Resources <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
           </ul>
         </div>
       </div>
@@ -156,6 +80,105 @@
 
       <div class="notice warning">
         <p><b>Warning:</b> Opinionated!</p>
+      </div>
+
+      <div class="navboxes">
+        <div id="tools-I-use_navbox" class="navbox">
+          <h2 class="box-header">
+            <a href="#tools-I-use">Tools I use</a>
+          </h2>
+          <div class="box-content">
+            <ul>
+              <li><a href="#unlicense">Unlicense</a></li>
+              <li><a href="#typematrix-2030">TypeMatrix</a></li>
+              <li><a href="#dvorak">Dvorak</a></li>
+              <li><a href="#stumpwm">StumpWM</a></li>
+              <li><a href="#emacs">Emacs</a></li>
+              <li><a href="#slime">Slime</a></li>
+              <li><a href="#sbcl">SBCL</a></li>
+              <li><a href="#quicklisp">Quicklisp</a></li>
+              <li><a href="#ubuntu">Ubuntu</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="references-I-use_navbox" class="navbox">
+          <h2 class="box-header">
+            <a href="#references-I-use">References I use</a>
+          </h2>
+          <div class="box-content">
+            <ul>
+              <li><a href="#clhs">CLHS</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="distinguished-articles_navbox" class="navbox">
+          <h2 class="box-header">
+            <a href="#distinguished-articles">Articles</a>
+          </h2>
+          <div class="box-content">
+            <ul>
+              <li><a href="#programmings-dirtiest-little-secret">Programming's<br />Dirtiest Little Secret</a></li>
+              <li><a href="#equal-rights-and-wrongs-in-lisp">EQUAL rights</a></li>
+              <li><a href="#rule-of-least-power">Rule of Least Power</a></li>
+              <li><a href="#lisp-monad-tutorial">Lisp monad tutorial</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="float-clear"></div>
+
+        <div id="recommendations_navbox" class="navbox">
+          <h2 class="box-header">
+            <a href="#recommendations">Heartfelt Recommendations</a>
+          </h2>
+          <div class="box-content">
+            <ul>
+              <li><a href="#pcl">PCL</a></li>
+              <li><a href="#quickdocs">Quickdocs</a></li>
+              <li><a href="#quicklisp-projects-issues">quicklisp-projects issues</a></li>
+              <li><a href="#cl-test-grid-reports">cl-test-grid reports</a></li>
+              <li><a href="#prog21">Prog 21st century</a></li>
+              <li><a href="#surprising-history-of-copyright">History of copyright</a></li>
+              <li><a href="#long-painful-history-of-time">History of Time</a></li>
+              <li><a href="#codewisdom">@CodeWisdom</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="great-stuff_navbox" class="navbox">
+          <h2 class="box-header">
+            <a href="#good-stuff">Good stuff</a>
+          </h2>
+          <div class="box-content">
+            <ul>
+              <li><a href="#planet-lisp">Planet Lisp</a></li>
+              <li><a href="#lisptips">lisptips.com</a></li>
+              <li><a href="#slime-tips">Slime Tips</a></li>
+              <li><a href="#iterate">Iterate</a></li>
+              <li><a href="#lisp-in-small-parts">Lisp in Small Parts</a></li>
+              <li><a href="#features-of-common-lisp">Features of CL</a></li>
+              <li><a href="#common-lisp-type-hierarchy">CL Type Hierarchy</a></li>
+              <li><a href="#parsing-considered-harmful">Parsing Considered Harmful</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div id="fair-warnings_navbox" class="navbox">
+          <h2 class="box-header">
+            <a href="#fair-warnings">Fair warnings</a>
+          </h2>
+          <div class="box-content">
+            <ul>
+              <li><a href="#let-over-lambda">Let over Lambda</a></li>
+              <li><a href="#paul-graham">Paul Graham</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="float-clear"></div>
+
       </div>
 
       <h2 id="tools-I-use">Tools I use heavily and heartily recommend <a href="#tools-I-use" class="anchor">&#x2693;</a></h2>
@@ -362,7 +385,7 @@
 
       </dl>
 
-      <p id="last-updated">This page was last updated on 19 march 2013.</p>
+      <p id="last-updated">This page was last updated on 28 march 2013.</p>
 
     </div>
 
