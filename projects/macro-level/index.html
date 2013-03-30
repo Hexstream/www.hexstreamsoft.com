@@ -190,7 +190,7 @@
 
       <p>MACRO-LEVEL is an embarassingly trivial convenience macro that saves on indentation while being more concise and direct.</p>
 
-      <p><pre>(macro-level
+      <pre>(macro-level
   ...)
 ==
 ;; Canonical indentation. MACRO-LEVEL saves <span class="saved-indentation">11 spaces</span>.
@@ -202,7 +202,7 @@
 (macrolet
     ((m ()
   <span class="saved-indentation">     </span>...))
-  (m))</pre></p>
+  (m))</pre>
 
       <p>When used as part of a macroexpansion, MACRO-LEVEL also conveniently relieves the macro implementor from naming and using a gensym for the one-shot macro when compared to writing out a MACROLET by hand, in addition to the other advantages.</p>
 
