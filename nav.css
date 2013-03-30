@@ -195,16 +195,17 @@ table > tbody > tr > th > .anchor {
     padding: 0.25em 0 0 0.25em;
 }
 
-
 .subsection-descriptions {
-    width: 58%;
+    display: table;
     margin: 1em auto;
-    border: thin solid;
+    background: #ECECEC;
     text-decoration: none;
+    border: thin solid black;
 }
 
-.subsection-descriptions li {
+.subsection-descriptions > li {
     margin-bottom: 0;
+    border: thin solid black;
 }
 
 .subsection-descriptions * {
@@ -222,11 +223,6 @@ table > tbody > tr > th > .anchor {
 
 .subsection-description {
     list-style-type: none;
-    border: thin solid;
-}
-
-.subsection-description.panel {
-    border: inherit;
 }
 
 .subsection-description a {
