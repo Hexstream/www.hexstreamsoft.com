@@ -55,12 +55,39 @@ ol, ul {
 
 .navbox li {
     margin: 0;
+    position: relative;
 }
 
 .navbox li a {
     padding: 0.175em 0.5em;
     position: relative;
 }
+
+.navbox li a.direct-link {
+    padding: 0;
+    position: absolute;
+    vertical-align: middle;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-decoration: none;
+    background: transparent;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    opacity: 0.2;
+    width: 1em;
+}
+
+.navbox li a.direct-link > * {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    text-align: center;
+    margin-top: -0.6em;
+    vertical-align: middle;
+}
+
 
 .navbox li:first-child a {
     padding-top: 0.35em;
@@ -81,6 +108,12 @@ ol, ul {
 .navbox a:hover, .navbox a:focus {
     background: #FFDD99;
     outline-style: none;
+}
+
+.navbox a.direct-link:hover, .navbox a.direct-link:focus {
+    background: #FFDD99;
+    outline-style: none;
+    opacity: 1;
 }
 
 .navbox a.here:hover, .navbox a.here:focus {
