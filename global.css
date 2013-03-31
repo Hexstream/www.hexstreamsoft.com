@@ -88,6 +88,44 @@ dd ul li, dd ol li {
 }
 
 
+#page-header {
+    text-align: center;
+    margin: 1.8em auto;
+    font-family: sanvito-pro-display, serif;
+}
+
+#page-header + h2, #page-header + nav h2 {
+    margin-top: 1.5em;
+}
+
+#page-header h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
+    font-size: 3em;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+}
+
+#page-header h1 a {
+    text-decoration: none;
+}
+
+#page-header .description, #page-header .author-line {
+    padding: 0;
+    margin: 0.1em 0 0;
+    line-height: 1em;
+}
+
+#page-header .description {
+    font-size: large;
+}
+
+#page-header .author-line {
+    margin-top: 0.25em;
+}
+
+
 .notice {
     display: table;
     position: relative;
