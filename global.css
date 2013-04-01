@@ -114,11 +114,12 @@ dd ul li, dd ol li {
 #page-header .description, #page-header .author-line {
     padding: 0;
     margin: 0.1em 0 0;
-    line-height: 1em;
+    line-height: 1.15em;
 }
 
 #page-header .description {
     font-size: large;
+    margin-top: 0;
 }
 
 #page-header .author-line {

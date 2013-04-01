@@ -95,9 +95,11 @@
     </div>
 
     <div id="content">
-      <div id="page-header">
-        <h1 id="page-title">Common Lisp tips</h1>
-      </div>
+
+      <header id="page-header">
+        <h1>Common Lisp tips</h1>
+      </header>
+
       <h2 id="standard-library">Standard library (and style suggestions) (20) <a href="#standard-library" class="anchor">&#x2693;</a></h2>
       <blockquote class="twitter-tweet tw-align-center"><p>Tip: Don't write:(let ((*print-pretty* nil)) (write object))Write this instead:(write object :pretty nil)Also :base :case :circle etc.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226409281707196416" data-datetime="2012-07-20T20:12:33+00:00">July 20, 2012</a></blockquote>
       <blockquote class="twitter-tweet tw-align-center"><p>Tip: Don't write (format nil "~S" object), write (prin1-to-string object) instead. There's also WRITE-TO-STRING and PRINC-TO-STRING.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226410733406134272" data-datetime="2012-07-20T20:18:20+00:00">July 20, 2012</a></blockquote>
