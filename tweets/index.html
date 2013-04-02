@@ -30,42 +30,46 @@
       <a class="here">Tweets</a>
     </p>
 
-    <div class="nav">
-      <div class="separator group"></div>
+    <nav class="ancestors-nav">
 
-      <div id="tweets_navbox" class="navbox">
-        <h2 class="box-header">
+      <div class="level-separator"></div>
+
+      <nav class="navbox" id="tweets_navbox">
+        <h1>
           <a class="here">Tweets <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a>
-        </h2>
-        <div class="box-content">
-          <ul>
-            <li><a href="cl-tips/">Common Lisp tips</a></li>
-            <li><a href="cl-rants/">Common Lisp rants</a></li>
-            <li><a href="future-lisp-dialect-ideas/">Future Lisp dialect ideas</a></li>
-            <li><a href="programming-remarks/">Programming remarks</a></li>
-            <li><a href="cl-promotion/">(Common) Lisp promotion</a></li>
-          </ul>
-        </div>
-      </div>
+        </h1>
+        <ul>
+          <li><a href="cl-tips/">Common Lisp tips</a></li>
+          <li><a href="cl-rants/">Common Lisp rants</a></li>
+          <li><a href="future-lisp-dialect-ideas/">Future Lisp dialect ideas</a></li>
+          <li><a href="programming-remarks/">Programming remarks</a></li>
+          <li><a href="cl-promotion/">(Common) Lisp promotion</a></li>
+        </ul>
+      </nav>
 
-      <div class="separator group"></div>
+      <div class="level-separator"></div>
 
-      <div id="main_navbox" class="navbox">
-        <h2 class="box-header">
+      <nav class="navbox" id="main_navbox">
+        <h1>
           <a href="../">HexstreamSoft</a>
-        </h2>
-        <div class="box-content">
-          <ul>
-            <li><a href="../introduction.html">Introduction</a></li>
-            <li><a href="../projects/">Projects</a></li>
-            <li><a class="here">Tweets <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
-            <li><a href="../worknotes/">Worknotes</a></li>
-            <li><a href="../accounts/">Accounts</a></li>
-            <li><a href="../resources/">Resources</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+        </h1>
+        <ul>
+          <li><a href="../introduction.html">Introduction</a></li>
+          <li><a href="../projects/">Projects</a></li>
+          <li>
+            <a class="here">
+              Tweets
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </a>
+          </li>
+          <li><a href="../worknotes/">Worknotes</a></li>
+          <li><a href="../accounts/">Accounts</a></li>
+          <li><a href="../resources/">Resources</a></li>
+        </ul>
+      </nav>
+
+    </nav>
 
     <div id="content">
       <header id="page-header">
@@ -73,79 +77,73 @@
         <p class="description">Mostly about Common Lisp.</p>
       </header>
 
-      <div class="navboxes">
-        <div class="navbox" id="cl-tips">
-          <h2 class="box-header">
-            <a href="cl-tips/">Common Lisp tips (66)</a>
-          </h2>
-          <div class="box-content">
-            <ul>
-              <li><a href="cl-tips/#standard-library">Standard library (20)</a></li>
-	      <li><a href="cl-tips/#closures">Closures (1)</a></li>
-	      <li><a href="cl-tips/#lambda-lists">Lambda lists (3)</a></li>
-	      <li><a href="cl-tips/#multiple-values">Multiple values (12)</a></li>
-	      <li><a href="cl-tips/#classes">Classes (6)</a></li>
-	      <li><a href="cl-tips/#macros">Macros (11)</a></li>
-	      <li><a href="cl-tips/#clhs">CLHS (4)</a></li>
-	      <li><a href="cl-tips/#emacs-slime">Emacs/Slime (4)</a></li>
-	      <li><a href="cl-tips/#misc">Miscellaneous (1)</a></li>
-	      <li><a href="cl-tips/#newbs">Newbs (4)</a></li>
-            </ul>
-          </div>
-        </div>
+      <nav class="navboxes">
 
-        <div class="navbox" id="cl-rants">
-          <h2 class="box-header">
+        <nav class="navbox" id="cl-tips">
+          <h1>
+            <a href="cl-tips/">Common Lisp tips (66)</a>
+          </h1>
+          <ul>
+            <li><a href="cl-tips/#standard-library">Standard library (20)</a></li>
+	    <li><a href="cl-tips/#closures">Closures (1)</a></li>
+	    <li><a href="cl-tips/#lambda-lists">Lambda lists (3)</a></li>
+	    <li><a href="cl-tips/#multiple-values">Multiple values (12)</a></li>
+	    <li><a href="cl-tips/#classes">Classes (6)</a></li>
+	    <li><a href="cl-tips/#macros">Macros (11)</a></li>
+	    <li><a href="cl-tips/#clhs">CLHS (4)</a></li>
+	    <li><a href="cl-tips/#emacs-slime">Emacs/Slime (4)</a></li>
+	    <li><a href="cl-tips/#misc">Miscellaneous (1)</a></li>
+	    <li><a href="cl-tips/#newbs">Newbs (4)</a></li>
+          </ul>
+        </nav>
+
+        <nav class="navbox" id="cl-rants">
+          <h1>
             <a href="cl-rants/">Common Lisp rants (17)</a>
-          </h2>
-          <div class="box-content">
-            <ul>
+          </h1>
+          <ul>
               <li><a href="cl-rants/#disclaimers">Disclaimers (2)</a></li>
 	      <li><a href="cl-rants/#cl-language-rants">About the language (15)</a></li>
             </ul>
-          </div>
-        </div>
+        </nav>
 
-        <div class="navbox" id="future-lisp-dialect-ideas">
-          <h2 class="box-header">
+        <nav class="navbox" id="future-lisp-dialect-ideas">
+          <h1>
             <a href="future-lisp-dialect-ideas/">Future Lisp dialect ideas (36)</a>
-          </h2>
-          <div class="box-content">
-            <ul>
-              <li><a href="future-lisp-dialect-ideas/#disclaimers">Disclaimer (1)</a></li>
-	      <li><a href="future-lisp-dialect-ideas/#lambda-lists">Lambda lists (10)</a></li>
-	      <li><a href="future-lisp-dialect-ideas/#bindings">Bindings (10)</a></li>
-	      <li><a href="future-lisp-dialect-ideas/#multiple-values">Multiple values (3)</a></li>
-	      <li><a href="future-lisp-dialect-ideas/#misc">Miscellaneous (12)</a></li>
-            </ul>
-          </div>
-        </div>
+          </h1>
+          <ul>
+            <li><a href="future-lisp-dialect-ideas/#disclaimers">Disclaimer (1)</a></li>
+	    <li><a href="future-lisp-dialect-ideas/#lambda-lists">Lambda lists (10)</a></li>
+	    <li><a href="future-lisp-dialect-ideas/#bindings">Bindings (10)</a></li>
+	    <li><a href="future-lisp-dialect-ideas/#multiple-values">Multiple values (3)</a></li>
+	    <li><a href="future-lisp-dialect-ideas/#misc">Miscellaneous (12)</a></li>
+          </ul>
+        </nav>
+
         <div class="float-clear"></div>
-        <div class="navbox" id="programming-remarks">
-          <h2 class="box-header">
+
+        <nav class="navbox" id="programming-remarks">
+          <h1>
             <a href="programming-remarks/">Programming remarks (40)</a>
-          </h2>
-          <div class="box-content">
-            <ul>
-              <li><a href="programming-remarks/#cl">Common Lisp (6)</a></li>
-	      <li><a href="programming-remarks/#documentation">Documentation (6)</a></li>
-	      <li><a href="programming-remarks/#general">General (28)</a></li>
-            </ul>
-          </div>
-        </div>
+          </h1>
+          <ul>
+            <li><a href="programming-remarks/#cl">Common Lisp (6)</a></li>
+	    <li><a href="programming-remarks/#documentation">Documentation (6)</a></li>
+	    <li><a href="programming-remarks/#general">General (28)</a></li>
+          </ul>
+        </nav>
 
-        <div class="navbox empty" id="cl-promotion">
-          <h2 class="box-header">
+        <nav class="navbox empty" id="cl-promotion">
+          <h1>
             <a href="cl-promotion/">(Common) Lisp promotion (11)</a>
-          </h2>
-          <div class="box-content">
-            <ul>
-            </ul>
-          </div>
-        </div>
+          </h1>
+          <ul>
+          </ul>
+        </nav>
 
         <div class="float-clear"></div>
-      </div>
+
+      </nav>
 
       <p>Number of categorised tweets (modulo errors): 180</p>
       <p><i>Last (manual) sync with my twitter account: 7 october 2012.</i></p>
