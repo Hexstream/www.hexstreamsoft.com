@@ -16,11 +16,15 @@
     position: absolute;
     top: -1.8em;
     right: 1.4em;
+    margin: 0;
+    padding: 0;
     border-left: solid medium #AAAAAA;
     border-right: solid medium #AAAAAA;
     border-top: solid medium #AAAAAA;
     background: beige;
     padding: 0.2em 0.4em;
+    font-size: medium;
+    font-weight: normal;
 }
 
 #news .news-item .date .border-fix {
