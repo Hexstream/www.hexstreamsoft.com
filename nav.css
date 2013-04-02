@@ -1,5 +1,8 @@
 /* Reset doesn't actually belong here... */
 
+@import "subsection-description.css";
+@import "navbox.css";
+
 * {
     padding: 0;
     margin: 0;
@@ -8,7 +11,6 @@
 ol, ul {
     list-style-type: none;
 }
-
 
 #crumbs {
     position: absolute;
@@ -22,172 +24,6 @@ ol, ul {
 #crumbs a {
     text-decoration: inherit;
 }
-
-.nav {
-    position: absolute;
-    z-index: 1;
-    background: white;
-}
-
-.nav .separator  {
-    width: 65%;
-    height: 0.2em;
-    border: 3px solid black;
-    margin: -0.5em auto 0.5em;
-    background: #FFCC99;
-}
-
-#crumbs + .nav {
-    top: 2.4em;
-}
-
-.navbox {
-    margin: 0 0.5em 1em;
-    background: #FFCC99;
-    border: medium solid;
-    width: 10em;
-}
-
-.navbox a {
-    display: block;
-    text-decoration: none;
-}
-
-.navbox li {
-    margin: 0;
-    position: relative;
-}
-
-.navbox li a {
-    padding: 0.175em 0.5em;
-    position: relative;
-}
-
-.navbox li a.direct-link {
-    padding: 0;
-    position: absolute;
-    vertical-align: middle;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    text-decoration: none;
-    background: transparent;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-    opacity: 0.2;
-    width: 1em;
-}
-
-.navbox li a.direct-link > * {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    text-align: center;
-    margin-top: -0.6em;
-    vertical-align: middle;
-}
-
-
-.navbox li:first-child a {
-    padding-top: 0.35em;
-}
-
-.navbox li:first-child .here-indicator-left, .navbox li:first-child .here-indicator-right {
-    top: 0.35em;
-}
-
-.navbox li.last-child a {
-    padding-bottom: 0.35em;
-}
-
-.navbox li.last-child .here-indicator-left, .navbox li.last-child .here-indicator-right {
-    bottom: 0.5em;
-}
-
-.navbox a:hover, .navbox a:focus {
-    background: #FFDD99;
-    outline-style: none;
-}
-
-.navbox a.direct-link:hover, .navbox a.direct-link:focus {
-    background: #FFDD99;
-    outline-style: none;
-    opacity: 1;
-}
-
-.navbox a.here:hover, .navbox a.here:focus {
-    background: transparent;
-}
-
-.navbox .inlined-nodes {
-    margin-left: 1.5em;
-    margin-top: -0.0625em;
-    margin-bottom: 0.125em;
-    font-size: smaller;
-}
-
-.navbox .inlined-nodes li a {
-    padding-top: 0.125em;
-    padding-bottom: 0.125em;
-}
-
-
-.navboxes {
-    display: table;
-    margin: 2em auto;
-}
-
-.navboxes .navbox {
-    float: left;
-    width: auto;
-    min-width: 12em;
-}
-
-.here-indicator-left, .here-indicator-right {
-    background: gray;
-    position: absolute;
-    top: 0.3em;
-    bottom: 0.35em;
-    width: 0.25em;
-}
-
-.here-indicator-left {
-    left: 0;
-}
-
-.here-indicator-right {
-    right: 0;
-    display: none;
-}
-
-.navbox .box-header {
-    position: relative;
-    border-bottom: double medium;
-    font-size: medium;
-    font-weight: bold;
-    text-align: center;
-}
-
-.navbox.empty .box-header {
-    border-bottom: none;
-}
-
-.box-header .here-indicator-left, .box-header .here-indicator-right {
-    display: none;
-}
-
-.box-header a {
-    color: black;
-    text-decoration: none;
-}
-
-.box-header .here .here-indicator-left, .box-header .here .here-indicator-right {
-    top: 0.2em;
-    bottom: 0.2em;
-    display: block;
-}
-
 
 #footer .back-to-top {
     position: absolute;
@@ -226,54 +62,4 @@ table > tbody > tr > th > .anchor {
     top: 0;
     left: 0;
     padding: 0.25em 0 0 0.25em;
-}
-
-.subsection-descriptions {
-    display: table;
-    margin: 1em auto;
-    background: #ECECEC;
-    text-decoration: none;
-    border: thin solid black;
-}
-
-.subsection-descriptions > li {
-    margin-bottom: 0;
-    border: thin solid black;
-}
-
-.subsection-descriptions * {
-    text-decoration: inherit;
-}
-
-.subsection-descriptions :hover, .subsection-descriptions :focus {
-    background: #ECE0A5;
-    outline-style: none;
-}
-
-.subsection-descriptions + .subsection-descriptions {
-    margin-top: 1em;
-}
-
-.subsection-description {
-    list-style-type: none;
-}
-
-.subsection-description a {
-    display: block;
-    padding: 0.5em 1em;
-}
-
-.subsection-description .title {
-    font-size: large;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    word-spacing: 0.06em;
-}
-
-.subsection-description .description {
-    display: block;
-    margin-top: 0.2em;
-    font-size: smaller;
-    text-align: justify;
-    color: black;
 }

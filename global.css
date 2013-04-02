@@ -56,6 +56,13 @@ dd ul li, dd ol li {
     border: solid thin gray;
 }
 
+
+header h1 {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
 #page-header {
     text-align: center;
     margin: 0 auto 1.75em;

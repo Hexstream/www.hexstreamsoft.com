@@ -1,0 +1,49 @@
+.subsection-descriptions {
+    display: table;
+    margin: 1em auto;
+    background: #ECECEC;
+    text-decoration: none;
+    border: thin solid black;
+}
+
+.subsection-descriptions > li {
+    margin-bottom: 0;
+    border: thin solid black;
+}
+
+.subsection-descriptions * {
+    text-decoration: inherit;
+}
+
+.subsection-descriptions :hover, .subsection-descriptions :focus {
+    background: #ECE0A5;
+    outline-style: none;
+}
+
+.subsection-descriptions + .subsection-descriptions {
+    margin-top: 1em;
+}
+
+.subsection-description {
+    list-style-type: none;
+}
+
+.subsection-description a {
+    display: block;
+    padding: 0.5em 1em;
+}
+
+.subsection-description .title {
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    word-spacing: 0.06em;
+}
+
+.subsection-description .description {
+    display: block;
+    margin-top: 0.2em;
+    font-size: smaller;
+    text-align: justify;
+    color: black;
+}
