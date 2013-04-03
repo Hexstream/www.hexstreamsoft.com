@@ -89,43 +89,49 @@
         <h1>Common Lisp rants</h1>
       </header>
 
-      <h2 id="disclaimers">Disclaimers (2) <a href="#disclaimers" class="anchor">&#x2693;</a></h2>
-      <blockquote class="twitter-tweet tw-align-center"><p>Don't get me wrong, I like CL. Just can't help but dream of even better dialect. Rants/suggestions are meant to be inspiring, not negative!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228215606955094017" data-datetime="2012-07-25T19:50:15+00:00">July 25, 2012</a></blockquote>
-      <blockquote class="twitter-tweet tw-align-center"><p>When I rant about CL, I do it from an idealist's perspective. X3J13 did a great job! Had to seriously consider compatibility and politics.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229747758603583488" data-datetime="2012-07-30T01:18:28+00:00">July 30, 2012</a></blockquote>
-      <h2 id="cl-language-rants">Rants about Common Lisp (the language itself) (15) <a href="#cl-language-rants" class="anchor">&#x2693;</a></h2>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: (destructuring-bind x 42 (1+ x)) =&gt; 43 instead of undefined. Would be more useful and simpler conceptually and implementationally.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226669371207057408" data-datetime="2012-07-21T13:26:04+00:00">July 21, 2012</a></blockquote>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: MULTIPLE-VALUE-BIND should accept lambda keywords. As it is, dealing with &amp;rest and &amp;key multival returns is unnecessarily awkward.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226671891006492672" data-datetime="2012-07-21T13:36:04+00:00">July 21, 2012</a></blockquote>
-      <p><a href="../../projects/enhanced-multiple-value-bind">enhanced-multiple-value-bind</a> fixes this problem.</p>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: I don't like that (let (foo)) == (let ((foo nil))), as explicitness is good and this "feature" often complicates macro code.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226676654733418497" data-datetime="2012-07-21T13:55:00+00:00">July 21, 2012</a></blockquote>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: (destructuring-bind (&amp;rest r) 1 r) should return 1, not undef, for consistency with (d-b (f &amp;rest r) '(0 . 1) (values f r)) =&gt; 0, 1</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228180909818535936" data-datetime="2012-07-25T17:32:22+00:00">July 25, 2012</a></blockquote>
-      <pre class="indented-version">(destructuring-bind (&amp;rest r) 1
-        r)
-        =&gt; 1
-        ;; for consistency with:
-        (destructuring-bind (f &amp;rest r) '(0 . 1)
-        (values f r))
-        =&gt; 0, 1
-      </pre>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: A few legacy dead-ends for newbs: SET, SETQ, RPLAC[AD], GENTEMP, PROG, "modules", symbol properties. Smart CL search could advise.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228214860192808960" data-datetime="2012-07-25T19:47:17+00:00">July 25, 2012</a></blockquote>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: Iteration macros don't guarantee a fresh binding for each iteration: problem for closures, trap for newbies, annoyance for masters.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228488642258141185" data-datetime="2012-07-26T13:55:12+00:00">July 26, 2012</a></blockquote>
-      <blockquote class="twitter-tweet tw-align-center"><p>Nomination for WORST CL feature: (declare (my-type foo)) ~= (declare (type my-type foo)) No portable way to tell if my-type is type or decl!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229946431329419264" data-datetime="2012-07-30T14:27:56+00:00">July 30, 2012</a></blockquote>
-      <pre class="indented-version">(declare (my-type foo))
-        ~=
-        (declare (type my-type foo))</pre>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: My nomination for most glaring trivial omission from standard: (defun boolean (generalized-boolean) (if generalized-boolean t nil))</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/239861906343612416" data-datetime="2012-08-26T23:08:29+00:00">August 26, 2012</a></blockquote>
-      <pre class="indented-version">(defun boolean (generalized-boolean)
-        (if generalized-boolean
-        t
-        nil))</pre>
-      <blockquote class="twitter-tweet tw-align-center"><p>My #1 grief with CL: Ceaseless refactoring due to excessive indentation introduced by nested binding constructs in (not-that-)complex code.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/241669803599880192" data-datetime="2012-08-31T22:52:25+00:00">August 31, 2012</a></blockquote>
-      <blockquote class="twitter-tweet tw-align-center"><p>I expect to release a library that thoroughly fixes the problem of excessive indentation due to nested binding constructs within 2 months.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/241674011677949953" data-datetime="2012-08-31T23:09:09+00:00">August 31, 2012</a></blockquote>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: Inconsistency: DYNAMIC-EXTENT/TYPE/FTYPE/SPECIAL/INLINE/NOTINLINE/IGNORABLE: nouns. IGNORE: verb! Should be "IGNORED". OPTIMIZE ok.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/245602861772316672" data-datetime="2012-09-11T19:20:59+00:00">September 11, 2012</a></blockquote>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: Macro lambda-lists allow (f s . r) == (f s &amp;rest r), so almost any usage of built-in list functions to process them is "incorrect".</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/248837106129047552" data-datetime="2012-09-20T17:32:43+00:00">September 20, 2012</a></blockquote>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: I object to NIL == #'identity in :key arguments, as the extra conceptual and impl complexity are clear while advantages are not.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252040864010993665" data-datetime="2012-09-29T13:43:19+00:00">September 29, 2012</a></blockquote>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: CL's lackluster support for alists/blists/plists is quite surprising given the major role these play in most code. I blame LOOP!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252904632488169472" data-datetime="2012-10-01T22:55:37+00:00">October 1, 2012</a></blockquote>
-      <blockquote class="twitter-tweet tw-align-center"><p>CL rant: LOOP: Surely something's dead wrong when you have to adjust code in THREE places just to switch between alist and plist processing.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252906804395257856" data-datetime="2012-10-01T23:04:15+00:00">October 1, 2012</a></blockquote>
+      <section>
 
-      <p><a href="#">&uarr; Back to top.</a></p>
+        <h1 id="disclaimers">Disclaimers (2) <a href="#disclaimers" class="anchor">&#x2693;</a></h1>
+        <blockquote class="twitter-tweet tw-align-center"><p>Don't get me wrong, I like CL. Just can't help but dream of even better dialect. Rants/suggestions are meant to be inspiring, not negative!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228215606955094017" data-datetime="2012-07-25T19:50:15+00:00">July 25, 2012</a></blockquote>
+        <blockquote class="twitter-tweet tw-align-center"><p>When I rant about CL, I do it from an idealist's perspective. X3J13 did a great job! Had to seriously consider compatibility and politics.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229747758603583488" data-datetime="2012-07-30T01:18:28+00:00">July 30, 2012</a></blockquote>
+      </section>
+
+      <section>
+
+        <h1 id="cl-language-rants">Rants about Common Lisp (the language itself) (15) <a href="#cl-language-rants" class="anchor">&#x2693;</a></h1>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: (destructuring-bind x 42 (1+ x)) =&gt; 43 instead of undefined. Would be more useful and simpler conceptually and implementationally.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226669371207057408" data-datetime="2012-07-21T13:26:04+00:00">July 21, 2012</a></blockquote>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: MULTIPLE-VALUE-BIND should accept lambda keywords. As it is, dealing with &amp;rest and &amp;key multival returns is unnecessarily awkward.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226671891006492672" data-datetime="2012-07-21T13:36:04+00:00">July 21, 2012</a></blockquote>
+        <p><a href="../../projects/enhanced-multiple-value-bind">enhanced-multiple-value-bind</a> fixes this problem.</p>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: I don't like that (let (foo)) == (let ((foo nil))), as explicitness is good and this "feature" often complicates macro code.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226676654733418497" data-datetime="2012-07-21T13:55:00+00:00">July 21, 2012</a></blockquote>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: (destructuring-bind (&amp;rest r) 1 r) should return 1, not undef, for consistency with (d-b (f &amp;rest r) '(0 . 1) (values f r)) =&gt; 0, 1</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228180909818535936" data-datetime="2012-07-25T17:32:22+00:00">July 25, 2012</a></blockquote>
+        <pre class="indented-version">(destructuring-bind (&amp;rest r) 1
+          r)
+          =&gt; 1
+          ;; for consistency with:
+          (destructuring-bind (f &amp;rest r) '(0 . 1)
+          (values f r))
+          =&gt; 0, 1
+        </pre>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: A few legacy dead-ends for newbs: SET, SETQ, RPLAC[AD], GENTEMP, PROG, "modules", symbol properties. Smart CL search could advise.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228214860192808960" data-datetime="2012-07-25T19:47:17+00:00">July 25, 2012</a></blockquote>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: Iteration macros don't guarantee a fresh binding for each iteration: problem for closures, trap for newbies, annoyance for masters.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228488642258141185" data-datetime="2012-07-26T13:55:12+00:00">July 26, 2012</a></blockquote>
+        <blockquote class="twitter-tweet tw-align-center"><p>Nomination for WORST CL feature: (declare (my-type foo)) ~= (declare (type my-type foo)) No portable way to tell if my-type is type or decl!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229946431329419264" data-datetime="2012-07-30T14:27:56+00:00">July 30, 2012</a></blockquote>
+        <pre class="indented-version">(declare (my-type foo))
+          ~=
+          (declare (type my-type foo))</pre>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: My nomination for most glaring trivial omission from standard: (defun boolean (generalized-boolean) (if generalized-boolean t nil))</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/239861906343612416" data-datetime="2012-08-26T23:08:29+00:00">August 26, 2012</a></blockquote>
+        <pre class="indented-version">(defun boolean (generalized-boolean)
+          (if generalized-boolean
+          t
+          nil))</pre>
+        <blockquote class="twitter-tweet tw-align-center"><p>My #1 grief with CL: Ceaseless refactoring due to excessive indentation introduced by nested binding constructs in (not-that-)complex code.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/241669803599880192" data-datetime="2012-08-31T22:52:25+00:00">August 31, 2012</a></blockquote>
+        <blockquote class="twitter-tweet tw-align-center"><p>I expect to release a library that thoroughly fixes the problem of excessive indentation due to nested binding constructs within 2 months.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/241674011677949953" data-datetime="2012-08-31T23:09:09+00:00">August 31, 2012</a></blockquote>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: Inconsistency: DYNAMIC-EXTENT/TYPE/FTYPE/SPECIAL/INLINE/NOTINLINE/IGNORABLE: nouns. IGNORE: verb! Should be "IGNORED". OPTIMIZE ok.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/245602861772316672" data-datetime="2012-09-11T19:20:59+00:00">September 11, 2012</a></blockquote>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: Macro lambda-lists allow (f s . r) == (f s &amp;rest r), so almost any usage of built-in list functions to process them is "incorrect".</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/248837106129047552" data-datetime="2012-09-20T17:32:43+00:00">September 20, 2012</a></blockquote>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: I object to NIL == #'identity in :key arguments, as the extra conceptual and impl complexity are clear while advantages are not.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252040864010993665" data-datetime="2012-09-29T13:43:19+00:00">September 29, 2012</a></blockquote>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: CL's lackluster support for alists/blists/plists is quite surprising given the major role these play in most code. I blame LOOP!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252904632488169472" data-datetime="2012-10-01T22:55:37+00:00">October 1, 2012</a></blockquote>
+        <blockquote class="twitter-tweet tw-align-center"><p>CL rant: LOOP: Surely something's dead wrong when you have to adjust code in THREE places just to switch between alist and plist processing.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252906804395257856" data-datetime="2012-10-01T23:04:15+00:00">October 1, 2012</a></blockquote>
+
+      </section>
 
     </div>
 

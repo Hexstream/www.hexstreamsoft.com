@@ -45,7 +45,7 @@ dd ul li, dd ol li {
     border: medium solid transparent;
 }
 
-#content > h2, #content > nav > h2 {
+#content > section > h1, #content > nav > h1 {
     text-align: center;
     padding: 0.5em;
     padding-top: 0.5em;
@@ -69,7 +69,7 @@ header h1 {
     font-family: sanvito-pro-display, serif;
 }
 
-#page-header + h2, #page-header + nav h2 {
+#page-header + section > h1, #page-header + nav > h1 {
     margin-top: 1.5em;
 }
 
