@@ -1,7 +1,8 @@
 .ancestors-nav {
-    position: absolute;
+    position: relative;
     z-index: 1;
     background: white;
+    float: left;
 }
 
 .ancestors-nav .level-separator  {
@@ -10,10 +11,6 @@
     border: 3px solid black;
     margin: -0.5em auto 0.5em;
     background: #FFCC99;
-}
-
-#crumbs + nav {
-    top: 2.4em;
 }
 
 .navbox {

@@ -36,7 +36,7 @@ dd ul li, dd ol li {
 }
 
 #content {
-    margin: 0 1.5em 1.5em 12.5em;
+    margin: 3em 1.5em 1.5em 12.5em;
 }
 
 #content + #footer > div {
@@ -66,38 +66,6 @@ header h1 {
 #page-header {
     text-align: center;
     margin: 0 auto 1.75em;
-    font-family: sanvito-pro-display, serif;
-}
-
-#page-header + h2, #page-header + nav h2 {
-    margin-top: 1.5em;
-}
-
-#page-header #page-title {
-    margin-top: 0.6em;
-    margin-bottom: 0;
-    font-weight: bolder;
-    font-size: 3em;
-    letter-spacing: 0.05em;
-    word-spacing: 0.10em;
-}
-
-#page-header #page-title a {
-    text-decoration: none;
-}
-
-#page-header #page-description {
-    font-size: large;
-    margin-top: 0em;
-    /* width: 65%; */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-#page-header {
-    text-align: center;
-    margin: 1.8em auto;
     font-family: sanvito-pro-display, serif;
 }
 

@@ -12,17 +12,47 @@ ol, ul {
     list-style-type: none;
 }
 
-#crumbs {
+#site-nav {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0.2em 0.5em;
-    line-height: 1.6em;
+}
+
+.breadcrumbs {
+    margin: 0.5em 0.5em 1em;
+    background: #FFCC99;
+    border: medium solid black;
     text-decoration: none;
 }
 
-#crumbs a {
+.breadcrumbs a {
     text-decoration: inherit;
+}
+
+.breadcrumbs > a, .breadcrumbs > span {
+    float: left;
+    padding: 0.175em 0.25em;
+}
+
+.breadcrumbs > span {
+    font-weight: bolder;
+}
+
+.breadcrumbs > a:first-child {
+    padding-left: 0.5em;
+}
+
+.breadcrumbs > a.here {
+    padding-right: 0.5em;
+}
+
+.breadcrumbs a:hover, .breadcrumbs a:focus {
+    background: #FFDD99;
+    outline-style: none;
+}
+
+.breadcrumbs a.here:hover, .breadcrumbs a.here:focus {
+    background: transparent;
 }
 
 #footer .back-to-top {
