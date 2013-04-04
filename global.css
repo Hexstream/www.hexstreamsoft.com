@@ -37,6 +37,8 @@ dd ul li, dd ol li {
 
 #content {
     margin: 3em 1.5em 1.5em 12.5em;
+    position: relative;
+    z-index: 2;
 }
 
 #content + #footer > div {
