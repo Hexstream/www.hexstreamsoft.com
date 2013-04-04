@@ -6,7 +6,6 @@
     <title>cartesian-product-switch | Projects | HexstreamSoft</title>
     <link href="../../global.css" rel="stylesheet" type="text/css" />
     <link href="../projects.css" rel="stylesheet" type="text/css" />
-    <link href="cartesian-product-switch.css" rel="stylesheet" type="text/css" />
     <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
@@ -199,8 +198,9 @@
 
     <p>cartesian-product-switch was born as cartesian-product-case but a fairly obvious limitation was soon discovered, prompting a redesign and library name change. Further features and extensibility were also added.</p>
 
-<p>Here's an example:
-<pre>(let ((manner :flip) (direction :backward))
+      <p>Here's an example:</p>
+
+      <pre>(let ((manner :flip) (direction :backward))
   (cartesian-product-switch ((case manner
                                :walk
                                :flip)
@@ -214,22 +214,20 @@
     "Frontflip!"
     "Jumping in-place."
     "Backflip!"
-    (t (error "Don't know how to ~A while going ~A." manner direction))))
-</pre>
-</p>
+    (t (error "Don't know how to ~A while going ~A." manner direction))))</pre>
 
-    <p><b>To use cartesian-product-switch, simply (:import-from #:cartesian-product-switch #:cartesian-product-switch). Don't (:use)!</b></p>
+      <p><b>To use cartesian-product-switch, simply (:import-from #:cartesian-product-switch #:cartesian-product-switch). Don't (:use)!</b></p>
 
-    <p>Currently supported testclause kinds:</br>
-      <code>(case ccase ecase typecase ctypecase etypecase if cond svref)</code></p>
+      <p>Currently supported testclause kinds:<br />
+        <code>(case ccase ecase typecase ctypecase etypecase if cond svref)</code></p>
 
-    <p>It's also possible to make your own kinds. Check <a href="https://github.com/Hexstream/cartesian-product-switch/blob/master/definitions.lisp">definitions.lisp</a> in particular for inspiration. In a nutshell, call (cartesian-product-switch:define operator (args) body), where BODY must return 3 values:</p>
+      <p>It's also possible to make your own kinds. Check <a href="https://github.com/Hexstream/cartesian-product-switch/blob/master/definitions.lisp">definitions.lisp</a> in particular for inspiration. In a nutshell, call (cartesian-product-switch:define operator (args) body), where BODY must return 3 values:</p>
 
-    <p>SELECTION-FORM:</br>A form evaluating to a non-negative integer less than SELECTION-COUNT.</p>
+      <p>SELECTION-FORM:<br />A form evaluating to a non-negative integer less than SELECTION-COUNT.</p>
 
-    <p>SELECTION-COUNT:</br>The number of possibilities this testclause introduces.</p>
+      <p>SELECTION-COUNT:<br />The number of possibilities this testclause introduces.</p>
 
-    <p>DEFAULTP:</br>If true, then the SELECTION-FORM can evaluate to NIL to trigger the "default".</p>
+      <p>DEFAULTP:<br />If true, then the SELECTION-FORM can evaluate to NIL to trigger the "default".</p>
 
     </div>
 
