@@ -1,38 +1,313 @@
+<!DOCTYPE html>
+
 <html>
-  <head><title>incognito-keywords</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>incognito-keywords | Projects | HexstreamSoft</title>
     <link href="../../global.css" rel="stylesheet" type="text/css" />
     <link href="../projects.css" rel="stylesheet" type="text/css" />
+    <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1783234-3']);
-  _gaq.push(['_trackPageview']);
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1783234-3']);
+      _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
 
-</script>
-    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </script>
   </head>
   <body>
-    <p><a href="../../">HexstreamSoft</a> &rarr; <a href="../">Projects</a> &rarr; incognito-keywords</p>
 
-    <p>incognito-keywords introduces a new kind of keyword that looks just like any non-keyword symbol and allows safe usage of convenient but clashy symbol names by multiple libraries without conflicts through sharing. Some names that might benefit are (alist blist plist macro operator index &amp;doc &amp;decl &amp;rest+ &amp;destructure &amp;ignored &amp;ignorable).</p>
+    <nav id="site-nav">
 
-    <h1><a href="https://github.com/Hexstream/incognito-keywords/blob/75ae1bbca3afddb3c56fd54169d711d9e03690a1/README">Documentation is provided in the README.</a></h1>
-    
-<!-- <p><b><code>(ql:quickload "incognito-keywords")</code></b></p> -->
+      <nav class="breadcrumbs">
+        <a href="../../">HexstreamSoft</a>
+        <span class="separator"> » </span>
+        <a href="../">Projects</a>
+        <span class="separator"> » </span>
+        <a class="here">incognito-keywords</a>
+        <div class="float-clear"></div>
+      </nav>
 
-    <p><a href="http://github.com/Hexstream/incognito-keywords">The source code for incognito-keywords is hosted on GitHub.</a></p>
-    <p><a href="https://github.com/Hexstream/incognito-keywords/blob/master/UNLICENSE">incognito-keywords is in the Public Domain.</a><br />Do anything you want with it.</p>
-    <h1><a href="incognito-keywords_latest.tar.gz">Download latest incognito-keywords.</a></h1>
-    <p><i>Version 1.1 released 21 december 2012. (Added "I" nickname for IKEYWORD package and exported new IKEYWORDP function.)</i></p>
-    <p><i>Version 1.0.1 released 23 november 2012. <a href="https://github.com/Hexstream/incognito-keywords/commit/38a2c0f3ea1bd730abd303e214c8d9741e251194">The expansion of ikeywords:defpackage lacked an EVAL-WHEN.</a></i></p>
-    <p><i>Version 1.0 released 28 october 2012.</i></p>
+      <nav class="ancestors-nav">
 
-    <blockquote class="twitter-tweet tw-align-center"><p>New library: incognito-keywords allows safe usage of clashy symbol names by multiple libraries without conflicts. <a href="http://t.co/xokyrkwO" title="http://www.hexstreamsoft.com/projects/incognito-keywords/">hexstreamsoft.com/projects/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/262728330263019520" data-datetime="2012-10-29T01:31:29+00:00">October 29, 2012</a></blockquote>
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="data-structure-projects_navbox">
+          <h1><a href="../data-structures/">Data structures</a></h1>
+          <ul>
+            <li>
+              <a class="here">
+                incognito-keywords
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"></span>
+              </a>
+            </li>
+            <li><a href="../symbol-namespaces/">symbol-namespaces</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="projects_navbox">
+          <h1 class="box-header">
+            <a href="../">Projects</a>
+          </h1>
+          <ul>
+            <li><a href="../macros/">Macros</a></li>
+            <li>
+              <a href="../data-structures/">
+                Data structures
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"></span>
+              </a>
+            </li>
+            <li><a href="../uncategorized/">Uncategorized</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="main_navbox">
+          <h1>
+            <a href="../">HexstreamSoft</a>
+          </h1>
+          <ul>
+            <li><a href="../../introduction.html">Introduction</a></li>
+            <li><a href="../">Projects <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
+            <li><a href="../../tweets/">Tweets</a></li>
+            <li><a href="../../worknotes/">Worknotes</a></li>
+            <li><a href="../../accounts/">Accounts</a></li>
+            <li><a href="../../resources/">Resources</a></li>
+          </ul>
+        </nav>
+
+      </nav>
+
+    </nav>
+
+    <div id="content">
+
+      <header id="page-header">
+        <h1>incognito-keywords</h1>
+        <p class="description">A simple data structure in Quicklisp.</p>
+      </header>
+
+      <div id="project-info">
+        <table class="factsheet">
+          <tbody>
+            <tr>
+              <th class="project-type property">Project Type</th>
+              <td class="project-type" colspan="2">Library</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th class="library-programming-language property">Programming language</th>
+              <td class="library-programming-language" colspan="2">Common Lisp</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th class="project-status property">Status</th>
+              <td class="project-status good-news" colspan="2">Ready-to-use</td>
+            </tr>
+            <tr>
+              <th class="project-license property"><a href="https://github.com/Hexstream/incognito-keywords/blob/master/UNLICENSE">License</a></th>
+              <td class="project-license good-news" colspan="2"><a href="../../resources/#unlicense">Public Domain</a></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th class="library-type property">Library type</th>
+              <td class="library-type" colspan="2">Data structure</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th class="project-complexity property">Project complexity</th>
+              <td class="project-complexity" colspan="2">Simple</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th class="project-latest-release" rowspan="2"><a href="incognito-keywords_latest.tar.gz">Latest release</a></th>
+              <th class="project-latest-release-version property">Version</th>
+              <td class="project-latest-release-version">1.0</td>
+            </tr>
+            <tr>
+              <th class="project-latest-release-date property">Date</th>
+              <td class="project-latest-release-date">28 oct 2012</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th class="project-quicklisp" rowspan="2">
+                Quicklisp
+                <br />
+                <span class="as-of-dist">(<a href="http://blog.quicklisp.org/2012/12/december-2012-quicklisp-dist-update-now.html">Dec 2012 dist</a> and later)</span>
+              </th>
+              <th class="project-quicklisp-status property">Status</th>
+              <td class="project-quicklisp-status good-news">Available</td>
+            </tr>
+            <tr>
+              <th class="project-quicklisp-version property">Version</th>
+              <td class="project-quicklisp-version good-news">Latest</td>
+            </tr>
+          </tbody>
+
+        </table>
+
+        <nav class="navbox" id="external-projects_navbox">
+          <h1>
+            External project pages
+          </h1>
+          <ul>
+            <li><a href="http://github.com/Hexstream/incognito-keywords">Github</a></li>
+            <li><a href="http://quickdocs.org/incognito-keywords">Quickdocs</a></li>
+            <li><a href="http://cliki.net/incognito-keywords">CLiki</a></li>
+            <li><a href="http://common-lisp.net/project/cl-test-grid/library/incognito-keywords.html">cl-test-grid</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <p>incognito-keywords introduces a new kind of keyword that looks just like any non-keyword symbol and allows safe usage of convenient but clashy symbol names by multiple libraries without conflicts through sharing. Some names that might benefit are (alist blist plist macro operator index &amp;doc &amp;decl &amp;rest+ &amp;destructure &amp;ignored &amp;ignorable).</p>
+
+      <pre>Some hypothetical examples
+--------------------------
+
+incognito keywords, or "ikeywords" for short, are useful targets for
+various kinds of dispatching.
+
+(define (macro my-macro) ...) ; MACRO being an ikeyword
+
+;; blends much better with:
+(define (variable my-variable) ...) ; VARIABLE is exported from CL.
+
+;; than would:
+(define (:macro my-macro))
+
+;; And the following:
+(define (macro my-macro) ...) ; MACRO a normal symbol
+;; would very likely result in symbol conflicts.
+
+(map 'alist ...) ; ALIST being an ikeyword
+
+;; INDEX, &amp;IGNORED and PLIST being ikeywords
+(do-for ((i (index :from 1))
+         (((&amp;ignored key) value) (plist my-plist)))
+  ...)
+
+(ikeywords:defpackage #:do-for.ikeywords
+  (:export #:index
+           #:&amp;ignored
+           #:plist
+           ...))
+
+(defpackage #:do-for-user-package
+  (:use #:cl #:do-for-ikeywords)
+  (:import-from #:do-for #:do-for))
+
+(locate 'macro "my-macro")
+
+In the examples above, DEFINE, MAP, DO-FOR and LOCATE could come from
+different libraries by different authors. If they all use ikeywords as
+appropriate, then their users can use all these libraries from one
+package without symbol conflicts!
+
+
+API
+---
+
+Usage of incognito-keywords is very easy!
+
+First of all, in the way of packages there's the INCOGNITO-KEYWORDS
+package, which is also nicknamed IKEYWORDS. It exports the functions
+PACKAGE and ENSURE and the macro DEFPACKAGE. These symbols should be
+explicitly qualified. For example, ikeywords:defpackage instead of
+(:use #:ikeywords) or (:import-from #:ikeywords #:defpackage).
+
+ikeywords live in the IKEYWORD package and are typically created
+implicitly with ikeywords:defpackage, but it's also possible to create
+some dynamically with ikeywords:ensure.
+
+
+macro DEFPACKAGE name &amp;rest options =&gt; new-or-redefined-package
+
+  A very simplified version of cl:defpackage dedicated to creation of
+  "ikeyword packages". The syntax is just like cl:defpackage, except
+  that only the :export, :nicknames, :documentation and :size options
+  are supported. The package will implicitly use the IKEYWORD package.
+  All the symbol names in :export clauses will be passed to ENSURE.
+  The :nicknames, :documentation and :size options are passed straight
+  through to cl:defpackage.
+
+  It's possible to obtain a list of all ikeyword packages with:
+  (package-used-by-list (ikeywords:package))
+
+
+function ENSURE name =&gt; new-or-existing-ikeyword
+
+  If NAME already names an ikeyword (a symbol in the IKEYWORD
+  package), then return that ikeyword.
+
+  Else, create the ikeyword (interning a symbol with that name in the
+  IKEYWORD package), immediately export it (from the IKEYWORD
+  package), then return the new ikeyword.
+
+  Attempting to create an ikeyword with the name of one of the 978
+  symbols in the COMMON-LISP package is an error, as this would almost
+  inevitably result in symbol conflicts, which would defeat the whole
+  point of ikeywords!
+
+
+function PACKAGE =&gt; ikeyword-package
+
+  This convenience function simply returns the IKEYWORD package.
+  Basically equivalent to (find-package '#:ikeyword).
+
+
+
+Restrictions to avoid definition conflicts
+------------------------------------------
+
+incognito-keywords' reason to exist is to allow libraries to make use
+of some very desirable symbol names, while avoiding the excessive
+symbol conflicts this would normally incur. HOWEVER, INCORRECT USAGE
+OF THIS LIBRARY COULD ACTUALLY INCREASE (DEFINITION) CONFLICTS. So
+please carefully read and understand the following:
+
+Libraries should not create global definitions for Common Lisp
+functions, macros, SETF expanders, etc. on ikeywords, as any two
+libraries that do this can't be safely loaded in the same image.
+
+However, if a library creates a new kind of definition in another
+"namespace", then this library can safely create such definitions on
+these symbols. However, if that library exports a way to create such
+definitions, then users of that library can't safely create such
+definitions on ikeywords.
+
+For this reason, libraries in this situation should provide any
+appropriate definitions on ikeywords using their new exported
+definition mechanisms, and prohibit their users, through mechanism
+and/or policy, from providing any new definitions on those ikeywords.</pre>
+
+    </div>
+
+    <div id="footer">
+      <div>
+        <a href="#" class="back-to-top">⬆</a>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Fprojects%2Fincognito-keywords%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Fprojects%2Fincognito-keywords%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      </div>
+    </div>
+
   </body>
 </html>
