@@ -47,7 +47,12 @@ dd ul li, dd ol li {
     border: medium solid transparent;
 }
 
-#content > section > h1, #content > nav > h1 {
+h1 a {
+    text-decoration: none;
+}
+
+#content > section > h1, #content > nav > h1, #content > section > header, #content > nav > header {
+    position: relative;
     text-align: center;
     padding: 0.5em;
     padding-top: 0.5em;
@@ -59,10 +64,17 @@ dd ul li, dd ol li {
 }
 
 
+section {
+    margin: 2em auto;
+}
+
+header {
+    margin: 1em auto;
+}
+
 header h1 {
     text-align: center;
-    margin-top: 2em;
-    margin-bottom: 1em;
+    margin: 0 auto 1em;
 }
 
 #page-header {
@@ -71,7 +83,7 @@ header h1 {
     font-family: sanvito-pro-display, serif;
 }
 
-#page-header + section > h1, #page-header + nav > h1 {
+#page-header + section > h1, #page-header + nav > h1, #page-header + section > header, #page-header + nav > header {
     margin-top: 1.5em;
 }
 

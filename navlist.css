@@ -1,0 +1,55 @@
+.navlist {
+    display: table;
+    margin: 1em auto;
+    background: #ECECEC;
+    text-decoration: none;
+    border: thin solid black;
+}
+
+.navlist * {
+    text-decoration: inherit;
+}
+
+.navlist a {
+    display: block;
+}
+
+.navlist section {
+    margin: 0;
+    padding: 0.5em 1em;
+    margin-bottom: 0;
+    border: thin solid black;
+}
+
+.navlist h1, .navlist p {
+    padding: 0;
+    margin: 0;
+}
+
+.navlist p {
+    line-height: 1.2em;
+}
+
+.navlist :hover, .navlist :focus {
+    background: #ECE0A5;
+    outline-style: none;
+}
+
+.navlist + .navlist {
+    margin-top: 1em;
+}
+
+.navlist h1 {
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    word-spacing: 0.06em;
+}
+
+.navlist p {
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    font-size: smaller;
+    text-align: justify;
+    color: black;
+}

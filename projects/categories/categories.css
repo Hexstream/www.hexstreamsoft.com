@@ -1,0 +1,41 @@
+@import "../../factsheet.css";
+
+.factsheet {
+    font-size: smaller;
+    float: right;
+    margin: 0;
+}
+
+#content > section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content > section > header {
+    display: table;
+    width: 100%;
+}
+
+#content > section > header > h1 {
+    display: table-cell;
+    padding: 0 0.5em;
+    vertical-align: middle;
+    text-align: left;
+}
+
+#content > section > header > .factsheet {
+    display: table-cell;
+    font-size: smaller;
+    vertical-align: middle;
+}
+
+#content > section > header > .factsheet td {
+    text-align: left;
+}
+
+#content > section p {
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: justify;
+}

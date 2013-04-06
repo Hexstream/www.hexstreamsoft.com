@@ -1,7 +1,8 @@
-/* Reset doesn't actually belong here... */
-
-@import "subsection-description.css";
+@import "navlist.css";
 @import "navbox.css";
+
+
+/* Reset doesn't actually belong here... */
 
 * {
     padding: 0;
@@ -11,6 +12,7 @@
 ol, ul {
     list-style-type: none;
 }
+
 
 #site-nav {
     position: absolute;

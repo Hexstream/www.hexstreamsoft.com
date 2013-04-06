@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Uncategorized | Projects | HexstreamSoft</title>
     <link href="../../../global.css" rel="stylesheet" type="text/css" />
+    <link href="../categories.css" rel="stylesheet" type="text/css" />
     <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
@@ -47,8 +48,14 @@
             </a>
           </h1>
           <ul>
-            <li><a href="../../clhs/">clhs</a></li>
-            <li><a href="../../place-utils/">place-utils</a></li>
+            <li>
+              <a href="#clhs">clhs</a>
+              <a class="direct-link" href="../../clhs/"><span>⬈</span></a>
+            </li>
+            <li>
+              <a href="#place-utils">place-utils</a>
+              <a class="direct-link" href="../../place-utils/"><span>⬈</span></a>
+            </li>
           </ul>
         </nav>
 
@@ -95,28 +102,53 @@
         <p class="description">Odds and ends to reach ends against all odds.</p>
       </header>
 
-      <nav>
-        <ul class="subsection-descriptions">
-          <li class="subsection-description">
-            <a onmouseup="this.blur();" href="../../clhs/"><span class="title">clhs (thin ASDF wrapper)</span>
-              <div class="description">
-                <p>Installation helper<br />Simple</p>
-                <p>Intends to make it even easier to install a copy of the CLHS locally.</p>
-              </div>
-            </a>
-          </li>
+      <section id="clhs">
 
-          <li class="subsection-description">
-            <a onmouseup="this.blur();" href="../../place-utils/"><span class="title">place-utils</span>
-              <div class="description">
-                <p>Thematic Utilities<br />Simple</p>
-                <p>Provides a few utilities relating to setfable places.</p>
-              </div>
-            </a>
-          </li>
+        <header>
+          <h1><a onmouseup="this.blur();" href="../../clhs/">clhs (thin ASDF wrapper)</a></h1>
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Installation helper</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Simple</td>
+              </tr>
+            </tbody>
+          </table>
+        </header>
 
-        </ul>
-      </nav>
+        <p>Intends to make it even easier to install a copy of the CLHS locally.</p>
+
+      </section>
+
+      <section id="place-utils">
+
+        <header>
+          <h1><a onmouseup="this.blur();" href="../../place-utils/">place-utils</a></h1>
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Thematic utilities</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Simple</td>
+              </tr>
+            </tbody>
+          </table>
+        </header>
+
+        <p>Provides a few utilities relating to setfable places.</p>
+
+      </section>
 
     </div>
 

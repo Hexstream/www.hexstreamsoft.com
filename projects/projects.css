@@ -1,3 +1,5 @@
+@import "../factsheet.css";
+
 #project-info {
     position: relative;
 }
@@ -6,29 +8,4 @@
     position: absolute;
     top: 0;
     right: 0;
-}
-
-.factsheet {
-}
-
-#external-projects_navbox {
-}
-
-.factsheet th, .factsheet td {
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-    border-color: #AAAAAA;
-}
-
-.factsheet th.property {
-    text-align: right;
-}
-
-.factsheet a {
-    text-decoration: none;
-}
-
-.factsheet .as-of-dist {
-    font-size: smaller;
-    font-weight: normal;
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Utilities | Macros | Projects | HexstreamSoft</title>
     <link href="../../../../global.css" rel="stylesheet" type="text/css" />
+    <link href="../../categories.css" rel="stylesheet" type="text/css" />
     <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
@@ -49,8 +50,14 @@
             </a>
           </h1>
           <ul>
-            <li><a href="../../../parse-number-range/">parse-number-range</a></li>
-            <li><a href="../../../bubble-operator-upwards/">bubble-operator-upwards</a></li>
+            <li>
+              <a href="#parse-number-range">parse-number-range</a>
+              <a class="direct-link" href="../../../parse-number-range/"><span>⬈</span></a>
+            </li>
+            <li>
+              <a href="#bubble-operator-upwards">bubble-operator-upwards</a>
+              <a class="direct-link" href="../../../bubble-operator-upwards/"><span>⬈</span></a>
+            </li>
           </ul>
         </nav>
 
@@ -125,28 +132,53 @@
         <p class="description">Utilities that help write macros more easily.</p>
       </header>
 
-      <nav>
-        <ul class="subsection-descriptions">
-          <li class="subsection-description">
-            <a onmouseup="this.blur();" href="../../../parse-number-range/"><span class="title">parse-number-range</span>
-              <div class="description">
-                <p>Thematic utilities<br />Simple</p>
-                <p>Parses LOOP's convenient "for-as-arithmetic" syntax into 5 simple values: from, to, limit-kind (:inclusive, :exclusive or nil if unbounded), by (step) and direction (+ or -)). Further related utilities are provided. Intended for easy implementation of analogous functionality in other constructs.</p>
-              </div>
-            </a>
-          </li>
+      <section id="parse-number-range">
 
-          <li class="subsection-description">
-            <a onmouseup="this.blur();" href="../../../bubble-operator-upwards/"><span class="title">bubble-operator-upwards</span>
-              <div class="description">
-                <p>Independent Cooperation<br />Trivial</p>
-                <p>Demultiplexes all alternative branches in a form by way of cartesian product. This operation is notably useful for easy implementation of certain kinds of shorthand notations in macros. A cartesian-product function is also exported, as it's needed to implement the main function.</p>
-              </div>
-            </a>
-          </li>
+        <header>
+          <h1><a onmouseup="this.blur();" href="../../../parse-number-range/">parse-number-range</a></h1>
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Thematic utilities</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Simple</td>
+              </tr>
+            </tbody>
+          </table>
+        </header>
 
-        </ul>
-      </nav>
+        <p>Parses LOOP's convenient "for-as-arithmetic" syntax into 5 simple values: from, to, limit-kind (:inclusive, :exclusive or nil if unbounded), by (step) and direction (+ or -)). Further related utilities are provided. Intended for easy implementation of analogous functionality in other constructs.</p>
+
+      </section>
+
+      <section id="bubble-operator-upwards">
+
+        <header>
+          <h1><a onmouseup="this.blur();" href="../../../bubble-operator-upwards/">bubble-operator-upwards</a></h1>
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Utility function</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Trivial</td>
+              </tr>
+            </tbody>
+          </table>
+        </header>
+
+        <p>Demultiplexes all alternative branches in a form by way of cartesian product. This operation is notably useful for easy implementation of certain kinds of shorthand notations in macros. A cartesian-product function is also exported, as it's needed to implement the main function.</p>
+
+      </section>
 
     </div>
 

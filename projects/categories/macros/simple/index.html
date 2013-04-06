@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Simple | Macros | Projects | HexstreamSoft</title>
     <link href="../../../../global.css" rel="stylesheet" type="text/css" />
+    <link href="../../categories.css" rel="stylesheet" type="text/css" />
     <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
@@ -49,11 +50,26 @@
             </a>
           </h1>
           <ul>
-            <li><a href="../../../map-bind/">map-bind</a></li>
-            <li><a href="../../../positional-lambda/">positional-lambda</a></li>
-            <li><a href="../../../enhanced-eval-when/">enhanced-eval-when</a></li>
-            <li><a href="../../../enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a></li>
-            <li><a href="../../../macro-level/">macro-level</a></li>
+            <li>
+              <a href="#map-bind">map-bind</a>
+              <a class="direct-link" href="../../../map-bind/"><span>⬈</span></a>
+            </li>
+            <li>
+              <a href="#positional-lambda">positional-lambda</a>
+              <a class="direct-link" href="../../../positional-lambda/"><span>⬈</span></a>
+            </li>
+            <li>
+              <a href="#enhanced-eval-when">enhanced-eval-when</a>
+              <a class="direct-link" href="../../../enhanced-eval-when/"><span>⬈</span></a>
+            </li>
+            <li>
+              <a href="#enhanced-multiple-value-bind">enhanced-multiple-value-bind</a>
+              <a class="direct-link" href="../../../enhanced-multiple-value-bind/"><span>⬈</span></a>
+            </li>
+            <li>
+              <a href="#macro-level">macro-level</a>
+              <a class="direct-link" href="../../../macro-level/"><span>⬈</span></a>
+            </li>
           </ul>
         </nav>
 
@@ -88,8 +104,8 @@
                 <span class="here-indicator-left"> </span>
                 <span class="here-indicator-right"></span></a>
             </li>
-            <li><a href="../data-structures/">Data structures</a></li>
-            <li><a href="../uncategorized/">Uncategorized</a></li>
+            <li><a href="../../data-structures/">Data structures</a></li>
+            <li><a href="../../uncategorized/">Uncategorized</a></li>
           </ul>
         </nav>
 
@@ -126,45 +142,122 @@
         <p class="description">Macros that don't need to be extensible.</p>
       </header>
 
-      <nav>
-        <ul class="subsection-descriptions">
-          <li class="subsection-description">
-            <a onmouseup="this.blur();" href="../../../map-bind/"><span class="title">map-bind</span>
-              <div class="description">
-                <p>Visual Macro<br />Embarassingly trivial</p>
+      <section id="map-bind">
 
-                <p>Allows visual grouping of variables with their corresponding values (not necessarily 1:1) in calls to mapping operators when using an inline LAMBDA. Does so in a way that automatically supports virtually every existing and future mapping operator, all lambda keywords and FUNCALL/APPLY/MULTIPLE-VALUE-CALL variations.</p>
-            </div></a>
-          </li>
-          <li class="subsection-description">
-            <a onmouseup="this.blur();" href="../../../positional-lambda/"><span class="title">positional-lambda</span>
-              <div class="description">
-                <p>Concision Macro<br />Simple</p>
-                <p>A concise, intuitive and flexible syntax for trivial lambdas that eschews explicit (and often contextually-redundant) naming of parameter variables in favor of positional references, with support for a used or ignored &amp;rest parameter and automatic declaration of ignored parameters when logical "gaps" are left in the positional references. Further convenience features are provided.</p>
-              </div></a>
-          </li>
-          <li class="subsection-description">
-            <a onmouseup="this.blur();" href="../../../enhanced-eval-when/"><span class="title">enhanced-eval-when</span>
-              <div class="description">
-                <p>Wrapper Macro<br />Embarassingly trivial</p>
-                <p>Provides an enhanced EVAL-WHEN macro that supports<br /><code>(eval-when t ...)</code> as a shorthand for<br /><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code>, addressing concerns about verbosity. An ENHANCED-EVAL-WHEN alias is also supported, as well as an EVAL-ALWAYS macro and package nickname, for good measure.</p></div></a>
-          </li>
-          <li class="subsection-description">
-            <a onmouseup="this.blur();" href="../../../enhanced-multiple-value-bind/"><span class="title">enhanced-multiple-value-bind</span>
-              <div class="description">
-                <p>Wrapper Macro<br />Embarassingly trivial</p>
-                <p>Provides an enhanced MULTIPLE-VALUE-BIND macro that adds support for lambda keywords by expanding to a MULTIPLE-VALUE-CALL when necessary. This makes catching multiple-value &amp;rest and &amp;key much more lightweight and convenient. A MULTIPLE-VALUE-&amp;BIND alias is supported.</p>
-              </div>
-            </a>
-          </li>
-          <li class="subsection-description">
-            <a onmouseup="this.blur();" href="../../../macro-level/"><span class="title">macro-level</span>
-              <div class="description">
-                <p>Visual Macro<br />Embarassingly trivial</p>
-                <p>Saves on indentation while being more concise and direct.<br /><code>(macro-level ...)</code> == <code>(macrolet ((m () ...)) (m))</code></p></div></a>
-          </li>
-        </ul>
-      </nav>
+        <header>
+          <h1><a onmouseup="this.blur();" href="../../../map-bind/">map-bind</a></h1>
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Visual macro</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Embarassingly trivial</td>
+              </tr>
+            </tbody>
+          </table>
+        </header>
+
+        <p>Allows visual grouping of variables with their corresponding values (not necessarily 1:1) in calls to mapping operators when using an inline LAMBDA. Does so in a way that automatically supports virtually every existing and future mapping operator, all lambda keywords and FUNCALL/APPLY/MULTIPLE-VALUE-CALL variations.</p>
+
+      </section>
+
+      <section>
+
+        <header id="positional-lambda">
+          <h1><a onmouseup="this.blur();" href="../../../positional-lambda/">positional-lambda</a></h1>
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Concision macro</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Simple</td>
+              </tr>
+            </tbody>
+          </table>
+        </header>
+
+        <p>A concise, intuitive and flexible syntax for trivial lambdas that eschews explicit (and often contextually-redundant) naming of parameter variables in favor of positional references, with support for a used or ignored &amp;rest parameter and automatic declaration of ignored parameters when logical "gaps" are left in the positional references. Further convenience features are provided.</p>
+
+      </section>
+
+      <section id="enhanced-eval-when">
+        <header>
+          <h1><a onmouseup="this.blur();" href="../../../enhanced-eval-when/">enhanced-eval-when</a></h1>
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Wrapper macro</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Embarassingly trivial</td>
+              </tr>
+            </tbody>
+          </table>
+        </header>
+
+        <p>Provides an enhanced EVAL-WHEN macro that supports<br /><code>(eval-when t ...)</code> as a shorthand for<br /><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code>, addressing concerns about verbosity. An ENHANCED-EVAL-WHEN alias is also supported, as well as an EVAL-ALWAYS macro and package nickname, for good measure.</p>
+
+      </section>
+
+      <section id="enhanced-multiple-value-bind">
+        <header>
+          <h1><a onmouseup="this.blur();" href="../../../enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a></h1>
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Wrapper macro</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Embarassingly trivial</td>
+              </tr>
+            </tbody>
+          </table>
+        </header>
+
+        <p>Provides an enhanced MULTIPLE-VALUE-BIND macro that adds support for lambda keywords by expanding to a MULTIPLE-VALUE-CALL when necessary. This makes catching multiple-value &amp;rest and &amp;key much more lightweight and convenient. A MULTIPLE-VALUE-&amp;BIND alias is supported.</p>
+
+      </section>
+
+      <section id="macro-level">
+        <header>
+          <h1><a onmouseup="this.blur();" href="../../../macro-level/">macro-level</a></h1>
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Visual macro</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Embarassingly trivial</td>
+              </tr>
+            </tbody>
+          </table>
+        </header>
+
+        <p>Saves on indentation while being more concise and direct.<br /><code>(macro-level ...)</code> == <code>(macrolet ((m () ...)) (m))</code></p>
+
+      </section>
 
     </div>
 
