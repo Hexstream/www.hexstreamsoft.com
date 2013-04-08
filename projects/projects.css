@@ -2,10 +2,17 @@
 
 #project-info {
     position: relative;
+    margin: 2em 0;
+}
+
+#project-info .factsheet {
+    position: relative;
+    z-index: 2;
 }
 
 #project-info .navbox {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
 }

@@ -305,6 +305,14 @@ li li {
     color: green;
 }
 
-.good-news a {
+.caution {
+    color: orange;
+}
+
+.watch-out {
+    color: red;
+}
+
+.good-news a, .watch-out a {
     color: inherit;
 }
