@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>updatef | place-utils | Libraries | HexstreamSoft</title>
+    <link href="../../global.css" rel="stylesheet" type="text/css" />
+    <link href="../libraries.css" rel="stylesheet" type="text/css" />
+    <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1783234-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+
+    <nav id="site-nav">
+
+      <nav class="breadcrumbs">
+        <a href="../../">HexstreamSoft</a>
+        <span class="separator"> » </span>
+        <a href="../">Libraries</a>
+        <span class="separator"> » </span>
+        <a href="../categories/uncategorized/">Uncategorized</a>
+        <span class="separator"> » </span>
+        <a href="./">place-utils</a>
+        <span class="separator"> » </span>
+        <a class="here">updatef</a>
+        <div class="float-clear"></div>
+      </nav>
+
+      <nav class="ancestors-nav">
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="place-utils_navbox">
+          <h1 class="box-header"><a href="./">place-utils</a></h1>
+          <ul>
+            <li><a href="setf-expanderlet.html">setf-expanderlet</a></li>
+            <li><a href="with-resolved-places.html">with-resolved-places</a></li>
+            <li>
+              <a class="here">
+                updatef
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"></span>
+              </a>
+            </li>
+            <li><a href="bulkf.html">bulkf</a></li>
+            <li><a href="funcallf-applyf.html">funcallf/applyf</a></li>
+            <li><a href="cachef.html">cachef</a></li>
+            <li><a href="oldf.html">oldf</a></li>
+            <li><a href="readf.html">readf</a></li>
+            <li><a href="tracef.html">tracef</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="uncategorized-projects_navbox">
+          <h1><a href="../categories/uncategorized/">Uncategorized</a></h1>
+          <ul>
+            <li><a href="../clhs/">clhs</a></li>
+            <li>
+              <a class="here">
+                place-utils
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="projects_navbox">
+          <h1 class="box-header">
+            <a href="../">Libraries</a>
+          </h1>
+          <ul>
+            <li><a href="../categories/macros/">Macros</a></li>
+            <li><a href="../categories/data-structures/">Data structures</a></li>
+            <li>
+              <a href="../categories/uncategorized/">
+                Uncategorized
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="main_navbox">
+          <h1>
+            <a href="../../">HexstreamSoft</a>
+          </h1>
+          <ul>
+            <li><a href="../../introduction.html">Introduction</a></li>
+            <li><a href="../">Libraries <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
+            <li><a href="../../tweets/">Tweets</a></li>
+            <li><a href="../../worknotes/">Worknotes</a></li>
+            <li><a href="../../accounts/">Accounts</a></li>
+            <li><a href="../../resources/">Resources</a></li>
+          </ul>
+        </nav>
+
+      </nav>
+
+    </nav>
+
+    <div id="content">
+
+      <header id="page-header">
+        <h1>updatef</h1>
+        <p class="description">Like setf, except supply update functions (to be called with old values) instead of new values.</p>
+      </header>
+
+      <div class="defun">
+&mdash; Modify Macro: <b>updatef</b><var> &amp;rest places-and-update-functions &rArr; results<a name="index-updatef-3"></a></var><br>
+<blockquote><p><code>updatef</code> is exactly like <code>setf</code>, except that instead of
+directly providing new values to store into the place, one provides
+update functions that will be called with the corresponding old
+value. Each store variable is bound to the result of calling the
+corresponding update function with the old value, then the storing
+form is evaluated.
+
+     <pre class="lisp">          (defun double (number) (* number 2))
+
+          (let ((a 2) (b 8))
+            (updatef (values a b) #'double)
+            (values a b))
+          &rArr; 4, NIL
+
+          (let ((a 2) (b 8))
+            (updatef a #'1+
+                     a #'double
+                     b #'-)
+            (values a b))
+          &rArr; 6, -8
+
+          (let ((a #(1 2)))
+            (updatef (aref (print a) (print 1))
+                     (print #'double))
+            a)
+          -| #(1 2)
+          -| 1
+          -| #&lt;FUNCTION DOUBLE&gt;
+          &rArr; #(1 4)
+</pre>
+        </blockquote></div>
+
+    </div>
+
+    <div id="footer">
+      <div>
+        <a href="#" class="back-to-top">⬆</a>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      </div>
+    </div>
+
+  </body>
+</html>
