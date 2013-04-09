@@ -116,6 +116,41 @@
     min-width: 12em;
 }
 
+.navboxes .group {
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    left: -0.5em;
+}
+
+.navboxes .group > h1 {
+    position: absolute;
+    top: -2.3em;
+    left: 0;
+    margin-left: 2em;
+    color: #BBBBBB;
+}
+
+.navboxes .group > h1 a {
+    color: #CCCCCC;
+    font-size: medium;
+}
+
+.navboxes .group > h1 a:hover, .navboxes .group > h1 a:focus {
+    opacity: 1;
+}
+
+.navboxes .group .navbox {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navboxes .group > .body {
+    padding: 1em 0.5em;
+    border: dashed thin #AAAAAA;
+}
+
 .here-indicator-left, .here-indicator-right {
     background: gray;
     position: absolute;
