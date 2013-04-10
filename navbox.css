@@ -69,11 +69,11 @@
     top: 0.35em;
 }
 
-.navbox li.last-child a {
+.navbox li:last-child a {
     padding-bottom: 0.35em;
 }
 
-.navbox li.last-child .here-indicator-left, .navbox li.last-child .here-indicator-right {
+.navbox li:last-child .here-indicator-left, .navbox li:last-child .here-indicator-right {
     bottom: 0.5em;
 }
 
@@ -156,6 +156,10 @@
     border: dashed thin #AAAAAA;
 }
 
+.navboxes .navbox .item-count {
+    margin-left: -0.05em;
+}
+
 .here-indicator-left, .here-indicator-right {
     background: gray;
     position: absolute;
@@ -174,6 +178,7 @@
 }
 
 .navbox h1 {
+    position: relative;
     border-bottom: double medium;
     font-size: medium;
     font-weight: bold;
@@ -194,4 +199,37 @@
     top: 0.2em;
     bottom: 0.2em;
     display: block;
+}
+
+
+.navbox .item-count {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    font-weight: bold;
+    margin-left: 0.15em;
+    color: transparent;
+    opacity: 0.4;
+    font-size: medium;
+}
+
+.navbox ul > li:hover > .item-count, .navbox h1:hover > .item-count {
+    opacity: 0.8;
+}
+
+.navbox .item-count > span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    color: black;
+    font-size: small;
+    padding: 0.175em 0;
+}
+
+.navbox > ul > li:first-child > .item-count > span {
+    padding: 0.35em 0;
+}
+
+.navbox .inlined-nodes .item-count > span {
+    font-size: x-small;
 }
