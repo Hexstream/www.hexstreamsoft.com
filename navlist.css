@@ -1,8 +1,15 @@
 .navlist {
     display: table;
     margin: 1em auto;
-    background: #ECECEC;
     text-decoration: none;
+    border: thin solid black;
+}
+
+.navlist.headered {
+    border: none;
+}
+
+.navlist.headered .body {
     border: thin solid black;
 }
 
@@ -18,6 +25,7 @@
     margin: 0;
     padding: 0.5em 1em;
     margin-bottom: 0;
+    background: #ECECEC;
     border: thin solid black;
 }
 
@@ -30,7 +38,7 @@
     line-height: 1.2em;
 }
 
-.navlist :hover, .navlist :focus {
+.navlist section:hover, .navlist section:focus {
     background: #ECE0A5;
     outline-style: none;
 }
@@ -46,10 +54,41 @@
     word-spacing: 0.06em;
 }
 
+.navlist > h1 {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+    padding: 0.25em 0.5em;
+}
+
+.navlist > h1 a:hover, .navlist > h1 a:focus {
+    color: inherit;
+}
+
+.navlist > h1 a {
+    color: #CCCCCC;
+}
+
 .navlist p {
     margin-top: 0.2em;
     margin-bottom: 0;
     font-size: smaller;
     text-align: justify;
     color: black;
+}
+
+
+.navlist-group {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navlist-group .navlist {
+    display: block;
+}
+
+.navlist-group .navlist:first-child {
+    margin-top: 0;
 }

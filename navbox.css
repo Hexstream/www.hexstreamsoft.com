@@ -128,13 +128,18 @@
     position: absolute;
     top: -2.3em;
     left: 0;
-    margin-left: 2em;
+    right: 0;
     color: #BBBBBB;
+    text-align: center;
 }
 
 .navboxes .group > h1 a {
     color: #CCCCCC;
     font-size: medium;
+}
+
+.navboxes .group > h1 a:hover, .navboxes .group > h1 a:focus {
+    color: black;
 }
 
 .navboxes .group > h1 a:hover, .navboxes .group > h1 a:focus {
