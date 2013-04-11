@@ -217,6 +217,10 @@
     opacity: 0.8;
 }
 
+.navbox ul > li:hover > .item-count:hover, .navbox h1:hover > .item-count:hover {
+    opacity: 0.4;
+}
+
 .navbox .item-count > span {
     position: absolute;
     top: 0;
