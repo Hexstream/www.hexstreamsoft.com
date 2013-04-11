@@ -196,6 +196,37 @@
           </ul>
         </nav>
 
+        <table id="dependencies-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Depends on</th>
+              <th>Depended on by</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Directly</th>
+              <td>
+                <ul>
+                  <li><a href="../map-bind/">map-bind</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="../place-modifiers/">place-modifiers</a></li>
+                  <li><a href="../parse-number-range/">parse-number-range</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Indirectly</th>
+              <td>Nothing</td>
+              <td>Nothing</td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
 
       <p>CARTESIAN-PRODUCT-SWITCH is a macro for choosing the appropriate form to execute according to the combined results of multiple tests. This is a straightforward and efficient alternative to the convoluted ad-hoc conditionals one might otherwise resort to.</p>

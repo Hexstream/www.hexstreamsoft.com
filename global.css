@@ -118,6 +118,7 @@ header h1 {
 
 .notice {
     display: table;
+    clear: both;
     position: relative;
     max-width: 40em;
     padding: 0;
@@ -301,6 +302,7 @@ li li {
     padding: 0.3em;
 }
 
+
 .good-news {
     color: green;
 }
@@ -315,4 +317,9 @@ li li {
 
 .good-news a, .watch-out a {
     color: inherit;
+}
+
+
+.example, pre {
+    clear: both;
 }

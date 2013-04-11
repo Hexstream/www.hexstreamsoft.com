@@ -10,9 +10,27 @@
     z-index: 2;
 }
 
-#project-info .navbox {
+#external-projects_navbox {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 1;
+}
+
+
+#dependencies-table {
+    font-size: smaller;
+    float: right;
+    margin: 0 0.5em 1em 1em;
+}
+
+#dependencies-table th, #dependencies-table td {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+
+#dependencies-table li {
+    margin: 0;
+    padding: 0.175em 0em;
 }

@@ -185,6 +185,32 @@
           </ul>
         </nav>
 
+        <table id="dependencies-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Depends on</th>
+              <th>Depended on by</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Directly</th>
+              <td>Nothing</td>
+              <td>
+                <ul>
+                   <li><a href="../incognito-keywords/">incognito-keywords</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Indirectly</th>
+              <td>Nothing</td>
+              <td>Nothing</td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
 
       <p>enhanced-eval-when provides an enhanced EVAL-WHEN macro that supports<br /><code>(eval-when t ...)</code> as a shorthand for<br /><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code>, addressing concerns about verbosity. An ENHANCED-EVAL-WHEN alias is also supported, as well as an EVAL-ALWAYS macro and package nickname, for good measure.</p>

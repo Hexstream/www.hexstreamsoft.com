@@ -184,6 +184,33 @@
           </ul>
         </nav>
 
+        <table id="dependencies-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Depends on</th>
+              <th>Depended on by</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Directly</th>
+              <td>Nothing</td>
+              <td>
+                <ul>
+                  <li><a href="../multiple-value-variants/">multiple-value-variants</a></li>
+                  <li><a href="../parse-number-range/">parse-number-range</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Indirectly</th>
+              <td>Nothing</td>
+              <td>Nothing</td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
 
       <p>enhanced-multiple-value-bind provides an enhanced MULTIPLE-VALUE-BIND macro that adds support for lambda keywords by expanding to a MULTIPLE-VALUE-CALL when necessary. This makes catching multiple-value &amp;rest and &amp;key much more lightweight and convenient. A MULTIPLE-VALUE-&amp;BIND alias is supported.</p>
