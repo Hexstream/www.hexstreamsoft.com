@@ -1,0 +1,12 @@
+.example, pre {
+    clear: both;
+}
+
+code a {
+    text-decoration: none;
+}
+
+code a:hover {
+    text-decoration: underline;
+    background: yellow;
+}
