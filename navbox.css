@@ -19,6 +19,10 @@
     width: 10em;
 }
 
+.navbox > ul + ul {
+    border-top: thin dashed black;
+}
+
 .navbox a {
     display: block;
     position: relative;
@@ -179,7 +183,7 @@
 
 .navbox h1 {
     position: relative;
-    border-bottom: double medium;
+    border-bottom: medium double black;
     font-size: medium;
     font-weight: bold;
     text-align: center;
