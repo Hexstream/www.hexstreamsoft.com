@@ -151,6 +151,10 @@ header h1 {
     border-color: orange;
 }
 
+.note {
+    border-color: gray;
+}
+
 
 p {
     margin: 1em;

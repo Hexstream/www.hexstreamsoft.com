@@ -239,8 +239,7 @@
 
       <p>Here's an example designed to show many features at once:<br />
         (color key: <span class="prologue">prologue</span> <span class="arg">arguments</span> <span class="val">values</span> <span class="lambda-body">lambda-body</span>)</p>
-  <pre class="example"><code class="common-lisp">
-(map-bind (<span class="prologue"><code><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_multip.htm">multiple-value-call</a></code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhb.htm">#'</a><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_map.htm">map</a> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dc.htm">'</a><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_vector.htm">vector</a></span>)
+  <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">map-bind</code> (<span class="prologue"><code><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_multip.htm">multiple-value-call</a></code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhb.htm">#'</a><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_map.htm">map</a> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dc.htm">'</a><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_vector.htm">vector</a></span>)
     ((<span class="arg"><var>symbol</var></span> <span class="val"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhc.htm">#(</a>a b c)</span>)
      (<span class="arg"><var>number</var></span> <span class="val"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dc.htm">'</a>(1 2 3)</span>)
      ((<span class="arg"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>others</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMallow-other-keys">&amp;allow-other-keys</a></span>) <span class="val">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dc.htm">'</a>(d e f) <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhc.htm">#(</a>4 5 6))</span>)
@@ -259,7 +258,7 @@
 <samp><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhc.htm">#(</a>(0 A 11 (4 D)) (1 B 12 (5 E)) (2 C 13 (6 F)))</samp>
 </code></pre>
 
-      <p><b>To use map-bind, simply <code class="common-lisp standard option">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a> #:map-bind #:map-bind)</code>. Don't <code class="common-lisp standard option">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:use</a>)</code>!</b></p>
+      <p><b>To use <code class="common-lisp library operator">map-bind</code>, simply <code class="common-lisp standard option">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a> #:map-bind #:map-bind)</code>. Don't <code class="common-lisp standard option">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:use</a>)</code>!</b></p>
 
     </div>
 

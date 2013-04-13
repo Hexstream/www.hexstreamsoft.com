@@ -229,150 +229,116 @@
 
       </div>
 
-      <p>positional-lambda is a concise, intuitive and flexible syntax (macro) for trivial lambdas that eschews explicit (and often contextually-redundant) naming of parameter variables in favor of positional references, with support for a used or ignored &amp;rest parameter and automatic declaration of ignored parameters when logical "gaps" are left in the positional references. Further convenience features are provided.</p>
+      <div class="notice note">
+        <p><b>Note:</b> The project is called "positional-lambda".
+        <br />The macro itself is called "plambda", for brevity.</p>
+        <p>This is an exception to my usual policy against abbrevations.</p>
+      </div>
 
-<pre>
-(plambda (values :3 :1))
+      <p><dfn><code class="common-lisp library macro operator">plambda</code></dfn> is a concise, intuitive and flexible syntax (macro) for trivial <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code>s that eschews explicit (and often contextually-redundant) naming of parameter variables in favor of positional references, with support for a used or ignored <code class="common-lisp standard lambda-list-keyword"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a></code> parameter and automatic declaration of <code class="common-lisp standard declaration"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a></code>d parameters when logical "gaps" are left in the positional references. Further convenience features are provided.</p>
+
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> <code class="common-lisp library local marker">:3</code> <code class="common-lisp library local marker">:1</code>))
 ==
-(lambda (first second third)
-  (declare (ignore second))
-  (values third first))
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var> <var>third</var>)
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>second</var>))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> <var>third</var> <var>first</var>))</code></pre>
 
-(plambda (list* :2 :1 :rest))
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <code class="common-lisp library local marker">:2</code> <code class="common-lisp library local marker">:1</code> <code class="common-lisp library local marker">:rest</code>))
 ==
-(lambda (first second &amp;rest rest)
-  (list* second first rest))
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>rest</var>)
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <var>second</var> <var>first</var> <var>rest</var>))</code></pre>
 
-(plambda :rest (list :2 :1))
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:rest</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <code class="common-lisp library local marker">:2</code> <code class="common-lisp library local marker">:1</code>))
 ==
-(lambda (first second &amp;rest rest)
-  (declare (ignore rest))
-  (list second first))
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>rest</var>)
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>rest</var>))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <var>second</var> <var>first</var>))</code></pre>
 
+      <p>It's possible to specify a minimum number of required arguments:</p>
 
-It's possible to specify a minimum number of required arguments:
-
-(plambda :3 :2)
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:3</code> <code class="common-lisp library local marker">:2</code>)
 ==
-(lambda (first second third)
-  (declare (ignore first third))
-  second)
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var> <var>third</var>)
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>first</var> <var>third</var>))
+  <var>second</var>)</code></pre>
 
-(plambda :2 :3) ; redundant minimum: 3 > 2.
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:2</code> <code class="common-lisp library local marker">:3</code>) ; redundant minimum: 3 > 2.
 ==
-(plambda :3)
+(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:3</code>)</code></pre>
 
+      <p>Which also has the effect of "pushing back" the <code class="common-lisp standard lambda-list-keyword"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a></code> argument if there's one:</p>
 
-Which also has the effect of "pushing back" the &amp;rest argument if there's one:
-
-(plambda :3 (mapcar :1 :rest))
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:3</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm">mapcar</a> <code class="common-lisp library local marker">:1</code> <code class="common-lisp library local marker">:rest</code>))
 ==
-(lambda (first second third &amp;rest rest)
-  (declare (ignore second third))
-  (mapcar first rest))
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var> <var>third</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>rest</var>)
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>second</var> <var>third</var>))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm">mapcar</a> <var>first</var> <var>rest</var>))</code></pre>
 
+      <p>The first argument to <code class="common-lisp library operator">plambda</code> is treated as a specification of the minimum number of arguments only if it looks like a positional reference and <code class="common-lisp library operator">plambda</code> was invoked with other arguments:</p>
 
-The first argument to PLAMBDA is treated as a specification of the
-minimum number of arguments only if it looks like a positional reference
-and PLAMBDA was invoked with other arguments:
-
-(plambda :2)
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:2</code>)
 ==
-(lambda (first second)
-  (declare (ignore first))
-  second)
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var>)
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>first</var>))
+  <var>second</var>)</code></pre>
 
+      <p><code class="common-lisp library operator">plambda</code> accepts an implicit <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm">progn</a></code>, not just one expression:</p>
 
-PLAMBDA accepts an implicit PROGN, not just one expression:
-
-(plambda (print :1) :2)
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm">print</a> <code class="common-lisp library local marker">:1</code>) <code class="common-lisp library local marker">:2</code>)
 ==
-(lambda (first second)
-  (print first)
-  second)
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var>)
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm">print</a> <var>first</var>)
+  <var>second</var>)</code></pre>
 
+      <p>Also, <code class="common-lisp library operator">plambda</code>'s <code class="common-lisp library local special-operator operator">:let</code> "local special operator" allows one to "lift" parts of its body outside the <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code> to a <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">let</a></code> without needing to name and then refer to an explicit variable.</p>
 
-Also, PLAMBDA's :let "local special operator" allows one to "lift" parts of
-its body outside the lambda to a LET without needing to name and then
-refer to an explicit variable.
-
-(plambda :2 (list :1 (:let (random))))
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:2</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <code class="common-lisp library local marker">:1</code> (<code class="common-lisp library local special-operator operator">:let</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_random.htm">random</a>))))
 ==
-(let ((number (random)))
-  (lambda (first second)
-    (declare (ignore second))
-    (list first number)))
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">let</a> ((<var>number</var> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_random.htm">random</a>)))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var>)
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>second</var>))
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <var>first</var> <var>number</var>)))</code></pre>
 
+      <p>Another feature is <code class="common-lisp library local special-operator operator">:cache</code>, which is like <code class="common-lisp library local special-operator operator">:let</code> except it computes the associated form in its original lexical and dynamic context within the <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code> the first time its evaluation completes and returns the cached value on subsequent evaluations.</p>
 
-Another feature is :cache, which is like :let except it computes the
-associated form in its original lexical and dynamic context within the
-lambda the first time its evaluation completes and returns the cached
-value on subsequent evaluations.
-
-(plambda (write :1 :base (:cache *print-base*)))
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm">write</a> <code class="common-lisp library local marker">:1</code> :base (<code class="common-lisp library local special-operator operator">:cache</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_pr_bas.htm">*print-base*</a>)))
 ==
-(let (base basep)
-  (lambda (first)
-    (write first :base (if basep
-                           base
-                           (prog1 (setf base *print-base*)
-                             (setf basep t))))))
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">let</a> (<var>base</var> <var>basep</var>)
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var>)
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm">write</a> <var>first</var> :base (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm">if</a> <var>basep</var>
+                           <var>base</var>
+                           (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_prog1c.htm">prog1</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_setf_.htm">setf</a> <var>base</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_pr_bas.htm">*print-base*</a>)
+                             (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_setf_.htm">setf</a> <var>basep</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_t.htm">t</a>))))))</code></pre>
 
-The consequences are undefined if the :let and :once local special
-operators are nested within themselves or eachother:
+      <p>The consequences are undefined if the <code class="common-lisp library local special-operator operator">:let</code> and <code class="common-lisp library local special-operator operator">:cache</code> local special
+operators are nested within themselves or eachother:</p>
 
-(plambda (:let (:let 1))) ; undefined
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<code class="common-lisp library local special-operator operator">:let</code> (<code class="common-lisp library local special-operator operator">:let</code> 1))) ; undefined</code></pre>
+
+      <p><code class="common-lisp library operator">plambda</code> will treat any quoted expressions as opaque, and will treat anything wrapped in the :quote local-special-form as opaque as well.</p>
 
 
-PLAMBDA will treat any quoted expressions as opaque, and will treat
-anything wrapped in the :quote local-special-form as opaque as well.
-
-(plambda ':1)
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dc.htm">'</a>:1)
 ==
-(lambda () ':1)
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> () <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dc.htm">'</a>:1)</code></pre>
 
-(plambda () (:quote :1))
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> () (<code class="common-lisp library local special-operator operator">:quote</code> :1))
 ==
-(lambda () :1)
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> () :1)</code></pre>
 
+      <p>Unfortunately, currently <code class="common-lisp library operator">plambda</code> won't do the right thing with some expressions that are quoted via backquote (since there's no easy portable way to walk backquoted expressions).</p>
 
-Unfortunately, currently PLAMBDA won't do the right thing with some
-expressions that are quoted via backquote (since there's no easy
-portable way to walk backquoted expressions).
-
-(plambda `(:1 ,:2))
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_df.htm">`</a>(<code class="common-lisp library local marker">:1</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dg.htm">,</a><code class="common-lisp library local marker">:2</code>))
 ==
-[:1 will be erroneously replaced]
+[<code class="common-lisp library local marker">:1</code> will be erroneously replaced]</code></pre>
 
+      <p>To use <code class="common-lisp library macro operator">plambda</code>, simply <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a> #:positional-lambda #:plambda)</code> from your <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">defpackage</a></code>. Don't (<code class="common-lisp standard option"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:use</a></code>)! "Clashy" symbols might be added to the <code class="common-lisp library package">positional-lambda</code> package in the future.</p>
 
-To use lambda-lift, simply (:import-from #:lambda-lift #:lift) from
-your DEFPACKAGE. Don't (:use #:lambda-lift)! "Clashy" symbols might be
-added to the lambda-lift package in the future.
+      <p>positional-lambda should only be used to describe actually trivial <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code>s, <strong>usually no more than 3 lines long</strong>, and should not be used in code returned by macros, because of "capture" issues. <del>In particular, due to the <code class="common-lisp library operator">plambda</code> macro's parsing model, it's not safe to nest multiple invocations.</del> <ins>(Actually, nesting multiple <code class="common-lisp library operator">plambda</code> invocations has been safe for quite a while. The outer invocations will effectively treat any inner ones as being implicitly wrapped in <code class="common-lisp library local special-operator operator">:quote</code>.)</ins></p>
 
+      <p>However, these are not practical limitations since as <code class="common-lisp library operator">plambda</code>'s expressions get bigger, the benefits of conciseness quickly fade out to be replaced by the problems of implicitness, so hopefully one wouldn't be tempted to use it in these scenarios anyway. The implicitness is not a problem for suitably short <code class="common-lisp library operator">plambda</code> expressions since the surrounding context provides enough contextual information, and explicitly naming variables would then simply provide redundant information.</p>
 
-positional-lambda should only be used to describe actually trivial
-lambdas, usually no more than 3 lines long, and should not be used in
-code returned by macros, because of "capture" issues. In particular,
-due to the PLAMBDA macro's parsing model, it's not safe to nest multiple
-invocations.
-
-However, these are not practical limitations since as PLAMBDA's
-expressions get bigger, the benefits of conciseness quickly fade out
-to be replaced by the problems of implicitness, so hopefully one
-wouldn't be tempted to use it in these scenarios anyway. The
-implicitness is not a problem for suitably short PLAMBDA expressions
-since the surrounding context provides enough contextual information,
-and explicitly naming variables would then simply provide redundant
-information.
-
-PLAMBDA's deliberately simplistic "surface parsing" (and replacement)
-strategy is conceptually and implementationally simple and robust, as
-opposed to often-brittle "code-walking" where an attempt is made to
-take into account the actual semantics of forms and operators, often
-necessitating explicit support when new operators are introduced.
-</pre>
-
-      <p>Better documentation will have to wait after all, but you should be able to figure out things with <a href="https://github.com/Hexstream/positional-lambda/blob/master/README">the README</a> and some experimentation. There's also an <a href="examples.html">ugly and incomplete examples page</a> but it's mostly just the examples in the README with the actual macroexpansions instead of "what you'd write by hand".</p>
+      <p><code class="common-lisp library operator">plambda</code>'s deliberately simplistic "surface parsing" (and replacement) strategy is conceptually and implementationally simple and robust, as opposed to often-brittle "code-walking" where an attempt is made to take into account the actual semantics of forms and operators, often necessitating explicit support when new operators are introduced.</p>
 
     </div>
 

@@ -2,6 +2,14 @@
     clear: both;
 }
 
+pre.example {
+    display: table;
+    margin: 1em;
+    padding: 1em;
+    border: thin dotted black;
+    background: #ECECEC;
+}
+
 code a {
     text-decoration: none;
 }
@@ -9,4 +17,8 @@ code a {
 code a:hover {
     text-decoration: underline;
     background: yellow;
+}
+
+code.common-lisp.library.operator, code.common-lisp.library.marker {
+    color: green;
 }
