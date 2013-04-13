@@ -262,7 +262,7 @@
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>first</var> <var>third</var>))
   <var>second</var>)</code></pre>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:2</code> <code class="common-lisp library local marker">:3</code>) ; redundant minimum: 3 > 2.
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:2</code> <code class="common-lisp library local marker">:3</code>) <span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;</a> redundant minimum: 3 > 2.</span>
 ==
 (<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:3</code>)</code></pre>
 
@@ -313,7 +313,7 @@
       <p>The consequences are undefined if the <code class="common-lisp library local special-operator operator">:let</code> and <code class="common-lisp library local special-operator operator">:cache</code> local special
 operators are nested within themselves or eachother:</p>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<code class="common-lisp library local special-operator operator">:let</code> (<code class="common-lisp library local special-operator operator">:let</code> 1))) ; undefined</code></pre>
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<code class="common-lisp library local special-operator operator">:let</code> (<code class="common-lisp library local special-operator operator">:let</code> 1))) <span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;</a> undefined</span></code></pre>
 
       <p><code class="common-lisp library operator">plambda</code> will treat any quoted expressions as opaque, and will treat anything wrapped in the :quote local-special-form as opaque as well.</p>
 

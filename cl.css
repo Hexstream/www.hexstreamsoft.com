@@ -22,3 +22,11 @@ code a:hover {
 code.common-lisp.library.operator, code.common-lisp.library.marker {
     color: green;
 }
+
+code.common-lisp .comment {
+    color: salmon;
+}
+
+code.common-lisp .comment a {
+    color: inherit;
+}
