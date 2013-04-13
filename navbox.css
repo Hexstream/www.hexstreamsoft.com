@@ -157,7 +157,11 @@
 
 .navboxes .group > .body {
     padding: 1em 0.5em;
-    border: dashed thin #AAAAAA;
+    border: thin dashed #AAAAAA;
+}
+
+.navboxes .group.anonymous > .body {
+    border: thin dashed transparent;
 }
 
 .navboxes .navbox .item-count {
