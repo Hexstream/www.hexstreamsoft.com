@@ -226,72 +226,60 @@
 
       </div>
 
-      <p>enhanced-multiple-value-bind provides an enhanced MULTIPLE-VALUE-BIND macro that adds support for lambda keywords by expanding to a MULTIPLE-VALUE-CALL when necessary. This makes catching multiple-value &amp;rest and &amp;key much more lightweight and convenient. A MULTIPLE-VALUE-&amp;BIND alias is supported.</p>
+      <p><dfn><code class="common-lisp library">enhanced-multiple-value-bind</code></dfn> provides an enhanced <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_multip.htm">multiple-value-bind</a></code> macro that adds support for lambda list keywords by expanding to a <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_multip.htm">multiple-value-call</a></code> when necessary. This makes catching multiple-value <code class="common-lisp standard lambda-list-keyword"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a></code> and <code class="common-lisp standard lambda-list-keyword"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a></code> much more lightweight and convenient. A <code class="common-lisp library macro operator">multiple-value-&amp;bind</code> alias is supported.</p>
 
-    <p>Some problems with writing out MULTIPLE-VALUE-CALL with an inline
-LAMBDA, especially with a big LAMBDA body and trivial form arguments
-to m-v-c, compared to MULTIPLE-VALUE-BIND, are:</p>
+    <p>Some problems with writing out <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_multip.htm">multiple-value-call</a></code> with an inline
+<code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code>, especially with a big <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code> body and trivial form arguments to <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_multip.htm">multiple-value-call</a></code>, compared to <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_multip.htm">multiple-value-bind</a></code>, are:</p>
       <ul>
-	<li>"unnatural" order of evaluation (skip over LAMBDA, evaluate values forms, then "come back" for LAMBDA body);</li>
+	<li>"unnatural" order of evaluation (skip over <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code>, evaluate values forms, then "come back" for <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code> body);</li>
 	<li>significant extra indentation for the body.</li>
       </ul>
 
-    <p>Multiple-value &amp;rest and &amp;key are currently not being used a lot, but
-the awkwardness of using them up to now might have something to do
-with this state of affairs. Their usefulness and convenience should
-now be reassessed.</p>
+    <p>Multiple-value <code class="common-lisp standard lambda-list-keyword"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a></code> and <code class="common-lisp standard lambda-list-keyword"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a></code> are currently not being used a lot (as far as I know), but the awkwardness of using them up to now might have something to do with this state of affairs. Their usefulness and convenience should now be reassessed.</p>
 
-    <p>If enhanced-mvb:MULTIPLE-VALUE-BIND is invoked without apparent lambda
-keywords (symbols beginning with "&amp;"), then it simply expands to
-cl:MULTIPLE-VALUE-BIND:</p>
+    <p>If <code class="common-lisp library macro operator">enhanced-mvb:multiple-value-bind</code> is invoked without apparent lambda list keywords (symbols beginning with "&amp;"), then it simply expands to
+<code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_multip.htm">cl:multiple-value-bind</a></code>:</p>
 
-<pre>(enhanced-mvb:multiple-value-bind (a b c) (values 1 2 3)
+<pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">enhanced-mvb:multiple-value-bind</code> (<var>a</var> <var>b</var> <var>c</var>) (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> 1 2 3)
   ...)
 ==
-(multiple-value-bind (a b c) (values 1 2 3)
-  ...)</pre>
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_multip.htm">multiple-value-bind</a> (<var>a</var> <var>b</var> <var>c</var>) (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> 1 2 3)
+  ...)</code></pre>
 
-    <p>Else, it simply expands to a MULTIPLE-VALUE-CALL with inline LAMBDA:</p>
+    <p>Else, it simply expands to a <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_multip.htm">multiple-value-call</a></code> with inline <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code>:</p>
 
-    <pre>(enhanced-mvb:multiple-value-bind (a b &amp;rest rest) (values 1 2 3)
+    <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">enhanced-mvb:multiple-value-bind</code> (<var>a</var> <var>b</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>rest</var>) (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> 1 2 3)
   ...)
 ==
-(multiple-value-call (lambda (a b &amp;rest rest)
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_multip.htm">multiple-value-call</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>a</var> <var>b</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>rest</var>)
                        ...)
-  (values 1 2 3))</pre>
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> 1 2 3))</code></pre>
 
-    <p>An interesting consequence of this is that it's easy to accept an
-      exact number of return values (though I'm not sure why you'd want to):</p>
+    <p>An interesting consequence of this is that it's easy to accept an exact number of return values (though I'm not sure why you'd want to):</p>
 
-    <pre>(multiple-value-bind (a b c &amp;optional) (values 1 2 3 4))
-error &rarr; "Invalid number of arguments: 4"</pre>
+    <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value-bind</code> (<var>a</var> <var>b</var> <var>c</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMoptional">&amp;optional</a>) (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> 1 2 3 4))
+<samp class="error">error &rarr; "Invalid number of arguments: 4"</samp></code></pre>
 
-    <p>This follows the same principle as VALUES in FUNCTION type
-specifiers. <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_values.htm">CLHS VALUES (type specifier)</a>.</p>
+    <p>This follows the same principle as <code class="common-lisp standard type-specifier"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_values.htm">values</a></code> in <code class="common-lisp standard type-specifier"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_fn.htm">function</a></code> type specifiers.</p>
 
-    <p><b>To use enhanced-multiple-value-bind</b>, either refer to the provided MULTIPLE-VALUE-BIND directly:</p>
+    <p><b>To use <cite class="common-lisp library">enhanced-multiple-value-bind</cite></b>, either refer to the provided <code class="common-lisp library macro operator">multiple-value-bind</code> directly:</p>
 
-<pre>;; A bit long...
-(enhanced-multiple-value-bind:multiple-value-bind
-      (x y &amp;rest others)
-    (values 1 2 3 4)
-  (values (* x y) others))
-&rarr; 2, (3 4)
+<pre class="example"><code class="common-lisp"><span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;;</a> A bit long...</span>
+(<code class="common-lisp library macro operator">enhanced-multiple-value-bind:multiple-value-bind</code>
+      (<var>x</var> <var>y</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>others</var>)
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> 1 2 3 4)
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_st.htm">*</a> <var>x</var> <var>y</var>) <var>others</var>))
+<samp>&rarr; 2, (3 4)</samp>
 
-;; Much more managable package nickname.
-(enhanced-mvb:multiple-value-bind (x y &amp;rest others)
-    (values 1 2 3 4)
-  (values (* x y) others))
-&rarr; 2, (3 4)</pre>
+<span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;;</a> Much more managable package nickname.</span>
+(<code class="common-lisp library macro operator">enhanced-mvb:multiple-value-bind</code> (<var>x</var> <var>y</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>others</var>)
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> 1 2 3 4)
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_st.htm">*</a> <var>x</var> <var>y</var>) <var>others</var>))
+<samp>&rarr; 2, (3 4)</samp></code></pre>
 
-Or <code>(:shadowing-import-from #:enhanced-multiple-value-bind
-#:multiple-value-bind)</code> in your DEFPACKAGE (or with the package
-nickname, again). <b>Don't <code>(:use)</code></b>!
+Or <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:shadowing-import-from</a> #:enhanced-multiple-value-bind #:multiple-value-bind)</code> in your <code><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">defpackage</a></code> (or with the package nickname, again). <b>Don't <code>(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:use</a>)</code></b>!
 
-<p>enhanced-multiple-value-bind also exports MULTIPLE-VALUE-&amp;BIND, with
-exactly the same functionality, so you can (:import-from
-#:enhanced-multiple-value-bind #:multiple-value-&amp;bind) in your DEFPACKAGE
-instead if you want.</p>
+<p><code class="common-lisp library package">enhanced-multiple-value-bind</code> also exports <code class="common-lisp library macro operator">multiple-value-&amp;bind</code>, with exactly the same functionality, so you can <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a> #:enhanced-multiple-value-bind #:multiple-value-&amp;bind)</code> in your <code><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">defpackage</a></code> instead if you want.</p>
 
     </div>
 

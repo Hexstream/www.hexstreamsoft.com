@@ -315,7 +315,7 @@ operators are nested within themselves or eachother:</p>
 
       <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<code class="common-lisp library local special-operator operator">:let</code> (<code class="common-lisp library local special-operator operator">:let</code> 1))) <span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;</a> undefined</span></code></pre>
 
-      <p><code class="common-lisp library operator">plambda</code> will treat any quoted expressions as opaque, and will treat anything wrapped in the :quote local-special-form as opaque as well.</p>
+      <p><code class="common-lisp library operator">plambda</code> will treat any quoted expressions as opaque, and will treat anything wrapped in the <code class="common-lisp library local special-operator operator">:quote</code> local-special-operator as opaque as well.</p>
 
 
       <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dc.htm">'</a>:1)

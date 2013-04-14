@@ -19,6 +19,10 @@ code a:hover {
     background: yellow;
 }
 
+code.operator, code.marker {
+    white-space: nowrap;
+}
+
 code.common-lisp.library.operator, code.common-lisp.library.marker {
     color: green;
 }
@@ -29,4 +33,8 @@ code.common-lisp .comment {
 
 code.common-lisp .comment a {
     color: inherit;
+}
+
+samp.error {
+    color: red;
 }
