@@ -6,7 +6,7 @@ pre.example {
     display: table;
     margin: 1em;
     padding: 1em;
-    border: thin dotted black;
+    border: thin solid lightgray;
     background: #ECECEC;
 }
 
@@ -19,7 +19,17 @@ code a:hover {
     background: yellow;
 }
 
-code.operator, code.marker {
+p code {
+    white-space: nowrap;
+    padding: 0.1em 0.1em;
+    border: thin solid lightgray;
+    background: #ECECEC;
+}
+
+code.operator, code.marker, code.glossary, code.lambda-list-keyword, code.type-specifier, code.package {
+    background: transparent;
+    padding: 0;
+    border: none;
     white-space: nowrap;
 }
 

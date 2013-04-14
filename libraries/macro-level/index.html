@@ -222,35 +222,35 @@
 
       </div>
 
-      <p>MACRO-LEVEL is an embarassingly trivial convenience macro that saves on indentation while being more concise and direct.</p>
+      <p><dfn><code class="common-lisp library macro operator">macro-level</code></dfn> is an embarassingly trivial convenience macro that saves on indentation while being more concise and direct.</p>
 
-      <pre>(macro-level
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">macro-level</code>
   ...)
 ==
-;; Canonical indentation. MACRO-LEVEL saves <span class="saved-indentation">11 spaces</span>.
+;; Canonical indentation. <code class="common-lisp library macro operator">macro-level</code> saves <span class="saved-indentation">11 spaces</span>.
 (macrolet ((m ()
   <span class="saved-indentation">           </span>...))
   (m))
 ==
-;; "Miser" indentation. MACRO-LEVEL saves <span class="saved-indentation">5 spaces</span>.
+;; "Miser" indentation. <code class="common-lisp library macro operator">macro-level</code> saves <span class="saved-indentation">5 spaces</span>.
 (macrolet
     ((m ()
   <span class="saved-indentation">     </span>...))
-  (m))</pre>
+  (m))</code></pre>
 
-      <p>When used as part of a macroexpansion, MACRO-LEVEL also conveniently relieves the macro implementor from naming and using a gensym for the one-shot macro when compared to writing out a MACROLET by hand, in addition to the other advantages.</p>
+      <p>When used as part of a macroexpansion, <code class="common-lisp library macro operator">macro-level</code> also conveniently relieves the macro implementor from naming and using a <code class="common-lisp standard glossary"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_g.htm#gensym">gensym</a></code> for the one-shot macro when compared to writing out a <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">macrolet</a></code> by hand, in addition to the other advantages.</p>
 
-      <p>To use MACRO-LEVEL, simply (macro-level:macro-level ...) after loading the ASDF system, as this macro is not used that often and the length won't have any effect on the indentation:</p>
+      <p>To use <code class="common-lisp library macro operator">macro-level</code>, simply (<code class="common-lisp library macro operator">macro-level:macro-level</code> ...) after loading the <cite class="common-lisp library"><a href="http://common-lisp.net/project/asdf/">ASDF</a></cite> system, as this macro is not used that often and the length won't have any effect on the indentation:</p>
 
-      <pre>(macro-level:macro-level
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">macro-level:macro-level</code>
   ...)
-;; VS
-(macro-level
-  ...)</pre>
+<span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;;</a> VS</span>
+(<code class="common-lisp library macro operator">macro-level</code>
+  ...)</code></pre>
 
-      <p><b>Simply <code>(:import-from #:macro-level #:macro-level)</code> in your DEFPACKAGE if you prefer the latter form. Don't <code>(:use)</code>!</b></p>
+      <p><b>Simply <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a> #:macro-level #:macro-level)</code> in your <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">defpackage</a></code> if you prefer the latter form. Don't <code>(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:use</a>)</code>!</b></p>
 
-      <p>Support could eventually be added to Slime so that interactive macroexpansion of MACRO-LEVEL calls with <kbd>C-c C-m</kbd> (<code>slime-expand-1</code>) would show the same expansion as interactively macroexpanding <code>(m ...)</code> after <code>(defmacro m () ...)</code>, assuming the lexical context is not important.</p>
+      <p>Support could eventually be added to <cite><a href="http://common-lisp.net/project/slime/">Slime</a></cite> so that interactive macroexpansion of <code class="common-lisp library macro operator">macro-level</code> calls with <kbd>C-c C-m</kbd> (<code>slime-expand-1</code>) would show the same expansion as interactively macroexpanding <code>(m ...)</code> after <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defmac.htm">defmacro</a> m () ...)</code>, assuming the lexical context is not important.</p>
 
     </div>
 

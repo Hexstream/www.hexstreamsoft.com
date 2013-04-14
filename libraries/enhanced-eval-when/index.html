@@ -225,9 +225,9 @@
 
       </div>
 
-      <p><dfn><code class="common-lisp library">enhanced-eval-when</code></dfn> provides an enhanced <code><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_eval_w.htm">eval-when</a></code> macro that supports<br /><code class="common-lisp">(<code class="common-lisp library macro operator">eval-when</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_t.htm">t</a> ...)</code> as a shorthand for<br /><code>(<code><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_eval_w.htm">eval-when</a></code> (<code class="common-lisp standard local marker">:compile-toplevel</code> <code class="common-lisp standard local marker">:load-toplevel</code> <code class="common-lisp standard local marker">:execute</code>) ...)</code>, addressing concerns about verbosity. An <code class="common-lisp library macro operator">enhanced-eval-when</code> alias is also supported, as well as an <code class="common-lisp library macro operator">eval-always</code> macro and package nickname, for good measure.</p>
+      <p><dfn><cite class="common-lisp library">enhanced-eval-when</cite></dfn> provides an enhanced <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_eval_w.htm">eval-when</a></code> macro that supports<br /><code class="common-lisp">(<code class="common-lisp library macro operator">eval-when</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_t.htm">t</a> ...)</code> as a shorthand for<br /><code>(<code class="common-lisp library macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_eval_w.htm">eval-when</a></code> (<code class="common-lisp standard local marker">:compile-toplevel</code> <code class="common-lisp standard local marker">:load-toplevel</code> <code class="common-lisp standard local marker">:execute</code>) ...)</code>, addressing concerns about verbosity. An <code class="common-lisp library macro operator">enhanced-eval-when</code> alias is also supported, as well as an <code class="common-lisp library macro operator">eval-always</code> macro and package nickname, for good measure.</p>
 
-    <p>As <code><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_eval_w.htm">eval-when</a></code> with all situations specified is used an overwhelming majority of the time by most users, these shorthands can really come handy!</p>
+    <p>As <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_eval_w.htm">eval-when</a></code> with all situations specified is used an overwhelming majority of the time by most users, these shorthands can really come handy!</p>
 
 
     <p>The recommended way to use <cite class="common-lisp library">enhanced-eval-when</cite> is to put <code>(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:shadowing-import-from</a> #:enhanced-eval-when #:eval-when)</code> in one's <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">defpackage</a></code>.</p>
@@ -239,7 +239,7 @@
     <p>and</p>
 
     <pre class="example"><code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a> #:eval-always #:eval-always)
-<span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;;</a>The name used for ASDF is still enhanced-eval-when.</span></code></pre>
+<span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;;</a>The name used for <cite class="common-lisp library"><a href="http://common-lisp.net/project/asdf/">ASDF</a></cite> is still enhanced-eval-when.</span></code></pre>
 
     <p>As always, it's also possible to fully qualify symbols instead, with:</p>
 
