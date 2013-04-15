@@ -2,12 +2,17 @@
 @import "cl.css";
 
 dt {
-    margin-top: 1.5em;
+    margin: 1.5em 1.8em 0;
     font-size: large;
 }
 
 dt a {
     text-decoration: none;
+}
+
+dd {
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 dd p:first-child {
@@ -62,6 +67,10 @@ h1 a {
     margin-bottom: 1em;
     background-color: #ECECEC;
     border: solid thin gray;
+}
+
+ul {
+    margin: 1em 2em;
 }
 
 
@@ -179,6 +188,14 @@ table td.subdivided {
 }
 
 table p {
+    margin: 0.5em;
+}
+
+table ul, table ol {
+    margin: 0.5em 1em;
+}
+
+table ul:only-child, table ol:only-child {
     margin: 0.5em;
 }
 

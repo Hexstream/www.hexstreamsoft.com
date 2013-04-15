@@ -24,6 +24,10 @@
     margin: 0 0.5em 1em 1em;
 }
 
+#dependencies-table ul {
+    margin: 0;
+}
+
 #dependencies-table th, #dependencies-table td {
     padding-top: 0.4em;
     padding-bottom: 0.4em;

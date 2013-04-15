@@ -221,6 +221,10 @@
     font-size: medium;
 }
 
+.navbox ul {
+    margin: 0;
+}
+
 .navbox ul > li:hover > .item-count, .navbox h1:hover > .item-count {
     opacity: 0.8;
 }

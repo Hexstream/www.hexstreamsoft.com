@@ -242,40 +242,53 @@
 
       </div>
 
-      <p>CARTESIAN-PRODUCT-SWITCH is a macro for choosing the appropriate form to execute according to the combined results of multiple tests. This is a straightforward and efficient alternative to the convoluted ad-hoc conditionals one might otherwise resort to.</p>
+      <p><dfn><code class="common-lisp library macro operator">cartesian-product-switch</code></dfn> is a macro for choosing the appropriate <a class="common-lisp standard glossary" href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_f.htm#form">form</a> to execute according to the combined results of multiple tests. This is a straightforward and efficient alternative to the convoluted ad-hoc conditionals one might otherwise resort to.</p>
 
-    <p>cartesian-product-switch was born as cartesian-product-case but a fairly obvious limitation was soon discovered, prompting a redesign and library name change. Further features and extensibility were also added.</p>
-
-      <p>Here's an example:</p>
-
-      <pre>(let ((manner :flip) (direction :backward))
-  (cartesian-product-switch ((case manner
+      <pre class="example"><code class="common-lisp">(let ((<var>manner</var> :flip) (<var>direction</var> :backward))
+  (<code class="common-lisp library macro operator">cartesian-product-switch</code> ((<code class="common-lisp library marker">case</code> <var>manner</var>
                                :walk
                                :flip)
-                             (case direction
+                             (<code class="common-lisp library marker">case</code> <var>direction</var>
                                :forward
                                :in-place
                                :backward))
-    "Walking..."
-    (error "Walking in-place is too boring!")
-    "Awkwardly walking backwards..."
-    "Frontflip!"
-    "Jumping in-place."
-    "Backflip!"
-    (t (error "Don't know how to ~A while going ~A." manner direction))))</pre>
+    <code class="string">"Walking..."</code>
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_error.htm">error</a> <code class="string">"Walking in-place is too boring!"</code>)
+    <code class="string">"Awkwardly walking backwards..."</code>
+    <code class="string">"Frontflip!"</code>
+    <code class="string">"Jumping in-place."</code>
+    <code class="string">"Backflip!"</code>
+    (<code class="common-lisp library marker">t</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_error.htm">error</a> <code class="string">"Don't know how to ~A while going ~A."</code> <var>manner</var> <var>direction</var>))))</code></pre>
 
-      <p><b>To use cartesian-product-switch, simply (:import-from #:cartesian-product-switch #:cartesian-product-switch). Don't (:use)!</b></p>
+      <p><b>To use <code class="common-lisp library macro operator">cartesian-product-switch</code>, simply <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a> #:cartesian-product-switch #:cartesian-product-switch)</code>. Don't <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:use</a>)</code>!</b></p>
 
-      <p>Currently supported testclause kinds:<br />
-        <code>(case ccase ecase typecase ctypecase etypecase if cond svref)</code></p>
+      <p>Currently supported testclause kinds:</p>
+      <ul>
+        <li><code class="common-lisp library marker">case</code></li>
+        <li><code class="common-lisp library marker">ccase</code></li>
+        <li><code class="common-lisp library marker">ecase</code></li>
+        <li><code class="common-lisp library marker">typecase</code></li>
+        <li><code class="common-lisp library marker">ctypecase</code></li>
+        <li><code class="common-lisp library marker">etypecase</code></li>
+        <li><code class="common-lisp library marker">if</code></li>
+        <li><code class="common-lisp library marker">cond</code></li>
+        <li><code class="common-lisp library marker">svref</code></li>
+      </ul>
 
-      <p>It's also possible to make your own kinds. Check <a href="https://github.com/Hexstream/cartesian-product-switch/blob/master/definitions.lisp">definitions.lisp</a> in particular for inspiration. In a nutshell, call (cartesian-product-switch:define operator (args) body), where BODY must return 3 values:</p>
+      <p>It's also possible to make your own kinds. Check <a href="https://github.com/Hexstream/cartesian-product-switch/blob/master/definitions.lisp">definitions.lisp</a> in particular for inspiration. In a nutshell, call <code class="common-lisp">(<code class="common-lisp library macro operator">cartesian-product-switch:define</code> <var>operator</var> (<var>args</var>) <var>body</var>)</code>, where <var>body</var> must return 3 values:</p>
 
-      <p>SELECTION-FORM:<br />A form evaluating to a non-negative integer less than SELECTION-COUNT.</p>
+      <dl>
 
-      <p>SELECTION-COUNT:<br />The number of possibilities this testclause introduces.</p>
+        <dt><dfn>selection-form</dfn></dt>
+        <dd><p>A form evaluating to a non-negative integer less than <var>selection-count</var>.</p></dd>
 
-      <p>DEFAULTP:<br />If true, then the SELECTION-FORM can evaluate to NIL to trigger the "default".</p>
+        <dt><dfn>selection-count</dfn></dt>
+        <dd><p>The number of possibilities this testclause introduces.</p></dd>
+
+        <dt><dfn>defaultp</dfn></dt>
+        <dd><p>If true, then the <var>selection-form</var> can evaluate to <code class="common-lisp standard variable">nil</code> to trigger the "default".</p></dd>
+
+      </dl>
 
     </div>
 

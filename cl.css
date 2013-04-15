@@ -26,7 +26,7 @@ p code {
     background: #ECECEC;
 }
 
-code.operator, code.marker, code.glossary, code.lambda-list-keyword, code.type-specifier, code.package {
+code.operator, code.variable, code.marker, code.glossary, code.lambda-list-keyword, code.type-specifier, code.package {
     background: transparent;
     padding: 0;
     border: none;
@@ -47,4 +47,8 @@ code.common-lisp .comment a {
 
 samp.error {
     color: red;
+}
+
+code.string {
+    color: teal;
 }
