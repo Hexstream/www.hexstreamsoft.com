@@ -227,16 +227,16 @@
       <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">macro-level</code>
   ...)
 ==
-;; Canonical indentation. <code class="common-lisp library macro operator">macro-level</code> saves <span class="saved-indentation">11 spaces</span>.
-(macrolet ((m ()
+<span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;;</a> Canonical indentation. <code class="common-lisp library macro operator">macro-level</code> saves <span class="saved-indentation">11 spaces</span>.</span>
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">macrolet</a> ((<var>m</var> ()
   <span class="saved-indentation">           </span>...))
-  (m))
+  (<var>m</var>))
 ==
-;; "Miser" indentation. <code class="common-lisp library macro operator">macro-level</code> saves <span class="saved-indentation">5 spaces</span>.
-(macrolet
-    ((m ()
+<span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;;</a> "Miser" indentation. <code class="common-lisp library macro operator">macro-level</code> saves <span class="saved-indentation">5 spaces</span>.</span>
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">macrolet</a>
+    ((<var>m</var> ()
   <span class="saved-indentation">     </span>...))
-  (m))</code></pre>
+  (<var>m</var>))</code></pre>
 
       <p>When used as part of a macroexpansion, <code class="common-lisp library macro operator">macro-level</code> also conveniently relieves the macro implementor from naming and using a <code class="common-lisp standard glossary"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_g.htm#gensym">gensym</a></code> for the one-shot macro when compared to writing out a <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">macrolet</a></code> by hand, in addition to the other advantages.</p>
 
