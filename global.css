@@ -310,8 +310,8 @@ table tr > th:first-child {
     text-align: right;
 }
 
-li {
-    margin-bottom: 1em;
+li + li {
+    margin-top: 0.5em;
 }
 
 li li {

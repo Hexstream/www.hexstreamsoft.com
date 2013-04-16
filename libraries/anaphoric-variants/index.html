@@ -237,49 +237,61 @@
 
       </div>
 
-      <p>anaphoric-variants gives access to anaphoric variants of operators through one macro: ANAPHORIC. The user explicitly provides a variable name, preserving sanity, in contrast to the traditional use of an evil implicit variable ("IT"). Some operators can bind additional handy variables when explicitly requested.</p>
+      <p><cite class="common-lisp library">anaphoric-variants</cite> gives access to anaphoric variants of operators through one macro: <code class="common-lisp library macro operator">anaphoric</code>. The user explicitly provides a variable name, preserving sanity, in contrast to the traditional use of an evil implicit variable (<var>it</var>). Some operators can bind additional handy variables when explicitly requested.</p>
 
       <p>Here's a trivial example:</p>
 
-      <pre>(anaphoric tail
-  (when (member 'b '(a b c d))
-    (cdr tail)))
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">anaphoric</code> <var>tail</var>
+  (<code class="common-lisp library marker">when</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mem_m.htm">member</a> 'b '(a b c d))
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cdr</a> <var>tail</var>)))
 ==>
-(LET ((TAIL (MEMBER 'B '(A B C D))))
-  (DECLARE (IGNORABLE TAIL))
-  (WHEN TAIL (CDR TAIL)))
-=> (C D)
-</pre>
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">LET</a> ((<var>TAIL</var> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mem_m.htm">MEMBER</a> 'B '(A B C D))))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">DECLARE</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">IGNORABLE</a> <var>TAIL</var>))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm">WHEN</a> <var>TAIL</var> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">CDR</a> <var>TAIL</var>)))
+=> (C D)</code></pre>
 
-<p>And here's a bit more interesting one:</p>
+      <p>And here's a bit more interesting one:</p>
 
-<pre>(anaphoric (key :type type :index index)
-  (etypecase '(a b c)
-    (list (list* index type key))
-    (t (list index "Not a list." key))))
+      <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">anaphoric</code> (<var>key</var> :type <var>type</var> :index <var>index</var>)
+  (<code class="common-lisp library marker">etypecase</code> '(a b c)
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_list.htm">list</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list*</a> <var>index</var> <var>type</var> <var>key</var>))
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_t.htm">t</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <var>index</var> <code class="string">"Not a list."</code> <var>key</var>))))
 ==>
-(LET ((KEY '(A B C)))
-  (DECLARE (IGNORABLE KEY))
-  (ETYPECASE KEY
-    (LIST
-     (LET ((TYPE 'LIST))
-       (DECLARE (IGNORABLE TYPE))
-       (LET ((INDEX 0))
-         (DECLARE (IGNORABLE INDEX))
-         (LIST* INDEX TYPE KEY))))
-    (T
-     (LET ((TYPE 'T))
-       (DECLARE (IGNORABLE TYPE))
-       (LET ((INDEX 1))
-         (DECLARE (IGNORABLE INDEX))
-         (LIST INDEX "Not a list." KEY))))))
-=> (0 LIST A B C)
-</pre>
+(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">LET</a> ((<var>KEY</var> '(A B C)))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">DECLARE</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">IGNORABLE</a> <var>KEY</var>))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_tpcase.htm">ETYPECASE</a> <var>KEY</var>
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_list.htm">LIST</a>
+     (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">LET</a> ((<var>TYPE</var> 'LIST))
+       (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">DECLARE</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">IGNORABLE</a> <var>TYPE</var>))
+       (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">LET</a> ((<var>INDEX</var> 0))
+         (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">DECLARE</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">IGNORABLE</a> <var>INDEX</var>))
+         (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">LIST*</a> <var>INDEX</var> <var>TYPE</var> <var>KEY</var>))))
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_t.htm">T</a>
+     (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">LET</a> ((<var>TYPE</var> 'T))
+       (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">DECLARE</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">IGNORABLE</a> <var>TYPE</var>))
+       (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">LET</a> ((<var>INDEX</var> 1))
+         (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">DECLARE</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">IGNORABLE</a> <var>INDEX</var>))
+         (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">LIST</a> <var>INDEX</var> "Not a list." <var>KEY</var>))))))
+=> (0 LIST A B C)</code></pre>
 
-      <p><b>To use anaphoric-variants, simply (:import-from #:anaphoric-variants #:anaphoric). Don't (:use)!</b></p>
+      <p><b>To use <cite class="common-lisp library">anaphoric-variants</cite>, simply <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a> #:anaphoric-variants #:anaphoric)</code>. Don't <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:use</a>)</code>!</b></p>
 
       <p>Currently supported anaphoric variants:<br />
-        <code>(and or cond if when unless prog1 case ccase ecase typecase ctypecase etypecase)</code></p>
+        <ul>
+          <li><code class="common-lisp library marker">and</code></li>
+          <li><code class="common-lisp library marker">or</code></li>
+          <li><code class="common-lisp library marker">cond</code></li>
+          <li><code class="common-lisp library marker">if</code></li>
+          <li><code class="common-lisp library marker">when</code></li>
+          <li><code class="common-lisp library marker">unless</code></li>
+          <li><code class="common-lisp library marker">prog1</code></li>
+          <li><code class="common-lisp library marker">case</code></li>
+          <li><code class="common-lisp library marker">ccase</code></li>
+          <li><code class="common-lisp library marker">ecase</code></li>
+          <li><code class="common-lisp library marker">typecase</code></li>
+          <li><code class="common-lisp library marker">ctypecase</code></li>
+          <li><code class="common-lisp library marker">etypecase</code></li>
+        </ul>
 
       <p>It's also possible to make your own variants.
         Check <a href="https://github.com/Hexstream/anaphoric-variants/blob/master/definitions.lisp">definitions.lisp</a> in particular for inspiration.
