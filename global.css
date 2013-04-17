@@ -6,6 +6,10 @@ dt {
     font-size: large;
 }
 
+dt + dt {
+    margin-top: 0.5em;
+}
+
 dt a {
     text-decoration: none;
 }

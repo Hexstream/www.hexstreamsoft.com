@@ -45,6 +45,10 @@ code.common-lisp .comment a {
     color: inherit;
 }
 
+code.common-lisp.library a {
+    color: inherit;
+}
+
 samp.error {
     color: red;
 }

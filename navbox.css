@@ -29,6 +29,10 @@
     text-decoration: none;
 }
 
+.navbox a i {
+    opacity: 0.6;
+}
+
 .navbox li {
     position: relative;
     margin: 0;
@@ -74,6 +78,18 @@
 }
 
 .navbox li:last-child a {
+    padding-bottom: 0.35em;
+}
+
+.navbox li:last-child a.inlining-node {
+    padding-bottom: 0.175em;
+}
+
+.navbox li:last-child ul.inlined-nodes:last-child {
+    margin-bottom: 0;
+}
+
+.navbox li:last-child ul.inlined-nodes li:last-child a {
     padding-bottom: 0.35em;
 }
 

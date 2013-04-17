@@ -49,6 +49,28 @@
             <span class="here-indicator-right"> </span>
           </h1>
           <ul>
+            <li><a href="#api-overview">API overview</a></li>
+            <li>
+              <a href="#built-in-variants" class="inlining-node">Built-in variants</a>
+              <span class="item-count">(<span>17</span>)</span>
+              <ul class="inlined-nodes">
+                <li><a href="#progn">progn <i>/</i> prog1</a></li>
+                <li><a href="#and">and <i>/</i> or</a></li>
+                <li><a href="#cond">cond</a></li>
+                <li><a href="#when">when <i>/</i> unless</a></li>
+                <li>
+                  <a href="#case">case <i>et al.</i></a>
+                  <span class="item-count">(<span>6</span>)</span>
+                </li>
+                <li>
+                  <a href="#mapcar">mapcar <i>et al.</i></a>
+                  <span class="item-count">(<span>4</span>)</span>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+          <ul>
             <li><a href="../../worknotes/#multiple-value-variants">Worknotes</a></li>
           </ul>
         </nav>
@@ -239,199 +261,150 @@
 
       </div>
 
-      <p>multiple-value-variants gives access to multiple-value variants of operators through one macro: MULTIPLE-VALUE. There are built-in variants for some standard operators; it's easy to create your own variants for other operators. The multiple-value mapping operators are especially useful.</p>
+      <p><cite class="common-lisp library">multiple-value-variants</cite> gives access to multiple-value variants of operators through one macro: <code class="common-lisp library macro operator">multiple-value</code>. There are <a href="#built-in-variants">built-in variants</a> for some standard operators; it's easy to create your own variants for other operators. The <a href="#mapcar">multiple-value mapping operators</a> are especially useful.</p>
 
-      <pre>Examples
---------
+      <section id="api-overview">
 
-(multiple-value () (progn 1 2 3))
-=&gt; 3
+        <h1>API overview</h1>
 
-(multiple-value () (progn))
-=&gt; [no values]
+        <p>First of all, in the way of packages there's the <code class="common-lisp library package">multiple-value-variants</code> package, which is also nicknamed <code class="common-lisp package nickname">multiple-value-variant</code>, <code class="common-lisp package nickname">mv-variants</code> and <code class="common-lisp package nickname">mv-variant</code>. The primary exported symbol is the <code class="common-lisp library macro operator">multiple-value</code> macro. Explicitly <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a> #:multiple-value-variants #:multiple-value)</code> for normal usage. Don't <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:use</a>)</code>!</p>
 
-(multiple-value ()
-  (and (values nil 'other 'values)
+        <p>The <code class="common-lisp library package">multiple-value-variants</code> package also exports other symbols related to creation of new multiple-value variants and querying of existing ones (documentation pending, check <a href="https://github.com/Hexstream/multiple-value-variants/blob/0556501700dbf09329f703b80814f36fe0106668/package.lisp">package.lisp</a> for a list of all exported symbols). The most important of these is <code class="common-lisp library macro operator">mv-variant:define</code>, which is normally used to define new multiple-value variants. You should normally explicitly package-qualify this symbol.</p>
+
+        <p>There are 2 recurring features throughout the API:</p>
+
+        <ul>
+          <li><var>identity</var> generally indicates the form to evaluate (and values to return) when an implicit <code class="common-lisp library variant operator"><a href="#progn">(multiple-value progn)</a></code> has no forms.</li>
+          <li><var>nth</var> indicates which value to test for conditionals.</li>
+        </ul>
+
+      </section>
+
+      <section id="built-in-variants">
+
+          <h1>Built-in multiple-value variants <a href="#built-in-variants" class="anchor">&#x2693;</a></h1>
+
+          <dl>
+
+            <dt id="progn"><a href="#progn" class="anchor">&#x2693;</a> <pre>Variant <dfn>progn</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> (<var>identity</var> '(values)))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>forms</var>)</pre></dt>
+            <dd>
+              <p>Just like <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm">progn</a></code>, except if there are no <var>forms</var> then the <var>identity</var> is evaluated instead.</p>
+              <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> () (<code class="common-lisp library marker"><a href="#progn">progn</a></code> 1 2 3))
+=&gt; 3</code></pre>
+              <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> () (<code class="common-lisp library marker"><a href="#progn">progn</a></code>))
+=&gt; [no values]</code></pre>
+            </dd>
+
+            <dt id="prog1"><a href="#prog1" class="anchor">&#x2693;</a> <pre>Variant <dfn>prog1</dfn> ()
+  (<var>result</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>body</var>)</pre></dt>
+            <dd><p>This straightforwardly expands to a <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_mult_1.htm">multiple-value-prog1</a></code>.</p></dd>
+
+            <dt id="and"><a href="#and" class="anchor">&#x2693;</a> <pre>Variant <dfn>and</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> <var>identity</var> (<var>nth</var> 0))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>forms</var>)</pre></dt>
+            <dd>
+              <p>If <var>identity</VAR> is not specified, then there must be at least one <var>form.</var></p>
+              <p>This is like normal AND, except if one of the non-last <var>forms</var>' <var>nth</var>-value is false, returns all values that were returned by that <var>form</var>, not just the primary value.</p>
+              <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> ()
+  (<code class="common-lisp library marker"><a href="#and">and</a></code> (values nil 'other 'values)
        t))
-=&gt; NIL, OTHER, VALUES
+=&gt; NIL, OTHER, VALUES</code></pre>
+            </dd>
 
-(multiple-value ()
-  (or (find-symbol "OR" '#:cl)
+            <dt id="or"><a href="#or" class="anchor">&#x2693;</a>  <pre>Variant <dfn>or</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> <var>identity</var> (<var>nth</var> 0))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>forms</var>)</pre></dt>
+            <dd>
+              <p>If <var>identity</var> is not specified, then there must be at least one <var>form</var>.</p>
+              <p>This is like normal OR, except if one of the non-last <var>forms</var>' <var>nth</var>-value is true, returns all values that were returned by that <var>form</var>, not just the primary value.</p>
+              <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> ()
+  (<code class="common-lisp library marker"><a href="#or">or</a></code> (find-symbol "OR" '#:cl)
       (find-symbol "XOR" '#:cl)))
-=&gt; OR, :EXTERNAL
+=&gt; OR, :EXTERNAL</code></pre>
+            </dd>
 
-(let ((hash (make-hash-table)))
-  (multiple-value () (cond ((gethash 'key hash))
+            <dt id="cond"><a href="#cond" class="anchor">&#x2693;</a>  <pre>Variant <dfn>cond</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> (<var>nth</var> 0))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>clauses</var>)</pre></dt>
+            <dd>
+              <p>This is just like normal COND, except:</p>
+              <ul>
+                <li><p>If a <var>clause</var> that has no <var>forms</var> succeeds, then all the values that were returned by the <var>test-form</var> are returned, not just the primary value;</p></li>
+                <li><p>If no <var>clause</var> succeeds, then no values are returned (instead of NIL).</p></li>
+              </ul>
+              <pre class="example"><code class="common-lisp">(let ((<var>hash</var> (make-hash-table)))
+  (<code class="common-lisp library macro operator">multiple-value</code> () (<code class="common-lisp library marker"><a href="#cond">cond</a></code> ((gethash 'key <var>hash</var>))
                            ((values)))))
-=&gt; [no values]
-
-(let ((hash (make-hash-table)))
-  (setf (gethash 'key hash) 'value)
-  (multiple-value () (cond ((gethash 'key hash))
+=&gt; [no values]</code></pre>
+              <pre class="example"><code class="common-lisp">(let ((<var>hash</var> (make-hash-table)))
+  (setf (gethash 'key <var>hash</var>) 'value)
+  (<code class="common-lisp library macro operator">multiple-value</code> () (<code class="common-lisp library marker"><a href="#cond">cond</a></code> ((gethash 'key <var>hash</var>))
                            ((values)))))
-=&gt; VALUE, T
+=&gt; VALUE, T</code></pre>
+            </dd>
 
-(multiple-value ()
-  (when nil
+            <dt id="when"><a href="#when" class="anchor">&#x2693;</a>  <pre>Variant <dfn>when</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> (<var>else</var> '(values)) (<var>identity</var> '(values)))
+  (<var>test</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>forms</var>)</pre></dt>
+            <dd>
+              <p>If <var>test</var> evaluates to true, evaluate <var>forms</var> as an implicit <code class="common-lisp library variant operator"><a href="#progn">(multiple-value progn)</a></code> with <var>identity</var> as the identity.</p>
+              <p>Else, evaluate <var>else</var>.</p>
+              <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> ()
+  (<code class="common-lisp library marker"><a href="#when">when</a></code> nil
     (print "side-effect")))
-=&gt; [no values]
+=&gt; [no values]</code></pre>
+            </dd>
 
+            <dt id="unless"><a href="#unless" class="anchor">&#x2693;</a> <pre>Variant <dfn>unless</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> (<var>else</var> '(values)) (<var>identity</var> '(values)))
+  (<var>test</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>forms</var>)</pre></dt>
+            <dd>
+              <p>If <var>test</var> evaluates to false, evaluate <var>forms</var> as an implicit <code class="common-lisp library variant operator"><a href="#progn">(multiple-value progn)</a></code> with <var>identity</var> as the identity.</p>
+              <p>Else, evaluate <var>else</var>.</p>
+            </dd>
 
-(multiple-value (2)
-  (mapcar #'truncate '(3 5/4 5.5)))
-=&gt; (3 1 5), (0 1/4 0.5)
+            <dt id="case"><a href="#case" class="anchor">&#x2693;</a> <pre>Variant <dfn>case</dfn> () (<var>keyform</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>cases</var>)</pre></dt>
+            <dt id="ccase"><a href="#ccase" class="anchor">&#x2693;</a> <pre>Variant <dfn>ccase</dfn> () (<var>keyplace</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>cases</var>)</pre></dt>
+            <dt id="ecase"><a href="#ecase" class="anchor">&#x2693;</a> <pre>Variant <dfn>ecase</dfn> () (<var>keyform</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>cases</var>)</pre></dt>
+            <dt id="typecase"><a href="#typecase" class="anchor">&#x2693;</a> <pre>Variant <dfn>typecase</dfn> () (<var>keyform</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>cases</var>)</pre></dt>
+            <dt id="ctypecase"><a href="#ctypecase" class="anchor">&#x2693;</a> <pre>Variant <dfn>ctypecase</dfn> () (<var>keyplace</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>cases</var>)</pre></dt>
+            <dt id="etypecase"><a href="#etypecase" class="anchor">&#x2693;</a> <pre>Variant <dfn>etypecase</dfn> () (<var>keyform</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>cases</var>)</pre></dt>
+            <dd><p>These are like their normal counterparts, except the <var>forms</var> in each case is an implicit <code class="common-lisp library variant operator"><a href="#progn">(multiple-value progn)</a></code>, and if no <var>case</var> matches in CASE or TYPECASE, then no values are returned (instead of NIL).</p></dd>
 
-(multiple-value 2
-  (mapcan (lambda (object)
-            (if (numberp object)
-                (values (list object) nil)
-                (values nil (list object))))
+            <dt id="mapcar"><a href="#mapcar" class="anchor">&#x2693;</a> <pre>Variant <dfn>mapcar</dfn> (<var>multiple-values-count</var>)
+  (<var>function</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a>+ <var>lists</var>)</pre></dt>
+            <dt id="mapcan"><a href="#mapcan" class="anchor">&#x2693;</a> <pre>Variant <dfn>mapcan</dfn> (<var>multiple-values-count</var>)
+  (<var>function</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a>+ <var>lists</var>)</pre></dt>
+            <dt id="maplist"><a href="#maplist" class="anchor">&#x2693;</a> <pre>Variant <dfn>maplist</dfn> (<var>multiple-values-count</var>)
+  (<var>function</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a>+ <var>lists</var>)</pre></dt>
+            <dt id="mapcon"><a href="#mapcon" class="anchor">&#x2693;</a> <pre>Variant <dfn>mapcon</dfn> (<var>multiple-values-count</var>)
+  (<var>function</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a>+ <var>lists</var>)</pre></dt>
+            <dd>
+              <p>These are just like the normal variants, except they can accumulate multiple results at the same time. This is especially useful to "triage" values (ex: split the elements of a list into 2 lists according to some criteria), and to accumulate multiple "layers" of values in one pass for macroexpansions, as an alternative to repeated mapping (sometimes with some readability problems due to reduced "correlation").</p>
+              <p><var>multiple-values-count</var> is not evaluated, and must be a non-negative integer indicating the number of results (values) to accumulate and return. <var>function</var> would normally return that many values. If <var>function</var> returns less than <var>multiple-values-count</var> values, then the remaining values are NIL. If <var>function</var> returns more than <var>multiple-values-count</var> values, then the excess values are ignored.</p>
+              <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> (2)
+  (<code class="common-lisp library marker"><a href="#mapcar">mapcar</a></code> #'truncate '(3 5/4 5.5)))
+=&gt; (3 1 5), (0 1/4 0.5)</code></pre>
+
+              <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> 2
+  (<code class="common-lisp library marker"><a href="#mapcan">mapcan</a></code> (lambda (<var>object</var>)
+            (if (numberp <var>object</var>)
+                (values (list <var>object</var>) nil)
+                (values nil (list <var>object</var>))))
           '(0 a 2 3/4 c)))
-=&gt; (0 2 3/4), (A C)
+=&gt; (0 2 3/4), (A C)</code></pre>
 
-(multiple-value 3
-  (maplist (lambda (tail)
-             (values tail
-                     (reverse tail)
-                     (list (first tail) (second tail))))
+              <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> 3
+  (<code class="common-lisp library marker"><a href="#maplist">maplist</a></code> (lambda (<var>tail</var>)
+             (values <var>tail</var>
+                     (reverse <var>tail</var>)
+                     (list (first <var>tail</var>) (second <var>tail</var>))))
            '(a b c d e)))
 =&gt;
 ((A B C D E) (B C D E) (C D E) (D E) (E))
 ((E D C B A) (E D C B) (E D C) (E D) (E))
-((A B) (B C) (C D) (D E) (E NIL))
+((A B) (B C) (C D) (D E) (E NIL))</code></pre>
+            </dd>
 
+          </dl>
 
-API
----
-
-First of all, in the way of packages there's the
-MULTIPLE-VALUE-VARIANTS package, which is also nicknamed
-MULTIPLE-VALUE-VARIANT, MV-VARIANTS and MV-VARIANT. The primary
-exported symbol is the MULTIPLE-VALUE macro. Explicitly (:import-from
-#:multiple-value-variants #:multiple-value) for normal usage. Don't (:use)!
-
-The MULTIPLE-VALUE-VARIANTS package also exports other symbols related
-to creation of new multiple-value variants and querying of existing
-ones (documentation pending, check package.lisp for a list of all
-exported symbols). The most important of these is DEFINE, which is
-normally used to define new multiple-value variants. You should
-normally explicitly package-qualify this symbol.
-
-
-There are 2 recurring features throughout the API:
-
-IDENTITY generally indicates the form to evaluate (and values to
-return) when an implicit (multiple-value progn) has no forms.
-
-NTH indicates which value to test for conditionals.
-
-
-The rest of the API documentation introduces the built-in
-multiple-value variants.
-
-
-Variant PROGN
-    (&amp;key (identity '(values)))
-  (&amp;body forms)
-
-Just like PROGN, except if there are no FORMS then the IDENTITY is
-evaluated instead.
-
-
-Variant PROG1
-    ()
-  (result &amp;body body)
-
-This straightforwardly expands to a MULTIPLE-VALUE-PROG1.
-
-
-Variant AND
-    (&amp;key identity (nth 0))
-  (&amp;rest forms)
-
-If IDENTITY is not specified, then there must be at least one FORM.
-
-This is like normal AND, except if one of the non-last FORMS'
-NTH-value is false, returns all values that were returned by that
-FORM, not just the primary value.
-
-
-Variant OR
-    (&amp;key identity (nth 0))
-  (&amp;rest forms)
-
-If IDENTITY is not specified, then there must be at least one FORM.
-
-This is like normal OR, except if one of the non-last FORMS'
-NTH-value is true, returns all values that were returned by that
-FORM, not just the primary value.
-
-
-Variant COND
-    (&amp;key (nth 0))
-  (&amp;rest clauses)
-
-This is just like normal COND, except:
-
-- If a CLAUSE that has no FORMS succeeds, then all the values that
-  were returned by the TEST-FORM are returned, not just the primary
-  value;
-
-- If no CLAUSE succeeds, then no values are returned (instead of NIL).
-
-
-Variant WHEN
-    (&amp;key (else '(values)) (identity '(values)))
-  (test &amp;body forms)
-
-If TEST evaluates to true, evaluate FORMS as an implicit
-(multiple-value progn) with IDENTITY as the identity.
-
-Else, evaluate ELSE.
-
-
-Variant UNLESS
-    (&amp;key (else '(values)) (identity '(values)))
-  (test &amp;body forms)
-
-If TEST evaluates to false, evaluate FORMS as an implicit
-(multiple-value progn) with IDENTITY as the identity.
-
-Else, evaluate ELSE.
-
-
-Variant CASE () (keyform &amp;body cases)
-Variant CCASE () (keyplace &amp;body cases)
-Variant ECASE () (keyform &amp;body cases)
-
-Variant TYPECASE () (keyform &amp;body cases)
-Variant CTYPECASE () (keyplace &amp;body cases)
-Variant ETYPECASE () (keyform &amp;body cases)
-
-These are like their normal counterparts, except the FORMS in each
-case is an implicit (multiple-value progn), and if no case matches in
-CASE or TYPECASE, then no values are returned (instead of NIL).
-
-
-Variant MAPCAR (multiple-values-count) (function &amp;rest+ lists)
-Variant MAPCAN (multiple-values-count) (function &amp;rest+ lists)
-Variant MAPLIST (multiple-values-count) (function &amp;rest+ lists)
-Variant MAPCON (multiple-values-count) (function &amp;rest+ lists)
-
-These are just like the normal variants, except they can accumulate
-multiple results at the same time. This is especially useful to
-"triage" values (ex: split the elements of a list into 2 lists
-according to some criteria), and to accumulate multiple "layers" of
-values in one pass for macroexpansions, as an alternative to repeated
-mapping (sometimes with some readability problems due to reduced
-"correlation").
-
-MULTIPLE-VALUES-COUNT is not evaluated, and must be a non-negative
-integer indicating the number of results (values) to accumulate and
-return. FUNCTION would normally return that many values. If FUNCTION
-returns less than MULTIPLE-VALUES-COUNT values, then the remaining
-values are NIL. If FUNCTION returns more than MULTIPLE-VALUES-COUNT
-values, then the excess values are ignored.</pre>
+        </section>
 
     </div>
 
