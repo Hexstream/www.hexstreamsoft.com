@@ -286,7 +286,7 @@
 
           <dl>
 
-            <dt id="progn"><a href="#progn" class="anchor">&#x2693;</a> <pre>Variant <dfn>progn</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> (<var>identity</var> '(values)))
+            <dt id="progn"><a href="#progn" class="anchor">&#x2693;</a> <pre>Variant <dfn>progn</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> (<var>identity</var> '(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a>)))
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>forms</var>)</pre></dt>
             <dd>
               <p>Just like <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm">progn</a></code>, except if there are no <var>forms</var> then the <var>identity</var> is evaluated instead.</p>
@@ -304,55 +304,55 @@
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>forms</var>)</pre></dt>
             <dd>
               <p>If <var>identity</VAR> is not specified, then there must be at least one <var>form.</var></p>
-              <p>This is like normal AND, except if one of the non-last <var>forms</var>' <var>nth</var>-value is false, returns all values that were returned by that <var>form</var>, not just the primary value.</p>
+              <p>This is like normal <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_and.htm">and</a></code>, except if one of the non-last <var>forms</var>' <var>nth</var>-value is <a class="common-lisp standard glossary" href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_f.htm#false">false</a>, returns all values that were returned by that <var>form</var>, not just the <a class="common-lisp standard glossary" href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_p.htm#primary_value">primary value</a>.</p>
               <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> ()
-  (<code class="common-lisp library marker"><a href="#and">and</a></code> (values nil 'other 'values)
+  (<code class="common-lisp library marker"><a href="#and">and</a></code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> <code class="common-lisp standard constant"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_nil.htm">nil</a></code> 'other 'values)
        t))
-=&gt; NIL, OTHER, VALUES</code></pre>
+=&gt; <code class="common-lisp standard constant"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_nil.htm">NIL</a></code>, OTHER, VALUES</code></pre>
             </dd>
 
             <dt id="or"><a href="#or" class="anchor">&#x2693;</a>  <pre>Variant <dfn>or</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> <var>identity</var> (<var>nth</var> 0))
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>forms</var>)</pre></dt>
             <dd>
               <p>If <var>identity</var> is not specified, then there must be at least one <var>form</var>.</p>
-              <p>This is like normal OR, except if one of the non-last <var>forms</var>' <var>nth</var>-value is true, returns all values that were returned by that <var>form</var>, not just the primary value.</p>
+              <p>This is like normal <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_or.htm">or</a></code>, except if one of the non-last <var>forms</var>' <var>nth</var>-value is true, returns all values that were returned by that <var>form</var>, not just the <a class="common-lisp standard glossary" href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_p.htm#primary_value">primary value</a>.</p>
               <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> ()
-  (<code class="common-lisp library marker"><a href="#or">or</a></code> (find-symbol "OR" '#:cl)
-      (find-symbol "XOR" '#:cl)))
+  (<code class="common-lisp library marker"><a href="#or">or</a></code> (<code class="common-lisp standard function operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_s.htm">find-symbol</a></code> <code class="string">"OR"</code> '#:cl)
+      (<code class="common-lisp standard function operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_s.htm">find-symbol</a></code> <code class="string">"XOR"</code> '#:cl)))
 =&gt; OR, :EXTERNAL</code></pre>
             </dd>
 
             <dt id="cond"><a href="#cond" class="anchor">&#x2693;</a>  <pre>Variant <dfn>cond</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> (<var>nth</var> 0))
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>clauses</var>)</pre></dt>
             <dd>
-              <p>This is just like normal COND, except:</p>
+              <p>This is just like normal <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_cond.htm">cond</a></code>, except:</p>
               <ul>
-                <li><p>If a <var>clause</var> that has no <var>forms</var> succeeds, then all the values that were returned by the <var>test-form</var> are returned, not just the primary value;</p></li>
-                <li><p>If no <var>clause</var> succeeds, then no values are returned (instead of NIL).</p></li>
+                <li><p>If a <var>clause</var> that has no <var>forms</var> succeeds, then all the values that were returned by the <var>test-form</var> are returned, not just the <a class="common-lisp standard glossary" href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_p.htm#primary_value">primary value</a>;</p></li>
+                <li><p>If no <var>clause</var> succeeds, then no values are returned (instead of <code class="common-lisp standard constant"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_nil.htm">nil</a></code>).</p></li>
               </ul>
-              <pre class="example"><code class="common-lisp">(let ((<var>hash</var> (make-hash-table)))
-  (<code class="common-lisp library macro operator">multiple-value</code> () (<code class="common-lisp library marker"><a href="#cond">cond</a></code> ((gethash 'key <var>hash</var>))
-                           ((values)))))
+              <pre class="example"><code class="common-lisp">(let ((<var>hash</var> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_has.htm">make-hash-table</a>)))
+  (<code class="common-lisp library macro operator">multiple-value</code> () (<code class="common-lisp library marker"><a href="#cond">cond</a></code> ((<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_gethas.htm">gethash</a> 'key <var>hash</var>))
+                           ((<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a>)))))
 =&gt; [no values]</code></pre>
-              <pre class="example"><code class="common-lisp">(let ((<var>hash</var> (make-hash-table)))
-  (setf (gethash 'key <var>hash</var>) 'value)
-  (<code class="common-lisp library macro operator">multiple-value</code> () (<code class="common-lisp library marker"><a href="#cond">cond</a></code> ((gethash 'key <var>hash</var>))
-                           ((values)))))
+              <pre class="example"><code class="common-lisp">(let ((<var>hash</var> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_has.htm">make-hash-table</a>)))
+  (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_setf_.htm">setf</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_gethas.htm">gethash</a> 'key <var>hash</var>) 'value)
+  (<code class="common-lisp library macro operator">multiple-value</code> () (<code class="common-lisp library marker"><a href="#cond">cond</a></code> ((<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_gethas.htm">gethash</a> 'key <var>hash</var>))
+                           ((<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a>)))))
 =&gt; VALUE, T</code></pre>
             </dd>
 
-            <dt id="when"><a href="#when" class="anchor">&#x2693;</a>  <pre>Variant <dfn>when</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> (<var>else</var> '(values)) (<var>identity</var> '(values)))
+            <dt id="when"><a href="#when" class="anchor">&#x2693;</a>  <pre>Variant <dfn>when</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> (<var>else</var> '(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a>)) (<var>identity</var> '(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a>)))
   (<var>test</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>forms</var>)</pre></dt>
             <dd>
               <p>If <var>test</var> evaluates to true, evaluate <var>forms</var> as an implicit <code class="common-lisp library variant operator"><a href="#progn">(multiple-value progn)</a></code> with <var>identity</var> as the identity.</p>
               <p>Else, evaluate <var>else</var>.</p>
               <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> ()
-  (<code class="common-lisp library marker"><a href="#when">when</a></code> nil
-    (print "side-effect")))
+  (<code class="common-lisp library marker"><a href="#when">when</a></code> <code class="common-lisp standard constant"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_nil.htm">nil</a></code>
+    (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm#print">print</a> <code class="string">"side-effect"</code>)))
 =&gt; [no values]</code></pre>
             </dd>
 
-            <dt id="unless"><a href="#unless" class="anchor">&#x2693;</a> <pre>Variant <dfn>unless</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> (<var>else</var> '(values)) (<var>identity</var> '(values)))
+            <dt id="unless"><a href="#unless" class="anchor">&#x2693;</a> <pre>Variant <dfn>unless</dfn> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMkey">&amp;key</a> (<var>else</var> '(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a>)) (<var>identity</var> '(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a>)))
   (<var>test</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>forms</var>)</pre></dt>
             <dd>
               <p>If <var>test</var> evaluates to false, evaluate <var>forms</var> as an implicit <code class="common-lisp library variant operator"><a href="#progn">(multiple-value progn)</a></code> with <var>identity</var> as the identity.</p>
@@ -365,7 +365,7 @@
             <dt id="typecase"><a href="#typecase" class="anchor">&#x2693;</a> <pre>Variant <dfn>typecase</dfn> () (<var>keyform</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>cases</var>)</pre></dt>
             <dt id="ctypecase"><a href="#ctypecase" class="anchor">&#x2693;</a> <pre>Variant <dfn>ctypecase</dfn> () (<var>keyplace</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>cases</var>)</pre></dt>
             <dt id="etypecase"><a href="#etypecase" class="anchor">&#x2693;</a> <pre>Variant <dfn>etypecase</dfn> () (<var>keyform</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm#AMbody">&amp;body</a> <var>cases</var>)</pre></dt>
-            <dd><p>These are like their normal counterparts, except the <var>forms</var> in each case is an implicit <code class="common-lisp library variant operator"><a href="#progn">(multiple-value progn)</a></code>, and if no <var>case</var> matches in CASE or TYPECASE, then no values are returned (instead of NIL).</p></dd>
+            <dd><p>These are like their normal counterparts, except the <var>forms</var> in each case is an implicit <code class="common-lisp library variant operator"><a href="#progn">(multiple-value progn)</a></code>, and if no <var>case</var> matches in <code class="common-lisp library operator">case</code> or <code class="common-lisp library operator">typecase</code>, then no values are returned (instead of <code class="common-lisp standard constant"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_nil.htm">nil</a></code>).</p></dd>
 
             <dt id="mapcar"><a href="#mapcar" class="anchor">&#x2693;</a> <pre>Variant <dfn>mapcar</dfn> (<var>multiple-values-count</var>)
   (<var>function</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a>+ <var>lists</var>)</pre></dt>
@@ -376,25 +376,25 @@
             <dt id="mapcon"><a href="#mapcon" class="anchor">&#x2693;</a> <pre>Variant <dfn>mapcon</dfn> (<var>multiple-values-count</var>)
   (<var>function</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a>+ <var>lists</var>)</pre></dt>
             <dd>
-              <p>These are just like the normal variants, except they can accumulate multiple results at the same time. This is especially useful to "triage" values (ex: split the elements of a list into 2 lists according to some criteria), and to accumulate multiple "layers" of values in one pass for macroexpansions, as an alternative to repeated mapping (sometimes with some readability problems due to reduced "correlation").</p>
-              <p><var>multiple-values-count</var> is not evaluated, and must be a non-negative integer indicating the number of results (values) to accumulate and return. <var>function</var> would normally return that many values. If <var>function</var> returns less than <var>multiple-values-count</var> values, then the remaining values are NIL. If <var>function</var> returns more than <var>multiple-values-count</var> values, then the excess values are ignored.</p>
+              <p>These are just like the <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm">normal variants</a>, except they can accumulate multiple results at the same time. This is especially useful to "triage" values (ex: split the elements of a list into 2 lists according to some criteria), and to accumulate multiple "layers" of values in one pass for macroexpansions, as an alternative to repeated mapping (sometimes with some readability problems due to reduced "correlation").</p>
+              <p><var>multiple-values-count</var> is not evaluated, and must be a non-negative integer indicating the number of results (values) to accumulate and return. <var>function</var> would normally return that many values. If <var>function</var> returns less than <var>multiple-values-count</var> values, then the remaining values are <code class="common-lisp standard constant"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_nil.htm">nil</a></code>. If <var>function</var> returns more than <var>multiple-values-count</var> values, then the excess values are ignored.</p>
               <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> (2)
-  (<code class="common-lisp library marker"><a href="#mapcar">mapcar</a></code> #'truncate '(3 5/4 5.5)))
+  (<code class="common-lisp library marker"><a href="#mapcar">mapcar</a></code> #'<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_floorc.htm#truncate">truncate</a> '(3 5/4 5.5)))
 =&gt; (3 1 5), (0 1/4 0.5)</code></pre>
 
               <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> 2
-  (<code class="common-lisp library marker"><a href="#mapcan">mapcan</a></code> (lambda (<var>object</var>)
-            (if (numberp <var>object</var>)
-                (values (list <var>object</var>) nil)
-                (values nil (list <var>object</var>))))
+  (<code class="common-lisp library marker"><a href="#mapcan">mapcan</a></code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>object</var>)
+            (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm">if</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_nump.htm">numberp</a> <var>object</var>)
+                (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <var>object</var>) <code class="common-lisp standard constant"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_nil.htm">nil</a></code>)
+                (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> <code class="common-lisp standard constant"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_nil.htm">nil</a></code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <var>object</var>))))
           '(0 a 2 3/4 c)))
 =&gt; (0 2 3/4), (A C)</code></pre>
 
               <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">multiple-value</code> 3
-  (<code class="common-lisp library marker"><a href="#maplist">maplist</a></code> (lambda (<var>tail</var>)
-             (values <var>tail</var>
-                     (reverse <var>tail</var>)
-                     (list (first <var>tail</var>) (second <var>tail</var>))))
+  (<code class="common-lisp library marker"><a href="#maplist">maplist</a></code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>tail</var>)
+             (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> <var>tail</var>
+                     (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_revers.htm">reverse</a> <var>tail</var>)
+                     (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm">first</a> <var>tail</var>) (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm">second</a> <var>tail</var>))))
            '(a b c d e)))
 =&gt;
 ((A B C D E) (B C D E) (C D E) (D E) (E))

@@ -26,7 +26,7 @@ p code {
     background: #ECECEC;
 }
 
-code.operator, code.variable, code.marker, code.glossary, code.lambda-list-keyword, code.type-specifier, code.package {
+code.operator, code.variable, code.constant, code.marker, code.glossary, code.lambda-list-keyword, code.type-specifier, code.package {
     background: transparent;
     padding: 0;
     border: none;
