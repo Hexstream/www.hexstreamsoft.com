@@ -61,22 +61,27 @@ h1 a {
     text-decoration: none;
 }
 
-#content section {
+#content > section {
     margin-left: 2em;
     margin-right: 2em;
 }
 
-#content section > h1, #content > nav > h1, #content section > header, #content > nav > header {
+#content > section > h1, #content > nav > h1, #content > section > header, #content > nav > header {
     position: relative;
-    text-align: center;
     padding: 0.5em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
     margin: 2em -1em 1em -1em;
-    margin-top: 2em;
-    margin-bottom: 1em;
-    background-color: #ECECEC;
+    text-align: center;
     border: solid thin gray;
+    background-color: #ECECEC;
+}
+
+#content > section section > h1, #content > section section > header {
+    position: relative;
+    padding: 0.4em;
+    margin: 2em 0 1em 0;
+    text-align: center;
+    border: solid thin gray;
+    background-color: #ECECEC;
 }
 
 ul {
