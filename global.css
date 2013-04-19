@@ -61,12 +61,18 @@ h1 a {
     text-decoration: none;
 }
 
-#content > section > h1, #content > nav > h1, #content > section > header, #content > nav > header {
+#content section {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#content section > h1, #content > nav > h1, #content section > header, #content > nav > header {
     position: relative;
     text-align: center;
     padding: 0.5em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    margin: 2em -1em 1em -1em;
     margin-top: 2em;
     margin-bottom: 1em;
     background-color: #ECECEC;

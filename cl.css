@@ -37,6 +37,10 @@ code.common-lisp.library.operator, code.common-lisp.library.marker {
     color: green;
 }
 
+code.common-lisp.marker {
+    border-bottom: thin dashed;
+}
+
 code.common-lisp .comment {
     color: salmon;
 }
