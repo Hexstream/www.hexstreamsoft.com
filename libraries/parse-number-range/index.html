@@ -127,7 +127,7 @@
 
       <header id="page-header">
         <h1>parse-number-range</h1>
-        <p class="description">Simple thematic utilities in Quicklisp.</p>
+        <p class="description">A simple thematic utilities library in Quicklisp.</p>
       </header>
 
       <div id="project-info">
@@ -237,166 +237,214 @@
 
       </div>
 
-      <p>parse-number-range parses LOOP's convenient "for-as-arithmetic" syntax into 5 simple values: from, to, limit-kind (:inclusive, :exclusive or nil if unbounded), by (step) and direction (+ or -)). Further related utilities are provided. Intended for easy implementation of analogous functionality in other constructs.</p>
+      <p><cite class="common-lisp library">parse-number-range</cite> parses <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm">loop</a></code>'s convenient <a href="http://www.lispworks.com/documentation/HyperSpec/Body/06_abaa.htm">for-as-arithmetic</a> syntax into 5 simple values: <var>from</var>, <var>to</var>, <var>limit-kind</var> (<code class="common-lisp library marker">:inclusive</code>, <code class="common-lisp library marker">:exclusive</code> or <code class="common-lisp library marker">nil</code> if unbounded), <var>by</var> (step) and <var>direction</var> (<code class="common-lisp library marker">+</code> or <code class="common-lisp library marker">-</code>)). Further related utilities are provided. Intended for easy implementation of analogous functionality in other constructs.</p>
 
-    <pre>For a description of LOOP's "for-as-arithmetic", see:
-http://www.lispworks.com/documentation/HyperSpec/Body/06_abaa.htm
+      <p>Here's the package name, along with 2 nicknames:</p>
 
-Here's the package name, along with 2 nicknames:
-- PARSE-NUMBER-RANGE
-- PARSE-NUMRANGE
-- PNUMRANGE
+      <ul>
+        <li><code class="common-lisp library package">parse-number-range</code></li>
+        <li><code class="common-lisp library package">parse-numrange</code></li>
+        <li><code class="common-lisp library package">pnumrange</code></li>
+      </ul>
 
-Explicit qualification of the exported symbols is recommended, and one
-might (:import-from) select symbols, but (:use) is strongly discouraged.
+      <p>Explicit qualification of the exported symbols is recommended, and one might <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a>)</code> select symbols, but <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:use</a>)</code> is strongly discouraged.</p>
 
-Here are the exported symbols:
-parse unparse canonicalize ; "parse" API
-kind flags flags-to-keywords ; "info" API
+      <section>
 
-Parse API
----------
+        <h1>API</h1>
 
-Here are the 5 "fundamental" values returned from PARSE and accepted by UNPARSE:
+        <section>
 
-- FROM: The form introduced by :from, :upfrom or :downfrom. Defaults to 0;
-- TO: The form introduced by :to, :upto, :downto, :below or :above. NIL means "unbounded";
-- LIMIT-KIND:  :inclusive or :exclusive if there's a limit, or NIL if unbounded;
-- BY: The form introduced by :by;
-- DIRECTION: + or -.
+          <h1>Generalities</h1>
 
-Some functions accept a KEYWORD-POLICY &amp;key argument, which must be
-either :strict or :loose. (from 1 to 10) would be valid with :loose
-but not with :strict, which demands (:from 1 :to 10).
+          Here are the 5 "fundamental" values returned from <code class="common-lisp library function operator">parse</code> and accepted by <code class="common-lisp library function operator">unparse</code>:
 
-Use of :loose is strongly discouraged, as it's an unnecessary and evil
-feature that typically results in arbitrary interning of symbols in
-arbitrary packages.
+          <dl>
+
+            <dt><dfn><var>from</var></dfn></dt>
+            <dd><p>The <a class="common-lisp glossary" href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_f.htm#form">form</a> introduced by <code class="common-lisp library marker">:from</code>, <code class="common-lisp library marker">:upfrom</code> or <code class="common-lisp library marker">:downfrom</code>. Defaults to 0;</p></dd>
+
+            <dt><dfn><var>to</var></dfn></dt>
+            <dd><p>The <a class="common-lisp glossary" href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_f.htm#form">form</a> introduced by <code class="common-lisp library marker">:to</code>, <code class="common-lisp library marker">:upto</code>, <code class="common-lisp library marker">:downto</code>, <code class="common-lisp library marker">:below</code> or <code class="common-lisp library marker">:above</code>. <code class="common-lisp library marker">nil</code> means "unbounded";</p></dd>
+
+            <dt><dfn><var>limit-kind</var></dfn></dt>
+            <dd><p><code class="common-lisp library marker">:inclusive</code> or <code class="common-lisp library marker">:exclusive</code> if there's a limit, or <code class="common-lisp library marker">nil</code> if unbounded;</p></dd>
+
+            <dt><dfn><var>by</var></dfn></dt>
+            <dd><p>The <a class="common-lisp glossary" href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_f.htm#form">form</a> introduced by <code class="common-lisp library marker">:by</code>;</p></dd>
+
+            <dt><dfn><var>direction</var></dfn></dt>
+            <dd><p><code class="common-lisp library marker">+</code> or <code class="common-lisp library marker">-</code>.</p></dd>
+
+          </dl>
+
+          Some functions accept a <var>keyword-policy</var> &amp;key argument, which must be either <code class="common-lisp library marker">:strict</code> or <code class="common-lisp library marker">:loose</code>. <code class="common-lisp">(from 1 to 10)</code> would be valid with <code class="common-lisp library marker">:loose</code> but not with <code class="common-lisp library marker">:strict</code>, which demands <code class="common-lisp">(:from 1 :to 10)</code>.
+
+          <strong>Use of <code class="common-lisp library marker">:loose</code> is strongly discouraged</strong>, as it's an unnecessary and evil feature that typically results in arbitrary interning of symbols in arbitrary packages.
+
+        </section>
+
+        <section>
+
+          <h1>Parse API</h1>
+
+          <dl>
+            <dt><pre>Function <dfn><code class="common-lisp library function operator">parse</code></dfn> <var>range</var> &amp;key (<var>keyword-policy</var> <code class="common-lisp library marker">:strict</code>)
+                          (<var>extrasp</var> nil)
+                          (<var>clause-kinds-p</var> <var>extrasp</var>)
+                          (<var>clause-keywords-p</var> <var>extrasp</var>)
+                          (<var>clauses-alist-p</var> <var>extrasp</var>)
+  =&gt; <var>from</var> <var>to</var> <var>limit-kind</var> <var>by</var> <var>direction</var>
+       &amp;key <var>clause-kinds</var> <var>clause-keywords</var> <var>clauses-alist</var></pre></dt>
+            <dd><p>By default, <code class="common-lisp library function operator">parse</code> returns only the 5 "fundamental" values (see above):</p>
+
+              <dl>
+
+                <dt><dfn><var>from</var></dfn></dt>
+                <dd><p>Defaults to 0;</p></dd>
+
+                <dt><dfn><var>to</var></dfn></dt>
+                <dd><p>Defaults to <code class="common-lisp library marker">nil</code>;</p></dd>
+
+                <dt><dfn><var>limit-kind</var></dfn></dt>
+                <dd><p>Defaults to <code class="common-lisp library marker">nil</code> (unbounded);</p></dd>
+
+                <dt><dfn><var>by</var></dfn></dt>
+                <dd><p>Defaults to 1;</p></dd>
+
+                <dt><dfn><var>direction</var></dfn></dt>
+                <dd><p>Defaults to <code class="common-lisp library marker">+</code>.</p></dd>
+
+              </dl>
+
+              <p><code class="common-lisp library function operator">parse</code> can compute and return 3 additional pieces of information, on request:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>return value</th>
+                    <th>request-keyword</th>
+                    <th>description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th><var>clause-kinds</var></th>
+                    <td>:clause-kinds-p</td>
+                    <td><p>The clause kinds that were present,<br />in the order they appeared in.</p></td>
+                  </tr>
+                  <tr>
+                    <th><var>clause-keywords</var></th>
+                    <td>:clause-keywords-p</td>
+                    <td><p>The clause keywords that were present,<br />in the order they appeared in.</p></td>
+                  </tr>
+                  <tr>
+                    <th><var>clauses-alist</var></th>
+                    <td>:clauses-alist-p</td>
+                    <td><p>Alist: (<var>clause-kind</var> . <var>clause-keyword</var>)</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </dd>
+
+            <dt><pre>Function <dfn><code class="common-lisp library function operator">unparse</code></dfn> <var>from</var> <var>to</var> <var>limit-kind</var> <var>by</var> <var>direction</var> &amp;key <var>clause-kinds</var>
+  =&gt; <var>range</var></pre></dt>
+
+            <dt>
+              <p>As you might have guessed, this does the reverse of <code class="common-lisp library function operator">parse</code>...</p>
+
+              <p><code class="common-lisp library function operator">unparse</code> uses <code class="common-lisp library function operator">flags-to-keywords</code> internally and thus inherits its biases.</p>
+
+              <p><var>clause-kinds</var> should be a list of up to 3 elements being a permutation of the clause-kinds <code class="common-lisp library marker">:from</code>, <code class="common-lisp library marker">:to</code> and <code class="common-lisp library marker">:by</code>. This determines the order that the clauses will appear in, which might matter in the presence of side-effects. <code class="common-lisp library marker">nil</code> designates the default order, <code class="common-lisp">(<code class="common-lisp library marker">:from</code> <code class="common-lisp library marker">:to</code> <code class="common-lisp library marker">:by</code>)</code>.</p>
+
+              <p>If the list has 0 or 1 elements, then the default order is used, <code class="common-lisp">(<code class="common-lisp library marker">:from</code> <code class="common-lisp library marker">:to</code> <code class="common-lisp library marker">:by</code>)</code>.</p>
+
+              <p>If the list has 2 elements, then those clauses will appear in the order specified but no order is specified between the other elements and these ones and between the other elements among themselves. <small>(Yeah, a less simplistic implementation would allow simpler and more useful semantics.)</small></p>
+
+              <p>If the list has 3 elements, then the order is completely specified, explicitly.</p>
+            </dt>
+
+            <dt><pre>Function <dfn><code class="common-lisp library function operator">canonicalize</code></dfn> <var>range</var> &amp;key (<var>clause-kinds</var> <code class="common-lisp library marker">:preserve</code>)
+                                 (<var>keyword-policy</var> <code class="common-lisp library marker">:strict</code>)</pre></dt>
+
+            <dd><p>This simply feeds the results of <code class="common-lisp library function operator">parse</code> into <code class="common-lisp library function operator">unparse</code>. If <var>clause-kinds</var> is <code class="common-lisp library marker">:preserve</code>, then <code class="common-lisp">:clause-kinds-p t</code> will be specified for <code class="common-lisp library function operator">parse</code> and the resulting <var>clause-kinds</var> result will be fed to <code class="common-lisp library function operator">unparse</code>. Else, the provided <var>clause-kinds</var> is fed directly to <code class="common-lisp library function operator">unparse</code>.</p></dd>
+
+          </dl>
+
+        </section>
+
+        <section>
+
+          <h1>Info API</h1>
+
+          <dl>
+            <dt><pre>Function <dfn><code class="common-lisp library function operator">kind</code></dfn> <var>keyword</var> &amp;key (<var>errorp</var> t) (<var>keyword-policy</var> <code class="common-lisp library marker">:strict</code>)
+                =&gt; <var>kind</var> <var>direction</var> <var>limit-kind</var></pre></dt>
+
+            <dd><p>This function takes a <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm">loop</a></code> keyword and returns the following information:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Argument</th>
+                    <th colspan="3">Return values</th>
+                  </tr>
+                  <tr>
+                    <th><var>keyword</var></th>
+                    <th><var>kind</var></th>
+                    <th><var>direction</var></th>
+                    <th><var>limit-kind</var></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><th>:from</th><td>:from</td><td>nil</td><td>nil</td></tr>
+                  <tr><th>:downfrom</th><td>:from</td><td>-</td><td>nil</td></tr>
+                  <tr><th>:upfrom</th><td>:from</td><td>+</td><td>nil</td></tr>
+                </tbody>
+                <tbody>
+                  <tr><th>:to</th><td>:to</td><td>nil</td><td>:inclusive</td></tr>
+                  <tr><th>:upto</th><td>:to</td><td>+</td><td>:inclusive</td></tr>
+                  <tr><th>:downto</th><td>:to</td><td>-</td><td>:inclusive</td></tr>
+                  <tr><th>:below</th><td>:to</td><td>+</td><td>:exclusive</td></tr>
+                  <tr><th>:above</th><td>:to</td><td>-</td><td>:exclusive</td></tr>
+                </tbody>
+                <tbody>
+                  <tr><th>:by</th><td>:by</td><td>nil</td><td>nil</td></tr>
+                </tbody>
+              </table>
+            </dd>
 
 
-Function PARSE range &amp;key (keyword-policy :strict)
-                          (extrasp nil)
-                          (clause-kinds-p extrasp)
-                          (clause-keywords-p extrasp)
-                          (clauses-alist-p extrasp)
-  =&gt; from to limit-kind by direction
-       &amp;key clause-kinds clause-keywords clauses-alist
+            <dt><pre>Function <dfn><code class="common-lisp library function operator">flags</code></dfn> <var>keyword</var> &amp;key (<var>errorp</var> t) (<var>keyword-policy</var> <code class="common-lisp library marker">:strict</code>)
+  =&gt; <var>direction</var> <var>limit-kind</var></pre></dt>
 
-By default, PARSE returns only the 5 "fundamental" values (see above):
-- FROM: Defaults to 0;
-- TO: Defaults to NIL;
-- LIMIT-KIND: Defaults to NIL (unbounded);
-- BY: Defaults to 1;
-- DIRECTION: Defaults to +.
-
-PARSE can compute and return 3 additional pieces of information, on request:
-|-----------------|-------------------|----------------------------------------|
-| return value    | request-keyword   | description                            |
-|-----------------|-------------------|----------------------------------------|
-|-----------------|-------------------|----------------------------------------|
-| clause-kinds    | clause-kinds-p    | The clause kinds that were present,    |
-|                 |                   | in the order they appeared in.         |
-|-----------------|-------------------|----------------------------------------|
-| clause-keywords | clause-keywords-p | The clause keywords that were present, |
-|                 |                   | in the order they appeared in.         |
-|-----------------|-------------------|----------------------------------------|
-| clauses-alist   | clauses-alist-p   | Alist: (clause-kind . clause-keyword)  |
-|-----------------|-------------------|----------------------------------------|
+            <dd><p>This convenience function simply forwards to <code class="common-lisp library function operator">kind</code> and returns all values but the first.</p></dd>
 
 
-Function UNPARSE from to limit-kind by direction &amp;key clause-kinds
-  =&gt; range
+            <dt><pre>Function <dfn><code class="common-lisp library function operator">flags-to-keywords</code></dfn> <var>direction</var> <var>limit-kind</var>
+  =&gt; <var>from-keyword</var> <var>to-keyword</var></pre></dt>
 
-As you might have guessed, this does the reverse of PARSE...
+            <dd>
 
-UNPARSE uses FLAGS-TO-KEYWORDS internally and thus inherits its biases.
+              <p>This function does roughly the opposite of the KIND function. It returns a FROM-KEYWORD and a TO-KEYWORD (nil if unbounded) that properly indicate the supplied DIRECTION and LIMIT-KIND.</p>
 
-CLAUSE-KINDS should be a list of up to 3 elements being a permutation
-of the clause-kinds :from, :to and :by. This determines the order that
-the clauses will appear in, which might matter in the presence of
-side-effects. NIL designates the default order, (:from :to :by).
+              <p>There are typically multiple valid sets of answers that could be returned. This function is currently biased as follows, with no way to request a different bias:</p>
 
-If the list has 0 or 1 elements, then the default order is used, (:from :to :by).
+              <ul>
+                <li>
+                  <p>The <var>direction</var> and <var>limit-kind</var> will always be represented in the <var>to-keyword</var>, and never in the <var>from-keyword</var>, except for the following exception:</p>
+                  <pre class="example"><code class="common-lisp">(flags-to-keywords '- :exclusive) =&gt; :downfrom, nil</code></pre>
+                </li>
+                <li><p>:to is always returned in preference to :upto.</p></li>
+              </ul>
 
-If the list has 2 elements, then those clauses will appear in the
-order specified but no order is specified between the other elements
-and these ones and between the other elements among themselves.
-(Yeah, a less simplistic implementation would allow simpler and more useful semantics.)
+            </dd>
 
-If the list has 3 elements, then the order is completely specified, explicitly.
+          </dl>
 
+        </section>
 
-Function CANONICALIZE range &amp;key (clause-kinds :preserve) (keyword-policy :strict)
-
-This simply feeds the results of PARSE into UNPARSE. If CLAUSE-KINDS
-is :preserve, then :clause-kinds-p t will be specified for PARSE and
-the resulting CLAUSE-KINDS result will be fed to UNPARSE. Else, the
-provided CLAUSE-KINDS is fed directly to UNPARSE.
-
-
-Info API
---------
-
-Function KIND keyword &amp;key (errorp t) (keyword-policy :strict)
-  =&gt; kind direction limit-kind
-This function takes a LOOP keyword and returns the following information:
-
-(I have to run away from plaintext for documentation. FAST.
- I tried unicode box drawing characters but they wouldn't align.)
-
-|-----------||--------------------------------|
-| Argument  ||   r e t u r n   v a l u e s    |
-|-----------||--------------------------------|
-| keyword   || kind  | direction | limit-kind |
-|-----------||-------|-----------|------------|
-|-----------||-------|-----------|------------|
-|     :from || :from |    nil    |     nil    |
-|-----------||-------|-----------|------------|
-| :downfrom || :from |     -     |     nil    |
-|-----------||-------|-----------|------------|
-|   :upfrom || :from |     +     |     nil    |
-|-----------||-------|-----------|------------|
-|-----------||-------|-----------|------------|
-|       :to || :to   |    nil    | :inclusive |
-|-----------||-------|-----------|------------|
-|     :upto || :to   |     +     | :inclusive |
-|-----------||-------|-----------|------------|
-|   :downto || :to   |     -     | :inclusive |
-|-----------||-------|-----------|------------|
-|    :below || :to   |     +     | :exclusive |
-|-----------||-------|-----------|------------|
-|    :above || :to   |     -     | :exclusive |
-|-----------||-------|-----------|------------|
-|-----------||-------|-----------|------------|
-|       :by || :by   |     nil   |     nil    |
-|-----------||-------|-----------|------------|
-
-
-Function FLAGS keyword &amp;key (errorp t) (keyword-policy :strict)
-  =&gt; direction limit-kind
-
-This convenience function simply forwards to KIND
-and returns all values but the first.
-
-
-Function FLAGS-TO-KEYWORDS direction limit-kind
-  =&gt; from-keyword to-keyword
-
-This function does roughly the opposite of the KIND function. It
-returns a FROM-KEYWORD and a TO-KEYWORD (nil if unbounded) that
-properly indicate the supplied DIRECTION and LIMIT-KIND.
-
-There are typically multiple valid sets of answers that could be
-returned. This function is currently biased as follows, with no way to
-request a different bias:
-
-1. The DIRECTION and LIMIT-KIND will always be represented in the
-TO-KEYWORD, and never in the FROM-KEYWORD, except for the following
-exception:
-
-(flags-to-keywords '- :exclusive) =&gt; :downfrom, nil
-
-2. :to is always returned in preference to :upto.</pre>
+      </section>
 
     </div>
 
