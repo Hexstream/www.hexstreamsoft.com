@@ -49,6 +49,10 @@
             <span class="here-indicator-right"> </span>
           </h1>
           <ul>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#api">API</a></li>
+          </ul>
+          <ul>
             <li><a href="../../worknotes/#bubble-operator-upwards">Worknotes</a></li>
           </ul>
         </nav>
@@ -231,26 +235,24 @@
 
       </div>
 
-      <p>bubble-operator-upwards is a function that "bubbles an operator upwards" in a form, demultiplexing all alternative branches by way of cartesian product. This operation is notably useful for easy implementation of certain kinds of shorthand notations in macros. A cartesian-product function is also exported, as it's needed to implement the main function.</p>
+      <p><code class="common-lisp library function operator">bubble-operator-upwards</code> is a function that "bubbles an operator upwards" in a form, demultiplexing all alternative branches by way of cartesian product. This operation is notably useful for easy implementation of certain kinds of shorthand notations in macros. A <code class="common-lisp library function operator">cartesian-product</code> function is also exported, as it's needed to implement the main function.</p>
 
-      <pre>Examples
---------
+      <section id="examples">
+        <h1><a href="#examples" class="anchor">&#x2693;</a>Examples</h1>
 
-(bubble-operator-upwards 'and '(plate (and ham eggs) beans))
+        <pre class="example"><code class="common-lisp">(<code class="common-lisp library function operator">bubble-operator-upwards</code> 'and '(plate (and ham eggs) beans))
 =&gt;
 (AND (PLATE HAM BEANS)
-     (PLATE EGGS BEANS))
+     (PLATE EGGS BEANS))</code></pre>
 
-
-(bubble-operator-upwards 'alt '(section (alt 1 2 3) - (alt "a" "b"))
-                         :result-kind :branches)
+        <pre class="example"><code class="common-lisp">(<code class="common-lisp library function operator">bubble-operator-upwards</code> 'alt '(section (alt 1 2 3) - (alt "a" "b"))
+            :result-kind :branches)
 =&gt;
 ((SECTION 1 - "a") (SECTION 1 - "b")
  (SECTION 2 - "a") (SECTION 2 - "b")
- (SECTION 3 - "a") (SECTION 3 - "b"))
+ (SECTION 3 - "a") (SECTION 3 - "b"))</code></pre>
 
-
-(bubble-operator-upwards 'or '(&gt;&gt; (or ul ol)
+        <pre class="example"><code class="common-lisp">(<code class="common-lisp library function operator">bubble-operator-upwards</code> 'or '(&gt;&gt; (or ul ol)
                                   (or (:class (or "important" "urgent"))
                                       (id "first-priority"))))
 =&gt;
@@ -259,61 +261,54 @@
     (&gt;&gt; UL (ID "first-priority"))
     (&gt;&gt; OL (:CLASS "important"))
     (&gt;&gt; OL (:CLASS "urgent"))
-    (&gt;&gt; OL (ID "first-priority")))
+    (&gt;&gt; OL (ID "first-priority")))</code></pre>
 
+      </section>
 
-API
----
+      <section id="api">
 
-First of all, in the way of packages there's the
-BUBBLE-OPERATOR-UPWARDS package, which is also nicknamed BUBBLE-OP-UP.
-It exports the functions BUBBLE-OPERATOR-UPWARDS and
-CARTESIAN-PRODUCT. Explicitly (:import-from) only those you need or
-explicitly package-qualify the symbols. Don't (:use)!
+        <h1><a href="#api" class="anchor">&#x2693;</a>API</h1>
 
+        <p>First of all, in the way of packages there's the <code class="common-lisp library package">bubble-operator-upwards</code> package, which is also nicknamed <code class="common-lisp library package">bubble-op-up.</code> It exports the functions <code class="common-lisp library function operator">bubble-operator-upwards</code> and <code class="common-lisp library function operator">cartesian-product</code>. Explicitly <code class="common-lisp">(:import-from)</code> only those you need or explicitly package-qualify the symbols. Don't <code class="common-lisp">(:use)</code>!</p>
 
-Function BUBBLE-OPERATOR-UPWARDS operator form
-  &amp;key (result-kind :abridged)
-       (if-collapsed nil)
-       (collapsed-identity (ecase result-kind
-                             ((:full :abridged)
-                              (list operator))
-                             (:branches nil)))
+        <dl>
+          <dt><pre>Function <dfn><code class="common-lisp library function operator">bubble-operator-upwards</code></dfn> <var>operator</var> <var>form</var>
+  &amp;key (<var>result-kind</var> <code class="common-lisp library marker">:abridged</code>)
+       (<var>if-collapsed</var> <code class="common-lisp library marker">nil</code>)
+       (<var>collapsed-identity</var> (ecase <var>result-kind</var>
+                             ((:full <code class="common-lisp library marker">:abridged</code>)
+                              (list <var>operator</var>))
+                             (:branches <code class="common-lisp library marker">nil</code>)))
+  =&gt; <var>result</var></pre></dt>
+          <dd>
 
-  Bubbles OPERATOR upwards in FORM, demultiplexing all alternative
-  branches by way of cartesian product. Hard to describe formally, but
-  the examples above should give some inspiration for the basic
-  effect, and some experimentation in the REPL is recommended.
+            <p>Bubbles <var>operator</var> upwards in <var>form</var>, demultiplexing all alternative branches by way of cartesian product. Hard to describe formally, but the examples above should give some inspiration for the basic effect, and some experimentation in the <abbr title="Read-Eval-Print_Loop">REPL</abbr> is recommended.</p>
 
-  RESULT-KIND is one of :branches, :full or :abridged.
+            <p><var>result-kind</var> is one of <code class="common-lisp library marker">:branches</code>, <code class="common-lisp library marker">:full</code> or <code class="common-lisp library marker">:abridged</code></p>
 
-  - :branches simply returns the demultiplexed branches.
+            <ul>
+              <li><p><dfn><code class="common-lisp library marker">:branches</code></dfn> simply returns the demultiplexed branches.</p></li>
+              <li><p><dfn><code class="common-lisp library marker">:full</code></dfn> returns the same <var>result</var> as :branches would, except wrapped in a cons whose CAR is <var>operator</var>.</p></li>
+              <li><p><dfn><code class="common-lisp library marker">:abridged</code></dfn> returns the same result as <code class="common-lisp library marker">:full</code> would, except if there's only one branch, only that branch is returned, without the wrapping.</p></li>
+            </ul>
 
-  - :full returns the same result as :branches would,
-    except wrapped in a cons whose CAR is OPERATOR.
+            <p><var>if-collapsed</var> and <var>collapsed-identity</var> determine what to do if the number of branches "collapses" to zero. <var>if-collapsed</var> is <code class="common-lisp library marker">:error</code> or <code class="common-lisp library marker">nil</code>. If it's <code class="common-lisp library marker">nil</code> and the result is indeed collapsed, then the value of <var>collapsed-identity</var> will be returned.</p>
+          </dd>
 
-  - :abridged returns the same result as :full would,
-    except if there's only one branch, only that branch
-    is returned, without the wrapping.
+          <dt><pre>Function <dfn><code class="common-lisp library function operator">cartesian-product</code></dfn> &amp;rest <var>possibility-groups</var>
+  =&gt; <var>cartesian-product</var></pre></dt>
 
-  IF-COLLAPSED and COLLAPSED-IDENTITY determine what to do if the
-  number of branches "collapses" to zero. IF-COLLAPSED is :error or
-  NIL. If it's NIL and the result is indeed collapsed, then the value
-  of COLLAPSED-IDENTITY will be returned.
-
-
-Function CARTESIAN-PRODUCT &amp;rest possibility-groups
-
-Returns the cartesian-product of all possible combinations from
-POSSIBILITY-GROUPS, as a list.
-
-This function is inherently needed to implement
-BUBBLE-OPERATOR-UPWARDS, so might as well export it...
-
-(cartesian-product '(1 2) '(a b c))
+          <dd>
+            <p>Returns the cartesian-product of all possible combinations from <var>possibility-groups</var>, as a list. <small>This function is inherently needed to implement <code class="common-lisp library function operator">bubble-operator-upwards</code>, so might as well export it...</small></p>
+            <pre class="example"><code class="common-lisp">(<code class="common-lisp library function operator">cartesian-product</code> '(1 2) '(a b c))
 =&gt;
 ((1 A) (1 B) (1 C)
- (2 A) (2 B) (2 C))</pre>
+ (2 A) (2 B) (2 C))</code></pre>
+          </dd>
+
+        </dl>
+
+      </section>
 
     </div>
 
