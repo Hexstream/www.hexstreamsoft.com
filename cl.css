@@ -26,14 +26,14 @@ p code {
     background: #ECECEC;
 }
 
-code.operator, code.variable, code.constant, code.marker, code.glossary, code.lambda-list-keyword, code.type-specifier, code.package {
+code.operator, code.variable, code.constant, code.marker, code.glossary, code.lambda-list-keyword, code.type-specifier, code.package, code.class {
     background: transparent;
     padding: 0;
     border: none;
     white-space: nowrap;
 }
 
-code.common-lisp.library.operator, code.common-lisp.library.marker, code.common-lisp.library.package {
+code.common-lisp.library.operator, code.common-lisp.library.variable, code.common-lisp.library.constant, code.common-lisp.library.marker, code.common-lisp.library.glossary, code.common-lisp.library.package, code.common-lisp.library, code.common-lisp.class {
     color: green;
 }
 
