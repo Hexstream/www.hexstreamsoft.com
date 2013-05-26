@@ -241,9 +241,9 @@
 
       <p>This thin ASDF wrapper was prepared by Jean-Philippe Paradis (<a href="mailto:hexstream@gmail.com">hexstream@gmail.com</a>) for inclusion in Quicklisp and is not endorsed by LispWorks Ltd. Common Lisp HyperSpec is a registered trademark of LispWorks Ltd. Jean-Philippe Paradis is not a lawyer, has not consulted a lawyer, and prepared this thin ASDF wrapper as a community service on a "good faith, best-effort" basis.</p>
 
-      <p>The <a href="ftp://ftp.lispworks.com/pub/software_tools/reference/HyperSpec-7-0.tar.gz">original download</a> was a .tar.gz file and has been uncompressed for your convenience. The primary use cases for downloading the HyperSpec to your hard drive instead of using <a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">the online documentation</a> are to benefit from the increased responsiveness inherent in browsing a local resource and to ensure reliable, fast access from anywhere while on the go (ex: laptop, smartphone).</p>
+      <p>The <a href="ftp://ftp.lispworks.com/pub/software_tools/reference/HyperSpec-7-0.tar.gz">original download</a> was a <code>.tar.gz</code> file and has been uncompressed for your convenience. The primary use cases for downloading the HyperSpec to your hard drive instead of using <a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">the online documentation</a> are to benefit from the increased responsiveness inherent in browsing a local resource and to ensure reliable, fast access from anywhere while on the go (ex: laptop, smartphone).</p>
 
-      <p>Use (clhs:print-emacs-setup-form) to print the command used to tell Emacs to use your new local copy of CLHS.</p>
+      <p>Use <code class="common-lisp">(clhs:print-emacs-setup-form)</code> to print the command used to tell Emacs to use your new local copy of CLHS.</p>
 
       <p>(Note that the default setup involves automatic creation and usage of a symlink that points to the 'HyperSpec' directory within the "real top-level" 'HyperSpec-7-0' directory. Don't redistribute the former without the latter!)</p>
 
@@ -251,13 +251,13 @@
         They are:</p>
 
       <dl>
-        <dt>slime-documentation-lookup (C-c C-d h)</dt>
+        <dt><dfn>slime-documentation-lookup</dfn> (C-c C-d h)</dt>
         <dd>Lookup a symbol (such as "make-instance").</dd>
 
-        <dt>common-lisp-hyperspec-lookup-reader-macro (C-c C-d #)</dt>
+        <dt><dfn>common-lisp-hyperspec-lookup-reader-macro</dfn> (C-c C-d #)</dt>
         <dd>Lookup a reader-macro (such as "#'" or "(").</dd>
 
-        <dt>common-lisp-hyperspec-format (C-c C-d ~)</dt>
+        <dt><dfn>common-lisp-hyperspec-format</dfn> (C-c C-d ~)</dt>
         <dd>Lookup a FORMAT directive (such as "~A").</dd>
       </dl>
 
@@ -265,12 +265,12 @@
       <p>If the default browser used is not the one you wanted, here's how
         you might tell Emacs to use Firefox instead:</p>
 
-      <code>(setq browse-url-firefox-program "firefox")</code>
+      <pre class="example"><code class="emacs-lisp">(setq browse-url-firefox-program "firefox")</code></pre>
 
       <p>Or Google Chrome:</p>
 
-      <code>(setq browse-url-browser-function 'browse-url-generic)
-        (setq browse-url-generic-program "google-chrome")</code>
+      <pre class="example"><code class="emacs-lisp">(setq browse-url-browser-function 'browse-url-generic)
+(setq browse-url-generic-program "google-chrome")</code></pre>
 
 
       <p><small>Common Lisp HyperSpec(tm) is a registered trademark of <a href="http://www.lispworks.com">LispWorks Ltd</a>.
