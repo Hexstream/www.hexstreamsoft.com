@@ -125,48 +125,45 @@
         <p class="description">Like setf, except supply update functions (to be called with old values) instead of new values.</p>
       </header>
 
-      <div class="defun">
-&mdash; Modify Macro: <b>updatef</b><var> &amp;rest places-and-update-functions &rArr; results<a name="index-updatef-3"></a></var><br>
-<blockquote><p><code>updatef</code> is exactly like <code>setf</code>, except that instead of
-directly providing new values to store into the place, one provides
-update functions that will be called with the corresponding old
-value. Each store variable is bound to the result of calling the
-corresponding update function with the old value, then the storing
-form is evaluated.
+      <dl>
+        <dt><pre>Modify Macro <code class="common-lisp library macro operator">updatef</code> &amp;rest <var>places-and-update-functions</var>
+  &rArr; <var>results</var></pre></dt>
+        <dd>
+          <p><code class="common-lisp library macro operator">updatef</code> is exactly like <code class="common-lisp standard macro operator">setf</code>, except that instead of directly providing new values to store into the place, one provides update functions that will be called with the corresponding old value. Each store variable is bound to the result of calling the corresponding update function with the old value, then the storing form is evaluated.</p>
+          <pre class="example"><code class="common-lisp">(defun double (<var>number</var>) (* <var>number</var> 2))
 
-     <pre class="lisp">          (defun double (number) (* number 2))
+(let ((<var>a</var> 2) (<var>b</var> 8))
+  (<code class="common-lisp library macro operator">updatef</code> (values <var>a</var> <var>b</var>) #'double)
+  (values <var>a</var> <var>b</var>))
 
-          (let ((a 2) (b 8))
-            (updatef (values a b) #'double)
-            (values a b))
-          &rArr; 4, NIL
+&rArr; 4, NIL</code></pre>
+          <pre class="example"><code class="common-lisp">(let ((<var>a</var> 2) (<var>b</var> 8))
+  (<code class="common-lisp library macro operator">updatef</code> <var>a</var> #'1+
+           <var>a</var> #'double
+           <var>b</var> #'-)
+  (values <var>a</var> <var>b</var>))
 
-          (let ((a 2) (b 8))
-            (updatef a #'1+
-                     a #'double
-                     b #'-)
-            (values a b))
-          &rArr; 6, -8
+&rArr; 6, -8</code></pre>
+          <pre class="example"><code class="common-lisp">(let ((<var>a</var> #(1 2)))
+  (<code class="common-lisp library macro operator">updatef</code> (aref (print <var>a</var>) (print 1))
+           (print #'double))
+  <var>a</var>)
+  -| #(1 2)
+  -| 1
+  -| #&lt;FUNCTION DOUBLE&gt;
 
-          (let ((a #(1 2)))
-            (updatef (aref (print a) (print 1))
-                     (print #'double))
-            a)
-          -| #(1 2)
-          -| 1
-          -| #&lt;FUNCTION DOUBLE&gt;
-          &rArr; #(1 4)
-</pre>
-        </blockquote></div>
+&rArr; #(1 4)</code></pre>
+        </dd>
+      </dl>
 
     </div>
 
     <div id="footer">
       <div>
         <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Fupdatef.html"><span class="checkmark">✔</span> HTML5</a></span>
         <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> CSS3</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Fupdatef.html"><span class="checkmark">✔</span> CSS3</a></span>
       </div>
     </div>
 

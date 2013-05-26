@@ -125,198 +125,86 @@
         <p class="description">Compute the value of a place only when it's first read.</p>
       </header>
 
-      <div class="defun">
-&mdash; Accessor Modifier: <b>cachef</b><var> cachedp-place cache-place init-form &amp;key test new-cachedp init-form-evaluates-to<a name="index-cachef-7"></a></var><br>
-<blockquote><pre class="sp">
-
-     </pre>
-     <code>cachef</code> allows one to compute the value of a place only when
-it's first read.
-
-        <pre class="sp">
-
-     </pre>
-
-The consequences are undefined if <var>cachedp-place</var> or
-<var>cache-place</var> involves more than one value. I initially planned to
-support multiple values everywhere but finally decided that it's
-overkill. An implementation is permitted to extend the semantics to
-support multiple values. (With that out of the way, the rest of the
-description will be simpler.)
-
-        <pre class="sp">
-
-     </pre>
-
-<code>cachef</code> has two major modes of operation: &ldquo;in-cache cachedp&rdquo;
-(ICC) mode and &ldquo;out-of-cache cachedp&rdquo; (OOCC) mode. The former is
-selected if <var>cachedp-place</var> is <code>nil</code> at macroexpansion-time,
-else the latter is selected.
-
-        <p>Let's first describe the semantics of the arguments without regard to
-their order in the lambda list nor the time at which they're
-evaluated. After, we'll <a href="ICC-eval.html#ICC-eval">the order of evaluation step-by-step for ICC mode</a>, and then we'll <a href="OOCC-eval.html#OOCC-eval">it for OOCC mode</a>.
-
-        <pre class="sp">
-
-     </pre>
-
-An important notion of <code>cachef</code> is, of course, how it tests to
-see if the cache is full or empty. The way this is done is to call
-<var>test-function</var> (the result of evaluating <var>test</var>) with
-an appropriate argument. In ICC mode, <var>test-function</var> is called with
-the value of <var>cache-place</var>. In OOCC mode, it's called with the
-value of <var>cachedp-place</var>. Either way, the cache is considered full
-or empty if <var>test-function</var> returns generalized <code>true</code> or
-<code>false</code>, respectively.
-
-        <p>Whenever <var>cache-place</var> is about to be read, if the cache is empty,
-it's first filled with <var>init-form</var>. The semantics of
-<var>init-form</var> are described below. In ICC mode, it's assumed that
-the new value tests as a full cache (else, the cache will be
-&ldquo;re-filled&rdquo; next time). In OOCC mode, whenever the cache is written
-to (regardless of if this write results from a cache-miss or a direct
-request), <var>cachedp-place</var> is set to the value of
-<var>new-cachedp</var>. It's an error to supply <var>new-cachedp</var> in ICC
-mode, as it's not needed (<var>init-form</var> somewhat fulfills its role).
-
-        <p><var>init-form</var> is a form that either evaluates to the values to store
-into the cache, or to a function that performs such an evaluation,
-depending on whether <var>init-form-evaluates-to</var> is <code>:value</code> or
-<code>:function</code> (at macroexpansion-time), respectively. The former is
-convenient in simple scenarios where there is no &ldquo;distance&rdquo; between
-the evaluation of subforms and access to the cache, while the latter
-is more likely to be correct in more complex cases (such as when used
-with <code>with-resolved-places</code>) by virtue of capturing the lexical
-context in which the subforms are evaluated instead of whichever one
-is current at the place in the code where the cache is accessed.
-
-        <pre class="sp">
-
-     </pre>
-
-<var>cache-place</var> holds the cached value if the cache is full, or a
-placeholder value if the cache is empty. In ICC mode, this value
-itself is tested to see if the cache is full or empty. For instance, a
-value of <code>nil</code> might indicate an empty cache, while any other
-value indicates a full cache (this is the default behavior, as
-<var>test</var> defaults to <code>'#'identity</code>). Of course, in this case
-there's no way to distinguish between an empty cache and a full cache
-containing <code>nil</code>. A possible workaround would be to use a gensym
-as a &ldquo;cache-is-empty&rdquo; marker, however this might not be
-performance-friendly. For instance, if the cache only ever contains
-values of type (mod 1024), one might want to declare this type, but a
-gensym is not valid. One would have to declare a type of (or symbol
-(mod 1024)). In this case, OOCC mode might be preferable, as the
-<var>cachedp-place</var> can be declared to be of type <code>boolean</code> (for
-example) while the <var>cache-place</var> can be declared to be of the
-exact type of values that might be stored in the cache.
-
-        <pre class="sp">
-
-     </pre>
-
-<a name="ICC-eval"></a>Here's the order of evaluation in ICC mode. At the
-time subforms of the <code>cachef</code> place are evaluated:
-
-          <ol type=1 start=1>
-<li>The subforms of <var>cache-place</var> are evaluated.
-
-          <li>If <var>init-form-evaluates-to</var> is <code>:function</code>, <var>init-form</var>
-is evaluated to produce <var>init-form-function</var>.
-
-          <li><var>test</var> is evaluated to produce <var>test-function</var>.
-             </ol>
-
-        <p>At the time an attempt is made to read the value of the <code>cachef</code>
-place:
-
-          <ol type=1 start=1>
-<li><var>test-function</var> is called with the value of <var>cache-place</var>,
-producing <var>fullp</var>.
-
-          <li>If <var>fullp</var> is generalized true, the value of <var>cache-place</var>
-that was read in step 1 is simply returned. Else, <var>cache-place</var> is
-assigned the result of evaluating the <var>init-form</var> and that value
-is returned.
-             </ol>
-
-        <p>At the time a value is assigned to the <code>cachef</code> place, the value
-is simply stored into <var>cache-place</var> directly and it's assumed that
-calling <var>test-function</var> with this value the next time the
-<code>cachef</code> place is read will return generalized true, indicating a
-full cache.
-
-        <pre class="sp">
-
-     </pre>
-
-<a name="OOCC-eval"></a>Here's the order of evaluation in OOCC mode. At the
-time subforms of the <code>cachef</code> place are evaluated:
-
-          <ol type=1 start=1>
-<li>The subforms of <var>cachedp-place</var> are evaluated.
-
-          <li>The subforms of <var>cache-place</var> are evaluated.
-
-          <li>If <var>init-form-evaluates-to</var> is <code>:function</code>, <var>init-form</var>
-is evaluated to produce <var>init-form-function</var>.
-
-          <li><var>test</var> and <var>new-cachedp</var> are evaluated in the order they appear.
-             </ol>
-
-        <p>At the time an attempt is made to read the value of the <code>cachef</code>
-place:
-
-          <ol type=1 start=1>
-<li><var>test-function</var> is called with the value of <var>cachedp-place</var>,
-producing <var>fullp</var>.
-
-          <li>If <var>fullp</var> is generalized true, The value of <var>cache-place</var>
-that was read in step 1 is simply returned. Else, <var>cache-place</var> is
-assigned the result of evaluating the <var>init-form</var> and that value
-is returned.
-             </ol>
-
-        <p>At the time a value is assigned to the <code>cachef</code> place, the value
-is stored into <var>cache-place</var> and the result of evaluating
-<var>new-cachedp</var> (that was evaluated along with the subforms
-previously) is stored into <var>cachedp-place</var>.
-
-     <pre class="lisp">          (let ((cache "cached-string"))
-            (incf (cachef nil cache 0 :test #'numberp) (print (+ 5 2)))
-            cache)
-          -| 7
-          &rArr; 7
-
-          (let ((cache 20))
-            (incf (cachef nil cache 0 :test #'numberp) (print (+ 5 2)))
-            cache)
-          -| 7
-          &rArr; 27
-
-          (let ((values (list :empty :placeholder)))
-            (cachef (first values) (second (print values))
-                    :computed-value
-                    :test (lambda (marker)
-                            (ecase marker
-                              (:full t)
-                              (:empty nil)))
-                    :new-cachedp :full)
-            values)
-          -| (:EMPTY :PLACEHOLDER)
-          &rArr; (:FULL :COMPUTED-VALUE)
-</pre>
-        </blockquote></div>
+      <dl>
+        <dt><pre>Accessor Modifier <code class="common-lisp library macro operator">cachef</code> <var>cachedp-place</var> <var>cache-place</var> <var>init-form</var>
+                         &amp;key <var>test</var> <var>new-cachedp</var> <var>init-form-evaluates-to</var></pre></dt>
+        <dd>
+          <p><code class="common-lisp library macro operator">cachef</code> allows one to compute the value of a place only when it's first read.</p>
+          <p>The consequences are undefined if <var>cachedp-place</var> or <var>cache-place</var> involves more than one value. I initially planned to support multiple values everywhere but finally decided that it's overkill. An implementation is permitted to extend the semantics to support multiple values. <small>(With that out of the way, the rest of the description will be simpler.)</small></p>
+          <p><code class="common-lisp library macro operator">cachef</code> has two major modes of operation: <a href="#ICC-eval">"in-cache cachedp" (ICC) mode</a> and <a href="#OOCC-eval">"out-of-cache cachedp" (OOCC) mode</a>. The former is selected if <var>cachedp-place</var> is <code class="common-lisp standard constant">nil</code> at macroexpansion-time, else the latter is selected.</p>
+          <p>Let's first describe the semantics of the arguments without regard to their order in the lambda list nor the time at which they're evaluated. After, we'll see the order of evaluation step-by-step for both modes.</p>
+          <section>
+            <h1>Cache testing</h1>
+            <p>An important notion of <code class="common-lisp library macro operator">cachef</code> is, of course, how it tests to see if the cache is full or empty. The way this is done is to call <var>test-function</var> (the result of evaluating <var>test</var>) with an appropriate argument. In <a href="#ICC-eval">ICC mode</a>, <var>test-function</var> is called with the value of <var>cache-place</var>. In <a href="#OOCC-eval">OOCC mode</a>, it's called with the value of <var>cachedp-place</var>. Either way, the cache is considered full or empty if <var>test-function</var> returns generalized <code class="common-lisp standard glossary">true</code> or <code class="common-lisp standard glossary">false</code>, respectively.</p>
+          </section>
+          <p>Whenever <var>cache-place</var> is about to be read, if the cache is empty, it's first filled with <var>init-form</var>. The semantics of <var>init-form</var> are described below. In <a href="#ICC-eval">ICC mode</a>, it's assumed that the new value tests as a full cache (else, the cache will be &ldquo;re-filled&rdquo; next time). In <a href="#OOCC-eval">OOCC mode</a>, whenever the cache is written to (regardless of if this write results from a cache-miss or a direct request), <var>cachedp-place</var> is set to the value of <var>new-cachedp</var>. It's an error to supply <var>new-cachedp</var> in <a href="#ICC-eval">ICC mode</a>, as it's not needed (<var>init-form</var> somewhat fulfills its role).</p>
+          <p><var>init-form</var> is a form that either evaluates to the values to store into the cache, or to a function that performs such an evaluation, depending on whether <var>init-form-evaluates-to</var> is <code class="common-lisp library marker">:value</code> or <code class="common-lisp library marker">:function</code> (at macroexpansion-time), respectively. The former is convenient in simple scenarios where there is no &ldquo;distance&rdquo; between the evaluation of subforms and access to the cache, while the latter is more likely to be correct in more complex cases (such as when used with <code class="common-lisp library macro operator">with-resolved-places</code>) by virtue of capturing the lexical context in which the subforms are evaluated instead of whichever one is current at the place in the code where the cache is accessed.</p>
+          <p><var>cache-place</var> holds the cached value if the cache is full, or a placeholder value if the cache is empty. In <a href="#ICC-eval">ICC mode</a>, this value itself is tested to see if the cache is full or empty. For instance, a value of <code class="common-lisp standard constant">nil</code> might indicate an empty cache, while any other value indicates a full cache (this is the default behavior, as <var>test</var> defaults to <code class="common-lisp">'#'identity</code>). Of course, in this case there's no way to distinguish between an empty cache and a full cache containing <code class="common-lisp standard constant">nil</code>. A possible workaround would be to use a gensym as a "cache-is-empty" marker, however this might not be performance-friendly. For instance, if the cache only ever contains values of type <code class="common-lisp">(mod 1024)</code>, one might want to declare this type, but a gensym is not valid. One would have to declare a type of <code class="common-lisp">(or symbol (mod 1024))</code>. In this case, <a href="#OOCC-eval">OOCC mode</a> might be preferable, as the <var>cachedp-place</var> can be declared to be of type <code class="common-lisp standard type-specifier">boolean</code> (for example) while the <var>cache-place</var> can be declared to be of the exact type of values that might be stored in the cache.</p>
+          <section id="ICC-eval">
+            <h1>In-Cache-Cachedp (ICC) evaluation order</h1>
+            <p>At the time subforms of the <code class="common-lisp library macro operator">cachef</code> place are evaluated:</p>
+            <ol>
+              <li>If <var>init-form-evaluates-to</var> is <code>:function</code>, <var>init-form</var> is evaluated to produce <var>init-form-function</var>.</li>
+              <li><var>test</var> is evaluated to produce <var>test-function</var>.</li>
+            </ol>
+            <p>At the time an attempt is made to read the value of the <code class="common-lisp library macro operator">cachef</code> place:</p>
+            <ol>
+              <li><var>test-function</var> is called with the value of <var>cache-place</var>, producing <var>fullp</var>.</li>
+              <li>If <var>fullp</var> is generalized true, the value of <var>cache-place</var> that was read in step 1 is simply returned. Else, <var>cache-place</var> is assigned the result of evaluating the <var>init-form</var> and that value is returned.</li>
+            </ol>
+            <p>At the time a value is assigned to the <code class="common-lisp library macro operator">cachef</code> place, the value is simply stored into <var>cache-place</var> directly and it's assumed that calling <var>test-function</var> with this value the next time the <code class="common-lisp library macro operator">cachef</code> place is read will return generalized true, indicating a full cache.</p>
+          </section>
+          <section id="OOCC-eval">
+            <h1>Out-Of-Cache-Cachedp (OOCC) evaluation order</h1>
+            <p>At the time subforms of the <code class="common-lisp library macro operator">cachef</code> place are evaluated:</p>
+            <ol>
+              <li>The subforms of <var>cachedp-place</var> are evaluated.</li>
+              <li>The subforms of <var>cache-place</var> are evaluated.</li>
+              <li>If <var>init-form-evaluates-to</var> is <code class="common-lisp library marker">:function</code>, <var>init-form</var> is evaluated to produce <var>init-form-function</var>.</li>
+              <li><var>test</var> and <var>new-cachedp</var> are evaluated in the order they appear.</li>
+            </ol>
+            <p>At the time an attempt is made to read the value of the <code class="common-lisp library macro operator">cachef</code> place:</p>
+            <ol>
+              <li><var>test-function</var> is called with the value of <var>cachedp-place</var>, producing <var>fullp</var>.</li>
+              <li>If <var>fullp</var> is generalized true, The value of <var>cache-place</var> that was read in step 1 is simply returned. Else, <var>cache-place</var> is assigned the result of evaluating the <var>init-form</var> and that value is returned.</li>
+            </ol>
+            <p>At the time a value is assigned to the <code class="common-lisp library macro operator">cachef</code> place, the value is stored into <var>cache-place</var> and the result of evaluating <var>new-cachedp</var> (that was evaluated along with the subforms previously) is stored into <var>cachedp-place</var>.</p>
+          </section>
+          <section>
+            <h1>Examples</h1>
+            <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>cache</var> "cached-string"))
+  (<code class="common-lisp standard macro operator">incf</code> (<code class="common-lisp library macro operator">cachef</code> nil <var>cache</var> 0 :test #'<code class="common-lisp standard function operator">numberp</code>) (<code class="common-lisp standard function operator">print</code> (<code class="common-lisp standard function operator">+</code> 5 2)))
+  <var>cache</var>)
+-| 7
+&rArr; 7</code></pre>
+            <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>cache</var> 20))
+  (<code class="common-lisp standard macro operator">incf</code> (<code class="common-lisp library macro operator">cachef</code> nil <var>cache</var> 0 :test #'<code class="common-lisp standard function operator">numberp</code>) (<code class="common-lisp standard function operator">print</code> (<code class="common-lisp standard function operator">+</code> 5 2)))
+  <var>cache</var>)
+-| 7
+&rArr; 27</code></pre>
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>values</var> (<code class="common-lisp standard function operator">list</code> :empty :placeholder)))
+  (<code class="common-lisp library macro operator">cachef</code> (<code class="common-lisp standard function operator">first</code> <var>values</var>) (<code class="common-lisp standard function operator">second</code> (<code class="common-lisp standard function operator">print</code> <var>values</var>))
+          :computed-value
+          :test (<code class="common-lisp standard macro operator">lambda</code> (<var>marker</var>)
+                  (<code class="common-lisp standard macro operator">ecase</code> <var>marker</var>
+                    (:full t)
+                    (:empty nil)))
+          :new-cachedp <code class="common-lisp library marker">:full</code>)
+  values)
+-| (:EMPTY :PLACEHOLDER)
+&rArr; (:FULL :COMPUTED-VALUE)</code></pre>
+          </section>
+        </dd>
+      </dl>
 
     </div>
 
     <div id="footer">
       <div>
         <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Fcachef.html"><span class="checkmark">✔</span> HTML5</a></span>
         <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> CSS3</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Fcachef.html"><span class="checkmark">✔</span> CSS3</a></span>
       </div>
     </div>
 

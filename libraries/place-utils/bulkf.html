@@ -125,181 +125,150 @@
         <p class="description">Flexible mass updating of places.</p>
       </header>
 
-      <div class="defun">
-&mdash; Modify Macro: <b>bulkf</b><var> update-function-form &amp;rest mode-markers-and-items &rArr; results<a name="index-bulkf-4"></a></var><br>
-<blockquote><p><code>bulkf</code> allows mass updating of places.
+      <section>
+        <h1>Description</h1>
+        <dl>
+          <dt><pre>Modify Macro <code class="common-lisp library macro operator">bulkf</code> <var>update-function-form</var> &amp;rest <var>mode-markers-and-items</var>
+  &rArr; <var>results</var></pre></dt>
+          <dd>
+            <p><code class="common-lisp library macro operator">bulkf</code> allows mass updating of places.</p>
+            <p><var>update-function-form</var> is evaluated first to produce <var>update-function</var>. The arguments and return values of this function depend on <var>mode-markers-and-items</var> and are described below.</p>
+            <p><var>mode-markers-and-items</var> is a list of <var>mode-markers</var> and <var>items</var> to be processed from left to right at macroexpansion-time. A <var>mode-marker</var> is one of the symbols <code class="common-lisp library marker">:access</code>, <code class="common-lisp library marker">:read</code>, <code class="common-lisp library marker">:write</code> or <code class="common-lisp library marker">:pass</code>. Any other form is an <var>item</var>. Whenever a <var>mode-marker</var> is encountered, the mode with that name becomes the current mode and remains so until the next <var>mode-marker</var>. The current mode at the start of <var>mode-markers-and-items</var> is <code class="common-lisp library marker">:access</code> mode. There are 4 different types of <var>items</var>, corresponding to the 4 different modes that can be the current mode at the time the <var>item</var> is encountered. Here are the semantics of each type of item:</p>
 
-        <p><var>update-function-form</var> is evaluated first to produce
-<var>update-function</var>. The arguments and return values of this
-function depend on <var>mode-markers-and-items</var> and are described
-below.
+            <dl>
 
-        <p><var>mode-markers-and-items</var> is a list of <var>mode-markers</var> and
-<var>items</var> to be processed from left to right at
-macroexpansion-time. A <var>mode-marker</var> is one of the symbols
-<code>:access</code>, <code>:read</code>, <code>:write</code> or <code>:pass</code>. Any other
-form is an <var>item</var>. Whenever a <var>mode-marker</var> is encountered,
-the mode with that name becomes the current mode and remains so until
-the next <var>mode-marker</var>. The current mode at the start of
-<var>mode-markers-and-items</var> is <code>:access</code> mode. There are 4
-different types of <var>items</var>, corresponding to the 4 different modes
-that can be the current mode at the time the <var>item</var> is
-encountered. Here are the semantics of each type of item:
+              <dt><dfn><code class="common-lisp library marker">:access</code></dfn></dt>
+              <dd><p><var>item</var> is a place that will be both read from and written to. At runtime, the subforms of the place are evaluated and the place is read. The primary value is contributed as an additional argument to <var>update-function</var>. <var>update-function</var> also returns an additional value that will be written back into the place (reusing the temporary variables bound to the results of the subforms).</p></dd>
 
-          <dl>
-<dt><code>:access</code><dd><var>item</var> is a place that will be both read from and written to. At
-runtime, the subforms of the place are evaluated and the place is
-read. The primary value is contributed as an additional argument to
-<var>update-function</var>. <var>update-function</var> also returns an
-additional value that will be written back into the place (reusing the
-temporary variables bound to the results of the subforms).
-<br><dt><code>:read</code><dd><var>item</var> is a place that will be read from. At runtime, the subforms
-of the place are evaluated and the place is read. The primary value is
-contributed as an additional argument to <var>update-function</var>.
-<br><dt><code>:write</code><dd><var>item</var> is a place that will be written to. <var>update-function</var>
-returns an additional value that will be written into the place. The
-evaluation of the subforms of the place happens at the same time as it
-would have happened if the place had been read from.
-<br><dt><code>:pass</code><dd><var>item</var> is a form to be evaluated normally. Its primary value is
-passed as an additional argument to <var>update-function</var>.
-</dl>
+              <dt><dfn><code class="common-lisp library marker">:read</code></dfn></dt>
+              <dd><p><var>item</var> is a place that will be read from. At runtime, the subforms of the place are evaluated and the place is read. The primary value is contributed as an additional argument to <var>update-function</var>.</p></dd>
 
-        <p>If <var>update-function</var> returns more values than there are places to
-write to (<code>:access</code> and <code>:write</code> <var>items</var>), the
-additional values are ignored. If it returns less values than there
-are of these places, the remaining ones are set to
-<code>nil</code>. <code>bulkf</code> returns the values that were written into
-these places. This might be more or less values than were returned by
-<var>update-function</var>. If a place to be written to has more than one
-store variable, the remaining such variables are set to <code>nil</code>
-prior to evaluation of the storing form.
+              <dt><dfn><code class="common-lisp library marker">:write</code></dfn></dt>
+              <dd><p><var>item</var> is a place that will be written to. <var>update-function</var> returns an additional value that will be written into the place. The evaluation of the subforms of the place happens at the same time as it would have happened if the place had been read from.</p></dd>
 
-        <p><code>bulkf</code> accepts an optional unevaluated argument before
-<var>update-function-form</var> (as very first argument). This must be the
-symbol <var>funcall</var> or <var>apply</var> and determines which operator will
-be used to call the <var>update-function</var> with its arguments. The
-default is <code>funcall</code>, which is expected to be used an
-overwhelming majority of the time. This is the reason this argument
-has not been made a normal required parameter.
+              <dt><dfn><code class="common-lisp library marker">:pass</code></dfn></dt>
+              <dd><p><var>item</var> is a form to be evaluated normally. Its primary value is passed as an additional argument to <var>update-function</var>.</p></dd>
 
-        <p><code>bulkf</code> is very versatile and can be used to easily implement
-many different types of modify macros. Here are just a few examples:
+            </dl>
 
-     <pre class="lisp">          (defun bulkf-transfer (quantity source destination)
-            (values (- source quantity)
-                    (+ destination quantity)))
+            <p>If <var>update-function</var> returns more values than there are places to write to (<code class="common-lisp library marker">:access</code> and <code class="common-lisp library marker">:write</code> <var>items</var>), the additional values are ignored. If it returns less values than there are of these places, the remaining ones are set to <code class="common-lisp standard constant">nil</code>. <code class="common-lisp library macro operator">bulkf</code> returns the values that were written into these places. This might be more or less values than were returned by <var>update-function</var>. If a place to be written to has more than one store variable, the remaining such variables are set to <code class="common-lisp standard constant">nil</code> prior to evaluation of the storing form.</p>
 
-          (defmacro transferf (quantity source destination)
-            `(bulkf #'bulkf-transfer
-                    :pass ,quantity
-                    :access ,source ,destination))
+            <p><code class="common-lisp library macro operator">bulkf</code> accepts an optional unevaluated argument before <var>update-function-form</var> (as very first argument). This must be the symbol <code class="common-lisp">funcall</code> or <code class="common-lisp">apply</code> and determines which operator will be used to call the <var>update-function</var> with its arguments. The default is <code>funcall</code>, which is expected to be used an overwhelming majority of the time. This is the reason this argument has not been made a normal required parameter.</p>
 
-          (let ((account-amounts (list 35 90)))
-            (multiple-value-call #'values
-              (transferf 10
-                         (first account-amounts)
-                         (second account-amounts))
-              account-amounts))
-          &rArr; 25, 100, (25 100)
+          </dd>
 
+        </dl>
+      </section>
 
-          (defun bulkf-init (value number-of-places)
-            (values-list (make-list number-of-places
-                                    :initial-element value)))
+      <section>
+        <h1>Examples</h1>
+        <p><code class="common-lisp library macro operator">bulkf</code> is very versatile and can be used to easily implement many different types of modify macros. Here are just a few examples:</p>
+        <pre class="example"><code class="common-lisp">(<code class="common-lisp standard macro operator">defun</code> <var>bulkf-transfer</var> (<var>quantity</var> <var>source</var> <var>destination</var>)
+  (<code class="common-lisp standard function operator">values</code> (<code class="common-lisp standard function operator">-</code> <var>source</var> <var>quantity</var>)
+          (<code class="common-lisp standard function operator">+</code> <var>destination</var> <var>quantity</var>)))
 
-          (defmacro initf (value &amp;rest places)
-            `(bulkf #'bulkf-init
-                    :pass ,value ,(length places)
-                    :write ,@places))
+(<code class="common-lisp standard macro operator">defmacro</code> <var>transferf</var> (<var>quantity</var> <var>source</var> <var>destination</var>)
+  `(<code class="common-lisp library macro operator">bulkf</code> #'<var>bulkf-transfer</var>
+          <code class="common-lisp library marker">:pass</code> ,<var>quantity</var>
+          <code class="common-lisp library marker">:access</code> ,<var>source</var> ,<var>destination</var>))
 
-          (let (a b (c (make-list 3 :initial-element nil)))
-            (initf 0 a b (second c))
-            (values a b c))
-          &rArr; 0, 0, (NIL 0 NIL)
+(let ((<var>account-amounts</var> (<code class="common-lisp standard function operator">list</code> 35 90)))
+  (<code class="common-lisp standard special-operator operator">multiple-value-call</code> #'<code class="common-lisp standard function operator">values</code>
+    (<var>transferf</var> 10
+               (<code class="common-lisp standard function operator">first</code> <var>account-amounts</var>)
+               (<code class="common-lisp standard function operator">second</code> <var>account-amounts</var>))
+    <var>account-amounts</var>))
+&rArr; 25, 100, (25 100)</code></pre>
+        <pre class="example"><code class="common-lisp">(<code class="common-lisp standard macro operator">defun</code> <var>bulkf-init</var> (<var>value</var> <var>number-of-places</var>)
+  (<code class="common-lisp standard function operator">values-list</code> (<code class="common-lisp standard function operator">make-list</code> <var>number-of-places</var>
+                          :initial-element <var>value</var>)))
 
+(<code class="common-lisp standard macro operator">defmacro</code> <var>initf</var> (<var>value</var> &amp;rest <var>places</var>)
+  `(<code class="common-lisp library macro operator">bulkf</code> #'<var>bulkf-init</var>
+          <code class="common-lisp library marker">:pass</code> ,<var>value</var> ,(<code class="common-lisp standard function operator">length</code> <var>places</var>)
+          <code class="common-lisp library marker">:write</code> ,@<var>places</var>))
 
-          (defun bulkf-spread (spread-function sum-function
-                               &amp;rest place-values)
-            (values-list
-             (let ((number-of-places (length place-values)))
-               (make-list number-of-places
-                          :initial-element
-                          (funcall spread-function
-                                   (apply sum-function place-values)
-                                   number-of-places)))))
+(<code class="common-lisp standard special-operator operator">let</code> (<var>a</var> <var>b</var> (<var>c</var> (<code class="common-lisp standard function operator">make-list</code> 3 :initial-element nil)))
+  (<var>initf</var> 0 <var>a</var> <var>b</var> (<code class="common-lisp standard function operator">second</code> <var>c</var>))
+  (<code class="common-lisp standard function operator">values</code> <var>a</var> <var>b</var> <var>c</var>))
+&rArr; 0, 0, (NIL 0 NIL)</code></pre>
+        <pre class="example"><code class="common-lisp">(<code class="common-lisp standard macro operator">defun</code> <var>bulkf-spread</var> (<var>spread-function</var> <var>sum-function</var>
+                     &amp;rest <var>place-values</var>)
+  (<code class="common-lisp standard function operator">values-list</code>
+   (let ((<var>number-of-places</var> (length <var>place-values</var>)))
+     (<code class="common-lisp standard function operator">make-list</code> <var>number-of-places</var>
+                :initial-element
+                (<code class="common-lisp standard function operator">funcall</code> <var>spread-function</var>
+                         (<code class="common-lisp standard function operator">apply</code> <var>sum-function</var> <var>place-values</var>)
+                         <var>number-of-places</var>)))))
 
-          (defmacro spreadf (spread-function sum-function &amp;rest places)
-            `(bulkf #'bulkf-spread :pass ,spread-function ,sum-function
-                    :access ,@places))
+(<code class="common-lisp standard macro operator">defmacro</code> <var>spreadf</var> (<var>spread-function</var> <var>sum-function</var> &amp;rest <var>places</var>)
+  `(<code class="common-lisp library macro operator">bulkf</code> #'<var>bulkf-spread</var> <code class="common-lisp library marker">:pass</code> ,<var>spread-function</var> ,<var>sum-function</var>
+          <code class="common-lisp library marker">:access</code> ,@<var>places</var>))
 
-          (let ((a 5) (b (list 10 18 20)))
-            (spreadf #'/ #'+ a (first b) (second b))
-            (values a b))
-          &rArr; 11, (11 11 20)
+(<code class="common-lisp standard special-operator operator">let</code> ((<var>a</var> 5) (<var>b</var> (<code class="common-lisp standard function operator">list</code> 10 18 20)))
+  (<var>spreadf</var> #'<code class="common-lisp standard function operator">/</code> #'<code class="common-lisp standard function operator">+</code> <var>a</var> (<code class="common-lisp standard function operator">first</code> <var>b</var>) (<code class="common-lisp standard function operator">second</code> <var>b</var>))
+  (<code class="common-lisp standard function operator">values</code> <var>a</var> <var>b</var>))
+&rArr; 11, (11 11 20)
 
-          (let ((a 2) (b (list 2 4 8)))
-            (spreadf #'* #'* a (first b) (second b) (third b))
-            (values a b))
-          &rArr; 512, (512, 512, 512)
+(<code class="common-lisp standard special-operator operator">let</code> ((<var>a</var> 2) (<var>b</var> (<code class="common-lisp standard function operator">list</code> 2 4 8)))
+  (<var>spreadf</var> #'<code class="common-lisp standard function operator">*</code> #'<code class="common-lisp standard function operator">*</code> <var>a</var> (<code class="common-lisp standard function operator">first</code> <var>b</var>) (<code class="common-lisp standard function operator">second</code> <var>b</var>) (<code class="common-lisp standard function operator">third</code> <var>b</var>))
+  (<code class="common-lisp standard function operator">values</code> <var>a</var> <var>b</var>))
+&rArr; 512, (512, 512, 512)</code></pre>
+        <pre class="example"><code class="common-lisp">(<code class="common-lisp standard macro operator">defun</code> <var>bulkf-map</var> (<var>function</var> &amp;rest <var>place-values</var>)
+  (<code class="common-lisp standard function operator">values-list</code> (<code class="common-lisp standard function operator">mapcar</code> <var>function</var> <var>place-values</var>)))
 
+(<code class="common-lisp standard macro operator">defmacro</code> <var>mapf</var> (<var>function</var> &amp;rest <var>places</var>)
+  `(<code class="common-lisp library macro operator">bulkf</code> #'<var>bulkf-map</var> <code class="common-lisp library marker">:pass</code> ,<var>function</var> <code class="common-lisp library marker">:access</code> ,@<var>places</var>))
 
-          (defun bulkf-map (function &amp;rest place-values)
-            (values-list (mapcar function place-values)))
+(<code class="common-lisp standard special-operator operator">let</code> ((<var>a</var> 0) (<var>b</var> 5) (<var>c</var> (<code class="common-lisp standard function operator">list</code> 10 15)))
+  (<code class="common-lisp standard function operator">values</code> (<code class="common-lisp standard macro operator">multiple-value-list</code> (<var>mapf</var> #'<code class="common-lisp standard function operator">1+</code> <var>a</var> <var>b</var> (<code class="common-lisp standard function operator">second</code> <var>c</var>)))
+          <var>a</var> <var>b</var> <var>c</var>))
+&rArr; (1 6 16), 1, 6, (10 16)</code></pre>
+        <pre class="example"><code class="common-lisp">(<code class="common-lisp standard macro operator">defun</code> <var>bulkf-steal</var> (<var>sum-function</var> <var>steal-function</var>
+                    <var>initial-assets</var> &amp;rest <var>target-assets</var>)
+  (<code class="common-lisp standard special-operator operator">let</code> (<var>stolen</var> <var>leftovers</var>)
+    (<code class="common-lisp standard function operator">mapc</code> (<code class="common-lisp standard macro operator">lambda</code> (<var>assets</var>)
+            (<code class="common-lisp standard macro operator">multiple-value-bind</code> (<var>steal</var> <var>leftover</var>)
+                (<code class="common-lisp standard function operator">funcall</code> <var>steal-function</var> <var>assets</var>)
+              (<code class="common-lisp standard macro operator">push</code> <var>steal</var> <var>stolen</var>)
+              (<code class="common-lisp standard macro operator">push</code> <var>leftover</var> <var>leftovers</var>)))
+          <var>target-assets</var>)
+    (<code class="common-lisp standard function operator">values-list</code>
+     (<code class="common-lisp standard function operator">cons</code> (<code class="common-lisp standard function operator">apply</code> <var>sum-function</var>
+                  (<code class="common-lisp standard function operator">cons</code> <var>initial-assets</var> (<code class="common-lisp standard function operator">nreverse</code> <var>stolen</var>)))
+           (<code class="common-lisp standard function operator">nreverse</code> <var>leftovers</var>)))))
 
-          (defmacro mapf (function &amp;rest places)
-            `(bulkf #'bulkf-map :pass ,function :access ,@places))
+(<code class="common-lisp standard macro operator">defmacro</code> <var>stealf</var> (<var>sum-function</var> <var>steal-function</var> <var>hideout</var> &amp;rest <var>targets</var>)
+  `(<code class="common-lisp library macro operator">bulkf</code> #'<var>bulkf-steal</var> <code class="common-lisp library marker">:pass</code> ,<var>sum-function</var> ,<var>steal-function</var>
+          <code class="common-lisp library marker">:access</code> ,<var>hideout</var> ,@<var>targets</var>))
 
-          (let ((a 0) (b 5) (c (list 10 15)))
-            (values (multiple-value-list (mapf #'1+ a b (second c)))
-                    a b c))
-          &rArr; (1 6 16), 1, 6, (10 16)
-
-
-          (defun bulkf-steal (sum-function steal-function
-                              initial-assets &amp;rest target-assets)
-            (let (stolen leftovers)
-              (mapc (lambda (assets)
-                      (multiple-value-bind (steal leftover)
-                          (funcall steal-function assets)
-                        (push steal stolen)
-                        (push leftover leftovers)))
-                    target-assets)
-              (values-list
-               (cons (apply sum-function
-                            (cons initial-assets (nreverse stolen)))
-                     (nreverse leftovers)))))
-
-          (defmacro stealf (sum-function steal-function hideout &amp;rest targets)
-            `(bulkf #'bulkf-steal :pass ,sum-function ,steal-function
-                    :access ,hideout ,@targets))
-
-          (let ((cave :initial-assets)
-                (museum '(:paintings :collection))
-                (house 20000)
-                (triplex (list :nothing-valuable :random-stuff 400)))
-            (stealf #'list
-                    (lambda (assets)
-                      (if (eq assets :nothing-valuable)
-                          (values nil assets)
-                          (values assets (if (numberp assets) 0 nil))))
-                    cave museum house (first triplex) (second triplex) (third triplex))
-            (values cave museum house triplex))
-          &rArr;
-          (:INITIAL-ASSETS (:PAINTINGS :COLLECTION) 20000 NIL :RANDOM-STUFF 400)
-          NIL
-          0
-          (:NOTHING-VALUABLE NIL 0)
-</pre>
-        </blockquote></div>
+(<code class="common-lisp standard special-operator operator">let</code> ((<var>cave</var> :initial-assets)
+      (<var>museum</var> '(:paintings :collection))
+      (<var>house</var> 20000)
+      (<var>triplex</var> (list :nothing-valuable :random-stuff 400)))
+  (<var>stealf</var> #'<code class="common-lisp standard function operator">list</code>
+          (<code class="common-lisp standard macro operator">lambda</code> (<var>assets</var>)
+            (if (eq <var>assets</var> :nothing-valuable)
+                (values nil <var>assets</var>)
+                (values <var>assets</var> (<code class="common-lisp standard special-operator operator">if</code> (<code class="common-lisp standard function operator">numberp</code> <var>assets</var>) 0 nil))))
+          <var>cave</var> <var>museum</var> <var>house</var> (<code class="common-lisp standard function operator">first</code> <var>triplex</var>) (<code class="common-lisp standard function operator">second</code> <var>triplex</var>) (<code class="common-lisp standard function operator">third</code> <var>triplex</var>))
+  (<code class="common-lisp standard function operator">values</code> <var>cave</var> <var>museum</var> <var>house</var> <var>triplex</var>))
+&rArr;
+(:INITIAL-ASSETS (:PAINTINGS :COLLECTION) 20000 NIL :RANDOM-STUFF 400)
+NIL
+0
+(:NOTHING-VALUABLE NIL 0)</code></pre>
+      </section>
 
     </div>
 
     <div id="footer">
       <div>
         <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Fbulkf.html"><span class="checkmark">✔</span> HTML5</a></span>
         <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> CSS3</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Fbulkf.html"><span class="checkmark">✔</span> CSS3</a></span>
       </div>
     </div>
 

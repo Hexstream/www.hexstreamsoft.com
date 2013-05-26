@@ -124,38 +124,33 @@
         <h1>oldf</h1>
         <p class="description">Make the storing form of a place return old value(s).</p>
       </header>
-
-      <div class="defun">
-&mdash; Accessor Modifier: <b>oldf</b><var> place<a name="index-oldf-8"></a></var><br>
-<blockquote><p><var>oldf</var> simply modifies the behavior of the storing form of
-<var>place</var> so that it returns the old values of the place instead of
-the new ones.
-
-     <pre class="lisp">          (let ((a 5))
-            (values (incf (oldf a) 2)
-                    a))
-          &rArr; 5, 7
-
-          (let ((a 5))
-            (values (setf (oldf a) 10)
-                    a))
-          &rArr; 5, 10
-
-          (let ((list '(1 2 3)))
-            (values (push 0 (oldf list))
-                    list))
-          &rArr; (1 2 3), (0 1 2 3)
-</pre>
-        </blockquote></div>
+      <dl>
+        <dt><pre>Accessor Modifier <code class="common-lisp library macro operator">oldf</code> <var>place</var></pre></dt>
+        <dd>
+          <p><code class="common-lisp library macro operator">oldf</code> simply modifies the behavior of the storing form of <var>place</var> so that it returns the old values of the place instead of the new ones.</p>
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>a</var> 5))
+  (<code class="common-lisp standard function operator">values</code> (<code class="common-lisp standard macro operator">incf</code> (<code class="common-lisp library macro operator">oldf</code> <var>a</var>) 2)
+          <var>a</var>))
+&rArr; 5, 7</code></pre>
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>a</var> 5))
+  (<code class="common-lisp standard function operator">values</code> (<code class="common-lisp standard macro operator">setf</code> (<code class="common-lisp library macro operator">oldf</code> <var>a</var>) 10)
+          <var>a</var>))
+&rArr; 5, 10</code></pre>
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>list</var> '(1 2 3)))
+  (<code class="common-lisp standard function operator">values</code> (<code class="common-lisp standard macro operator">push</code> 0 (<code class="common-lisp library macro operator">oldf</code> <var>list</var>))
+          <var>list</var>))
+&rArr; (1 2 3), (0 1 2 3)</code></pre>
+        </dd>
+      </dl>
 
     </div>
 
     <div id="footer">
       <div>
         <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Foldf.html"><span class="checkmark">✔</span> HTML5</a></span>
         <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> CSS3</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Foldf.html"><span class="checkmark">✔</span> CSS3</a></span>
       </div>
     </div>
 

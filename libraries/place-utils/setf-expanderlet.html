@@ -125,56 +125,28 @@
         <p class="description">Introduce local setf-expanders.</p>
       </header>
 
-      <div class="defun">
-&mdash; Macro: <b>setf-expanderlet</b> (<var>&amp;rest bindings</var>)<var> &amp;body body &rArr; results<a name="index-setf_002dexpanderlet-1"></a></var><br>
-<blockquote><p><code>setf-expanderlet</code> introduces local setf-expanders. This opens
-possibilities for more complex local setf-expanders than can be
-handled by Common Lisp's built-in support for local <code>setf</code>
-functions (which must evaluate all their arguments once from left to
-right and can only accept one new value at a time).
+      <dl>
 
-        <p><code>setf-expanderlet</code> is to <code>define-setf-expander</code> as
-<code>macrolet</code> is to <code>defmacro</code>. The <var>bindings</var> of
-<code>setf-expanderlet</code> have much the same semantics as their
-counterparts in <code>macrolet</code>, except the job of each expander is to
-return a <code>setf</code> expansion (5 values), not a normal expansion (a
-form).
+        <dt><pre>Macro <code class="common-lisp library macro operator">setf-expanderlet</code> (&amp;rest <var>bindings</var>) &amp;body <var>body</var>
+  &rArr; <var>results</var></pre></dt>
 
-        <p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_aab.htm">CLHS 5.1.1.2 Setf Expansions</a>
-
-        <p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defi_3.htm">CLHS <code>define-setf-expander</code></a>
-
-        <p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">CLHS <code>macrolet</code></a>
-
-        <p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defmac.htm">CLHS <code>defmacro</code></a>
-
-        <p>As an example of what <code>setf-expanderlet</code> can let one accomplish,
-<code>with-resolved-places</code> is trivially implemented in terms of it.
-
-        <p><strong>Implementation note:</strong> Surprisingly enough, this implementation
-of <code>setf-expanderlet</code> is written fully portably. As far as I can
-tell, the only caveat is that the name of the local setf-expander is
-unconditionally made a local macro. This macro, if used in a non-place
-context, simply expands to a form that evaluates the subforms and then
-reads the place.
-
-        <p>In contrast, &ldquo;real&rdquo; setf-expanders as defined by
-<code>define-setf-expander</code> don't affect the semantics of the operator
-in non-place contexts, which is useful if the operator is a
-function. However, if the original operator is simple enough that it's
-implemented as a function, you can probably just use a local setf
-function anyway so I don't think the aforementioned caveat is very
-important.
-</p></blockquote></div>
+        <dd>
+          <p><code class="common-lisp library macro operator">setf-expanderlet</code> introduces local setf-expanders. This opens possibilities for more complex local setf-expanders than can be handled by Common Lisp's built-in support for local setf functions (which must evaluate all their arguments once from left to right and can only accept one new value at a time).</p>
+          <p><code class="common-lisp library macro operator">setf-expanderlet</code> is to <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defi_3.htm">define-setf-expander</a></code> as <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">macrolet</a></code> is to <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defmac.htm">defmacro</a></code>. The <var>bindings</var> of <code class="common-lisp library macro operator">setf-expanderlet</code> have much the same semantics as their counterparts in <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">macrolet</a></code>, except the job of each expander is to return a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_aab.htm">setf expansion</a> (5 values), not a normal expansion (a form).</p>
+          <p>As an example of what <code class="common-lisp library macro operator">setf-expanderlet</code> can let one accomplish, <code class="common-lisp library macro operator">with-resolved-places</code> is trivially implemented in terms of it.</p>
+          <p><b>Implementation note:</b> Surprisingly enough, this implementation of <code class="common-lisp library macro operator">setf-expanderlet</code> is written fully portably. As far as I can tell, the only caveat is that the name of the local setf-expander is unconditionally made a local macro. This macro, if used in a non-place context, simply expands to a form that evaluates the subforms and then reads the place.</p>
+          <p>In contrast, "real" setf-expanders as defined by <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defi_3.htm">define-setf-expander</a></code> don't affect the semantics of the operator in non-place contexts, which is useful if the operator is a function. However, if the original operator is simple enough that it's implemented as a function, you can probably just use a local setf function anyway so I don't think the aforementioned caveat is very important.</p>
+        </dd>
+      </dl>
 
     </div>
 
     <div id="footer">
       <div>
         <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Fsetf-expanderlet.html"><span class="checkmark">✔</span> HTML5</a></span>
         <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> CSS3</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Fsetf-expanderlet.html"><span class="checkmark">✔</span> CSS3</a></span>
       </div>
     </div>
 

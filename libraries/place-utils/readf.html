@@ -125,35 +125,24 @@
         <p class="description">Easily make a place work in non-place contexts.</p>
       </header>
 
-      <div class="defun">
-&mdash; Accessor Modifier: <b>readf</b><var> place<a name="index-readf-9"></a></var><br>
-<blockquote><p>This is a most highly trivial accessor modifier useful to easily make
-a place work in non-place contexts.
-
-        <p>A recurring pattern is that you invent a new type of place modifier,
-so you define a new setf-expander. When the place modifier is called
-in a regular, non-place context, you just want to evaluate the
-subforms appropriately and then read the place.
-
-        <p>To use <code>readf</code>, simply make a macro with the same name and
-parameters as the setf-expander. Expand to `(readf ,<var>whole</var>),
-where <var>whole</var> is the <var>&amp;whole</var> variable in your lambda
-list. (Don't worry, this doesn't result in an infinite recursive expansion.)
-
-        <p>(I'm still wondering if <code>readf</code> makes any sense at all or if
-there's a much simpler way to do this... <code>cachef</code>, <code>oldf</code>
-and <code>tracef</code> use it so there appears to be at least some marginal
-value...)
-</p></blockquote></div>
+      <dl>
+        <dt><pre>Accessor Modifier <code class="common-lisp library macro operator">readf</code> <var>place</var></pre></dt>
+        <dd>
+          <p>This is a most highly trivial accessor modifier useful to easily make a place work in non-place contexts.</p>
+          <p>A recurring pattern is that you invent a new type of place modifier, so you define a new setf-expander. When the place modifier is called in a regular, non-place context, you just want to evaluate the subforms appropriately and then read the place.</p>
+          <p>To use <code class="common-lisp library macro operator">readf</code>, simply make a macro with the same name and parameters as the setf-expander. Expand to <code class="common-lisp">`(readf ,<var>whole</var>)</code>, where <var>whole</var> is the <var>&amp;whole</var> variable in your lambda list. (Don't worry, this doesn't result in an infinite recursive expansion.)</p>
+          <p>(I'm still wondering if <code class="common-lisp library macro operator">readf</code> makes any sense at all or if there's a much simpler way to do this... <code class="common-lisp library macro operator">cachef</code>, <code class="common-lisp library macro operator">oldf</code> and <code class="common-lisp library macro operator">tracef</code> use it so there appears to be at least some marginal value...)</p>
+        </dd>
+      </dl>
 
     </div>
 
     <div id="footer">
       <div>
         <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Freadf.html"><span class="checkmark">✔</span> HTML5</a></span>
         <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> CSS3</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Freadf.html"><span class="checkmark">✔</span> CSS3</a></span>
       </div>
     </div>
 

@@ -50,7 +50,7 @@
               <a class="here">
                 with-resolved-places
                 <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"></span>
+                <span class="here-indicator-right"> </span>
               </a>
             </li>
             <li><a href="updatef.html">updatef</a></li>
@@ -125,45 +125,34 @@
         <p class="description">Evaluate subforms once, then access repeatedly safely.</p>
       </header>
 
-      <div class="defun">
-&mdash; Macro: <b>with-resolved-places</b> (<var>&amp;rest bindings</var>)<var> &amp;body body &rArr; results<a name="index-with_002dresolved_002dplaces-2"></a></var><br>
-<blockquote><p>Each <var>binding</var> is of the form <code>(</code><var>resolved-place</var>
-<var>unresolved-place</var><code>)</code>.
+      <dl>
+        <dt><pre>Macro <code class="common-lisp library macro operator">with-resolved-places</code> (&amp;rest <var>bindings</var>) &amp;body <var>body</var>
+  &rArr; <var>results</var></pre></dt>
+        <dd>
+          <p>Each <var>binding</var> is of the form <code class="common-lisp">(<var>resolved-place</var> <var>unresolved-place</var>)</code>.</p>
+          <p>At the time <code class="common-lisp library macro operator">with-resolved-places</code> is entered, the subforms of each <var>unresolved-place</var> are evaluated and bound to their temporary variables. Within <var>body</var> (an implicit <code class="common-lisp standard macro operator">progn</code>), each <var>resolved-place</var> can be used to access (read and/or write) the corresponding <var>unresolved-place</var>, perhaps repeatedly, without evaluating the subforms again.</p>
+          <pre class="example"><code class="common-lisp">(let* ((<var>my-list</var> (list 0 1 2))
+       (<var>my-other-list</var> <var>my-list</var>))
+  (<code class="common-lisp library macro operator">with-resolved-places</code> ((<var>second</var> (second (princ <var>my-list</var>))))
+    (setf <var>my-list</var> nil <var>second</var> 8)
+    (incf <var>second</var> 2)
+    (list <var>my-list</var> <var>my-other-list</var> <var>second</var>)))
 
-        <p>At the time <code>with-resolved-places</code> is entered, the subforms of
-each <var>unresolved-place</var> are evaluated and bound to their temporary
-variables. Within <var>body</var> (an implicit <code>progn</code>), each
-<var>resolved-place</var> can be used to access (read and/or write) the
-corresponding <var>unresolved-place</var>, perhaps repeatedly, without
-evaluating the subforms again.
-
-     <pre class="lisp">          (let* ((my-list (list 0 1 2))
-                 (my-other-list my-list))
-            (with-resolved-places ((second (second (princ my-list))))
-              (setf my-list nil second 8)
-              (incf second 2)
-              (list my-list my-other-list second)))
-          -| (0 1 2)
-          &rArr; (NIL (0 10 2) 10)
-</pre>
-        <p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_aaa.htm">CLHS 5.1.1.1 Evaluation of Subforms to Places</a>
-
-        <p>In the absence of <code>with-resolved-places</code>, in situations where
-multiple evaluation of subforms for different accesses is not desirable,
-one would traditionally bind the results of the evaluation of the
-troublesome subforms (with <code>let</code> or <code>let*</code>) in an ad-hoc way
-on an as-needed basis, manually replicating part of the job of
-setf-expanders.
-</p></blockquote></div>
+  -| (0 1 2)
+  &rArr; (NIL (0 10 2) 10)</code></pre>
+          <p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_aaa.htm">CLHS 5.1.1.1 Evaluation of Subforms to Places</a></p>
+          <p>In the absence of <code class="common-lisp library macro operator">with-resolved-places</code>, in situations where multiple evaluation of subforms for different accesses is not desirable, one would traditionally bind the results of the evaluation of the troublesome subforms (with <code class="common-lisp standard special-operator operator">let</code> or <code class="common-lisp standard special-operator operator">let*</code>) in an ad-hoc way on an as-needed basis, manually replicating part of the job of <a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_aab.htm">setf expanders</a>.</p>
+        </dd>
+      </dl>
 
     </div>
 
     <div id="footer">
       <div>
         <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Fwith-resolved-places.html"><span class="checkmark">✔</span> HTML5</a></span>
         <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> CSS3</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Fwith-resolved-places.html"><span class="checkmark">✔</span> CSS3</a></span>
       </div>
     </div>
 

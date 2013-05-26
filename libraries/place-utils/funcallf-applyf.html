@@ -127,41 +127,34 @@
           <br />possibly along with additional regular arguments.</p>
       </header>
 
-      <div class="defun">
-&mdash; Modify Macro: <b>funcallf</b><var> function-form place &amp;rest other-arg-forms &rArr; results<a name="index-funcallf-5"></a></var><br>
-<blockquote><p><code>funcallf</code> updates a place by calling a function with the old
-value of the place as first argument, possibly along with other
-arguments. The result of the function is stored into the
-place. Specifically:
+      <dl>
 
-          <ol type=1 start=1>
-<li>Evaluate <var>function-form</var> to produce <var>function</var>;
-<li>Evaluate the subforms of <var>place</var>, then read the primary value of
-<var>place</var> to produce <var>old-place-value</var>;
-<li>Evaluate each <var>other-arg-form</var> normally to produce
-<var>other-arg</var>;
-<li>Store into the <var>place</var> the primary value returned by calling
-<var>function</var> with <var>old-place-value</var> and <var>other-args</var> as
-arguments. If <var>place</var> has more than one store variable, the
-remaining such variables are bound to <code>nil</code> prior to evaluation
-of the storing form.
-             </ol>
-</p></blockquote></div>
+        <dt><pre>Modify Macro <dfn><code class="common-lisp library macro operator">funcallf</code></dfn> <var>function-form</var> <var>place</var> &amp;rest <var>other-arg-forms</var>
+  &rArr; <var>results</var></pre></dt>
+        <dd>
+          <p><code class="common-lisp library macro operator">funcallf</code> updates a place by calling a function with the old value of the place as first argument, possibly along with other arguments. The result of the function is stored into the place. Specifically:</p>
+          <ol>
+            <li>Evaluate <var>function-form</var> to produce <var>function</var>;</li>
+            <li>Evaluate the subforms of <var>place</var>, then read the primary value of <var>place</var> to produce <var>old-place-value</var>;</li>
+            <li>Evaluate each <var>other-arg-form</var> normally to produce <var>other-arg</var>;</li>
+            <li>Store into the <var>place</var> the primary value returned by calling <var>function</var> with <var>old-place-value</var> and <var>other-args</var> as arguments. If <var>place</var> has more than one store variable, the remaining such variables are bound to <code>nil</code> prior to evaluation of the storing form.</li>
+          </ol>
+        </dd>
 
-<div class="defun">
-&mdash; Modify Macro: <b>applyf</b><var> function place &amp;rest other-args &rArr; results<a name="index-applyf-6"></a></var><br>
-<blockquote><p>Same as <code>funcallf</code> except <code>apply</code> is used to call the
-<var>function</var> with the primary value of <var>place</var> and other-args.
-</p></blockquote></div>
+        <dt><pre>Modify Macro <dfn><code class="common-lisp library macro operator">applyf</code></dfn> <var>function</var> <var>place</var> &amp;rest <var>other-args</var>
+  &rArr; <var>results</var></pre></dt>
+        <dd><p>Same as <code class="common-lisp library macro operator">funcallf</code> except <code class="common-lisp standard function operator">apply</code> is used to call the <var>function</var> with the primary value of <var>place</var> and <var>other-args</var>.</p></dd>
+
+      </dl>
 
     </div>
 
     <div id="footer">
       <div>
         <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Ffuncallf-applyf.html"><span class="checkmark">✔</span> HTML5</a></span>
         <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> CSS3</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2Ffuncallf-applyf.html"><span class="checkmark">✔</span> CSS3</a></span>
       </div>
     </div>
 
