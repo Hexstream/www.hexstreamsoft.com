@@ -270,6 +270,8 @@ table .link-cell a:hover, table .link-cell a:focus {
 }
 
 .page-badge {
+    position: relative;
+    z-index: 2;
     color: green;
     margin: 0.5em;
     text-decoration: none;
