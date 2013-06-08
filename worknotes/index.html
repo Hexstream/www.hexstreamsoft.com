@@ -216,20 +216,29 @@
           </thead>
           <tbody>
             <tr>
-	      <th class="project-name" id="map-bind" rowspan="2"><a href="#map-bind" class="anchor">&#x2693;</a> map-bind [<a href="../projects/map-bind/">R</a>] [<a href="https://github.com/Hexstream/map-bind">G</a>]</th>
+	      <th class="project-name" id="map-bind" rowspan="2"><a href="#map-bind" class="anchor">&#x2693;</a> map-bind [<a href="../libraries/map-bind/">R</a>] [<a href="https://github.com/Hexstream/map-bind">G</a>]</th>
               <td>Feature pending</td>
               <td>Low</td>
 	    </tr>
             <tr>
               <td class="project-items" colspan="2">
                 <ul>
-                  <li><a href="#initial-review">Initial review.</a></li>
                   <li><a href="#html-documentation">Adopt HTML documentation.</a></li>
+                  <li>Doc: Add a formal description of <code class="common-lisp library macro operator">map-bind</code>.</li>
+                  <li>Doc: Add more usage examples.</li>
+                  <li>Doc: Showcase (already-existing) actual usage of <code class="common-lisp library macro operator">map-bind</code> in actual code of some of my other libraries.</li>
+                  <li>Doc: Explain that <code class="common-lisp library macro operator">map-bind</code> thoroughly solves one of the long-standing problems of mapping operators (variable/value distance) and thus that the suitability of mapping versus other methods should be reconsidered.</li>
+                  <li>Doc: Show macro call/expansion correspondance on mouseover.</li>
+                  <li>API: Make <code class="common-lisp library macro operator">map-bind</code> expand to a call to a new exported macro that can accept a symbol other than <code class="common-lisp standard macro operator">lambda</code> to use in the final expansion.</li>
+                  <li>API: Add a way to define new <code class="common-lisp library macro operator">map-bind</code>-like operators (using something else than <code class="common-lisp standard macro operator">lambda</code> internally) easily.<br />(<span class="blocked">Blocked by <a href="#definitions-systems">definitions-systems</a>.</span>)</li>
+                  <li>Slime: Add support for converting calls to mapping operators to <code class="common-lisp library macro operator">map-bind</code> calls in one operation.</li>
+                  <li>Slime: Add support for showing a preview of the <code class="common-lisp library macro operator">map-bind</code> expansion in the modeline while writing the <var>bindings</var>.</li>
+                  <li>Slime: Add support for completion (<kbd>C-c TAB</kbd>) of at least the standard mapping operators while writing the <var>prologue</var>.</li>
                 </ul>
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="place-modifiers" rowspan="2"><a href="#place-modifiers" class="anchor">&#x2693;</a> place-modifiers [<a href="../projects/place-modifiers/">R</a>] [<a href="https://github.com/Hexstream/place-modifiers">G</a>]</th>
+              <th class="project-name" id="place-modifiers" rowspan="2"><a href="#place-modifiers" class="anchor">&#x2693;</a> place-modifiers [<a href="../libraries/place-modifiers/">R</a>] [<a href="https://github.com/Hexstream/place-modifiers">G</a>]</th>
               <td>Features pending</td>
               <td>Low</td>
 	    </tr>
@@ -242,7 +251,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="cartesian-product-switch" rowspan="2"><a href="#cartesian-product-switch" class="anchor">&#x2693;</a> cartesian-product-switch [<a href="../projects/cartesian-product-switch/">R</a>] [<a href="https://github.com/Hexstream/cartesian-product-switch">G</a>]</th>
+              <th class="project-name" id="cartesian-product-switch" rowspan="2"><a href="#cartesian-product-switch" class="anchor">&#x2693;</a> cartesian-product-switch [<a href="../libraries/cartesian-product-switch/">R</a>] [<a href="https://github.com/Hexstream/cartesian-product-switch">G</a>]</th>
               <td>Features pending?</td>
               <td>Low</td>
 	    </tr>
@@ -255,7 +264,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="parse-number-range" rowspan="2"><a href="#parse-number-range" class="anchor">&#x2693;</a> parse-number-range [<a href="../projects/parse-number-range/">R</a>] [<a href="https://github.com/Hexstream/parse-number-range">G</a>]</th>
+              <th class="project-name" id="parse-number-range" rowspan="2"><a href="#parse-number-range" class="anchor">&#x2693;</a> parse-number-range [<a href="../libraries/parse-number-range/">R</a>] [<a href="https://github.com/Hexstream/parse-number-range">G</a>]</th>
               <td>Features pending?</td>
               <td>Low</td>
 	    </tr>
@@ -268,7 +277,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="bubble-operator-upwards" rowspan="2"><a href="#bubble-operator-upwards" class="anchor">&#x2693;</a> bubble-operator-upwards [<a href="../projects/bubble-operator-upwards/">R</a>] [<a href="https://github.com/Hexstream/bubble-operator-upwards">G</a>]</th>
+              <th class="project-name" id="bubble-operator-upwards" rowspan="2"><a href="#bubble-operator-upwards" class="anchor">&#x2693;</a> bubble-operator-upwards [<a href="../libraries/bubble-operator-upwards/">R</a>] [<a href="https://github.com/Hexstream/bubble-operator-upwards">G</a>]</th>
               <td>Features pending?</td>
               <td>Low</td>
 	    </tr>
@@ -281,7 +290,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="multiple-value-variants" rowspan="2"><a href="#multiple-value-variants" class="anchor">&#x2693;</a> multiple-value-variants [<a href="../projects/multiple-value-variants/">R</a>] [<a href="https://github.com/Hexstream/multiple-value-variants">G</a>]</th>
+              <th class="project-name" id="multiple-value-variants" rowspan="2"><a href="#multiple-value-variants" class="anchor">&#x2693;</a> multiple-value-variants [<a href="../libraries/multiple-value-variants/">R</a>] [<a href="https://github.com/Hexstream/multiple-value-variants">G</a>]</th>
               <td>Maintenance</td>
               <td>Low</td>
 	    </tr>
@@ -294,7 +303,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="symbol-namespaces" rowspan="2"><a href="#symbol-namespaces" class="anchor">&#x2693;</a> symbol-namespaces [<a href="../projects/symbol-namespaces/">R</a>] [<a href="https://github.com/Hexstream/symbol-namespaces">G</a>]</th>
+              <th class="project-name" id="symbol-namespaces" rowspan="2"><a href="#symbol-namespaces" class="anchor">&#x2693;</a> symbol-namespaces [<a href="../libraries/symbol-namespaces/">R</a>] [<a href="https://github.com/Hexstream/symbol-namespaces">G</a>]</th>
               <td>Feature(s) pending</td>
               <td>Low</td>
 	    </tr>
@@ -307,7 +316,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="clhs" rowspan="2"><a href="#clhs" class="anchor">&#x2693;</a> clhs (trivial ASDF wrapper) [<a href="../projects/clhs/">R</a>] [<a href="https://github.com/Hexstream/clhs">G</a>]</th>
+              <th class="project-name" id="clhs" rowspan="2"><a href="#clhs" class="anchor">&#x2693;</a> clhs (trivial ASDF wrapper) [<a href="../libraries/clhs/">R</a>] [<a href="https://github.com/Hexstream/clhs">G</a>]</th>
               <td>Maintenance</td>
               <td>Very low</td>
 	    </tr>
@@ -320,7 +329,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="anaphoric-variants" rowspan="2"><a href="#anaphoric-variants" class="anchor">&#x2693;</a> anaphoric-variants [<a href="../projects/anaphoric-variants/">R</a>] [<a href="https://github.com/Hexstream/anaphoric-variants">G</a>]</th>
+              <th class="project-name" id="anaphoric-variants" rowspan="2"><a href="#anaphoric-variants" class="anchor">&#x2693;</a> anaphoric-variants [<a href="../libraries/anaphoric-variants/">R</a>] [<a href="https://github.com/Hexstream/anaphoric-variants">G</a>]</th>
               <td>Maintenance</td>
               <td>Very low</td>
 	    </tr>
@@ -333,7 +342,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="incognito-keywords" rowspan="2"><a href="#incognito-keywords" class="anchor">&#x2693;</a> incognito-keywords [<a href="../projects/incognito-keywords/">R</a>] [<a href="https://github.com/Hexstream/incognito-keywords">G</a>]</th>
+              <th class="project-name" id="incognito-keywords" rowspan="2"><a href="#incognito-keywords" class="anchor">&#x2693;</a> incognito-keywords [<a href="../libraries/incognito-keywords/">R</a>] [<a href="https://github.com/Hexstream/incognito-keywords">G</a>]</th>
               <td>Maintenance</td>
               <td>Very low</td>
 	    </tr>
@@ -346,7 +355,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="macro-level" rowspan="2"><a href="#macro-level" class="anchor">&#x2693;</a> macro-level [<a href="../projects/macro-level/">R</a>] [<a href="https://github.com/Hexstream/macro-level">G</a>]</th>
+              <th class="project-name" id="macro-level" rowspan="2"><a href="#macro-level" class="anchor">&#x2693;</a> macro-level [<a href="../libraries/macro-level/">R</a>] [<a href="https://github.com/Hexstream/macro-level">G</a>]</th>
               <td>Maintenance</td>
               <td>None</td>
 	    </tr>
@@ -359,7 +368,7 @@
               </td>
             </tr>
             <tr>
-	      <th class="project-name" id="positional-lambda" rowspan="2"><a href="#positional-lambda" class="anchor">&#x2693;</a> positional-lambda [<a href="../projects/positional-lambda/">R</a>] [<a href="https://github.com/Hexstream/positional-lambda">G</a>]</th>
+	      <th class="project-name" id="positional-lambda" rowspan="2"><a href="#positional-lambda" class="anchor">&#x2693;</a> positional-lambda [<a href="../libraries/positional-lambda/">R</a>] [<a href="https://github.com/Hexstream/positional-lambda">G</a>]</th>
               <td>Maintenance</td>
               <td>None</td>
 	    </tr>
@@ -372,7 +381,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="enhanced-multiple-value-bind" rowspan="2"><a href="#enhanced-multiple-value-bind" class="anchor">&#x2693;</a> enhanced-multiple-value-bind [<a href="../projects/enhanced-multiple-value-bind/">R</a>] [<a href="https://github.com/Hexstream/enhanced-multiple-value-bind">G</a>]</th>
+              <th class="project-name" id="enhanced-multiple-value-bind" rowspan="2"><a href="#enhanced-multiple-value-bind" class="anchor">&#x2693;</a> enhanced-multiple-value-bind [<a href="../libraries/enhanced-multiple-value-bind/">R</a>] [<a href="https://github.com/Hexstream/enhanced-multiple-value-bind">G</a>]</th>
               <td>Maintenance</td>
               <td>None</td>
 	    </tr>
@@ -385,7 +394,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="enhanced-eval-when" rowspan="2"><a href="#enhanced-eval-when" class="anchor">&#x2693;</a> enhanced-eval-when [<a href="../projects/enhanced-eval-when/">R</a>] [<a href="https://github.com/Hexstream/enhanced-eval-when">G</a>]</th>
+              <th class="project-name" id="enhanced-eval-when" rowspan="2"><a href="#enhanced-eval-when" class="anchor">&#x2693;</a> enhanced-eval-when [<a href="../libraries/enhanced-eval-when/">R</a>] [<a href="https://github.com/Hexstream/enhanced-eval-when">G</a>]</th>
               <td>Maintenance</td>
               <td>None</td>
 	    </tr>
@@ -398,7 +407,7 @@
               </td>
             </tr>
             <tr>
-              <th class="project-name" id="place-utils" rowspan="2"><a href="#place-utils" class="anchor">&#x2693;</a> place-utils [<a href="../projects/place-utils/">R</a>] [<a href="https://github.com/Hexstream/place-utils">G</a>]</th>
+              <th class="project-name" id="place-utils" rowspan="2"><a href="#place-utils" class="anchor">&#x2693;</a> place-utils [<a href="../libraries/place-utils/">R</a>] [<a href="https://github.com/Hexstream/place-utils">G</a>]</th>
               <td>EOL pending</td>
               <td>None</td>
 	    </tr>
@@ -433,7 +442,7 @@
           <tbody>
             <tr>
               <th class="project-name" id="com.hexstreamsoft" rowspan="2"><a href="#com.hexstreamsoft" class="anchor">&#x2693;</a> com.hexstreamsoft [<a href="https://github.com/Hexstream/com.hexstreamsoft">G</a>]</th>
-              <td>Heavy development, partly blocked</td>
+              <td>Heavy development, <span class="blocked">partly blocked</span></td>
               <td>Critical</td>
 	    </tr>
             <tr>
@@ -449,7 +458,7 @@
             </tr>
             <tr>
               <th class="project-name" id="hextml" rowspan="2"><a href="#hextml" class="anchor">&#x2693;</a> hextml [<a href="https://github.com/Hexstream/hextml">G</a>]</th>
-              <td>Formerly usable but undocumented, redesign pending, blocked</td>
+              <td>Formerly usable but undocumented, redesign pending, <span class="blocked">blocked</span></td>
               <td>Critical</td>
 	    </tr>
             <tr>
@@ -463,7 +472,7 @@
             </tr>
             <tr>
               <th class="project-name" id="hecss" rowspan="2"><a href="#hecss" class="anchor">&#x2693;</a> hecss [<a href="https://github.com/Hexstream/hecss">G</a>]</th>
-              <td>Formerly usable but undocumented, redesign pending, blocked</td>
+              <td>Formerly usable but undocumented, redesign pending, <span class="blocked">blocked</span></td>
               <td>Critical</td>
 	    </tr>
             <tr>
@@ -477,7 +486,7 @@
             </tr>
             <tr>
               <th class="project-name" id="definitions-systems" rowspan="2"><a href="#definitions-systems" class="anchor">&#x2693;</a> definitions-systems [<a href="https://github.com/Hexstream/definitions-systems">G</a>]</th>
-              <td>Brink, blocked</td>
+              <td>Brink, <span class="blocked">blocked</span></td>
               <td>Critical</td>
 	    </tr>
             <tr>
@@ -485,12 +494,13 @@
                 <ul>
                   <li><a href="#initial-review">Initial review.</a></li>
                   <li><a href="#html-documentation">Adopt HTML documentation.</a></li>
+                  <li><span class="blocked">Blocks <a href="#map-bind">map-bind</a>.</span></li>
                 </ul>
               </td>
             </tr>
             <tr>
               <th class="project-name" id="first-class-lambda-lists" rowspan="2"><a href="#first-class-lambda-lists" class="anchor">&#x2693;</a> first-class-lambda-lists [<a href="https://github.com/Hexstream/first-class-lambda-lists">G</a>]</th>
-              <td>Blocked</td>
+              <td><span class="blocked">Blocked</span></td>
               <td>Critical</td>
 	    </tr>
             <tr>
@@ -594,7 +604,7 @@
             </tr>
             <tr>
               <th class="project-name" id="explicit-bind" rowspan="2"><a href="#explicit-bind" class="anchor">&#x2693;</a> explicit-bind [<a href="https://github.com/Hexstream/explicit-bind">G</a>]</th>
-              <td>Brink, blocked</td>
+              <td>Brink, <span class="blocked">blocked</span></td>
               <td>High</td>
 	    </tr>
             <tr>
@@ -634,7 +644,7 @@
             </tr>
             <tr>
               <th class="project-name" id="phased-generic-functions" rowspan="2"><a href="#phased-generic-functions" class="anchor">&#x2693;</a> phased-generic-functions [<a href="https://github.com/Hexstream/phased-generic-functions">G</a>]</th>
-              <td>Incomplete, blocked, back burner</td>
+              <td>Incomplete, <span class="blocked">blocked</span>, back burner</td>
               <td>High?</td>
 	    </tr>
             <tr>
@@ -647,7 +657,7 @@
             </tr>
             <tr>
               <th class="project-name" id="leanify-expand" rowspan="2"><a href="#leanify-expand" class="anchor">&#x2693;</a> leanify-expand [<a href="https://github.com/Hexstream/leanify-expand">G</a>]</th>
-              <td>Stub, blocked</td>
+              <td>Stub, <span class="blocked">blocked</span></td>
               <td>Medium</td>
 	    </tr>
             <tr>
@@ -794,7 +804,7 @@
             </tr>
             <tr>
               <th class="project-name" id="with-shadowed-bindings" rowspan="2"><a href="#with-shadowed-bindings" class="anchor">&#x2693;</a> with-shadowed-bindings [<a href="https://github.com/Hexstream/with-shadowed-bindings">G</a>]</th>
-              <td>Brink, blocked</td>
+              <td>Brink, <span class="blocked">blocked</span></td>
               <td>N/A</td>
 	    </tr>
             <tr>
@@ -1056,7 +1066,7 @@
             </tr>
             <tr>
               <th class="project-name" id="destructuring-bind-star" rowspan="2"><a href="#destructuring-bind-star" class="anchor">&#x2693;</a> destructuring-bind-star [<a href="https://github.com/Hexstream/destructuring-bind-star">G</a>]</th>
-              <td>Merge into first-class-lambda-lists pending, blocked</td>
+              <td>Merge into first-class-lambda-lists pending, <span class="blocked">blocked</span></td>
               <td>N/A</td>
 	    </tr>
             <tr>

@@ -40,3 +40,8 @@ ul {
 #metaprojects-psi-column {
     width: 10%;
 }
+
+.blocked {
+    color: red;
+    font-style: italic;
+}
