@@ -171,6 +171,10 @@ header h1 {
     margin-left: 0.1em;
 }
 
+.notice.good-news {
+    border-color: green;
+}
+
 .warning {
     border-color: orange;
 }
