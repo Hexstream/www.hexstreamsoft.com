@@ -6,6 +6,10 @@ th.name {
     text-align: center;
 }
 
-#contact-me {
+#full-name, #nickname, #introduction, #contact-me {
     text-align: center;
+}
+
+#full-name, #nickname {
+    margin-top: -0.5em;
 }
