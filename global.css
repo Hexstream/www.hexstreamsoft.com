@@ -362,3 +362,7 @@ li li {
 .good-news a, .watch-out a {
     color: inherit;
 }
+
+a.tweet {
+    color: cadetblue;
+}
