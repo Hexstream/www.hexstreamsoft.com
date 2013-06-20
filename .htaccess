@@ -1,1 +1,2 @@
 RedirectPermanent /projects/ http://www.hexstreamsoft.com/libraries/
+ErrorDocument 404 /404.html
