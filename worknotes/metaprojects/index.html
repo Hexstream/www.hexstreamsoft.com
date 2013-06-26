@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Major Metaprojects | Worknotes | HexstreamSoft</title>
+    <link href="../../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/category.css" rel="stylesheet" type="text/css" />
+    <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1783234-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+
+  <body>
+
+    <nav id="site-nav">
+
+      <nav class="breadcrumbs">
+        <a href="../../">HexstreamSoft</a>
+        <span class="separator"> » </span>
+        <a href="../">Worknotes</a>
+        <span class="separator"> » </span>
+        <a class="here">Metaprojects</a>
+        <div class="float-clear"></div>
+      </nav>
+
+      <nav class="ancestors-nav">
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="major-projects_navbox">
+          <h1>
+            <a class="here">
+              Major Metaprojects
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </a>
+          </h1>
+          <ul>
+            <li>
+              <a href="#hexstream-common-lisp-essentials">CL Essentials</a>
+              <a class="direct-link" href="hexstream-cl-essentials/"><span>⬈</span></a>
+            </li>
+            <li>
+              <a href="#loopless2">Loopless 2</a>
+              <a class="direct-link" href="loopless2/"><span>⬈</span></a>
+            </li>
+            <li>
+              <a href="#hexstream-web">Hexstream Web</a>
+              <a class="direct-link" href="hexstream-web/"><span>⬈</span></a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="worknotes_navbox">
+          <h1>
+            <a href="../">Worknotes</a>
+          </h1>
+          <ul>
+            <li><a href="../introduction.html">Introduction</a></li>
+            <li>
+              <a class="here">Metaprojects
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="main_navbox">
+          <h1 class="box-header">
+            <a href="../../">
+              HexstreamSoft
+            </a>
+          </h1>
+          <ul>
+            <li><a href="../../introduction.html">Introduction</a></li>
+            <li><a href="../../libraries/">Libraries</a></li>
+            <li><a href="../../tweets/">Tweets</a></li>
+            <li><a href="../">Worknotes <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
+            <li><a href="../../accounts/">Accounts</a></li>
+            <li><a href="../../resources/">Resources</a></li>
+          </ul>
+        </nav>
+
+      </nav>
+
+    </nav>
+
+    <p id="last-updated">This page was last updated on <time datetime="2013-06-25">25 june 2013</time>.</p>
+
+    <div id="content">
+      <header id="page-header">
+        <h1>Major Metaprojects</h1>
+        <p class="description">Groupings of collaborating projects with strongly related purpose and development.</p>
+      </header>
+
+      <section id="loopless2">
+
+        <header>
+          <h1><a onmouseup="this.blur();" href="hexstream-cl-essentials/">Hexstream's Common Lisp Essentials</a></h1>
+        </header>
+
+        <p>Over time I've grown annoyed by what I perceive as some lackings in the Common Lisp language. Fortunately, Common Lisp is very flexible so all I need to do to address my concerns is write some portable libraries. I've already made <a href="../../libraries/">some simple ones</a> (that you can also use) to fix some of these annoyances, but the major ones are yet to be completed. Finishing them is my most critical priority because I can't stand to write in "plain Common Lisp" anymore for non-trivial projects.</p>
+
+      </section>
+
+      <section id="loopless2">
+
+        <header>
+          <h1><a onmouseup="this.blur();" href="loopless2/">Loopless 2</a></h1>
+        </header>
+
+        <p>A work-in-progress (and currently unusable) collection of libraries seeking to eventually relegate <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm">loop</a></code> (and all similarly monolithic alternatives such as <cite class="common-lisp library"><a href="http://common-lisp.net/project/iterate/">Iterate</a></cite>) to COBOL status by providing powerful lispy composable iteration facilities.</p>
+
+      </section>
+
+      <section id="hexstream-web">
+
+        <header>
+          <h1><a onmouseup="this.blur();" href="hexstream-web/">Hexstream Web</a></h1>
+        </header>
+
+        <p>A coherent bunch of libraries that can be used together as a dynamic web framework. Actually this is currently completely unusable and undocumented. I've successfully developed and used these for myself in the past for my old mega-project <a href="https://github.com/Hexstream/bahagontools">BahagonTools</a>. I've been looking to clean this up for years now and haven't yet been successful but it will happen as I absolutely need this and my policy is to only use those libraries I made that are documented and usable by others.</p>
+
+      </section>
+
+    </div>
+
+    <div id="footer">
+      <div>
+        <a href="#" class="back-to-top">⬆</a>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fcategories%2Fdata-structures%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fcategories%2Fdata-structures%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      </div>
+    </div>
+
+  </body>
+</html>
