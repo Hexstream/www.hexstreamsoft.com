@@ -102,27 +102,48 @@
       <section>
 
         <h1 id="standard-library">Standard library (and style suggestions) (20) <a href="#standard-library" class="anchor">&#x2693;</a></h1>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Tip: Don't write:(let ((*print-pretty* nil)) (write object))Write this instead:(write object :pretty nil)Also :base :case :circle etc.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226409281707196416" data-datetime="2012-07-20T20:12:33+00:00">July 20, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Tip: Don't write (format nil "~S" object), write (prin1-to-string object) instead. There's also WRITE-TO-STRING and PRINC-TO-STRING.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226410733406134272" data-datetime="2012-07-20T20:18:20+00:00">July 20, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Pathname for current .lisp file: #.(or *compile-file-truename* *load-truename*) Works reliably with LOAD/COMPILE-FILE/ASDF/Emacs/Slime/fasl.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226436705572495360" data-datetime="2012-07-20T22:01:32+00:00">July 20, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>My nomination for most obscure CL feature hidden in plain sight: WITH-INPUT-FROM-STRING's INDEX argument. Somewhat complicated semantics.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228776367611858944" data-datetime="2012-07-27T08:58:31+00:00">July 27, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: Most string comparison operators (STRING/=, STRING-NOT-EQUAL, STRING&lt;, etc) return a mismatch-index, not just a generalized boolean!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229644906807820288" data-datetime="2012-07-29T18:29:47+00:00">July 29, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>SUBTYPEP has interesting return values: 2 booleans meaning "Yes, definitely", "Definitely not" and "I'm not sure exactly, let's assume not."</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229650063650078720" data-datetime="2012-07-29T18:50:16+00:00">July 29, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: MEMBER returns a tail of the list. How to get the "head"? (let ((list '(a b 7 c))) (ldiff list (member-if #'numberp list))) =&gt; (A B)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/232956618399178752" data-datetime="2012-08-07T21:49:20+00:00">August 7, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>I used to write (and (consp foo) (eq foo 'symbol)). Now I prefer (typep foo '(cons (eql symbol))): more direct, "one" conceptual operation.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/239119085428957185" data-datetime="2012-08-24T21:56:47+00:00">August 24, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Nomination for most little-used feature in CL: ,. is to ,@ as NCONC is to APPEND. With reason: hard to reason about. <a href="http://t.co/F7AlgSXf" title="http://www.lispworks.com/documentation/HyperSpec/Body/02_df.htm">lispworks.com/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/242679728362881024" data-datetime="2012-09-03T17:45:30+00:00">September 3, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Used to write (let ((v i)) x y v) but now prefer (let ((v i)) (prog1 v x y)): states intent up-front; won't forget V return while writing.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/243394666542792706" data-datetime="2012-09-05T17:06:25+00:00">September 5, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>So (let ((v i)) (prog1 v x y)) is better for human readers/writers, especially as "x y" get more complex. One downside: extra indentation.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/243394775313698816" data-datetime="2012-09-05T17:06:51+00:00">September 5, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: Exclusive bounds for compound type specifiers: (integer 0 (10)) == (integer 0 9). Useful for '(integer 0 (#.multiple-values-limit)).</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/245216138429095937" data-datetime="2012-09-10T17:44:17+00:00">September 10, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>(let ((box (make-array '() :initial-element 'e))) (values (aref box) (array-total-size box))) =&gt; E, 1. Same reason that (apply #'* '()) =&gt; 1</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/248155470634819584" data-datetime="2012-09-18T20:24:09+00:00">September 18, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: Lil'-known array functions: ARRAY-TOTAL-SIZE, ARRAY-RANK, ARRAY-DIMENSION, ROW-MAJOR-AREF, ARRAY-ROW-MAJOR-INDEX, ARRAY-IN-BOUNDS-P.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/248481776148819968" data-datetime="2012-09-19T18:00:46+00:00">September 19, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: All rounding functions ([F]TRUNCATE, [F]ROUND, [F]FLOOR, [F]CEILING) accept an optional DIVISOR argument. (floor 26 6) =&gt; 4, 2</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/248517094382125056" data-datetime="2012-09-19T20:21:07+00:00">September 19, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>My nominations for most glaring X3J13 concessions: CASE's OTHERWISE (does anyone use it?) and PAIRLIS' non-commitment to order of new pairs.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/248570258158391297" data-datetime="2012-09-19T23:52:22+00:00">September 19, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: Continually confused about (sort seq #'&lt;) VS (sort seq #'&gt;)? Just remember that (apply #'&lt; (sort list #'&lt;)) always returns true.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251024683481305088" data-datetime="2012-09-26T18:25:23+00:00">September 26, 2012</a></blockquote>
         "Unless SEQ has duplicates", as pointed out by Greg Pfeil in a reply.
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: Vector of N random integers below L: (map-into (make-array N) (lambda () (random L))) (also MAKE-LIST, MAKE-SEQUENCE, MAKE-STRING)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251828520869851137" data-datetime="2012-09-28T23:39:32+00:00">September 28, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: Result of (gensym "VAR") might print with escapes, depending on (readtable-case *readtable*). (gensym (string '#:var)) averts this.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251832127459577856" data-datetime="2012-09-28T23:53:52+00:00">September 28, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: (values #5(1 2 3) (array-dimensions <a href="https://twitter.com/search/%232a">#2a</a>((a1 a2) (b1 b2) (c1 c2)))) =&gt; #(1 2 3 3 3), (3 2) <a href="http://t.co/Y7wiSVqj" title="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhc.htm">lispworks.com/</a> <a href="http://t.co/Bfm5cW4k" title="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhl.htm">lispworks.com/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251839516107747328" data-datetime="2012-09-29T00:23:14+00:00">September 29, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>My nomination for most complex (though justified) syntax in CL: DEFINE-METHOD-COMBINATION. It's truly breathtaking! <a href="http://t.co/XXjPM9kt" title="http://www.lispworks.com/documentation/HyperSpec/Body/m_defi_4.htm">lispworks.com/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/253555558286774272" data-datetime="2012-10-03T18:02:10+00:00">October 3, 2012</a></blockquote>
 
       </section>
