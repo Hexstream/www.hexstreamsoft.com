@@ -151,6 +151,7 @@
       <section>
 
         <h1 id="closures">Closures (1) <a href="#closures" class="anchor">&#x2693;</a></h1>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Favorite CL technique: compilation to trees of closures = easy impl of DSLs with expressiveness of high-level + performance of low-level!</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227505272124489728" data-datetime="2012-07-23T20:47:38+00:00">July 23, 2012</a></blockquote>
 
       </section>
@@ -158,8 +159,11 @@
       <section>
 
         <h1 id="lambda-lists">Lambda lists (3) <a href="#lambda-lists" class="anchor">&#x2693;</a></h1>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>My nomination for weirdest CL feature: pass :allow-other-keys t in any &amp;key args context to disable keyword args check. <a href="http://t.co/2Ea9F07I" title="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">lispworks.com/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227466327424651265" data-datetime="2012-07-23T18:12:53+00:00">July 23, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Avoid using &amp;optional in public APIs. &amp;key is more future-proof and makes for more explicit calls; &amp;optional and &amp;key don't mix very well.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228498002178875392" data-datetime="2012-07-26T14:32:23+00:00">July 26, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>&amp;aux does have one tremendously practical utility: saving one indentation level. Also for BOA lambda lists but I don't really use DEFSTRUCT.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/243773617190600704" data-datetime="2012-09-06T18:12:14+00:00">September 6, 2012</a></blockquote>
 
       </section>
@@ -167,18 +171,31 @@
       <section>
 
         <h1 id="multiple-values">Multiple values (12) <a href="#multiple-values" class="anchor">&#x2693;</a></h1>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>(multiple-value-bind (a b c) (foo) (bar)) == (multiple-value-call (lambda (&amp;optional a b c &amp;rest rest) (declare (ignore rest)) (bar)) (foo))</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226445261206085632" data-datetime="2012-07-20T22:35:32+00:00">July 20, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>(apply #'foo bar (multiple-value-list (baz))) is ugly and inefficient. Do (multiple-value-call #'foo bar (baz)) instead.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226503559011786752" data-datetime="2012-07-21T02:27:11+00:00">July 21, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>MULTIPLE-VALUE-CALL helped me understand continuation-passing-style: returning values == calling continuation with those values.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227065961914707968" data-datetime="2012-07-22T15:41:58+00:00">July 22, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>MULTIPLE-VALUE-CALL also showed me how funargs and retvals are such close duals of each other. Future dialect: take retvals more seriously.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227068212339167232" data-datetime="2012-07-22T15:50:55+00:00">July 22, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>I used to write (let ((a (if c x y)) (b (if c foo bar)))). Now I prefer (multiple-value-bind (a b) (if c (values x foo) (values y bar))).</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/240550552822509569" data-datetime="2012-08-28T20:44:55+00:00">August 28, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Some people may not realize how frigging efficient multiple-value returns/binding really is. This might explain in part why it's underused.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/240823068237373440" data-datetime="2012-08-29T14:47:48+00:00">August 29, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: Indentation-saving trick: (multiple-value-bind (a1 a2 b c1 c2 c3) (multiple-value-call #'values (values 1 2) 3 (values 4 5 6)) ...)</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/244687695153070080" data-datetime="2012-09-09T06:44:27+00:00">September 9, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>I sometimes find fruitful to indicate a function's return values similarly to its arguments: (defun foo (a1 a2) '(values v1 v2 v3 v4) ...).</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/245213362026340354" data-datetime="2012-09-10T17:33:16+00:00">September 10, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: Returning primary value: (values form) is popular, but as FORM gets bigger retvals count is obscured. (identity form) more explicit.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251110442922033152" data-datetime="2012-09-27T00:06:09+00:00">September 27, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: (lambda (f a &amp;optional (b nil ?)) (if ? (funcall f a b) (funcall f a))) ==&gt; (lambda ... (multiple-value-call f a (if ? b (values))))</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/251801831192276993" data-datetime="2012-09-28T21:53:29+00:00">September 28, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>(flet ((f (v) ...)) (let ((a (f x)) (b (f y))) BB)) ==&gt; (multiple-value-bind (a b) (flet ((f (v) ...)) (values (f x) (f y))) BB) = f.scope--</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252812249620697088" data-datetime="2012-10-01T16:48:31+00:00">October 1, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>multiple-value-&amp;bind fixes MULTIPLE-VALUE-BIND's obliviousness to &amp;key and &amp;rest multival returns (otherwise awkward): <a href="https://t.co/DIIuMVhA" title="https://github.com/Hexstream/positional-lambda/blob/8445c33e4165f7eaa3451b053e62356a1b8b8763/main.lisp#L249">github.com/Hexstream/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252869576470192128" data-datetime="2012-10-01T20:36:19+00:00">October 1, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>(defun %make-accumulator () '(values collect finish) (let ((list nil)) (values (lambda (o) (push o list)) (lambda () (nreverse list))))))</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/253254259213217792" data-datetime="2012-10-02T22:04:55+00:00">October 2, 2012</a></blockquote>
 
       </section>

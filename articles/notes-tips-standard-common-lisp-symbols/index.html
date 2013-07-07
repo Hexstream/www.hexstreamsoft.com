@@ -125,7 +125,7 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm">&amp;allow-other-keys</a>
               </th>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dad.htm">Lambda list keyword</a></th>
-              <td>This disables keyword arguments checking. It's effectively a "subclause" of <a href="#&amp;key">&amp;key</a>. It can appear in any lambda list that can accept <a href="#&amp;key">&amp;key</a>. It's often useful in combination with &amp;rest (and &amp;key) to receive arbitrary keyword arguments for the purpose of forwarding them to a function with APPLY.</td>
+              <td>This <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disables keyword arguments checking</a>. It's effectively a "subclause" of <a href="#&amp;key">&amp;key</a>. It can appear in any lambda list that can accept <a href="#&amp;key">&amp;key</a>. It's often useful in combination with &amp;rest (and &amp;key) to receive arbitrary keyword arguments for the purpose of forwarding them to a function with APPLY.</td>
             </tr>
           </tbody>
           <tbody id="&amp;aux">
@@ -169,7 +169,8 @@
                 <p>lisptip: "<a href="http://lisptips.com/post/31253190116/binding-keyword-arguments">Binding keyword arguments</a>"</p>
                 <p>lisptip: "<a href="http://lisptips.com/post/37350128056/duplicated-keyword-arguments">Duplicated keyword arguments</a>"</p>
                 <p>Processing of <a href="#&amp;key">&amp;key</a> arguments is generally slower than for other kinds of arguments, due to somewhat more complex processing most of which may well happen at runtime, but unless you're dealing with performance-critical code there usually isn't cause for concern.</p>
-                <p>Use <a href="#&amp;allow-other-keys">&amp;allow-other-keys</a> to disable keyword arguments checking from the callee side. Note that the caller can always disable keyword arguments checking in any <a href="#&amp;key">&amp;key</a> arguments context by passing <code class="common-lisp">:allow-other-keys t</code>. It's sometimes convenient to use this feature to capture a few arguments explicitly and then forward the rest to another function with APPLY, sidestepping the need to explicitly remove unwanted keyword arguments from the list.</p>
+                <p>Use <a href="#&amp;allow-other-keys">&amp;allow-other-keys</a> to <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disable keyword arguments checking</a> from the callee side.</p>
+                <p>My nomination for "weirdest Common Lisp feature": the caller can always <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disable keyword arguments checking</a> in any <a href="#&amp;key">&amp;key</a> arguments context by passing <code class="common-lisp">:allow-other-keys t</code>. It's sometimes convenient to use this feature to capture a few arguments explicitly and then forward the rest to another function with <a href="#apply">apply</a>, sidestepping the need to explicitly remove unwanted keyword arguments from the list.</p>
                 <p>Use <a href="#&amp;rest">&amp;rest</a> to capture a list of all keyword arguments.</p>
               </td>
             </tr>
@@ -181,7 +182,10 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm">&amp;optional</a>
               </th>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dab.htm">Lambda list keyword</a></th>
-              <td>I'd recommend using <a href="#&amp;key">&amp;key</a> instead of <a href="#&amp;optional">&amp;optional</a> in public interfaces. This is because having several <a href="#&amp;optional">&amp;optional</a> arguments is inconvenient (you might need to explicitly provide several default values just to get at the positional argument you wanted to use) and confusing (the arbitrariness of the order increases exponentially), and thus if many new optional arguments had to be added one would use <a href="#&amp;key">&amp;key</a> arguments... But then <a href="#&amp;optional">&amp;optional</a> and <a href="#&amp;key">&amp;key</a> really don't mix well. Indeed only two macros in Common Lisp do so and they have still tripped up many users. So it's generally better to use <a href="#&amp;key">&amp;key</a>.</td>
+              <td>
+                <p>I'd recommend using <a href="#&amp;key">&amp;key</a> instead of <a href="#&amp;optional">&amp;optional</a> in public interfaces. This is because having several <a href="#&amp;optional">&amp;optional</a> arguments is inconvenient (you might need to explicitly provide several default values just to get at the positional argument you wanted to use) and confusing (the arbitrariness of the order increases exponentially), and thus if many new optional arguments had to be added one would use <a href="#&amp;key">&amp;key</a> arguments... But then <a href="#&amp;optional">&amp;optional</a> and <a href="#&amp;key">&amp;key</a> really don't mix well. Indeed only two macros in Common Lisp do so and they have still tripped up many users. So it's generally better to use <a href="#&amp;key">&amp;key</a>.</p>
+                <p><a href="#&amp;key">&amp;key</a> also makes for more explicit calls, which are arguably easier to read, especially with spotty knowledge of an API.</p>
+              </td>
             </tr>
           </tbody>
           <tbody id="&amp;rest">
@@ -193,7 +197,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dac.htm">Lambda list keyword</a></th>
               <td>
                 <p>Can be used with &amp;key to capture all keyword arguments (even those not known in advance but allowed by &amp;allow-other-keys or <code class="common-lisp">:allow-other-keys t</code>) in the order they appear in the call. This order is of particular interest for macros that need to ensure that keyword arguments are evaluated in the same order that the caller intended. This is an often overlooked issue. The easiest way to arrange for a macro to evaluate keyword arguments in the right order is to expand to a function call.</p>
-                <p>APPLY is very related.</p>
+                <p><a href="#apply">apply</a> is very related.</p>
               </td>
             </tr>
           </tbody>
@@ -4027,7 +4031,18 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">flet</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p>The following is suboptimal because even though <var>foo</var> won't be used in <var>body</var>, it's still in scope there, arguably increasing cognitive load (especially if <var>body</var> is complex):</p>
+                <pre class="example"><code class="common-lisp">(flet ((<var>foo</var> (arg) ...))
+  (let ((a (<var>foo</var> x))
+        (b (<var>foo</var> y)))
+    <var>body</var>))</code></pre>
+                <p>One might prefer to reduce the scope of the local function to the minimum possible instead, like this:</p>
+                <pre class="example"><code class="common-lisp">(multiple-value-bind (a b)
+    (flet ((<var>foo</var> (arg) ...))
+      (values (<var>foo</var> x) (<var>foo</var> y)))
+  <var>body</var>)</code></pre>
+              </td>
             </tr>
           </tbody>
           <tbody id="float">
@@ -4900,7 +4915,9 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/a_lambda.htm">lambda</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p>Compilation to trees of closures is my favorite Common Lisp technique! It allows easy impl of DSLs with the expressiveness of a high-level language AND the performance of a low-level language.</p>
+              </td>
             </tr>
           </tbody>
           <tbody id="lambda-list-keywords">
@@ -6211,7 +6228,50 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_multip.htm">multiple-value-bind</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <pre class="example"><code class="common-lisp">(multiple-value-bind (a b c) (foo)
+  ...)
+==
+(multiple-value-call (lambda (&amp;optional a b c &amp;rest rest)
+                       (declare (ignore rest))
+                       ...)
+  (foo))</code></pre>
+                <p>I used to write this:</p>
+                  <pre class="example"><code class="common-lisp"></code>(let ((a (if c x y))
+      (b (if c foo bar)))
+  ...)</pre>
+                  <p>Now I prefer this instead:</p>
+                  <pre class="example"><code class="common-lisp">(multiple-value-bind (a b)
+    (if c
+        (values x foo)
+        (values y bar))
+  ...)</code></pre>
+                <p>This is highly likely to be efficient and has so many advantages! (TODO: refactor the following into a list) We don't duplicate the condition, which is easier to write and to read, especially as the condition gets more complex. In fact, if it gets complex enough or involves side-effects we might otherwise extract it into another binding, which we'll need to name (also with the cognitive overhead associated with knowing that the binding is still in scope for the body but won't be used there):</p>
+                <pre class="example"><code class="common-lisp">(let* ((blah (my so very complex condition))
+       (a (if blah x y))
+       (b (if blah foo bar)))
+  ...)</code></pre>
+
+                <p>Here's a similar version, but you shouldn't use it because it might just allocate some conses and do some type checks at runtime:</p>
+                <pre class="example"><code class="common-lisp">(destructuring-bind (a b)
+    (if c
+        (list x foo)
+        (list y bar))
+  ...)</code></pre>
+                <p>Here's a trick that saves some indentation:</p>
+                <pre class="example"><code class="common-lisp">(multiple-value-bind (a1 a2 b c1 c2 c3)
+    (multiple-value-call #'values
+      (values 1 2)
+      3
+      (values 4 5 6))
+  ...)</code></pre>
+                <p>Compared to this:</p>
+                <pre class="example"><code class="common-lisp">(multiple-value-bind (a1 a2) (values 1 2)
+  (let ((b 3))
+    (multiple-value-bind (c1 c2 c3) (values 4 5 6)
+      ...)))</code></pre>
+                <p>You might like <a href="../../libraries/enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a>.</p>
+              </td>
             </tr>
           </tbody>
           <tbody id="multiple-value-call">
@@ -6221,7 +6281,21 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_multip.htm">multiple-value-call</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p><a href="#multiple-value-call">multiple-value-call</a> helped me understand continuation-passing-style: returning values is equivalent to calling a continuation with those values.</p>
+                <p><a href="#multiple-value-call">multiple-value-call</a> also showed me how function arguments and return values are such close duals of each other. Future languages, please take return values more seriously!</p>
+                <pre class="example"><code class="common-lisp">(lambda (required &optional (optional nil optional-supplied-p))
+  (if optional-supplied-p
+      (<var>foo</var> required optional)
+      (<var>foo</var> required)))
+==>
+(lambda (required &optional (optional nil optional-supplied-p))
+  (multiple-value-call #'<var>foo</var>
+    <var>required</var>
+    (if <var>optional-supplied-p</var>
+        <var>optional</var>
+        (values))))</code></pre>
+              </td>
             </tr>
           </tbody>
           <tbody id="multiple-value-list">
@@ -6231,7 +6305,9 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_mult_1.htm">multiple-value-list</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p><code class="common-lisp">(apply #'foo bar (multiple-value-list (baz)))</code> is ugly and inefficient. Do <code class="common-lisp">(multiple-value-call #'foo bar (baz))</code> instead.</p>
+              </td>
             </tr>
           </tbody>
           <tbody id="multiple-value-prog1">
@@ -9726,7 +9802,24 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/a_values.htm">values</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p>Some people may not realize how frigging efficient multiple-value returns/binding really is. This might explain in part why it's underused.</p>
+                <p>I sometimes find fruitful to indicate a function's return values similarly to its arguments:</p>
+                <pre class="example"><code class="common-lisp">(defun foo (a1 a2)
+  '(values v1 v2 v3 v4)
+  ...)</code></pre>
+                <p><code class="common-lisp">(values <var>form</var>)</code> is popular way of ensuring that only the primary value of <var>form</var> is returned, but as <var>form</var> gets bigger it gets comparatively less clear that <var>form</var> is the only argument to <code class="common-lisp standard function operator">values</code>. <code class="common-lisp">(identity form)</code> is a more explicit alternative, as it's well-known that <code class="common-lisp standard function operator">identity</code> only ever accepts exactly one value and returns exactly one value.</p>
+                <p><code class="common-lisp standard function operator">values</code> is effectively "multiple-value-identity".</p>
+                <p>Here's a dead-simple (and simplistic?) accumulator pattern:</p>
+                <pre class="example"><code class="common-lisp">(defun %make-accumulator ()
+  '(values collect finish)
+  (let ((list nil))
+    (values (lambda (object)
+              (push object list))
+            (lambda ()
+              (nreverse list))))))</code></pre>
+                (TODO: An example use would be nice.)
+              </td>
             </tr>
           </tbody>
           <tbody id="values-list">
