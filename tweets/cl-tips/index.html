@@ -203,11 +203,17 @@
       <section>
 
         <h1 id="classes">Classes (6) <a href="#classes" class="anchor">&#x2693;</a></h1>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: I like to prefix all private class slots with % to be more explicit and avoid accidental "leaking": (defclass foo () (%function))</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252045647543410688" data-datetime="2012-09-29T14:02:19+00:00">September 29, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: (defclass foo () ((%bar :reader foo-bar :accessor %foo-bar))) avoids "leaking" a writer while retaining convenience for implementor.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252047360572665857" data-datetime="2012-09-29T14:09:08+00:00">September 29, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: Want to (effectively) override an initform in a subclass? (defclass subclass (superclass) () (:default-initargs :init 'new-default))</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252049746640904192" data-datetime="2012-09-29T14:18:37+00:00">September 29, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: :default-initargs often a better idea than :initform, especially when auxiliary methods are defined on INITIALIZE-INSTANCE and such.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252051194372046848" data-datetime="2012-09-29T14:24:22+00:00">September 29, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: (defmethod initialize-instance :around ((o c) &amp;rest r &amp;key k &amp;allow-other-keys) (apply #'call-next-method o :k (canonicalize k) r))</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252054114836566016" data-datetime="2012-09-29T14:35:58+00:00">September 29, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL tip: Each of :initarg, :reader, :writer and :accessor can be specified multiple times for a single class slot. <a href="http://t.co/DPkarp2W" title="http://www.lispworks.com/documentation/HyperSpec/Body/m_defcla.htm">lispworks.com/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252060588367294466" data-datetime="2012-09-29T15:01:41+00:00">September 29, 2012</a></blockquote>
 
       </section>
@@ -215,15 +221,25 @@
       <section>
 
         <h1 id="macros">Macros (11) <a href="#macros" class="anchor">&#x2693;</a></h1>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL DSL tip: Don't build thick macro layers. Instead, 1. solid foundation of functions and objects 2. thin layer of syntax sugar with macros.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227507013125545985" data-datetime="2012-07-23T20:54:33+00:00">July 23, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL advice: It's almost never a good idea to generate user-visible symbols as part of macroexpansions. Make user pass a symbol explicitly.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228184576172883968" data-datetime="2012-07-25T17:46:57+00:00">July 25, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>CL advice: Don't wrap DEFCLASS to remove the explicitness. Gaining more experience with better OO designs will reveal erroneous assumptions.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228185970611216384" data-datetime="2012-07-25T17:52:29+00:00">July 25, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Key to understanding setfable places: DEFINE-SETF-EXPANDER/GET-SETF-EXPANSION and CLHS 5.1. DEFSETF/DEFINE-MODIFY-MACRO mere conveniences.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/228241446711488512" data-datetime="2012-07-25T21:32:56+00:00">July 25, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Often overlooked macro quality issue: correct handling of all declarations usually doesn't happen by accident, you'll often have to parse.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/230319737651990528" data-datetime="2012-07-31T15:11:19+00:00">July 31, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>I dislike macros that expand to calls to themselves, as interactive macroexpansion might not reveal all the work of the macro at once.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/230390460236062720" data-datetime="2012-07-31T19:52:20+00:00">July 31, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Interactive macroexpansion of calls to MACROLET-defined macros is not commonly supported, so it's sometimes more pragmatic to use DEFMACRO.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/230393825259057152" data-datetime="2012-07-31T20:05:43+00:00">July 31, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Macro design: Full code walking implies full macroexpansion of all macros, which almost guarantees an ugly, unreadable MACROEXPAND result.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252859256573943808" data-datetime="2012-10-01T19:55:19+00:00">October 1, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>Macro design: Full code walking is too conceptually and implementationally complex. Redesign semantics with FLET/MACROLET/SYMBOL-MACROLET.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252859315516497920" data-datetime="2012-10-01T19:55:33+00:00">October 1, 2012</a></blockquote>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>New library: MACRO-LEVEL saves indentation; more concise and direct. (macro-level ...) == (macrolet ((m () ...)) (m)) <a href="http://t.co/PMVTpZHZ" title="http://www.hexstreamsoft.com/projects/macro-level/">hexstreamsoft.com/projects/</a></p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/253617478826086400" data-datetime="2012-10-03T22:08:13+00:00">October 3, 2012</a></blockquote>
 
       </section>
@@ -251,14 +267,16 @@
       <section>
 
         <h1 id="misc">Miscellaneous (1) <a href="#misc" class="anchor">&#x2693;</a></h1>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>(defun gensyms (&amp;optional b) (let ((c 0)) (lambda (&amp;optional (base (or b (error "No base")))) (gensym (format nil "~A~D-" base (incf c))))))</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/252816876047048705" data-datetime="2012-10-01T17:06:55+00:00">October 1, 2012</a></blockquote>
 
       </section>
 
       <section>
 
-        <h1 id="newbs">Newbs (4) <a href="#newbs" class="anchor">&#x2693;</a></h1>
+        <h1 id="newbs">Newbies (4) <a href="#newbs" class="anchor">&#x2693;</a></h1>
         <small>(not pejorative in this context!)</small>
+        DEL
         <blockquote class="twitter-tweet tw-align-center"><p>I don't get why newbies often complain about PUSH's argument order. What's unintuitive about (push object list) ~= (cons object list)?</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/226687186278416385" data-datetime="2012-07-21T14:36:51+00:00">July 21, 2012</a></blockquote>
         <blockquote class="twitter-tweet tw-align-center"><p>CL newbs: Please avoid inventing your own reader macros until you've acquired proper CL experience/taste. Do learn about built-in ones.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/227444825983709185" data-datetime="2012-07-23T16:47:26+00:00">July 23, 2012</a></blockquote>
         <blockquote class="twitter-tweet tw-align-center"><p>CL newbs: Most of your objections have already been discussed to death for decades, so don't get surprised and angered by prompt pushback.</p>&mdash; Jean-PhilippeParadis (@HexstreamSoft) <a href="https://twitter.com/HexstreamSoft/status/229651211702374400" data-datetime="2012-07-29T18:54:50+00:00">July 29, 2012</a></blockquote>

@@ -2970,6 +2970,16 @@
               <th></th>
               <td>
                 <p>lisptip: "<a href="http://lisptips.com/post/11728375873/initform-and-default-initargs">:initform and :default-initargs</a>"</p>
+                <p>I like to prefix all private class slots with "%" to be more explicit and avoid accidental "leaking":</p>
+                <pre class="example"><code class="common-lisp">(defclass foo ()
+  (%function))</code></pre>
+                <p>In the above example, using a slot name of "function" would likely have used the symbol from the Common Lisp package. Subsequently, users of the package might come under the false impression that the slot is part of the public interface.</p>
+                <p>It's common practice to prefix "internal" symbols with "%". It's always possible to access any symbol from a package with the "package::symbol" notation but referring to %-prefixed symbols in this way is solely the (ir)responsibility of the user.</p>
+                <p>Here's how to avoid "leaking" a writer while still retaining the convenience of having an accessor for the implementor:</p>
+                <pre class="example"><code class="common-lisp">(defclass foo ()
+  ((%bar :reader foo-bar :accessor %foo-bar)))</code></pre>
+                <p>Each of the <code class="common-lisp standard marker">:initarg</code>, <code class="common-lisp standard marker">:reader</code>, <code class="common-lisp standard marker">:writer</code> and <code class="common-lisp standard marker">:accessor</code> slot options can be specified multiple times for a single class slot. The "sum" of the options will take effect.</p>
+                <p>Newbies are often tempted to wrap <code class="common-lisp standard macro operator">defclass</code> with a macro that removes the explicitness, automatically generating :initarg and :accessor options from a slot's name, for instance. This is misguided. <code class="common-lisp standard macro operator">defclass</code>' explicitness is in fact a very great feature, though this may not be immediately apparent if one goes by more "traditional" approaches to OO. Using the far superior OO approaches which Common Lisp enables (like generic-functions protocols) makes it easier to appreciate how the various slot options are more independent than they may first appear.</p>
               </td>
             </tr>
           </tbody>
@@ -3062,7 +3072,13 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defmac.htm">defmacro</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p><abbrev title="Domain-Specific Language">DSL</abbrev> tip: Don't build thick macro layers. Instead, start by building a solid foundation of functions and objects, then add a thin layer of syntactic sugar with macros at the end. Your system will be much more flexible and well-considered this way.</p>
+                <p>It's almost never a good idea to generate user-visible symbols as part of macroexpansions (like <code class="common-lisp standard macro operator">defstruct</code> does). Make the user pass a symbol explicitly instead. (TODO: explain why doing the former leads to problems and doing the latter averts them and is much cleaner.)</p>
+                <p>Correct handling of all declarations in macros usually doesn't happen by accident. You'll often have to parse them and carefully put the right declarations in the right places in the expansion. This is an often overlooked macro quality issue.</p>
+                <p>I dislike macros that expand to calls to themselves, as interactive macroexpansion might not reveal all the work of the macro at once. The user might then feel compelled to manually expand the result recursively, which can be a pretty annoying thing to do.</p>
+                <p>Macro design: Full code walking implies full macroexpansion of all macros, which almost guarantees an ugly, unreadable <code class="common-lisp standard function operator">macroexpand</code> result. In addition, full code walking is a conceptually and implementationally complex approach fraught with perils. I like to design the semantics of my macros which would otherwise require full code walking such that simply including calls to <code class="common-lisp standard special-operator operator">flet</code>, <code class="common-lisp standard special-operator operator">macrolet</code> and <code class="common-lisp standard special-operator operator">symbol-macrolet</code> in the expansion suffices.</p>
+              </td>
             </tr>
           </tbody>
           <tbody id="defmethod">
@@ -4361,6 +4377,11 @@
               <th></th>
               <td>
                 <p>The result of <code class="common-lisp">(gensym "VAR")</code> might print with escapes, depending on <code class="common-lisp">(readtable-case *readtable*)</code>. <code class="common-lisp">(gensym (string '#:var))</code> averts this.</p>
+                <p>Here's a simple function that returns a new "gensym series generator":</p>
+                <pre class="example"><code class="common-lisp">(defun gensyms (&optional default-base)
+  (let ((counter 0))
+    (lambda (&optional (base (or default-base (error "No base"))))
+      (gensym (format nil "~A~D-" base (incf counter))))))</code></pre>
               </td>
             </tr>
           </tbody>
@@ -4715,7 +4736,13 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_init_i.htm">initialize-instance</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p>Here's a way to canonicalize ("transform") an initarg very "early" in the object instance initialization process. The canonicalization will affect all <code class="common-lisp standard function operator">initialize-instance</code> :before, :after and primary methods (thus including slots initialized by an ":initarg" option.)</p>
+                <pre class="example"><code class="common-lisp">(defmethod initialize-instance :around
+    ((object my-class)
+     &rest initargs &key key &allow-other-keys)
+  (apply #'call-next-method object :key (<var>canonicalize</var> key)
+         initargs))</code></pre></td>
             </tr>
           </tbody>
           <tbody id="inline">
@@ -5607,7 +5634,10 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">macrolet</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p>Interactive macroexpansion of calls to <code class="common-lisp standard special-operator operator">macrolet</code>-defined macros is not commonly supported, so it's sometimes more pragmatic to use <code class="common-lisp standard macro operator">defmacro</code>.</p>
+                <p>You might like <a href="../../libraries/macro-level/">macro-level</a>.</p>
+              </td>
             </tr>
           </tbody>
           <tbody id="make-array">
@@ -7409,7 +7439,9 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_push.htm">push</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p>A few people sometimes complain about the argument order, but it's pretty intuitive if one considers that <code class="common-lisp">(push <var>object</var> <var>list</var>)</code> is strongly related to <code class="common-lisp">(cons <var>object</var> <var>list</var>)</code>.</p>
+              </td>
             </tr>
           </tbody>
           <tbody id="pushnew">
@@ -8164,7 +8196,9 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/a_setf.htm">setf</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p>The key to understanding setfable places lies in the definitions of <code class="common-lisp standard macro operator">define-setf-expander</code> and <code class="common-lisp standard function operator">get-setf-expansion</code> and <a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_a.htm">CLHS 5.1</a>. <code class="common-lisp standard macro operator">defsetf</code> and <code class="common-lisp standard macro operator">define-modify-macro</code> are mere conveniences and, in my view, not particularly useful to really understand how setfable places work since they provide only for special cases while the first two macros I named work for the general case.</p>
+              </td>
             </tr>
           </tbody>
           <tbody id="setq">
