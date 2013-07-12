@@ -109,6 +109,7 @@
 
         <p>The HyperSpec provides a <a href="http://www.lispworks.com/documentation/HyperSpec/Front/X_AllSym.htm">handy list of all symbols on one page</a>, useful for all kinds of research.<br />Sometimes nothing beats a good old manual exhaustive linear scan...</p>
         <p>A <a href="http://www.lispworks.com/documentation/HyperSpec/Data/Map_Sym.txt">machine-readable version of the list</a> is also available.</p>
+        <p>By the way, don't get intimidated by Common Lisp's 978 symbols count, it's inflated by various factors such as "symbol duplications" and 20 c[ad]r variations.</p>
 
         <table id="all-standard-symbols-table">
           <thead>
@@ -125,7 +126,10 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm">&amp;allow-other-keys</a>
               </th>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dad.htm">Lambda list keyword</a></th>
-              <td>This <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disables keyword arguments checking</a>. It's effectively a "subclause" of <a href="#&amp;key">&amp;key</a>. It can appear in any lambda list that can accept <a href="#&amp;key">&amp;key</a>. It's often useful in combination with &amp;rest (and &amp;key) to receive arbitrary keyword arguments for the purpose of forwarding them to a function with APPLY.</td>
+              <td>
+                <p>This <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disables keyword arguments checking</a>. It's effectively a "subclause" of <a href="#&amp;key">&amp;key</a>. It can appear in any lambda list that can accept <a href="#&amp;key">&amp;key</a>. It's often useful in combination with &amp;rest (and &amp;key) to receive arbitrary keyword arguments for the purpose of forwarding them to a function with APPLY.</p>
+                <p>If a generic-function specifies &amp;allow-other-keys, then none of its methods needs to. This is very convenient for INITIALIZE-INSTANCE and friends, for instance.</p>
+              </td>
             </tr>
           </tbody>
           <tbody id="&amp;aux">
@@ -135,7 +139,21 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm">&amp;aux</a>
               </th>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dae.htm">Lambda list keyword</a></th>
-              <td>Many effectively treat this as deprecated, though it's still useful in some cases. Most notably in BOA lambda lists, where it can "internally" initialize a slot according to a computation which may involve previous arguments that were supplied or defaulted. It can also conveniently save a level of indentation compared to using a LET, which is sometimes worthwhile in complex code. Conceptually, &amp;aux is not part of the public interface of a lambda list.</td>
+              <td>
+                <p>Many effectively treat this as deprecated, though it's still useful in some cases. Most notably in BOA lambda lists, where it can "internally" initialize a slot according to a computation which may involve previous arguments that were supplied or defaulted. It can also conveniently save a level of indentation compared to using a LET, which is sometimes worthwhile in complex code. Conceptually, &amp;aux is not part of the public interface of a lambda list.</p>
+                <p>It's a bit of a shame that &amp;aux can't appear before &amp;key because it could be useful in some cases. Fortunately, such a feature can be emulated like this (contrived example):</p>
+                <pre class="example"><code class="common-lisp">(defun slot-value-if-bound
+    (object &amp;key ((#:aux boundp) (slot-boundp object 'slot))
+                 (value (when boundp (slot-value object 'slot))))
+  (values value bound))</code></pre>
+                <p>This is safe because <code class="common-lisp">#:aux</code> is an uninterned symbol and thus it's impossible to accidentally supply the keyword argument so the associated default form will always be evaluated to initialize the <var>boundp</var> variable.</p>
+                <p>One minor inconvenience for the user of such a function is that the argument hints will be cluttered with the fake &amp;aux argument. Support could theoretically be added to tools such as Slime so that they wouldn't show any keyword arguments using an uninterned symbol named "AUX" as <var>keyword-name</var>.</p>
+                <p>The above is equivalent to the following hypothetical code (that doesn't work):</p>
+                <pre class="example"><code class="common-lisp">(defun slot-value-if-bound
+    (object &amp;aux (boundp (slot-boundp object 'slot))
+            &amp;key (value (when boundp (slot-value object 'slot))))
+  (values value boundp))</code></pre>
+              </td>
             </tr>
           </tbody>
           <tbody id="&amp;body">
@@ -171,7 +189,7 @@
                 <p>Processing of <a href="#&amp;key">&amp;key</a> arguments is generally slower than for other kinds of arguments, due to somewhat more complex processing most of which may well happen at runtime, but unless you're dealing with performance-critical code there usually isn't cause for concern.</p>
                 <p>Use <a href="#&amp;allow-other-keys">&amp;allow-other-keys</a> to <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disable keyword arguments checking</a> from the callee side.</p>
                 <p>My nomination for "weirdest Common Lisp feature": the caller can always <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disable keyword arguments checking</a> in any <a href="#&amp;key">&amp;key</a> arguments context by passing <code class="common-lisp">:allow-other-keys t</code>. It's sometimes convenient to use this feature to capture a few arguments explicitly and then forward the rest to another function with <a href="#apply">apply</a>, sidestepping the need to explicitly remove unwanted keyword arguments from the list.</p>
-                <p>Use <a href="#&amp;rest">&amp;rest</a> to capture a list of all keyword arguments.</p>
+                <p>Use <a href="#&amp;rest">&amp;rest</a> to capture a list of all keyword arguments in the order they appear in the call.</p>
               </td>
             </tr>
           </tbody>
@@ -2618,7 +2636,12 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_comput.htm">compute-applicable-methods</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p>Here's a simplistic function that attempts to determine if a certain generic-function is capable of accepting some specific arguments, with many caveats (TODO: explain the assumptions and caveats):</p>
+                <pre class="example"><code class="common-lisp">(defun supports-operation-p (generic-function &rest args)
+  (member nil (compute-applicable-methods generic-function args)
+          :key #'method-qualifiers))</code></pre>
+              </td>
             </tr>
           </tbody>
           <tbody id="compute-restarts">
@@ -3000,7 +3023,9 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defgen.htm">defgeneric</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p>Redefining a DEFGENERIC with removed :method options will automatically remove the corresponding methods, which is quite convenient.</p>
+              </td>
             </tr>
           </tbody>
           <tbody id="define-compiler-macro">
@@ -3133,7 +3158,9 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defstr.htm">defstruct</a>
               </th>
               <th></th>
-              <td></td>
+              <td>
+                <p>There's no portable way to directly instantiate a DEFSTRUCT structure using a <code class="common-lisp">(:constructor nil)</code> option (unless a non-nil :constructor option is also specified), but doing it can still be useful to declare "abstract structures" that another DEFSTRUCT can then "inherit" from with the <code class="common-lisp standard marker">:include</code> option.</p>
+              </td>
             </tr>
           </tbody>
           <tbody id="deftype">
@@ -5653,8 +5680,8 @@
                 <pre class="example"><code class="common-lisp">(let ((box (make-array '() :initial-element 'e)))
   (values (aref box) (array-total-size box)))
 => E, 1.</code></pre>
-                <pre class="example"><code class="common-lisp">#5(1 2 3) => #(1 2 3 3 3)</code></pre>
-                <pre class="example"><code class="common-lisp">(array-dimensions #2a((a1 a2) (b1 b2) (c1 c2))) => (3 2)</code></pre>
+                <pre class="example"><code class="common-lisp"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhc.htm">#5(</a>1 2 3) => <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhc.htm">#(</a>1 2 3 3 3)</code></pre>
+                <pre class="example"><code class="common-lisp">(array-dimensions <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhl.htm">#2a</a>((a1 a2) (b1 b2) (c1 c2))) => (3 2)</code></pre>
               </td>
             </tr>
           </tbody>
@@ -6336,7 +6363,7 @@
               </th>
               <th></th>
               <td>
-                <p><code class="common-lisp">(apply #'foo bar (multiple-value-list (baz)))</code> is ugly and inefficient. Do <code class="common-lisp">(multiple-value-call #'foo bar (baz))</code> instead.</p>
+                <p><code class="common-lisp">(apply #'foo bar (multiple-value-list (baz)))</code> is ugly and inefficient, as it conses up a throwaway list of the return values of <code class="common-lisp">(baz)</code>. <code class="common-lisp">(multiple-value-call #'foo bar (baz))</code> is more likely to be efficient and arguably represents intent better.</p>
               </td>
             </tr>
           </tbody>
@@ -6410,7 +6437,7 @@
               </th>
               <th></th>
               <td>
-                <p>My nomination for "most little-used feature in Common Lisp": ",." is to ",@" as <a href="#nconc">nconc</a> is to <a href="#append">append</a>. It makes sense that it's so little used because it's pretty hard to reason about and the potential efficiency gains are probably not worth the trouble in most cases.</p>
+                <p>My nomination for "most little-used feature in Common Lisp": <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_df.htm">",." is to ",@"</a> as <a href="#nconc">nconc</a> is to <a href="#append">append</a>. It makes sense that it's so little used because it's pretty hard to reason about (at least to me) and the potential efficiency gains are probably not worth the trouble in most cases.</p>
               </td>
             </tr>
           </tbody>
@@ -9615,7 +9642,7 @@
               </th>
               <th></th>
               <td>
-                <p>I used to write <code class="common-lisp">(and (consp <var>foo</var>) (eq <var>foo</var> 'symbol))</code>. Now I prefer <code class="common-lisp">(typep <var>foo</var> '(cons (eql symbol)))</code>: more direct, "one" conceptual operation.</p>
+                <p>I used to write <code class="common-lisp">(and (consp <var>foo</var>) (eq (car <var>foo</var>) 'symbol))</code>. Now I prefer <code class="common-lisp">(typep <var>foo</var> '(cons (eql symbol)))</code> because I find it more "direct" as it involves one single "conceptual operation". It's "check if <var>foo</var> is a cons and that its CAR is <var>symbol</var>" VS "check that <var>foo</var> is a cons with a CAR of <var>symbol</var>". The difference is subtle but personally I find it significant. The latter form will also never require putting the result of <var>foo</var> in a variable if it's complex and/or involves non-idempotent side-effects. I expect the performance of these two statements to be equivalent in most good implementations (but didn't verify).</p>
               </td>
             </tr>
           </tbody>
