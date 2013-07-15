@@ -1,0 +1,19 @@
+#all-standard-symbols-table td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#all-standard-symbols-table tbody th {
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.topic {
+    border-top: dashed thin #9D9D9D; /*dashed thin #9D9D9D;*/
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+
+.topic:first-child {
+    border-top: none;
+}
