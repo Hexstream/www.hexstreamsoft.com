@@ -1,3 +1,8 @@
+#all-standard-symbols-table th, #all-standard-symbols-table td {
+    text-align: left;
+    padding: 0.5em;
+}
+
 #all-standard-symbols-table td {
     padding-top: 0;
     padding-bottom: 0;
@@ -10,6 +15,27 @@
 
 #all-standard-symbols-table th * {
     text-decoration: none;
+}
+
+#all-standard-symbols-table th ul {
+    font-weight: normal;
+    font-size: smaller;
+    margin-top: 0.25em;
+}
+
+#all-standard-symbols-table th ul li {
+    margin-top: 0.25em;
+}
+
+#all-standard-symbols-table .horizontal-grouping-header {
+    border-left-style: hidden;
+    padding: 0;
+}
+
+#all-standard-symbols-table .horizontal-grouping-header a {
+    display: block;
+    padding: 0.25em;
+    text-align: left;
 }
 
 

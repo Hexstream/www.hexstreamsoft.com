@@ -292,8 +292,8 @@ h1 {
     position: relative;
 }
 
-table > thead > tr > th.horizontal-grouping-header,
-table > tbody > tr > th.horizontal-grouping-header{
+table > thead > tr > th.horizontal-grouping-header a:last-child,
+table > tbody > tr > th.horizontal-grouping-header a:last-child {
     text-align: center;
     font-size: xx-large;
     padding-top: 0.25em;
