@@ -1920,7 +1920,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_assocc.htm">assoc</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_assocc.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -1930,7 +1930,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_assocc.htm">assoc-if</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_assocc.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -1940,7 +1940,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_assocc.htm">assoc-if-not</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_assocc.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -1950,7 +1950,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_asin_.htm">atan</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_asin_.htm">Function</a>
+                <ul>
+                  <li>Math</li>
+                  <li>Trigonometry</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -1960,7 +1966,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_sinh_.htm">atanh</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_sinh_.htm">Function</a>
+                <ul>
+                  <li>Math</li>
+                  <li>Trigonometry</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -1970,7 +1982,37 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/a_atom.htm">atom</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_atom.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <p>Everything that is not a cons is an atom, including nil.</p>
+                </div>
+                <div class="topic">
+                  <blockquote>
+                    <code class="common-lisp">(atom object) == (typep object 'atom) == (not (consp object))<br />== (not (typep object 'cons)) == (typep object '(not cons))</code>
+                  </blockquote>
+                </div>
+                <div class="topic">
+                  <p>atom is one of the very few predicate functions in Common Lisp that doesn't follow the usual naming convention for predicates (ending in "p").</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_atom.htm">Type</a></th>
+              <td>
+                <div class="topic">
+                  <p><a href="#atom">atom</a> is not a "perfect dual" to <a href="#cons">cons</a> because it's just a type so you can't dispatch on it.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_a.htm#atom">Glossary entry</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -1980,7 +2022,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_base_c.htm">base-char</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_base_c.htm">Type</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -1990,7 +2032,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_base_s.htm">base-string</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_base_s.htm">Type</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -2000,8 +2042,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_bignum.htm">bignum</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_bignum.htm">Type</a></th>
+              <td>
+                <div class="topic">
+                  <p>This is specified to be a type, not a class, so you can't portably dispatch on it.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="bit">
@@ -2010,7 +2056,15 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/a_bit.htm">bit</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_sb.htm">Accessor</a></th>
+              <td></td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_bit.htm">Type</a></th>
+              <td></td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_b.htm#bit">Glossary entry</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -2020,7 +2074,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">bit-and</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2030,7 +2089,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">bit-andc1</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2040,7 +2104,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">bit-andc2</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2050,7 +2119,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">bit-eqv</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2060,7 +2134,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">bit-ior</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2070,7 +2149,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">bit-nand</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2080,7 +2164,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">bit-nor</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2090,7 +2179,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">bit-not</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2100,7 +2194,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">bit-orc1</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2110,7 +2209,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">bit-orc2</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2120,7 +2224,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_bt_vec.htm">bit-vector</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_bt_vec.htm">System class</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -2130,8 +2234,18 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_vec.htm">bit-vector-p</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_vec.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <pre class="example"><code class="common-lisp">(bit-vector-p <var>object</var>) == (typep <var>object</var> 'bit-vector)</code></pre>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="bit-xor">
@@ -2140,7 +2254,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">bit-xor</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_and.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2150,8 +2269,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_block.htm">block</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_block.htm">Special operator</a></th>
+              <td>
+                <div class="topic">
+                  <p>Informally, this is the static, lexical counterpart of <a href="#catch">catch</a>.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="boole">
@@ -2160,8 +2283,17 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_boole.htm">boole</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_boole.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <p>I must say I'm puzzled by this function.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="boole-1">
@@ -2170,7 +2302,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-1</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2180,7 +2317,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-2</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2190,7 +2332,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-and</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2200,7 +2347,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-andc1</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2210,7 +2362,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-andc2</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2220,7 +2377,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-c1</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2230,7 +2392,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-c2</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2240,7 +2407,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-clr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2250,7 +2422,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-eqv</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2260,7 +2437,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-ior</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2270,7 +2452,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-nand</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2280,7 +2467,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-nor</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2290,7 +2482,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-orc1</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2300,7 +2497,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-orc2</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2310,7 +2512,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-set</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2320,7 +2527,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">boole-xor</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_b_1_b.htm">Constant variable</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2330,8 +2542,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_ban.htm">boolean</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_ban.htm">Type</a></th>
+              <td>
+                <div class="topic">
+                  <p><q>Conditional operations, such as if, permit the use of generalized booleans, not just booleans; any non-nil value, not just t, counts as true for a generalized boolean. However, as a matter of convention, the symbol t is considered the canonical value to use even for a generalized boolean when no better choice presents itself.</q></p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="both-case-p">
@@ -2340,7 +2556,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_upper_.htm">both-case-p</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_upper_.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -2350,8 +2566,17 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_boundp.htm">boundp</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_boundp.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <p><q>The function bound (<i>sic</i>) determines only whether a symbol has a value in the global environment; any lexical bindings are ignored.</q></p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="break">
@@ -2360,37 +2585,48 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_break.htm">break</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_break.htm">Function</a>
+                <ul>
+                  <li>Debugging</li>
+                  <li>Interactive</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
           <tbody id="broadcast-stream">
             <th><a href="#broadcast-stream" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_broadc.htm">broadcast-stream</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_broadc.htm">broadcast-stream</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_broadc.htm">System class</a></th>
               <td></td>
             </tr>
           </tbody>
           <tbody id="broadcast-stream-streams">
             <th><a href="#broadcast-stream-streams" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_broadc.htm">broadcast-stream-streams</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_broadc.htm">broadcast-stream-streams</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_broadc.htm">Function</a>
+                <ul>
+                  <li>Slot reader</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
           <tbody id="built-in-class">
             <th><a href="#built-in-class" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_built_.htm">built-in-class</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_built_.htm">built-in-class</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_built_.htm">System class</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -2400,8 +2636,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_butlas.htm">butlast</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_butlas.htm">Function</a></th>
+              <td>
+                <div class="topic">
+                  <pre class="example"><code class="common-lisp">(butlast <var>list</var> <var>n</var>) == (ldiff <var>list</var> (last <var>list</var> <var>n</var>))</code></pre>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="byte">
@@ -2410,7 +2650,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_by_by.htm">byte</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_by_by.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                  <li>Constructor</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2420,7 +2666,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_by_by.htm">byte-position</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_by_by.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                  <li>Slot reader</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2430,7 +2682,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_by_by.htm">byte-size</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_by_by.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                  <li>Slot reader</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2440,8 +2698,17 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">caaaar</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <p>If I ever needed to do this, and I don't see why I would,<br />I'd write out <code class="common-lisp">(car (car (car (car <var>cons</var>))))</code> that one time.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="caaadr">
@@ -2450,8 +2717,17 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">caaadr</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <p>Not useful.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="caaar">
@@ -2460,7 +2736,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">caaar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2470,7 +2751,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">caadar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2480,7 +2766,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">caaddr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2490,7 +2781,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">caadr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2500,7 +2796,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">caar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2510,7 +2811,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cadaar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2520,7 +2826,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cadadr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2530,7 +2841,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cadar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2540,7 +2856,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">caddar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2550,10 +2871,15 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cadddr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
-                  <p>I like to use <a href="#fourth">fourth</a> instead.</p>
+                  <p>I prefer <a href="#fourth">fourth</a>.</p>
                 </div>
               </td>
             </tr>
@@ -2564,10 +2890,15 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">caddr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
-                  <p>I like to use <a href="#third">third</a> instead.</p>
+                  <p>I prefer <a href="#third">third</a>.</p>
                 </div>
               </td>
             </tr>
@@ -2578,10 +2909,15 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cadr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
-                  <p>I like to use <a href="#second">second</a> instead.</p>
+                  <p>I prefer <a href="#second">second</a>.</p>
                 </div>
               </td>
             </tr>
@@ -2589,10 +2925,15 @@
           <tbody id="call-arguments-limit">
             <th><a href="#call-arguments-limit" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_call_a.htm">call-arguments-limit</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_call_a.htm">call-arguments-limit</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_call_a.htm">Constant variable</a>
+                <ul>
+                  <li>Implementation limit</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2602,17 +2943,17 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_call_m.htm">call-method</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_call_m.htm">Local macro</a></th>
               <td></td>
             </tr>
           </tbody>
           <tbody id="call-next-method">
             <th><a href="#call-next-method" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_call_n.htm">call-next-method</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_call_n.htm">call-next-method</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_call_n.htm">Local function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -2622,8 +2963,15 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">car</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a></th>
+              <td>
+                <div class="topic">
+                  <p>Normally accesses the car slot of a cons, but <code class="common-lisp">(car nil) → nil</code>.</p>
+                </div>
+                <div class="topic">
+                  <p>In contexts where the car of a cons to access is semantically the first element of a list, using <a href="#first">first</a> might indicate intent better.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="case">
@@ -2632,7 +2980,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm">case</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm">Macro</a></th>
               <td>
                 <div class="topic">
                   <p>One of my nominations for "most glaring X3J13 concession": Besides <code class="common-lisp standard marker">t</code>, <a href="#case">case</a> also accepts <code class="common-lisp standard marker">otherwise</code> to designate the "otherwise" clause. (Does anyone use the <code class="common-lisp standard marker">otherwise</code> notation??)</p>
@@ -2646,8 +2994,18 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_catch.htm">catch</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_catch.htm">Special operator</a></th>
+              <td>
+                <div class="topic">
+                  <p>This doesn't really have anything to do with exception handling.</p>
+                </div>
+                <div class="topic">
+                  <p><q>It is customary for symbols to be used as tags, but any object is permitted. However, numbers should not be used because the comparison is done using eq.</q></p>
+                </div>
+                <div class="topic">
+                  <p><q>catch differs from block in that catch tags have dynamic scope while block names have lexical scope.</q></p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="ccase">
@@ -2656,7 +3014,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm">ccase</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm">Macro</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -2666,7 +3024,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cdaaar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2676,7 +3039,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cdaadr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2686,7 +3054,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cdaar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2696,7 +3069,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cdadar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2706,7 +3084,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cdaddr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2716,7 +3099,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cdadr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2726,7 +3114,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cdar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2736,7 +3129,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cddaar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2746,7 +3144,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cddadr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2756,7 +3159,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cddar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2766,7 +3174,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cdddar</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2776,7 +3189,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cddddr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
                   <pre class="example"><code class="common-lisp">(cddddr <var>list</var>) == (nthcdr 4 <var>list</var>)</code></pre>
@@ -2790,7 +3208,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cdddr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
                   <pre class="example"><code class="common-lisp">(cdddr <var>list</var>) == (nthcdr 3 <var>list</var>)</code></pre>
@@ -2804,7 +3227,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cddr</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
                   <p>This is the most useful of the operators in the "CXR" family besides <a href="#car">car</a> and <a href="#cdr">cdr</a>. Its primary utility is helping to traverse plists, most commonly with <a href="#loop">loop</a> or <a href="#do">do</a>. It would be less useful if more direct support for iteration over plists was added...</p>
@@ -2822,8 +3250,14 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">cdr</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm">Accessor</a></th>
+              <td>
+                <div class="topic">
+                  <p>Normally accesses the "cdr" slot of a cons, but <code class="common-lisp">(cdr nil) → nil</code>.</p>
+                </div>
+                <div class="topic">
+                  <p>In contexts where the "cdr" of a cons to access is semantically the rest of a list, using <a href="#rest">rest</a> might indicate intent better.</p>
+                </td>
             </tr>
           </tbody>
           <tbody id="ceiling">
@@ -2832,7 +3266,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_floorc.htm">ceiling</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_floorc.htm">Function</a>
+                <ul>
+                  <li>Math</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2842,17 +3281,22 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/e_cell_e.htm">cell-error</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/e_cell_e.htm">Condition type</a></th>
               <td></td>
             </tr>
           </tbody>
           <tbody id="cell-error-name">
             <th><a href="#cell-error-name" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cell_e.htm">cell-error-name</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cell_e.htm">cell-error-name</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cell_e.htm">Function</a>
+                <ul>
+                  <li>Slot reader</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2862,7 +3306,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cerror.htm">cerror</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cerror.htm">Function</a>
+                <ul>
+                  <li>Conditions</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2872,7 +3321,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chg_cl.htm">change-class</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chg_cl.htm">Generic function</a>
+                <ul>
+                  <li>CLOS</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2882,7 +3336,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_.htm">char</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_.htm">Accessor</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -2892,27 +3346,36 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_c.htm">char-code</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_c.htm">Function</a></th>
+              <td>
+                <div class="topic">
+                  <p>Many assume at least ASCII but the standard offers no such guarantee.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="char-code-limit">
             <th><a href="#char-code-limit" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_char_c.htm">char-code-limit</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_char_c.htm">char-code-limit</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_char_c.htm">Constant variable</a>
+                <ul>
+                  <li>Implementation limit</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
           <tbody id="char-downcase">
             <th><a href="#char-downcase" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_u.htm">char-downcase</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_u.htm">char-downcase</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_u.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -2922,17 +3385,29 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char-equal</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
           <tbody id="char-greaterp">
             <th><a href="#char-greaterp" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char-greaterp</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char-greaterp</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2942,8 +3417,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_i.htm">char-int</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_i.htm">Function</a></th>
+              <td>
+                <div class="topic">
+                  <p><q>If <var>character</var> has no implementation-defined attributes, the results of char-int and char-code are the same.</q></p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="char-lessp">
@@ -2952,7 +3431,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char-lessp</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -2962,37 +3447,55 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_n.htm">char-name</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_n.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
           <tbody id="char-not-equal">
             <th><a href="#char-not-equal" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char-not-equal</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char-not-equal</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
           <tbody id="char-not-greaterp">
             <th><a href="#char-not-greaterp" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char-not-greaterp</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char-not-greaterp</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
           <tbody id="char-not-lessp">
             <th><a href="#char-not-lessp" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char-not-lessp</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char-not-lessp</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -3002,7 +3505,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_u.htm">char-upcase</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_u.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -3012,7 +3515,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char/=</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -3022,7 +3531,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char&lt;</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -3032,7 +3547,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char&lt;=</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -3042,7 +3563,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char=</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -3052,7 +3579,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char&gt;</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -3062,7 +3595,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">char&gt;=</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Comparisons</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -3072,7 +3611,25 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/a_ch.htm">character</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_ch.htm">Function</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                  <li>Coercion</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <pre class="example"><code class="common-lisp">(character <var>object</var>) == (coerce <var>object</var> 'character)</code></pre>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_ch.htm">System class</a></th>
+              <td></td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_c.htm#character">Glossary entry</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -3082,8 +3639,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chp.htm">characterp</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chp.htm">Function</a></th>
+              <td>
+                <div class="topic">
+                  <pre class="example"><code class="common-lisp">(characterp object) == (typep object 'character)</code></pre>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="check-type">
@@ -3092,7 +3653,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_check_.htm">check-type</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_check_.htm">Macro</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -3102,7 +3663,13 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cis.htm">cis</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cis.htm">Function</a>
+                <ul>
+                  <li>Math</li>
+                  <li>Trigonometry</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -3112,7 +3679,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_class.htm">class</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_class.htm">System class</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -3122,8 +3689,15 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_class_.htm">class-name</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_class_.htm">Generic function</a></th>
+              <td>
+                <div class="topic">
+                  <p><q>The name of an anonymous class is nil.</q></p>
+                </div>
+                <div class="topic">
+                  <p>The MOP extends this to return any kind of object, not necessarily a symbol.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="class-of">
@@ -3132,7 +3706,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_clas_1.htm">class-of</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_clas_1.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -3142,7 +3716,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_clear_.htm">clear-input</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_clear_.htm">Function</a>
+                <ul>
+                  <li>Streams</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -3152,7 +3731,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_finish.htm">clear-output</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_finish.htm">Function</a>
+                <ul>
+                  <li>Streams</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -3162,7 +3746,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_close.htm">close</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_close.htm">Function</a>
+                <ul>
+                  <li>Streams</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -3172,7 +3761,7 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_clrhas.htm">clrhash</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_clrhas.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -3182,8 +3771,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_code_c.htm">code-char</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_code_c.htm">Function</a></th>
+              <td>
+                <div class="topic">
+                  <p>Might return nil.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="coerce">
@@ -3192,17 +3785,22 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_coerce.htm">coerce</a>
             </th>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_coerce.htm">Function</a>
+                <ul>
+                  <li>Coercion</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
           <tbody id="compilation-speed">
             <th><a href="#compilation-speed" class="anchor">&#x2693;</a></th>
             <th class="horizontal-grouping-header">
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_optimi.htm">compilation-speed</a>
+              <a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_optimi.htm">compilation-speed</a>
             </th>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_optimi.htm">Optimize quality</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -3212,8 +3810,12 @@
               <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cmp.htm">compile</a>
             </th>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cmp.htm">Function</a></th>
+              <td>
+                <div class="topic">
+                  <p>One of the great distinguishing features of Common Lisp is that the compiler is available at runtime!</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="compile-file">
