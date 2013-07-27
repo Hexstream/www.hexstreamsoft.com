@@ -615,10 +615,15 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_module.htm">Variable</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_module.htm">Variable</a>
+                <ul>
+                  <li><b class="obsolete">OBSOLETE</b></li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
-                  <p><b class="obsolete">OBSOLETE</b>. <cite class="common-lisp library"><a href="http://common-lisp.net/project/asdf/">ASDF</a></cite> is the de-facto standard replacement for "modules".</p>
+                  <p><cite class="common-lisp library"><a href="http://common-lisp.net/project/asdf/">ASDF</a></cite> is the de-facto standard replacement for "modules".</p>
                 </div>
               </td>
             </tr>
@@ -2170,10 +2175,15 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_assocc.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_assocc.htm">Function</a>
+                <ul>
+                  <li><b class="not-deprecated">NOT DEPRECATED</b></li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p>The standard says it's deprecated but the community decided otherwise.</p>
                 </div>
               </td>
             </tr>
@@ -4829,10 +4839,15 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_countc.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_countc.htm">Function</a>
+                <ul>
+                  <li><b class="not-deprecated">NOT DEPRECATED</b></li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p>The standard says it's deprecated but the community decided otherwise.</p>
                 </td>
             </tr>
           </tbody>
@@ -5311,10 +5326,15 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_rm.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_rm.htm">Function</a>
+                <ul>
+                  <li><b class="not-deprecated">NOT DEPRECATED</b></li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p>The standard says it's deprecated but the community decided otherwise.</p>
                 </div>
               </td>
             </tr>
@@ -5478,6 +5498,7 @@
                 <ul>
                   <li>Debugging</li>
                   <li>Interactive</li>
+                  <li>Implementation-dependent</li>
                 </ul>
               </th>
               <td></td>
@@ -5765,6 +5786,7 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_ed.htm">Function</a>
                 <ul>
                   <li>Interactive</li>
+                  <li>Implementation-dependent</li>
                 </ul>
               </th>
               <td></td>
@@ -6496,10 +6518,15 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm">Function</a>
+                <ul>
+                  <li><b class="not-deprecated">NOT DEPRECATED</b></li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p>The standard says it's deprecated but the community decided otherwise.</p>
                 </div>
               </td>
             </tr>
@@ -7052,7 +7079,14 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_fn_lam.htm">Function</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>A common question is: "How to get the code from a function?"<br />This function does that... maybe!</p>
+                  <p><q>The primary value, <var>lambda-expression</var>, is <var>function</var>'s defining lambda expression, or nil if the information is not available. [...] Any implementation may legitimately return nil as the <var>lambda-expression</var> of any function.</q></p>
+                  <p><small>Life is hard!</small></p>
+                  <p>A common workaround is to make a wrapper macro around <a href="#defun">defun</a> that saves the body of the function being defined somewhere.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="functionp">
@@ -7137,10 +7171,15 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_gentem.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_gentem.htm">Function</a>
+                <ul>
+                  <li><b class="deprecated">OBSOLETE</b></li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
-                  <p><b class="deprecated">DEPRECATED</b>. Use <a href="#gensym">gensym</a> instead.</p>
+                  <p>Use <a href="#gensym">gensym</a> instead.</p>
                 </div>
               </td>
             </tr>
@@ -7153,10 +7192,15 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get.htm">Accessor</a>
+                <ul>
+                  <li><b class="discouraged">DISCOURAGED</b></li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
-                  <p><b class="discouraged">DISCOURAGED</b>. Usage of symbol property lists is generally frowned upon nowadays.</p>
+                  <p>Usage of symbol property lists is generally frowned upon nowadays.</p>
                 </div>
               </td>
             </tr>
@@ -7169,7 +7213,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_un.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7181,7 +7225,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_set__1.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7193,7 +7237,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_in.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7205,7 +7249,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get__1.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7217,7 +7261,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_set_ma.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7229,7 +7273,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_ou.htm">Function</a></th>
               <td>
                 <div class="topic">
                   <p>lisptip: "<a href="http://lisptips.com/post/10930264073/string-output-streams">string output streams</a>" (about autoflush and reuse)</p>
@@ -7245,8 +7289,13 @@
               </th>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_pr.htm">Function</a></th>
+              <td>
+                <div class="topic">
+                  <p>One of those relatively obscure functions that may deserve a bit more recognition...</p>
+                  <p><a href="http://www.xach.com/naggum/articles/3247672165664225@naggum.no.txt">Erik Naggum found a nice use for it</a>. While searching for a use for <a href="#nreconc">nreconc</a>, no less!</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="get-setf-expansion">
@@ -7257,7 +7306,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_se.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7269,7 +7318,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_un.htm">Function</a></th>
               <td>
                 <div class="topic">
                   <p>lisptip: "<a href="http://lisptips.com/post/11649360174/the-common-lisp-and-unix-epochs">The Common Lisp and Unix epochs</a>" (about <q>get-unix-time</q>)</p>
@@ -7285,7 +7334,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_getf.htm">Accessor</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7297,8 +7346,32 @@
               </th>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_gethas.htm">Accessor</a></th>
+              <td>
+                <div class="topic">
+                  <p>Note the optional argument <var>default</var> and second return value <var>present-p</var>.</p>
+                  <p><q>The secondary value, <var>present-p</var>, can be used to distinguish the absence of an entry from the presence of an entry that has a value of <var>default</var>.</q></p>
+                </div>
+                <div class="topic">
+                  <p>To remove an entry from the hash-table, use <a href="#remhash">remhash</a>.</p>
+                  <p>To efficiently remove all entries from the hash-table, use <a href="#clrhash">clrhash</a>.</p>
+                  <p>There are three standard operators for iterating over all entries of a hash-table:</p>
+                  <dl>
+                    <dt><a href="#maphash">maphash</a></dt>
+                    <dd><pre class="example"><code class="common-lisp">(maphash (lambda (key value)
+           ...)
+         hash-table)</code></pre></dd>
+                    <dt><a href="#with-hash-table-iterator">with-hash-table-iterator</a></dt>
+                    <dd><pre class="example"><code class="common-lisp">(with-hash-table-iterator (entry hash-table)
+  (loop (multiple-value-bind (more key value) (entry)
+          (unless more
+            (return))
+          ...)))</code></pre></dd>
+                    <dt><a href="#loop">loop</a></dt>
+                    <dd>TODO. Le <i>sigh</i>.</dd>
+                  </dl>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="go">
@@ -7309,7 +7382,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_go.htm">Special operator</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7321,7 +7394,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_graphi.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7333,7 +7406,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_handle.htm">Macro</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7345,7 +7418,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_hand_1.htm">Macro</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7357,7 +7430,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_hash_t.htm">System class</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7369,7 +7442,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_hash_1.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7381,7 +7454,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_hash_t.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7393,7 +7466,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_hash_2.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7405,7 +7478,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_hash_3.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7417,7 +7490,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_hash_4.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7429,7 +7502,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_hash_5.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7441,7 +7514,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_namest.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7453,7 +7526,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_identi.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7465,7 +7538,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm">Special operator</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7477,7 +7550,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">Declaration</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7489,7 +7562,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">Declaration</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7501,7 +7574,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_ignore.htm">Macro</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7513,7 +7586,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_realpa.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7525,7 +7598,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_import.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7537,7 +7610,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_in_pkg.htm">Macro</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7549,7 +7622,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_incf_.htm">Macro</a>
+                <ul>
+                  <li>Modify macro</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7561,7 +7639,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_init_i.htm">Generic function</a></th>
               <td>
                 <div class="topic">
                   <p>Here's a way to canonicalize ("transform") an initarg very "early" in the object instance initialization process. The canonicalization will affect all <code class="common-lisp standard function operator">initialize-instance</code> :before, :after and primary methods (thus including slots initialized by an ":initarg" option.)</p>
@@ -7582,7 +7660,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_inline.htm">Declaration</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7594,8 +7672,17 @@
               </th>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_in_stm.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <p>Interestingly enough, this is not a thin wrapper around a (non-existent) standard input-stream type. (There might or might not be one internally.)</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="inspect">
@@ -7606,7 +7693,14 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_inspec.htm">Function</a>
+                <ul>
+                  <li>Interactive</li>
+                  <li>Debugging</li>
+                  <li>Implementation-dependent</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7618,7 +7712,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_intege.htm">System class</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7630,7 +7724,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_dec_fl.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7642,7 +7736,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_intege.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7654,8 +7748,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_inte_1.htm">Function</a></th>
+              <td>
+                <div class="topic">
+                  <pre class="example"><code class="common-lisp">(integerp <var>object</var>) == (typep <var>object</var> 'integer)</code></pre>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="interactive-stream-p">
@@ -7666,7 +7764,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_intera.htm">Function</a>
+                <ul>
+                  <li>Interactive</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7678,7 +7781,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_intern.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7690,7 +7793,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_intern.htm">Constant variable</a>
+                <ul>
+                  <li>Implementation limit</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7702,7 +7810,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_isec_.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7714,7 +7822,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_invali.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7726,7 +7834,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_invoke.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7738,8 +7846,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_invo_1.htm">Function</a></th>
+              <td>
+                <div class="topic">
+                  <p><q>Restart functions call invoke-restart, not vice versa. That is, invoke-restart provides primitive functionality, and restart functions are non-essential ``syntactic sugar.''</q></p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="invoke-restart-interactively">
@@ -7750,7 +7862,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_invo_2.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7762,7 +7874,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_sqrt_.htm">Function</a>
+                <ul>
+                  <li>Math</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7774,8 +7891,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_kwd.htm">Type</a></th>
+              <td>
+                <div class="topic">
+                  <p>This is specified to be a type, not a class, so you can't portably dispatch on it.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="keywordp">
@@ -7786,8 +7907,18 @@
               </th>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_kwdp.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <pre class="example"><code class="common-lisp">(keywordp <var>object</var>) == (typep <var>object</var> 'keyword)</code></pre>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="labels">
@@ -7798,8 +7929,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">Special operator</a></th>
+              <td>
+                <div class="topic">
+                  <p>All local functions declared within the <a href="#labels">labels</a> invocation are in scope of eachother and themselves, thus permitting mutual recursion and self-recursion.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="lambda">
@@ -7810,10 +7945,35 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">Macro</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
+                  <p>Thanks to this convenience macro, you never need to write <code class="common-lisp">#'(lambda ...)</code>, <code class="common-lisp">(lambda ...) suffices!</code></p>
+                  <p>Note however that there are contexts where <code class="common-lisp">(lambda ...)</code> works but <code class="common-lisp">#'(lambda ...)</code> doesn't. Specifically, where an unevaluated lambda expression is expected. Of course, it's a bit of a moot point if you always use the shorter form anyway, which I recommend...</p>
+                </div>
+                <div class="topic">
                   <p>Compilation to trees of closures is my favorite Common Lisp technique! It allows easy impl of DSLs with the expressiveness of a high-level language AND the performance of a low-level language.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_lambda.htm">Symbol</a></th>
+              <td>
+                <div class="topic">
+                  <blockquote>The lambda form
+
+<pre class="example"><code class="common-lisp">((lambda lambda-list . body) . arguments)</code></pre>
+
+is semantically equivalent to the function form
+
+ <pre class="example"><code class="common-lisp">(funcall #'(lambda lambda-list . body) . arguments)</code></pre>
+                  </blockquote>
+                  <p>(Of course the "#'" can be omitted, again.)</p>
                 </div>
               </td>
             </tr>
@@ -7826,7 +7986,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_lambda.htm">Constant variable</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -7838,7 +7998,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_lamb_1.htm">Constant variable</a>
+                <ul>
+                  <li>Implementation limit</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7851,7 +8016,12 @@
             </tr>
             <tr>
               <th></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><q><a href="#last">last</a> returns the last <var>n</var> conses (not the last <var>n</var> elements) of list).</q></p>
+                  <p>To get the last element, just do <code class="common-lisp">(first (last <var>list</var>))</code>.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="lcm">
@@ -7862,7 +8032,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_lcm.htm">Function</a>
+                <ul>
+                  <li>Math</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -9143,7 +9318,7 @@
               <th></th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it's deprecated but the community decided otherwise.</p>
                 </div>
               </td>
             </tr>
@@ -9856,7 +10031,7 @@
               <th></th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it's deprecated but the community decided otherwise.</p>
                 </div>
               </td>
             </tr>
@@ -9896,7 +10071,7 @@
               <th></th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it's deprecated but the community decided otherwise.</p>
                 </div>
               </td>
             </tr>
@@ -10452,7 +10627,7 @@
               <th></th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it's deprecated but the community decided otherwise.</p>
                 </div>
               </td>
             </tr>
@@ -10957,7 +11132,7 @@
               <th></th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it's deprecated but the community decided otherwise.</p>
                 </div>
               </td>
             </tr>
@@ -11309,7 +11484,7 @@
               <th></th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it's deprecated but the community decided otherwise.</p>
                 </div>
               </td>
             </tr>
@@ -12969,7 +13144,7 @@
               <th></th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it's deprecated but the community decided otherwise.</p>
                 </div>
               </td>
             </tr>
@@ -13009,7 +13184,7 @@
               <th></th>
               <td>
                 <div class="topic">
-                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it's deprecated but the community decided otherwise.</p>
                 </div>
               </td>
             </tr>
