@@ -616,7 +616,11 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_module.htm">Variable</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="obsolete">OBSOLETE</b>. <cite class="common-lisp library"><a href="http://common-lisp.net/project/asdf/">ASDF</a></cite> is the de-facto standard replacement for "modules".</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="*package*">
@@ -2167,7 +2171,11 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_assocc.htm">Function</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="atan">
@@ -2542,6 +2550,9 @@
                 <div class="topic">
                   <p>Informally, this is the static, lexical counterpart of <a href="#catch">catch</a>.</p>
                 </div>
+                <div class="topic">
+                  <p><a href="#block">block</a> is generally preferable to <a href="#catch">catch</a> because it's easier to reason about.</p>
+                </div>
               </td>
             </tr>
           </tbody>
@@ -2851,6 +2862,9 @@
                 <div class="topic">
                   <p><q>Conditional operations, such as if, permit the use of generalized booleans, not just booleans; any non-nil value, not just t, counts as true for a generalized boolean. However, as a matter of convention, the symbol t is considered the canonical value to use even for a generalized boolean when no better choice presents itself.</q></p>
                 </div>
+                <div class="topic">
+                  <p>I'm bummed that there isn't a <a href="#boolean">boolean</a> function that converts a generalized boolean to a boolean. :(</p>
+                </div>
               </td>
             </tr>
           </tbody>
@@ -2977,7 +2991,11 @@
                   <li>Constructor</li>
                 </ul>
               </th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>Returns an object of implementation-dependent nature.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="byte-position">
@@ -3361,13 +3379,16 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_catch.htm">Special operator</a></th>
               <td>
                 <div class="topic">
+                  <p><a href="#block">block</a> is generally preferable to <a href="#catch">catch</a> because it's easier to reason about.</p>
+                </div>
+                <div class="topic">
                   <p>This doesn't really have anything to do with exception handling.</p>
                 </div>
                 <div class="topic">
-                  <p><q>It is customary for symbols to be used as tags, but any object is permitted. However, numbers should not be used because the comparison is done using eq.</q></p>
+                  <p><q>catch differs from block in that catch tags have dynamic scope while block names have lexical scope.</q></p>
                 </div>
                 <div class="topic">
-                  <p><q>catch differs from block in that catch tags have dynamic scope while block names have lexical scope.</q></p>
+                  <p><q>It is customary for symbols to be used as tags, but any object is permitted. However, numbers should not be used because the comparison is done using eq.</q></p>
                 </div>
               </td>
             </tr>
@@ -4469,7 +4490,11 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_concat.htm">Function</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><q>All of the sequences are copied from; the result does not share any structure with any of the sequences. Therefore, if only one sequence is provided and it is of type result-type, concatenate is required to copy sequence rather than simply returning it.</q></p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="concatenated-stream">
@@ -4805,7 +4830,10 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_countc.htm">Function</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </td>
             </tr>
           </tbody>
           <tbody id="ctypecase">
@@ -4851,7 +4879,7 @@
                   <li>Thin wrapper</li>
                 </ul>
               </th>
-              <td></td>
+              <td><code class="common-lisp">(decf <var>place</var>)</code> is basically equivalent to <code class="common-lisp">(setf <var>place</var> (1- <var>place</var>))</code> except without multiple evaluation of the <var>place</var>.</td>
             </tr>
           </tbody>
           <tbody id="declaim">
@@ -4955,7 +4983,11 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defcon.htm">Macro</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>User constants should always use the <var>+naming-convention+</var> for constants (starting and ending the symbol's name with "+") even though none of the standard constants do so.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="defgeneric">
@@ -4983,7 +5015,11 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_define.htm">Macro</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>Compiler macros really help obeying the mantra of "never use a macro if a function will do".</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="define-condition">
@@ -5035,7 +5071,14 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defi_3.htm">Macro</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>This is the most general and powerful way to make new kinds of setfable places, but also the most complex.</p>
+                  <p>In simple cases, <a href="#defun">defining a setf-function</a> or using the simple form of <a href="#defsetf">defsetf</a> often suffices.</p>
+                  <p>It's also possible to make local setf functions with <a href="#flet">flet</a> or <a href="#labels">labels</a>.<br />Just use <code class="common-lisp">(setf <var>name</var>)</code> as function name.</p>
+                  <p>If even that is not powerful enough for you, you might like <a href="../../libraries/place-utils/setf-expanderlet.html">setf-expanderlet</a>.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="define-symbol-macro">
@@ -5149,6 +5192,9 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defstr.htm">Macro</a></th>
               <td>
                 <div class="topic">
+                  <p>I'd recommend always using <a href="#defclass">defclass</a> instead, unless you absolutely, provably need the better performance of structures. In a good Common Lisp implementation, normal classes are probably much more performant than you'd think given their quite dynamic nature.</p>
+                </div>
+                <div class="topic">
                   <p>There's no portable way to directly instantiate a DEFSTRUCT structure using a <code class="common-lisp">(:constructor nil)</code> option (unless a non-nil :constructor option is also specified), but doing it can still be useful to declare "abstract structures" that another DEFSTRUCT can then "inherit" from with the <code class="common-lisp standard marker">:include</code> option.</p>
                 </div>
               </td>
@@ -5183,6 +5229,9 @@
                 <div class="topic">
                   <p>Note that the first argument is a "function name", which includes not only symbols but also lists of the form <code class="common-lisp">(setf <var>name</var>)</code>, used to define setf functions.</p>
                 </div>
+                <div class="topic">
+                  <p>If you need to actually use (and not just refer to) the function you're defining at compile-time (including at macroexpansion-time) in the same file, you'll need to wrap your defun with <a href="#eval-when">eval-when</a>.</p>
+                </div>
               </td>
             </tr>
           </tbody>
@@ -5207,7 +5256,11 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_rm.htm">Function</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>You can think of this as "n<a href="#remove">remove</a>".</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="delete-duplicates">
@@ -5219,7 +5272,11 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_dup.htm">Function</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><q>The elements of sequence are compared pairwise, and if any two match, then the one occurring earlier in sequence is discarded, unless from-end is true, in which case the one later in sequence is discarded.</q></p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="delete-file">
@@ -5255,7 +5312,11 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_rm.htm">Function</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="delete-package">
@@ -5334,6 +5395,9 @@
                 <div class="topic">
                   <p>lisptip: "<a href="http://lisptips.com/post/14259866907/describing-objects">Describing objects</a>"</p>
                 </div>
+                <div class="topic">
+                  <p><q><a href="#describe-object">describe-object</a> is called by <a href="#describe">describe</a>; it must not be called by the user.</q></p>
+                </div>
               </td>
             </tr>
           </tbody>
@@ -5409,7 +5473,13 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_disass.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_disass.htm">Function</a>
+                <ul>
+                  <li>Debugging</li>
+                  <li>Interactive</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -5948,7 +6018,15 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_eval.htm">Function</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>In at least 99% of cases where one might think of using this, there's a better way.</p>
+                </div>
+                <div class="topic">
+                  <p>One mistake many newbies make is using <a href="#eval">eval</a> at macroexpansion time. That's almost certainly a mistake. The primary job of a macro is returning an expansion. It's the expansion that will do the actual work at runtime, including any side-effects.</p>
+                  <p>Macros should almost never produce side-effects as part of the macroexpansion process, especially as one macro call might be expanded multiple times for various reasons.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="eval-when">
@@ -5960,7 +6038,27 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_eval_w.htm">Special operator</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>In many cases, when "compile-time side-effects" are desired in a macro, what one should actually do is something like this:</p>
+                  <pre class="example"><code class="common-lisp">(defmacro define-foo (name ...)
+  `(progn
+     (eval-when (:compile-toplevel :load-toplevel :execute)
+       ;; "Register" metadata about the definition.
+       (setf (gethash ',name *foos*) ...))
+     ;; rest of the expansion
+     ...))</code></pre>
+                </div>
+                <div class="topic">
+                  <p>In more than 99% of cases where <a href="#eval-when">eval-when</a> is needed, one needs to specify all situations:</p>
+                  <pre class="example"><code class="common-lisp">(eval-when (:compile-toplevel :load-toplevel :execute)
+  ...)</code></pre>
+                  <p>Think that's too long? You might like <a href="http://www.hexstreamsoft.com/libraries/enhanced-eval-when/">enhanced-eval-when</a>, which lets you do:</p>
+                  <pre class="example"><code class="common-lisp">(eval-when t
+  (defun my-function ...))</code></pre>
+                  <p><a href="#eval-when">eval-when</a> without all situations specified is not particularly useful (outside of a few expert cases) and notoriously difficult to reason about.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="evenp">
@@ -6399,7 +6497,11 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm">Function</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="find-method">
@@ -6464,7 +6566,7 @@
                   <p>lisptip: "<a href="http://lisptips.com/post/13945209007/forcing-buffered-output">Forcing buffered output</a>"</p>
                 </div>
                 <div class="topic">
-                  <p>Synchronous.</p>
+                  <p>Synchronous. The operation will have completed by the time the function returns.</p>
                   <p>See also: <a href="#force-output">force-output</a>. (asynchronous)</p>
                 </div>
               </td>
@@ -6722,7 +6824,7 @@
                   <p>lisptip: "<a href="http://lisptips.com/post/13945209007/forcing-buffered-output">Forcing buffered output</a>"</p>
                 </div>
                 <div class="topic">
-                  <p>Asynchronous.</p>
+                  <p>Asynchronous. The operation may or may not have completed by the time the function returns.</p>
                   <p>See also: <a href="#finish-output">finish-output</a>. (synchronous)</p>
                 </div>
               </td>
@@ -6913,7 +7015,19 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_fn.htm">Special operator</a></th>
+              <td></td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_docume.htm">Documentation type</a></th>
+              <td></td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_fn.htm">System class</a></th>
+              <td></td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_f.htm#function">Glossary entry</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -6925,7 +7039,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_fn_kwd.htm">Generic function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -6937,7 +7051,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_fn_lam.htm">Function</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -6949,8 +7063,18 @@
               </th>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_fnp.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <pre class="example"><code class="common-lisp">(functionp <var>object</var>) == (typep <var>object</var> 'function)</code></pre>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="gcd">
@@ -6961,7 +7085,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_gcd.htm">Function</a>
+                <ul>
+                  <li>Math</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -6973,7 +7102,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_generi.htm">System class</a></th>
               <td></td>
             </tr>
           </tbody>
@@ -6985,7 +7114,7 @@
               </th>
             </tr>
             <tr>
-              <th></th>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_gensym.htm">Function</a></th>
               <td>
                 <div class="topic">
                   <p>The result of <code class="common-lisp">(gensym "VAR")</code> might print with escapes, depending on <code class="common-lisp">(readtable-case *readtable*)</code>. <code class="common-lisp">(gensym (string '#:var))</code> averts this.</p>
@@ -7008,8 +7137,12 @@
               </th>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_gentem.htm">Function</a></th>
+              <td>
+                <div class="topic">
+                  <p><b class="deprecated">DEPRECATED</b>. Use <a href="#gensym">gensym</a> instead.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="get">
@@ -7021,7 +7154,11 @@
             </tr>
             <tr>
               <th></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="discouraged">DISCOURAGED</b>. Usage of symbol property lists is generally frowned upon nowadays.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="get-decoded-time">
@@ -9004,7 +9141,11 @@
             </tr>
             <tr>
               <th></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="merge">
@@ -9713,7 +9854,11 @@
             </tr>
             <tr>
               <th></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="nsubstitute">
@@ -9749,7 +9894,11 @@
             </tr>
             <tr>
               <th></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="nth">
@@ -10301,7 +10450,11 @@
             </tr>
             <tr>
               <th></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="pprint">
@@ -10802,7 +10955,11 @@
             </tr>
             <tr>
               <th></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="ratio">
@@ -11150,7 +11307,11 @@
             </tr>
             <tr>
               <th></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="remove-method">
@@ -12806,7 +12967,11 @@
             </tr>
             <tr>
               <th></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="substitute">
@@ -12842,7 +13007,11 @@
             </tr>
             <tr>
               <th></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><b class="not-deprecated">NOT DEPRECATED</b>. The standard says it is but the community decided otherwise.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="subtypep">

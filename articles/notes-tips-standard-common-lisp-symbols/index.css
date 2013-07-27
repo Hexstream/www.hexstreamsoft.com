@@ -54,3 +54,19 @@
 .topic:first-child {
     border-top: none;
 }
+
+.deprecated {
+    color: red;
+}
+
+.discouraged {
+    color: red;
+}
+
+.obsolete {
+    color: red;
+}
+
+.not-deprecated {
+    color: green;
+}
