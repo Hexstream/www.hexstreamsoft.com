@@ -5141,10 +5141,18 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defgen.htm">Macro</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defgen.htm">Macro</a>
+                <ul>
+                  <li>Thin wrapper (mostly)</li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
                   <p>Redefining a DEFGENERIC with removed :method options will automatically remove the corresponding methods, which is quite convenient.</p>
+                </div>
+                <div class="topic">
+                  <p><a href="#defgeneric">defgeneric</a> expands to a call to <a href="#ensure-generic-function">ensure-generic-function</a>.</p>
                 </div>
               </td>
             </tr>
@@ -5311,7 +5319,7 @@
               <th>
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpar.htm">Macro</a>
                 <ul>
-                  <li>Thin wrapper</li>
+                  <li>Thin wrapper (mostly)</li>
                 </ul>
               </th>
               <td></td>
@@ -5375,7 +5383,7 @@
               <th>
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defun.htm">Macro</a>
                 <ul>
-                  <li>Thin wrapper</li>
+                  <li>Thin wrapper (mostly)</li>
                 </ul>
               </th>
               <td>
@@ -5399,7 +5407,7 @@
               <th>
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpar.htm">Macro</a>
                 <ul>
-                  <li>Thin wrapper</li>
+                  <li>Thin wrapper (mostly)</li>
                 </ul>
               </th>
               <td></td>
@@ -5542,7 +5550,14 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_descri.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_descri.htm">Function</a>
+                <ul>
+                  <li>Interactive</li>
+                  <li>Debugging</li>
+                  <li>Implementation-dependent</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -5865,6 +5880,7 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm">Macro</a>
                 <ul>
                   <li>Conditionals</li>
+                  <li>Thin wrapper</li>
                 </ul>
               </th>
               <td></td>
@@ -5949,8 +5965,17 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm">Accessor</a></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <pre class="example"><code class="common-lisp">(eighth <var>list</var>) == (nth 7 <var>list</var>)</code></pre>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="elt">
@@ -5962,7 +5987,12 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_elt.htm">Accessor</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>Like all sequence functions, honors a vector's fill pointer, if any.</p>
+                  <p><q><a href="#aref">aref</a> may be used to access vector elements that are beyond the vector's fill pointer.</q></p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="encode-universal-time">
@@ -6160,7 +6190,12 @@
               <td></td>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_error.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_error.htm">Function</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
             <tr>
@@ -6176,7 +6211,12 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_tpcase.htm">Macro</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_tpcase.htm">Macro</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -6196,6 +6236,7 @@
                 <div class="topic">
                   <p>One mistake many newbies make is using <a href="#eval">eval</a> at macroexpansion time. That's almost certainly a mistake. The primary job of a macro is returning an expansion. It's the expansion that will do the actual work at runtime, including any side-effects.</p>
                   <p>Macros should almost never produce side-effects as part of the macroexpansion process, especially as one macro call might be expanded multiple times for various reasons.</p>
+                  <p>See <a href="#eval-when">eval-when</a>.</p>
                 </div>
               </td>
             </tr>
@@ -6429,7 +6470,12 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm">Accessor</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
                   <pre class="example"><code class="common-lisp">(fifth <var>list</var>) == (nth 4 <var>list</var>)</code></pre>
@@ -6498,6 +6544,10 @@
                 <div class="topic">
                   <p>Returns nil <q>if the length cannot be determined</q>.</p>
                 </div>
+                <div class="topic">
+                  <p><q>For a binary file, the length is measured in units of the element type of the stream.</q></p>
+                  <p>There doesn't seem to be any specification of how the length of character file stream is determined so I guess it's implicitly implementation-dependent.</p>
+                </div>
               </td>
             </tr>
           </tbody>
@@ -6528,9 +6578,10 @@
                 </div>
                 <div class="topic">
                   <p>This is a bit of a peculiar "2-in-1" function.</p>
-                  <p>One might wonder why it hasn't just been made an accessor. I guess it's because the writer needs to return <var>success-p</var>, which it couldn't (comfortably) do if it was an accessor since these by convention always return the new value(s) that was (were) written.</p>
+                  <p>One might wonder why it hasn't just been made an accessor. I guess it's because the writer needs to return <var>success-p</var>, which it couldn't (comfortably) do if it were an accessor since these by convention always return the new value(s) that was (were) written.</p>
                 </div>
                 <div class="topic">
+                  <p>Probably a bit of an archaic note but I found it somewhat interesting:</p>
                   <p><q>Implementations that have character files represented as a sequence of records of bounded size might choose to encode the file position as, for example, &lt;&lt;record-number&gt;&gt;*&lt;&lt;max-record-size&gt;&gt;+&lt;&lt;character-within-record&gt;&gt;. This is a valid encoding because it increases monotonically as each character is read or written, though not necessarily by 1 at each step. An integer might then be considered ``inappropriate'' as position-spec to file-position if, when decoded into record number and character number, it turned out that the supplied record was too short for the specified character number.</q></p>
                 </div>
               </td>
@@ -6591,8 +6642,20 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_fill.htm">Function</a></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_fill.htm">Function</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <blockquote>
+                    <pre class="example"><code class="common-lisp">(fill <var>sequence</var> <var>item</var>)
+== (nsubstitute-if <var>item</var> (constantly t) <var>sequence</var>)</code></pre>
+                  </blockquote>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="fill-pointer">
@@ -6619,7 +6682,12 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm">Function</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -6631,7 +6699,12 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_a.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_a.htm">Function</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -6671,6 +6744,7 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm">Function</a>
                 <ul>
                   <li><b class="not-deprecated">NOT DEPRECATED</b></li>
+                  <li>Thin wrapper</li>
                 </ul>
               </th>
               <td>
@@ -6756,7 +6830,12 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm">Accessor</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7079,7 +7158,12 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_format.htm">Macro</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_format.htm">Macro</a>
+                <ul>
+                  <li>Compilation</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7091,7 +7175,12 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm">Accessor</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7216,7 +7305,15 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_fn_kwd.htm">Generic function</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>Probably most useful in <a href="#define-method-combination">define-method-combination</a>.</p>
+                </div>
+                <div class="topic">
+                  <p>Note that the standard only specifies this to work on standard methods and not, for instance, "normal" functions.</p>
+                  <p>In a sense, this might be better named "method-keywords", though an implementation could also define a method specialized on "normal" functions.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="function-lambda-expression">
@@ -7362,8 +7459,19 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_un.htm">Function</a></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_un.htm">Function</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <blockquote>
+                    <pre class="example"><code class="common-lisp">(get-decoded-time) == (decode-universal-time (get-universal-time))</code></pre>
+                  </blockquote>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="get-dispatch-macro-character">
@@ -7483,8 +7591,27 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_getf.htm">Accessor</a></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_getf.htm">Accessor</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <p><q>There is no way (using <a href="#getf">getf</a>) to distinguish an absent property from one whose value is default; but see <a href="#get-properties">get-properties</a>.</q></p>
+                </div>
+                <div class="topic">
+                  <pre class="example"><code class="common-lisp">(getf <var>plist</var> <var>indicator</var> <var>default</var>)
+==
+(let ((<var>wrapped-indicator</var> (list <var>indicator</var>)))
+  (declare (dynamic-extent <var>wrapped-indicator</var>))
+  (multiple-value-bind (<var>indicator</var> <var>value</var> <var>tail</var>)
+      (get-properties <var>plist</var> <var>wrapped-indicator</var>)
+    (declare (ignore <var>indicator</var>))
+    (if <var>tail</var> <var>value</var> <var>default</var>)))</code></pre>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="gethash">
@@ -7517,7 +7644,7 @@
             (return))
           ...)))</code></pre></dd>
                     <dt><a href="#loop">loop</a></dt>
-                    <dd>TODO. Le <i>sigh</i>.</dd>
+                    <dd><p>TODO. Le <i>sigh</i>.</p></dd>
                   </dl>
                 </div>
               </td>
@@ -15799,15 +15926,29 @@ B</code></pre>
           <li><a href="#ctypecase">ctypecase</a></li>
           <li><a href="#decf">decf</a></li>
           <li><a href="#declaim">declaim</a></li>
-          <li><a href="#defparameter">defparameter</a></li>
-          <li><a href="#defun">defun</a></li>
-          <li><a href="#defvar">defvar</a></li>
+          <li><a href="#defgeneric">defgeneric</a> (mostly)</li>
+          <li><a href="#defparameter">defparameter</a> (mostly)</li>
+          <li><a href="#defun">defun</a> (mostly)</li>
+          <li><a href="#defvar">defvar</a> (mostly)</li>
           <li><a href="#delete">delete</a></li>
           <li><a href="#delete-if-not">delete-if-not</a></li>
+          <li><a href="#ecase">ecase</a></li>
+          <li><a href="#eighth">eighth</a></li>
+          <li><a href="#error">error</a></li>
+          <li><a href="#etypecase">etypecase</a></li>
           <li><a href="#evenp">evenp</a></li>
+          <li><a href="#fifth">fifth</a></li>
+          <li><a href="#fill">fill</a></li>
+          <li><a href="#find">find</a></li>
+          <li><a href="#find-all-symbols">find-all-symbols</a></li>
+          <li><a href="#find-if-not">find-if-not</a></li>
+          <li><a href="#first">first</a></li>
           <li><a href="#floatp">floatp</a></li>
+          <li><a href="#fourth">fourth</a></li>
           <li><a href="#funcall">funcall</a></li>
           <li><a href="#functionp">functionp</a></li>
+          <li><a href="#get-decoded-time">get-decoded-time</a></li>
+          <li><a href="#getf">getf</a></li>
           <li><a href="#keywordp">keywordp</a></li>
           <li><a href="#lambda">lambda</a></li>
           <li><a href="#listp">listp</a></li>
