@@ -3029,7 +3029,14 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_butlas.htm">Function</a></th>
               <td>
                 <div class="topic">
-                  <pre class="example"><code class="common-lisp">(butlast <var>list</var> <var>n</var>) == (ldiff <var>list</var> (last <var>list</var> <var>n</var>))</code></pre>
+                  <blockquote>
+                    <pre class="example"><code class="common-lisp">(butlast <var>list</var> <var>n</var>) == (ldiff <var>list</var> (last <var>list</var> <var>n</var>)) ; Almost</code></pre>
+                  </blockquote>
+                  <p>There's at least one case where that's not true:</p>
+                  <pre class="example"><code class="common-lisp">(let ((list '(a b c . d)))
+  (values (butlast list 0) (ldiff list (last list 0))))
+→ (A B C . D)
+  (A B C)</code></pre>
                 </div>
               </td>
             </tr>
@@ -7552,6 +7559,9 @@
                   <p>One of those relatively obscure functions that may deserve a bit more recognition...</p>
                   <p><a href="http://www.xach.com/naggum/articles/3247672165664225@naggum.no.txt">Erik Naggum found a nice use for it</a>. While searching for a use for <a href="#nreconc">nreconc</a>, no less!</p>
                 </div>
+                <div class="topic">
+                  <p><a href="#getf">getf</a> is a simpler version that searches for only one property and returns only its value (or a supplied default, if not found).</p>
+                </div>
               </td>
             </tr>
           </tbody>
@@ -7683,7 +7693,22 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_handle.htm">Macro</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>By the time a <a href="#handler-bind">handler-bind</a> handler is executed, <strong>the dynamic context has not yet been unwound</strong>.</p>
+                  <pre class="example"><code class="common-lisp">(block nil
+  (let ((*dynamic-context* 'outer))
+    (declare (special *dynamic-context*))
+    (handler-bind ((simple-condition
+                    (lambda (condition)
+                      (declare (ignore condition))
+                      (return *dynamic-context*))))
+      (let ((*dynamic-context* 'inner))
+        (declare (special *dynamic-context*))
+        (signal "Test.")))))</code></pre>
+                  <p>Compare to <a href="#handler-case">handler-case</a>.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="handler-case">
@@ -7694,8 +7719,29 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_hand_1.htm">Macro</a></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_hand_1.htm">Macro</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <p>By the time a <a href="#handler-case">handler-case</a> clause is executed, <strong>the dynamic context has already been unwound</strong>.</p>
+                  <pre class="example"><code class="common-lisp">(block nil
+  (let ((*dynamic-context* 'outer))
+    (declare (special *dynamic-context*))
+    (handler-case (let ((*dynamic-context* 'inner))
+                    (declare (special *dynamic-context*))
+                    (signal "Test."))
+      (simple-condition ()
+        (return *dynamic-context*)))))</code></pre>
+                  <p>Compare to <a href="#handler-bind">handler-bind</a>.</p>
+                </div>
+                <div class="topic">
+                  <p>It took me an embarassing amount of time to realize this is loosely modeled on <a href="#typecase">typecase</a>.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="hash-table">
@@ -7730,8 +7776,18 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_hash_t.htm">Function</a></th>
-              <td></td>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_hash_t.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
+              <td>
+                <div class="topic">
+                  <pre class="example"><code class="common-lisp">(hash-table-p <var>object</var>) == (typep <var>object</var> 'hash-table)</code></pre>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="hash-table-rehash-size">
@@ -7767,7 +7823,12 @@
             </tr>
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_hash_4.htm">Function</a></th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p>Returns some implementation-dependent size which has to do with the internal size of the hash-table. This value is greater or equal to the actual number of items in hash-table.</p>
+                  <p>You might be looking for <a href="#hash-table-count">hash-table-count</a>.</p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="hash-table-test">
@@ -7850,7 +7911,12 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_ignore.htm">Macro</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_ignore.htm">Macro</a>
+                <ul>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7862,7 +7928,12 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_realpa.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_realpa.htm">Function</a>
+                <ul>
+                  <li>Math</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7886,7 +7957,12 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_in_pkg.htm">Macro</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_in_pkg.htm">Macro</a>
+                <ul>
+                  <li>Thin wrapper (mostly)</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -7902,6 +7978,7 @@
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_incf_.htm">Macro</a>
                 <ul>
                   <li>Modify macro</li>
+                  <li>Thin wrapper</li>
                 </ul>
               </th>
               <td></td>
@@ -7917,6 +7994,9 @@
             <tr>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_init_i.htm">Generic function</a></th>
               <td>
+                <div class="topic">
+                  <p>Immediately forwards to <a href="#shared-initialize">shared-initialize</a>.</p>
+                </div>
                 <div class="topic">
                   <p>Here's a way to canonicalize ("transform") an initarg very "early" in the object instance initialization process. The canonicalization will affect all <code class="common-lisp standard function operator">initialize-instance</code> :before, :after and primary methods (thus including slots initialized by an ":initarg" option.)</p>
                 <pre class="example"><code class="common-lisp">(defmethod initialize-instance :around
@@ -8012,7 +8092,13 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_intege.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_intege.htm">Function</a>
+                <ul>
+                  <li>Bit manipulation</li>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td></td>
             </tr>
           </tbody>
@@ -8024,7 +8110,13 @@
               </th>
             </tr>
             <tr>
-              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_inte_1.htm">Function</a></th>
+              <th>
+                <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_inte_1.htm">Function</a>
+                <ul>
+                  <li>Predicate</li>
+                  <li>Thin wrapper</li>
+                </ul>
+              </th>
               <td>
                 <div class="topic">
                   <pre class="example"><code class="common-lisp">(integerp <var>object</var>) == (typep <var>object</var> 'integer)</code></pre>
@@ -8297,6 +8389,13 @@ is semantically equivalent to the function form
                   <p><q><a href="#last">last</a> returns the last <var>n</var> conses (not the last <var>n</var> elements) of list).</q></p>
                   <p>To get the last element, just do <code class="common-lisp">(first (last <var>list</var>))</code>.</p>
                 </div>
+                <div class="topic">
+                  <p><q>If <var>n</var> is zero, the atom that terminates <var>list</var> is returned.</q></p>
+                  <pre class="example"><code class="common-lisp">(last '(a b) 0) → NIL
+(last '(a b . c) 0) → C</code></pre>
+                  <pre class="example"><code class="common-lisp">(defun proper-list-p (object)
+  (and (listp object) (null (last object 0))))</code></pre>
+                </div>
               </td>
             </tr>
           </tbody>
@@ -8331,7 +8430,11 @@ is semantically equivalent to the function form
                   <li>Bit manipulation</li>
                 </ul>
               </th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><q>Historically, the name ``ldb'' comes from a DEC PDP-10 assembly language instruction meaning ``load byte.''</q></p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="ldb-test">
@@ -8754,7 +8857,7 @@ is semantically equivalent to the function form
               </th>
               <td>
                 <div class="topic">
-                  <p>Constructs an improper list unless the last argument is a proper list.</p>
+                  <p>Constructs an improper (dotted) list unless the last argument is a proper (nil-terminated) list.</p>
                 </div>
                 <div class="topic">
                   <p>For many use-cases, can be thought of as a variant of <a href="#cons">cons</a> that allows to prepend any number of list elements (instead of just one) to a list.</p>
@@ -8831,6 +8934,7 @@ B</code></pre>
               <td>
                 <div class="topic">
                   <p><q>If <var>object</var> is a cons, listp does not check whether <var>object</var> is a proper list; it returns true for any kind of list.</q></p>
+                  <p>To check if something is a proper list, see <a href="#last">last</a>.</p>
                 </div>
                 <div class="topic">
                   <pre class="example"><code class="common-lisp">(listp <var>object</var>) == (typep <var>object</var> 'list)
@@ -8882,7 +8986,7 @@ B</code></pre>
                   <p>Can be used instead of read-time evaluation ("#.") in some cases.</p>
                 </div>
                 <div class="topic">
-                  <p>Sometimes useful to cache a value early.</p>
+                  <p>Sometimes useful to precompute and cache a value early.</p>
                 </div>
               </td>
             </tr>
@@ -9163,9 +9267,16 @@ B</code></pre>
                 <a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_logtes.htm">Function</a>
                 <ul>
                   <li>Bit manipulation</li>
+                  <li>Thin wrapper</li>
                 </ul>
               </th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <blockquote>
+                    <pre class="example"><code class="common-lisp">(logtest <var>x</var> <var>y</var>) == (not (zerop (logand <var>x</var> <var>y</var>)))</code></pre>
+                  </blockquote>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="logxor">
@@ -15949,9 +16060,17 @@ B</code></pre>
           <li><a href="#functionp">functionp</a></li>
           <li><a href="#get-decoded-time">get-decoded-time</a></li>
           <li><a href="#getf">getf</a></li>
+          <li><a href="#handler-case">handler-case</a></li>
+          <li><a href="#hash-table-p">hash-table-p</a></li>
+          <li><a href="#ignore-errors">ignore-errors</a></li>
+          <li><a href="#in-package">in-package</a> (mostly)</li>
+          <li><a href="#incf">incf</a></li>
+          <li><a href="#integer-length">integer-length</a></li>
+          <li><a href="#integerp">integerp</a></li>
           <li><a href="#keywordp">keywordp</a></li>
           <li><a href="#lambda">lambda</a></li>
           <li><a href="#listp">listp</a></li>
+          <li><a href="#logtest">logtest</a></li>
           <li><a href="#multiple-value-list">multiple-value-list</a></li>
           <li><a href="#ninth">ninth</a></li>
           <li><a href="#numberp">numberp</a></li>
