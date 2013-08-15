@@ -8,7 +8,7 @@
     padding-bottom: 0;
 }
 
-#all-standard-symbols-table tbody th {
+#all-standard-symbols-table tbody th, #obsoletion-status > table th {
     vertical-align: top;
     white-space: nowrap;
 }
