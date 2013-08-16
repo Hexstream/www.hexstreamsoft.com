@@ -189,6 +189,7 @@
                 <li><a href="#streams-wrappers">Streams</a></li>
                 <li><a href="#accessor-specializing-wrappers">Accessor-specializing</a></li>
                 <li><a href="#math-wrappers">Math</a></li>
+                <li><a href="#conditions-restarts-wrappers">Conditions <i>/</i> Restarts</a></li>
                 <li><a href="#misc-wrappers">Misc</a></li>
               </ul>
             </li>
@@ -17720,37 +17721,52 @@ B</code></pre>
 
           <section id="car-cdr-wrappers">
             <h1><a href="#car-cdr-wrappers" class="anchor">&#x2693;</a><a href="#car">car</a> and <a href="#cdr">cdr</a> wrappers</h1>
-            <ul>
-              <li><a href="#caaaar">caaaar</a></li>
-              <li><a href="#caaadr">caaadr</a></li>
-              <li><a href="#caaar">caaar</a></li>
-              <li><a href="#caadar">caadar</a></li>
-              <li><a href="#caaddr">caaddr</a></li>
-              <li><a href="#caadr">caadr</a></li>
-              <li><a href="#caar">caar</a></li>
-              <li><a href="#cadaar">cadaar</a></li>
-              <li><a href="#cadadr">cadadr</a></li>
-              <li><a href="#cadar">cadar</a></li>
-              <li><a href="#caddar">caddar</a></li>
-              <li><a href="#cadddr">cadddr</a></li>
-              <li><a href="#caddr">caddr</a></li>
-              <li><a href="#cadr">cadr</a></li>
-              <li><a href="#ccase">ccase</a></li>
-              <li><a href="#cdaaar">cdaaar</a></li>
-              <li><a href="#cdaadr">cdaadr</a></li>
-              <li><a href="#cdaar">cdaar</a></li>
-              <li><a href="#cdadar">cdadar</a></li>
-              <li><a href="#cdaddr">cdaddr</a></li>
-              <li><a href="#cdadr">cdadr</a></li>
-              <li><a href="#cdar">cdar</a></li>
-              <li><a href="#cddaar">cddaar</a></li>
-              <li><a href="#cddadr">cddadr</a></li>
-              <li><a href="#cddar">cddar</a></li>
-              <li><a href="#cdddar">cdddar</a></li>
-              <li><a href="#cddddr">cddddr</a></li>
-              <li><a href="#cdddr">cdddr</a></li>
-              <li><a href="#cddr">cddr</a></li>
-            </ul>
+            <table>
+              <tbody>
+                <tr>
+                  <td colspan="4"><a href="#caar">caar</a></td>
+                  <td colspan="4"><a href="#cadr">cadr</a></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><a href="#caaar">caaar</a></td>
+                  <td colspan="2"><a href="#caadr">caadr</a></td>
+                  <td colspan="2"><a href="#cadar">cadar</a></td>
+                  <td colspan="2"><a href="#caddr">caddr</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#caaaar">caaaar</a></td>
+                  <td><a href="#caaadr">caaadr</a></td>
+                  <td><a href="#caadar">caadar</a></td>
+                  <td><a href="#caaddr">caaddr</a></td>
+                  <td><a href="#cadaar">cadaar</a></td>
+                  <td><a href="#cadadr">cadadr</a></td>
+                  <td><a href="#caddar">caddar</a></td>
+                  <td><a href="#cadddr">cadddr</a></td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="4"><a href="#cdar">cdar</a></td>
+                  <td colspan="4"><a href="#cddr">cddr</a></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><a href="#cdaar">cdaar</a></td>
+                  <td colspan="2"><a href="#cdadr">cdadr</a></td>
+                  <td colspan="2"><a href="#cddar">cddar</a></td>
+                  <td colspan="2"><a href="#cdddr">cdddr</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#cdaaar">cdaaar</a></td>
+                  <td><a href="#cdaadr">cdaadr</a></td>
+                  <td><a href="#cdadar">cdadar</a></td>
+                  <td><a href="#cdaddr">cdaddr</a></td>
+                  <td><a href="#cddaar">cddaar</a></td>
+                  <td><a href="#cddadr">cddadr</a></td>
+                  <td><a href="#cdddar">cdddar</a></td>
+                  <td><a href="#cddddr">cddddr</a></td>
+                </tr>
+              </tbody>
+            </table>
           </section>
 
           <section id="misc-list-wrappers">
@@ -17803,11 +17819,12 @@ B</code></pre>
             <li><a href="#when">when</a></li>
             <li><a href="#unless">unless</a></li>
             <li><a href="#cond">cond</a></li>
+            <li><a href="#case"></a></li>
+            <li><a href="#ccase">ccase</a></li>
+            <li><a href="#ecase">ecase</a></li>
             <li><a href="#typecase">typecase</a></li>
             <li><a href="#ctypecase">ctypecase</a></li>
-            <li><a href="#ecase">ecase</a></li>
             <li><a href="#etypecase">etypecase</a></li>
-            <li><a href="#ignore-errors">ignore-errors</a></li>
             <li><a href="#not">not</a></li>
             <li><a href="#handler-case">handler-case</a></li>
             <li><a href="#restart-case">restart-case</a></li>
@@ -17859,18 +17876,29 @@ B</code></pre>
           </ul>
         </section>
 
+        <section id="conditions-restarts-wrappers">
+          <h1><a href="#conditions-restarts-wrappers" class="anchor">&#x2693;</a>Conditions and restarts-related wrappers</h1>
+          <ul>
+            <li><a href="#warn">warn</a></li>
+            <li><a href="#error">error</a> (function only)</li>
+            <li><a href="#cerror">cerror</a></li>
+            <li><a href="#abort">abort</a> (function only)</li>
+            <li><a href="#continue">continue</a> (function only)</li>
+            <li><a href="#muffle-warning">muffle-warning</a></li>
+            <li><a href="#ignore-errors">ignore-errors</a></li>
+            <li><a href="#with-simple-restart">with-simple-restart</a></li>
+          </ul>
+        </section>
+
         <section id="misc-wrappers">
           <h1><a href="#misc-wrappers" class="anchor">&#x2693;</a>Miscellaneous wrappers</h1>
           <ul>
-            <li><a href="#abort">abort</a></li>
             <li><a href="#alphanumericp">alphanumericp</a></li>
             <li><a href="#array-dimension">array-dimension</a></li>
             <li><a href="#array-rank">array-rank</a></li>
-            <li><a href="#cerror">cerror</a></li>
             <li><a href="#char=">char=</a></li>
             <li><a href="#character">character</a></li>
             <li><a href="#constantly">constantly</a></li>
-            <li><a href="#continue">continue</a></li>
             <li><a href="#copy-seq">copy-seq</a></li>
             <li><a href="#copy-symbol">copy-symbol</a></li>
             <li><a href="#declaim">declaim</a></li>
@@ -17878,14 +17906,12 @@ B</code></pre>
             <li><a href="#defparameter">defparameter</a> (mostly)</li>
             <li><a href="#defun">defun</a> (mostly)</li>
             <li><a href="#defvar">defvar</a> (mostly)</li>
-            <li><a href="#error">error</a></li>
             <li><a href="#find-all-symbols">find-all-symbols</a></li>
             <li><a href="#funcall">funcall</a></li>
             <li><a href="#get-decoded-time">get-decoded-time</a></li>
             <li><a href="#in-package">in-package</a> (mostly)</li>
             <li><a href="#integer-length">integer-length</a></li>
             <li><a href="#lambda">lambda</a></li>
-            <li><a href="#muffle-warning">muffle-warning</a></li>
             <li><a href="#multiple-value-list">multiple-value-list</a></li>
             <li><a href="#prog">prog</a></li>
             <li><a href="#prog1">prog1</a></li>
@@ -17894,9 +17920,7 @@ B</code></pre>
             <li><a href="#subst">subst</a></li>
             <li><a href="#subst-if-not">subst-if-not</a></li>
             <li><a href="#values-list">values-list</a></li>
-            <li><a href="#warn">warn</a></li>
             <li><a href="#with-accessors">with-accessors</a></li>
-            <li><a href="#with-simple-restart">with-simple-restart</a></li>
           </ul>
         </section>
       </section>
