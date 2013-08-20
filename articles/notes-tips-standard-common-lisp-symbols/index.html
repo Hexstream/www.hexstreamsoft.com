@@ -17770,18 +17770,81 @@ B</code></pre>
           </section>
 
           <section id="misc-list-wrappers">
-          <h1><a href="#misc-list-wrappers" class="anchor">&#x2693;</a>Miscellaneous list-related wrappers</h1>
-          <ul>
-            <li><a href="#acons">acons</a></li>
-            <li><a href="#getf">getf</a></li>
-            <li><a href="#nth">nth</a></li>
-            <li><a href="#nreconc">nreconc</a></li>
-            <li><a href="#revappend">revappend</a></li>
-            <li><a href="#push">push</a></li>
-            <li><a href="#pushnew">pushnew</a></li>
-            <li><a href="#pop">pop</a></li>
-          </ul>
-        </section>
+            <h1><a href="#misc-list-wrappers" class="anchor">&#x2693;</a>Miscellaneous list-related wrappers</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>Wrapper name</th>
+                  <th>Primary conceptual constituents</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th><a href="#acons">acons</a></th>
+                  <td><a href="#cons">cons</a> (twice)</td>
+                </tr>
+                <tr>
+                  <th><a href="#getf">getf</a></th>
+                  <td><a href="#get-properties">get-properties</a></td>
+                </tr>
+                <tr>
+                  <th><a href="#nth">nth</a></th>
+                  <td>
+                    <ul>
+                      <li><a href="#nthcdr">nthcdr</a></li>
+                      <li><a href="#car">car</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th><a href="#nreconc">nreconc</a></th>
+                  <td>
+                    <ul>
+                      <li><a href="#nreverse">nreverse</a></li>
+                      <li><a href="#nconc">nconc</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th><a href="#revappend">revappend</a></th>
+                  <td>
+                    <ul>
+                      <li><a href="#reverse">reverse</a></li>
+                      <li><a href="#nconc">nconc</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th><a href="#push">push</a></th>
+                  <td>
+                    <ul>
+                      <li><a href="#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
+                      <li><a href="#cons">cons</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th><a href="#pushnew">pushnew</a></th>
+                  <td>
+                    <ul>
+                      <li><a href="#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
+                      <li><a href="#adjoin">adjoin</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th><a href="#pop">pop</a></th>
+                  <td>
+                    <ul>
+                      <li><a href="#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
+                      <li><a href="#car">car</a></li>
+                      <li><a href="#cdr">cdr</a></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
 
         </section>
 
@@ -17815,37 +17878,277 @@ B</code></pre>
 
         <section id="conditionals-wrappers">
           <h1><a href="#conditionals-wrappers" class="anchor">&#x2693;</a>Conditionals-related wrappers</h1>
-          <ul>
-            <li><a href="#when">when</a></li>
-            <li><a href="#unless">unless</a></li>
-            <li><a href="#cond">cond</a></li>
-            <li><a href="#case"></a></li>
-            <li><a href="#ccase">ccase</a></li>
-            <li><a href="#ecase">ecase</a></li>
-            <li><a href="#typecase">typecase</a></li>
-            <li><a href="#ctypecase">ctypecase</a></li>
-            <li><a href="#etypecase">etypecase</a></li>
-            <li><a href="#not">not</a></li>
-            <li><a href="#handler-case">handler-case</a></li>
-            <li><a href="#restart-case">restart-case</a></li>
-          </ul>
+          <table>
+            <thead>
+              <tr>
+                <th>Wrapper name</th>
+                <th>Primary conceptual constituents</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  <ul>
+                    <li><a href="#when">when</a></li>
+                    <li><a href="#unless">unless</a></li>
+                    <li><a href="#cond">cond</a></li>
+                  </ul>
+                </th>
+                <td>
+                  <ul>
+                    <li><a href="#if">if</a></li>
+                    <li><a href="#progn">progn</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#case">case</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#let">let</a></li>
+                    <li><a href="#cond">cond</a></li>
+                    <li><a href="#member">member</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#ccase">ccase</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#let">let</a></li>
+                    <li><a href="#cond">cond</a></li>
+                    <li><a href="#member">member</a></li>
+                    <li>TODO</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#ecase">ecase</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#case">case</a></li>
+                    <li><a href="#error">error</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#typecase">typecase</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#let">let</a></li>
+                    <li><a href="#cond">cond</a></li>
+                    <li><a href="#typep">typep</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#ctypecase">ctypecase</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#let">let</a></li>
+                    <li><a href="#cond">cond</a></li>
+                    <li><a href="#typep">typep</a></li>
+                    <li>TODO</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#etypecase">etypecase</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#typecase">typecase</a></li>
+                    <li><a href="#error">error</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#not">not</a></th>
+                <td><a href="#if">if</a></td>
+              </tr>
+              <tr>
+                <th><a href="#handler-case">handler-case</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#block">block</a></li>
+                    <li><a href="#let">let</a></li>
+                    <li><a href="#tagbody">tagbody</a></li>
+                    <li><a href="#handler-bind">handler-bind</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#restart-case">restart-case</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#block">block</a></li>
+                    <li><a href="#let">let</a></li>
+                    <li><a href="#tagbody">tagbody</a></li>
+                    <li><a href="#restart-bind">handler-bind</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
         <section id="streams-wrappers">
           <h1><a href="#streams-wrappers" class="anchor">&#x2693;</a>Streams-related wrappers</h1>
-          <ul>
-            <li><a href="#with-open-file">with-open-file</a></li>
-            <li><a href="#with-open-stream">with-open-stream</a></li>
-            <li><a href="#read-from-string">read-from-string</a></li>
-            <li><a href="#pprint">pprint</a></li>
-            <li><a href="#prin1">prin1</a></li>
-            <li><a href="#prin1-to-string">prin1-to-string</a></li>
-            <li><a href="#princ">princ</a></li>
-            <li><a href="#princ-to-string">princ-to-string</a></li>
-            <li><a href="#print">print</a></li>
-            <li><a href="#write-line">write-line</a></li>
-            <li><a href="#write-to-string">write-to-string</a></li>
-          </ul>
+          <table>
+            <thead>
+              <tr>
+                <th>Wrapper name</th>
+                <th>Primary conceptual constituents</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><a href="#with-open-file">with-open-file</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#with-open-stream">with-open-stream</a></li>
+                    <li><a href="#open">open</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#with-open-stream">with-open-stream</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#unwind-protect">unwind-protect</a></li>
+                    <li><a href="#close">close</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#read-from-string">read-from-string</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#with-input-from-string">with-input-from-string</a></li>
+                    <li><a href="#read">read</a></li>
+                    <li><a href="#read-preserving-whitespace">read-preserving-whitespace</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#write-line">write-line</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#write-string">write-string</a></li>
+                    <li><a href="#terpri">terpri</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#with-input-from-string">with-input-from-string</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#let">let</a></li>
+                    <li><a href="#make-string-input-stream">make-string-input-stream</a></li>
+                    <li><a href="#with-open-stream">with-open-stream</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#with-input-from-string">with-input-from-string</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#let">let</a></li>
+                    <li><a href="#make-string-input-stream">make-string-input-stream</a></li>
+                    <li><a href="#with-open-stream">with-open-stream</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="#with-input-from-string">with-output-to-string</a></th>
+                <td>
+                  <ul>
+                    <li><a href="#let">let</a></li>
+                    <li><a href="#make-string-output-stream">make-string-output-stream</a></li>
+                    <li><a href="#with-open-stream">with-open-stream</a></li>
+                    <li><a href="#get-output-stream-string">get-output-stream-string</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <ul>
+                    <li><a href="#write-to-string">write-to-string</a></li>
+                    <li><a href="#prin1-to-string">prin1-to-string</a></li>
+                    <li><a href="#princ-to-string">princ-to-string</a></li>
+                  </ul>
+                </th>
+                <td>
+                  <ul>
+                    <li><a href="#with-output-to-string">with-output-to-string</a></li>
+                    <li><a href="#write">write</a> / <a href="#prin1">prin1</a> / <a href="#princ">princ</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>The following are all thin wrappers over <a href="#write">write</a>.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Wrapper name</th>
+                <th>Keyword</th>
+                <th>Variable</th>
+                <th>Value</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="2"><a href="#pprint">pprint</a></th>
+                <td>:escape</td>
+                <td><a href="#*print-escape*">*print-escape*</a></td>
+                <td>true</td>
+                <td rowspan="2">Preceded by a #\Newline.</td>
+              </tr>
+              <tr>
+                <td>:pretty</td>
+                <td><a href="#*print-pretty*">*print-pretty*</a></td>
+                <td>true</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th><a href="#prin1">prin1</a></th>
+                <td>:escape</td>
+                <td><a href="#*print-escape*">*print-escape*</a></td>
+                <td>true</td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th><a href="#print">print</a></th>
+                <td>:escape</td>
+                <td><a href="#*print-escape*">*print-escape*</a></td>
+                <td>true</td>
+                <td>
+                  <ul>
+                    <li>Preceded by a #\Newline.</li>
+                    <li>Followed by a #\Space.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th rowspan="2"><a href="#princ">princ</a></th>
+                <td>:escape</td>
+                <td><a href="#*print-escape*">*print-escape*</a></td>
+                <td>false</td>
+                <td rowspan="2"></td>
+              </tr>
+              <tr>
+                <td>:readably</td>
+                <td><a href="#*print-readably*">*print-readably*</a></td>
+                <td>false</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
         <section id="accessor-specializing-wrappers">
