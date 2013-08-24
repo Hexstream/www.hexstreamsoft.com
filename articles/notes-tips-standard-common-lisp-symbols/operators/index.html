@@ -175,33 +175,103 @@
 
       <section id="special-operators">
         <h1><a href="#special-operators" class="anchor">&#x2693;</a>Special operators</h1>
-        <ul>
-          <li><a href="#block">block</a></li>
-          <li><a href="#catch">catch</a></li>
-          <li><a href="#eval-when">eval-when</a></li>
-          <li><a href="#flet">flet</a></li>
-          <li><a href="#function">function</a></li>
-          <li><a href="#go">go</a></li>
-          <li><a href="#if">if</a></li>
-          <li><a href="#labels">labels</a></li>
-          <li><a href="#let">let</a></li>
-          <li><a href="#let*">let*</a></li>
-          <li><a href="#load-time-value">load-time-value</a></li>
-          <li><a href="#locally">locally</a></li>
-          <li><a href="#macrolet">macrolet</a></li>
-          <li><a href="#multiple-value-call">multiple-value-call</a></li>
-          <li><a href="#multiple-value-prog1">multiple-value-prog1</a></li>
-          <li><a href="#progn">progn</a></li>
-          <li><a href="#progv">progv</a></li>
-          <li><a href="#quote">quote</a></li>
-          <li><a href="#return-from">return-from</a></li>
-          <li><a href="#setq">setq</a></li>
-          <li><a href="#symbol-macrolet">symbol-macrolet</a></li>
-          <li><a href="#tagbody">tagbody</a></li>
-          <li><a href="#the">the</a></li>
-          <li><a href="#throw">throw</a></li>
-          <li><a href="#unwind-protect">unwind-protect</a></li>
-        </ul>
+        <section id="program-flow-control">
+          <h1>Program flow control</h1>
+          <section id="non-local-exits">
+            <h1>Non-local exits</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>"Scope establisher"</th>
+                  <th>"Invoker"</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th><a href="#block">block</a></th>
+                  <td><a href="#return-from">return-from</a></td>
+                </tr>
+                <tr>
+                  <th><a href="#catch">catch</a></th>
+                  <td><a href="#throw">throw</a></td>
+                </tr>
+                <tr>
+                  <th><a href="#tagbody">tagbody</a></th>
+                  <td><a href="#go">go</a></td>
+                </tr>
+                <tr>
+                  <th><a href="#unwind-protect">unwind-protect</a></th>
+                  <td>(automatic)</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="misc-program-flow-control">
+            <h1>Miscellaneous program flow control</h1>
+            <ul>
+              <li><a href="#if">if</a></li>
+              <li><a href="#multiple-value-call">multiple-value-call</a></li>
+              <li><a href="#multiple-value-prog1">multiple-value-prog1</a></li>
+              <li><a href="#progn">progn</a></li>
+            </ul>
+          </section>
+        </section>
+        <section id="bindings">
+          <h1>Bindings</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Lexical scope only</th>
+                <th>Dynamic scope only</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li><a href="#flet">flet</a></li>
+                    <li><a href="#labels">labels</a></li>
+                    <li><a href="#macrolet">macrolet</a></li>
+                    <li><a href="#symbol-macrolet">symbol-macrolet</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="#progv">progv</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2" class="horizontal-grouping-header">Either</th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <ul>
+                    <li><a href="#let">let</a></li>
+                    <li><a href="#let*">let*</a></li>
+                    <li><a href="#setq">setq</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="evaluation">
+          <h1>Evaluation</h1>
+          <ul>
+            <li><a href="#eval-when">eval-when</a></li>
+            <li><a href="#load-time-value">load-time-value</a></li>
+            <li><a href="#quote">quote</a></li>
+            <li><a href="#function">function</a></li>
+          </ul>
+        </section>
+        <section id="declarations">
+          <h1>Declarations</h1>
+          <ul>
+            <li><a href="#locally">locally</a></li>
+            <li><a href="#the">the</a></li>
+          </ul>
+        </section>
       </section>
 
       <section id="macros">
