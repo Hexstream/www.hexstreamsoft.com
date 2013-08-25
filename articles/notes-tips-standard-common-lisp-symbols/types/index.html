@@ -49,16 +49,36 @@
           </h1>
           <ul>
             <li>
-              <a href="#system-classes">System classes</a>
+              <a href="#system-classes" class="inlining-node">System classes</a>
               <span class="item-count">(<span></span>)</span>
+              <ul class="inlined-nodes">
+                <li><a href="#number-system-classes">Numbers</a></li>
+                <li><a href="#stream-system-classes">Streams</a></li>
+                <li><a href="#misc-system-classes">Misc</a></li>
+              </ul>
             </li>
             <li>
-              <a href="#plain-types">"Plain" types</a>
+              <a href="#plain-types" class="inlining-node">"Plain" types</a>
               <span class="item-count">(<span></span>)</span>
+              <ul class="inlined-nodes">
+                <li>
+                  <a href="#number-types" class="inlining-node">Numbers</a>
+                  <ul class="inlined-nodes">
+                    <li><a href="#integer-number-types">Integers</a></li>
+                    <li><a href="#float-number-types">Floats</a></li>
+                  </ul>
+                </li>
+                <li><a href="#misc-types">Misc</a></li>
+              </ul>
             </li>
             <li>
-              <a href="#condition-types">Condition types</a>
+              <a href="#condition-types" class="inlining-node">Condition types</a>
               <span class="item-count">(<span></span>)</span>
+              <ul class="inlined-nodes">
+                <li><a href="#math-condition-types">Math</a></li>
+                <li><a href="#highly-unspecific-condition-types">Highly unspecific</a></li>
+                <li><a href="#misc-condition-types">Misc</a></li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -80,9 +100,6 @@
             </li>
             <li>
               <a href="../#variables">Variables</a>
-            </li>
-            <li>
-              <a href="../#system-classes">System classes</a>
             </li>
             <li>
               <a class="here">
@@ -156,117 +173,177 @@
 
       <section id="system-classes">
         <h1><a href="#system-classes" class="anchor">&#x2693;</a>System classes</h1>
-        <ul>
-          <li><a href="#array">array</a></li>
-          <li><a href="#bit-vector">bit-vector</a></li>
-          <li><a href="#broadcast-stream">broadcast-stream</a></li>
-          <li><a href="#built-in-class">built-in-class</a></li>
-          <li><a href="#character">character</a></li>
-          <li><a href="#class">class</a></li>
-          <li><a href="#complex">complex</a></li>
-          <li><a href="#concatenated-stream">concatenated-stream</a></li>
-          <li><a href="#cons">cons</a></li>
-          <li><a href="#echo-stream">echo-stream</a></li>
-          <li><a href="#file-stream">file-stream</a></li>
-          <li><a href="#float">float</a></li>
-          <li><a href="#function">function</a></li>
-          <li><a href="#generic-function">generic-function</a></li>
-          <li><a href="#hash-table">hash-table</a></li>
-          <li><a href="#integer">integer</a></li>
-          <li><a href="#list">list</a></li>
-          <li><a href="#logical-pathname">logical-pathname</a></li>
-          <li><a href="#method">method</a></li>
-          <li><a href="#method-combination">method-combination</a></li>
-          <li><a href="#null">null</a></li>
-          <li><a href="#number">number</a></li>
-          <li><a href="#package">package</a></li>
-          <li><a href="#pathname">pathname</a></li>
-          <li><a href="#random-state">random-state</a></li>
-          <li><a href="#ratio">ratio</a></li>
-          <li><a href="#rational">rational</a></li>
-          <li><a href="#readtable">readtable</a></li>
-          <li><a href="#real">real</a></li>
-          <li><a href="#restart">restart</a></li>
-          <li><a href="#sequence">sequence</a></li>
-          <li><a href="#standard-class">standard-class</a></li>
-          <li><a href="#standard-generic-function">standard-generic-function</a></li>
-          <li><a href="#standard-method">standard-method</a></li>
-          <li><a href="#stream">stream</a></li>
-          <li><a href="#string">string</a></li>
-          <li><a href="#string-stream">string-stream</a></li>
-          <li><a href="#structure-class">structure-class</a></li>
-          <li><a href="#symbol">symbol</a></li>
-          <li><a href="#synonym-stream">synonym-stream</a></li>
-          <li><a href="#t">t</a></li>
-          <li><a href="#two-way-stream">two-way-stream</a></li>
-          <li><a href="#vector">vector</a></li>
-        </ul>
+
+        <section id="number-system-classes">
+          <h1><a href="#number-system-classes" class="anchor">&#x2693;</a>Numbers</h1>
+          <ul>
+            <li><a href="#complex">complex</a></li>
+            <li><a href="#float">float</a></li>
+            <li><a href="#integer">integer</a></li>
+            <li><a href="#number">number</a></li>
+            <li><a href="#ratio">ratio</a></li>
+            <li><a href="#rational">rational</a></li>
+            <li><a href="#real">real</a></li>
+          </ul>
+        </section>
+
+        <section id="stream-system-classes">
+          <h1><a href="#stream-system-classes" class="anchor">&#x2693;</a>Streams</h1>
+          <ul>
+            <li><a href="#stream">stream</a></li>
+            <li><a href="#synonym-stream">synonym-stream</a></li>
+            <li><a href="#broadcast-stream">broadcast-stream</a></li>
+            <li><a href="#concatenated-stream">concatenated-stream</a></li>
+            <li><a href="#echo-stream">echo-stream</a></li>
+            <li><a href="#file-stream">file-stream</a></li>
+            <li><a href="#string-stream">string-stream</a></li>
+            <li><a href="#two-way-stream">two-way-stream</a></li>
+          </ul>
+        </section>
+
+        <section id="misc-system-classes">
+          <h1><a href="#misc-system-classes" class="anchor">&#x2693;</a>Miscellaneous system classes</h1>
+          <p>TODO: Extract other sections.</p>
+          <ul>
+            <li><a href="#array">array</a></li>
+            <li><a href="#bit-vector">bit-vector</a></li>
+            <li><a href="#built-in-class">built-in-class</a></li>
+            <li><a href="#character">character</a></li>
+            <li><a href="#class">class</a></li>
+            <li><a href="#cons">cons</a></li>
+            <li><a href="#function">function</a></li>
+            <li><a href="#generic-function">generic-function</a></li>
+            <li><a href="#hash-table">hash-table</a></li>
+            <li><a href="#list">list</a></li>
+            <li><a href="#logical-pathname">logical-pathname</a></li>
+            <li><a href="#method">method</a></li>
+            <li><a href="#method-combination">method-combination</a></li>
+            <li><a href="#null">null</a></li>
+            <li><a href="#package">package</a></li>
+            <li><a href="#pathname">pathname</a></li>
+            <li><a href="#random-state">random-state</a></li>
+            <li><a href="#readtable">readtable</a></li>
+            <li><a href="#restart">restart</a></li>
+            <li><a href="#sequence">sequence</a></li>
+            <li><a href="#standard-class">standard-class</a></li>
+            <li><a href="#standard-generic-function">standard-generic-function</a></li>
+            <li><a href="#standard-method">standard-method</a></li>
+            <li><a href="#string">string</a></li>
+            <li><a href="#structure-class">structure-class</a></li>
+            <li><a href="#symbol">symbol</a></li>
+            <li><a href="#t">t</a></li>
+            <li><a href="#vector">vector</a></li>
+          </ul>
+        </section>
+
       </section>
 
       <section id="types">
+
         <h1><a href="#types" class="anchor">&#x2693;</a>Types</h1>
-        <ul>
-          <li><a href="#atom">atom</a></li>
-          <li><a href="#base-char">base-char</a></li>
-          <li><a href="#base-string">base-string</a></li>
-          <li><a href="#bignum">bignum</a></li>
-          <li><a href="#bit">bit</a></li>
-          <li><a href="#boolean">boolean</a></li>
-          <li><a href="#compiled-function">compiled-function</a></li>
-          <li><a href="#double-float">double-float</a></li>
-          <li><a href="#extended-char">extended-char</a></li>
-          <li><a href="#fixnum">fixnum</a></li>
-          <li><a href="#keyword">keyword</a></li>
-          <li><a href="#long-float">long-float</a></li>
-          <li><a href="#nil">nil</a></li>
-          <li><a href="#short-float">short-float</a></li>
-          <li><a href="#signed-byte">signed-byte</a></li>
-          <li><a href="#simple-array">simple-array</a></li>
-          <li><a href="#simple-base-string">simple-base-string</a></li>
-          <li><a href="#simple-bit-vector">simple-bit-vector</a></li>
-          <li><a href="#simple-string">simple-string</a></li>
-          <li><a href="#simple-vector">simple-vector</a></li>
-          <li><a href="#single-float">single-float</a></li>
-          <li><a href="#standard-char">standard-char</a></li>
-          <li><a href="#type">type</a></li>
-          <li><a href="#unsigned-byte">unsigned-byte</a></li>
-        </ul>
+
+        <section id="number-types">
+
+          <h1><a href="#number-types" class="anchor">&#x2693;</a>Numbers</h1>
+
+          <section id="integer-number-types">
+            <h1><a href="#integer-number-types" class="anchor">&#x2693;</a>Integers</h1>
+            <ul>
+              <li><a href="#bit">bit</a></li>
+              <li><a href="#signed-byte">signed-byte</a></li>
+              <li><a href="#unsigned-byte">unsigned-byte</a></li>
+              <li><a href="#fixnum">fixnum</a></li>
+              <li><a href="#bignum">bignum</a></li>
+            </ul>
+          </section>
+
+          <section id="float-number-types">
+            <h1><a href="#float-number-types" class="anchor">&#x2693;</a>Floats</h1>
+            <ul>
+              <li><a href="#short-float">short-float</a></li>
+              <li><a href="#single-float">single-float</a></li>
+              <li><a href="#double-float">double-float</a></li>
+              <li><a href="#long-float">long-float</a></li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section id="misc-types">
+          <h1><a href="#misc-types" class="anchor">&#x2693;</a>Miscellaneous types</h1>
+          <ul>
+            <li><a href="#atom">atom</a></li>
+            <li><a href="#base-char">base-char</a></li>
+            <li><a href="#base-string">base-string</a></li>
+            <li><a href="#boolean">boolean</a></li>
+            <li><a href="#compiled-function">compiled-function</a></li>
+            <li><a href="#extended-char">extended-char</a></li>
+            <li><a href="#keyword">keyword</a></li>
+            <li><a href="#nil">nil</a></li>
+            <li><a href="#simple-array">simple-array</a></li>
+            <li><a href="#simple-base-string">simple-base-string</a></li>
+            <li><a href="#simple-bit-vector">simple-bit-vector</a></li>
+            <li><a href="#simple-string">simple-string</a></li>
+            <li><a href="#simple-vector">simple-vector</a></li>
+            <li><a href="#standard-char">standard-char</a></li>
+            <li><a href="#type">type</a></li>
+          </ul>
+        </section>
+
       </section>
 
       <section id="condition-types">
+
         <h1><a href="#condition-types" class="anchor">&#x2693;</a>Condition types</h1>
-        <ul>
-          <li><a href="#arithmetic-error">arithmetic-error</a></li>
-          <li><a href="#cell-error">cell-error</a></li>
-          <li><a href="#condition">condition</a></li>
-          <li><a href="#control-error">control-error</a></li>
-          <li><a href="#division-by-zero">division-by-zero</a></li>
-          <li><a href="#end-of-file">end-of-file</a></li>
-          <li><a href="#error">error</a></li>
-          <li><a href="#file-error">file-error</a></li>
-          <li><a href="#floating-point-inexact">floating-point-inexact</a></li>
-          <li><a href="#floating-point-invalid-operation">floating-point-invalid-operation</a></li>
-          <li><a href="#floating-point-overflow">floating-point-overflow</a></li>
-          <li><a href="#floating-point-underflow">floating-point-underflow</a></li>
-          <li><a href="#package-error">package-error</a></li>
-          <li><a href="#parse-error">parse-error</a></li>
-          <li><a href="#print-not-readable">print-not-readable</a></li>
-          <li><a href="#program-error">program-error</a></li>
-          <li><a href="#reader-error">reader-error</a></li>
-          <li><a href="#serious-condition">serious-condition</a></li>
-          <li><a href="#simple-condition">simple-condition</a></li>
-          <li><a href="#simple-error">simple-error</a></li>
-          <li><a href="#simple-type-error">simple-type-error</a></li>
-          <li><a href="#simple-warning">simple-warning</a></li>
-          <li><a href="#storage-condition">storage-condition</a></li>
-          <li><a href="#stream-error">stream-error</a></li>
-          <li><a href="#style-warning">style-warning</a></li>
-          <li><a href="#type-error">type-error</a></li>
-          <li><a href="#unbound-slot">unbound-slot</a></li>
-          <li><a href="#unbound-variable">unbound-variable</a></li>
-          <li><a href="#undefined-function">undefined-function</a></li>
-          <li><a href="#warning">warning</a></li>
-        </ul>
+
+        <section id="math-condition-types">
+          <h1><a href="#math-condition-types" class="anchor">&#x2693;</a>Math</h1>
+          <ul>
+            <li><a href="#arithmetic-error">arithmetic-error</a></li>
+            <li><a href="#division-by-zero">division-by-zero</a></li>
+            <li><a href="#floating-point-inexact">floating-point-inexact</a></li>
+            <li><a href="#floating-point-invalid-operation">floating-point-invalid-operation</a></li>
+            <li><a href="#floating-point-overflow">floating-point-overflow</a></li>
+            <li><a href="#floating-point-underflow">floating-point-underflow</a></li>
+          </ul>
+        </section>
+
+        <section id="highly-unspecific-condition-types">
+          <h1><a href="#highly-unspecific-condition-types" class="anchor">&#x2693;</a>Highly unspecific condition types</h1>
+          <ul>
+            <li><a href="#condition">condition</a></li>
+            <li><a href="#error">error</a></li>
+            <li><a href="#serious-condition">serious-condition</a></li>
+            <li><a href="#simple-condition">simple-condition</a></li>
+            <li><a href="#simple-error">simple-error</a></li>
+            <li><a href="#simple-warning">simple-warning</a></li>
+            <li><a href="#style-warning">style-warning</a></li>
+            <li><a href="#warning">warning</a></li>
+          </ul>
+        </section>
+
+        <section id="misc-condition-types">
+          <h1><a href="#misc-condition-types" class="anchor">&#x2693;</a>Miscellaneous condition types</h1>
+          <ul>
+            <li><a href="#cell-error">cell-error</a></li>
+            <li><a href="#control-error">control-error</a></li>
+            <li><a href="#end-of-file">end-of-file</a></li>
+            <li><a href="#file-error">file-error</a></li>
+            <li><a href="#package-error">package-error</a></li>
+            <li><a href="#parse-error">parse-error</a></li>
+            <li><a href="#print-not-readable">print-not-readable</a></li>
+            <li><a href="#program-error">program-error</a></li>
+            <li><a href="#reader-error">reader-error</a></li>
+            <li><a href="#simple-type-error">simple-type-error</a></li>
+            <li><a href="#storage-condition">storage-condition</a></li>
+            <li><a href="#stream-error">stream-error</a></li>
+            <li><a href="#type-error">type-error</a></li>
+            <li><a href="#unbound-slot">unbound-slot</a></li>
+            <li><a href="#unbound-variable">unbound-variable</a></li>
+            <li><a href="#undefined-function">undefined-function</a></li>
+          </ul>
+        </section>
+
       </section>
 
     </div>
