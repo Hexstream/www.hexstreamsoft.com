@@ -301,102 +301,105 @@
       </section>
 
       <section id="macros">
+
         <h1><a href="#macros" class="anchor">&#x2693;</a>Macros</h1>
-        <ul>
-          <li><a href="#and">and</a></li>
-          <li><a href="#assert">assert</a></li>
-          <li><a href="#call-method">call-method</a></li>
-          <li><a href="#case">case</a></li>
-          <li><a href="#ccase">ccase</a></li>
-          <li><a href="#check-type">check-type</a></li>
-          <li><a href="#compiler-macro">compiler-macro</a></li>
-          <li><a href="#cond">cond</a></li>
-          <li><a href="#ctypecase">ctypecase</a></li>
-          <li><a href="#decf">decf</a></li>
-          <li><a href="#declaim">declaim</a></li>
-          <li><a href="#defclass">defclass</a></li>
-          <li><a href="#defconstant">defconstant</a></li>
-          <li><a href="#defgeneric">defgeneric</a></li>
-          <li><a href="#define-compiler-macro">define-compiler-macro</a></li>
-          <li><a href="#define-condition">define-condition</a></li>
-          <li><a href="#define-method-combination">define-method-combination</a></li>
-          <li><a href="#define-modify-macro">define-modify-macro</a></li>
-          <li><a href="#define-setf-expander">define-setf-expander</a></li>
-          <li><a href="#define-symbol-macro">define-symbol-macro</a></li>
-          <li><a href="#defmacro">defmacro</a></li>
-          <li><a href="#defmethod">defmethod</a></li>
-          <li><a href="#defpackage">defpackage</a></li>
-          <li><a href="#defparameter">defparameter</a></li>
-          <li><a href="#defsetf">defsetf</a></li>
-          <li><a href="#defstruct">defstruct</a></li>
-          <li><a href="#deftype">deftype</a></li>
-          <li><a href="#defun">defun</a></li>
-          <li><a href="#defvar">defvar</a></li>
-          <li><a href="#destructuring-bind">destructuring-bind</a></li>
-          <li><a href="#do">do</a></li>
-          <li><a href="#do*">do*</a></li>
-          <li><a href="#do-all-symbols">do-all-symbols</a></li>
-          <li><a href="#do-external-symbols">do-external-symbols</a></li>
-          <li><a href="#do-symbols">do-symbols</a></li>
-          <li><a href="#dolist">dolist</a></li>
-          <li><a href="#dotimes">dotimes</a></li>
-          <li><a href="#ecase">ecase</a></li>
-          <li><a href="#etypecase">etypecase</a></li>
-          <li><a href="#formatter">formatter</a></li>
-          <li><a href="#handler-bind">handler-bind</a></li>
-          <li><a href="#handler-case">handler-case</a></li>
-          <li><a href="#ignore-errors">ignore-errors</a></li>
-          <li><a href="#in-package">in-package</a></li>
-          <li><a href="#incf">incf</a></li>
-          <li><a href="#lambda">lambda</a></li>
-          <li><a href="#loop">loop</a></li>
-          <li><a href="#loop-finish">loop-finish</a></li>
-          <li><a href="#macrolet">macrolet</a></li>
-          <li><a href="#make-method">make-method</a></li>
-          <li><a href="#multiple-value-bind">multiple-value-bind</a></li>
-          <li><a href="#multiple-value-list">multiple-value-list</a></li>
-          <li><a href="#multiple-value-setq">multiple-value-setq</a></li>
-          <li><a href="#nth-value">nth-value</a></li>
-          <li><a href="#or">or</a></li>
-          <li><a href="#pop">pop</a></li>
-          <li><a href="#pprint-exit-if-list-exhausted">pprint-exit-if-list-exhausted</a></li>
-          <li><a href="#pprint-logical-block">pprint-logical-block</a></li>
-          <li><a href="#pprint-pop">pprint-pop</a></li>
-          <li><a href="#print-unreadable-object">print-unreadable-object</a></li>
-          <li><a href="#prog">prog</a></li>
-          <li><a href="#prog*">prog*</a></li>
-          <li><a href="#prog1">prog1</a></li>
-          <li><a href="#prog2">prog2</a></li>
-          <li><a href="#psetf">psetf</a></li>
-          <li><a href="#psetq">psetq</a></li>
-          <li><a href="#push">push</a></li>
-          <li><a href="#pushnew">pushnew</a></li>
-          <li><a href="#remf">remf</a></li>
-          <li><a href="#restart-bind">restart-bind</a></li>
-          <li><a href="#restart-case">restart-case</a></li>
-          <li><a href="#return">return</a></li>
-          <li><a href="#rotatef">rotatef</a></li>
-          <li><a href="#setf">setf</a></li>
-          <li><a href="#shiftf">shiftf</a></li>
-          <li><a href="#step">step</a></li>
-          <li><a href="#time">time</a></li>
-          <li><a href="#trace">trace</a></li>
-          <li><a href="#typecase">typecase</a></li>
-          <li><a href="#unless">unless</a></li>
-          <li><a href="#when">when</a></li>
-          <li><a href="#with-accessors">with-accessors</a></li>
-          <li><a href="#with-compilation-unit">with-compilation-unit</a></li>
-          <li><a href="#with-condition-restarts">with-condition-restarts</a></li>
-          <li><a href="#with-hash-table-iterator">with-hash-table-iterator</a></li>
-          <li><a href="#with-input-from-string">with-input-from-string</a></li>
-          <li><a href="#with-open-file">with-open-file</a></li>
-          <li><a href="#with-open-stream">with-open-stream</a></li>
-          <li><a href="#with-output-to-string">with-output-to-string</a></li>
-          <li><a href="#with-package-iterator">with-package-iterator</a></li>
-          <li><a href="#with-simple-restart">with-simple-restart</a></li>
-          <li><a href="#with-slots">with-slots</a></li>
-          <li><a href="#with-standard-io-syntax">with-standard-io-syntax</a></li>
-        </ul>
+
+        <section id="conditionals">
+          <h1><a href="#conditionals" class="anchor">&#x2693;</a>Conditionals</h1>
+          <ul>
+            <li><a href="#cond">cond</a></li>
+            <li><a href="#and">and</a> / <a href="#or">or</a></li>
+            <li><a href="#when">when</a> / <a href="#unless">unless</a></li>
+            <li><a href="#case">case</a> / <a href="#ccase">ccase</a> / <a href="#ecase">ecase</a></li>
+            <li><a href="#typecase">typecase</a> / <a href="#ctypecase">ctypecase</a> / <a href="#etypecase">etypecase</a></li>
+          </ul>
+        </section>
+
+        <section id="definitions">
+          <h1><a href="#definitions" class="anchor">&#x2693;</a>Definitions</h1>
+          <ul>
+            <li><a href="#defclass">defclass</a> / <a href="#defstruct">defstruct</a> / <a href="#define-condition">define-condition</a></li>
+            <li><a href="#define-setf-expander">define-setf-expander</a> / <a href="#define-modify-macro">define-modify-macro</a> / <a href="#defsetf">defsetf</a></li>
+            <li><a href="#defmacro">defmacro</a> / <a href="#define-symbol-macro">define-symbol-macro</a> / <a href="#define-compiler-macro">define-compiler-macro</a></li>
+            <li><a href="#defpackage">defpackage</a></li>
+            <li><a href="#deftype">deftype</a></li>
+            <li><a href="#defun">defun</a> / <a href="#defgeneric">defgeneric</a> / <a href="#defmethod">defmethod</a> / <a href="#define-method-combination">define-method-combination</a></li>
+            <li><a href="#defvar">defvar</a> / <a href="#defparameter">defparameter</a> / <a href="#defconstant">defconstant</a></li>
+          </ul>
+        </section>
+
+        <section id="iteration">
+          <h1><a href="#iteration" class="anchor">&#x2693;</a>Iteration</h1>
+          <ul>
+            <li><a href="#do">do</a> / <a href="#do*">do*</a></li>
+            <li><a href="#do-symbols">do-symbols</a> / <a href="#do-external-symbols">do-external-symbols</a> / <a href="#do-all-symbols">do-all-symbols</a></li>
+            <li><a href="#dolist">dolist</a> / <a href="#dotimes">dotimes</a></li>
+            <li><a href="#loop">loop</a> / <a href="#loop-finish">loop-finish</a></li>
+            <li><a href="#pprint-logical-block">pprint-logical-block</a> / <a href="#pprint-exit-if-list-exhausted">pprint-exit-if-list-exhausted</a> / <a href="#pprint-pop">pprint-pop</a></li>
+            <li><a href="#with-hash-table-iterator">with-hash-table-iterator</a> / <a href="#with-package-iterator">with-package-iterator</a></li>
+          </ul>
+        </section>
+
+        <section id="assignment">
+          <h1><a href="#assignment" class="anchor">&#x2693;</a>Assignment</h1>
+          <ul>
+            <li><a href="#incf">incf</a> / <a href="#decf">decf</a></li>
+            <li><a href="#push">push</a> / <a href="#pushnew">pushnew</a> / <a href="#pop">pop</a></li>
+            <li><a href="#remf">remf</a></li>
+            <li><a href="#rotatef">rotatef</a> / <a href="#shiftf">shiftf</a></li>
+            <li><a href="#setf">setf</a> / <a href="#psetf">psetf</a> / <a href="#psetq">psetq</a> / <a href="#multiple-value-setq">multiple-value-setq</a></li>
+          </ul>
+        </section>
+
+        <section id="conditions-restarts">
+          <h1><a href="#conditions-restarts" class="anchor">&#x2693;</a>Conditions and restarts</h1>
+          <ul>
+            <li><a href="#assert">assert</a></li>
+            <li><a href="#check-type">check-type</a></li>
+            <li><a href="#handler-bind">handler-bind</a></li>
+            <li><a href="#handler-case">handler-case</a></li>
+            <li><a href="#ignore-errors">ignore-errors</a></li>
+            <li><a href="#restart-bind">restart-bind</a></li>
+            <li><a href="#restart-case">restart-case</a></li>
+            <li><a href="#with-compilation-unit">with-compilation-unit</a></li>
+            <li><a href="#with-condition-restarts">with-condition-restarts</a></li>
+            <li><a href="#with-simple-restart">with-simple-restart</a></li>
+          </ul>
+        </section>
+
+        <section id="misc-macros">
+          <h1><a href="#misc-macros" class="anchor">&#x2693;</a>Miscellaneous macros</h1>
+          <ul>
+            <li><a href="#call-method">call-method</a></li>
+            <li><a href="#compiler-macro">compiler-macro</a></li>
+            <li><a href="#declaim">declaim</a></li>
+            <li><a href="#destructuring-bind">destructuring-bind</a></li>
+            <li><a href="#formatter">formatter</a></li>
+            <li><a href="#in-package">in-package</a></li>
+            <li><a href="#lambda">lambda</a></li>
+            <li><a href="#make-method">make-method</a></li>
+            <li><a href="#multiple-value-bind">multiple-value-bind</a></li>
+            <li><a href="#multiple-value-list">multiple-value-list</a></li>
+            <li><a href="#nth-value">nth-value</a></li>
+            <li><a href="#print-unreadable-object">print-unreadable-object</a></li>
+            <li><a href="#prog">prog</a></li>
+            <li><a href="#prog*">prog*</a></li>
+            <li><a href="#prog1">prog1</a></li>
+            <li><a href="#prog2">prog2</a></li>
+            <li><a href="#return">return</a></li>
+            <li><a href="#step">step</a></li>
+            <li><a href="#time">time</a></li>
+            <li><a href="#trace">trace</a></li>
+            <li><a href="#with-accessors">with-accessors</a></li>
+            <li><a href="#with-input-from-string">with-input-from-string</a></li>
+            <li><a href="#with-open-file">with-open-file</a></li>
+            <li><a href="#with-open-stream">with-open-stream</a></li>
+            <li><a href="#with-output-to-string">with-output-to-string</a></li>
+            <li><a href="#with-slots">with-slots</a></li>
+            <li><a href="#with-standard-io-syntax">with-standard-io-syntax</a></li>
+          </ul>
+        </section>
+
       </section>
 
       <section id="functions">
@@ -751,7 +754,6 @@
             <li><a href="#nconc">nconc</a></li>
             <li><a href="#next-method-p">next-method-p</a></li>
             <li><a href="#nintersection">nintersection</a></li>
-            <li><a href="#ninth">ninth</a></li>
             <li><a href="#no-applicable-method">no-applicable-method</a></li>
             <li><a href="#no-next-method">no-next-method</a></li>
             <li><a href="#not">not</a></li>
@@ -1052,49 +1054,18 @@
         <section id="accessors">
           <h1><a href="#accessors" class="anchor">&#x2693;</a>Accessors</h1>
           <ul>
+            <li><a href="../thin-wrappers/#car-cdr wrappers">All CAR and CDR wrappers</a></li>
+            <li><a href="../thin-wrappers/#nth-wrappers">All NTH wrappers</a></li>
             <li><a href="#aref">aref</a></li>
             <li><a href="#bit">bit</a></li>
-            <li><a href="#caaaar">caaaar</a></li>
-            <li><a href="#caaadr">caaadr</a></li>
-            <li><a href="#caaar">caaar</a></li>
-            <li><a href="#caadar">caadar</a></li>
-            <li><a href="#caaddr">caaddr</a></li>
-            <li><a href="#caadr">caadr</a></li>
-            <li><a href="#caar">caar</a></li>
-            <li><a href="#cadaar">cadaar</a></li>
-            <li><a href="#cadadr">cadadr</a></li>
-            <li><a href="#cadar">cadar</a></li>
-            <li><a href="#caddar">caddar</a></li>
-            <li><a href="#cadddr">cadddr</a></li>
-            <li><a href="#caddr">caddr</a></li>
-            <li><a href="#cadr">cadr</a></li>
             <li><a href="#car">car</a></li>
-            <li><a href="#cdaaar">cdaaar</a></li>
-            <li><a href="#cdaaar">cdaaar</a></li>
-            <li><a href="#cdaadr">cdaadr</a></li>
-            <li><a href="#cdaar">cdaar</a></li>
-            <li><a href="#cdadar">cdadar</a></li>
-            <li><a href="#cdaddr">cdaddr</a></li>
-            <li><a href="#cdadr">cdadr</a></li>
-            <li><a href="#cdar">cdar</a></li>
-            <li><a href="#cddaar">cddaar</a></li>
-            <li><a href="#cddadr">cddadr</a></li>
-            <li><a href="#cddar">cddar</a></li>
-            <li><a href="#cdddar">cdddar</a></li>
-            <li><a href="#cddddr">cddddr</a></li>
-            <li><a href="#cdddr">cdddr</a></li>
-            <li><a href="#cddr">cddr</a></li>
             <li><a href="#cdr">cdr</a></li>
             <li><a href="#char">char</a></li>
             <li><a href="#compiler-macro-function">compiler-macro-function</a></li>
-            <li><a href="#eighth">eighth</a></li>
             <li><a href="#elt">elt</a></li>
             <li><a href="#fdefinition">fdefinition</a></li>
-            <li><a href="#fifth">fifth</a></li>
             <li><a href="#fill-pointer">fill-pointer</a></li>
             <li><a href="#find-class">find-class</a></li>
-            <li><a href="#first">first</a></li>
-            <li><a href="#fourth">fourth</a></li>
             <li><a href="#get">get</a></li>
             <li><a href="#getf">getf</a></li>
             <li><a href="#gethash">gethash</a></li>
@@ -1108,16 +1079,11 @@
             <li><a href="#row-major-aref">row-major-aref</a></li>
             <li><a href="#sbit">sbit</a></li>
             <li><a href="#schar">schar</a></li>
-            <li><a href="#second">second</a></li>
-            <li><a href="#seventh">seventh</a></li>
-            <li><a href="#sixth">sixth</a></li>
             <li><a href="#subseq">subseq</a></li>
             <li><a href="#svref">svref</a></li>
             <li><a href="#symbol-function">symbol-function</a></li>
             <li><a href="#symbol-plist">symbol-plist</a></li>
             <li><a href="#symbol-value">symbol-value</a></li>
-            <li><a href="#tenth">tenth</a></li>
-            <li><a href="#third">third</a></li>
             <li><a href="#values">values</a></li>
           </ul>
         </section>
