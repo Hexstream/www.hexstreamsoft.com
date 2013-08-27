@@ -67,8 +67,34 @@
               </ul>
             </li>
             <li>
-              <a href="#macros">Macros</a>
-              <span class="item-count">(<span>93</span>)</span>
+              <a href="#macros" class="inlining-node">Macros</a>
+              <span class="item-count">(<span>91</span>)</span>
+              <ul class="inlined-nodes">
+                <li>
+                  <a href="#conditionals">Conditionals</a>
+                  <span class="item-count">(<span>11</span>)</span>
+                </li>
+                <li>
+                  <a href="#definitions">Definitions</a>
+                  <span class="item-count">(<span>18</span>)</span>
+                </li>
+                <li>
+                  <a href="#iteration">Iteration</a>
+                  <span class="item-count">(<span>14</span>)</span>
+                </li>
+                <li>
+                  <a href="#assignment">Assignment</a>
+                  <span class="item-count">(<span>13</span>)</span>
+                </li>
+                <li>
+                  <a href="#conditions-restarts">Conditions and restarts</a>
+                  <span class="item-count">(<span>10</span>)</span>
+                </li>
+                <li>
+                  <a href="#misc-macros">Misc</a>
+                  <span class="item-count">(<span>25</span>)</span>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="#functions" class="inlining-node">Functions</a>
@@ -320,9 +346,8 @@
           <ul>
             <li><a href="#defclass">defclass</a> / <a href="#defstruct">defstruct</a> / <a href="#define-condition">define-condition</a></li>
             <li><a href="#define-setf-expander">define-setf-expander</a> / <a href="#define-modify-macro">define-modify-macro</a> / <a href="#defsetf">defsetf</a></li>
-            <li><a href="#defmacro">defmacro</a> / <a href="#define-symbol-macro">define-symbol-macro</a> / <a href="#define-compiler-macro">define-compiler-macro</a></li>
+            <li><a href="#defmacro">defmacro</a> / <a href="#define-symbol-macro">define-symbol-macro</a> / <a href="#define-compiler-macro">define-compiler-macro</a> / <a href="#deftype">deftype</a></li>
             <li><a href="#defpackage">defpackage</a></li>
-            <li><a href="#deftype">deftype</a></li>
             <li><a href="#defun">defun</a> / <a href="#defgeneric">defgeneric</a> / <a href="#defmethod">defmethod</a> / <a href="#define-method-combination">define-method-combination</a></li>
             <li><a href="#defvar">defvar</a> / <a href="#defparameter">defparameter</a> / <a href="#defconstant">defconstant</a></li>
           </ul>
@@ -343,11 +368,12 @@
         <section id="assignment">
           <h1><a href="#assignment" class="anchor">&#x2693;</a>Assignment</h1>
           <ul>
+            <li><a href="#setf">setf</a> / <a href="#psetf">psetf</a> / <a href="#psetq">psetq</a> / <a href="#multiple-value-setq">multiple-value-setq</a></li>
+            <li><a href="#rotatef">rotatef</a> / <a href="#shiftf">shiftf</a></li>
             <li><a href="#incf">incf</a> / <a href="#decf">decf</a></li>
             <li><a href="#push">push</a> / <a href="#pushnew">pushnew</a> / <a href="#pop">pop</a></li>
             <li><a href="#remf">remf</a></li>
-            <li><a href="#rotatef">rotatef</a> / <a href="#shiftf">shiftf</a></li>
-            <li><a href="#setf">setf</a> / <a href="#psetf">psetf</a> / <a href="#psetq">psetq</a> / <a href="#multiple-value-setq">multiple-value-setq</a></li>
+            <li><a href="#in-package">in-package</a></li>
           </ul>
         </section>
 
@@ -356,11 +382,9 @@
           <ul>
             <li><a href="#assert">assert</a></li>
             <li><a href="#check-type">check-type</a></li>
-            <li><a href="#handler-bind">handler-bind</a></li>
-            <li><a href="#handler-case">handler-case</a></li>
+            <li><a href="#handler-bind">handler-bind</a> / <a href="#handler-case">handler-case</a></li>
             <li><a href="#ignore-errors">ignore-errors</a></li>
-            <li><a href="#restart-bind">restart-bind</a></li>
-            <li><a href="#restart-case">restart-case</a></li>
+            <li><a href="#restart-bind">restart-bind</a> / <a href="#restart-case">restart-case</a></li>
             <li><a href="#with-compilation-unit">with-compilation-unit</a></li>
             <li><a href="#with-condition-restarts">with-condition-restarts</a></li>
             <li><a href="#with-simple-restart">with-simple-restart</a></li>
@@ -370,32 +394,20 @@
         <section id="misc-macros">
           <h1><a href="#misc-macros" class="anchor">&#x2693;</a>Miscellaneous macros</h1>
           <ul>
-            <li><a href="#call-method">call-method</a></li>
-            <li><a href="#compiler-macro">compiler-macro</a></li>
             <li><a href="#declaim">declaim</a></li>
             <li><a href="#destructuring-bind">destructuring-bind</a></li>
             <li><a href="#formatter">formatter</a></li>
-            <li><a href="#in-package">in-package</a></li>
             <li><a href="#lambda">lambda</a></li>
-            <li><a href="#make-method">make-method</a></li>
-            <li><a href="#multiple-value-bind">multiple-value-bind</a></li>
-            <li><a href="#multiple-value-list">multiple-value-list</a></li>
-            <li><a href="#nth-value">nth-value</a></li>
+            <li><a href="#make-method">make-method</a> / <a href="#call-method">call-method</a></li>
+            <li><a href="#multiple-value-bind">multiple-value-bind</a> / <a href="#multiple-value-list">multiple-value-list</a> / <a href="#nth-value">nth-value</a></li>
             <li><a href="#print-unreadable-object">print-unreadable-object</a></li>
-            <li><a href="#prog">prog</a></li>
-            <li><a href="#prog*">prog*</a></li>
-            <li><a href="#prog1">prog1</a></li>
-            <li><a href="#prog2">prog2</a></li>
+            <li><a href="#prog">prog</a> / <a href="#prog*">prog*</a></li>
+            <li><a href="#prog1">prog1</a> / <a href="#prog2">prog2</a></li>
             <li><a href="#return">return</a></li>
-            <li><a href="#step">step</a></li>
-            <li><a href="#time">time</a></li>
-            <li><a href="#trace">trace</a></li>
-            <li><a href="#with-accessors">with-accessors</a></li>
-            <li><a href="#with-input-from-string">with-input-from-string</a></li>
-            <li><a href="#with-open-file">with-open-file</a></li>
-            <li><a href="#with-open-stream">with-open-stream</a></li>
-            <li><a href="#with-output-to-string">with-output-to-string</a></li>
-            <li><a href="#with-slots">with-slots</a></li>
+            <li><a href="#step">step</a> / <a href="#time">time</a> / <a href="#trace">trace</a></li>
+            <li><a href="#with-accessors">with-accessors</a> / <a href="#with-slots">with-slots</a></li>
+            <li><a href="#with-input-from-string">with-input-from-string</a> / <a href="#with-output-to-string">with-output-to-string</a></li>
+            <li><a href="#with-open-file">with-open-file</a> / <a href="#with-open-stream">with-open-stream</a></li>
             <li><a href="#with-standard-io-syntax">with-standard-io-syntax</a></li>
           </ul>
         </section>
