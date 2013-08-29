@@ -422,24 +422,189 @@
 
           <h1><a href="#plain-functions" class="anchor">&#x2693;</a>"Plain" functions</h1>
 
+          <section id="math">
+            <h1><a href="#math" class="anchor">&#x2693;</a>Math</h1>
+            <table>
+              <tbody>
+                <tr>
+                  <td colspan="2"><a href="#sin">sin</a></td>
+                  <td colspan="2"><a href="#cos">cos</a></td>
+                  <td colspan="2"><a href="#tan">tan</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#sinh">sinh</a></td>
+                  <td><a href="#asin">asin</a></td>
+                  <td><a href="#cosh">cosh</a></td>
+                  <td><a href="#acos">acos</a></td>
+                  <td><a href="#tanh">tanh</a></td>
+                  <td><a href="#atan">atan</a></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><a href="#asinh">asinh</a></td>
+                  <td colspan="2"><a href="#acosh">acosh</a></td>
+                  <td colspan="2"><a href="#atanh">atanh</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>Rounding function</th>
+                  <th>Float variant</th>
+                  <th>Bias towards</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#ceiling">ceiling</a></td>
+                  <td><a href="#fceiling">fceiling</a></td>
+                  <td>Positive infinity</td>
+                </tr>
+                <tr>
+                  <td><a href="#floor">floor</a></td>
+                  <td><a href="#ffloor">ffloor</a></td>
+                  <td>Negative infinity</td>
+                </tr>
+                <tr>
+                  <td><a href="#round">round</a></td>
+                  <td><a href="#fround">fround</a></td>
+                  <td>Zero</td>
+                </tr>
+                <tr>
+                  <td><a href="#truncate">truncate</a></td>
+                  <td><a href="#ftruncate">ftruncate</a></td>
+                  <td>Even</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li><a href="#+">+</a> <a href="#-">-</a> <a href="#*">*</a> <a href="#/">/</a></li>
+              <li><a href="#&lt;">&lt;</a> <a href="#&lt;=">&lt=</a> <a href="#/=">/=</a> <a href="#=">=</a> <a href="#&gt;=">&gt;=</a> <a href="#&gt;">&gt;</a></li>
+              <li><a href="#1+">1+</a> / <a href="#1-">1-</a></li>
+              <li><a href="#abs">abs</a></li>
+              <li><a href="#arithmetic-error-operation">arithmetic-error-operation</a> / <a href="#arithmetic-error-operands">arithmetic-error-operands</a></li>
+              <li><a href="#cis">cis</a></li>
+              <li><a href="#complex">complex</a> / <a href="#realpart">realpart</a> / <a href="#imagpart">imagpart</a> / <a href="#complexp">complexp</a> / <a href="#conjugate">conjugate</a></li>
+              <li><a href="#decode-float">decode-float</a> / <a href="#scale-float">scale-float</a> / <a href="#float-radix">float-radix</a> / <a href="#float-sign">float-sign</a> / <a href="#float-digits">float-digits</a> / <a href="#float-precision">float-precision</a> / <a href="#integer-decode-float">integer-decode-float</a></li>
+              <li><a href="#numerator">numerator</a> / <a href="#denominator">denominator</a></li>
+              <li><a href="#evenp">evenp</a> / <a href="#oddp">oddp</a></li>
+              <li><a href="#expt">expt</a> / <a href="#exp">exp</a></li>
+              <li><a href="#float">float</a></li>
+              <li><a href="#floatp">floatp</a></li>
+              <li><a href="#gcd">gcd</a> / <a href="#lcm">lcm</a></li>
+              <li><a href="#integer-length">integer-length</a></li>
+              <li><a href="#integerp">integerp</a></li>
+              <li><a href="#log">log</a></li>
+              <li><a href="#make-random-state">make-random-state</a></li>
+              <li><a href="#min">min</a> / <a href="#max">max</a></li>
+              <li><a href="#mod">mod</a> / <a href="#rem">rem</a></li>
+              <li><a href="#numberp">numberp</a></li>
+              <li><a href="#parse-integer">parse-integer</a></li>
+              <li><a href="#phase">phase</a></li>
+              <li><a href="#random">random</a> / <a href="#random-state-p">random-state-p</a></li>
+              <li><a href="#rational">rational</a> / <a href="#rationalize">rationalize</a> / <a href="#rationalp">rationalp</a></li>
+              <li><a href="#realp">realp</a></li>
+              <li><a href="#simple-bit-vector-p">simple-bit-vector-p</a></li>
+              <li><a href="#sqrt">sqrt</a> / <a href="#isqrt">isqrt</a></li>
+              <li><a href="#signum">signum</a> / <a href="#minusp">minusp</a> / <a href="#zerop">zerop</a> / <a href="#plusp">plusp</a></li>
+            </ul>
+          </section>
+
+          <section id="bits">
+            <h1><a href="#bits" class="anchor">&#x2693;</a>Bits</h1>
+            <p><small>(I guess this could be a subsection of Math.)</small></p>
+            <ul>
+              <li><a href="#ash">ash</a></li>
+              <li><a href="#bit-and">bit-and</a></li>
+              <li><a href="#bit-andc1">bit-andc1</a></li>
+              <li><a href="#bit-andc2">bit-andc2</a></li>
+              <li><a href="#bit-eqv">bit-eqv</a></li>
+              <li><a href="#bit-ior">bit-ior</a></li>
+              <li><a href="#bit-nand">bit-nand</a></li>
+              <li><a href="#bit-nor">bit-nor</a></li>
+              <li><a href="#bit-not">bit-not</a></li>
+              <li><a href="#bit-orc1">bit-orc1</a></li>
+              <li><a href="#bit-orc2">bit-orc2</a></li>
+              <li><a href="#bit-vector-p">bit-vector-p</a></li>
+              <li><a href="#bit-xor">bit-xor</a></li>
+              <li><a href="#boole">boole</a></li>
+              <li><a href="#byte">byte</a> / <a href="#byte-position">byte-position</a> / <a href="#byte-size">byte-size</a></li>
+              <li><a href="#deposit-field">deposit-field</a></li>
+              <li><a href="#dpb">dpb</a></li>
+              <li><a href="#ldb-test">ldb-test</a></li>
+              <li><a href="#logand">logand</a></li>
+              <li><a href="#logandc1">logandc1</a></li>
+              <li><a href="#logandc2">logandc2</a></li>
+              <li><a href="#logbitp">logbitp</a></li>
+              <li><a href="#logcount">logcount</a></li>
+              <li><a href="#logeqv">logeqv</a></li>
+              <li><a href="#logior">logior</a></li>
+              <li><a href="#lognand">lognand</a></li>
+              <li><a href="#lognor">lognor</a></li>
+              <li><a href="#lognot">lognot</a></li>
+              <li><a href="#logorc1">logorc1</a></li>
+              <li><a href="#logorc2">logorc2</a></li>
+              <li><a href="#logtest">logtest</a></li>
+              <li><a href="#logxor">logxor</a></li>
+            </ul>
+          </section>
+
+          <table>
+            <tbody>
+              <tr>
+                <td><a href="#assoc">assoc</a></td>
+                <td><a href="#assoc-if">assoc-if</a></td>
+                <td><a href="#assoc-if-not">assoc-if-not</a></td>
+                <td>Alist</td>
+              </tr>
+              <tr>
+                <td><a href="#count">count</a></td>
+                <td><a href="#count-if">count-if</a></td>
+                <td><a href="#count-if-not">count-if-not</a></td>
+                <td>Sequence</td>
+              </tr>
+              <tr>
+                <td><a href="#find">find</a></td>
+                <td><a href="#find-if">find-if</a></td>
+                <td><a href="#find-if-not">find-if-not</a></td>
+                <td>Sequence</td>
+              </tr>
+              <tr>
+                <td><a href="#member">member</a></td>
+                <td><a href="#member-if">member-if</a></td>
+                <td><a href="#member-if-not">member-if-not</a></td>
+                <td>List</td>
+              </tr>
+              <tr>
+                <td><a href="#position">position</a></td>
+                <td><a href="#position-if">position-if</a></td>
+                <td><a href="#position-if-not">position-if-not</a></td>
+                <td>Sequence</td>
+              </tr>
+              <tr>
+                <td><a href="#remove">remove</a></td>
+                <td><a href="#remove-if">remove-if</a></td>
+                <td><a href="#remove-if-not">remove-if-not</a></td>
+                <td>Sequence</td>
+              </tr>
+              <tr>
+                <td><a href="#subst">subst</a></td>
+                <td><a href="#subst-if">subst-if</a></td>
+                <td><a href="#subst-if-not">subst-if-not</a></td>
+                <td>Tree of conses</td>
+              </tr>
+              <tr>
+                <td><a href="#substitute">substitute</a></td>
+                <td><a href="#substitute-if">substitute-if</a></td>
+                <td><a href="#substitute-if-not">substitute-if-not</a></td>
+                <td>Sequence</td>
+              </tr>
+            </tbody>
+          </table>
+
           <ul>
-            <li><a href="#*">*</a></li>
-            <li><a href="#+">+</a></li>
-            <li><a href="#-">-</a></li>
-            <li><a href="#/">/</a></li>
-            <li><a href="#/=">/=</a></li>
-            <li><a href="#1+">1+</a></li>
-            <li><a href="#1-">1-</a></li>
-            <li><a href="#&lt;">&lt;</a></li>
-            <li><a href="#&lt;=">&lt=</a></li>
-            <li><a href="#=">=</a></li>
-            <li><a href="#&gt;">&gt;</a></li>
-            <li><a href="#&gt;=">&gt;=</a></li>
             <li><a href="#abort">abort</a></li>
-            <li><a href="#abs">abs</a></li>
             <li><a href="#acons">acons</a></li>
-            <li><a href="#acos">acos</a></li>
-            <li><a href="#acosh">acosh</a></li>
             <li><a href="#add-method">add-method</a></li>
             <li><a href="#adjoin">adjoin</a></li>
             <li><a href="#adjust-array">adjust-array</a></li>
@@ -451,8 +616,6 @@
             <li><a href="#apply">apply</a></li>
             <li><a href="#apropos">apropos</a></li>
             <li><a href="#apropos-list">apropos-list</a></li>
-            <li><a href="#arithmetic-error-operands">arithmetic-error-operands</a></li>
-            <li><a href="#arithmetic-error-operation">arithmetic-error-operation</a></li>
             <li><a href="#array-dimension">array-dimension</a></li>
             <li><a href="#array-dimensions">array-dimensions</a></li>
             <li><a href="#array-displacement">array-displacement</a></li>
@@ -463,38 +626,13 @@
             <li><a href="#array-row-major-index">array-row-major-index</a></li>
             <li><a href="#array-total-size">array-total-size</a></li>
             <li><a href="#arrayp">arrayp</a></li>
-            <li><a href="#ash">ash</a></li>
-            <li><a href="#asin">asin</a></li>
-            <li><a href="#asinh">asinh</a></li>
-            <li><a href="#assoc">assoc</a></li>
-            <li><a href="#assoc-if">assoc-if</a></li>
-            <li><a href="#assoc-if-not">assoc-if-not</a></li>
-            <li><a href="#atan">atan</a></li>
-            <li><a href="#atanh">atanh</a></li>
             <li><a href="#atom">atom</a></li>
-            <li><a href="#bit-and">bit-and</a></li>
-            <li><a href="#bit-andc1">bit-andc1</a></li>
-            <li><a href="#bit-andc2">bit-andc2</a></li>
-            <li><a href="#bit-eqv">bit-eqv</a></li>
-            <li><a href="#bit-ior">bit-ior</a></li>
-            <li><a href="#bit-nand">bit-nand</a></li>
-            <li><a href="#bit-nor">bit-nor</a></li>
-            <li><a href="#bit-not">bit-not</a></li>
-            <li><a href="#bit-orc1">bit-orc1</a></li>
-            <li><a href="#bit-orc2">bit-orc2</a></li>
-            <li><a href="#bit-vector-p">bit-vector-p</a></li>
-            <li><a href="#bit-xor">bit-xor</a></li>
-            <li><a href="#boole">boole</a></li>
             <li><a href="#both-case-p">both-case-p</a></li>
             <li><a href="#boundp">boundp</a></li>
             <li><a href="#break">break</a></li>
             <li><a href="#broadcast-stream-streams">broadcast-stream-streams</a></li>
             <li><a href="#butlast">butlast</a></li>
-            <li><a href="#byte">byte</a></li>
-            <li><a href="#byte-position">byte-position</a></li>
-            <li><a href="#byte-size">byte-size</a></li>
             <li><a href="#call-next-method">call-next-method</a></li>
-            <li><a href="#ceiling">ceiling</a></li>
             <li><a href="#cell-error-name">cell-error-name</a></li>
             <li><a href="#cerror">cerror</a></li>
             <li><a href="#change-class">change-class</a></li>
@@ -517,7 +655,6 @@
             <li><a href="#char&gt;=">char&gt;=</a></li>
             <li><a href="#character">character</a></li>
             <li><a href="#characterp">characterp</a></li>
-            <li><a href="#cis">cis</a></li>
             <li><a href="#class-name">class-name</a></li>
             <li><a href="#class-of">class-of</a></li>
             <li><a href="#clear-input">clear-input</a></li>
@@ -533,13 +670,10 @@
             <li><a href="#compiled-function-p">compiled-function-p</a></li>
             <li><a href="#compiler-macro-function">compiler-macro-function</a></li>
             <li><a href="#complement">complement</a></li>
-            <li><a href="#complex">complex</a></li>
-            <li><a href="#complexp">complexp</a></li>
             <li><a href="#compute-applicable-methods">compute-applicable-methods</a></li>
             <li><a href="#compute-restarts">compute-restarts</a></li>
             <li><a href="#concatenate">concatenate</a></li>
             <li><a href="#concatenated-stream-streams">concatenated-stream-streams</a></li>
-            <li><a href="#conjugate">conjugate</a></li>
             <li><a href="#cons">cons</a></li>
             <li><a href="#consp">consp</a></li>
             <li><a href="#constantly">constantly</a></li>
@@ -553,12 +687,6 @@
             <li><a href="#copy-structure">copy-structure</a></li>
             <li><a href="#copy-symbol">copy-symbol</a></li>
             <li><a href="#copy-tree">copy-tree</a></li>
-            <li><a href="#cos">cos</a></li>
-            <li><a href="#cosh">cosh</a></li>
-            <li><a href="#count">count</a></li>
-            <li><a href="#count-if">count-if</a></li>
-            <li><a href="#count-if-not">count-if-not</a></li>
-            <li><a href="#decode-float">decode-float</a></li>
             <li><a href="#decode-universal-time">decode-universal-time</a></li>
             <li><a href="#defgeneric">defgeneric</a></li>
             <li><a href="#define-setf-expander">define-setf-expander</a></li>
@@ -568,8 +696,6 @@
             <li><a href="#delete-if">delete-if</a></li>
             <li><a href="#delete-if-not">delete-if-not</a></li>
             <li><a href="#delete-package">delete-package</a></li>
-            <li><a href="#denominator">denominator</a></li>
-            <li><a href="#deposit-field">deposit-field</a></li>
             <li><a href="#describe">describe</a></li>
             <li><a href="#describe-object">describe-object</a></li>
             <li><a href="#digit-char">digit-char</a></li>
@@ -578,7 +704,6 @@
             <li><a href="#directory-namestring">directory-namestring</a></li>
             <li><a href="#disassemble">disassemble</a></li>
             <li><a href="#documentation">documentation</a></li>
-            <li><a href="#dpb">dpb</a></li>
             <li><a href="#dribble">dribble</a></li>
             <li><a href="#echo-stream-input-stream">echo-stream-input-stream</a></li>
             <li><a href="#echo-stream-output-stream">echo-stream-output-stream</a></li>
@@ -594,14 +719,9 @@
             <li><a href="#equalp">equalp</a></li>
             <li><a href="#error">error</a></li>
             <li><a href="#eval">eval</a></li>
-            <li><a href="#evenp">evenp</a></li>
             <li><a href="#every">every</a></li>
-            <li><a href="#exp">exp</a></li>
             <li><a href="#export">export</a></li>
-            <li><a href="#expt">expt</a></li>
             <li><a href="#fboundp">fboundp</a></li>
-            <li><a href="#fceiling">fceiling</a></li>
-            <li><a href="#ffloor">ffloor</a></li>
             <li><a href="#file-author">file-author</a></li>
             <li><a href="#file-error-pathname">file-error-pathname</a></li>
             <li><a href="#file-length">file-length</a></li>
@@ -610,34 +730,21 @@
             <li><a href="#file-string-length">file-string-length</a></li>
             <li><a href="#file-write-date">file-write-date</a></li>
             <li><a href="#fill">fill</a></li>
-            <li><a href="#find">find</a></li>
             <li><a href="#find-all-symbols">find-all-symbols</a></li>
-            <li><a href="#find-if">find-if</a></li>
-            <li><a href="#find-if-not">find-if-not</a></li>
             <li><a href="#find-method">find-method</a></li>
             <li><a href="#find-package">find-package</a></li>
             <li><a href="#find-restart">find-restart</a></li>
             <li><a href="#find-symbol">find-symbol</a></li>
             <li><a href="#finish-output">finish-output</a></li>
-            <li><a href="#float">float</a></li>
-            <li><a href="#float-digits">float-digits</a></li>
-            <li><a href="#float-precision">float-precision</a></li>
-            <li><a href="#float-radix">float-radix</a></li>
-            <li><a href="#float-sign">float-sign</a></li>
-            <li><a href="#floatp">floatp</a></li>
-            <li><a href="#floor">floor</a></li>
             <li><a href="#fmakunbound">fmakunbound</a></li>
             <li><a href="#force-output">force-output</a></li>
             <li><a href="#format">format</a></li>
             <li><a href="#fresh-line">fresh-line</a></li>
-            <li><a href="#fround">fround</a></li>
-            <li><a href="#ftruncate">ftruncate</a></li>
             <li><a href="#funcall">funcall</a></li>
             <li><a href="#function">function</a></li>
             <li><a href="#function-keywords">function-keywords</a></li>
             <li><a href="#function-lambda-expression">function-lambda-expression</a></li>
             <li><a href="#functionp">functionp</a></li>
-            <li><a href="#gcd">gcd</a></li>
             <li><a href="#generic-function">generic-function</a></li>
             <li><a href="#gensym">gensym</a></li>
             <li><a href="#gentemp">gentemp</a></li>
@@ -659,14 +766,10 @@
             <li><a href="#hash-table-test">hash-table-test</a></li>
             <li><a href="#host-namestring">host-namestring</a></li>
             <li><a href="#identity">identity</a></li>
-            <li><a href="#imagpart">imagpart</a></li>
             <li><a href="#import">import</a></li>
             <li><a href="#initialize-instance">initialize-instance</a></li>
             <li><a href="#input-stream-p">input-stream-p</a></li>
             <li><a href="#inspect">inspect</a></li>
-            <li><a href="#integer-decode-float">integer-decode-float</a></li>
-            <li><a href="#integer-length">integer-length</a></li>
-            <li><a href="#integerp">integerp</a></li>
             <li><a href="#interactive-stream-p">interactive-stream-p</a></li>
             <li><a href="#intern">intern</a></li>
             <li><a href="#intersection">intersection</a></li>
@@ -674,11 +777,8 @@
             <li><a href="#invoke-debugger">invoke-debugger</a></li>
             <li><a href="#invoke-restart">invoke-restart</a></li>
             <li><a href="#invoke-restart-interactively">invoke-restart-interactively</a></li>
-            <li><a href="#isqrt">isqrt</a></li>
             <li><a href="#keywordp">keywordp</a></li>
             <li><a href="#last">last</a></li>
-            <li><a href="#lcm">lcm</a></li>
-            <li><a href="#ldb-test">ldb-test</a></li>
             <li><a href="#ldiff">ldiff</a></li>
             <li><a href="#length">length</a></li>
             <li><a href="#lisp-implementation-type">lisp-implementation-type</a></li>
@@ -691,22 +791,7 @@
             <li><a href="#listp">listp</a></li>
             <li><a href="#load">load</a></li>
             <li><a href="#load-logical-pathname-translations">load-logical-pathname-translations</a></li>
-            <li><a href="#log">log</a></li>
-            <li><a href="#logand">logand</a></li>
-            <li><a href="#logandc1">logandc1</a></li>
-            <li><a href="#logandc2">logandc2</a></li>
-            <li><a href="#logbitp">logbitp</a></li>
-            <li><a href="#logcount">logcount</a></li>
-            <li><a href="#logeqv">logeqv</a></li>
             <li><a href="#logical-pathname">logical-pathname</a></li>
-            <li><a href="#logior">logior</a></li>
-            <li><a href="#lognand">lognand</a></li>
-            <li><a href="#lognor">lognor</a></li>
-            <li><a href="#lognot">lognot</a></li>
-            <li><a href="#logorc1">logorc1</a></li>
-            <li><a href="#logorc2">logorc2</a></li>
-            <li><a href="#logtest">logtest</a></li>
-            <li><a href="#logxor">logxor</a></li>
             <li><a href="#long-site-name">long-site-name</a></li>
             <li><a href="#lower-case-p">lower-case-p</a></li>
             <li><a href="#machine-instance">machine-instance</a></li>
@@ -729,7 +814,6 @@
             <li><a href="#make-load-form-saving-slots">make-load-form-saving-slots</a></li>
             <li><a href="#make-package">make-package</a></li>
             <li><a href="#make-pathname">make-pathname</a></li>
-            <li><a href="#make-random-state">make-random-state</a></li>
             <li><a href="#make-sequence">make-sequence</a></li>
             <li><a href="#make-string">make-string</a></li>
             <li><a href="#make-string-input-stream">make-string-input-stream</a></li>
@@ -747,18 +831,11 @@
             <li><a href="#maphash">maphash</a></li>
             <li><a href="#mapl">mapl</a></li>
             <li><a href="#maplist">maplist</a></li>
-            <li><a href="#max">max</a></li>
-            <li><a href="#member">member</a></li>
-            <li><a href="#member-if">member-if</a></li>
-            <li><a href="#member-if-not">member-if-not</a></li>
             <li><a href="#merge">merge</a></li>
             <li><a href="#merge-pathnames">merge-pathnames</a></li>
             <li><a href="#method-combination-error">method-combination-error</a></li>
             <li><a href="#method-qualifiers">method-qualifiers</a></li>
-            <li><a href="#min">min</a></li>
-            <li><a href="#minusp">minusp</a></li>
             <li><a href="#mismatch">mismatch</a></li>
-            <li><a href="#mod">mod</a></li>
             <li><a href="#muffle-warning">muffle-warning</a></li>
             <li><a href="#name-char">name-char</a></li>
             <li><a href="#namestring">namestring</a></li>
@@ -787,10 +864,7 @@
             <li><a href="#nsubstitute-if-not">nsubstitute-if-not</a></li>
             <li><a href="#nthcdr">nthcdr</a></li>
             <li><a href="#null">null</a></li>
-            <li><a href="#numberp">numberp</a></li>
-            <li><a href="#numerator">numerator</a></li>
             <li><a href="#nunion">nunion</a></li>
-            <li><a href="#oddp">oddp</a></li>
             <li><a href="#open">open</a></li>
             <li><a href="#open-stream-p">open-stream-p</a></li>
             <li><a href="#output-stream-p">output-stream-p</a></li>
@@ -802,7 +876,6 @@
             <li><a href="#package-used-by-list">package-used-by-list</a></li>
             <li><a href="#packagep">packagep</a></li>
             <li><a href="#pairlis">pairlis</a></li>
-            <li><a href="#parse-integer">parse-integer</a></li>
             <li><a href="#parse-namestring">parse-namestring</a></li>
             <li><a href="#pathname">pathname</a></li>
             <li><a href="#pathname-device">pathname-device</a></li>
@@ -814,11 +887,6 @@
             <li><a href="#pathname-version">pathname-version</a></li>
             <li><a href="#pathnamep">pathnamep</a></li>
             <li><a href="#peek-char">peek-char</a></li>
-            <li><a href="#phase">phase</a></li>
-            <li><a href="#plusp">plusp</a></li>
-            <li><a href="#position">position</a></li>
-            <li><a href="#position-if">position-if</a></li>
-            <li><a href="#position-if-not">position-if-not</a></li>
             <li><a href="#pprint">pprint</a></li>
             <li><a href="#pprint-dispatch">pprint-dispatch</a></li>
             <li><a href="#pprint-fill">pprint-fill</a></li>
@@ -837,14 +905,9 @@
             <li><a href="#probe-file">probe-file</a></li>
             <li><a href="#proclaim">proclaim</a></li>
             <li><a href="#provide">provide</a></li>
-            <li><a href="#random">random</a></li>
-            <li><a href="#random-state-p">random-state-p</a></li>
             <li><a href="#rassoc">rassoc</a></li>
             <li><a href="#rassoc-if">rassoc-if</a></li>
             <li><a href="#rassoc-if-not">rassoc-if-not</a></li>
-            <li><a href="#rational">rational</a></li>
-            <li><a href="#rationalize">rationalize</a></li>
-            <li><a href="#rationalp">rationalp</a></li>
             <li><a href="#read">read</a></li>
             <li><a href="#read-byte">read-byte</a></li>
             <li><a href="#read-char">read-char</a></li>
@@ -855,16 +918,10 @@
             <li><a href="#read-preserving-whitespace">read-preserving-whitespace</a></li>
             <li><a href="#read-sequence">read-sequence</a></li>
             <li><a href="#readtablep">readtablep</a></li>
-            <li><a href="#realp">realp</a></li>
-            <li><a href="#realpart">realpart</a></li>
             <li><a href="#reduce">reduce</a></li>
             <li><a href="#reinitialize-instance">reinitialize-instance</a></li>
-            <li><a href="#rem">rem</a></li>
             <li><a href="#remhash">remhash</a></li>
-            <li><a href="#remove">remove</a></li>
             <li><a href="#remove-duplicates">remove-duplicates</a></li>
-            <li><a href="#remove-if">remove-if</a></li>
-            <li><a href="#remove-if-not">remove-if-not</a></li>
             <li><a href="#remove-method">remove-method</a></li>
             <li><a href="#remprop">remprop</a></li>
             <li><a href="#rename-file">rename-file</a></li>
@@ -875,10 +932,8 @@
             <li><a href="#revappend">revappend</a></li>
             <li><a href="#reverse">reverse</a></li>
             <li><a href="#room">room</a></li>
-            <li><a href="#round">round</a></li>
             <li><a href="#rplaca">rplaca</a></li>
             <li><a href="#rplacd">rplacd</a></li>
-            <li><a href="#scale-float">scale-float</a></li>
             <li><a href="#search">search</a></li>
             <li><a href="#set">set</a></li>
             <li><a href="#set-difference">set-difference</a></li>
@@ -892,14 +947,10 @@
             <li><a href="#shared-initialize">shared-initialize</a></li>
             <li><a href="#short-site-name">short-site-name</a></li>
             <li><a href="#signal">signal</a></li>
-            <li><a href="#signum">signum</a></li>
-            <li><a href="#simple-bit-vector-p">simple-bit-vector-p</a></li>
             <li><a href="#simple-condition-format-arguments">simple-condition-format-arguments</a></li>
             <li><a href="#simple-condition-format-control">simple-condition-format-control</a></li>
             <li><a href="#simple-string-p">simple-string-p</a></li>
             <li><a href="#simple-vector-p">simple-vector-p</a></li>
-            <li><a href="#sin">sin</a></li>
-            <li><a href="#sinh">sinh</a></li>
             <li><a href="#sleep">sleep</a></li>
             <li><a href="#slot-boundp">slot-boundp</a></li>
             <li><a href="#slot-exists-p">slot-exists-p</a></li>
@@ -912,7 +963,6 @@
             <li><a href="#some">some</a></li>
             <li><a href="#sort">sort</a></li>
             <li><a href="#special-operator-p">special-operator-p</a></li>
-            <li><a href="#sqrt">sqrt</a></li>
             <li><a href="#stable-sort">stable-sort</a></li>
             <li><a href="#standard-char-p">standard-char-p</a></li>
             <li><a href="#standard-generic-function">standard-generic-function</a></li>
@@ -943,12 +993,6 @@
             <li><a href="#stringp">stringp</a></li>
             <li><a href="#sublis">sublis</a></li>
             <li><a href="#subsetp">subsetp</a></li>
-            <li><a href="#subst">subst</a></li>
-            <li><a href="#subst-if">subst-if</a></li>
-            <li><a href="#subst-if-not">subst-if-not</a></li>
-            <li><a href="#substitute">substitute</a></li>
-            <li><a href="#substitute-if">substitute-if</a></li>
-            <li><a href="#substitute-if-not">substitute-if-not</a></li>
             <li><a href="#subtypep">subtypep</a></li>
             <li><a href="#sxhash">sxhash</a></li>
             <li><a href="#symbol-function">symbol-function</a></li>
@@ -957,14 +1001,11 @@
             <li><a href="#symbolp">symbolp</a></li>
             <li><a href="#synonym-stream-symbol">synonym-stream-symbol</a></li>
             <li><a href="#tailp">tailp</a></li>
-            <li><a href="#tan">tan</a></li>
-            <li><a href="#tanh">tanh</a></li>
             <li><a href="#terpri">terpri</a></li>
             <li><a href="#translate-logical-pathname">translate-logical-pathname</a></li>
             <li><a href="#translate-pathname">translate-pathname</a></li>
             <li><a href="#tree-equal">tree-equal</a></li>
             <li><a href="#truename">truename</a></li>
-            <li><a href="#truncate">truncate</a></li>
             <li><a href="#two-way-stream-input-stream">two-way-stream-input-stream</a></li>
             <li><a href="#two-way-stream-output-stream">two-way-stream-output-stream</a></li>
             <li><a href="#type-error-datum">type-error-datum</a></li>

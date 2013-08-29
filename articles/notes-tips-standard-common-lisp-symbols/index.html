@@ -9293,7 +9293,14 @@ B</code></pre>
                   <li>Math</li>
                 </ul>
               </th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><q>log may return a complex when given a real negative number.</q></p>
+                </div>
+                <div class="topic">
+                  <p><q>The result of (log 8 2) may be either 3 or 3.0, depending on the implementation. An implementation can use floating-point calculations even if an exact integer result is possible.</q></p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="logand">
@@ -13213,7 +13220,11 @@ B</code></pre>
                   <li>Math</li>
                 </ul>
               </th>
-              <td></td>
+              <td>
+                <div class="topic">
+                  <p><q>If an effect is desired that is similar to round, but that always rounds up or down (rather than toward the nearest even integer) if the mathematical quotient is exactly halfway between two integers, the programmer should consider a construction such as (floor (+ x 1/2)) or (ceiling (- x 1/2)).</q></p>
+                </div>
+              </td>
             </tr>
           </tbody>
           <tbody id="row-major-aref">
