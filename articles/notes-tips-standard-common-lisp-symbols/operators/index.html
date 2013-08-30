@@ -404,7 +404,7 @@
             <li><a href="#prog">prog</a> / <a href="#prog*">prog*</a></li>
             <li><a href="#prog1">prog1</a> / <a href="#prog2">prog2</a></li>
             <li><a href="#return">return</a></li>
-            <li><a href="#step">step</a> / <a href="#time">time</a> / <a href="#trace">trace</a></li>
+            <li><a href="#step">step</a> / <a href="#time">time</a> / <a href="#trace">trace</a> / <a href="#untrace">untrace</a></li>
             <li><a href="#with-accessors">with-accessors</a> / <a href="#with-slots">with-slots</a></li>
             <li><a href="#with-input-from-string">with-input-from-string</a> / <a href="#with-output-to-string">with-output-to-string</a></li>
             <li><a href="#with-open-file">with-open-file</a> / <a href="#with-open-stream">with-open-stream</a></li>
@@ -549,12 +549,254 @@
             </ul>
           </section>
 
+          <section id="comparisons">
+
+            <h1><a href="#comparisons" class="anchor">&#x2693;</a>Comparisons</h1>
+
+            <section id="general-purpose-comparisons">
+              <h1><a href="#general-purpose-comparisons" class="anchor">&#x2693;</a>General-purpose</h1>
+              <ul>
+                <li><a href="#eq">eq</a></li>
+                <li><a href="#eql">eql</a></li>
+                <li><a href="#equal">equal</a></li>
+                <li><a href="#equalp">equalp</a></li>
+              </ul>
+            </section>
+
+            <section id="ordering-comparisons">
+
+              <h1><a href="#ordering-comparisons" class="anchor">&#x2693;</a>Ordering</h1>
+
+              <ul>
+                <li><a href="#sort">sort</a></li>
+                <li><a href="#stable-sort">stable-sort</a></li>
+              </ul>
+
+              <table>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">Case-sensitive</th>
+                    <td><a href="#char&lt;">char&lt;</a></td>
+                    <td><a href="#char&lt;=">char&lt;=</a></td>
+                    <td><a href="#char/=">char/=</a></td>
+                    <td><a href="#char=">char=</a></td>
+                    <td><a href="#char&gt;=">char&gt;=</a></td>
+                    <td><a href="#char&gt;">char&gt;</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#string&lt;">string&lt;</a></td>
+                    <td><a href="#string&lt;">string&lt;=</a></td>
+                    <td><a href="#string/=">string/=</a></td>
+                    <td><a href="#string=">string=</a></td>
+                    <td><a href="#string&gt;=">string&gt;=</a></td>
+                    <td><a href="#string&gt;">string&gt;</a></td>
+                  </tr>
+                  <tr>
+                    <th rowspan="2">Case-insensitive</th>
+                    <td><a href="#char-lessp">char-lessp</a></td>
+                    <td><a href="#char-not-greaterp">char-not-greaterp</a></td>
+                    <td><a href="#char-not-equal">char-not-equal</a></td>
+                    <td><a href="#char-equal">char-equal</a></td>
+                    <td><a href="#char-not-lessp">char-not-lessp</a></td>
+                    <td><a href="#char-greaterp">char-greaterp</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#string-lessp">string-lessp</a></td>
+                    <td><a href="#string-not-greaterp">string-not-greaterp</a></td>
+                    <td><a href="#string-not-equal">string-not-equal</a></td>
+                    <td><a href="#string-equal">string-equal</a></td>
+                    <td><a href="#string-not-lessp">string-not-lessp</a></td>
+                    <td><a href="#string-greaterp">string-greaterp</a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </section>
+
+          </section>
+
+          <section id="hash-tables">
+            <h1><a href="#hash-tables" class="anchor">&#x2693;</a>Hash tables</h1>
+            <ul>
+              <li><a href="#make-hash-table">make-hash-table</a></li>
+              <li><a href="#hash-table-count">hash-table-count</a> / <a href="#hash-table-size">hash-table-size</a></li>
+              <li><a href="#hash-table-p">hash-table-p</a></li>
+              <li><a href="#hash-table-test">hash-table-test</a> / <a href="#hash-table-rehash-size">hash-table-rehash-size</a> / <a href="#hash-table-rehash-threshold">hash-table-rehash-threshold</a></li>
+              <li><a href="#maphash">maphash</a></li>
+              <li><a href="#remhash">remhash</a> / <a href="#clrhash">clrhash</a></li>
+              <li><a href="#sxhash">sxhash</a></li>
+            </ul>
+          </section>
+
+          <section id="arrays">
+            <h1><a href="#arrays" class="anchor">&#x2693;</a>Arrays</h1>
+            <ul>
+              <li><a href="#adjust-array">adjust-array</a></li>
+              <li><a href="#adjustable-array-p">adjustable-array-p</a></li>
+              <li><a href="#array-dimension">array-dimension</a></li>
+              <li><a href="#array-dimensions">array-dimensions</a></li>
+              <li><a href="#array-displacement">array-displacement</a></li>
+              <li><a href="#array-element-type">array-element-type</a></li>
+              <li><a href="#array-has-fill-pointer-p">array-has-fill-pointer-p</a></li>
+              <li><a href="#array-in-bounds-p">array-in-bounds-p</a></li>
+              <li><a href="#array-rank">array-rank</a></li>
+              <li><a href="#array-row-major-index">array-row-major-index</a></li>
+              <li><a href="#array-total-size">array-total-size</a></li>
+              <li><a href="#arrayp">arrayp</a></li>
+              <li><a href="#make-array">make-array</a></li>
+              <li><a href="#upgraded-array-element-type">upgraded-array-element-type</a></li>
+            </ul>
+          </section>
+
+          <section id="streams">
+            <h1><a href="#streams" class="anchor">&#x2693;</a>Streams</h1>
+            <section id="stream-objects">
+              <h1><a href="#stream-objects" class="anchor">&#x2693;</a>Stream objects</h1>
+              <ul>
+                <li><a href="#close">close</a></li>
+                <li><a href="#input-stream-p">input-stream-p</a> / <a href="#output-stream-p">output-stream-p</a></li>
+                <li><a href="#interactive-stream-p">interactive-stream-p</a></li>
+                <li><a href="#make-broadcast-stream">make-broadcast-stream</a> / <a href="#broadcast-stream-streams">broadcast-stream-streams</a></li>
+                <li><a href="#make-concatenated-stream">make-concatenated-stream</a> / <a href="#concatenated-stream-streams">concatenated-stream-streams</a></li>
+                <li><a href="#make-echo-stream">make-echo-stream</a> / <a href="#echo-stream-input-stream">echo-stream-input-stream</a> / <a href="#echo-stream-output-stream">echo-stream-output-stream</a></li>
+                <li><a href="#make-string-input-stream">make-string-input-stream</a> / <a href="#make-string-output-stream">make-string-output-stream</a> / <a href="#get-output-stream-string">get-output-stream-string</a></li>
+                <li><a href="#make-synonym-stream">make-synonym-stream</a> / <a href="#synonym-stream-symbol">synonym-stream-symbol</a></li>
+                <li><a href="#make-two-way-stream">make-two-way-stream</a> / <a href="#two-way-stream-input-stream">two-way-stream-input-stream</a> / <a href="#two-way-stream-output-stream">two-way-stream-output-stream</a></li>
+                <li><a href="#open-stream-p">open-stream-p</a></li>
+                <li><a href="#stream-element-type">stream-element-type</a> / <a href="#stream-external-format">stream-external-format</a></li>
+                <li><a href="#stream-error-stream">stream-error-stream</a></li>
+                <li><a href="#streamp">streamp</a></li>
+              </ul>
+            </section>
+
+            <section id="stream-reading">
+              <h1><a href="#stream-reading" class="anchor">&#x2693;</a>Stream reading</h1>
+              <ul>
+                <li><a href="#clear-input">clear-input</a></li>
+                <li><a href="#listen">listen</a></li>
+                <li><a href="#read">read</a></li>
+                <li><a href="#read-byte">read-byte</a></li>
+                <li><a href="#read-char">read-char</a></li>
+                <li><a href="#read-char-no-hang">read-char-no-hang</a></li>
+                <li><a href="#read-delimited-list">read-delimited-list</a></li>
+                <li><a href="#read-from-string">read-from-string</a></li>
+                <li><a href="#read-line">read-line</a></li>
+                <li><a href="#read-preserving-whitespace">read-preserving-whitespace</a></li>
+                <li><a href="#read-sequence">read-sequence</a></li>
+                <li><a href="#unread-char">unread-char</a></li>
+                <li><a href="#readtablep">readtablep</a></li>
+                <li><a href="#readtable-case">readtable-case</a></li>
+                <li><a href="#copy-readtable">copy-readtable</a></li>
+              </ul>
+            </section>
+
+            <section id="stream-writing">
+              <h1><a href="#stream-writing" class="anchor">&#x2693;</a>Stream writing</h1>
+              <ul>
+                <li><a href="#finish-output">finish-output</a> / <a href="#force-output">force-output</a> / <a href="#clear-output">clear-output</a></li>
+                <li><a href="#format">format</a></li>
+                <li><a href="#write">write</a> / <a href="#write-to-string">write-to-string</a></li>
+                <li><a href="#write-byte">write-byte</a></li>
+                <li><a href="#write-char">write-char</a></li>
+                <li><a href="#write-sequence">write-sequence</a></li>
+                <li><a href="#write-string">write-string</a> / <a href="#write-line">write-line</a></li>
+                <li><a href="#terpri">terpri</a> / <a href="#fresh-line">fresh-line</a></li>
+              </ul>
+            </section>
+
+          </section>
+
+          <section id="files">
+            <h1><a href="#files" class="anchor">&#x2693;</a>Files</h1>
+            <ul>
+              <li><a href="#compile-file">compile-file</a></li>
+              <li><a href="#compile-file-pathname">compile-file-pathname</a></li>
+              <li><a href="#delete-file">delete-file</a></li>
+              <li><a href="#file-author">file-author</a></li>
+              <li><a href="#file-error-pathname">file-error-pathname</a></li>
+              <li><a href="#file-length">file-length</a></li>
+              <li><a href="#file-namestring">file-namestring</a></li>
+              <li><a href="#file-position">file-position</a></li>
+              <li><a href="#file-string-length">file-string-length</a></li>
+              <li><a href="#file-write-date">file-write-date</a></li>
+              <li><a href="#open">open</a></li>
+              <li><a href="#probe-file">probe-file</a></li>
+              <li><a href="#rename-file">rename-file</a></li>
+            </ul>
+          </section>
+
+          <section id="sets">
+            <h1><a href="#sets" class="anchor">&#x2693;</a>Sets</h1>
+            <ul>
+              <li><a href="#subsetp">subsetp</a></li>
+            </ul>
+            <table>
+              <thead>
+                <tr>
+                  <th>Just sharing</th>
+                  <th>Also destructive</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#union">union</a></td>
+                  <td><a href="#nunion">nunion</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#intersection">intersection</a></td>
+                  <td><a href="#nintersection">nintersection</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#set-difference">set-difference</a></td>
+                  <td><a href="#nset-difference">nset-difference</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#set-exclusive-or">set-exclusive-or</a></td>
+                  <td><a href="#nset-exclusive-or">nset-exclusive-or</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="packages">
+            <h1><a href="#packages" class="anchor">&#x2693;</a>Packages</h1>
+            <ul>
+              <li><a href="#find-package">find-package</a></li>
+              <li><a href="#import">import</a></li>
+              <li><a href="#intern">intern</a> / <a href="#unintern">unintern</a></li>
+              <li><a href="#list-all-packages">list-all-packages</a></li>
+              <li><a href="#make-package">make-package</a> / <a href="#delete-package">delete-package</a></li>
+              <li><a href="#package-error-package">package-error-package</a></li>
+              <li><a href="#package-name">package-name</a> / <a href="#package-nicknames">package-nicknames</a> / <a href="#rename-package">rename-package</a></li>
+              <li><a href="#package-shadowing-symbols">package-shadowing-symbols</a></li>
+              <li><a href="#package-use-list">package-use-list</a> / <a href="#package-used-by-list">package-used-by-list</a></li>
+              <li><a href="#packagep">packagep</a></li>
+              <li><a href="#symbol-package">symbol-package</a></li>
+              <li><a href="#use-package">use-package</a> / <a href="#unuse-package">unuse-package</a></li>
+            </ul>
+          </section>
+
           <table>
             <tbody>
               <tr>
-                <td><a href="#assoc">assoc</a></td>
-                <td><a href="#assoc-if">assoc-if</a></td>
-                <td><a href="#assoc-if-not">assoc-if-not</a></td>
+                <td>
+                  <ul>
+                    <li><a href="#assoc">assoc</a></li>
+                    <li><a href="#rassoc">rassoc</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="#assoc-if">assoc-if</a></li>
+                    <li><a href="#rassoc-if">rassoc-if</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="#assoc-if-not">assoc-if-not</a></li>
+                    <li><a href="#rassoc-if-not">rassoc-if-not</a></li>
+                  </ul>
+                </td>
                 <td>Alist</td>
               </tr>
               <tr>
@@ -582,107 +824,139 @@
                 <td>Sequence</td>
               </tr>
               <tr>
-                <td><a href="#remove">remove</a></td>
-                <td><a href="#remove-if">remove-if</a></td>
-                <td><a href="#remove-if-not">remove-if-not</a></td>
+                <td>
+                  <ul>
+                    <li><a href="#remove">remove</a></li>
+                    <li><a href="#delete">delete</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="#remove-if">remove-if</a></li>
+                    <li><a href="#delete-if">delete-if</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="#remove-if-not">remove-if-not</a></li>
+                    <li><a href="#delete-if-not">delete-if-not</a></li>
+                  </ul>
+                </td>
                 <td>Sequence</td>
               </tr>
               <tr>
-                <td><a href="#subst">subst</a></td>
-                <td><a href="#subst-if">subst-if</a></td>
-                <td><a href="#subst-if-not">subst-if-not</a></td>
+                <td>
+                  <ul>
+                    <li><a href="#subst">subst</a></li>
+                    <li><a href="#nsubst">nsubst</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="#subst-if">subst-if</a></li>
+                    <li><a href="#nsubst-if">nsubst-if</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="#subst-if-not">subst-if-not</a></li>
+                    <li><a href="#nsubst-if-not">nsubst-if-not</a></li>
+                  </ul>
+                </td>
                 <td>Tree of conses</td>
               </tr>
               <tr>
-                <td><a href="#substitute">substitute</a></td>
-                <td><a href="#substitute-if">substitute-if</a></td>
-                <td><a href="#substitute-if-not">substitute-if-not</a></td>
+                <td>
+                  <ul>
+                    <li><a href="#substitute">substitute</a></li>
+                    <li><a href="#nsubstitute">nsubstitute</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="#substitute-if">substitute-if</a></li>
+                    <li><a href="#nsubstitute-if">nsubstitute-if</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="#substitute-if-not">substitute-if-not</a></li>
+                    <li><a href="#nsubstitute-if-not">nsubstitute-if-not</a></li>
+                  </ul>
+                </td>
                 <td>Sequence</td>
               </tr>
             </tbody>
           </table>
 
+          <table>
+              <thead>
+                <tr>
+                  <th>Potentially sharing</th>
+                  <th>Destructive</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#char-downcase">char-downcase</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="#char-upcase">char-upcase</a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><a href="#string-downcase">string-downcase</a></td>
+                  <td><a href="#nstring-downcase">nstring-downcase</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#string-upcase">string-upcase</a></td>
+                  <td><a href="#nstring-upcase">nstring-upcase</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#string-capitalize">string-capitalize</a></td>
+                  <td><a href="#nstring-capitalize">nstring-capitalize</a></td>
+                </tr>
+              </tbody>
+            </table>
+
           <ul>
             <li><a href="#abort">abort</a></li>
             <li><a href="#acons">acons</a></li>
-            <li><a href="#add-method">add-method</a></li>
             <li><a href="#adjoin">adjoin</a></li>
-            <li><a href="#adjust-array">adjust-array</a></li>
-            <li><a href="#adjustable-array-p">adjustable-array-p</a></li>
-            <li><a href="#allocate-instance">allocate-instance</a></li>
-            <li><a href="#alpha-char-p">alpha-char-p</a></li>
-            <li><a href="#alphanumericp">alphanumericp</a></li>
-            <li><a href="#append">append</a></li>
-            <li><a href="#apply">apply</a></li>
+            <li><a href="#alphanumericp">alphanumericp</a> / <a href="#alpha-char-p">alpha-char-p</a> / <a href="#digit-char-p">digit-char-p</a></li>
+            <li><a href="#append">append</a> / <a href="#revappend">revappend</a> / <a href="#nconc">nconc</a> / <a href="#nreconc">nreconc</a></li>
+            <li><a href="#apply">apply</a> / <a href="#funcall">funcall</a></li>
             <li><a href="#apropos">apropos</a></li>
             <li><a href="#apropos-list">apropos-list</a></li>
-            <li><a href="#array-dimension">array-dimension</a></li>
-            <li><a href="#array-dimensions">array-dimensions</a></li>
-            <li><a href="#array-displacement">array-displacement</a></li>
-            <li><a href="#array-element-type">array-element-type</a></li>
-            <li><a href="#array-has-fill-pointer-p">array-has-fill-pointer-p</a></li>
-            <li><a href="#array-in-bounds-p">array-in-bounds-p</a></li>
-            <li><a href="#array-rank">array-rank</a></li>
-            <li><a href="#array-row-major-index">array-row-major-index</a></li>
-            <li><a href="#array-total-size">array-total-size</a></li>
-            <li><a href="#arrayp">arrayp</a></li>
             <li><a href="#atom">atom</a></li>
             <li><a href="#both-case-p">both-case-p</a></li>
             <li><a href="#boundp">boundp</a></li>
             <li><a href="#break">break</a></li>
-            <li><a href="#broadcast-stream-streams">broadcast-stream-streams</a></li>
-            <li><a href="#butlast">butlast</a></li>
-            <li><a href="#call-next-method">call-next-method</a></li>
+            <li><a href="#butlast">butlast</a> / <a href="#nbutlast">nbutlast</a></li>
+            <li><a href="#call-next-method">call-next-method</a> / <a href="#next-method-p">next-method-p</a></li>
             <li><a href="#cell-error-name">cell-error-name</a></li>
-            <li><a href="#cerror">cerror</a></li>
-            <li><a href="#change-class">change-class</a></li>
-            <li><a href="#char-code">char-code</a></li>
-            <li><a href="#char-downcase">char-downcase</a></li>
-            <li><a href="#char-equal">char-equal</a></li>
-            <li><a href="#char-greaterp">char-greaterp</a></li>
-            <li><a href="#char-int">char-int</a></li>
-            <li><a href="#char-lessp">char-lessp</a></li>
+            <li><a href="#char-code">char-code</a> / <a href="#code-char">code-char</a> / <a href="#char-int">char-int</a></li>
             <li><a href="#char-name">char-name</a></li>
-            <li><a href="#char-not-equal">char-not-equal</a></li>
-            <li><a href="#char-not-greaterp">char-not-greaterp</a></li>
-            <li><a href="#char-not-lessp">char-not-lessp</a></li>
-            <li><a href="#char-upcase">char-upcase</a></li>
-            <li><a href="#char/=">char/=</a></li>
-            <li><a href="#char&lt;">char&lt;</a></li>
-            <li><a href="#char&lt;=">char&lt;=</a></li>
-            <li><a href="#char=">char=</a></li>
-            <li><a href="#char&gt;">char&gt;</a></li>
-            <li><a href="#char&gt;=">char&gt;=</a></li>
             <li><a href="#character">character</a></li>
             <li><a href="#characterp">characterp</a></li>
-            <li><a href="#class-name">class-name</a></li>
             <li><a href="#class-of">class-of</a></li>
-            <li><a href="#clear-input">clear-input</a></li>
-            <li><a href="#clear-output">clear-output</a></li>
-            <li><a href="#close">close</a></li>
-            <li><a href="#clrhash">clrhash</a></li>
-            <li><a href="#code-char">code-char</a></li>
             <li><a href="#coerce">coerce</a></li>
             <li><a href="#compile">compile</a></li>
-            <li><a href="#compile-file">compile-file</a></li>
-            <li><a href="#compile-file-pathname">compile-file-pathname</a></li>
             <li><a href="#compiled-function">compiled-function</a></li>
             <li><a href="#compiled-function-p">compiled-function-p</a></li>
             <li><a href="#compiler-macro-function">compiler-macro-function</a></li>
             <li><a href="#complement">complement</a></li>
-            <li><a href="#compute-applicable-methods">compute-applicable-methods</a></li>
             <li><a href="#compute-restarts">compute-restarts</a></li>
             <li><a href="#concatenate">concatenate</a></li>
-            <li><a href="#concatenated-stream-streams">concatenated-stream-streams</a></li>
             <li><a href="#cons">cons</a></li>
             <li><a href="#consp">consp</a></li>
-            <li><a href="#constantly">constantly</a></li>
+            <li><a href="#constantly">constantly</a> / <a href="#identity">identity</a></li>
             <li><a href="#constantp">constantp</a></li>
             <li><a href="#continue">continue</a></li>
             <li><a href="#copy-alist">copy-alist</a></li>
             <li><a href="#copy-list">copy-list</a></li>
             <li><a href="#copy-pprint-dispatch">copy-pprint-dispatch</a></li>
-            <li><a href="#copy-readtable">copy-readtable</a></li>
             <li><a href="#copy-seq">copy-seq</a></li>
             <li><a href="#copy-structure">copy-structure</a></li>
             <li><a href="#copy-symbol">copy-symbol</a></li>
@@ -690,89 +964,43 @@
             <li><a href="#decode-universal-time">decode-universal-time</a></li>
             <li><a href="#defgeneric">defgeneric</a></li>
             <li><a href="#define-setf-expander">define-setf-expander</a></li>
-            <li><a href="#delete">delete</a></li>
             <li><a href="#delete-duplicates">delete-duplicates</a></li>
-            <li><a href="#delete-file">delete-file</a></li>
-            <li><a href="#delete-if">delete-if</a></li>
-            <li><a href="#delete-if-not">delete-if-not</a></li>
-            <li><a href="#delete-package">delete-package</a></li>
             <li><a href="#describe">describe</a></li>
-            <li><a href="#describe-object">describe-object</a></li>
             <li><a href="#digit-char">digit-char</a></li>
-            <li><a href="#digit-char-p">digit-char-p</a></li>
             <li><a href="#directory">directory</a></li>
             <li><a href="#directory-namestring">directory-namestring</a></li>
             <li><a href="#disassemble">disassemble</a></li>
-            <li><a href="#documentation">documentation</a></li>
             <li><a href="#dribble">dribble</a></li>
-            <li><a href="#echo-stream-input-stream">echo-stream-input-stream</a></li>
-            <li><a href="#echo-stream-output-stream">echo-stream-output-stream</a></li>
             <li><a href="#ed">ed</a></li>
             <li><a href="#encode-universal-time">encode-universal-time</a></li>
             <li><a href="#endp">endp</a></li>
             <li><a href="#enough-namestring">enough-namestring</a></li>
             <li><a href="#ensure-directories-exist">ensure-directories-exist</a></li>
             <li><a href="#ensure-generic-function">ensure-generic-function</a></li>
-            <li><a href="#eq">eq</a></li>
-            <li><a href="#eql">eql</a></li>
-            <li><a href="#equal">equal</a></li>
-            <li><a href="#equalp">equalp</a></li>
-            <li><a href="#error">error</a></li>
             <li><a href="#eval">eval</a></li>
-            <li><a href="#every">every</a></li>
+            <li><a href="#every">every</a> / <a href="#some">some</a> / <a href="#notevery">notevery</a> / <a href="#notany">notany</a></li>
             <li><a href="#export">export</a></li>
             <li><a href="#fboundp">fboundp</a></li>
-            <li><a href="#file-author">file-author</a></li>
-            <li><a href="#file-error-pathname">file-error-pathname</a></li>
-            <li><a href="#file-length">file-length</a></li>
-            <li><a href="#file-namestring">file-namestring</a></li>
-            <li><a href="#file-position">file-position</a></li>
-            <li><a href="#file-string-length">file-string-length</a></li>
-            <li><a href="#file-write-date">file-write-date</a></li>
             <li><a href="#fill">fill</a></li>
             <li><a href="#find-all-symbols">find-all-symbols</a></li>
-            <li><a href="#find-method">find-method</a></li>
-            <li><a href="#find-package">find-package</a></li>
             <li><a href="#find-restart">find-restart</a></li>
             <li><a href="#find-symbol">find-symbol</a></li>
-            <li><a href="#finish-output">finish-output</a></li>
-            <li><a href="#fmakunbound">fmakunbound</a></li>
-            <li><a href="#force-output">force-output</a></li>
-            <li><a href="#format">format</a></li>
-            <li><a href="#fresh-line">fresh-line</a></li>
-            <li><a href="#funcall">funcall</a></li>
             <li><a href="#function">function</a></li>
-            <li><a href="#function-keywords">function-keywords</a></li>
             <li><a href="#function-lambda-expression">function-lambda-expression</a></li>
             <li><a href="#functionp">functionp</a></li>
             <li><a href="#generic-function">generic-function</a></li>
-            <li><a href="#gensym">gensym</a></li>
-            <li><a href="#gentemp">gentemp</a></li>
+            <li><a href="#gensym">gensym</a> / <a href="#gentemp">gentemp</a></li>
             <li><a href="#get-decoded-time">get-decoded-time</a></li>
             <li><a href="#get-dispatch-macro-character">get-dispatch-macro-character</a></li>
             <li><a href="#get-internal-real-time">get-internal-real-time</a></li>
             <li><a href="#get-internal-run-time">get-internal-run-time</a></li>
             <li><a href="#get-macro-character">get-macro-character</a></li>
-            <li><a href="#get-output-stream-string">get-output-stream-string</a></li>
             <li><a href="#get-properties">get-properties</a></li>
             <li><a href="#get-setf-expansion">get-setf-expansion</a></li>
             <li><a href="#get-universal-time">get-universal-time</a></li>
             <li><a href="#graphic-char-p">graphic-char-p</a></li>
-            <li><a href="#hash-table-count">hash-table-count</a></li>
-            <li><a href="#hash-table-p">hash-table-p</a></li>
-            <li><a href="#hash-table-rehash-size">hash-table-rehash-size</a></li>
-            <li><a href="#hash-table-rehash-threshold">hash-table-rehash-threshold</a></li>
-            <li><a href="#hash-table-size">hash-table-size</a></li>
-            <li><a href="#hash-table-test">hash-table-test</a></li>
             <li><a href="#host-namestring">host-namestring</a></li>
-            <li><a href="#identity">identity</a></li>
-            <li><a href="#import">import</a></li>
-            <li><a href="#initialize-instance">initialize-instance</a></li>
-            <li><a href="#input-stream-p">input-stream-p</a></li>
             <li><a href="#inspect">inspect</a></li>
-            <li><a href="#interactive-stream-p">interactive-stream-p</a></li>
-            <li><a href="#intern">intern</a></li>
-            <li><a href="#intersection">intersection</a></li>
             <li><a href="#invalid-method-error">invalid-method-error</a></li>
             <li><a href="#invoke-debugger">invoke-debugger</a></li>
             <li><a href="#invoke-restart">invoke-restart</a></li>
@@ -783,98 +1011,40 @@
             <li><a href="#length">length</a></li>
             <li><a href="#lisp-implementation-type">lisp-implementation-type</a></li>
             <li><a href="#lisp-implementation-version">lisp-implementation-version</a></li>
-            <li><a href="#list">list</a></li>
-            <li><a href="#list*">list*</a></li>
-            <li><a href="#list-all-packages">list-all-packages</a></li>
+            <li><a href="#list">list</a> / <a href="#list*">list*</a></li>
             <li><a href="#list-length">list-length</a></li>
-            <li><a href="#listen">listen</a></li>
             <li><a href="#listp">listp</a></li>
             <li><a href="#load">load</a></li>
             <li><a href="#load-logical-pathname-translations">load-logical-pathname-translations</a></li>
             <li><a href="#logical-pathname">logical-pathname</a></li>
             <li><a href="#long-site-name">long-site-name</a></li>
             <li><a href="#lower-case-p">lower-case-p</a></li>
-            <li><a href="#machine-instance">machine-instance</a></li>
-            <li><a href="#machine-type">machine-type</a></li>
-            <li><a href="#machine-version">machine-version</a></li>
+            <li><a href="#machine-instance">machine-instance</a> / <a href="#machine-type">machine-type</a> / <a href="#machine-version">machine-version</a></li>
             <li><a href="#macro-function">macro-function</a></li>
             <li><a href="#macroexpand">macroexpand</a></li>
             <li><a href="#macroexpand-1">macroexpand-1</a></li>
-            <li><a href="#make-array">make-array</a></li>
-            <li><a href="#make-broadcast-stream">make-broadcast-stream</a></li>
-            <li><a href="#make-concatenated-stream">make-concatenated-stream</a></li>
             <li><a href="#make-condition">make-condition</a></li>
             <li><a href="#make-dispatch-macro-character">make-dispatch-macro-character</a></li>
-            <li><a href="#make-echo-stream">make-echo-stream</a></li>
-            <li><a href="#make-hash-table">make-hash-table</a></li>
-            <li><a href="#make-instance">make-instance</a></li>
-            <li><a href="#make-instances-obsolete">make-instances-obsolete</a></li>
             <li><a href="#make-list">make-list</a></li>
-            <li><a href="#make-load-form">make-load-form</a></li>
             <li><a href="#make-load-form-saving-slots">make-load-form-saving-slots</a></li>
-            <li><a href="#make-package">make-package</a></li>
             <li><a href="#make-pathname">make-pathname</a></li>
             <li><a href="#make-sequence">make-sequence</a></li>
             <li><a href="#make-string">make-string</a></li>
-            <li><a href="#make-string-input-stream">make-string-input-stream</a></li>
-            <li><a href="#make-string-output-stream">make-string-output-stream</a></li>
             <li><a href="#make-symbol">make-symbol</a></li>
-            <li><a href="#make-synonym-stream">make-synonym-stream</a></li>
-            <li><a href="#make-two-way-stream">make-two-way-stream</a></li>
-            <li><a href="#makunbound">makunbound</a></li>
-            <li><a href="#map">map</a></li>
-            <li><a href="#map-into">map-into</a></li>
-            <li><a href="#mapc">mapc</a></li>
-            <li><a href="#mapcan">mapcan</a></li>
-            <li><a href="#mapcar">mapcar</a></li>
-            <li><a href="#mapcon">mapcon</a></li>
-            <li><a href="#maphash">maphash</a></li>
-            <li><a href="#mapl">mapl</a></li>
-            <li><a href="#maplist">maplist</a></li>
+            <li><a href="#makunbound">makunbound</a> / <a href="#fmakunbound">fmakunbound</a></li>
+            <li><a href="#map">map</a> / <a href="#map-into">map-into</a></li>
+            <li><a href="#mapc">mapc</a> / <a href="#mapcar">mapcar</a> / <a href="#mapcan">mapcan</a></li>
+            <li><a href="#mapl">mapl</a> / <a href="#maplist">maplist</a> / <a href="#mapcon">mapcon</a></li>
             <li><a href="#merge">merge</a></li>
             <li><a href="#merge-pathnames">merge-pathnames</a></li>
             <li><a href="#method-combination-error">method-combination-error</a></li>
-            <li><a href="#method-qualifiers">method-qualifiers</a></li>
             <li><a href="#mismatch">mismatch</a></li>
             <li><a href="#muffle-warning">muffle-warning</a></li>
             <li><a href="#name-char">name-char</a></li>
             <li><a href="#namestring">namestring</a></li>
-            <li><a href="#nbutlast">nbutlast</a></li>
-            <li><a href="#nconc">nconc</a></li>
-            <li><a href="#next-method-p">next-method-p</a></li>
-            <li><a href="#nintersection">nintersection</a></li>
-            <li><a href="#no-applicable-method">no-applicable-method</a></li>
-            <li><a href="#no-next-method">no-next-method</a></li>
             <li><a href="#not">not</a></li>
-            <li><a href="#notany">notany</a></li>
-            <li><a href="#notevery">notevery</a></li>
-            <li><a href="#nreconc">nreconc</a></li>
-            <li><a href="#nreverse">nreverse</a></li>
-            <li><a href="#nset-difference">nset-difference</a></li>
-            <li><a href="#nset-exclusive-or">nset-exclusive-or</a></li>
-            <li><a href="#nstring-capitalize">nstring-capitalize</a></li>
-            <li><a href="#nstring-downcase">nstring-downcase</a></li>
-            <li><a href="#nstring-upcase">nstring-upcase</a></li>
-            <li><a href="#nsublis">nsublis</a></li>
-            <li><a href="#nsubst">nsubst</a></li>
-            <li><a href="#nsubst-if">nsubst-if</a></li>
-            <li><a href="#nsubst-if-not">nsubst-if-not</a></li>
-            <li><a href="#nsubstitute">nsubstitute</a></li>
-            <li><a href="#nsubstitute-if">nsubstitute-if</a></li>
-            <li><a href="#nsubstitute-if-not">nsubstitute-if-not</a></li>
             <li><a href="#nthcdr">nthcdr</a></li>
             <li><a href="#null">null</a></li>
-            <li><a href="#nunion">nunion</a></li>
-            <li><a href="#open">open</a></li>
-            <li><a href="#open-stream-p">open-stream-p</a></li>
-            <li><a href="#output-stream-p">output-stream-p</a></li>
-            <li><a href="#package-error-package">package-error-package</a></li>
-            <li><a href="#package-name">package-name</a></li>
-            <li><a href="#package-nicknames">package-nicknames</a></li>
-            <li><a href="#package-shadowing-symbols">package-shadowing-symbols</a></li>
-            <li><a href="#package-use-list">package-use-list</a></li>
-            <li><a href="#package-used-by-list">package-used-by-list</a></li>
-            <li><a href="#packagep">packagep</a></li>
             <li><a href="#pairlis">pairlis</a></li>
             <li><a href="#parse-namestring">parse-namestring</a></li>
             <li><a href="#pathname">pathname</a></li>
@@ -895,58 +1065,31 @@
             <li><a href="#pprint-newline">pprint-newline</a></li>
             <li><a href="#pprint-tab">pprint-tab</a></li>
             <li><a href="#pprint-tabular">pprint-tabular</a></li>
-            <li><a href="#prin1">prin1</a></li>
-            <li><a href="#prin1-to-string">prin1-to-string</a></li>
-            <li><a href="#princ">princ</a></li>
-            <li><a href="#princ-to-string">princ-to-string</a></li>
+            <li><a href="#prin1">prin1</a> / <a href="#prin1-to-string">prin1-to-string</a></li>
+            <li><a href="#princ">princ</a> / <a href="#princ-to-string">princ-to-string</a></li>
             <li><a href="#print">print</a></li>
             <li><a href="#print-not-readable-object">print-not-readable-object</a></li>
-            <li><a href="#print-object">print-object</a></li>
-            <li><a href="#probe-file">probe-file</a></li>
             <li><a href="#proclaim">proclaim</a></li>
             <li><a href="#provide">provide</a></li>
-            <li><a href="#rassoc">rassoc</a></li>
-            <li><a href="#rassoc-if">rassoc-if</a></li>
-            <li><a href="#rassoc-if-not">rassoc-if-not</a></li>
-            <li><a href="#read">read</a></li>
-            <li><a href="#read-byte">read-byte</a></li>
-            <li><a href="#read-char">read-char</a></li>
-            <li><a href="#read-char-no-hang">read-char-no-hang</a></li>
-            <li><a href="#read-delimited-list">read-delimited-list</a></li>
-            <li><a href="#read-from-string">read-from-string</a></li>
-            <li><a href="#read-line">read-line</a></li>
-            <li><a href="#read-preserving-whitespace">read-preserving-whitespace</a></li>
-            <li><a href="#read-sequence">read-sequence</a></li>
-            <li><a href="#readtablep">readtablep</a></li>
             <li><a href="#reduce">reduce</a></li>
-            <li><a href="#reinitialize-instance">reinitialize-instance</a></li>
-            <li><a href="#remhash">remhash</a></li>
             <li><a href="#remove-duplicates">remove-duplicates</a></li>
-            <li><a href="#remove-method">remove-method</a></li>
             <li><a href="#remprop">remprop</a></li>
-            <li><a href="#rename-file">rename-file</a></li>
-            <li><a href="#rename-package">rename-package</a></li>
             <li><a href="#replace">replace</a></li>
             <li><a href="#require">require</a></li>
             <li><a href="#restart-name">restart-name</a></li>
-            <li><a href="#revappend">revappend</a></li>
-            <li><a href="#reverse">reverse</a></li>
+            <li><a href="#reverse">reverse</a> / <a href="#nreverse">nreverse</a></li>
             <li><a href="#room">room</a></li>
-            <li><a href="#rplaca">rplaca</a></li>
-            <li><a href="#rplacd">rplacd</a></li>
+            <li><a href="#rplaca">rplaca</a> / <a href="#rplacd">rplacd</a></li>
             <li><a href="#search">search</a></li>
             <li><a href="#set">set</a></li>
-            <li><a href="#set-difference">set-difference</a></li>
             <li><a href="#set-dispatch-macro-character">set-dispatch-macro-character</a></li>
-            <li><a href="#set-exclusive-or">set-exclusive-or</a></li>
             <li><a href="#set-macro-character">set-macro-character</a></li>
             <li><a href="#set-pprint-dispatch">set-pprint-dispatch</a></li>
             <li><a href="#set-syntax-from-char">set-syntax-from-char</a></li>
             <li><a href="#shadow">shadow</a></li>
             <li><a href="#shadowing-import">shadowing-import</a></li>
-            <li><a href="#shared-initialize">shared-initialize</a></li>
             <li><a href="#short-site-name">short-site-name</a></li>
-            <li><a href="#signal">signal</a></li>
+            <li><a href="#signal">signal</a> / <a href="#warn">warn</a> / <a href="#error">error</a> / <a href="#cerror">cerror</a></li>
             <li><a href="#simple-condition-format-arguments">simple-condition-format-arguments</a></li>
             <li><a href="#simple-condition-format-control">simple-condition-format-control</a></li>
             <li><a href="#simple-string-p">simple-string-p</a></li>
@@ -955,59 +1098,26 @@
             <li><a href="#slot-boundp">slot-boundp</a></li>
             <li><a href="#slot-exists-p">slot-exists-p</a></li>
             <li><a href="#slot-makunbound">slot-makunbound</a></li>
-            <li><a href="#slot-missing">slot-missing</a></li>
-            <li><a href="#slot-unbound">slot-unbound</a></li>
             <li><a href="#slot-value">slot-value</a></li>
             <li><a href="#software-type">software-type</a></li>
             <li><a href="#software-version">software-version</a></li>
-            <li><a href="#some">some</a></li>
-            <li><a href="#sort">sort</a></li>
             <li><a href="#special-operator-p">special-operator-p</a></li>
-            <li><a href="#stable-sort">stable-sort</a></li>
             <li><a href="#standard-char-p">standard-char-p</a></li>
             <li><a href="#standard-generic-function">standard-generic-function</a></li>
             <li><a href="#store-value">store-value</a></li>
-            <li><a href="#stream-element-type">stream-element-type</a></li>
-            <li><a href="#stream-error-stream">stream-error-stream</a></li>
-            <li><a href="#stream-external-format">stream-external-format</a></li>
-            <li><a href="#streamp">streamp</a></li>
             <li><a href="#string">string</a></li>
-            <li><a href="#string-capitalize">string-capitalize</a></li>
-            <li><a href="#string-downcase">string-downcase</a></li>
-            <li><a href="#string-equal">string-equal</a></li>
-            <li><a href="#string-greaterp">string-greaterp</a></li>
-            <li><a href="#string-left-trim">string-left-trim</a></li>
-            <li><a href="#string-lessp">string-lessp</a></li>
-            <li><a href="#string-not-equal">string-not-equal</a></li>
-            <li><a href="#string-not-greaterp">string-not-greaterp</a></li>
-            <li><a href="#string-not-lessp">string-not-lessp</a></li>
-            <li><a href="#string-right-trim">string-right-trim</a></li>
-            <li><a href="#string-trim">string-trim</a></li>
-            <li><a href="#string-upcase">string-upcase</a></li>
-            <li><a href="#string/=">string/=</a></li>
-            <li><a href="#string&lt">string&lt</a></li>
-            <li><a href="#string&lt">string&lt</a></li>
-            <li><a href="#string=">string=</a></li>
-            <li><a href="#string&gt;">string&gt;</a></li>
-            <li><a href="#string&gt;=">string&gt;=</a></li>
+            <li><a href="#string-trim">string-trim</a> / <a href="#string-left-trim">string-left-trim</a> / <a href="#string-right-trim">string-right-trim</a></li>
             <li><a href="#stringp">stringp</a></li>
-            <li><a href="#sublis">sublis</a></li>
-            <li><a href="#subsetp">subsetp</a></li>
+            <li><a href="#sublis">sublis</a> / <a href="#nsublis">nsublis</a></li>
             <li><a href="#subtypep">subtypep</a></li>
-            <li><a href="#sxhash">sxhash</a></li>
             <li><a href="#symbol-function">symbol-function</a></li>
             <li><a href="#symbol-name">symbol-name</a></li>
-            <li><a href="#symbol-package">symbol-package</a></li>
             <li><a href="#symbolp">symbolp</a></li>
-            <li><a href="#synonym-stream-symbol">synonym-stream-symbol</a></li>
             <li><a href="#tailp">tailp</a></li>
-            <li><a href="#terpri">terpri</a></li>
             <li><a href="#translate-logical-pathname">translate-logical-pathname</a></li>
             <li><a href="#translate-pathname">translate-pathname</a></li>
             <li><a href="#tree-equal">tree-equal</a></li>
             <li><a href="#truename">truename</a></li>
-            <li><a href="#two-way-stream-input-stream">two-way-stream-input-stream</a></li>
-            <li><a href="#two-way-stream-output-stream">two-way-stream-output-stream</a></li>
             <li><a href="#type-error-datum">type-error-datum</a></li>
             <li><a href="#type-error-expected-type">type-error-expected-type</a></li>
             <li><a href="#type-of">type-of</a></li>
@@ -1015,36 +1125,16 @@
             <li><a href="#unbound-slot-instance">unbound-slot-instance</a></li>
             <li><a href="#undefined-function">undefined-function</a></li>
             <li><a href="#unexport">unexport</a></li>
-            <li><a href="#unintern">unintern</a></li>
-            <li><a href="#union">union</a></li>
-            <li><a href="#unread-char">unread-char</a></li>
-            <li><a href="#untrace">untrace</a></li>
-            <li><a href="#unuse-package">unuse-package</a></li>
-            <li><a href="#update-instance-for-different-class">update-instance-for-different-class</a></li>
-            <li><a href="#update-instance-for-redefined-class">update-instance-for-redefined-class</a></li>
-            <li><a href="#upgraded-array-element-type">upgraded-array-element-type</a></li>
             <li><a href="#upgraded-complex-part-type">upgraded-complex-part-type</a></li>
             <li><a href="#upper-case-p">upper-case-p</a></li>
-            <li><a href="#use-package">use-package</a></li>
             <li><a href="#use-value">use-value</a></li>
             <li><a href="#user-homedir-pathname">user-homedir-pathname</a></li>
             <li><a href="#values-list">values-list</a></li>
             <li><a href="#vector">vector</a></li>
-            <li><a href="#vector-pop">vector-pop</a></li>
-            <li><a href="#vector-push">vector-push</a></li>
-            <li><a href="#vector-push-extend">vector-push-extend</a></li>
+            <li><a href="#vector-pop">vector-pop</a> / <a href="#vector-push">vector-push</a> / <a href="#vector-push-extend">vector-push-extend</a></li>
             <li><a href="#vectorp">vectorp</a></li>
-            <li><a href="#warn">warn</a></li>
             <li><a href="#wild-pathname-p">wild-pathname-p</a></li>
-            <li><a href="#write">write</a></li>
-            <li><a href="#write-byte">write-byte</a></li>
-            <li><a href="#write-char">write-char</a></li>
-            <li><a href="#write-line">write-line</a></li>
-            <li><a href="#write-sequence">write-sequence</a></li>
-            <li><a href="#write-string">write-string</a></li>
-            <li><a href="#write-to-string">write-to-string</a></li>
-            <li><a href="#y-or-n-p">y-or-n-p</a></li>
-            <li><a href="#yes-or-no-p">yes-or-no-p</a></li>
+            <li><a href="#y-or-n-p">y-or-n-p</a> / <a href="#yes-or-no-p">yes-or-no-p</a></li>
           </ul>
         </section>
 
@@ -1127,7 +1217,6 @@
             <li><a href="#macro-function">macro-function</a></li>
             <li><a href="#mask-field">mask-field</a></li>
             <li><a href="#nth">nth</a></li>
-            <li><a href="#readtable-case">readtable-case</a></li>
             <li><a href="#rest">rest</a></li>
             <li><a href="#row-major-aref">row-major-aref</a></li>
             <li><a href="#sbit">sbit</a></li>
