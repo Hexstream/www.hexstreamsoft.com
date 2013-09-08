@@ -27,6 +27,15 @@ ol, ul {
     z-index: 1;
 }
 
+h1 + .section-nav {
+    position: static;
+}
+
+h1 + .section-nav .navbox {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .breadcrumbs {
     margin: 0.5em 0.5em 1em;
     background: #FFCC99;
@@ -64,10 +73,9 @@ ol, ul {
     background: transparent;
 }
 
-#footer .back-to-top {
-    position: absolute;
-    top: 0;
-    left: 0;
+.back-to-top {
+    display: block;
+    text-align: center;
     margin: 1em 0.5em;
     width: 10em;
     background: #FFCC99;
@@ -75,7 +83,18 @@ ol, ul {
     text-decoration: none;
 }
 
-#footer .back-to-top:hover, #footer .back-to-top:focus {
+.ancestors-nav .back-to-top {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#footer .back-to-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.back-to-top:hover, .back-to-top:focus {
     background: #FFDD99;
     outline-style: none;
 }
