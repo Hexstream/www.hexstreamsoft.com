@@ -27,11 +27,25 @@ ol, ul {
     z-index: 1;
 }
 
+.section-nav a:first-child.navbox-previous {
+    margin-top: -1.4em;
+}
+
 h1 + .section-nav {
     position: static;
 }
 
 h1 + .section-nav .navbox {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 + .section-nav .navbox-next {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 + .section-nav .navbox-previous {
     margin-left: auto;
     margin-right: auto;
 }

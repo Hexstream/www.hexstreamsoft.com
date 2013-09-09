@@ -265,3 +265,37 @@
 .navbox .inlined-nodes .item-count > span {
     font-size: x-small;
 }
+
+.navbox-next {
+    display: block;
+    text-align: center;
+    margin: -1em 0.5em 1em;
+    width: 10em;
+    border: medium solid transparent;
+    border-top: none;
+    text-decoration: none;
+    opacity: 0.25;
+}
+
+.navbox-next:hover {
+    border-color: black;
+    background: #FFCC99;
+    opacity: 1;
+}
+
+.navbox-previous {
+    display: block;
+    text-align: center;
+    margin: 1em 0.5em 0em;
+    width: 10em;
+    border: medium solid transparent;
+    border-bottom: none;
+    text-decoration: none;
+    opacity: 0.25;
+}
+
+.navbox-previous:hover {
+    border-color: black;
+    background: #FFCC99;
+    opacity: 1;
+}
