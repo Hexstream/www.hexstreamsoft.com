@@ -36,6 +36,26 @@ h1 + .section-nav .navbox {
     margin-right: auto;
 }
 
+.end-of-section-indicator {
+    font-size: smaller;
+    color: black;
+    opacity: 0.25;
+    border-top: thin solid gray;
+    border-bottom: thin solid gray;
+    margin: 1em auto;
+    display: table;
+}
+
+.end-of-section-indicator a {
+    color: black;
+    padding: 0 1em;
+    text-decoration: none;
+}
+
+.end-of-section-indicator:hover {
+    opacity: 1;
+}
+
 .breadcrumbs {
     margin: 0.5em 0.5em 1em;
     background: #FFCC99;
