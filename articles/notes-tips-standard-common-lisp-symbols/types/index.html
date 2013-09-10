@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>Types | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
     <link href="../../../css/global.css" rel="stylesheet" type="text/css" />
-    <link href="../index.css" rel="stylesheet" type="text/css" />
+    <link href="../shared.css" rel="stylesheet" type="text/css" />
     <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
@@ -49,36 +49,15 @@
           </h1>
           <ul>
             <li>
-              <a href="#system-classes" class="inlining-node">System classes</a>
-              <span class="item-count">(<span></span>)</span>
-              <ul class="inlined-nodes">
-                <li><a href="#number-system-classes">Numbers</a></li>
-                <li><a href="#stream-system-classes">Streams</a></li>
-                <li><a href="#misc-system-classes">Misc</a></li>
-              </ul>
+              <a href="#system-classes">System classes</a>
             </li>
             <li>
-              <a href="#plain-types" class="inlining-node">"Plain" types</a>
+              <a href="#plain-types">"Plain" types</a>
               <span class="item-count">(<span></span>)</span>
-              <ul class="inlined-nodes">
-                <li>
-                  <a href="#number-types" class="inlining-node">Numbers</a>
-                  <ul class="inlined-nodes">
-                    <li><a href="#integer-number-types">Integers</a></li>
-                    <li><a href="#float-number-types">Floats</a></li>
-                  </ul>
-                </li>
-                <li><a href="#misc-types">Misc</a></li>
-              </ul>
             </li>
             <li>
-              <a href="#condition-types" class="inlining-node">Condition types</a>
+              <a href="#condition-types">Condition types</a>
               <span class="item-count">(<span></span>)</span>
-              <ul class="inlined-nodes">
-                <li><a href="#math-condition-types">Math</a></li>
-                <li><a href="#highly-unspecific-condition-types">Highly unspecific</a></li>
-                <li><a href="#misc-condition-types">Misc</a></li>
-              </ul>
             </li>
           </ul>
         </nav>
@@ -172,10 +151,44 @@
       </header>
 
       <section id="system-classes">
-        <h1><a href="#system-classes" class="anchor">&#x2693;</a>System classes</h1>
+
+        <h1>
+          <a href="#system-classes" class="anchor">&#x2693;</a>
+          <a href="#">Types</a>
+          <span class="separator"> » </span>
+          <a class="here">System classes</a>
+        </h1>
+
+        <nav class="section-nav">
+
+          <nav class="navbox" id="system-classes_navbox">
+            <h1>
+              <a class="here">System classes</a>
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </h1>
+            <ul>
+              <li><a href="#number-system-classes">Numbers</a></li>
+              <li><a href="#stream-system-classes">Streams</a></li>
+              <li><a href="#misc-system-classes">Misc</a></li>
+            </ul>
+          </nav>
+
+          <a href="#types" class="navbox-next">⬇</a>
+
+        </nav>
 
         <section id="number-system-classes">
-          <h1><a href="#number-system-classes" class="anchor">&#x2693;</a>Numbers</h1>
+
+          <h1>
+            <a href="#number-system-classes" class="anchor">&#x2693;</a>
+            <a href="#">Types</a>
+            <span class="separator"> » </span>
+            <a href="#system-classes">System classes</a>
+            <span class="separator"> » </span>
+            <a class="here">Numbers</a>
+          </h1>
+
           <ul>
             <li><a href="#complex">complex</a></li>
             <li><a href="#float">float</a></li>
@@ -188,7 +201,16 @@
         </section>
 
         <section id="stream-system-classes">
-          <h1><a href="#stream-system-classes" class="anchor">&#x2693;</a>Streams</h1>
+
+          <h1>
+            <a href="#stream-system-classes" class="anchor">&#x2693;</a>
+            <a href="#">Types</a>
+            <span class="separator"> » </span>
+            <a href="#system-classes">System classes</a>
+            <span class="separator"> » </span>
+            <a class="here">Streams</a>
+          </h1>
+
           <ul>
             <li><a href="#stream">stream</a></li>
             <li><a href="#synonym-stream">synonym-stream</a></li>
@@ -202,7 +224,16 @@
         </section>
 
         <section id="misc-system-classes">
-          <h1><a href="#misc-system-classes" class="anchor">&#x2693;</a>Miscellaneous system classes</h1>
+
+          <h1>
+            <a href="#misc-system-classes" class="anchor">&#x2693;</a>
+            <a href="#">Types</a>
+            <span class="separator"> » </span>
+            <a href="#system-classes">System classes</a>
+            <span class="separator"> » </span>
+            <a class="here">Misc</a>
+          </h1>
+
           <p>TODO: Extract other sections.</p>
           <ul>
             <li><a href="#array">array</a></li>
@@ -236,18 +267,73 @@
           </ul>
         </section>
 
+        <nav class="end-of-section-indicator">
+            <a href="#system-classes">
+              "<span>System classes</span>" end.
+            </a>
+          </nav>
+
       </section>
 
       <section id="types">
 
-        <h1><a href="#types" class="anchor">&#x2693;</a>Types</h1>
+        <nav class="section-nav">
+
+          <a href="#system-classes" class="navbox-previous">⬆</a>
+
+          <nav class="navbox" id="types_navbox">
+            <h1>
+              <a class="here">"Plain" types</a>
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </h1>
+            <ul>
+              <li>
+                <a href="#number-types" class="inlining-node">Numbers</a>
+                <ul class="inlined-nodes">
+                  <li><a href="#integer-number-types">Integers</a></li>
+                  <li><a href="#float-number-types">Floats</a></li>
+                </ul>
+              </li>
+              <li><a href="#misc-types">Misc</a></li>
+            </ul>
+          </nav>
+
+          <a href="#condition-types" class="navbox-next">⬇</a>
+
+        </nav>
+
+        <h1>
+          <a href="#types" class="anchor">&#x2693;</a>
+          <a href="#">Types</a>
+          <span class="separator"> » </span>
+          <a class="here">Plain types</a>
+        </h1>
 
         <section id="number-types">
 
-          <h1><a href="#number-types" class="anchor">&#x2693;</a>Numbers</h1>
+          <h1>
+            <a href="#number-types" class="anchor">&#x2693;</a>
+            <a href="#">Types</a>
+            <span class="separator"> » </span>
+            <a href="#types">Plain types</a>
+            <span class="separator"> » </span>
+            <a class="here">Numbers</a>
+          </h1>
 
           <section id="integer-number-types">
-            <h1><a href="#integer-number-types" class="anchor">&#x2693;</a>Integers</h1>
+
+            <h1>
+              <a href="#integer-number-types" class="anchor">&#x2693;</a>
+              <a href="#">Types</a>
+              <span class="separator"> » </span>
+              <a href="#types">Plain types</a>
+              <span class="separator"> » </span>
+              <a href="#number-types">Numbers</a>
+              <span class="separator"> » </span>
+              <a class="here">Integers</a>
+            </h1>
+
             <ul>
               <li><a href="#bit">bit</a></li>
               <li><a href="#signed-byte">signed-byte</a></li>
@@ -258,7 +344,18 @@
           </section>
 
           <section id="float-number-types">
-            <h1><a href="#float-number-types" class="anchor">&#x2693;</a>Floats</h1>
+
+            <h1>
+              <a href="#float-number-types" class="anchor">&#x2693;</a>
+              <a href="#">Types</a>
+              <span class="separator"> » </span>
+              <a href="#types">Plain types</a>
+              <span class="separator"> » </span>
+              <a href="#number-types">Numbers</a>
+              <span class="separator"> » </span>
+              <a class="here">Floats</a>
+            </h1>
+
             <ul>
               <li><a href="#short-float">short-float</a></li>
               <li><a href="#single-float">single-float</a></li>
@@ -267,10 +364,25 @@
             </ul>
           </section>
 
+          <nav class="end-of-section-indicator">
+            <a href="#number-types">
+              "<span>Numbers</span>" end.
+            </a>
+          </nav>
+
         </section>
 
         <section id="misc-types">
-          <h1><a href="#misc-types" class="anchor">&#x2693;</a>Miscellaneous types</h1>
+
+          <h1>
+            <a href="#misc-types" class="anchor">&#x2693;</a>
+            <a href="#">Types</a>
+            <span class="separator"> » </span>
+            <a href="#types">Plain types</a>
+            <span class="separator"> » </span>
+            <a class="here">Misc</a>
+          </h1>
+
           <ul>
             <li><a href="#atom">atom</a></li>
             <li><a href="#base-char">base-char</a></li>
@@ -290,14 +402,53 @@
           </ul>
         </section>
 
+        <nav class="end-of-section-indicator">
+            <a href="#types">
+              "<span>Plain types</span>" end.
+            </a>
+          </nav>
+
       </section>
 
       <section id="condition-types">
 
-        <h1><a href="#condition-types" class="anchor">&#x2693;</a>Condition types</h1>
+        <nav class="section-nav">
+
+          <a href="#types" class="navbox-previous">⬆</a>
+
+          <nav class="navbox" id="condition-types_navbox">
+            <h1>
+              <a class="here">Condition types</a>
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </h1>
+            <ul>
+              <li><a href="#math-condition-types">Math</a></li>
+              <li><a href="#highly-unspecific-condition-types">Highly unspecific</a></li>
+              <li><a href="#misc-condition-types">Misc</a></li>
+            </ul>
+          </nav>
+
+        </nav>
+
+        <h1>
+          <a href="#condition-types" class="anchor">&#x2693;</a>
+          <a href="#">Types</a>
+          <span class="separator"> » </span>
+          <a class="here">Conditions</a>
+        </h1>
 
         <section id="math-condition-types">
-          <h1><a href="#math-condition-types" class="anchor">&#x2693;</a>Math</h1>
+
+          <h1>
+            <a href="#math-condition-types" class="anchor">&#x2693;</a>
+            <a href="#">Types</a>
+            <span class="separator"> » </span>
+            <a href="#condition-types">Conditions</a>
+            <span class="separator"> » </span>
+            <a class="here">Math</a>
+          </h1>
+
           <ul>
             <li><a href="#arithmetic-error">arithmetic-error</a></li>
             <li><a href="#division-by-zero">division-by-zero</a></li>
@@ -309,7 +460,16 @@
         </section>
 
         <section id="highly-unspecific-condition-types">
-          <h1><a href="#highly-unspecific-condition-types" class="anchor">&#x2693;</a>Highly unspecific condition types</h1>
+
+          <h1>
+            <a href="#highly-unspecific-condition-types" class="anchor">&#x2693;</a>
+            <a href="#">Types</a>
+            <span class="separator"> » </span>
+            <a href="#condition-types">Conditions</a>
+            <span class="separator"> » </span>
+            <a class="here">Highly unspecific</a>
+          </h1>
+
           <ul>
             <li><a href="#condition">condition</a></li>
             <li><a href="#error">error</a></li>
@@ -323,7 +483,16 @@
         </section>
 
         <section id="misc-condition-types">
-          <h1><a href="#misc-condition-types" class="anchor">&#x2693;</a>Miscellaneous condition types</h1>
+
+          <h1>
+            <a href="#misc-condition-types" class="anchor">&#x2693;</a>
+            <a href="#">Types</a>
+            <span class="separator"> » </span>
+            <a href="#condition-types">Conditions</a>
+            <span class="separator"> » </span>
+            <a class="here">Misc</a>
+          </h1>
+
           <ul>
             <li><a href="#cell-error">cell-error</a></li>
             <li><a href="#control-error">control-error</a></li>
@@ -343,6 +512,12 @@
             <li><a href="#undefined-function">undefined-function</a></li>
           </ul>
         </section>
+
+        <nav class="end-of-section-indicator">
+            <a href="#condition-types">
+              "<span>Conditions</span>" end.
+            </a>
+          </nav>
 
       </section>
 
