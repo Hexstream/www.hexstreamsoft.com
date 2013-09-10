@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>Variables | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
     <link href="../../../css/global.css" rel="stylesheet" type="text/css" />
-    <link href="../index.css" rel="stylesheet" type="text/css" />
+    <link href="../shared.css" rel="stylesheet" type="text/css" />
     <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
@@ -51,66 +51,12 @@
           </h1>
           <ul>
             <li>
-              <a href="#special-variables" class="inlining-node">Special variables</a>
+              <a href="#special-variables">Special variables</a>
               <span class="item-count">(<span>54</span>)</span>
-              <ul class="inlined-nodes">
-                <li>
-                  <a href="#lisp-reader-variables">Reader</a>
-                  <span class="item-count">(<span>5</span>)</span>
-                </li>
-                <li>
-                  <a href="#lisp-printer-variables">Printer</a>
-                  <span class="item-count">(<span>15</span>)</span>
-                </li>
-                <li>
-                  <a href="#stream-variables">Streams</a>
-                  <span class="item-count">(<span>7</span>)</span>
-                </li>
-                <li>
-                  <a href="#repl-variables"><abbr title="Read-Eval-Print Loop">REPL</abbr></a>
-                  <span class="item-count">(<span>10</span>)</span>
-                </li>
-                <li>
-                  <a href="#file-variables">Files</a>
-                  <span class="item-count">(<span>8</span>)</span>
-                </li>
-                <li>
-                  <a href="#misc-special-variables">Misc</a>
-                  <span class="item-count">(<span>9</span>)</span>
-                </li>
-              </ul>
             </li>
             <li>
-              <a href="#constant-variables" class="inlining-node">Constant variables</a>
+              <a href="#constant-variables">Constants</a>
               <span class="item-count">(<span>62</span>)</span>
-              <ul class="inlined-nodes">
-                <li>
-                  <a href="#implementation-limits" class="inlining-node">Implementation limits</a>
-                  <span class="item-count">(<span>42</span>)</span>
-                  <ul class="inlined-nodes">
-                    <li>
-                      <a href="#length-limits">Length</a>
-                      <span class="item-count">(<span>6</span>)</span>
-                    </li>
-                    <li>
-                      <a href="#float-limits">Floats</a>
-                      <span class="item-count">(<span>32</span>)</span>
-                    </li>
-                    <li>
-                      <a href="#misc-limits">Misc</a>
-                      <span class="item-count">(<span>4</span>)</span>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#boole-constants">Boole</a>
-                  <span class="item-count">(<span>16</span>)</span>
-                </li>
-                <li>
-                  <a href="#misc-constants">Misc</a>
-                  <span class="item-count">(<span>4</span>)</span>
-                </li>
-              </ul>
             </li>
           </ul>
         </nav>
@@ -210,9 +156,66 @@
       </header>
 
       <section id="special-variables">
-        <h1><a href="#special-variables" class="anchor">&#x2693;</a>Special variables</h1>
+
+        <h1>
+          <a href="#special-variables" class="anchor">&#x2693;</a>
+          <a href="#">Variables</a>
+          <span class="separator"> » </span>
+          <a class="here">Special variables</a>
+        </h1>
+
+        <nav class="section-nav">
+
+          <nav class="navbox" id="special-variables_navbox">
+            <h1>
+              <a class="here">Special variables</a>
+              <span class="item-count">(<span>54</span>)</span>
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </h1>
+            <ul>
+              <li>
+                  <a href="#lisp-reader-variables">Lisp Reader</a>
+                  <span class="item-count">(<span>5</span>)</span>
+                </li>
+                <li>
+                  <a href="#lisp-printer-variables">Lisp Printer</a>
+                  <span class="item-count">(<span>15</span>)</span>
+                </li>
+                <li>
+                  <a href="#stream-variables">Streams</a>
+                  <span class="item-count">(<span>7</span>)</span>
+                </li>
+                <li>
+                  <a href="#repl-variables"><abbr title="Read-Eval-Print Loop">REPL</abbr></a>
+                  <span class="item-count">(<span>10</span>)</span>
+                </li>
+                <li>
+                  <a href="#file-variables">Files</a>
+                  <span class="item-count">(<span>8</span>)</span>
+                </li>
+                <li>
+                  <a href="#misc-special-variables">Misc</a>
+                  <span class="item-count">(<span>9</span>)</span>
+                </li>
+            </ul>
+          </nav>
+
+          <a href="#constant-variables" class="navbox-next">⬇</a>
+
+        </nav>
+
         <section id="lisp-reader-variables">
-          <h1><a href="#lisp-reader-variables" class="anchor">&#x2693;</a>Lisp Reader variables</h1>
+
+          <h1>
+            <a href="#lisp-reader-variables" class="anchor">&#x2693;</a>
+            <a href="#">Variables</a>
+            <span class="separator"> » </span>
+            <a href="#special-variables">Special variables</a>
+            <span class="separator"> » </span>
+            <a class="here">Lisp Reader</a>
+          </h1>
+
           <ul>
             <li><a href="#*read-base*">*read-base*</a></li>
             <li><a href="#*read-default-float-format*">*read-default-float-format*</a></li>
@@ -221,8 +224,18 @@
             <li><a href="#*readtable*">*readtable*</a></li>
           </ul>
         </section>
+
         <section id="lisp-printer-variables">
-          <h1><a href="#lisp-printer-variables" class="anchor">&#x2693;</a>Lisp Printer variables</h1>
+
+          <h1>
+            <a href="#lisp-printer-variables" class="anchor">&#x2693;</a>
+            <a href="#">Variables</a>
+            <span class="separator"> » </span>
+            <a href="#special-variables">Special variables</a>
+            <span class="separator"> » </span>
+            <a class="here">Lisp Printer</a>
+          </h1>
+
           <ul>
             <li><a href="#*print-array*">*print-array*</a></li>
             <li><a href="#*print-base*">*print-base*</a></li>
@@ -241,8 +254,18 @@
             <li><a href="#*print-right-margin*">*print-right-margin*</a></li>
           </ul>
         </section>
+
         <section id="stream-variables">
-          <h1><a href="#stream-variables" class="anchor">&#x2693;</a>Stream variables</h1>
+
+          <h1>
+            <a href="#stream-variables" class="anchor">&#x2693;</a>
+            <a href="#">Variables</a>
+            <span class="separator"> » </span>
+            <a href="#special-variables">Special variables</a>
+            <span class="separator"> » </span>
+            <a class="here">Streams</a>
+          </h1>
+
           <ul>
             <li><a href="#*debug-io*">*debug-io*</a></li>
             <li><a href="#*error-output*">*error-output*</a></li>
@@ -253,8 +276,18 @@
             <li><a href="#*trace-output*">*trace-output*</a></li>
           </ul>
         </section>
+
         <section id="repl-variables">
-          <h1><a href="#repl-variables" class="anchor">&#x2693;</a>REPL variables</h1>
+
+          <h1>
+            <a href="#repl-variables" class="anchor">&#x2693;</a>
+            <a href="#">Variables</a>
+            <span class="separator"> » </span>
+            <a href="#special-variables">Special variables</a>
+            <span class="separator"> » </span>
+            <a class="here">REPL</a>
+          </h1>
+
           <ul>
             <li><a href="#*">*</a></li>
             <li><a href="#**">**</a></li>
@@ -268,8 +301,18 @@
             <li><a href="#///">///</a></li>
           </ul>
         </section>
+
         <section id="file-variables">
-          <h1><a href="#file-variables" class="anchor">&#x2693;</a>File variables</h1>
+
+          <h1>
+            <a href="#file-variables" class="anchor">&#x2693;</a>
+            <a href="#">Variables</a>
+            <span class="separator"> » </span>
+            <a href="#special-variables">Special variables</a>
+            <span class="separator"> » </span>
+            <a class="here">Files</a>
+          </h1>
+
           <ul>
             <li><a href="#*compile-file-pathname*">*compile-file-pathname*</a></li>
             <li><a href="#*compile-file-truename*">*compile-file-truename*</a></li>
@@ -281,8 +324,18 @@
             <li><a href="#*load-verbose*">*load-verbose*</a></li>
           </ul>
         </section>
+
         <section id="misc-special-variables">
-          <h1><a href="#misc-special-variables" class="anchor">&#x2693;</a>Miscellaneous special variables</h1>
+
+          <h1>
+            <a href="#misc-special-variables" class="anchor">&#x2693;</a>
+            <a href="#">Variables</a>
+            <span class="separator"> » </span>
+            <a href="#special-variables">Special variables</a>
+            <span class="separator"> » </span>
+            <a class="here">Misc</a>
+          </h1>
+
           <ul>
             <li><a href="#*break-on-signals*">*break-on-signals*</a></li>
             <li><a href="#*debugger-hook*">*debugger-hook*</a></li>
@@ -295,13 +348,91 @@
             <li><a href="#*random-state*">*random-state*</a></li>
           </ul>
         </section>
+
+        <nav class="end-of-section-indicator">
+          <a href="#special-variables">
+            "<span>Special variables</span>" end.
+          </a>
+        </nav>
+
       </section>
+
       <section id="constant-variables">
-        <h1><a href="#constant-variables" class="anchor">&#x2693;</a>Constant variables</h1>
+
+        <nav class="section-nav">
+
+          <a href="#special-variables" class="navbox-previous">⬆</a>
+
+          <nav class="navbox" id="constant-variables_navbox">
+            <h1>
+              <a class="here">Constants</a>
+              <span class="item-count">(<span>62</span>)</span>
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </h1>
+            <ul>
+              <li>
+                <a href="#implementation-limits" class="inlining-node">Implementation limits</a>
+                <span class="item-count">(<span>42</span>)</span>
+                <ul class="inlined-nodes">
+                  <li>
+                    <a href="#length-limits">Length</a>
+                    <span class="item-count">(<span>6</span>)</span>
+                  </li>
+                  <li>
+                    <a href="#float-limits">Floats</a>
+                    <span class="item-count">(<span>32</span>)</span>
+                  </li>
+                  <li>
+                    <a href="#misc-limits">Misc</a>
+                    <span class="item-count">(<span>4</span>)</span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#boole-constants">Boole</a>
+                <span class="item-count">(<span>16</span>)</span>
+              </li>
+              <li>
+                <a href="#misc-constants">Misc</a>
+                <span class="item-count">(<span>4</span>)</span>
+              </li>
+            </ul>
+          </nav>
+
+        </nav>
+
+        <h1>
+          <a href="#constant-variables" class="anchor">&#x2693;</a>
+          <a href="#">Variables</a>
+          <span class="separator"> » </span>
+          <a class="here">Constants</a>
+        </h1>
+
         <section id="implementation-limits">
-          <h1><a href="#implementation-limits" class="anchor">&#x2693;</a>Implementation limits</h1>
+
+          <h1>
+            <a href="#implementation-limits" class="anchor">&#x2693;</a>
+            <a href="#">Variables</a>
+            <span class="separator"> » </span>
+            <a href="#constant-variables">Constants</a>
+            <span class="separator"> » </span>
+            <a class="here">Implementation limits</a>
+          </h1>
+
           <section id="length-limits">
-            <h1><a href="#length-limits" class="anchor">&#x2693;</a>Length limits</h1>
+
+            <h1>
+              <a href="#length-limits" class="anchor">&#x2693;</a>
+              <a href="#">Variables</a>
+              <span class="separator"> » </span>
+              <a href="#constant-variables">Constants</a>
+              <span class="separator"> » </span>
+              <a href="#implementation-limits">Implementation limits</a>
+              <span class="separator"> » </span>
+              <a class="here">Length</a>
+            </h1>
+
             <p>The following are all upper exclusive bounds.</p>
             <ul>
               <li><a href="#array-dimension-limit">array-dimension-limit</a> (integer 1024 #.most-positive-fixnum)</li>
@@ -312,8 +443,19 @@
               <li><a href="#multiple-values-limit">multiple-values-limit</a> (integer 20)</li>
             </ul>
           </section>
+
           <section id="float-limits">
-            <h1><a href="#float-limits" class="anchor">&#x2693;</a>Float limits</h1>
+
+            <h1>
+              <a href="#float-limits" class="anchor">&#x2693;</a>
+              <a href="#">Variables</a>
+              <span class="separator"> » </span>
+              <a href="#constant-variables">Constants</a>
+              <span class="separator"> » </span>
+              <a href="#implementation-limits">Implementation limits</a>
+              <span class="separator"> » </span>
+              <a class="here">Floats</a>
+            </h1>
             <p>(&lt;= short single double long)</p>
             <table>
               <thead>
@@ -406,8 +548,20 @@
               </tbody>
             </table>
           </section>
+
           <section id="misc-limits">
-            <h1><a href="#misc-limits" class="anchor">&#x2693;</a>Miscellaneous limits</h1>
+
+            <h1>
+              <a href="#misc-limits" class="anchor">&#x2693;</a>
+              <a href="#">Variables</a>
+              <span class="separator"> » </span>
+              <a href="#constant-variables">Constants</a>
+              <span class="separator"> » </span>
+              <a href="#implementation-limits">Implementation limits</a>
+              <span class="separator"> » </span>
+              <a class="here">Misc</a>
+            </h1>
+
             <ul>
               <li><a href="#char-code-limit">char-code-limit</a> &lt; (integer 96)</li>
               <li><a href="#internal-time-units-per-second">internal-time-units-per-second</a> = (integer 1)</li>
@@ -415,9 +569,26 @@
               <li><a href="#most-positive-fixnum">most-positive-fixnum</a> &lt;= (integer #.(max 32767 array-dimension-limit))</li>
             </ul>
           </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#implementation-limits">
+              "<span>Implementation limits</span>" end.
+            </a>
+        </nav>
+
         </section>
+
         <section id="boole-constants">
-          <h1><a href="#boole-constants" class="anchor">&#x2693;</a>Boole constants</h1>
+
+          <h1>
+            <a href="#boole-constants" class="anchor">&#x2693;</a>
+            <a href="#">Variables</a>
+            <span class="separator"> » </span>
+            <a href="#constant-variables">Constants</a>
+            <span class="separator"> » </span>
+            <a class="here">Boole</a>
+          </h1>
+
           <ul>
             <li><a href="#boole-1">boole-1</a></li>
             <li><a href="#boole-2">boole-2</a></li>
@@ -437,8 +608,17 @@
             <li><a href="#boole-xor">boole-xor</a></li>
           </ul>
         </section>
+
         <section id="misc-constants">
-          <h1><a href="#misc-constants" class="anchor">&#x2693;</a>Miscellaneous constants</h1>
+          <h1>
+            <a href="#misc-constants" class="anchor">&#x2693;</a>
+            <a href="#">Variables</a>
+            <span class="separator"> » </span>
+            <a href="#constant-variables">Constants</a>
+            <span class="separator"> » </span>
+            <a class="here">Misc</a>
+          </h1>
+
           <ul>
             <li><a href="#lambda-list-keywords">lambda-list-keywords</a></li>
             <li><a href="#nil">nil</a></li>
@@ -446,6 +626,13 @@
             <li><a href="#t">t</a></li>
           </ul>
         </section>
+
+        <nav class="end-of-section-indicator">
+          <a href="#constant-variables">
+            "<span>Constants</span>" end.
+          </a>
+        </nav>
+
       </section>
 
     </div>
