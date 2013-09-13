@@ -295,7 +295,7 @@
               <td></td>
             </tr>
             <tr>
-              <th><a href="../#define-method-combination">define-method-combination</a><br />arguments</th>
+              <th id="define-method-combination-arguments-summary-table-header"><a href="../#define-method-combination">define-method-combination</a><br />arguments</th>
               <td>✔</td>
               <td></td>
               <td>✔</td>
@@ -304,6 +304,118 @@
               <td></td>
               <td>✔</td>
               <td>✔</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table id="flat-comparisons-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Base</th>
+              <th>Adjustments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>ordinary</th>
+              <td>∅</td>
+              <td>
+                <ul>
+                  <li>✔ required</li>
+                  <li>✔ &amp;optional</li>
+                  <li>✔ &amp;rest</li>
+                  <li>✔ &amp;key</li>
+                  <li>✔ &amp;aux</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>generic function</th>
+              <td>ordinary</td>
+              <td>
+                <ul>
+                  <li>✘ &amp;aux</li>
+                  <li>⇄ Default: ∅</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>specialized</th>
+              <td>ordinary</td>
+              <td>
+                <ul>
+                  <li>⇄ Specializer</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>destructuring</th>
+              <td>ordinary</td>
+              <td>
+                <ul>
+                  <li>✔ &amp;whole</li>
+                  <li>✔ &amp;body</li>
+                  <li>⇄ Recursive</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>macro</th>
+              <td>destructuring</td>
+              <td>
+                <ul>
+                  <li>✔ &amp;environment</li>
+                  <li>⇄ Recurse: destructuring</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>boa</th>
+              <td>ordinary</td>
+              <td>
+                <ul>
+                  <li>∅</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>defsetf</th>
+              <td>ordinary</td>
+              <td>
+                <ul>
+                  <li>✘ &amp;aux</li>
+                  <li>✔ &amp;environment</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>deftype</th>
+              <td>macro</td>
+              <td>
+                <ul>
+                  <li>⇄ Default default: *</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>define-modify-macro</th>
+              <td>∅</td>
+              <td>
+                <ul>
+                  <li>✔ &amp;optional</li>
+                  <li>✔ &amp;rest</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>define-method-combination<br />arguments</th>
+              <td>ordinary</td>
+              <td>
+                <ul>
+                  <li>✔ &amp;whole</li>
+                </ul>
+              </td>
             </tr>
           </tbody>
         </table>

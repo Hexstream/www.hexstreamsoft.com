@@ -4,7 +4,12 @@
     white-space: nowrap;
 }
 
-#summary-table tbody th {
+#summary-table thead th {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+#define-method-combination-arguments-summary-table-header {
     font-size: smaller;
 }
 
@@ -15,7 +20,15 @@
     padding: 0.5em 0;
 }
 
+#content table td ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#content table td ul li + li {
+    margin-top: 0.2em;
+}
+
 #summary-table td ul {
-    margin: 0;
     font-size: small;
 }
