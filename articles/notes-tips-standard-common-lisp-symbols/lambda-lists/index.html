@@ -169,6 +169,7 @@
           <thead>
             <tr>
               <th>Name</th>
+              <th class="recursivity">↺</th>
               <th>&amp;whole</th>
               <th>&amp;environment</th>
               <th>(required)</th>
@@ -182,6 +183,7 @@
           <tbody>
             <tr>
               <th>ordinary<br /><a href="../#defun">defun</a>, <a href="../#lambda">lambda</a></th>
+              <td class="recursivity"></td>
               <td></td>
               <td></td>
               <td>✔</td>
@@ -193,6 +195,7 @@
             </tr>
             <tr>
               <th>generic function<br /><a href="../#defgeneric">defgeneric</a></th>
+              <td class="recursivity"></td>
               <td></td>
               <td></td>
               <td>✔</td>
@@ -210,6 +213,7 @@
             </tr>
             <tr>
               <th>specialized<br /><a href="../#defmethod">defmethod</a></th>
+              <td class="recursivity"></td>
               <td></td>
               <td></td>
               <td>
@@ -223,7 +227,8 @@
               <td>✔</td>
             </tr>
             <tr>
-              <th>↺ destructuring<br /><a href="../#destructuring-bind">destructuring-bind</a></th>
+              <th>destructuring<br /><a href="../#destructuring-bind">destructuring-bind</a></th>
+              <td class="recursivity">↺</td>
               <td>✔</td>
               <td></td>
               <td>✔</td>
@@ -234,7 +239,8 @@
               <td>✔</td>
             </tr>
             <tr>
-              <th>↺ macro<br /><a href="../#defmacro">defmacro</a></th>
+              <th>macro<br /><a href="../#defmacro">defmacro</a></th>
+              <td class="recursivity">↺</td>
               <td>✔</td>
               <td>
                 ✔
@@ -249,6 +255,7 @@
             </tr>
             <tr>
               <th>boa<br /><a href="../#defstruct">defstruct</a></th>
+              <td class="recursivity"></td>
               <td></td>
               <td></td>
               <td>✔</td>
@@ -260,6 +267,7 @@
             </tr>
             <tr>
               <th><a href="../#defsetf">defsetf</a></th>
+              <td class="recursivity"></td>
               <td></td>
               <td>✔</td>
               <td>✔</td>
@@ -270,7 +278,8 @@
               <td></td>
             </tr>
             <tr>
-              <th>↺ <a href="../#deftype">deftype</a></th>
+              <th><a href="../#deftype">deftype</a></th>
+              <td class="recursivity">↺</td>
               <td>✔</td>
               <td>
                 ✔
@@ -291,9 +300,10 @@
             </tr>
             <tr>
               <th><a href="../#define-modify-macro">define-modify-macro</a></th>
+              <td class="recursivity"></td>
               <td></td>
               <td></td>
-              <td></td>
+              <td>✔</td>
               <td>✔</td>
               <td>✔</td>
               <td></td>
@@ -302,6 +312,7 @@
             </tr>
             <tr>
               <th id="define-method-combination-arguments-summary-table-header"><a href="../#define-method-combination">define-method-combination</a><br />arguments</th>
+              <td class="recursivity"></td>
               <td>✔</td>
               <td></td>
               <td>✔</td>
@@ -509,6 +520,89 @@
                 <ul>
                   <li>✔ &amp;optional</li>
                   <li>✔ &amp;rest</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table id="keywords-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Arity</th>
+              <th>Accepted by</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>&amp;whole</th>
+              <td>1</td>
+              <td>
+                <ul>
+                  <li>destructuring</li>
+                  <li>macro</li>
+                  <li>deftype</li>
+                  <li>define-method-combination arguments</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>&amp;environment</th>
+              <td>1</td>
+              <td>
+                <ul>
+                  <li>macro</li>
+                  <li>defsetf</li>
+                  <li>deftype</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>(required)</th>
+              <td>any</td>
+              <td>All</td>
+            </tr>
+            <tr>
+              <th>&amp;optional</th>
+              <td>any</td>
+              <td>All</td>
+            </tr>
+            <tr>
+              <th>&amp;rest</th>
+              <td>1</td>
+              <td>All</td>
+            </tr>
+            <tr>
+              <th>&amp;body</th>
+              <td>1</td>
+              <td>
+                <ul>
+                  <li>destructuring</li>
+                  <li>macro</li>
+                  <li>deftype</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>&amp;key</th>
+              <td>any</td>
+              <td>All except define-modify-macro</td>
+            </tr>
+            <tr>
+              <th>&amp;allow-other-keys</th>
+              <td>0</td>
+              <td>All those accepting &amp;key</td>
+            </tr>
+            <tr>
+              <th>&amp;aux</th>
+              <td>any</td>
+              <td>
+                All <strong>except</strong>:
+                <ul>
+                  <li>generic function</li>
+                  <li>defsetf</li>
+                  <li>define-modify-macro</li>
                 </ul>
               </td>
             </tr>
