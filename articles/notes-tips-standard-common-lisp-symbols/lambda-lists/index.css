@@ -1,0 +1,21 @@
+#summary-table th {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    white-space: nowrap;
+}
+
+#summary-table tbody th {
+    font-size: smaller;
+}
+
+#summary-table td {
+    vertical-align: top;
+    text-align: center;
+    font-size: larger;
+    padding: 0.5em 0;
+}
+
+#summary-table td ul {
+    margin: 0;
+    font-size: small;
+}
