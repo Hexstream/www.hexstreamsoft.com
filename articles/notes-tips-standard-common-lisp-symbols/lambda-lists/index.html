@@ -420,6 +420,95 @@
           </tbody>
         </table>
 
+        <table id="tree-comparisons-table">
+          <tbody>
+            <tr>
+              <td rowspan="6">
+                ordinary
+                <ul>
+                  <li>✔ required</li>
+                  <li>✔ &amp;optional</li>
+                  <li>✔ &amp;rest</li>
+                  <li>✔ &amp;key</li>
+                  <li>✔ &amp;aux</li>
+                </ul>
+              </td>
+              <td colspan="3">
+                generic function
+                <ul>
+                  <li>✘ &amp;aux</li>
+                  <li>⇄ Default: ∅</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                specialized
+                <ul>
+                  <li>⇄ Specializer</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                destructuring
+                <ul>
+                  <li>✔ &amp;whole</li>
+                  <li>✔ &amp;body</li>
+                  <li>⇄ Recursive</li>
+                </ul>
+              </td>
+              <td>
+                macro
+                <ul>
+                  <li>✔ &amp;environment</li>
+                  <li>⇄ Recurse: destructuring</li>
+                </ul>
+              </td>
+              <td>
+                deftype
+                <ul>
+                  <li>⇄ Default default: *</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                boa
+                <ul>
+                  <li>∅</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                defsetf
+                <ul>
+                  <li>✘ &amp;aux</li>
+                  <li>✔ &amp;environment</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                define-method-combination arguments
+                <ul>
+                  <li>✔ &amp;whole</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                define-modify-macro
+                <ul>
+                  <li>✔ &amp;optional</li>
+                  <li>✔ &amp;rest</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
       </section>
 
     </div>
