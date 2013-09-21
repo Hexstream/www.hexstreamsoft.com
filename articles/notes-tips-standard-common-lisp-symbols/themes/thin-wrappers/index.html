@@ -3,9 +3,9 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Notes and tips: Standard Common Lisp symbols</title>
-    <link href="../../../css/global.css" rel="stylesheet" type="text/css" />
-    <link href="../index.css" rel="stylesheet" type="text/css" />
+    <title>Thin wrappers | Themes | Notes and tips: Standard Common Lisp symbols</title>
+    <link href="../../../../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="../../shared.css" rel="stylesheet" type="text/css" />
     <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
@@ -26,11 +26,13 @@
     <nav id="site-nav">
 
       <nav class="breadcrumbs">
-        <a href="../../../">HexstreamSoft</a>
+        <a href="../../../../">HexstreamSoft</a>
         <span class="separator"> » </span>
-        <a href="../../">Articles</a>
+        <a href="../../../">Articles</a>
         <span class="separator"> » </span>
-        <a href="../">CL symbols</a>
+        <a href="../../">CL symbols</a>
+        <span class="separator"> » </span>
+        <a href="../">Themes</a>
         <span class="separator"> » </span>
         <a class="here">Thin wrappers</a>
         <div class="float-clear"></div>
@@ -49,20 +51,22 @@
             </a>
           </h1>
           <ul>
-            <li><a href="#typep-wrappers">typep</a></li>
+            <li><a href="#typep">typep</a></li>
             <li>
-              <a href="#list-wrappers" class="inlining-node">Lists</a>
+              <a href="#lists" class="inlining-node">Lists</a>
               <ul class="inlined-nodes">
-                <li><a href="#nth-wrappers">nth</a></li>
-                <li><a href="#car-cdr-wrappers">car <i>/</i> cdr</a></li>
+                <li><a href="#nth">nth</a></li>
+                <li><a href="#car-cdr">car <i>/</i> cdr</a></li>
+                <li><a href="#misc-lists">Misc</a></li>
               </ul>
             </li>
-            <li><a href="#conditionals-wrappers">Conditionals</a></li>
-            <li><a href="#streams-wrappers">Streams</a></li>
-            <li><a href="#accessor-specializing-wrappers">Accessor-specializing</a></li>
-            <li><a href="#math-wrappers">Math</a></li>
-            <li><a href="#conditions-restarts-wrappers">Conditions <i>/</i> Restarts</a></li>
-            <li><a href="#misc-wrappers">Misc</a></li>
+            <li><a href="#sequences">Sequences</a></li>
+            <li><a href="#conditionals">Conditionals</a></li>
+            <li><a href="#streams">Streams</a></li>
+            <li><a href="#accessor-specializing">Accessor-specializing</a></li>
+            <li><a href="#math">Math</a></li>
+            <li><a href="#conditions-restarts">Conditions <i>/</i> Restarts</a></li>
+            <li><a href="#misc">Misc</a></li>
           </ul>
         </nav>
 
@@ -70,40 +74,37 @@
 
         <nav class="navbox" id="cl-symbols_navbox">
           <h1>
-            <a href="../"><abbr title="Common Lisp">CL</abbr> symbols</a>
+            <a href="../">Themes</a>
           </h1>
-          <ul>
-            <li>
-              <a href="#all-standard-symbols">All standard symbols</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="../#operators">Operators</a>
-            </li>
-            <li>
-              <a href="../#variables">Variables</a>
-            </li>
-            <li>
-              <a href="../#system-classes">System classes</a>
-            </li>
-            <li>
-              <a href="../#types">Types</a>
-            </li>
-            <li>
-              <a href="../#condition-types">Condition types</a>
-            </li>
-            <li>
-              <a href="../#restarts">Restarts</a>
-            </li>
-            <li>
-              <a href="../#lambda-list-keywords-list">Lambda list keywords</a>
-            </li>
-          </ul>
           <ul>
             <li>
               <a class="here">
                 Thin wrappers
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="cl-symbols_navbox">
+          <h1>
+            <a href="../../"><abbr title="Common Lisp">CL</abbr> symbols</a>
+          </h1>
+          <ul>
+            <li>
+              <a href="../../#all-standard-symbols">All standard symbols</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="../../namespaces/">Namespaces</a>
+            </li>
+            <li>
+              <a href="../">
+                Themes
                 <span class="here-indicator-left"> </span>
                 <span class="here-indicator-right"> </span>
               </a>
@@ -160,8 +161,15 @@
         <p class="description">TODO</p>
       </header>
 
-      <section id="typep-wrappers">
-        <h1><a href="#typep-wrappers" class="anchor">&#x2693;</a><a href="#typep">typep</a> wrappers</h1>
+      <section id="typep">
+
+        <h1>
+          <a href="#typep" class="anchor">&#x2693;</a>
+          <a href="#">Thin wrappers</a>
+          <span class="separator"> » </span>
+          <a class="here">typep</a>
+        </h1>
+
         <ul>
           <li><a href="#arrayp">arrayp</a></li>
           <li><a href="#atom">atom</a> (function only)</li>
@@ -194,10 +202,49 @@
         </ul>
       </section>
 
-      <section id="list-wrappers">
-        <h1><a href="#list-wrappers" class="anchor">&#x2693;</a>List-related wrappers</h1>
-        <section id="nth-wrappers">
-          <h1><a href="#nth-wrappers" class="anchor">&#x2693;</a><a href="#nth">nth</a> wrappers</h1>
+      <section id="lists">
+
+        <nav class="section-nav">
+
+            <nav class="ancestors-nav">
+
+              <nav class="navbox" id="lists_navbox">
+                <h1>
+                  <a class="here">Lists</a>
+                  <span class="here-indicator-left"> </span>
+                  <span class="here-indicator-right"> </span>
+                </h1>
+                <ul>
+                  <li><a href="#nth">nth</a></li>
+                  <li><a href="#car-cdr">car <i>/</i> cdr</a></li>
+                  <li><a href="#misc-lists">Misc</a></li>
+                </ul>
+              </nav>
+
+              <a href="#sequences" class="navbox-next">⬇</a>
+
+            </nav>
+
+          </nav>
+
+        <h1>
+          <a href="#lists" class="anchor">&#x2693;</a>
+          <a href="#">Thin wrappers</a>
+          <span class="separator"> » </span>
+          <a class="here">Lists</a>
+        </h1>
+
+        <section id="nth">
+
+          <h1>
+            <a href="#nth" class="anchor">&#x2693;</a>
+            <a href="#">Thin wrappers</a>
+            <span class="separator"> » </span>
+            <a href="#lists">Lists</a>
+            <span class="separator"> » </span>
+            <a class="here">nth</a>
+          </h1>
+
           <ul>
             <li><a href="#first">first</a></li>
             <li><a href="#second">second</a></li>
@@ -212,8 +259,17 @@
           </ul>
         </section>
 
-        <section id="car-cdr-wrappers">
-          <h1><a href="#car-cdr-wrappers" class="anchor">&#x2693;</a><a href="#car">car</a> and <a href="#cdr">cdr</a> wrappers</h1>
+        <section id="car-cdr">
+
+          <h1>
+            <a href="#car-cdr" class="anchor">&#x2693;</a>
+            <a href="#">Thin wrappers</a>
+            <span class="separator"> » </span>
+            <a href="#lists">Lists</a>
+            <span class="separator"> » </span>
+            <a class="here">car and cdr</a>
+          </h1>
+
           <table>
             <tbody>
               <tr>
@@ -262,8 +318,17 @@
           </table>
         </section>
 
-        <section id="misc-list-wrappers">
-          <h1><a href="#misc-list-wrappers" class="anchor">&#x2693;</a>Miscellaneous list-related wrappers</h1>
+        <section id="misc-lists">
+
+          <h1>
+            <a href="#misc-lists" class="anchor">&#x2693;</a>
+            <a href="#">Thin wrappers</a>
+            <span class="separator"> » </span>
+            <a href="#lists">Lists</a>
+            <span class="separator"> » </span>
+            <a class="here">Misc</a>
+          </h1>
+
           <table>
             <thead>
               <tr>
@@ -339,10 +404,23 @@
           </table>
         </section>
 
+        <nav class="end-of-section-indicator">
+          <a href="#lists">
+            "<span>Lists</span>" end.
+          </a>
+        </nav>
+
       </section>
 
-      <section id="sequence-wrappers">
-        <h1><a href="#sequence-wrappers" class="anchor">&#x2693;</a>Sequences-related wrappers</h1>
+      <section id="sequences">
+
+        <h1>
+          <a href="#sequences" class="anchor">&#x2693;</a>
+          <a href="#">Thin wrappers</a>
+          <span class="separator"> » </span>
+          <a class="here">Sequences</a>
+        </h1>
+
         <ul>
           <li><a href="#fill">fill</a></li>
           <li><a href="#count">count</a></li>
@@ -369,8 +447,15 @@
         </ul>
       </section>
 
-      <section id="conditionals-wrappers">
-        <h1><a href="#conditionals-wrappers" class="anchor">&#x2693;</a>Conditionals-related wrappers</h1>
+      <section id="conditionals">
+
+        <h1>
+          <a href="#conditionals" class="anchor">&#x2693;</a>
+          <a href="#">Thin wrappers</a>
+          <span class="separator"> » </span>
+          <a class="here">Conditionals</a>
+        </h1>
+
         <table>
           <thead>
             <tr>
@@ -498,8 +583,15 @@
         </table>
       </section>
 
-      <section id="streams-wrappers">
-        <h1><a href="#streams-wrappers" class="anchor">&#x2693;</a>Streams-related wrappers</h1>
+      <section id="streams">
+
+        <h1>
+          <a href="#streams" class="anchor">&#x2693;</a>
+          <a href="#">Thin wrappers</a>
+          <span class="separator"> » </span>
+          <a class="here">Streams</a>
+        </h1>
+
         <table>
           <thead>
             <tr>
@@ -658,8 +750,15 @@
         </table>
       </section>
 
-      <section id="accessor-specializing-wrappers">
-        <h1><a href="#accessor-specializing-wrappers" class="anchor">&#x2693;</a>Accessor-specializing wrappers</h1>
+      <section id="accessor-specializing">
+
+        <h1>
+          <a href="#accessor-specializing" class="anchor">&#x2693;</a>
+          <a href="#">Thin wrappers</a>
+          <span class="separator"> » </span>
+          <a class="here">Accessor-specializing</a>
+        </h1>
+
         <ul>
           <li><a href="#bit">bit</a></li>
           <li><a href="#char">char</a></li>
@@ -668,8 +767,15 @@
         </ul>
       </section>
 
-      <section id="math-wrappers">
-        <h1><a href="#math-wrappers" class="anchor">&#x2693;</a>Math-related wrappers</h1>
+      <section id="math">
+
+        <h1>
+          <a href="#math" class="anchor">&#x2693;</a>
+          <a href="#">Thin wrappers</a>
+          <span class="separator"> » </span>
+          <a class="here">Math</a>
+        </h1>
+
         <ul>
           <li><a href="#1+">1+</a> / <a href="#1-">1-</a></li>
           <li><a href="#incf">incf</a> / <a href="#decf">decf</a></li>
@@ -680,8 +786,15 @@
         </ul>
       </section>
 
-      <section id="conditions-restarts-wrappers">
-        <h1><a href="#conditions-restarts-wrappers" class="anchor">&#x2693;</a>Conditions and restarts-related wrappers</h1>
+      <section id="conditions-restarts">
+
+        <h1>
+          <a href="#conditions-restarts" class="anchor">&#x2693;</a>
+          <a href="#">Thin wrappers</a>
+          <span class="separator"> » </span>
+          <a class="here">Conditions and restarts</a>
+        </h1>
+
         <ul>
           <li><a href="#warn">warn</a></li>
           <li><a href="#error">error</a> (function only)</li>
@@ -694,8 +807,15 @@
         </ul>
       </section>
 
-      <section id="misc-wrappers">
-        <h1><a href="#misc-wrappers" class="anchor">&#x2693;</a>Miscellaneous wrappers</h1>
+      <section id="misc">
+
+        <h1>
+          <a href="#misc" class="anchor">&#x2693;</a>
+          <a href="#">Thin wrappers</a>
+          <span class="separator"> » </span>
+          <a class="here">Misc</a>
+        </h1>
+
         <ul>
           <li><a href="#alphanumericp">alphanumericp</a></li>
           <li><a href="#array-dimension">array-dimension</a></li>
