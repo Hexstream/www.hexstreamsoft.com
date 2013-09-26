@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Method combination types | Namespaces | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
+    <title>Lambda lists | Namespaces | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
     <link href="../../../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../../shared.css" rel="stylesheet" type="text/css" />
     <link href="index.css" rel="stylesheet" type="text/css" />
@@ -35,7 +35,7 @@
         <span class="separator"> » </span>
         <a href="../">Namespaces</a>
         <span class="separator"> » </span>
-        <a class="here">Method combination types</a>
+        <a class="here">Lambda lists</a>
         <div class="float-clear"></div>
       </nav>
 
@@ -45,19 +45,13 @@
 
         <nav class="navbox" id="operators_navbox">
           <h1>
-            <a class="here">Method <abbr title="combination">comb</abbr> types</a>
+            <a class="here">Lambda lists</a>
             <span class="here-indicator-left"> </span>
             <span class="here-indicator-right"> </span>
           </h1>
           <ul>
-            <li>
-              <a href="#built-in" class="inlining-node">Built-in</a>
-              <ul class="inlined-nodes">
-                <li><a href="#standard">Standard</a></li>
-                <li><a href="#simple">Simple</a></li>
-              </ul>
-            </li>
-            <li><a href="#user-defined">User-defined</a></li>
+            <li><a href="#kinds">Kinds</a></li>
+            <li><a href="#keywords">Keywords</a></li>
           </ul>
         </nav>
 
@@ -78,7 +72,9 @@
               <a href="../type-specifiers/">Type specifiers</a>
             </li>
             <li>
-              <a href="../lambda-lists/">Lambda lists</a>
+              <a class="here">Lambda lists</a>
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
             </li>
             <li>
               <a href="../restart-kinds/">Restart kinds</a>
@@ -90,9 +86,7 @@
               <a href="../documentation-types/">Documentation types</a>
             </li>
             <li>
-              <a class="here">Method <abbr title="combination">comb</abbr> types</a>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
+              <a href="../method-combination-types/">Method <abbr title="combination">comb</abbr> types</a>
             </li>
           </ul>
         </nav>
@@ -167,69 +161,31 @@
     <div id="content">
 
       <header id="page-header">
-        <h1>Method combination types</h1>
+        <h1>Lambda lists</h1>
         <p class="description">TODO</p>
       </header>
 
-      <section id="built-in">
+      <p>Exceptionally, this page introduces two namespaces instead of just one, since they're so closely related: <a href="#kinds">lambda list kinds</a> and <a href="#keywords">lambda list keywords</a>.</p>
+
+      <p>This page treats lambda list kinds and keywords in isolation from eachother.<br />
+        The <a href="../../themes/lambda-lists/">lambda lists theme page</a> is perhaps more interesting and useful.</p>
+
+      <section id="kinds">
         <h1>
-          <a href="#built-in" class="anchor">&#x2693;</a>
-          <a href="#">Method combination types</a>
+          <a href="#kinds" class="anchor">&#x2693;</a>
+          <a href="#">Lambda lists</a>
           <span class="separator"> » </span>
-          <a class="here">Built-in</a>
+          <a class="here">Kinds</a>
         </h1>
-
-        <section id="standard">
-          <h1>
-            <a href="#standard" class="anchor">&#x2693;</a>
-            <a href="#">Method combination types</a>
-            <span class="separator"> » </span>
-            <a href="#built-in">Built-in</a>
-            <span class="separator"> » </span>
-            <a class="here">Standard</a>
-          </h1>
-
-          <p>By far the most often used method combination type is <a href="../../#standard">standard</a>, which is used by all standard generic functions and also used by default for user-defined generic functions defined with <a href="../../#defgeneric">defgeneric</a> (or implicitly).</p>
-
-          <p>Standard method combination is defined in details in <a href="http://www.lispworks.com/documentation/HyperSpec/Body/07_ffb.htm">CLHS 7.6.6.2 Standard Method Combination</a>.</p>
-
-        </section>
-
-        <section id="simple">
-          <h1>
-            <a href="#simple" class="anchor">&#x2693;</a>
-            <a href="#">Method combination types</a>
-            <span class="separator"> » </span>
-            <a href="#built-in">Built-in</a>
-            <span class="separator"> » </span>
-            <a class="here">Simple</a>
-          </h1>
-
-          <p>These all have similar behavior and are explained in details in <a href="">CLHS 7.6.6.4 Built-in Method Combination Types</a>.</p>
-
-          <ul>
-            <li><a href="../../#progn">progn</a></li>
-            <li><a href="../../#and">and</a> / <a href="../../#or">or</a></li>
-            <li><a href="../../#+">+</a> / <a href="../../#min">min</a> / <a href="../../#max">max</a></li>
-            <li><a href="../../#list">list</a> / <a href="../../#append">append</a> / <a href="../../#nconc">nconc</a></li>
-          </ul>
-
-        </section>
-
-        <nav class="end-of-section-indicator">
-          <a href="#built-in">
-            "<span>Built-in</span>" end.
-          </a>
-        </nav>
 
       </section>
 
-      <section id="user-defined">
+      <section id="keywords">
         <h1>
-          <a href="#user-defined" class="anchor">&#x2693;</a>
-          <a href="#">Method combination types</a>
+          <a href="#keywords" class="anchor">&#x2693;</a>
+          <a href="#">Lambda lists</a>
           <span class="separator"> » </span>
-          <a class="here">User-defined</a>
+          <a class="here">Keywords</a>
         </h1>
       </section>
 
