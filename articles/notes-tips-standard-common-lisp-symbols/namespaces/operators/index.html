@@ -821,6 +821,8 @@
             <a class="here">Arrays</a>
           </h1>
 
+          <p>All one-dimensional arrays (arrays of rank one) are <a href="#vectors">vectors</a>.</p>
+
           <ul>
             <li><a href="#adjust-array">adjust-array</a></li>
             <li><a href="#adjustable-array-p">adjustable-array-p</a></li>
@@ -1157,7 +1159,7 @@
           <section id="conses-specific">
 
             <h1>
-              <a href="#" class="anchor">&#x2693;</a>
+              <a href="#conses-specific" class="anchor">&#x2693;</a>
               <a href="#">Operators</a>
               <span class="separator"> » </span>
               <a href="#functions">Functions</a>
@@ -1233,6 +1235,8 @@
                 <a href="#plists">Plists</a>
               </span>
             </h1>
+
+            <p>Structurally, an alist is like a <a href="#lists">proper list</a> of associations.<br />Each association is a <a href="#conses-specific">cons</a> whose <a href="../../#car">car</a> is the key and whose <a href="../../#cdr">cdr</a> is the value.</p>
 
             <ul>
               <li><a href="#acons">acons</a></li>
@@ -1360,6 +1364,8 @@
             </span>
           </h1>
 
+          <p>All <a href="#lists">proper lists</a> and <a href="#vectors">vectors</a> are sequences.</p>
+
           <table>
             <tbody>
               <tr>
@@ -1454,6 +1460,10 @@
             </span>
           </h1>
 
+          <p>Vectors are one-dimensional <a href="#arrays">arrays</a> (arrays of rank one). They are all <a href="#sequences">sequences</a>.</p>
+
+          <p>If a vector has a fill-pointer, then only its active elements (those before the fill-pointer) are considered part of the sequence.</p>
+
           <ul>
             <li>(setf <a href="#fill-pointer">fill-pointer</a>)</li>
             <li><a href="#simple-vector-p">simple-vector-p</a></li>
@@ -1477,6 +1487,8 @@
               <a href="#characters">Characters</a>
             </span>
           </h1>
+
+          <p>All strings are <a href="#vectors">vectors</a> and thus also <a href="#arrays">arrays</a> and <a href="#sequences">sequences</a>.</p>
 
           <table>
             <thead>

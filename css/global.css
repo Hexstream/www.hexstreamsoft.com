@@ -214,8 +214,8 @@ table ul, table ol {
     margin: 0.5em 1em;
 }
 
-table ul:only-child, table ol:only-child {
-    margin: 0.5em;
+table td > ul:only-child, table td > ol:only-child {
+    margin: 0;
 }
 
 table .link-cell {

@@ -45,18 +45,19 @@
 
         <nav class="navbox" id="data-structures_navbox">
           <h1>
-            <a class="here">
-              Data structures
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </a>
-            <span class="item-count">(<span></span>)</span>
+            <a class="here">Data structures</a>
+            <span class="here-indicator-left"> </span>
+            <span class="here-indicator-right"> </span>
           </h1>
           <ul>
             <li>
-              <a href="#conses">Conses</a>
-              <span class="item-count">(<span></span>)</span>
+              <a href="#built-in" class="inlining-node">Built-in</a>
+              <ul class="inlined-nodes">
+                <li><a href="#concrete">Concrete</a></li>
+                <li><a href="#abstract">Abstract</a></li>
+              </ul>
             </li>
+            <li><a href="#user-defined">User-defined</a></li>
           </ul>
         </nav>
 
@@ -157,14 +158,177 @@
         <p class="description">TODO</p>
       </header>
 
-      <section id="conses">
+      <section id="built-in">
 
         <h1>
-          <a href="#conses" class="anchor">&#x2693;</a>
+          <a href="#built-in" class="anchor">&#x2693;</a>
           <a href="#">Data structures</a>
           <span class="separator"> » </span>
-          <a class="here">Conses</a>
+          <a class="here">Built-in</a>
         </h1>
+
+        <section id="concrete">
+
+          <h1>
+            <a href="#concrete" class="anchor">&#x2693;</a>
+            <a href="#">Data structures</a>
+            <span class="separator"> » </span>
+            <a href="#built-in">Built-in</a>
+            <span class="separator"> » </span>
+            <a class="here">Concrete</a>
+          </h1>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Constructors</th>
+                <th>Slot readers</th>
+                <th>Predicates</th>
+                <th>See sections, symbols</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><a href="../../#cons">cons</a></th>
+                <td><a href="../../#cons">cons</a></td>
+                <td>
+                  <ul>
+                    <li>(setf <a href="../../#car">car</a>)</li>
+                    <li>(setf <a href="../../#cdr">cdr</a>)</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="../../#consp">consp</a></li>
+                    <li><a href="../../#atom">atom</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <a href="../../namespaces/operators/#conses-specific">Conses-specific functions</a>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="../../#hash-table">hash-table</a></th>
+                <td><a href="../../#make-hash-table">make-hash-table</a></td>
+                <td>
+                  <ul>
+                    <li>
+                      [storage]
+                      <ul>
+                        <li>(setf <a href="../../#gethash">gethash</a>)</li>
+                      </ul>
+                    </li>
+                    <li><a href="../../#hash-table-test">hash-table-test</a></li>
+                    <li><a href="../../#hash-table-rehash-size">hash-table-rehash-size</a></li>
+                    <li><a href="../../#hash-table-rehash-threshold">hash-table-rehash-threshold</a></li>
+                    <li><a href="../../#hash-table-count">hash-table-count</a></li>
+                    <li><a href="../../#hash-table-size">hash-table-size</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="../../#hash-table-p">hash-table-p</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="../../namespaces/operators/#hash-tables">Hash table functions</a></li>
+                    <li><a href="../../#remhash">remhash</a></li>
+                    <li><a href="../../#clrhash">clrhash</a></li>
+                    <li><a href="../../#maphash">maphash</a></li>
+                    <li><a href="../../#sxhash">sxhash</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="../../#array">array</a></th>
+                <td><a href="../../#make-array">make-array</a></td>
+                <td>
+                  <ul>
+                    <li>
+                      [storage]
+                      <ul>
+                        <li>(setf <a href="../../#aref">aref</a>)</li>
+                        <li>(setf <a href="../../#row-major-aref">row-major-aref</a>)</li>
+                      </ul>
+                    </li>
+                    <li><a href="../../#array-element-type">array-element-type</a></li>
+                    <li>
+                      <a href="../../#array-dimensions">array-dimensions</a>
+                      <ul>
+                        <li><a href="../../#array-dimension">array-dimension</a></li>
+                        <li><a href="../../#array-rank">array-rank</a></li>
+                        <li><a href="../../#array-total-size">array-total-size</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="../../#array-displacement">array-displacement</a> (2)</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="../../#arrayp">arrayp</a></li>
+                    <li><a href="../../#adjustable-array-p">adjustable-array-p</a></li>
+                    <li><a href="../../#array-has-fill-pointer-p">array-has-fill-pointer-p</a></li>
+                    <li><a href="../../#array-in-bounds-p">array-in-bounds-p</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="../../namespaces/operators/#arrays">Array functions</a></li>
+                    <li><a href="../../#adjust-array">adjust-array</a></li>
+                    <li><a href="../../#array-row-major-index">array-row-major-index</a></li>
+                    <li><a href="../../#upgraded-array-element-type">upgraded-array-element-type</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+        <section id="abstract">
+
+          <h1>
+            <a href="#abstract" class="anchor">&#x2693;</a>
+            <a href="#">Data structures</a>
+            <span class="separator"> » </span>
+            <a href="#built-in">Built-in</a>
+            <span class="separator"> » </span>
+            <a class="here">Abstract</a>
+          </h1>
+
+          <ul>
+            <li>lists</li>
+            <li>alists</li>
+            <li>plists</li>
+            <li>trees</li>
+            <li>sets</li>
+            <li>bits</li>
+          </ul>
+
+        </section>
+
+        <nav class="end-of-section-indicator">
+          <a href="#built-in">
+            "<span>Built-in</span>" end.
+          </a>
+        </nav>
+
+      </section>
+
+      <section id="user-defined">
+
+        <h1>
+          <a href="#user-defined" class="anchor">&#x2693;</a>
+          <a href="#">Data structures</a>
+          <span class="separator"> » </span>
+          <a class="here">User-defined</a>
+        </h1>
+
+        <ul>
+
+        </ul>
 
       </section>
 
