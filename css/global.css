@@ -214,7 +214,7 @@ table ul, table ol {
     margin: 0.5em 1em;
 }
 
-table td > ul:only-child, table td > ol:only-child {
+table th > ul:only-child, table th > ol:only-child, table td > ul:only-child, table td > ol:only-child {
     margin: 0;
 }
 

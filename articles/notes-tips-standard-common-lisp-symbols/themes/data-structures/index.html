@@ -190,7 +190,13 @@
             </thead>
             <tbody>
               <tr>
-                <th><a href="../../#cons">cons</a></th>
+                <th>
+                  <ul>
+                    <li><a href="../../#sequence">sequence</a></li>
+                    <li><a href="../../#list">list</a></li>
+                    <li class="here"><a href="../../#cons">cons</a></li>
+                  </ul>
+                </th>
                 <td><a href="../../#cons">cons</a></td>
                 <td>
                   <ul>
@@ -233,11 +239,15 @@
                 </td>
                 <td>
                   <ul>
-                    <li><a href="../../namespaces/operators/#hash-tables">Hash table functions</a></li>
-                    <li><a href="../../#remhash">remhash</a></li>
-                    <li><a href="../../#clrhash">clrhash</a></li>
-                    <li><a href="../../#maphash">maphash</a></li>
-                    <li><a href="../../#sxhash">sxhash</a></li>
+                    <li>
+                      <a href="../../namespaces/operators/#hash-tables">Hash table functions</a>
+                      <ul>
+                        <li><a href="../../#remhash">remhash</a></li>
+                        <li><a href="../../#clrhash">clrhash</a></li>
+                        <li><a href="../../#maphash">maphash</a></li>
+                        <li><a href="../../#sxhash">sxhash</a></li>
+                      </ul>
+                    </li>
                   </ul>
                 </td>
               </tr>
@@ -275,10 +285,102 @@
                 </td>
                 <td>
                   <ul>
-                    <li><a href="../../namespaces/operators/#arrays">Array functions</a></li>
-                    <li><a href="../../#adjust-array">adjust-array</a></li>
-                    <li><a href="../../#array-row-major-index">array-row-major-index</a></li>
-                    <li><a href="../../#upgraded-array-element-type">upgraded-array-element-type</a></li>
+                    <li>
+                      <a href="../../namespaces/operators/#arrays">Array functions</a>
+                      <ul>
+                        <li><a href="../../#adjust-array">adjust-array</a></li>
+                        <li><a href="../../#array-row-major-index">array-row-major-index</a></li>
+                        <li><a href="../../#upgraded-array-element-type">upgraded-array-element-type</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <ul>
+                    <li><a href="../../#sequence">sequence</a></li>
+                    <li><a href="../../#array">array</a></li>
+                    <li class="here"><a href="../../#array">vector</a></li>
+                  </ul>
+                </th>
+                <td>
+                  <ul>
+                    <li><a href="../../#vector">vector</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>
+                      [storage]
+                      <ul>
+                        <li>(setf <a href="../../#svref">svref</a>)</li>
+                      </ul>
+                    </li>
+                    <li>(setf <a href="../../#fill-pointer">fill-pointer</a>)</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="../../#vectorp">vectorp</a></li>
+                    <li><a href="../../#simple-vector-p">simple-vector-p</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>
+                      <a href="../../namespaces/operators/#vectors">Vector functions</a>
+                      <ul>
+                        <li><a href="../../#vector-push">vector-push</a></li>
+                        <li><a href="../../#vector-push-extend">vector-push-extend</a></li>
+                        <li><a href="../../#vector-pop">vector-pop</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <ul>
+                    <li><a href="../../#sequence">sequence</a></li>
+                    <li><a href="../../#array">array</a></li>
+                    <li><a href="../../#vector">vector</a></li>
+                    <li class="here"><a href="../../#string">string</a></li>
+                  </ul>
+                </th>
+                <td>
+                  <ul>
+                    <li><a href="../../#string">string</a></li>
+                    <li><a href="../../#make-string">make-string</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>
+                      [storage]
+                      <ul>
+                        <li>(setf <a href="../../#char">char</a>)</li>
+                        <li>(setf <a href="../../#char">schar</a>)</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="../../#stringp">stringp</a></li>
+                    <li><a href="../../#simple-string-p">simple-string-p</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>
+                      <a href="../../namespaces/operators/#strings">String functions</a>
+                      <ul>
+                        <li>Comparisons</li>
+                        <li>Case modification</li>
+                        <li>Trimming</li>
+                      </ul>
+                    </li>
                   </ul>
                 </td>
               </tr>
