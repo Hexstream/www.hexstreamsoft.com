@@ -2,14 +2,37 @@ table th, table td {
     vertical-align: top;
 }
 
-table th ul li {
+table td:last-child {
+    padding-right: 0;
+}
+
+table a {
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+table th.horizontal-grouping-header {
+    font-size: xx-large;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+table th.horizontal-grouping-header:first-child {
+    text-align: left;
+}
+
+table th.horizontal-grouping-header a {
     opacity: 0.4;
 }
 
-table th ul li.here {
+table th.horizontal-grouping-header a.here {
     opacity: 1;
 }
 
 table th ul li + li {
     margin-top: 0.2em;
+}
+
+table > tbody > tr > th.horizontal-grouping-header a:last-child {
+    font-size: inherit;
 }
