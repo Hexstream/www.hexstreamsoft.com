@@ -6,6 +6,7 @@
     <title>Type specifiers | Namespaces | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
     <link href="../../../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../../shared.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
     <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
@@ -420,12 +421,81 @@
               <a class="here">Floats</a>
             </h1>
 
-            <ul>
-              <li><a href="#short-float">short-float</a></li>
-              <li><a href="#single-float">single-float</a></li>
-              <li><a href="#double-float">double-float</a></li>
-              <li><a href="#long-float">long-float</a></li>
-            </ul>
+            <table>
+              <thead>
+                <tr>
+                  <th>Number of float representations</th>
+                  <th colspan="4">Float representation groupings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>4</th>
+                  <td><b><a href="#short-float">short-float</a></b></td>
+                  <td><b><a href="#single-float">single-float</a></b></td>
+                  <td><b><a href="#double-float">double-float</a></b></td>
+                  <td><b><a href="#long-float">long-float</a></b></td>
+                </tr>
+                <tr>
+                  <th rowspan="2">3</th>
+                  <td><b><a href="#short-float">short-float</a></b></td>
+                  <td><b><a href="#single-float">single-float</a></b></td>
+                  <td colspan="2">
+                    <ul>
+                      <li><b><a href="#double-float">double-float</a></b></li>
+                      <li><a href="#long-float">long-float</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <ul>
+                      <li><a href="#short-float">short-float</a></li>
+                      <li><b><a href="#single-float">single-float</a></b></li>
+                    </ul>
+                  </td>
+                  <td><b><a href="#double-float">double-float</a></b></td>
+                  <td><b><a href="#long-float">long-float</a></b></td>
+                </tr>
+                <tr>
+                  <th rowspan="2">2</th>
+                  <td><b><a href="#short-float">short-float</a></b></td>
+                  <td colspan="3">
+                    <ul>
+                      <li><b><a href="#single-float">single-float</a></b></li>
+                      <li><a href="#double-float">double-float</a></li>
+                      <li><a href="#long-float">long-float</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <ul>
+                      <li><a href="#short-float">short-float</a></li>
+                      <li><b><a href="#single-float">single-float</a></b></li>
+                    </ul>
+                  </td>
+                  <td colspan="2">
+                    <ul>
+                      <li><b><a href="#double-float">double-float</a></b></li>
+                      <li><a href="#long-float">long-float</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <td colspan="4">
+                    <ul>
+                      <li><a href="#short-float">short-float</a></li>
+                      <li><b><a href="#single-float">single-float</a></b></li>
+                      <li><a href="#double-float">double-float</a></li>
+                      <li><a href="#long-float">long-float</a></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
           </section>
 
           <nav class="end-of-section-indicator">
