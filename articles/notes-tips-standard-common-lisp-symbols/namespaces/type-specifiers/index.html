@@ -210,15 +210,26 @@
             <a class="here">Numbers</a>
           </h1>
 
-          <ul>
-            <li><a href="#complex">complex</a></li>
-            <li><a href="#float">float</a></li>
-            <li><a href="#integer">integer</a></li>
-            <li><a href="#number">number</a></li>
-            <li><a href="#ratio">ratio</a></li>
-            <li><a href="#rational">rational</a></li>
-            <li><a href="#real">real</a></li>
-          </ul>
+          <table class="vertical-tree">
+            <tbody>
+              <tr>
+                <td colspan="4"><a href="#number">number</a></td>
+              </tr>
+              <tr>
+                <td colspan="3"><a href="#real">real</a></td>
+                <td rowspan="3"><a href="#complex">complex</a></td>
+              </tr>
+              <tr>
+                <td colspan="2"><a href="#rational">rational</a></td>
+                <td rowspan="2"><a href="#float">float</a></td>
+              </tr>
+              <tr>
+                <td><a href="#integer">integer</a></td>
+                <td><a href="#ratio">ratio</a></td>
+              </tr>
+            </tbody>
+          </table>
+
         </section>
 
         <section id="stream-system-classes">
@@ -355,13 +366,45 @@
               <a class="here">Integers</a>
             </h1>
 
-            <ul>
-              <li><a href="#bit">bit</a></li>
-              <li><a href="#signed-byte">signed-byte</a></li>
-              <li><a href="#unsigned-byte">unsigned-byte</a></li>
-              <li><a href="#fixnum">fixnum</a></li>
-              <li><a href="#bignum">bignum</a></li>
-            </ul>
+            <table class="vertical-tree">
+              <tbody>
+                <tr>
+                  <td colspan="10"><a href="#signed-byte">signed-byte</a></td>
+                </tr>
+                <tr>
+                  <td colspan="4"></td>
+                  <td colspan="6"><a href="#unsigned-byte">unsigned-byte</a></td>
+                </tr>
+                <tr>
+                  <td colspan="4"></td>
+                  <td colspan="2"><a href="#bit">bit</a></td>
+                  <td colspan="4"></td>
+                </tr>
+                <tr>
+                  <td>-∞</td>
+                  <td>...</td>
+                  <td>most-negative-fixnum</td>
+                  <td>...</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>...</td>
+                  <td>most-positive-fixnum</td>
+                  <td>...</td>
+                  <td>+∞</td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+                  <td colspan="6"><a href="#fixnum">fixnum</a></td>
+                  <td colspan="2"></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><a href="#bignum">bignum</a></td>
+                  <td colspan="6"></td>
+                  <td colspan="2"><a href="#bignum">bignum</a></td>
+                </tr>
+              </tbody>
+            </table>
+
           </section>
 
           <section id="float-number-types">

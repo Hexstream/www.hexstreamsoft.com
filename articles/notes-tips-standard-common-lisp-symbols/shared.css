@@ -45,3 +45,8 @@
 .not-deprecated {
     color: green;
 }
+
+.vertical-tree tbody td {
+    vertical-align: top;
+    text-align: center;
+}
