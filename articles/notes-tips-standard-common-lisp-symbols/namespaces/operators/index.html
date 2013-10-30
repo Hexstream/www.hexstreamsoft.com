@@ -601,7 +601,15 @@
               </h1>
               <ul>
                 <li><a href="#bindings">Bindings</a></li>
-                <li><a href="#math">Math <i>/</i> Bits</a></li>
+                <li>
+                  <a href="#math" class="inlining-node">Math</a>
+                  <ul class="inlined-nodes">
+                    <li><a href="#bits">Bits</a></li>
+                    <li><a href="#rounding">Rounding</a></li>
+                    <li><a href="#trigonometry">Trigonometry</a></li>
+                    <li><a href="#misc-math">Misc</a></li>
+                  </ul>
+                </li>
                 <li><a href="#hash-tables">Hash tables</a></li>
                 <li><a href="#arrays">Arrays</a></li>
                 <li>
@@ -677,116 +685,191 @@
             <a class="here">Math</a>
           </h1>
 
-          <table>
-            <tbody>
-              <tr>
-                <td colspan="2"><a href="#sin">sin</a></td>
-                <td colspan="2"><a href="#cos">cos</a></td>
-                <td colspan="2"><a href="#tan">tan</a></td>
-              </tr>
-              <tr>
-                <td><a href="#sinh">sinh</a></td>
-                <td><a href="#asin">asin</a></td>
-                <td><a href="#cosh">cosh</a></td>
-                <td><a href="#acos">acos</a></td>
-                <td><a href="#tanh">tanh</a></td>
-                <td><a href="#atan">atan</a></td>
-              </tr>
-              <tr>
-                <td colspan="2"><a href="#asinh">asinh</a></td>
-                <td colspan="2"><a href="#acosh">acosh</a></td>
-                <td colspan="2"><a href="#atanh">atanh</a></td>
-              </tr>
-            </tbody>
-          </table>
-          <table>
-            <thead>
-              <tr>
-                <th>Rounding function</th>
-                <th>Float variant</th>
-                <th>Bias towards</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="#ceiling">ceiling</a></td>
-                <td><a href="#fceiling">fceiling</a></td>
-                <td>Positive infinity</td>
-              </tr>
-              <tr>
-                <td><a href="#floor">floor</a></td>
-                <td><a href="#ffloor">ffloor</a></td>
-                <td>Negative infinity</td>
-              </tr>
-              <tr>
-                <td><a href="#round">round</a></td>
-                <td><a href="#fround">fround</a></td>
-                <td>Zero</td>
-              </tr>
-              <tr>
-                <td><a href="#truncate">truncate</a></td>
-                <td><a href="#ftruncate">ftruncate</a></td>
-                <td>Even</td>
-              </tr>
-            </tbody>
-          </table>
-          <ul>
-            <li><a href="#+">+</a> <a href="#-">-</a> <a href="#*">*</a> <a href="#/">/</a></li>
-            <li><a href="#&lt;">&lt;</a> <a href="#&lt;=">&lt=</a> <a href="#/=">/=</a> <a href="#=">=</a> <a href="#&gt;=">&gt;=</a> <a href="#&gt;">&gt;</a></li>
-            <li><a href="#1+">1+</a> / <a href="#1-">1-</a></li>
-            <li><a href="#abs">abs</a></li>
-            <li><a href="#arithmetic-error-operation">arithmetic-error-operation</a> / <a href="#arithmetic-error-operands">arithmetic-error-operands</a></li>
-            <li><a href="#cis">cis</a></li>
-            <li><a href="#complex">complex</a> / <a href="#realpart">realpart</a> / <a href="#imagpart">imagpart</a> / <a href="#complexp">complexp</a> / <a href="#conjugate">conjugate</a></li>
-            <li><a href="#decode-float">decode-float</a> / <a href="#scale-float">scale-float</a> / <a href="#float-radix">float-radix</a> / <a href="#float-sign">float-sign</a> / <a href="#float-digits">float-digits</a> / <a href="#float-precision">float-precision</a> / <a href="#integer-decode-float">integer-decode-float</a></li>
-            <li><a href="#numerator">numerator</a> / <a href="#denominator">denominator</a></li>
-            <li><a href="#evenp">evenp</a> / <a href="#oddp">oddp</a></li>
-            <li><a href="#expt">expt</a> / <a href="#exp">exp</a></li>
-            <li><a href="#float">float</a></li>
-            <li><a href="#floatp">floatp</a></li>
-            <li><a href="#gcd">gcd</a> / <a href="#lcm">lcm</a></li>
-            <li><a href="#integerp">integerp</a></li>
-            <li><a href="#log">log</a></li>
-            <li><a href="#make-random-state">make-random-state</a></li>
-            <li><a href="#min">min</a> / <a href="#max">max</a></li>
-            <li><a href="#mod">mod</a> / <a href="#rem">rem</a></li>
-            <li><a href="#numberp">numberp</a></li>
-            <li><a href="#parse-integer">parse-integer</a></li>
-            <li><a href="#phase">phase</a></li>
-            <li><a href="#random">random</a> / <a href="#random-state-p">random-state-p</a></li>
-            <li><a href="#rational">rational</a> / <a href="#rationalize">rationalize</a> / <a href="#rationalp">rationalp</a></li>
-            <li><a href="#realp">realp</a></li>
-            <li><a href="#simple-bit-vector-p">simple-bit-vector-p</a></li>
-            <li><a href="#sqrt">sqrt</a> / <a href="#isqrt">isqrt</a></li>
-            <li><a href="#signum">signum</a> / <a href="#minusp">minusp</a> / <a href="#zerop">zerop</a> / <a href="#plusp">plusp</a></li>
-          </ul>
-        </section>
+          <nav class="section-nav">
 
-        <section id="bits">
+            <nav class="navbox" id="math_navbox">
+              <h1>
+                <a class="here">Math</a>
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </h1>
+              <ul>
+                <li><a href="#bits">Bits</a></li>
+                <li><a href="#rounding">Rounding</a></li>
+                <li><a href="#trigonometry">Trigonometry</a></li>
+                <li><a href="#misc-math">Misc</a></li>
+              </ul>
+            </nav>
 
-          <h1>
-            <a href="#bits" class="anchor">&#x2693;</a>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">Bits</a>
-          </h1>
+            <a href="#hash-tables" class="navbox-next">⬇</a>
 
-          <p><small>(I guess this could be a subsection of Math.)</small></p>
-          <ul>
-            <li><a href="#ash">ash</a></li>
-            <li>(setf <a href="#bit">bit</a>) / (setf <a href="#sbit">sbit</a>)</li>
-            <li><a href="#bit-and">bit-and</a> / <a href="#bit-andc1">bit-andc1</a> / <a href="#bit-andc2">bit-andc2</a> / <a href="#bit-eqv">bit-eqv</a> / <a href="#bit-ior">bit-ior</a> / <a href="#bit-nand">bit-nand</a> / <a href="#bit-nor">bit-nor</a> / <a href="#bit-not">bit-not</a> / <a href="#bit-orc1">bit-orc1</a> / <a href="#bit-orc2">bit-orc2</a> / <a href="#bit-xor">bit-xor</a></li>
-            <li><a href="#bit-vector-p">bit-vector-p</a></li>
-            <li><a href="#boole">boole</a></li>
-            <li><a href="#byte">byte</a> / <a href="#byte-position">byte-position</a> / <a href="#byte-size">byte-size</a></li>
-            <li><a href="#deposit-field">deposit-field</a></li>
-            <li><a href="#dpb">dpb</a> / (setf <a href="#ldb">ldb</a>) / <a href="#ldb-test">ldb-test</a></li>
-            <li><a href="#integer-length">integer-length</a></li>
-            <li><a href="#logand">logand</a> / <a href="#logandc1">logandc1</a> / <a href="#logandc2">logandc2</a> / <a href="#logbitp">logbitp</a> / <a href="#logcount">logcount</a> / <a href="#logeqv">logeqv</a> / <a href="#logior">logior</a> / <a href="#lognand">lognand</a> / <a href="#lognor">lognor</a> / <a href="#lognot">lognot</a> / <a href="#logorc1">logorc1</a> / <a href="#logorc2">logorc2</a> / <a href="#logtest">logtest</a> / <a href="#logxor">logxor</a></li>
-            <li>(setf <a href="#mask-field">mask-field</a>)</li>
-          </ul>
+          </nav>
+
+          <section id="bits">
+
+            <h1>
+              <a href="#bits" class="anchor">&#x2693;</a>
+              <a href="#">Operators</a>
+              <span class="separator"> » </span>
+              <a href="#functions">Functions</a>
+              <span class="separator"> » </span>
+              <a href="#math">Math</a>
+              <span class="separator"> » </span>
+              <a class="here">Bits</a>
+            </h1>
+
+            <ul>
+              <li><a href="#ash">ash</a></li>
+              <li>(setf <a href="#bit">bit</a>) / (setf <a href="#sbit">sbit</a>)</li>
+              <li><a href="#bit-and">bit-and</a> / <a href="#bit-andc1">bit-andc1</a> / <a href="#bit-andc2">bit-andc2</a> / <a href="#bit-eqv">bit-eqv</a> / <a href="#bit-ior">bit-ior</a> / <a href="#bit-nand">bit-nand</a> / <a href="#bit-nor">bit-nor</a> / <a href="#bit-not">bit-not</a> / <a href="#bit-orc1">bit-orc1</a> / <a href="#bit-orc2">bit-orc2</a> / <a href="#bit-xor">bit-xor</a></li>
+              <li><a href="#bit-vector-p">bit-vector-p</a></li>
+              <li><a href="#boole">boole</a></li>
+              <li><a href="#byte">byte</a> / <a href="#byte-position">byte-position</a> / <a href="#byte-size">byte-size</a></li>
+              <li><a href="#deposit-field">deposit-field</a></li>
+              <li><a href="#dpb">dpb</a> / (setf <a href="#ldb">ldb</a>) / <a href="#ldb-test">ldb-test</a></li>
+              <li><a href="#integer-length">integer-length</a></li>
+              <li><a href="#logand">logand</a> / <a href="#logandc1">logandc1</a> / <a href="#logandc2">logandc2</a> / <a href="#logbitp">logbitp</a> / <a href="#logcount">logcount</a> / <a href="#logeqv">logeqv</a> / <a href="#logior">logior</a> / <a href="#lognand">lognand</a> / <a href="#lognor">lognor</a> / <a href="#lognot">lognot</a> / <a href="#logorc1">logorc1</a> / <a href="#logorc2">logorc2</a> / <a href="#logtest">logtest</a> / <a href="#logxor">logxor</a></li>
+              <li>(setf <a href="#mask-field">mask-field</a>)</li>
+            </ul>
+          </section>
+
+          <section id="rounding">
+
+            <h1>
+              <a href="#rounding" class="anchor">&#x2693;</a>
+              <a href="#">Operators</a>
+              <span class="separator"> » </span>
+              <a href="#functions">Functions</a>
+              <span class="separator"> » </span>
+              <a href="#math">Math</a>
+              <span class="separator"> » </span>
+              <a class="here">Rounding</a>
+            </h1>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Rounding function</th>
+                  <th>Float variant</th>
+                  <th>Bias towards</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#ceiling">ceiling</a></td>
+                  <td><a href="#fceiling">fceiling</a></td>
+                  <td>Positive infinity</td>
+                </tr>
+                <tr>
+                  <td><a href="#floor">floor</a></td>
+                  <td><a href="#ffloor">ffloor</a></td>
+                  <td>Negative infinity</td>
+                </tr>
+                <tr>
+                  <td><a href="#round">round</a></td>
+                  <td><a href="#fround">fround</a></td>
+                  <td>Zero</td>
+                </tr>
+                <tr>
+                  <td><a href="#truncate">truncate</a></td>
+                  <td><a href="#ftruncate">ftruncate</a></td>
+                  <td>Even</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </section>
+
+          <section id="trigonometry">
+
+            <h1>
+              <a href="#trigonometry" class="anchor">&#x2693;</a>
+              <a href="#">Operators</a>
+              <span class="separator"> » </span>
+              <a href="#functions">Functions</a>
+              <span class="separator"> » </span>
+              <a href="#math">Math</a>
+              <span class="separator"> » </span>
+              <a class="here">Trigonometry</a>
+            </h1>
+
+            <table>
+              <tbody>
+                <tr>
+                  <td colspan="2"><a href="#sin">sin</a></td>
+                  <td colspan="2"><a href="#cos">cos</a></td>
+                  <td colspan="2"><a href="#tan">tan</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#sinh">sinh</a></td>
+                  <td><a href="#asin">asin</a></td>
+                  <td><a href="#cosh">cosh</a></td>
+                  <td><a href="#acos">acos</a></td>
+                  <td><a href="#tanh">tanh</a></td>
+                  <td><a href="#atan">atan</a></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><a href="#asinh">asinh</a></td>
+                  <td colspan="2"><a href="#acosh">acosh</a></td>
+                  <td colspan="2"><a href="#atanh">atanh</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </section>
+
+          <section id="misc-math">
+
+            <h1>
+              <a href="#misc-math" class="anchor">&#x2693;</a>
+              <a href="#">Operators</a>
+              <span class="separator"> » </span>
+              <a href="#functions">Functions</a>
+              <span class="separator"> » </span>
+              <a href="#math">Math</a>
+              <span class="separator"> » </span>
+              <a class="here">Misc</a>
+            </h1>
+
+            <ul>
+              <li><a href="#+">+</a> <a href="#-">-</a> <a href="#*">*</a> <a href="#/">/</a></li>
+              <li><a href="#&lt;">&lt;</a> <a href="#&lt;=">&lt=</a> <a href="#/=">/=</a> <a href="#=">=</a> <a href="#&gt;=">&gt;=</a> <a href="#&gt;">&gt;</a></li>
+              <li><a href="#1+">1+</a> / <a href="#1-">1-</a></li>
+              <li><a href="#abs">abs</a></li>
+              <li><a href="#arithmetic-error-operation">arithmetic-error-operation</a> / <a href="#arithmetic-error-operands">arithmetic-error-operands</a></li>
+              <li><a href="#cis">cis</a></li>
+              <li><a href="#complex">complex</a> / <a href="#realpart">realpart</a> / <a href="#imagpart">imagpart</a> / <a href="#complexp">complexp</a> / <a href="#conjugate">conjugate</a></li>
+              <li><a href="#decode-float">decode-float</a> / <a href="#scale-float">scale-float</a> / <a href="#float-radix">float-radix</a> / <a href="#float-sign">float-sign</a> / <a href="#float-digits">float-digits</a> / <a href="#float-precision">float-precision</a> / <a href="#integer-decode-float">integer-decode-float</a></li>
+              <li><a href="#numerator">numerator</a> / <a href="#denominator">denominator</a></li>
+              <li><a href="#evenp">evenp</a> / <a href="#oddp">oddp</a></li>
+              <li><a href="#expt">expt</a> / <a href="#exp">exp</a></li>
+              <li><a href="#float">float</a></li>
+              <li><a href="#floatp">floatp</a></li>
+              <li><a href="#gcd">gcd</a> / <a href="#lcm">lcm</a></li>
+              <li><a href="#integerp">integerp</a></li>
+              <li><a href="#log">log</a></li>
+              <li><a href="#make-random-state">make-random-state</a></li>
+              <li><a href="#min">min</a> / <a href="#max">max</a></li>
+              <li><a href="#mod">mod</a> / <a href="#rem">rem</a></li>
+              <li><a href="#numberp">numberp</a></li>
+              <li><a href="#parse-integer">parse-integer</a></li>
+              <li><a href="#phase">phase</a></li>
+              <li><a href="#random">random</a> / <a href="#random-state-p">random-state-p</a></li>
+              <li><a href="#rational">rational</a> / <a href="#rationalize">rationalize</a> / <a href="#rationalp">rationalp</a></li>
+              <li><a href="#realp">realp</a></li>
+              <li><a href="#simple-bit-vector-p">simple-bit-vector-p</a></li>
+              <li><a href="#sqrt">sqrt</a> / <a href="#isqrt">isqrt</a></li>
+              <li><a href="#signum">signum</a> / <a href="#minusp">minusp</a> / <a href="#zerop">zerop</a> / <a href="#plusp">plusp</a></li>
+            </ul>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#math">
+              "<span>Math</span>" end.
+            </a>
+          </nav>
+
         </section>
 
         <section id="hash-tables">
@@ -1004,10 +1087,10 @@
           </section>
 
           <nav class="end-of-section-indicator">
-          <a href="#streams">
-            "<span>Streams</span>" end.
-          </a>
-        </nav>
+            <a href="#streams">
+              "<span>Streams</span>" end.
+            </a>
+          </nav>
 
         </section>
 
