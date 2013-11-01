@@ -611,7 +611,15 @@
                   </ul>
                 </li>
                 <li><a href="#hash-tables">Hash tables</a></li>
-                <li><a href="#arrays">Arrays</a></li>
+                <li>
+                  <a href="#arrays" class="inlining-node">Arrays</a>
+                  <ul class="inlined-nodes">
+                    <li><a href="#vectors">Vectors</a></li>
+                    <li><a href="#strings">Strings</a></li>
+                    <li><a href="#bit-arrays">Bit arrays</a></li>
+                    <li><a href="#misc-arrays">Misc</a></li>
+                  </ul>
+                </li>
                 <li>
                   <a href="#streams" class="inlining-node">Streams</a>
                   <ul class="inlined-nodes">
@@ -630,8 +638,8 @@
                     <li><a href="#trees">Trees <i>/</i> Sets</a></li>
                   </ul>
                 </li>
-                <li><a href="#sequences">Sequences <i>/</i> Vectors</a></li>
-                <li><a href="#strings">Strings <i>/</i> Characters</a></li>
+                <li><a href="#sequences">Sequences</a></li>
+                <li><a href="#characters">Characters</a></li>
                 <li><a href="#conditions">Conditions <i>/</i> Restarts</a></li>
                 <li>
                   <a href="#clos" class="inlining-node">CLOS</a>
@@ -720,9 +728,6 @@
 
             <ul>
               <li><a href="#ash">ash</a></li>
-              <li>(setf <a href="#bit">bit</a>) / (setf <a href="#sbit">sbit</a>)</li>
-              <li><a href="#bit-and">bit-and</a> / <a href="#bit-andc1">bit-andc1</a> / <a href="#bit-andc2">bit-andc2</a> / <a href="#bit-eqv">bit-eqv</a> / <a href="#bit-ior">bit-ior</a> / <a href="#bit-nand">bit-nand</a> / <a href="#bit-nor">bit-nor</a> / <a href="#bit-not">bit-not</a> / <a href="#bit-orc1">bit-orc1</a> / <a href="#bit-orc2">bit-orc2</a> / <a href="#bit-xor">bit-xor</a></li>
-              <li><a href="#bit-vector-p">bit-vector-p</a></li>
               <li><a href="#boole">boole</a></li>
               <li><a href="#byte">byte</a> / <a href="#byte-position">byte-position</a> / <a href="#byte-size">byte-size</a></li>
               <li><a href="#deposit-field">deposit-field</a></li>
@@ -857,7 +862,6 @@
               <li><a href="#random">random</a> / <a href="#random-state-p">random-state-p</a></li>
               <li><a href="#rational">rational</a> / <a href="#rationalize">rationalize</a> / <a href="#rationalp">rationalp</a></li>
               <li><a href="#realp">realp</a></li>
-              <li><a href="#simple-bit-vector-p">simple-bit-vector-p</a></li>
               <li><a href="#sqrt">sqrt</a> / <a href="#isqrt">isqrt</a></li>
               <li><a href="#signum">signum</a> / <a href="#minusp">minusp</a> / <a href="#zerop">zerop</a> / <a href="#plusp">plusp</a></li>
             </ul>
@@ -896,6 +900,30 @@
 
         <section id="arrays">
 
+          <nav class="section-nav">
+
+            <nav class="ancestors-nav">
+
+              <nav class="navbox" id="arrays_navbox">
+                <h1>
+                  <a class="here">Arrays</a>
+                  <span class="here-indicator-left"> </span>
+                  <span class="here-indicator-right"> </span>
+                </h1>
+                <ul>
+                  <li><a href="#vectors">Vectors</a></li>
+                  <li><a href="#strings">Strings</a></li>
+                  <li><a href="#bit-arrays">Bit arrays</a></li>
+                  <li><a href="#misc-arrays">Misc</a></li>
+                </ul>
+              </nav>
+
+              <a href="#streams" class="navbox-next">⬇</a>
+
+            </nav>
+
+          </nav>
+
           <h1>
             <a href="#arrays" class="anchor">&#x2693;</a>
             <a href="#">Operators</a>
@@ -905,25 +933,146 @@
             <a class="here">Arrays</a>
           </h1>
 
-          <p>All one-dimensional arrays (arrays of rank one) are <a href="#vectors">vectors</a>.</p>
+          <section id="vectors">
 
-          <ul>
-            <li><a href="#adjust-array">adjust-array</a></li>
-            <li><a href="#adjustable-array-p">adjustable-array-p</a></li>
-            <li>(setf <a href="#aref">aref</a>) / (setf <a href="#row-major-aref">row-major-aref</a>)</li>
-            <li><a href="#array-dimension">array-dimension</a></li>
-            <li><a href="#array-dimensions">array-dimensions</a></li>
-            <li><a href="#array-displacement">array-displacement</a></li>
-            <li><a href="#array-element-type">array-element-type</a></li>
-            <li><a href="#array-has-fill-pointer-p">array-has-fill-pointer-p</a></li>
-            <li><a href="#array-in-bounds-p">array-in-bounds-p</a></li>
-            <li><a href="#array-rank">array-rank</a></li>
-            <li><a href="#array-row-major-index">array-row-major-index</a></li>
-            <li><a href="#array-total-size">array-total-size</a></li>
-            <li><a href="#arrayp">arrayp</a></li>
-            <li><a href="#make-array">make-array</a></li>
-            <li><a href="#upgraded-array-element-type">upgraded-array-element-type</a></li>
-          </ul>
+            <h1>
+              <a href="#vectors" class="anchor">&#x2693;</a>
+              <a href="#">Operators</a>
+              <span class="separator"> » </span>
+              <a href="#functions">Functions</a>
+              <span class="separator"> » </span>
+              <a href="#arrays">Arrays</a>
+              <span class="separator"> » </span>
+              <a class="here">Vectors</a>
+            </h1>
+
+            <p>All one-dimensional <a href="#arrays">arrays</a> (arrays of rank one) are vectors. All vectors are <a href="#sequences">sequences</a>.</p>
+
+            <p>If a vector has a fill-pointer, then only its active elements (those before the fill-pointer) are considered part of the sequence.</p>
+
+            <ul>
+              <li>(setf <a href="#fill-pointer">fill-pointer</a>)</li>
+              <li><a href="#simple-vector-p">simple-vector-p</a></li>
+              <li>(setf <a href="#svref">svref</a>)</li>
+              <li><a href="#vector">vector</a></li>
+              <li><a href="#vector-push">vector-push</a> / <a href="#vector-push-extend">vector-push-extend</a> / <a href="#vector-pop">vector-pop</a></li>
+              <li><a href="#vectorp">vectorp</a></li>
+            </ul>
+          </section>
+
+          <section id="strings">
+
+            <h1>
+              <a href="#strings" class="anchor">&#x2693;</a>
+              <a href="#">Operators</a>
+              <span class="separator"> » </span>
+              <a href="#functions">Functions</a>
+              <span class="separator"> » </span>
+              <a href="#arrays">Arrays</a>
+              <span class="separator"> » </span>
+              <a class="here">Strings</a>
+            </h1>
+
+            <p>All <a href="#vectors">vectors</a> with an element-type of character (or one of its subtypes) are strings.</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Potentially sharing</th>
+                  <th>Always destructive</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#string-downcase">string-downcase</a></td>
+                  <td><a href="#nstring-downcase">nstring-downcase</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#string-upcase">string-upcase</a></td>
+                  <td><a href="#nstring-upcase">nstring-upcase</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#string-capitalize">string-capitalize</a></td>
+                  <td><a href="#nstring-capitalize">nstring-capitalize</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>(setf <a href="#char">char</a>) / (setf <a href="#schar">schar</a>)</li>
+              <li><a href="#make-string">make-string</a></li>
+              <li><a href="#simple-string-p">simple-string-p</a></li>
+              <li><a href="#string">string</a></li>
+              <li><a href="#string&lt;">string&lt;</a> / <a href="#string&lt;">string&lt;=</a> / <a href="#string/=">string/=</a> / <a href="#string=">string=</a> / <a href="#string&gt;=">string&gt;=</a> / <a href="#string&gt;">string&gt;</a></li>
+              <li><a href="#string-lessp">string-lessp</a> / <a href="#string-not-greaterp">string-not-greaterp</a> / <a href="#string-not-equal">string-not-equal</a> / <a href="#string-equal">string-equal</a> / <a href="#string-not-lessp">string-not-lessp</a> / <a href="#string-greaterp">string-greaterp</a></li>
+              <li><a href="#string-trim">string-trim</a> / <a href="#string-left-trim">string-left-trim</a> / <a href="#string-right-trim">string-right-trim</a></li>
+              <li><a href="#stringp">stringp</a></li>
+            </ul>
+          </section>
+
+          <section id="bit-arrays">
+
+            <h1>
+              <a href="#bit-arrays" class="anchor">&#x2693;</a>
+              <a href="#">Operators</a>
+              <span class="separator"> » </span>
+              <a href="#functions">Functions</a>
+              <span class="separator"> » </span>
+              <a href="#arrays">Arrays</a>
+              <span class="separator"> » </span>
+              <a class="here">Bit arrays</a>
+            </h1>
+
+            <p>All <a href="#vectors">vectors</a> with an element-type of bit are bit-vectors, which is one of the standard specialized array types.</p>
+
+            <p>Functions that accept bit-vectors typically also accept bit-arrays, though those are not a specialized array type.</p>
+
+            <ul>
+              <li>(setf <a href="#bit">bit</a>) / (setf <a href="#sbit">sbit</a>)</li>
+              <li><a href="#bit-and">bit-and</a> / <a href="#bit-andc1">bit-andc1</a> / <a href="#bit-andc2">bit-andc2</a> / <a href="#bit-eqv">bit-eqv</a> / <a href="#bit-ior">bit-ior</a> / <a href="#bit-nand">bit-nand</a> / <a href="#bit-nor">bit-nor</a> / <a href="#bit-not">bit-not</a> / <a href="#bit-orc1">bit-orc1</a> / <a href="#bit-orc2">bit-orc2</a> / <a href="#bit-xor">bit-xor</a></li>
+              <li><a href="#bit-vector-p">bit-vector-p</a> / <a href="#simple-bit-vector-p">simple-bit-vector-p</a></li>
+            </ul>
+
+          </section>
+
+          <section id="misc-arrays">
+
+            <h1>
+              <a href="#misc-arrays" class="anchor">&#x2693;</a>
+              <a href="#">Operators</a>
+              <span class="separator"> » </span>
+              <a href="#functions">Functions</a>
+              <span class="separator"> » </span>
+              <a href="#arrays">Arrays</a>
+              <span class="separator"> » </span>
+              <a class="here">Misc</a>
+            </h1>
+
+            <ul>
+              <li><a href="#adjust-array">adjust-array</a></li>
+              <li><a href="#adjustable-array-p">adjustable-array-p</a></li>
+              <li>(setf <a href="#aref">aref</a>) / (setf <a href="#row-major-aref">row-major-aref</a>)</li>
+              <li><a href="#array-dimension">array-dimension</a></li>
+              <li><a href="#array-dimensions">array-dimensions</a></li>
+              <li><a href="#array-displacement">array-displacement</a></li>
+              <li><a href="#array-element-type">array-element-type</a></li>
+              <li><a href="#array-has-fill-pointer-p">array-has-fill-pointer-p</a></li>
+              <li><a href="#array-in-bounds-p">array-in-bounds-p</a></li>
+              <li><a href="#array-rank">array-rank</a></li>
+              <li><a href="#array-row-major-index">array-row-major-index</a></li>
+              <li><a href="#array-total-size">array-total-size</a></li>
+              <li><a href="#arrayp">arrayp</a></li>
+              <li><a href="#make-array">make-array</a></li>
+              <li><a href="#upgraded-array-element-type">upgraded-array-element-type</a></li>
+            </ul>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#arrays">
+              "<span>Arrays</span>" end.
+            </a>
+          </nav>
+
         </section>
 
         <section id="streams">
@@ -1464,10 +1613,7 @@
             <span class="separator"> » </span>
             <a href="#functions">Functions</a>
             <span class="separator"> » </span>
-            <span class="related-group">
-              <a class="here">Sequences</a>
-              <a href="#vectors">Vectors</a>
-            </span>
+            <a class="here">Sequences</a>
           </h1>
 
           <p>All <a href="#lists">proper lists</a> and <a href="#vectors">vectors</a> are sequences.</p>
@@ -1552,84 +1698,6 @@
           </ul>
         </section>
 
-        <section id="vectors">
-
-          <h1>
-            <a href="#vectors" class="anchor">&#x2693;</a>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <span class="related-group">
-              <a href="#sequences">Sequences</a>
-              <a class="here">Vectors</a>
-            </span>
-          </h1>
-
-          <p>Vectors are one-dimensional <a href="#arrays">arrays</a> (arrays of rank one). They are all <a href="#sequences">sequences</a>.</p>
-
-          <p>If a vector has a fill-pointer, then only its active elements (those before the fill-pointer) are considered part of the sequence.</p>
-
-          <ul>
-            <li>(setf <a href="#fill-pointer">fill-pointer</a>)</li>
-            <li><a href="#simple-vector-p">simple-vector-p</a></li>
-            <li>(setf <a href="#svref">svref</a>)</li>
-            <li><a href="#vector">vector</a></li>
-            <li><a href="#vector-push">vector-push</a> / <a href="#vector-push-extend">vector-push-extend</a> / <a href="#vector-pop">vector-pop</a></li>
-            <li><a href="#vectorp">vectorp</a></li>
-          </ul>
-        </section>
-
-        <section id="strings">
-
-          <h1>
-            <a href="#strings" class="anchor">&#x2693;</a>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <span class="related-group">
-              <a class="here">Strings</a>
-              <a href="#characters">Characters</a>
-            </span>
-          </h1>
-
-          <p>All strings are <a href="#vectors">vectors</a> and thus also <a href="#arrays">arrays</a> and <a href="#sequences">sequences</a>.</p>
-
-          <table>
-            <thead>
-              <tr>
-                <th>Potentially sharing</th>
-                <th>Always destructive</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="#string-downcase">string-downcase</a></td>
-                <td><a href="#nstring-downcase">nstring-downcase</a></td>
-              </tr>
-              <tr>
-                <td><a href="#string-upcase">string-upcase</a></td>
-                <td><a href="#nstring-upcase">nstring-upcase</a></td>
-              </tr>
-              <tr>
-                <td><a href="#string-capitalize">string-capitalize</a></td>
-                <td><a href="#nstring-capitalize">nstring-capitalize</a></td>
-              </tr>
-            </tbody>
-          </table>
-          <ul>
-            <li>(setf <a href="#char">char</a>) / (setf <a href="#schar">schar</a>)</li>
-            <li><a href="#make-string">make-string</a></li>
-            <li><a href="#simple-string-p">simple-string-p</a></li>
-            <li><a href="#string">string</a></li>
-            <li><a href="#string&lt;">string&lt;</a> / <a href="#string&lt;">string&lt;=</a> / <a href="#string/=">string/=</a> / <a href="#string=">string=</a> / <a href="#string&gt;=">string&gt;=</a> / <a href="#string&gt;">string&gt;</a></li>
-            <li><a href="#string-lessp">string-lessp</a> / <a href="#string-not-greaterp">string-not-greaterp</a> / <a href="#string-not-equal">string-not-equal</a> / <a href="#string-equal">string-equal</a> / <a href="#string-not-lessp">string-not-lessp</a> / <a href="#string-greaterp">string-greaterp</a></li>
-            <li><a href="#string-trim">string-trim</a> / <a href="#string-left-trim">string-left-trim</a> / <a href="#string-right-trim">string-right-trim</a></li>
-            <li><a href="#stringp">stringp</a></li>
-          </ul>
-        </section>
-
         <section id="characters">
 
           <h1>
@@ -1638,10 +1706,7 @@
             <span class="separator"> » </span>
             <a href="#functions">Functions</a>
             <span class="separator"> » </span>
-            <span class="related-group">
-              <a href="#strings">Strings</a>
-              <a class="here">Characters</a>
-            </span>
+            <a class="here">Characters</a>
           </h1>
 
           <ul>
