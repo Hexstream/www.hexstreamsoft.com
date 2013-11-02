@@ -604,9 +604,9 @@
                 <li>
                   <a href="#math" class="inlining-node">Math</a>
                   <ul class="inlined-nodes">
-                    <li><a href="#bits">Bits</a></li>
                     <li><a href="#rounding">Rounding</a></li>
                     <li><a href="#trigonometry">Trigonometry</a></li>
+                    <li><a href="#integers-as-bits">Integers as bits</a></li>
                     <li><a href="#misc-math">Misc</a></li>
                   </ul>
                 </li>
@@ -702,9 +702,9 @@
                 <span class="here-indicator-right"> </span>
               </h1>
               <ul>
-                <li><a href="#bits">Bits</a></li>
                 <li><a href="#rounding">Rounding</a></li>
                 <li><a href="#trigonometry">Trigonometry</a></li>
+                <li><a href="#integers-as-bits">Integers as bits</a></li>
                 <li><a href="#misc-math">Misc</a></li>
               </ul>
             </nav>
@@ -712,31 +712,6 @@
             <a href="#hash-tables" class="navbox-next">⬇</a>
 
           </nav>
-
-          <section id="bits">
-
-            <h1>
-              <a href="#bits" class="anchor">&#x2693;</a>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#math">Math</a>
-              <span class="separator"> » </span>
-              <a class="here">Bits</a>
-            </h1>
-
-            <ul>
-              <li><a href="#ash">ash</a></li>
-              <li><a href="#boole">boole</a></li>
-              <li><a href="#byte">byte</a> / <a href="#byte-position">byte-position</a> / <a href="#byte-size">byte-size</a></li>
-              <li><a href="#deposit-field">deposit-field</a></li>
-              <li><a href="#dpb">dpb</a> / (setf <a href="#ldb">ldb</a>) / <a href="#ldb-test">ldb-test</a></li>
-              <li><a href="#integer-length">integer-length</a></li>
-              <li><a href="#logand">logand</a> / <a href="#logandc1">logandc1</a> / <a href="#logandc2">logandc2</a> / <a href="#logbitp">logbitp</a> / <a href="#logcount">logcount</a> / <a href="#logeqv">logeqv</a> / <a href="#logior">logior</a> / <a href="#lognand">lognand</a> / <a href="#lognor">lognor</a> / <a href="#lognot">lognot</a> / <a href="#logorc1">logorc1</a> / <a href="#logorc2">logorc2</a> / <a href="#logtest">logtest</a> / <a href="#logxor">logxor</a></li>
-              <li>(setf <a href="#mask-field">mask-field</a>)</li>
-            </ul>
-          </section>
 
           <section id="rounding">
 
@@ -821,6 +796,33 @@
               </tbody>
             </table>
 
+          </section>
+
+          <section id="integers-as-bits">
+
+            <h1>
+              <a href="#integers-as-bits" class="anchor">&#x2693;</a>
+              <a href="#">Operators</a>
+              <span class="separator"> » </span>
+              <a href="#functions">Functions</a>
+              <span class="separator"> » </span>
+              <a href="#math">Math</a>
+              <span class="separator"> » </span>
+              <a class="here">Integers as bits</a>
+            </h1>
+
+            <p>See also <a href="#bit-arrays">bit arrays</a>.</p>
+
+            <ul>
+              <li><a href="#ash">ash</a></li>
+              <li><a href="#boole">boole</a></li>
+              <li><a href="#byte">byte</a> / <a href="#byte-position">byte-position</a> / <a href="#byte-size">byte-size</a></li>
+              <li><a href="#deposit-field">deposit-field</a></li>
+              <li><a href="#dpb">dpb</a> / (setf <a href="#ldb">ldb</a>) / <a href="#ldb-test">ldb-test</a></li>
+              <li><a href="#integer-length">integer-length</a></li>
+              <li><a href="#logand">logand</a> / <a href="#logandc1">logandc1</a> / <a href="#logandc2">logandc2</a> / <a href="#logbitp">logbitp</a> / <a href="#logcount">logcount</a> / <a href="#logeqv">logeqv</a> / <a href="#logior">logior</a> / <a href="#lognand">lognand</a> / <a href="#lognor">lognor</a> / <a href="#lognot">lognot</a> / <a href="#logorc1">logorc1</a> / <a href="#logorc2">logorc2</a> / <a href="#logtest">logtest</a> / <a href="#logxor">logxor</a></li>
+              <li>(setf <a href="#mask-field">mask-field</a>)</li>
+            </ul>
           </section>
 
           <section id="misc-math">
@@ -1021,6 +1023,8 @@
               <span class="separator"> » </span>
               <a class="here">Bit arrays</a>
             </h1>
+
+            <p>See also <a href="#integers-as-bits">integers as bits</a>.</p>
 
             <p>All <a href="#vectors">vectors</a> with an element-type of bit are bit-vectors, which is one of the standard specialized array types.</p>
 
