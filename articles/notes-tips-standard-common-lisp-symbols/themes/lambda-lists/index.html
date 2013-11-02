@@ -54,7 +54,10 @@
           </h1>
           <ul>
             <li>
-              <a href="#kinds">Kinds</a>
+              <a href="#kinds-keywords-matrix">Matrix</a>
+            </li>
+            <li>
+              <a href="#kinds-hierarchy">Kinds hierarchy</a>
               <span class="item-count">(<span></span>)</span>
             </li>
             <li>
@@ -161,13 +164,13 @@
         <p class="description">TODO</p>
       </header>
 
-      <section id="kinds">
+      <section id="kinds-keywords-matrix">
 
         <h1>
-          <a href="#kinds" class="anchor">&#x2693;</a>
+          <a href="#kinds-keywords-matrix" class="anchor">&#x2693;</a>
           <a href="#">Lambda lists</a>
           <span class="separator"> » </span>
-          <a class="here">Kinds</a>
+          <a class="here">Kinds and keywords matrix</a>
         </h1>
 
         <table id="summary-table">
@@ -330,119 +333,18 @@
           </tbody>
         </table>
 
-        <table id="flat-comparisons-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Base</th>
-              <th>Adjustments</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>ordinary</th>
-              <td>∅</td>
-              <td>
-                <ul>
-                  <li>✔ required</li>
-                  <li>✔ &amp;optional</li>
-                  <li>✔ &amp;rest</li>
-                  <li>✔ &amp;key</li>
-                  <li>✔ &amp;aux</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>generic function</th>
-              <td>ordinary</td>
-              <td>
-                <ul>
-                  <li>✘ &amp;aux</li>
-                  <li>⇄ Default: ∅</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>specialized</th>
-              <td>ordinary</td>
-              <td>
-                <ul>
-                  <li>⇄ Specializer</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>destructuring</th>
-              <td>ordinary</td>
-              <td>
-                <ul>
-                  <li>✔ &amp;whole</li>
-                  <li>✔ &amp;body</li>
-                  <li>⇄ Recursive</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>macro</th>
-              <td>destructuring</td>
-              <td>
-                <ul>
-                  <li>✔ &amp;environment</li>
-                  <li>⇄ Recurse: destructuring</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>boa</th>
-              <td>ordinary</td>
-              <td>
-                <ul>
-                  <li>∅ No syntactic changes</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>defsetf</th>
-              <td>ordinary</td>
-              <td>
-                <ul>
-                  <li>✘ &amp;aux</li>
-                  <li>✔ &amp;environment</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>deftype</th>
-              <td>macro</td>
-              <td>
-                <ul>
-                  <li>⇄ Default default: *</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>define-modify-macro</th>
-              <td>∅</td>
-              <td>
-                <ul>
-                  <li>✔ &amp;optional</li>
-                  <li>✔ &amp;rest</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>define-method-combination<br />arguments</th>
-              <td>ordinary</td>
-              <td>
-                <ul>
-                  <li>✔ &amp;whole</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      </section>
 
-        <table id="tree-comparisons-table">
+      <section id="kinds-hierarchy">
+
+        <h1>
+          <a href="#kinds-hierarchy" class="anchor">&#x2693;</a>
+          <a href="#">Lambda lists</a>
+          <span class="separator"> » </span>
+          <a class="here">Kinds hierarchy</a>
+        </h1>
+
+        <table id="kinds-hierarchy-table">
           <tbody>
             <tr>
               <td rowspan="6">
@@ -530,6 +432,17 @@
             </tr>
           </tbody>
         </table>
+
+      </section>
+
+      <section id="keywords">
+
+        <h1>
+          <a href="#keywords" class="anchor">&#x2693;</a>
+          <a href="#">Lambda lists</a>
+          <span class="separator"> » </span>
+          <a class="here">Keywords</a>
+        </h1>
 
         <table id="keywords-table">
           <thead>
