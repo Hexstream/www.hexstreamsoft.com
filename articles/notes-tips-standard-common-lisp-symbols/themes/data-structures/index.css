@@ -29,6 +29,11 @@ table th.horizontal-grouping-header a.here {
     opacity: 1;
 }
 
+table th.horizontal-grouping-header small {
+    font-size: small;
+    font-weight: normal;
+}
+
 table th ul li + li {
     margin-top: 0.2em;
 }
