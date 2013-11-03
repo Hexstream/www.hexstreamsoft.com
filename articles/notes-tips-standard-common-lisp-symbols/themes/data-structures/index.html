@@ -178,6 +178,30 @@
             <a class="here">Concrete</a>
           </h1>
 
+          <nav class="section-nav">
+
+            <nav class="navbox" id="intentional_navbox">
+              <h1>
+                <a class="here">Concrete</a>
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </h1>
+              <ul>
+                <li><a href="#cons">cons</a></li>
+                <li><a href="#hash-table">hash-table</a></li>
+                <li><a href="#array">array</a></li>
+                <li><a href="#vector">vector</a></li>
+                <li><a href="#string">string</a></li>
+                <li><a href="#random-state">random-state</a></li>
+                <li><a href="#readtable">readtable</a></li>
+                <li><a href="#sequence">sequence</a></li>
+              </ul>
+            </nav>
+
+            <a href="#intentional" class="navbox-next">⬇</a>
+
+          </nav>
+
           <table>
             <thead>
               <tr>
@@ -520,6 +544,34 @@
 
         <section id="intentional">
 
+          <nav class="section-nav">
+
+            <nav class="ancestors-nav">
+
+              <a href="#concrete" class="navbox-previous">⬆</a>
+
+              <nav class="navbox" id="intentional_navbox">
+                <h1>
+                  <a class="here">Intentional</a>
+                  <span class="here-indicator-left"> </span>
+                  <span class="here-indicator-right"> </span>
+                </h1>
+                <ul>
+                  <li><a href="#lists">Lists</a></li>
+                  <li><a href="#alists">Alists</a></li>
+                  <li><a href="#plists">Plists</a></li>
+                  <li><a href="#trees">Trees</a></li>
+                  <li><a href="#sets">Sets</a></li>
+                  <li><a href="#bits">Bits</a></li>
+                </ul>
+              </nav>
+
+              <a href="#user-defined" class="navbox-next">⬇</a>
+
+            </nav>
+
+          </nav>
+
           <h1>
             <a href="#intentional" class="anchor">&#x2693;</a>
             <a href="#">Data structures</a>
@@ -529,14 +581,127 @@
             <a class="here">Intentional</a>
           </h1>
 
-          <ul>
-            <li>lists</li>
-            <li>alists</li>
-            <li>plists</li>
-            <li>trees</li>
-            <li>sets</li>
-            <li>bits</li>
-          </ul>
+          <section id="lists">
+
+            <h1>
+              <a href="#lists" class="anchor">&#x2693;</a>
+              <a href="#">Data structures</a>
+              <span class="separator"> » </span>
+              <a href="#built-in">Built-in</a>
+              <span class="separator"> » </span>
+              <a href="#intentional">Intentional</a>
+              <span class="separator"> » </span>
+              <a class="here">Lists</a>
+            </h1>
+
+            <ul>
+              <li><a href="../../namespaces/operators/#lists">List functions</a></li>
+              <li><a href="../../#list">list</a> (<a href="../../namespaces/type-specifiers/#misc">system class</a>)</li>
+              <li><a href="../../#null">null</a> (<a href="../../namespaces/type-specifiers/#misc">system class</a>)</li>
+            </ul>
+
+          </section>
+
+          <section id="alists">
+
+            <h1>
+              <a href="#alists" class="anchor">&#x2693;</a>
+              <a href="#">Data structures</a>
+              <span class="separator"> » </span>
+              <a href="#built-in">Built-in</a>
+              <span class="separator"> » </span>
+              <a href="#intentional">Intentional</a>
+              <span class="separator"> » </span>
+              <a class="here">Alists</a>
+            </h1>
+
+            <ul>
+              <li><a href="../../namespaces/operators/#alists">Alist functions</a></li>
+            </ul>
+
+          </section>
+
+          <section id="plists">
+
+            <h1>
+              <a href="#plists" class="anchor">&#x2693;</a>
+              <a href="#">Data structures</a>
+              <span class="separator"> » </span>
+              <a href="#built-in">Built-in</a>
+              <span class="separator"> » </span>
+              <a href="#intentional">Intentional</a>
+              <span class="separator"> » </span>
+              <a class="here">Plists</a>
+            </h1>
+
+            <ul>
+              <li><a href="../../namespaces/operators/#plists">Plist functions</a></li>
+            </ul>
+
+          </section>
+
+          <section id="trees">
+
+            <h1>
+              <a href="#trees" class="anchor">&#x2693;</a>
+              <a href="#">Data structures</a>
+              <span class="separator"> » </span>
+              <a href="#built-in">Built-in</a>
+              <span class="separator"> » </span>
+              <a href="#intentional">Intentional</a>
+              <span class="separator"> » </span>
+              <a class="here">Trees</a>
+            </h1>
+
+            <ul>
+              <li><a href="../../namespaces/operators/#trees">Tree functions</a></li>
+            </ul>
+
+          </section>
+
+          <section id="sets">
+
+            <h1>
+              <a href="#sets" class="anchor">&#x2693;</a>
+              <a href="#">Data structures</a>
+              <span class="separator"> » </span>
+              <a href="#built-in">Built-in</a>
+              <span class="separator"> » </span>
+              <a href="#intentional">Intentional</a>
+              <span class="separator"> » </span>
+              <a class="here">Sets</a>
+            </h1>
+
+            <ul>
+              <li><a href="../../namespaces/operators/#sets">Set functions</a></li>
+            </ul>
+
+          </section>
+
+          <section id="bits">
+
+            <h1>
+              <a href="#bits" class="anchor">&#x2693;</a>
+              <a href="#">Data structures</a>
+              <span class="separator"> » </span>
+              <a href="#built-in">Built-in</a>
+              <span class="separator"> » </span>
+              <a href="#intentional">Intentional</a>
+              <span class="separator"> » </span>
+              <a class="here">Bits</a>
+            </h1>
+
+            <ul>
+              <li><a href="../../namespaces/operators/#integers-as-bits">Integers-as-bits</a> functions</li>
+            </ul>
+
+          </section>
+
+          <nav class="end-of-section-indicator">
+            <a href="#intentional">
+              "<span>Intentional</span>" end.
+            </a>
+          </nav>
 
         </section>
 
