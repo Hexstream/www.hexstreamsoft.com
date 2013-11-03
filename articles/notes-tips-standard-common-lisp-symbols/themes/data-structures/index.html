@@ -50,14 +50,8 @@
             <span class="here-indicator-right"> </span>
           </h1>
           <ul>
-            <li>
-              <a href="#built-in" class="inlining-node">Built-in</a>
-              <ul class="inlined-nodes">
-                <li><a href="#concrete">Concrete</a></li>
-                <li><a href="#intentional">Intentional</a></li>
-              </ul>
-            </li>
-            <li><a href="#user-defined">User-defined</a></li>
+            <li><a href="#concrete">Concrete</a></li>
+            <li><a href="#intentional">Intentional</a></li>
           </ul>
         </nav>
 
@@ -158,573 +152,525 @@
         <p class="description">TODO</p>
       </header>
 
-      <section id="built-in">
+      <section id="concrete">
 
         <h1>
-          <a href="#built-in" class="anchor">&#x2693;</a>
+          <a href="#concrete" class="anchor">&#x2693;</a>
           <a href="#">Data structures</a>
           <span class="separator"> » </span>
-          <a class="here">Built-in</a>
+          <a class="here">Concrete</a>
         </h1>
 
-        <section id="concrete">
+        <nav class="section-nav">
 
-          <h1>
-            <a href="#concrete" class="anchor">&#x2693;</a>
-            <a href="#">Data structures</a>
-            <span class="separator"> » </span>
-            <a href="#built-in">Built-in</a>
-            <span class="separator"> » </span>
-            <a class="here">Concrete</a>
-          </h1>
+          <nav class="navbox" id="intentional_navbox">
+            <h1>
+              <a class="here">Concrete</a>
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </h1>
+            <ul>
+              <li><a href="#cons">cons</a></li>
+              <li><a href="#hash-table">hash-table</a></li>
+              <li><a href="#array">array</a></li>
+              <li><a href="#vector">vector</a></li>
+              <li><a href="#string">string</a></li>
+              <li><a href="#random-state">random-state</a></li>
+              <li><a href="#readtable">readtable</a></li>
+              <li><a href="#sequence">sequence</a></li>
+            </ul>
+          </nav>
 
-          <nav class="section-nav">
+          <a href="#intentional" class="navbox-next">⬇</a>
+
+        </nav>
+
+        <table>
+          <thead>
+            <tr>
+              <th class="horizontal-grouping-header" colspan="4">Superclass ← System class</th>
+            </tr>
+            <tr>
+              <th>Constructors</th>
+              <th>Slot readers</th>
+              <th>Predicates</th>
+              <th>See sections, symbols</th>
+            </tr>
+          </thead>
+          <tbody id="cons">
+            <tr>
+              <th class="horizontal-grouping-header" colspan="4">
+                <a href="../../#sequence">sequence</a>
+                <span class="separator"> ← </span>
+                <a href="../../#list">list</a>
+                <span class="separator"> ← </span>
+                <a href="../../#cons" class="here">cons</a>
+              </th>
+            </tr>
+            <tr>
+              <td><a href="../../#cons">cons</a></td>
+              <td>
+                <ul>
+                  <li>(setf <a href="../../#car">car</a>)</li>
+                  <li>(setf <a href="../../#cdr">cdr</a>)</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="../../#consp">consp</a></li>
+                  <li><a href="../../#atom">atom</a></li>
+                </ul>
+              </td>
+              <td>
+                <a href="../../namespaces/operators/#conses-specific">Conses-specific functions</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody id="hash-table">
+            <tr>
+              <th class="horizontal-grouping-header" colspan="4">
+                <a href="../../#hash-table" class="here">hash-table</a>
+              </th>
+            </tr>
+            <tr>
+              <td><a href="../../#make-hash-table">make-hash-table</a></td>
+              <td>
+                <ul>
+                  <li>
+                    [storage]
+                    <ul>
+                      <li>(setf <a href="../../#gethash">gethash</a>)</li>
+                    </ul>
+                  </li>
+                  <li><a href="../../#hash-table-test">hash-table-test</a></li>
+                  <li><a href="../../#hash-table-rehash-size">hash-table-rehash-size</a></li>
+                  <li><a href="../../#hash-table-rehash-threshold">hash-table-rehash-threshold</a></li>
+                  <li><a href="../../#hash-table-count">hash-table-count</a></li>
+                  <li><a href="../../#hash-table-size">hash-table-size</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="../../#hash-table-p">hash-table-p</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <a href="../../namespaces/operators/#hash-tables">Hash table functions</a>
+                    <ul>
+                      <li><a href="../../#remhash">remhash</a></li>
+                      <li><a href="../../#clrhash">clrhash</a></li>
+                      <li><a href="../../#maphash">maphash</a></li>
+                      <li><a href="../../#sxhash">sxhash</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+          <tbody id="array">
+            <tr>
+              <th class="horizontal-grouping-header" colspan="4">
+                <a href="../../#array" class="here">array</a>
+              </th>
+            </tr>
+            <tr>
+              <td><a href="../../#make-array">make-array</a></td>
+              <td>
+                <ul>
+                  <li>
+                    [storage]
+                    <ul>
+                      <li>(setf <a href="../../#aref">aref</a>)</li>
+                      <li>(setf <a href="../../#row-major-aref">row-major-aref</a>)</li>
+                    </ul>
+                  </li>
+                  <li><a href="../../#array-element-type">array-element-type</a></li>
+                  <li>
+                    <a href="../../#array-dimensions">array-dimensions</a>
+                    <ul>
+                      <li><a href="../../#array-dimension">array-dimension</a></li>
+                      <li><a href="../../#array-rank">array-rank</a></li>
+                      <li><a href="../../#array-total-size">array-total-size</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="../../#array-displacement">array-displacement</a> (2 values)</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="../../#arrayp">arrayp</a></li>
+                  <li><a href="../../#adjustable-array-p">adjustable-array-p</a></li>
+                  <li><a href="../../#array-has-fill-pointer-p">array-has-fill-pointer-p</a></li>
+                  <li><a href="../../#array-in-bounds-p">array-in-bounds-p</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <a href="../../namespaces/operators/#arrays">Array functions</a>
+                    <ul>
+                      <li><a href="../../#adjust-array">adjust-array</a></li>
+                      <li><a href="../../#array-row-major-index">array-row-major-index</a></li>
+                      <li><a href="../../#upgraded-array-element-type">upgraded-array-element-type</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+          <tbody id="vector">
+            <tr>
+              <th class="horizontal-grouping-header" colspan="4">
+                <a href="../../#sequence">sequence</a>
+                <span class="separator"> ← </span>
+                <a href="../../#array">array</a>
+                <span class="separator"> ← </span>
+                <a href="../../#array" class="here">vector</a>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li><a href="../../#vector">vector</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    [storage]
+                    <ul>
+                      <li>(setf <a href="../../#svref">svref</a>)</li>
+                    </ul>
+                  </li>
+                  <li>(setf <a href="../../#fill-pointer">fill-pointer</a>)</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="../../#vectorp">vectorp</a></li>
+                  <li><a href="../../#simple-vector-p">simple-vector-p</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <a href="../../namespaces/operators/#vectors">Vector functions</a>
+                    <ul>
+                      <li><a href="../../#vector-push">vector-push</a></li>
+                      <li><a href="../../#vector-push-extend">vector-push-extend</a></li>
+                      <li><a href="../../#vector-pop">vector-pop</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+          <tbody id="string">
+            <tr>
+              <th class="horizontal-grouping-header" colspan="4">
+                <a href="../../#sequence">sequence</a>
+                <span class="separator"> ← </span>
+                <a href="../../#array">array</a>
+                <span class="separator"> ← </span>
+                <a href="../../#vector">vector</a>
+                <span class="separator"> ← </span>
+                <a href="../../#string" class="here">string</a>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li><a href="../../#string">string</a></li>
+                  <li><a href="../../#make-string">make-string</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    [storage]
+                    <ul>
+                      <li>(setf <a href="../../#char">char</a>)</li>
+                      <li>(setf <a href="../../#char">schar</a>)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="../../#stringp">stringp</a></li>
+                  <li><a href="../../#simple-string-p">simple-string-p</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <a href="../../namespaces/operators/#strings">String functions</a>
+                    <ul>
+                      <li>Comparisons</li>
+                      <li>Case modification</li>
+                      <li>Trimming</li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+          <tbody id="random-state">
+            <tr>
+              <th class="horizontal-grouping-header" colspan="4">
+                <a href="../../#random-state" class="here">random-state</a>
+              </th>
+            </tr>
+            <tr>
+              <td><a href="../../#make-random-state">make-random-state</a></td>
+              <td></td>
+              <td>
+                <ul>
+                  <li><a href="../../#random-state-p">random-state-p</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="../../#random">random</a></li>
+                  <li><a href="../../#*random-state*">*random-state*</a></li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+          <tbody id="readtable">
+            <tr>
+              <th class="horizontal-grouping-header" colspan="4">
+                <a href="../../#readtable" class="here">readtable</a>
+              </th>
+            </tr>
+            <tr>
+              <td><a href="../../#copy-readtable">copy-readtable</a></td>
+              <td>
+                <ul>
+                  <li>(setf <a href="../../#readtable-case">readtable-case</a>)</li>
+                  <li>
+                    [macro chars storage]
+                    <ul>
+                      <li><a href="../../#get-macro-character">get-macro-character</a></li>
+                      <li><a href="../../#set-macro-character">set-macro-character</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    [dispatch macro chars storage]
+                    <ul>
+                      <li><a href="../../#make-dispatch-macro-character">make-dispatch-macro-character</a></li>
+                      <li><a href="../../#get-dispatch-macro-character">get-dispatch-macro-character</a></li>
+                      <li><a href="../../#set-dispatch-macro-character">set-dispatch-macro-character</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    [char syntaxes storage]
+                    <ul>
+                      <li><a href="../../#set-syntax-from-char">set-syntax-from-char</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a href="../../#readtablep">readtablep</a></li>
+                </ul>
+              </td>
+              <td>
+                <a href="../../namespaces/operators/#readtables">Readtable functions</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody id="sequence">
+            <tr>
+              <th class="horizontal-grouping-header" colspan="4">
+                <a href="../../#sequence" class="here">sequence</a>
+                <small>(Not really a "concrete data structure" but rather a "protocol".)</small>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li><a href="../../#make-sequence">make-sequence</a></li>
+                  <li><a href="../../#copy-seq">copy-seq</a></li>
+                  <li><a href="../../#map">map</a></li>
+                  <li><a href="../../#concatenate">concatenate</a></li>
+                  <li><a href="../../#subseq">subseq</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    [storage]
+                    <ul>
+                      <li>(setf <a href="../../#elt">elt</a>)</li>
+                    </ul>
+                  </li>
+                  <li><a href="../../#length">length</a> (not a slot for lists)</li>
+                </ul>
+              </td>
+              <td></td>
+              <td>
+                <ul>
+                  <li>
+                    <a href="../../namespaces/operators/#sequences">Sequence functions</a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+      <section id="intentional">
+
+        <nav class="section-nav">
+
+          <nav class="ancestors-nav">
+
+            <a href="#concrete" class="navbox-previous">⬆</a>
 
             <nav class="navbox" id="intentional_navbox">
               <h1>
-                <a class="here">Concrete</a>
+                <a class="here">Intentional</a>
                 <span class="here-indicator-left"> </span>
                 <span class="here-indicator-right"> </span>
               </h1>
               <ul>
-                <li><a href="#cons">cons</a></li>
-                <li><a href="#hash-table">hash-table</a></li>
-                <li><a href="#array">array</a></li>
-                <li><a href="#vector">vector</a></li>
-                <li><a href="#string">string</a></li>
-                <li><a href="#random-state">random-state</a></li>
-                <li><a href="#readtable">readtable</a></li>
-                <li><a href="#sequence">sequence</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#alists">Alists</a></li>
+                <li><a href="#plists">Plists</a></li>
+                <li><a href="#trees">Trees</a></li>
+                <li><a href="#sets">Sets</a></li>
+                <li><a href="#bits">Bits</a></li>
               </ul>
             </nav>
 
-            <a href="#intentional" class="navbox-next">⬇</a>
+            <a href="#user-defined" class="navbox-next">⬇</a>
 
           </nav>
 
-          <table>
-            <thead>
-              <tr>
-                <th class="horizontal-grouping-header" colspan="4">Superclass ← System class</th>
-              </tr>
-              <tr>
-                <th>Constructors</th>
-                <th>Slot readers</th>
-                <th>Predicates</th>
-                <th>See sections, symbols</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th class="horizontal-grouping-header" colspan="4">
-                  <a href="../../#sequence">sequence</a>
-                  <span class="separator"> ← </span>
-                  <a href="../../#list">list</a>
-                  <span class="separator"> ← </span>
-                  <a href="../../#cons" class="here">cons</a>
-                </th>
-              </tr>
-              <tr>
-                <td><a href="../../#cons">cons</a></td>
-                <td>
-                  <ul>
-                    <li>(setf <a href="../../#car">car</a>)</li>
-                    <li>(setf <a href="../../#cdr">cdr</a>)</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a href="../../#consp">consp</a></li>
-                    <li><a href="../../#atom">atom</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <a href="../../namespaces/operators/#conses-specific">Conses-specific functions</a>
-                </td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="horizontal-grouping-header" colspan="4">
-                  <a href="../../#hash-table" class="here">hash-table</a>
-                </th>
-              </tr>
-              <tr>
-                <td><a href="../../#make-hash-table">make-hash-table</a></td>
-                <td>
-                  <ul>
-                    <li>
-                      [storage]
-                      <ul>
-                        <li>(setf <a href="../../#gethash">gethash</a>)</li>
-                      </ul>
-                    </li>
-                    <li><a href="../../#hash-table-test">hash-table-test</a></li>
-                    <li><a href="../../#hash-table-rehash-size">hash-table-rehash-size</a></li>
-                    <li><a href="../../#hash-table-rehash-threshold">hash-table-rehash-threshold</a></li>
-                    <li><a href="../../#hash-table-count">hash-table-count</a></li>
-                    <li><a href="../../#hash-table-size">hash-table-size</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a href="../../#hash-table-p">hash-table-p</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      <a href="../../namespaces/operators/#hash-tables">Hash table functions</a>
-                      <ul>
-                        <li><a href="../../#remhash">remhash</a></li>
-                        <li><a href="../../#clrhash">clrhash</a></li>
-                        <li><a href="../../#maphash">maphash</a></li>
-                        <li><a href="../../#sxhash">sxhash</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="horizontal-grouping-header" colspan="4">
-                  <a href="../../#array" class="here">array</a>
-                </th>
-              </tr>
-              <tr>
-                <td><a href="../../#make-array">make-array</a></td>
-                <td>
-                  <ul>
-                    <li>
-                      [storage]
-                      <ul>
-                        <li>(setf <a href="../../#aref">aref</a>)</li>
-                        <li>(setf <a href="../../#row-major-aref">row-major-aref</a>)</li>
-                      </ul>
-                    </li>
-                    <li><a href="../../#array-element-type">array-element-type</a></li>
-                    <li>
-                      <a href="../../#array-dimensions">array-dimensions</a>
-                      <ul>
-                        <li><a href="../../#array-dimension">array-dimension</a></li>
-                        <li><a href="../../#array-rank">array-rank</a></li>
-                        <li><a href="../../#array-total-size">array-total-size</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="../../#array-displacement">array-displacement</a> (2 values)</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a href="../../#arrayp">arrayp</a></li>
-                    <li><a href="../../#adjustable-array-p">adjustable-array-p</a></li>
-                    <li><a href="../../#array-has-fill-pointer-p">array-has-fill-pointer-p</a></li>
-                    <li><a href="../../#array-in-bounds-p">array-in-bounds-p</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      <a href="../../namespaces/operators/#arrays">Array functions</a>
-                      <ul>
-                        <li><a href="../../#adjust-array">adjust-array</a></li>
-                        <li><a href="../../#array-row-major-index">array-row-major-index</a></li>
-                        <li><a href="../../#upgraded-array-element-type">upgraded-array-element-type</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="horizontal-grouping-header" colspan="4">
-                  <a href="../../#sequence">sequence</a>
-                  <span class="separator"> ← </span>
-                  <a href="../../#array">array</a>
-                  <span class="separator"> ← </span>
-                  <a href="../../#array" class="here">vector</a>
-                </th>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li><a href="../../#vector">vector</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      [storage]
-                      <ul>
-                        <li>(setf <a href="../../#svref">svref</a>)</li>
-                      </ul>
-                    </li>
-                    <li>(setf <a href="../../#fill-pointer">fill-pointer</a>)</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a href="../../#vectorp">vectorp</a></li>
-                    <li><a href="../../#simple-vector-p">simple-vector-p</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      <a href="../../namespaces/operators/#vectors">Vector functions</a>
-                      <ul>
-                        <li><a href="../../#vector-push">vector-push</a></li>
-                        <li><a href="../../#vector-push-extend">vector-push-extend</a></li>
-                        <li><a href="../../#vector-pop">vector-pop</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="horizontal-grouping-header" colspan="4">
-                  <a href="../../#sequence">sequence</a>
-                  <span class="separator"> ← </span>
-                  <a href="../../#array">array</a>
-                  <span class="separator"> ← </span>
-                  <a href="../../#vector">vector</a>
-                  <span class="separator"> ← </span>
-                  <a href="../../#string" class="here">string</a>
-                </th>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li><a href="../../#string">string</a></li>
-                    <li><a href="../../#make-string">make-string</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      [storage]
-                      <ul>
-                        <li>(setf <a href="../../#char">char</a>)</li>
-                        <li>(setf <a href="../../#char">schar</a>)</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a href="../../#stringp">stringp</a></li>
-                    <li><a href="../../#simple-string-p">simple-string-p</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      <a href="../../namespaces/operators/#strings">String functions</a>
-                      <ul>
-                        <li>Comparisons</li>
-                        <li>Case modification</li>
-                        <li>Trimming</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="horizontal-grouping-header" colspan="4">
-                  <a href="../../#random-state" class="here">random-state</a>
-                </th>
-              </tr>
-              <tr>
-                <td><a href="../../#make-random-state">make-random-state</a></td>
-                <td></td>
-                <td>
-                  <ul>
-                    <li><a href="../../#random-state-p">random-state-p</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a href="../../#random">random</a></li>
-                    <li><a href="../../#*random-state*">*random-state*</a></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="horizontal-grouping-header" colspan="4">
-                  <a href="../../#readtable" class="here">readtable</a>
-                </th>
-              </tr>
-              <tr>
-                <td><a href="../../#copy-readtable">copy-readtable</a></td>
-                <td>
-                  <ul>
-                    <li>(setf <a href="../../#readtable-case">readtable-case</a>)</li>
-                    <li>
-                      [macro chars storage]
-                      <ul>
-                        <li><a href="../../#get-macro-character">get-macro-character</a></li>
-                        <li><a href="../../#set-macro-character">set-macro-character</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      [dispatch macro chars storage]
-                      <ul>
-                        <li><a href="../../#make-dispatch-macro-character">make-dispatch-macro-character</a></li>
-                        <li><a href="../../#get-dispatch-macro-character">get-dispatch-macro-character</a></li>
-                        <li><a href="../../#set-dispatch-macro-character">set-dispatch-macro-character</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      [char syntaxes storage]
-                      <ul>
-                        <li><a href="../../#set-syntax-from-char">set-syntax-from-char</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a href="../../#readtablep">readtablep</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <a href="../../namespaces/operators/#readtables">Readtable functions</a>
-                </td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="horizontal-grouping-header" colspan="4">
-                  <a href="../../#sequence" class="here">sequence</a>
-                  <small>(Not really a "concrete data structure" but rather a "protocol".)</small>
-                </th>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li><a href="../../#make-sequence">make-sequence</a></li>
-                    <li><a href="../../#copy-seq">copy-seq</a></li>
-                    <li><a href="../../#map">map</a></li>
-                    <li><a href="../../#concatenate">concatenate</a></li>
-                    <li><a href="../../#subseq">subseq</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      [storage]
-                      <ul>
-                        <li>(setf <a href="../../#elt">elt</a>)</li>
-                      </ul>
-                    </li>
-                    <li><a href="../../#length">length</a> (not a slot for lists)</li>
-                  </ul>
-                </td>
-                <td></td>
-                <td>
-                  <ul>
-                    <li>
-                      <a href="../../namespaces/operators/#sequences">Sequence functions</a>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        </nav>
+
+        <h1>
+          <a href="#intentional" class="anchor">&#x2693;</a>
+          <a href="#">Data structures</a>
+          <span class="separator"> » </span>
+          <a class="here">Intentional</a>
+        </h1>
+
+        <section id="lists">
+
+          <h1>
+            <a href="#lists" class="anchor">&#x2693;</a>
+            <a href="#">Data structures</a>
+            <span class="separator"> » </span>
+            <a href="#intentional">Intentional</a>
+            <span class="separator"> » </span>
+            <a class="here">Lists</a>
+          </h1>
+
+          <ul>
+            <li><a href="../../namespaces/operators/#lists">List functions</a></li>
+            <li><a href="../../#list">list</a> (<a href="../../namespaces/type-specifiers/#misc">system class</a>)</li>
+            <li><a href="../../#null">null</a> (<a href="../../namespaces/type-specifiers/#misc">system class</a>)</li>
+          </ul>
 
         </section>
 
-        <section id="intentional">
-
-          <nav class="section-nav">
-
-            <nav class="ancestors-nav">
-
-              <a href="#concrete" class="navbox-previous">⬆</a>
-
-              <nav class="navbox" id="intentional_navbox">
-                <h1>
-                  <a class="here">Intentional</a>
-                  <span class="here-indicator-left"> </span>
-                  <span class="here-indicator-right"> </span>
-                </h1>
-                <ul>
-                  <li><a href="#lists">Lists</a></li>
-                  <li><a href="#alists">Alists</a></li>
-                  <li><a href="#plists">Plists</a></li>
-                  <li><a href="#trees">Trees</a></li>
-                  <li><a href="#sets">Sets</a></li>
-                  <li><a href="#bits">Bits</a></li>
-                </ul>
-              </nav>
-
-              <a href="#user-defined" class="navbox-next">⬇</a>
-
-            </nav>
-
-          </nav>
+        <section id="alists">
 
           <h1>
-            <a href="#intentional" class="anchor">&#x2693;</a>
+            <a href="#alists" class="anchor">&#x2693;</a>
             <a href="#">Data structures</a>
             <span class="separator"> » </span>
-            <a href="#built-in">Built-in</a>
+            <a href="#intentional">Intentional</a>
             <span class="separator"> » </span>
-            <a class="here">Intentional</a>
+            <a class="here">Alists</a>
           </h1>
 
-          <section id="lists">
+          <ul>
+            <li><a href="../../namespaces/operators/#alists">Alist functions</a></li>
+          </ul>
 
-            <h1>
-              <a href="#lists" class="anchor">&#x2693;</a>
-              <a href="#">Data structures</a>
-              <span class="separator"> » </span>
-              <a href="#built-in">Built-in</a>
-              <span class="separator"> » </span>
-              <a href="#intentional">Intentional</a>
-              <span class="separator"> » </span>
-              <a class="here">Lists</a>
-            </h1>
+        </section>
 
-            <ul>
-              <li><a href="../../namespaces/operators/#lists">List functions</a></li>
-              <li><a href="../../#list">list</a> (<a href="../../namespaces/type-specifiers/#misc">system class</a>)</li>
-              <li><a href="../../#null">null</a> (<a href="../../namespaces/type-specifiers/#misc">system class</a>)</li>
-            </ul>
+        <section id="plists">
 
-          </section>
+          <h1>
+            <a href="#plists" class="anchor">&#x2693;</a>
+            <a href="#">Data structures</a>
+            <span class="separator"> » </span>
+            <a href="#intentional">Intentional</a>
+            <span class="separator"> » </span>
+            <a class="here">Plists</a>
+          </h1>
 
-          <section id="alists">
+          <ul>
+            <li><a href="../../namespaces/operators/#plists">Plist functions</a></li>
+          </ul>
 
-            <h1>
-              <a href="#alists" class="anchor">&#x2693;</a>
-              <a href="#">Data structures</a>
-              <span class="separator"> » </span>
-              <a href="#built-in">Built-in</a>
-              <span class="separator"> » </span>
-              <a href="#intentional">Intentional</a>
-              <span class="separator"> » </span>
-              <a class="here">Alists</a>
-            </h1>
+        </section>
 
-            <ul>
-              <li><a href="../../namespaces/operators/#alists">Alist functions</a></li>
-            </ul>
+        <section id="trees">
 
-          </section>
+          <h1>
+            <a href="#trees" class="anchor">&#x2693;</a>
+            <a href="#">Data structures</a>
+            <span class="separator"> » </span>
+            <a href="#intentional">Intentional</a>
+            <span class="separator"> » </span>
+            <a class="here">Trees</a>
+          </h1>
 
-          <section id="plists">
+          <ul>
+            <li><a href="../../namespaces/operators/#trees">Tree functions</a></li>
+          </ul>
 
-            <h1>
-              <a href="#plists" class="anchor">&#x2693;</a>
-              <a href="#">Data structures</a>
-              <span class="separator"> » </span>
-              <a href="#built-in">Built-in</a>
-              <span class="separator"> » </span>
-              <a href="#intentional">Intentional</a>
-              <span class="separator"> » </span>
-              <a class="here">Plists</a>
-            </h1>
+        </section>
 
-            <ul>
-              <li><a href="../../namespaces/operators/#plists">Plist functions</a></li>
-            </ul>
+        <section id="sets">
 
-          </section>
+          <h1>
+            <a href="#sets" class="anchor">&#x2693;</a>
+            <a href="#">Data structures</a>
+            <span class="separator"> » </span>
+            <a href="#intentional">Intentional</a>
+            <span class="separator"> » </span>
+            <a class="here">Sets</a>
+          </h1>
 
-          <section id="trees">
+          <ul>
+            <li><a href="../../namespaces/operators/#sets">Set functions</a></li>
+          </ul>
 
-            <h1>
-              <a href="#trees" class="anchor">&#x2693;</a>
-              <a href="#">Data structures</a>
-              <span class="separator"> » </span>
-              <a href="#built-in">Built-in</a>
-              <span class="separator"> » </span>
-              <a href="#intentional">Intentional</a>
-              <span class="separator"> » </span>
-              <a class="here">Trees</a>
-            </h1>
+        </section>
 
-            <ul>
-              <li><a href="../../namespaces/operators/#trees">Tree functions</a></li>
-            </ul>
+        <section id="bits">
 
-          </section>
+          <h1>
+            <a href="#bits" class="anchor">&#x2693;</a>
+            <a href="#">Data structures</a>
+            <span class="separator"> » </span>
+            <a href="#intentional">Intentional</a>
+            <span class="separator"> » </span>
+            <a class="here">Bits</a>
+          </h1>
 
-          <section id="sets">
-
-            <h1>
-              <a href="#sets" class="anchor">&#x2693;</a>
-              <a href="#">Data structures</a>
-              <span class="separator"> » </span>
-              <a href="#built-in">Built-in</a>
-              <span class="separator"> » </span>
-              <a href="#intentional">Intentional</a>
-              <span class="separator"> » </span>
-              <a class="here">Sets</a>
-            </h1>
-
-            <ul>
-              <li><a href="../../namespaces/operators/#sets">Set functions</a></li>
-            </ul>
-
-          </section>
-
-          <section id="bits">
-
-            <h1>
-              <a href="#bits" class="anchor">&#x2693;</a>
-              <a href="#">Data structures</a>
-              <span class="separator"> » </span>
-              <a href="#built-in">Built-in</a>
-              <span class="separator"> » </span>
-              <a href="#intentional">Intentional</a>
-              <span class="separator"> » </span>
-              <a class="here">Bits</a>
-            </h1>
-
-            <ul>
-              <li><a href="../../namespaces/operators/#integers-as-bits">Integers-as-bits</a> functions</li>
-            </ul>
-
-          </section>
-
-          <nav class="end-of-section-indicator">
-            <a href="#intentional">
-              "<span>Intentional</span>" end.
-            </a>
-          </nav>
+          <ul>
+            <li><a href="../../namespaces/operators/#integers-as-bits">Integers-as-bits functions</a></li>
+          </ul>
 
         </section>
 
         <nav class="end-of-section-indicator">
-          <a href="#built-in">
-            "<span>Built-in</span>" end.
+          <a href="#intentional">
+            "<span>Intentional</span>" end.
           </a>
         </nav>
-
-      </section>
-
-      <section id="user-defined">
-
-        <h1>
-          <a href="#user-defined" class="anchor">&#x2693;</a>
-          <a href="#">Data structures</a>
-          <span class="separator"> » </span>
-          <a class="here">User-defined</a>
-        </h1>
-
-        <ul>
-
-        </ul>
 
       </section>
 
