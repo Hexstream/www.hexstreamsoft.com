@@ -153,6 +153,67 @@
         <p class="description">TODO</p>
       </header>
 
+      <section id="ordering">
+
+        <h1>
+          <a href="#ordering" class="anchor">&#x2693;</a>
+          <a href="#">Comparisons</a>
+          <span class="separator"> » </span>
+          <a class="here">Ordering</a>
+        </h1>
+
+        <ul>
+          <li><a href="../../#sort">sort</a></li>
+          <li><a href="../../#stable-sort">stable-sort</a></li>
+        </ul>
+
+        <table>
+          <tbody>
+            <tr>
+              <td>&lt;</td>
+              <td>&lt;=</td>
+              <td>/=</td>
+              <td>=</td>
+              <td>&gt;=</td>
+              <td>&gt;</td>
+            </tr>
+            <tr>
+              <td>string&lt;</td>
+              <td>string&lt;=</td>
+              <td>string/=</td>
+              <td>string=</td>
+              <td>string&gt;=</td>
+              <td>string&gt;</td>
+            </tr>
+            <tr>
+              <td>string-lessp</td>
+              <td>string-not-greaterp</td>
+              <td>string-not-equal</td>
+              <td>string-equal</td>
+              <td>string-not-lessp</td>
+              <td>string-greaterp</td>
+            </tr>
+            <tr>
+              <td>char&lt;</td>
+              <td>char&lt;=</td>
+              <td>char/=</td>
+              <td>char=</td>
+              <td>char&gt;=</td>
+              <td>char&gt;</td>
+            </tr>
+            <tr>
+              <td>char-lessp</td>
+              <td>char-not-greaterp</td>
+              <td>char-not-equal</td>
+              <td>char-equal</td>
+              <td>char-not-lessp</td>
+              <td>char-greaterp</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
       All typep thin wrappers.
 
       block return-from
@@ -173,14 +234,11 @@
       destructuring-bind
       prog prog*
       return
-      makunbound/fmakunbound
-      < <= /= = >= >
+      makunbound fmakunbound
       evenp oddp
       min max
       signum minusp zerop plusp
       (setf gethash) remhash
-      string< string<= string/= string= string>= string>
-      string-lessp string-not-greaterp string-not-equal string-equal string-not-lessp string-greaterp
       adjustable-array-p
       array-has-fill-pointer-p
       array-in-bounds-p
@@ -225,9 +283,6 @@
       remove-duplicates delete-duplicates
       replace
       search
-      sort stable-sort
-      char< char<= char/= char= char>= char>
-      char-lessp char-not-greaterp char-not-equal char-equal char-not-lessp char-greaterp
       find-restart
       slot-boundp
       add-method remove-method
