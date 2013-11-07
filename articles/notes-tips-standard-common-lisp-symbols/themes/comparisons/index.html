@@ -55,6 +55,9 @@
             <li><a href="#searching">Searching</a></li>
             <li><a href="#replacing">Replacing</a></li>
             <li><a href="#removing">Removing</a></li>
+            <li><a href="#identity">Identity</a></li>
+            <li><a href="#structural-equivalence">Structural equivalence</a></li>
+            <li><a href="#type-equivalence">Type equivalence</a></li>
           </ul>
         </nav>
 
@@ -256,9 +259,9 @@
           <li><a href="../../#position">position</a> / <a href="../../#position-if">position-if</a> / <a href="../../#position-if-not">position-if-not</a></li>
           <li><a href="../../#every">every</a> / <a href="../../#some">some</a> / <a href="../../#notevery">notevery</a> / <a href="../../#notany">notany</a></li>
           <li><a href="../../#search">search</a></li>
-          <li><a href="../../#replace">replace</a></li>
           <li><a href="../../#mismatch">mismatch</a></li>
           <li>(setf <a href="../../#getf">getf</a>) / <a href="../../#get-properties">get-properties</a></li>
+          <li><a href="../../#ldiff">ldiff</a> / <a href="../../#tailp">tailp</a></li>
         </ul>
 
       </section>
@@ -273,11 +276,13 @@
         </h1>
 
         <ul>
+          <li><a href="../../#replace">replace</a></li>
           <li><a href="../../#subst">subst</a> / <a href="../../#subst-if">subst-if</a> / <a href="../../#subst-if-not">subst-if-not</a></li>
           <li><a href="../../#nsubst">nsubst</a> / <a href="../../#nsubst-if">nsubst-if</a> / <a href="../../#nsubst-if-not">nsubst-if-not</a></li>
           <li><a href="../../#sublis">sublis</a> / <a href="../../#nsublis">nsublis</a></li>
           <li><a href="../../#substitute">substitute</a> / <a href="../../#substitute-if">substitute-if</a> / <a href="../../#substitute-if-not">substitute-if-not</a></i>
           <li><a href="../../#nsubstitute">nsubstitute</a> / <a href="../../#nsubstitute-if">nsubstitute-if</a> / <a href="../../#nsubstitute-if-not">nsubstitute-if-not</a></li>
+          <li>(setf <a href="../../#getf">getf</a>)</li>
         </ul>
 
       </section>
@@ -299,7 +304,62 @@
 
       </section>
 
-      All typep thin wrappers.
+      <section id="identity">
+
+        <h1>
+          <a href="#identity" class="anchor">&#x2693;</a>
+          <a href="#">Comparisons</a>
+          <span class="separator"> » </span>
+          <a class="here">Identity</a>
+        </h1>
+
+        <ul>
+          <li><a href="../../#eq">eq</a></li>
+          <li><a href="../../#eql">eql</a></li>
+          <li><a href="../../#case">case</a> / <a href="../../#ccase">ccase</a> / <a href="../../#ecase">ecase</a> (they use <a href="../../#eql">eql</a>, and thus can't compare strings meaningfully)</li>
+        </ul>
+
+      </section>
+
+      <section id="structural-equivalence">
+
+        <h1>
+          <a href="#structural-equivalence" class="anchor">&#x2693;</a>
+          <a href="#">Comparisons</a>
+          <span class="separator"> » </span>
+          <a class="here">Structural equivalence</a>
+        </h1>
+
+        <ul>
+          <li><a href="../../#equal">equal</a></li>
+          <li><a href="../../#equalp">equalp</a></li>
+          <li><a href="../../#tree-equal">tree-equal</a> (uses <a href="../../#eql">eql</a> by default)</li>
+          <li><a href="../../#string=">string=</a> (uses <a href="../../#char=">char=</a>)</li>
+          <li><a href="../../#string-equal">string-equal</a> (uses <a href="../../#char-equal">char-equal</a>)</li>
+          <li><a href="../../#destructuring-bind">destructuring-bind</a></li>
+          <li><a href="../../#subsetp">subsetp</a></li>
+        </ul>
+
+      </section>
+
+      <section id="type-equivalence">
+
+        <h1>
+          <a href="#type-equivalence" class="anchor">&#x2693;</a>
+          <a href="#">Comparisons</a>
+          <span class="separator"> » </span>
+          <a class="here">Type equivalence</a>
+        </h1>
+
+        <ul>
+          <li><a href="../../#subtypep">subtypep</a></li>
+          <li><a href="../../#typep">typep</a> and <a href="../thin-wrappers/#typep">its thin wrappers</a></li>
+          <li><a href="../../#check-type">check-type</a></li>
+          <li><a href="../../#typecase">typecase</a> / <a href="../../#ctypecase">ctypecase</a> / <a href="../../#etypecase">etypecase</a></li>
+          <li><a href="../../#handler-bind">handler-bind</a> / <a href="../../#handler-case">handler-case</a></li>
+        </ul>
+
+      </section>
 
       block return-from
       catch throw
@@ -307,16 +367,11 @@
       cond
       and or
       when unless
-      case ccase ecase
-      typecase ctypecase etypecase
       pprint-exit-if-list-exhausted
       pushnew
       assert
-      check-type
-      handler-bind handler-case
       restart-bind restart-case
       with-condition-restarts
-      destructuring-bind
       prog prog*
       return
       makunbound fmakunbound
@@ -340,10 +395,6 @@
       find-symbol
       (setf get) remprop
       adjoin
-      ldiff
-      tailp
-      tree-equal
-      subsetp
       find-restart
       slot-boundp
       add-method remove-method
@@ -351,11 +402,10 @@
       find-method
       boundp fboundp
       next-method-p
-      eq eql equal equalp
+
       ensure-generic-function
       (setf find-class)
-      subtypep
-      typep
+
     </div>
 
     <div id="footer">
