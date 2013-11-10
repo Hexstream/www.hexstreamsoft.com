@@ -112,6 +112,10 @@
                   <a href="themes/structural-sharing/">Structural sharing</a>
                   <span class="item-count">(<span></span>)</span>
                 </li>
+                <li>
+                  <a href="themes/obsoletion/">Obsoletion</a>
+                  <span class="item-count">(<span></span>)</span>
+                </li>
               </ul>
             </li>
           </ul>
@@ -16387,104 +16391,6 @@ B</code></pre>
 
         </table>
 
-      </section>
-
-      <section id="obsoletion-status">
-        <h1><a href="#obsoletion-status" class="anchor">&#x2693;</a>Obsoletion status</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Symbol</th>
-              <th>Status</th>
-              <th>Alternative(s)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <ul>
-                  <li><a href="#*modules*">*modules*</a></li>
-                  <li><a href="#provide">provide</a></li>
-                  <li><a href="#require">require</a> (mostly)</li>
-                </ul>
-              </th>
-              <td><b class="obsolete">Obsolete</b></td>
-              <td><cite class="common-lisp library"><a href="http://common-lisp.net/project/asdf/">ASDF</a></cite></td>
-            </tr>
-            <tr>
-              <th>
-                <ul>
-                  <li><a href="#assoc-if-not">assoc-if-not</a></li>
-                  <li><a href="#count-if-not">count-if-not</a></li>
-                  <li><a href="#delete-if-not">delete-if-not</a></li>
-                  <li><a href="#member-if-not">member-if-not</a></li>
-                  <li><a href="#nsubst-if-not">nsubst-if-not</a></li>
-                  <li><a href="#nsubstitute-if-not">nsubstitute-if-not</a></li>
-                  <li><a href="#position-if-not">position-if-not</a></li>
-                  <li><a href="#rassoc-if-not">rassoc-if-not</a></li>
-                  <li><a href="#remove-if-not">remove-if-not</a></li>
-                  <li><a href="#subst-if-not">subst-if-not</a></li>
-                  <li><a href="#substitute-if-not">substitute-if-not</a></li>
-                </ul>
-              </th>
-              <td><b class="not-deprecated">Not deprecated</b></td>
-              <td><p>Using the "*-if" equivalent, <a href="#complement">complement</a>ing the function passed as first argument.</p></td>
-            </tr>
-            <tr>
-              <th><a href="#gentemp">gentemp</a></th>
-              <td><b class="obsolete">Obsolete</b></td>
-              <td><a href="#gensym">gensym</a></td>
-            </tr>
-            <tr>
-              <th>
-                <ul>
-                  <li><a href="#get">get</a></li>
-                  <li><a href="#remprop">remprop</a></li>
-                  <li><a href="#symbol-plist">symbol-plist</a></li>
-                </ul>
-              </th>
-              <td><b class="discouraged">Discouraged</b></td>
-              <td><p>Typically an <a href="#eq">eq</a> <a href="#hash-table">hash-table</a> stored in a global variable with symbols as keys, with an interface on top that hides these implementation details.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <ul>
-                  <li><a href="#multiple-value-setq">multiple-value-setq</a></li>
-                  <li><a href="#setq">setq</a></li>
-                  <li><a href="#psetq">psetq</a></li>
-                </ul>
-              </th>
-              <td><b class="obsolete">Obsolete</b></td>
-              <td>
-                <ul>
-                  <li>(<a href="#setf">setf</a> <a href="#values">values</a>)</li>
-                  <li><a href="#setf">setf</a></li>
-                  <li><a href="#psetf">psetf</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <ul>
-                  <li><a href="#rplaca">rplaca</a></li>
-                  <li><a href="#rplacd">rplacd</a></li>
-                </ul>
-              </th>
-              <td><b class="obsolete">Obsolete</b></td>
-              <td>
-                <ul>
-                  <li>(<a href="#setf">setf</a> <a href="#car">car</a>)</li>
-                  <li>(<a href="#setf">setf</a> <a href="#cdr">cdr</a>)</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="#set">set</a></th>
-              <td><b class="obsolete">Obsolete</b></td>
-              <td>(<a href="#setf">setf</a> <a href="#symbol-value">symbol-value</a>)</td>
-            </tr>
-          </tbody>
-        </table>
       </section>
 
       <p>Other lisptips:</p>
