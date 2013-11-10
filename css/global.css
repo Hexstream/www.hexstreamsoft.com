@@ -197,6 +197,10 @@ table {
     border: solid medium gray;
 }
 
+table th {
+    white-space: nowrap;
+}
+
 table table {
     margin-top: 0;
     margin-bottom: 0;

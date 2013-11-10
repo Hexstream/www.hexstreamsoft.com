@@ -156,39 +156,333 @@
         <p class="description">TODO</p>
       </header>
 
-      <p>All setf functions are of course destructive so they won't be reiterated here...</p>
-
+      <p>The following page does not mention the following:</p>
       <ul>
-        <li>string-downcase / string-upcase / string-capitalize</li>
-        <li>nstring-downcase / nstring-upcase / nstring-capitalize</li>
-        <li>string</li>
-        <li>string-trim / string-left-trim / string-right-trim</li>
-        <li><a href="#bit-and">bit-and</a> / <a href="#bit-andc1">bit-andc1</a> / <a href="#bit-andc2">bit-andc2</a> / <a href="#bit-eqv">bit-eqv</a> / <a href="#bit-ior">bit-ior</a> / <a href="#bit-nand">bit-nand</a> / <a href="#bit-nor">bit-nor</a> / <a href="#bit-not">bit-not</a> / <a href="#bit-orc1">bit-orc1</a> / <a href="#bit-orc2">bit-orc2</a> / <a href="#bit-xor">bit-xor</a></li>
-        <li>adjust-array</li>
-        <li>copy-readtable</li>
-        <li>adjoin</li>
-        <li>append / revappend / nconc / nreconc</li>
-        <li>butlast / nbutlast</li>
-        <li>list*</li>
-        <li>mapc / mapcar / mapcan</li>
-        <li>mapl / maplist / mapcon</li>
-        <li>pairlis</li>
-        <li>sublis / nsublis</li>
-        <li>subst / subst-if / subst-if-not</li>
-        <li>nsubst / nsubst-if / nsubst-if-not</li>
-        <li>union / nunion / intersection / nintersection / set-difference / nset-difference / set-exclusive-or / nset-exclusive-or</li>
-        <li>concatenate</li>
-        <li>copy-seq</li>
-        <li>merge</li>
-        <li>remove-duplicates / delete-duplicates</li>
-        <li>replace</li>
-        <li>reverse / nreverse</li>
-        <li>subseq</li>
-        <li>sort / stable-sort</li>
-        <li>(defgeneric compute-applicable-methods)</li>
+        <li>setf functions and modify macros, since they're of course destructive;</li>
+        <li>simple accessors like cdr, since the result obviously shares structure;</li>
+        <li>functions that obviously return part of a structure, such as <a href="../../#nthcdr">nthcdr</a>;</li>
+        <li>operators that just prepend one item to a list, whose result obviously share structure with the original list, like <a href="../../#adjoin">adjoin</a>.</li>
       </ul>
 
-
+      <table>
+        <thead>
+          <tr>
+            <th>Operators</th>
+            <th>Notes pertaining to structural sharing and destructive modification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>
+              <ul>
+                <li><a href="../../#string-downcase">string-downcase</a></li>
+                <li><a href="../../#string-upcase">string-upcase</a></li>
+                <li><a href="../../#string-capitalize">string-capitalize</a></li>
+              </ul>
+            </th>
+            <td>
+              <p><q><var>string</var> is not modified. However, if no characters in <var>string</var> require conversion, the result may be either <var>string</var> or a copy of it, at the implementation's discretion.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <ul>
+                <li><a href="../../#nstring-downcase">nstring-downcase</a></li>
+                <li><a href="../../#nstring-upcase">nstring-upcase</a></li>
+                <li><a href="../../#nstring-capitalize">nstring-capitalize</a></li>
+              </ul>
+            </th>
+            <td>
+              <p>The string is modified directly.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#string">string</a></th>
+            <td>
+              <p>If the argument is already a string, it's simply returned.</p>
+              <p>If the argument is a symbol, its name is returned, which must not be modified.</p></td>
+          </tr>
+          <tr>
+            <th>
+              <ul>
+                <li><a href="../../#string-trim">string-trim</a></li>
+                <li><a href="../../#string-left-trim">string-left-trim</a></li>
+                <li><a href="../../#string-right-trim">string-right-trim</a></li>
+              </ul>
+            </th>
+            <td>
+              <p><q>If no characters need to be trimmed from the <var>string</var>, then either <var>string</var> itself or a copy of it may be returned, at the discretion of the implementation.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <ul>
+                <li><a href="#bit-and">bit-and</a></li>
+                <li><a href="#bit-andc1">bit-andc1</a></li>
+                <li><a href="#bit-andc2">bit-andc2</a></li>
+                <li><a href="#bit-eqv">bit-eqv</a></li>
+                <li><a href="#bit-ior">bit-ior</a></li>
+                <li><a href="#bit-nand">bit-nand</a></li>
+                <li><a href="#bit-nor">bit-nor</a></li>
+                <li><a href="#bit-not">bit-not</a></li>
+                <li><a href="#bit-orc1">bit-orc1</a></li>
+                <li><a href="#bit-orc2">bit-orc2</a></li>
+                <li><a href="#bit-xor">bit-xor</a></li>
+              </ul>
+            </th>
+            <td>
+              <p><q>If <var>opt-arg</var> is of type (array bit) the contents of the result are destructively placed into <var>opt-arg</var>. If <var>opt-arg</var> is the symbol t, <var>bit-array</var> or <var>bit-array1</var> is replaced with the result; if <var>opt-arg</var> is nil or omitted, a new array is created to contain the result.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#adjust-array">adjust-array</a></th>
+            <td>
+              <p><q>The result is an array of the same type and rank as <var>array</var>, that is either the modified <var>array</var>, or a newly created array to which <var>array</var> can be displaced [...]</q></p>
+              <p><q>If adjust-array is applied to an array that is actually adjustable, the array returned is identical [(eq)] to <var>array</var>. If the array returned by adjust-array is distinct from <var>array</var>, then the argument <var>array</var> is unchanged.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#copy-readtable">copy-readtable</a></th>
+            <td><p><q>If <var>to-readtable</var> is nil, a new readtable is created and returned. Otherwise the readtable specified by <var>to-readtable</var> is modified and returned.</q></p></td>
+          </tr>
+          <tr>
+            <th><a href="../../#append">append</a></th>
+            <td><p><q><var>lists</var> are left unchanged; the list structure of each of <var>lists</var> except the last is copied. The last argument is not copied; it becomes the cdr of the final dotted pair of the concatenation of the preceding <var>lists</var>, or is returned directly if there are no preceding non-empty lists.</q></p></td>
+          </tr>
+          <tr>
+            <th><a href="../../#revappend">revappend</a></th>
+            <td><p><q>constructs a copy[2] of <var>list</var>, but with the elements in reverse order. It then appends (as if by nconc) the <var>tail</var> to that reversed list and returns the result.</q></p></td>
+          </tr>
+          <tr>
+            <th><a href="../../#nreconc">nreconc</a></th>
+            <td><p><q>reverses the order of elements in <var>list</var> (as if by nreverse). It then appends (as if by nconc) the <var>tail</var> to that reversed list and returns the result.</q></p></td>
+          </tr>
+          <tr>
+            <th><a href="../../#nconc">nconc</a></th>
+            <td>
+              <p>All arguments except the last must be lists.<br />The cdr of the last cons of each of these will be destructively modified.</p>
+              <p>The last argument can be any object and the result shares structure with it.</p>
+              <p>nconc is one of very few destructive functions adopting the "leading N" convention that actually guarantees to modify the arguments themselves.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#butlast">butlast</a></th>
+            <td>Always returns a fresh list.</td>
+          </tr>
+          <tr>
+            <th><a href="../../#nbutlast">nbutlast</a></th>
+            <td><p><q>may modify list. It changes the cdr of the cons n+1 from the end of the list to nil.</q></p></td>
+          </tr>
+          <tr>
+            <th><a href="../../#list*">list*</a></th>
+            <td><p><q>the last argument to list* becomes the cdr of the last cons constructed.</q></p></td>
+          </tr>
+          <tr>
+            <th>
+              <ul>
+                <li><a href="../../#mapc">mapc</a></li>
+                <li><a href="../../#mapl">mapl</a></li>
+              </ul>
+            </th>
+            <td><p>These always return their first list argument.</p></td>
+          </tr>
+          <tr>
+            <th>
+              <ul>
+                <li><a href="../../#mapcar">mapcar</a></li>
+                <li><a href="../../#maplist">maplist</a></li>
+              </ul>
+            </th>
+            <td><p>These always return a fresh list.</p></td>
+          </tr>
+          <tr>
+            <th>
+              <ul>
+                <li><a href="../../#mapcan">mapcan</a></li>
+                <li><a href="../../#mapcon">mapcon</a></li>
+              </ul>
+            </th>
+            <td>
+              <p>All results returned by the function argument will be destructively combined into a list as if by nconc. They must thus be fresh lists. Use <a href="../../#copy-seq">copy-seq</a> as necessary.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#pairlis">pairlis</a></th>
+            <td>
+              <p>The result shares structure with <var>alist</var> (if supplied).</p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#sublis">sublis</a></th>
+            <td>
+              <p><q>If no changes are made, the original tree is returned. The original tree is left unchanged, but the result tree may share cells with it.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#nsublis">nsublis</a></th>
+            <td>
+              <p><q>nsublis is permitted to modify tree [...]</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <ul>
+                <li><a href="../../#subst">subst</a></li>
+                <li><a href="../../#subst-if">subst-if</a></li>
+                <li><a href="../../#subst-if-not">subst-if-not</a></li>
+              </ul>
+            </th>
+            <td>
+              <p><q>If no changes are made, the original tree may be returned. The original tree is left unchanged, but the result tree may share storage with it.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <ul>
+                <li><a href="../../#nsubst">nsubst</a></li>
+                <li><a href="../../#nsubst-if">nsubst-if</a></li>
+                <li><a href="../../#nsubst-if-not">nsubst-if-not</a></li>
+              </ul>
+            </th>
+            <td>
+              <p><q>the original tree is modified and returned as the function result, but the result may not be eq to tree.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#union">union</a></th>
+            <td>
+              <p><q>The result list may be eq to either <var>list-1</var> or <var>list-2</var> if appropriate.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#nunion">nunion</a></th>
+            <td>
+              <p><q>nunion is permitted to modify any part, car or cdr, of the list structure of <var>list-1</var> or <var>list-2</var>.</q></p>
+              <p><q>Since the nunion side effect is not required, it should not be used in for-effect-only positions in portable code.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#intersection">intersection</a></th>
+            <td>
+              <p><q>The result list may share cells with, or be eq to, either <var>list-1</var> or <var>list-2</var> if appropriate.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#nintersection">nintersection</a></th>
+            <td>
+              <p><q>nintersection is the destructive version of intersection. It performs the same operation, but may destroy <var>list-1</var> using its cells to construct the result. <var>list-2</var> is not destroyed.</q></p>
+              <p><q>Since the nintersection side effect is not required, it should not be used in for-effect-only positions in portable code.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#set-difference">set-difference</a></th>
+            <td>
+              <p><q>The result list may share cells with, or be eq to, either of list-1 or list-2, if appropriate.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#nset-difference">nset-difference</a></th>
+            <td>
+              <p><q>nset-difference is the destructive version of set-difference. It may destroy <var>list-1</var>.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#set-exclusive-or">set-exclusive-or</a></th>
+            <td>
+              <p><q>The result list of set-exclusive-or might share storage with one of <var>list-1</var> or <var>list-2</var>.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#nset-exclusive-or">nset-exclusive-or</a></th>
+            <td>
+              <p><q>nset-exclusive-or is the destructive version of set-exclusive-or.</q></p>
+              <p><q>nset-exclusive-or is permitted to modify any part, car or cdr, of the list structure of <var>list-1</var> or <var>list-2</var>.</q></p>
+              <p><q>Since the nset-exclusive-or side effect is not required, it should not be used in for-effect-only positions in portable code.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#concatenate">concatenate</a></th>
+            <td>
+              <p><q>All of the sequences are copied from; the result does not share any structure with any of the sequences. Therefore, if only one sequence is provided and it is of type result-type, concatenate is required to copy sequence rather than simply returning it.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#copy-seq">copy-seq</a></th>
+            <td>Always returns a fresh sequence, as implied by the name...</td>
+          </tr>
+          <tr>
+            <th><a href="../../#merge">merge</a></th>
+            <td>
+              <p><q><var>sequence-1</var> and/or <var>sequence-2</var> may be destroyed.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#remove-duplicates">remove-duplicates</a></th>
+            <td>
+              <p><q>remove-duplicates returns a sequence that may share with <var>sequence</var> or may be identical [(eq)] to <var>sequence</var> if no elements need to be removed.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#delete-duplicates">delete-duplicates</a></th>
+            <td>
+              <p><q>delete-duplicates is like remove-duplicates, but delete-duplicates may modify <var>sequence</var>.</q></p>
+              <p><q>delete-duplicates, when <var>sequence</var> is a list, is permitted to setf any part, car or cdr, of the top-level list structure in that <var>sequence</var>. When <var>sequence</var> is a vector, delete-duplicates is permitted to change the dimensions of the vector and to slide its elements into new positions without permuting them to produce the resulting vector.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#replace">replace</a></th>
+            <td>
+              <p><q><var>sequence-1</var> is destructively modified by copying successive elements into it from <var>sequence-2</var>.</q></p>
+              <p><q>If <var>sequence-1</var> and <var>sequence-2</var> are the same object and the region being modified overlaps the region being copied from, then it is as if the entire source region were copied to another place and only then copied back into the target region. However, if <var>sequence-1</var> and <var>sequence-2</var> are not the same, but the region being modified overlaps the region being copied from (perhaps because of shared list structure or displaced arrays), then after the replace operation the subsequence of <var>sequence-1</var> being modified will have unpredictable contents.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#reverse">reverse</a></th>
+            <td>
+              <p><q>[...] reverse always creates and returns a new sequence [...] reverse never modifies the given <var>sequence</var>.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#nreverse">nreverse</a></th>
+            <td>
+              <p><q>nreverse might modify and return the given <var>sequence</var>.</q></p>
+              <p><q>For nreverse, <var>sequence</var> might be destroyed and re-used to produce the result. The result might or might not be identical to <var>sequence</var>. Specifically, when <var>sequence</var> is a list, nreverse is permitted to setf any part, car or cdr, of any cons that is part of the list structure of sequence. When <var>sequence</var> is a vector, nreverse is permitted to re-order the elements of <var>sequence</var> in order to produce the resulting vector.</q></p>
+              <p><q>nreverse might either create a new sequence, modify the argument <var>sequence</var>, or both.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#subseq">subseq</a></th>
+            <td>
+              <p><q>subseq always allocates a new sequence for a result; it never shares storage with an old sequence.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <ul>
+                <li><a href="../../#sort">sort</a></li>
+                <li><a href="../../#stable-sort">stable-sort</a></li>
+              </ul>
+            </th>
+            <td>
+              <p><q>sort and stable-sort destructively sort sequences [...]</q></p>
+              <p><q>The sorting operation can be destructive in all cases. In the case of a vector argument, this is accomplished by permuting the elements in place. In the case of a list, the list is destructively reordered in the same manner as for nreverse.</q></p>
+              <p><q>If sequence is a vector, the result might or might not be simple, and might or might not be identical to <var>sequence</var>.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th><a href="../../#compute-restarts">compute-restarts</a></th>
+            <td>
+              <p><q>Implementations are permitted, but not required, to return distinct lists from repeated calls to compute-restarts while in the same dynamic environment. The consequences are undefined if the list returned by compute-restarts is every (<i>sic</i>) modified.</q></p>
+            </td>
+          </tr>
+          <tr>
+            <th>(defgeneric<br /><a href="../../#compute-applicable-methods">compute-applicable-methods</a>)</th>
+            <td>
+              <p>This is not specified in the standard, but due to caching the result might not be a fresh list so it must not be destructively modified.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
     </div>
 
