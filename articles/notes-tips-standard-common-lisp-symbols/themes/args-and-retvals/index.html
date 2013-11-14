@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Obsoletion | Themes | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
+    <title>Arguments and return values | Themes | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
     <link href="../../../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../../shared.css" rel="stylesheet" type="text/css" />
     <link href="index.css" rel="stylesheet" type="text/css" />
@@ -35,7 +35,7 @@
         <span class="separator"> » </span>
         <a href="../">Themes</a>
         <span class="separator"> » </span>
-        <a class="here">Obsoletion</a>
+        <a class="here">Args and retvals</a>
         <div class="float-clear"></div>
       </nav>
 
@@ -43,13 +43,15 @@
 
         <div class="level-separator"></div>
 
-        <nav class="navbox" id="obsoletion_navbox">
+        <nav class="navbox" id="args-and-retvals_navbox">
           <h1>
-            <a class="here">Obsoletion</a>
+            <a class="here">Args and retvals</a>
             <span class="here-indicator-left"> </span>
             <span class="here-indicator-right"> </span>
           </h1>
           <ul>
+            <li><a href="#arguments">Arguments</a></li>
+            <li><a href="#return-values">Return values</a></li>
           </ul>
         </nav>
 
@@ -73,7 +75,11 @@
               <a href="../lambda-lists/">Lambda lists</a>
             </li>
             <li>
-              <a href="../args-and-retvals/">Args and retvals</a>
+              <a class="here">
+                Args and retvals
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
             </li>
             <li>
               <a href="../comparisons/">Comparisons</a>
@@ -91,11 +97,7 @@
               <a href="../documentation/">Documentation</a>
             </li>
             <li>
-              <a class="here">
-                Obsoletion
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
+              <a href="../obsoletion/">Obsoletion</a>
             </li>
           </ul>
         </nav>
@@ -170,113 +172,44 @@
     <div id="content">
 
       <header id="page-header">
-        <h1>Obsoletion</h1>
+        <h1>Arguments and return values</h1>
         <p class="description">TODO</p>
       </header>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Symbol</th>
-            <th>Status</th>
-            <th>Alternative(s)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>
-              <ul>
-                <li><a href="#*modules*">*modules*</a></li>
-                <li><a href="#provide">provide</a></li>
-                <li><a href="#require">require</a> (mostly)</li>
-              </ul>
-            </th>
-            <td><b class="obsolete">Obsolete</b></td>
-            <td><cite class="common-lisp library"><a href="http://common-lisp.net/project/asdf/">ASDF</a></cite></td>
-          </tr>
-          <tr>
-            <th>
-              <ul>
-                <li><a href="#assoc-if-not">assoc-if-not</a></li>
-                <li><a href="#count-if-not">count-if-not</a></li>
-                <li><a href="#delete-if-not">delete-if-not</a></li>
-                <li><a href="#member-if-not">member-if-not</a></li>
-                <li><a href="#nsubst-if-not">nsubst-if-not</a></li>
-                <li><a href="#nsubstitute-if-not">nsubstitute-if-not</a></li>
-                <li><a href="#position-if-not">position-if-not</a></li>
-                <li><a href="#rassoc-if-not">rassoc-if-not</a></li>
-                <li><a href="#remove-if-not">remove-if-not</a></li>
-                <li><a href="#subst-if-not">subst-if-not</a></li>
-                <li><a href="#substitute-if-not">substitute-if-not</a></li>
-              </ul>
-            </th>
-            <td><b class="not-deprecated">Not deprecated</b></td>
-            <td><p>Using the "*-if" equivalent, <a href="#complement">complement</a>ing the function passed as first argument.</p></td>
-          </tr>
-          <tr>
-            <th><a href="#gentemp">gentemp</a></th>
-            <td><b class="obsolete">Obsolete</b></td>
-            <td><a href="#gensym">gensym</a></td>
-          </tr>
-          <tr>
-            <th>
-              <ul>
-                <li><a href="#get">get</a></li>
-                <li><a href="#remprop">remprop</a></li>
-                <li><a href="#symbol-plist">symbol-plist</a></li>
-              </ul>
-            </th>
-            <td><b class="discouraged">Discouraged</b></td>
-            <td><p>Typically an <a href="#eq">eq</a> <a href="#hash-table">hash-table</a> stored in a global variable with symbols as keys, with an interface on top that hides these implementation details.</p></td>
-          </tr>
-          <tr>
-            <th>
-              <ul>
-                <li><a href="#multiple-value-setq">multiple-value-setq</a></li>
-                <li><a href="#setq">setq</a></li>
-                <li><a href="#psetq">psetq</a></li>
-              </ul>
-            </th>
-            <td><b class="obsolete">Obsolete</b></td>
-            <td>
-              <ul>
-                <li>(<a href="#setf">setf</a> <a href="#values">values</a>)</li>
-                <li><a href="#setf">setf</a></li>
-                <li><a href="#psetf">psetf</a></li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <ul>
-                <li><a href="#rplaca">rplaca</a></li>
-                <li><a href="#rplacd">rplacd</a></li>
-              </ul>
-            </th>
-            <td><b class="obsolete">Obsolete</b></td>
-            <td>
-              <ul>
-                <li>(<a href="#setf">setf</a> <a href="#car">car</a>)</li>
-                <li>(<a href="#setf">setf</a> <a href="#cdr">cdr</a>)</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <th><a href="#set">set</a></th>
-            <td><b class="obsolete">Obsolete</b></td>
-            <td>(<a href="#setf">setf</a> <a href="#symbol-value">symbol-value</a>)</td>
-          </tr>
-        </tbody>
-      </table>
+      <section id="arguments">
+
+        <h1>
+          <a href="#arguments" class="anchor">&#x2693;</a>
+          <a href="#">Args and retvals</a>
+          <span class="separator"> » </span>
+          <a class="here">Arguments</a>
+        </h1>
+
+        Stub.
+
+      </section>
+
+      <section id="return-values">
+
+        <h1>
+          <a href="#return-values" class="anchor">&#x2693;</a>
+          <a href="#">Args and retvals</a>
+          <span class="separator"> » </span>
+          <a class="here">Return values</a>
+        </h1>
+
+        Stub.
+
+      </section>
 
     </div>
 
     <div id="footer">
       <div>
         <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fthemes%2Fobsoletion%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fthemes%2Fargs-and-retvals%2F"><span class="checkmark">✔</span> HTML5</a></span>
         <span class="page-badge"><a href="http://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fthemes%2Fobsoletion%2F"><span class="checkmark">✔</span> CSS3</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fthemes%2Fargs-and-retvals%2F"><span class="checkmark">✔</span> CSS3</a></span>
       </div>
     </div>
 
