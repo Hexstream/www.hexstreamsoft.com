@@ -224,16 +224,25 @@ table th > ul:only-child, table th > ol:only-child, table td > ul:only-child, ta
 
 table .link-cell {
     padding: 0;
-    position: relative;
-    width: 10em;
+    width: 12em;
 }
 
-table .link-cell a {
+table .link-cell > div:only-child {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 3em; /* height: 100%; should work but it doesn't and I'm tired. */
+}
+
+table .link-cell > div:only-child a {
     position: absolute;
-    display: table-cell;
+    padding: 0;
+    margin: 0;
     top: 0;
     bottom: 0;
-    width: inherit;
+    left: 0;
+    right: 0;
     text-decoration: none;
     text-align: center;
 }
@@ -247,10 +256,12 @@ table .link-cell a > div {
     margin-top: -0.6em;
 }
 
+/* disable for now because of height nonsense above.
 table .link-cell a:hover, table .link-cell a:focus {
     background-color: #ECE0A5;
     outline-style: none;
 }
+*/
 
 
 .news-item p {
@@ -308,8 +319,10 @@ table > thead > tr:last-child > th {
     vertical-align: bottom;
 }
 
-table > tbody > tr > th {
+table > tbody > tr > th > div:only-child {
     position: relative;
+    padding: 0;
+    margin: 0;
 }
 
 th {
