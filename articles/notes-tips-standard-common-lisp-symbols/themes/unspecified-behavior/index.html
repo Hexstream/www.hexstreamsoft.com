@@ -198,7 +198,358 @@
           <a class="here">Undefined</a>
         </h1>
 
-        Stub.
+        <table>
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Undefined behavior</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_eab.htm">3.5.1.2 Too Few Arguments</a></th>
+              <td>
+                <p>Supplying too few arguments to a function in an unsafe call.</p>
+                <p><q>Too few arguments means fewer arguments than the number of required parameters for the function.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_eac.htm">3.5.1.3 Too Many Arguments</a></th>
+              <td>
+                <p>Supplying too many arguments to a function in an unsafe call.</p>
+                <p><q>Too many arguments means more arguments than the number of required parameters plus the number of optional parameters; however, if the function uses &amp;rest or &amp;key, it is not possible for it to receive too many arguments.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_cjd.htm">22.3.10.4 Undefined FORMAT Modifier Combinations</a></th>
+              <td>
+                <p><q>The consequences are undefined if colon or at-sign modifiers are given to a directive in a combination not specifically described here as being meaningful.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="">22.3.6.3 Tilde Greater-Than-Sign: End of Justification</a></th>
+              <td>
+                <p><q>~&gt; terminates a ~&lt;. The consequences of using it elsewhere are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_b.htm">5.2 Transfer of Control to an Exit Point</a></th>
+              <td>
+                <p><q>The consequences are undefined if an attempt is made to transfer control to an exit point whose dynamic extent has ended.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_asin_.htm">Function ASIN, ACOS, ATAN</a></th>
+              <td>
+                <p>[I don't understand. Review later.]</p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_defmac.htm">Macro DEFMACRO</a></th>
+              <td>
+                <p><q>The consequences are undefined if the result of fully macroexpanding a form contains any circular list structure except in literal objects.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_intern.htm">Function INTERN</a></th>
+              <td>
+                <p><q>Once a string has been given as the string argument to intern in this situation where a new symbol is created, the consequences are undefined if a subsequent attempt is made to alter that string.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_ppr_po.htm">Local Macro PPRINT-POP</a></th>
+              <td>
+                <p><q>The consequences of attempting to use pprint-pop outside of pprint-logical-block are undefined.</q></p>
+                |
+                <p><q>The consequences are undefined if pprint-pop is executed outside of the dynamic extent of this pprint-logical-block.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/19_bbbc.htm">19.2.2.2.3 :UNSPECIFIC as a Component Value</a></th>
+              <td>
+                <p><q>When writing[1] the value of any pathname component, the consequences are undefined if :unspecific is given for a pathname in a file system for which it does not make sense.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="">22.3.8.2 Tilde Right-Paren: End of Case Conversion</a></th>
+              <td>
+                <p><q>~) terminates a ~(. The consequences of using it elsewhere are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_abac.htm">3.1.2.1.3 Self-Evaluating Objects</a></th>
+              <td>
+                <p><q>The consequences are undefined if literal objects (including self-evaluating objects) are destructively modified.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_cp_lis.htm">Function COPY-LIST</a></th>
+              <td>
+                <p><q>The consequences are undefined if <var>list</var> is a circular list.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_w_acce.htm">Macro WITH-ACCESSORS</a></th>
+              <td>
+                <p><q>The consequences are undefined if any <var>accessor-name</var> is not the name of an accessor for the <var>instance</var>.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_w_hash.htm">Macro WITH-HASH-TABLE-ITERATOR</a></th>
+              <td>
+                <p><q>The consequences are undefined if the local function named <var>name</var> established by with-hash-table-iterator is called after it has returned false as its primary value.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_ga.htm">3.7.1 Modification of Literal Objects</a></th>
+              <td>
+                <p><q>The consequences are undefined if literal objects are destructively modified. For this purpose, the following operations are considered destructive: [...]</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/21_ad.htm">21.1.4 Restrictions on Composite Streams</a></th>
+              <td>
+                <p><q>The consequences are undefined if any component of a composite stream is closed before the composite stream is closed.</q></p>
+                |
+                <p><q>The consequences are undefined if the synonym stream symbol is not bound to an open stream from the time of the synonym stream's creation until the time it is closed.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_w_slts.htm">Macro WITH-SLOTS</a></th>
+              <td>
+                <p><q>The consequences are undefined if any <var>slot-name</var> is not the name of a slot in the <var>instance</var>.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_adjust.htm">Function ADJUST-ARRAY</a></th>
+              <td>
+                <p><q>if <var>initial-element</var> is not provided, the consequences of later reading any such new element of <var>new-array</var> before it has been initialized are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_slt_ma.htm">Function SLOT-MAKUNBOUND</a></th>
+              <td>
+                <p><q>The consequences are undefined if <var>instance</var> has any other metaclass [than standard-class or built-in-class]--an error might or might not be signaled in this situation. Note in particular that the behavior for conditions and structures is not specified.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_fmakun.htm">Function FMAKUNBOUND</a></th>
+              <td>
+                <p><q>The consequences are undefined if <var>name</var> is a special operator.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_format.htm">Function FORMAT</a></th>
+              <td>
+                <p><q>If <var>destination</var> is a string with a fill pointer, the consequences are undefined if destructive modifications are performed directly on the string during the dynamic extent of the call.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/t_symbol.htm">System Class SYMBOL</a></th>
+              <td>
+                <p><q>Every symbol has a name, and the consequences are undefined if that name is altered.</q></p>
+                |
+                <p><q>The consequences are undefined if an attempt is made to alter the home package of a symbol external in the COMMON-LISP package or the KEYWORD package.</q></p>
+                |
+                <p><q>The consequences are undefined if an attempt is made to change the value of a symbol that names a constant variable, or to make such a symbol be unbound.</q></p>
+                |
+                <p><q>The consequences are undefined if an attempt is made to change the functional value of a symbol that names a special form.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_macro_.htm">Accessor MACRO-FUNCTION</a></th>
+              <td>
+                <p><q>The consequences are undefined if <var>environment</var> is non-nil in a use of setf of macro-function.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_ababb.htm">3.1.2.1.2.2 Macro Forms</a></th>
+              <td>
+                <p><q>The consequences are undefined if a macro function destructively modifies any part of its form argument.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_update.htm">Standard Generic Function<br />UPDATE-INSTANCE-FOR-DIFFERENT-CLASS</a></th>
+              <td>
+                <p><q>The first argument to update-instance-for-different-class, <var>previous</var>, is that copy; it holds the old slot values temporarily. This argument has dynamic extent within change-class; if it is referenced in any way once update-instance-for-different-class returns, the results are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_ppr_lo.htm">Macro PPRINT-LOGICAL-BLOCK</a></th>
+              <td>
+                <p><q>pprint-logical-block and the pretty printing stream it creates have dynamic extent. The consequences are undefined if, outside of this extent, output is attempted to the pretty printing stream it creates.</q></p>
+                <p><q>It is also unspecified what happens if, within this extent, any output is sent directly to the underlying destination stream.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/s_unwind.htm">Special Operator UNWIND-PROTECT</a></th>
+              <td>
+                <p>[3 examples of code having undefined consequences.]</p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/v_mexp_h.htm">Variable *MACROEXPAND-HOOK*</a></th>
+              <td>
+                <p><q>The environment object has dynamic extent; the consequences are undefined if the environment object is referred to outside the dynamic extent of the macro expansion function.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_cgc.htm">22.3.7.3 Tilde Right-Bracket:<br />End of Conditional Expression</a></th>
+              <td>
+                <p><q>~] terminates a ~[. The consequences of using it elsewhere are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_w_op_1.htm">Macro WITH-OPEN-STREAM</a></th>
+              <td>
+                <p><q>The consequences are undefined if an attempt is made to assign the the variable <var>var</var> with the <var>forms</var>.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_cge.htm">22.3.7.5 Tilde Right-Brace: End of Iteration</a></th>
+              <td>
+                <p><q>~} terminates a ~{. The consequences of using it elsewhere are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_typep.htm">Function TYPEP</a></th>
+              <td>
+                <p><q>The consequences are undefined if the <var>type-specifier</var> is not a type specifier.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_w_out_.htm">Macro WITH-OUTPUT-TO-STRING</a></th>
+              <td>
+                <p><q>The consequences are undefined if an attempt is made to assign the variable <var>var</var>.</q></p>
+                |
+                <p><q>The consequences are undefined if destructive modifications are performed directly on the <var>string</var> during the dynamic extent of the call.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/s_ret_fr.htm">Special Operator RETURN-FROM</a></th>
+              <td>
+                <p>[An example of code with undefined behavior.]</p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_tree_e.htm">Function TREE-EQUAL</a></th>
+              <td>
+                <p><q>The consequences are undefined if both <var>tree-1</var> and <var>tree-2</var> are circular.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhi.htm">2.4.8.9 Sharpsign X</a></th>
+              <td>
+                <p><q>The consequences are undefined if the token immediately following the #X does not have the syntax of a hexadecimal (i.e., radix 16) rational.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_get_ou.htm">Function GET-OUTPUT-STREAM-STRING</a></th>
+              <td>
+                <p><q>The consequences are undefined if <var>stream-output-string</var> is closed.</q></p>
+                |
+                <p><q>The consequences are undefined if <var>string-output-stream</var> is a stream that was not produced by make-string-output-stream. The consequences are undefined if <var>string-output-stream</var> was created implicitly by with-output-to-string or format.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/t_broadc.htm">System Class BROADCAST-STREAM</a></th>
+              <td>
+                <p><q>For the input operations clear-input listen, peek-char, read-byte, read-char-no-hang, read-char, read-line, and unread-char, the consequences are undefined if the indicated operation is performed. However, an implementation is permitted to define such a behavior as an implementation-dependent extension.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_c.htm">3.3 Declarations</a></th>
+              <td>
+                <p><q>The consequences are undefined if a program violates a declaration or a proclamation.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_last.htm">Function LAST</a></th>
+              <td>
+                <p><q>The consequences are undefined if <var>list</var> is a circular list.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/06_abb.htm">6.1.2.2 Local Variable Initializations</a></th>
+              <td>
+                <p><q>The consequences are undefined if a <var>type-spec</var> argument is supplied for <var>var</var> if the related expression returns a value that is not of the supplied type.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhj.htm">2.4.8.10 Sharpsign R</a></th>
+              <td>
+                <p><q>The consequences are undefined if the token immediately following the #nR does not have the syntax of a rational in radix <var>n</var>.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_aab.htm">2.1.1.2 The Standard Readtable</a></th>
+              <td>
+                <p><q>The consequences are undefined if an attempt is made to modify the standard readtable.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_find_c.htm">Accessor FIND-CLASS</a></th>
+              <td>
+                <p><q>The &amp;environment argument has dynamic extent; the consequences are undefined if the &amp;environment argument is referred to outside the dynamic extent of the macro expansion function.</q></p>
+                |
+                <p><q>The results are undefined if the user attempts to change or remove the class associated with a symbol that is defined as a type specifier in this standard.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dh.htm">2.4.8 Sharpsign</a></th>
+              <td>
+                <p>[Several undefined sharpsign dispatch chars.]</p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_chg_cl.htm">Standard Generic Function CHANGE-CLASS</a></th>
+              <td>
+                <p><q>a programmer must not use change-class inside a method if any methods for that generic function access any slots, or the results are undefined.</q></p>
+                <p><small>(In the notes section, which is technically not normative...)</small></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/01_ddv.htm">1.4.4.22 The ``Value Type'' Section<br />of a Dictionary Entry</a></th>
+              <td>
+                <p><q>Except as explicitly specified otherwise, the consequences are undefined if this type restriction is violated.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_bbc.htm">3.2.2.3 Semantic Constraints</a></th>
+              <td>
+                <p><q>Within a function named F, the compiler may (but is not required to) assume that an apparent recursive call to a function named F refers to the same definition of F, unless that function has been declared notinline. The consequences of redefining such a recursively defined function F while it is executing are undefined.</q></p>
+                |
+                <p><q>Type declarations present in the compilation environment must accurately describe the corresponding values at run time; otherwise, the consequences are undefined. It is permissible for an unknown type to appear in a declaration at compile time, though a warning might be signaled in such a case.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_rd_del.htm">Function READ-DELIMITED-LIST</a></th>
+              <td>
+                <p><q>The consequences are undefined if <var>char</var> has a syntax type of whitespace[2] in the current readtable.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/11_abab.htm">11.1.2.1.2 Constraints on<br />the COMMON-LISP Package<br />for Conforming Programs</a></th>
+              <td>
+                <p><q>Except where explicitly allowed, the consequences are undefined if any of the following actions are performed on an external symbol of the COMMON-LISP package: [...]</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_rn_pkg.htm">Function RENAME-PACKAGE</a></th>
+              <td>
+                <p><q>The consequences are undefined if <var>new-name</var> or any <var>new-nickname</var> conflicts with any existing package names.</q></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul>
+          <li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/01_eb.htm">1.5.2 Conforming Programs</a>:
+            <p><q>Conforming code shall not depend on the consequences of undefined or unspecified situations.</q></p></li>
+          <li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/09_a.htm">9.1 Condition System Concepts</a>
+          <p><q>When an error goes undetected, the effects can be implementation-dependent, implementation-defined, unspecified, or undefined.</q></p></li>
+          <li><a href="http://www.lispworks.com/documentation/HyperSpec/Body/01_db.htm">1.4.2 Error Terminology</a></li>
+        </ul>
 
       </section>
 
