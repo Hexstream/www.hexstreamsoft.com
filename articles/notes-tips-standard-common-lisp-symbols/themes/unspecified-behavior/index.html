@@ -694,6 +694,201 @@
                 <p><small>(In the notes section, which is technically not normative...)</small></p>
               </td>
             </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_cmp_ma.htm">Accessor COMPILER-MACRO-FUNCTION</a></th>
+              <td>
+                <p><q>The consequences are undefined if <var>environment</var> is non-nil in a use of setf of compiler-macro-function.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_f.htm">3.6 Traversal Rules and Side Effects</a></th>
+              <td>
+                <p><q>The consequences are undefined when code executed during an object-traversing operation destructively modifies the object in a way that might affect the ongoing traversal operation. In particular, the following rules apply. [...]</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_ce.htm">2.3.5 Valid Patterns for Tokens</a></th>
+              <td>
+                <p>[A few undefined patterns for tokens.]</p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_cjb.htm">22.3.10.2 Missing and Additional<br />FORMAT Arguments</a></th>
+              <td>
+                <p><q>The consequences are undefined if no <var>arg</var> remains for a directive requiring an argument. However, it is permissible for one or more <var>args</var> to remain unprocessed by a directive; such <var>args</var> are ignored.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/22_cia.htm">22.3.9.1 Tilde Semicolon: Clause Separator</a></th>
+              <td>
+                <p><q>This separates clauses in ~[ and ~&lt; constructs. The consequences of using it elsewhere are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_w_pkg_.htm">Macro WITH-PACKAGE-ITERATOR</a></th>
+              <td>
+                <p><q>The consequences are undefined if the local function named <var>name</var> established by with-package-iterator is called after it has returned false as its primary value.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_cmp.htm">Function COMPILE</a></th>
+              <td>
+                <p><q>The consequences are undefined if no <var>definition</var> is supplied when the <var>name</var> is nil.</q></p>
+                |
+                <p><q>The consequences are undefined if the lexical environment surrounding the function to be compiled contains any bindings other than those for macros, symbol macros, or declarations.</q></p>
+                <p><small>(!)</small></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_w_in_f.htm">Macro WITH-INPUT-FROM-STRING</a></th>
+              <td>
+                <p><q>The consequences are undefined if an attempt is made to assign the variable <var>var</var>.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/26_glo_i.htm">Glossary I</a></th>
+              <td>
+                <p><q>Except as explicitly indicated otherwise, implementations are not required to detect attempts to modify immutable objects or cells; the consequences of attempting to make such modification are undefined.</q></p>
+                |
+                <p><q>A conforming implementation is encouraged (but not required) to document its treatment of each item in this specification which is marked implementation-dependent, although in some cases such documentation might simply identify the item as ``undefined.''</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_df.htm">3.4.6 Boa Lambda Lists</a></th>
+              <td>
+                <p><q>If no default value is supplied for an aux variable variable, the consequences are undefined if an attempt is later made to read the corresponding slot's value before a value is explicitly assigned.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_del_pk.htm">Function DELETE-PACKAGE</a></th>
+              <td>
+                <p><q>The consequences of deleting the COMMON-LISP package or the KEYWORD package are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_call_m.htm">Local Macro CALL-METHOD, MAKE-METHOD</a></th>
+              <td>
+                <p><q>The consequences of attempting to use call-method outside of an effective method form are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dhh.htm">2.4.8.8 Sharpsign O</a></th>
+              <td>
+                <p><q>The consequences are undefined if the token immediately following the #O does not have the syntax of an octal (i.e., radix 8) rational.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/06_abaf.htm">6.1.2.1.6 The for-as-hash subclause</a></th>
+              <td>
+                <p><q>The order in which the keys are accessed is undefined;</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/s_the.htm">Special Operator THE</a></th>
+              <td>
+                <p><q>The consequences are undefined if any <var>result</var> is not of the declared type.</q></p>
+                <p><q>The consequences are undefined if the values yielded by the <var>form</var> are not of the type specified by <var>value-type</var>.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/14_abc.htm">14.1.2.3 General Restrictions on<br />Parameters that must be Lists</a></th>
+              <td>
+                <p><q>Except as explicitly specified otherwise, for any standardized function that takes a parameter that is required to be a list, the consequences are undefined if that list is circular.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/09_aba.htm">9.1.2.1 Condition Designators</a></th>
+              <td>
+                <p><q>* If the <var>datum</var> is a condition ... The denoted condition is the <var>datum</var> itself. In this case, unless otherwise specified by the description of the operator in question, the arguments must be null; that is, the consequences are undefined if any <var>arguments</var> were supplied.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_next_m.htm">Local Function NEXT-METHOD-P</a></th>
+              <td>
+                <p><q>The consequences of attempting to use next-method-p outside of a method-defining form are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/s_quote.htm">Special Operator QUOTE</a></th>
+              <td>
+                <p><q>The consequences are undefined if literal objects (including quoted objects) are destructively modified.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/s_throw.htm">Special Operator THROW</a></th>
+              <td>
+                <p><q>The consequences of the following are undefined [...] [an example]</q></p>
+                <p><small>(In the examples section, which is technically not normative...)</small></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_bbaa.htm">3.2.2.1.1 Purpose of Compiler Macros</a></th>
+              <td>
+                <p><q>The consequences are undefined if a compiler macro function destructively modifies any part of its form argument.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/16_ab.htm">16.1.2 Subtypes of STRING</a></th>
+              <td>
+                <p><q>the consequences are undefined if a character is inserted into a string for which the element type of the string does not include that character.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_call_n.htm">Local Function CALL-NEXT-METHOD</a></th>
+              <td>
+                <p><q>The consequences of attempting to use call-next-method outside of a method-defining form are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_comp_1.htm">Function COMPUTE-RESTARTS</a></th>
+              <td>
+                <p><q>Implementations are permitted, but not required, to return distinct lists from repeated calls to compute-restarts while in the same dynamic environment. The consequences are undefined if the list returned by compute-restarts is every (<i>sic</i>) modified.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_defstr.htm">Macro DEFSTRUCT</a></th>
+              <td>
+                <p><q>If no slot-initform is supplied, the consequences are undefined if an attempt is later made to read the slot's value before a value is explicitly assigned.</q></p>
+                |
+                <p><q>The consequences of redefining a defstruct structure are undefined.</q></p>
+                |
+                <p><q>The consequences are undefined if the <var>included-structure-name</var> does not name a structure type.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/m_defcla.htm">Macro DEFCLASS</a></th>
+              <td>
+                <p><q>The consequences of attempting to store in a slot a value that does not satisfy the type of the slot are undefined.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_eag.htm">3.5.1.7 Destructuring Mismatch</a></th>
+              <td>
+                <p><q>When matching a destructuring lambda list against a form, the pattern and the form must have compatible tree structure [...] Otherwise, [...] in an unsafe call the situation has undefined consequences.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/07_ec.htm">7.5.3 Inheritance of Slots and Slot Options</a></th>
+              <td>
+                <p><q>The contents of a slot will always be of type (and T1 ... Tn) where T1 ...Tn are the values of the :type slot options contained in all of the slot specifiers. If no slot specifier contains the :type slot option, the contents of the slot will always be of type t. The consequences of attempting to store in a slot a value that does not satisfy the type of the slot are undefined.</q></p>
+                <p><q>A consequence of the type rule is that the value of a slot satisfies the type constraint of each slot specifier that contributes to that slot. Because the result of attempting to store in a slot a value that does not satisfy the type constraint for the slot is undefined, the value in a slot might fail to satisfy its type constraint.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="file:///home/hexstream/quicklisp/HyperSpec/Body/f_mk_ar.htm">Function MAKE-ARRAY</a></th>
+              <td>
+                <p><q>If <var>initial-element</var> is not supplied, the consequences of later reading an uninitialized element of <var>new-array</var> are undefined unless either <var>initial-contents</var> is supplied or <var>displaced-to</var> is non-nil.</q></p>
+                <p><q>If <var>initial-contents</var> is not supplied, the consequences of later reading an uninitialized element of <var>new-array</var> are undefined unless either <var>initial-element</var> is supplied or <var>displaced-to</var> is non-nil.</q></p>
+                |
+                <p><q>If <var>displaced-to</var> is non-nil, make-array will create a displaced array and <var>displaced-to</var> is the target of that displaced array. In that case, the consequences are undefined if the actual array element type of <var>displaced-to</var> is not type equivalent to the actual array element type of the array being created.</q></p>
+              </td>
+            </tr>
+            <tr>
+              <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/07_ac.htm">7.1.3 Defaulting of Initialization Arguments</a></th>
+              <td>
+                <p><q>The order of evaluation of default value forms for initialization arguments and the order of evaluation of :initform forms are undefined. If the order of evaluation is important, initialize-instance or shared-initialize methods should be used instead.</q></p>
+              </td>
+            </tr>
           </tbody>
         </table>
 
