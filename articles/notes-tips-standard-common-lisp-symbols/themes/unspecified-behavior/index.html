@@ -1312,103 +1312,71 @@
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/06_ac.htm">6.1.3 Value Accumulation Clauses</a></th>
               <td>
-                <p><q></q></p>
+                <p>For for <code>count</code>, <code>maximize</code>, <code>minimize</code>, and <code>sum</code>:</p>
+                <p><q>If <code>into <var>var</var></code> is used, a type can be supplied for <var>var</var> with the <var>type-spec</var> argument; the consequences are unspecified if a nonnumeric type is supplied.</q></p>
+                |
+                <p><q>If the <code>maximize</code> or <code>minimize</code> clause is never executed, the accumulated value is unspecified.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/11_aabd.htm">11.1.1.2.4 Locating a Symbol in a Package</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>When a symbol is to be located in a given package the following occurs: [...] The external symbols of the used packages are searched in some unspecified order. The order does not matter; see the rules for handling name conflicts listed below.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/03_bca.htm">3.2.3.1 Processing of Top Level Forms</a></th>
               <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/t_satisf.htm">Type Specifier SATISFIES</a></th>
-              <td>
-                <p><q></q></p>
+                <p><q>Note that top level forms are processed in the order in which they textually appear in the file and that each top level form read by the compiler is processed before the next is read. However, the order of processing (including macro expansion) of subforms that are not top level forms and the order of further compilation is unspecified as long as Common Lisp semantics are preserved.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_mk_ar.htm">Function MAKE-ARRAY</a></th>
               <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/12_aaa.htm">12.1.1.1 Associativity and Commutativity<br />in Numeric Operations</a></th>
-              <td>
-                <p><q></q></p>
+                <p><q>When an array A is given as the :displaced-to argument to make-array when creating array B [...] The consequences are unspecified if the total size of A is smaller than the sum of the total size of B plus the offset n supplied by the displaced-index-offset. </q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_mk_pkg.htm">Function MAKE-PACKAGE</a></th>
               <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_map.htm">Function MAP</a></th>
-              <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if packages denoted by use do not exist.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/e_storag.htm">Condition Type STORAGE-CONDITION</a></th>
               <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_mk_seq.htm">Function MAKE-SEQUENCE</a></th>
-              <td>
-                <p><q></q></p>
+                <p><q>While some Common Lisp operations might signal storage-condition because they are defined to create objects, it is unspecified whether operations that are not defined to create objects create them anyway and so might also signal storage-condition. [...]</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/d_ignore.htm">Declaration IGNORE, IGNORABLE</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The stream variables established by with-open-file, with-open-stream, with-input-from-string, and with-output-to-string, and all iteration variables are, by definition, always ``used''. Using <code>(declare (ignore <var>v</var>))</code>, for such a variable <var>v</var> has unspecified consequences.</q></p>
+                <p><small>(!)</small></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_open.htm">Function OPEN</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if a character is written that cannot be represented by the given external file format.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/v_cmp_fi.htm">Variable *COMPILE-FILE-PATHNAME*,<br />*COMPILE-FILE-TRUENAME*</a></th>
               <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/t_member.htm">Type Specifier MEMBER</a></th>
-              <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if an attempt is made to assign or bind either of these variables.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_mk_ld_.htm">Standard Generic Function<br />MAKE-LOAD-FORM</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>[...] Where these rules do not uniquely determine an order of evaluation between two creation/initialization forms, the order of evaluation is unspecified.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/17_ba.htm">17.2.1 Satisfying a Two-Argument Test</a></th>
               <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_concat.htm">Function CONCATENATE</a></th>
-              <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if both a :test and a :test-not argument are supplied in the same call to F.</q></p>
               </td>
             </tr>
           </tbody>
