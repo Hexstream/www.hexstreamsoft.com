@@ -1062,265 +1062,251 @@
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_defmac.htm">Macro DEFMACRO</a></th>
               <td>
-                <p><q></q></p>
+                <p>[An example of unspecified behavior.]</p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/03_bbac.htm">3.2.2.1.3 When Compiler Macros Are Used</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>There are two situations in which a compiler macro definition must not be applied by any language processor: [...] It is unspecified whether compiler macros are expanded or used in any other situations.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_slt_va.htm">Function SLOT-VALUE</a></th>
               <td>
-                <p><q></q></p>
+                <p>Attempting to read from or write to a slot for an object that doesn't have a slot with that name and that has a metaclass other than standard-class or built-in-class.</p>
+                <p><q>an error might or might not be signaled in this situation. Note in particular that the behavior for conditions and structures is not specified.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/d_optimi.htm">Declaration OPTIMIZE</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if a <var>quality</var> appears more than once with different <var>values</var>.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/03_dk.htm">3.4.11 Syntactic Interaction of<br />Documentation Strings and Declarations</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if more than one such documentation string is present.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_w_hash.htm">Macro WITH-HASH-TABLE-ITERATOR</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>It is unspecified what happens if any of the implicit interior state of an iteration is returned outside the dynamic extent of the with-hash-table-iterator form such as by returning some closure over the invocation form.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_multip.htm">Macro MULTIPLE-VALUE-BIND</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if a type declaration is specified for a <var>var</var>, but the value to which that <var>var</var> is bound is not consistent with the type <var>declaration</var>.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/03_bdd.htm">3.2.4.4 Additional Constraints<br />on Externalizable Objects</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>symbol: In order to guarantee that compiled files can be loaded correctly, users must ensure that the packages referenced in those files are defined consistently at compile time and load time. Conforming programs must satisfy the following requirements: [...] If any of these conditions do not hold, the package in which the loader looks for the affected symbols is unspecified. Implementations are permitted to signal an error or to define this behavior.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_rst_ca.htm">Macro RESTART-CASE</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if an unnamed restart is specified but no :report option is provided.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_adjust.htm">Function ADJUST-ARRAY</a></th>
               <td>
-                <p><q></q></p>
+                <p><q><var>element-type</var> specifies the type of the elements of the resulting array. If <var>element-type</var> is supplied, the consequences are unspecified if the upgraded array element type of <var>element-type</var> is not the same as the actual array element type of <var>array</var>.</q></p>
+                <p><small>(!)</small></p>
+                |
+                <p><q>The consequences are unspecified if <var>array</var> is adjusted to a size smaller than its fill pointer without supplying the <var>fill-pointer</var> argument so that its fill-pointer is properly adjusted in the process.</q></p>
+                |
+                <p><q>If A is displaced to B, the consequences are unspecified if B is adjusted in such a way that it no longer has enough elements to satisfy A.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_declai.htm">Macro DECLAIM</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>As with other defining macros, it is unspecified whether or not the compile-time side-effects of a declaim persist after the file has been compiled.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/01_eb.htm">1.5.2 Conforming Programs</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Conforming code shall not depend on the consequences of undefined or unspecified situations.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_ppr_lo.htm">Macro PPRINT-LOGICAL-BLOCK</a></th>
               <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/04_bc.htm">4.2.3 Type Specifiers</a></th>
-              <td>
-                <p><q></q></p>
+                <p><q>pprint-logical-block and the pretty printing stream it creates have dynamic extent. The consequences are undefined if, outside of this extent, output is attempted to the pretty printing stream it creates.</q></p>
+                <p><q>It is also unspecified what happens if, within this extent, any output is sent directly to the underlying destination stream.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/09_a.htm">9.1 Condition System Concepts</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>When an error goes undetected, the effects can be implementation-dependent, implementation-defined, unspecified, or undefined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_sl.htm">Function /</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if any argument other than the first is zero.</q></p>
+                |
+                <p><q>If there is only one argument, the consequences are unspecified if it is zero.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/19_caah.htm">19.3.1.1.8 Other Syntax<br />in a Logical Pathname Namestring</a></th>
               <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_merge.htm">Function MERGE</a></th>
-              <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_cmp_fi.htm">Function COMPILE-FILE</a></th>
-              <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/t_eql.htm">Type Specifier EQL</a></th>
-              <td>
-                <p><q></q></p>
+                <p><q>The consequences of using characters other than those specified here in a logical pathname namestring are unspecified.</q></p>
+                <p><q>The consequences of using any value not specified here as a logical pathname component are unspecified.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/03_ba.htm">3.2.1 Compiler Terminology</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>It is unspecified whether a definition available in the compilation environment can be used in an evaluation initiated in the startup environment or evaluation environment.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/03_bbc.htm">3.2.2.3 Semantic Constraints</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>A call within a file to a named function that is defined in the same file refers to that function, unless that function has been declared notinline. The consequences are unspecified if functions are redefined individually at run time or multiply defined in the same file.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/02_caa.htm">2.3.1.1 Potential Numbers as Tokens</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences of the use of notation such as :1, :1/2, and :2^3 in a position where an expression appropriate for read is expected are unspecified.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/01_db.htm">1.4.2 Error Terminology</a></th>
               <td>
-                <p><q></q></p>
+                <p>[TODO]</p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/v_ld_pns.htm">Variable *LOAD-PATHNAME*,<br />*LOAD-TRUENAME*</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if an attempt is made to assign or bind either of these variables.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/01_f.htm">1.6 Language Extensions</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>A language extension is any documented implementation-defined behavior of a defined name in this standard that varies from the behavior described in this standard, or a documented consequence of a situation that the standard specifies as undefined, unspecified, or extendable by the implementation. For example, if this standard says that ``the results are unspecified,'' an extension would be to specify the results.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_defi_5.htm">Macro DEFINE-CONDITION</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if an attempt is made to assign the slots by using setf.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_maphas.htm">Function MAPHASH</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if any attempt is made to add or remove an entry from the <var>hash-table</var> while a maphash is in progress, with two exceptions: the <var>function</var> can use can use setf of gethash to change the value part of the entry currently being processed, or it can use remhash to remove that entry.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/18_ab.htm">18.1.2 Modifying Hash Table Keys</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>If an object O1 is used as a key in a hash table H and is then visibly modified with regard to the equivalence test of H, then the consequences are unspecified if O1, or any object O2 equivalent to O1 under the equivalence test (either before or after the modification), is used as a key in further operations on H. The consequences of using O1 as a key are unspecified even if O1 is visibly modified and then later modified again in such a way as to undo the visible modification.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/03_bdbb.htm">3.2.4.2.2 Definition of Similarity</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Two hash tables S and C are similar if they meet the following three requirements: [...] If there is more than one possible one-to-one correspondence between the keys of S and C, the consequences are unspecified. A conforming program cannot use a table such as S as an externalizable constant.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/t_fn.htm">System Class FUNCTION</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Consider a declaration of the following form: [...] This declaration has the interpretation that, within the scope of the declaration, the consequences are unspecified if the value of <var>fn-valued-variable</var> is called with arguments not of the specified types; the value resulting from a valid call will be of type <var>val-type</var>.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_desc_1.htm">Standard Generic Function<br />DESCRIBE-OBJECT</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The reason for making the return values for describe-object unspecified is to avoid forcing users to include explicit (values) in all of their methods. describe takes care of that.</q></p>
+                <p><small>(In the notes section, which is technically not normative...)</small></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_find_r.htm">Function FIND-RESTART</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Although anonymous restarts have a name of nil, the consequences are unspecified if nil is given as an <var>identifier</var>. Occasionally, programmers lament that nil is not permissible as an <var>identifier</var> argument. In most such cases, compute-restarts can probably be used to simulate the desired effect.</q></p>
+                <p><small>(In the notes section, which is technically not normative...)</small></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_close.htm">Function CLOSE</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>For a stream created with make-string-output-stream, the result of get-output-stream-string is unspecified after close.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/07_ae.htm">7.1.5 Shared-Initialize</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>If the second argument specifies a name that does not correspond to any slots accessible in the instance, the results are unspecified.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/02_ce.htm">2.3.5 Valid Patterns for Tokens</a></th>
               <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_cmp__1.htm">Function COMPILE-FILE-PATHNAME</a></th>
-              <td>
-                <p><q></q></p>
+                <p><q>A summary of rules concerning package markers follows. [...] The consequences are unspecified if any other pattern of package markers in a token is used. All other uses of package markers within names of symbols are not defined by this standard but are reserved for implementation-dependent use.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_w_pkg_.htm">Macro WITH-PACKAGE-ITERATOR</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>It is unspecified whether symbols inherited from multiple packages are returned more than once. The order of symbols returned does not necessarily reflect the order of packages in <var>package-list</var>. When <var>package-list</var> has more than one element, it is unspecified whether duplicate symbols are returned once or more than once.</q></p>
+                |
+                <p><q>It is unspecified what happens if any of the implicit interior state of an iteration is returned outside the dynamic extent of the with-package-iterator form such as by returning some closure over the invocation form.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_unrd_c.htm">Function UNREAD-CHAR</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Invoking peek-char or read-char commits all previous characters. The consequences of invoking unread-char on any character preceding that which is returned by peek-char (including those passed over by peek-char that has a non-nil <var>peek-type</var>) are unspecified. In particular, the consequences of invoking unread-char after peek-char are unspecified.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/26_glo_i.htm">Glossary I</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>implementation-dependent adj. describing a behavior or aspect of Common Lisp which has been deliberately left unspecified, that might be defined in some conforming implementations but not in others, and whose details may differ between implementations. A conforming implementation is encouraged (but not required) to document its treatment of each item in this specification which is marked implementation-dependent, although in some cases such documentation might simply identify the item as ``undefined.''</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_ldiffc.htm">Function LDIFF, TAILP</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>If the list is a circular list, tailp will reliably yield a value only if the given <var>object</var> is in fact a tail of <var>list</var>. Otherwise, the consequences are unspecified: a given implementation which detects the circularity must return false, but since an implementation is not obliged to detect such a situation, tailp might just loop indefinitely without returning in that case.</q></p>
+                <p><small>(In the notes section, which is technically not normative...)</small></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_del_pk.htm">Function DELETE-PACKAGE</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences of invoking any other package operation [than packagep or package-name] on <var>package</var> once it has been deleted are unspecified. In particular, the consequences of invoking find-symbol, intern and other functions that look for a symbol name in a package are unspecified if they are called with *package* bound to the deleted <var>package</var> or with the deleted <var>package</var> as an argument.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_alloca.htm">Standard Generic Function<br />ALLOCATE-INSTANCE</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The generic function allocate-instance creates and returns a new instance of the class, without initializing it. When the <var>class</var> is a standard class, this means that the slots are unbound; when the class is a structure class, this means the slots' values are unspecified.</q></p>
+                <p><q>The consequences of adding methods to allocate-instance is unspecified. This capability might be added by the Metaobject Protocol.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_defi_1.htm">Macro DEFINE-SYMBOL-MACRO</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The consequences are unspecified if a special declaration is made for <var>symbol</var> while in the scope of this definition (i.e., when it is not shadowed[2] by a binding for a variable or symbol macro named by the same symbol).</q></p>
               </td>
             </tr>
             <tr>
