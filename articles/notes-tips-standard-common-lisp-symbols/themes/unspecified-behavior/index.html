@@ -1403,163 +1403,164 @@
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/02_cd.htm">2.3.4 Symbols as Tokens</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>In the process of parsing a symbol, it is implementation-dependent which implementation-defined attributes are removed from the characters forming a token that represents a symbol.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/19_bbaa.htm">19.2.2.1.1 Special Characters<br />in Pathname Components</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Whether separator characters are permitted as part of a string in a pathname component is implementation-defined; however, if the implementation does permit it, it must arrange to properly ``quote'' the character for the file system when constructing a namestring.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_dribbl.htm">Function DRIBBLE</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>If dribble is called while a stream to a ``dribble file'' is still open from a previous call to dribble, the effect is implementation-defined. For example, the already-open stream might be closed, or dribbling might occur both to the old stream and to a new one, or the old stream might stay open but not receive any further output, or the new request might be ignored, or some other action might be taken.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/05_abe.htm">5.1.2.5 APPLY Forms as Places</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>No other standardized function is required to be supported, but an implementation may define such support. An implementation may also define support for implementation-defined operators.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/v_most_1.htm">Constant Variable<br />MOST-POSITIVE-SHORT-FLOAT...</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>These constant variables provide a way for programs to examine the implementation-defined limits for the various float formats.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/19_bbbc.htm">19.2.2.2.3 :UNSPECIFIC as a Component Value</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Whether a value of :unspecific is permitted for any component on any given file system accessible to the implementation is implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/19_ab.htm">19.1.2 Pathnames as Filenames</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The nature of the mapping between structure imposed by pathnames and the structure, if any, that is used by the underlying file system is implementation-defined.</q></p>
+                <p><q>The mapping of the pathname components into the concepts peculiar to each file system is implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/22_aaa.htm">22.1.1.1 Multiple Possible Textual Representations</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>there might [...] be implementation-defined printer control variables.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/d_optimi.htm">Declaration OPTIMIZE</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>There may be other, implementation-defined optimize qualities.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/13_ac.htm">13.1.3 Character Attributes</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Additional, implementation-defined attributes of characters are also permitted so that, for example, two characters with the same code may differ in some other, implementation-defined way.</q></p>
+                |
+                <p><q>For any implementation-defined attribute there is a distinguished value called the null value for that attribute. A character for which each implementation-defined attribute has the null value for that attribute is called a simple character. If the implementation has no implementation-defined attributes, then all characters are simple characters.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/01_ddm.htm">1.4.4.13 The ``Method Signature'' Section<br />of a Dictionary Entry</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>For each parameter, the argument supplied must be in the intersection of the type specified in the description of the corresponding generic function and the type given in the signature of some method (including not only those methods defined in this specification, but also implementation-defined or user-defined methods in situations where the definition of such methods is permitted).</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/19_aa.htm">19.1.1 Namestrings as Filenames</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>In general, the syntax of namestrings involves the use of implementation-defined conventions, usually those customary for the file system in which the named file resides.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_dir.htm">Function DIRECTORY</a></th>
               <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_upper_.htm">Function UPPER-CASE-P,<br />LOWER-CASE-P,<br />BOTH-CASE-P</a></th>
-              <td>
-                <p><q></q></p>
+                <p><q>An implementation may be extended to accept implementation-defined keyword arguments to directory.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/v_termin.htm">Variable *TERMINAL-IO*</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The effect of changing the value of *terminal-io*, either by binding or assignment, is implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/09_a.htm">9.1 Condition System Concepts</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>An error is a situation in which normal program execution cannot continue correctly without some form of intervention (either interactively by the user or under program control). Not all errors are detected. When an error goes undetected, the effects can be implementation-dependent, implementation-defined, unspecified, or undefined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_time.htm">Macro TIME</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The nature and format of the printed information is implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/t_broadc.htm">System Class BROADCAST-STREAM</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The functions input-stream-p and interactive-stream-p return an implementation-defined, generalized boolean value.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_cmp_fi.htm">Function COMPILE-FILE</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>output-file---a pathname designator. The default is implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/13_adb.htm">13.1.4.2 Alphabetic Characters</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Any implementation-defined character that has case must be alphabetic[1]. For each implementation-defined graphic character that has no case, it is implementation-defined whether that character is alphabetic[1].</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_tr_pn.htm">Function TRANSLATE-PATHNAME</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>A ``wildcard field'' is a pathname component with a value of :wild, a :wild element of a list-valued directory component, or an implementation-defined portion of a component, such as the "*" in the complex wildcard string "foo*bar" that some implementations support. An implementation that adds other wildcard features, such as regular expressions, must define how translate-pathname extends to those features.</q></p>
+                |
+                <p><q>The portion of <var>source</var> that is copied into the resulting pathname is implementation-defined.</q></p>
+                |
+                <p><q>During the copying of a portion of <var>source</var> into the resulting pathname, additional implementation-defined translations of case or file naming conventions might occur, especially when <var>from-wildcard</var> and <var>to-wildcard</var> are for different hosts.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_char_i.htm">Function CHAR-INT</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>If character has no implementation-defined attributes, the results of char-int and char-code are the same.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/13_aba.htm">13.1.2.1 Character Scripts</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The number of such sets and boundaries between them is implementation-defined. Common Lisp does not require these sets to be types, but an implementation is permitted to define such types as an extension. Since no character from one script can ever be a member of another script, it is generally more useful to speak about character repertoires.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/13_ai.htm">13.1.9 Character Encodings</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>A character is sometimes represented merely by its code, and sometimes by another integer value which is composed from the code and all implementation-defined attributes (in an implementation-defined way that might vary between Lisp images even in the same implementation).</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/21_aaac.htm">21.1.1.1.3 Interactive Streams</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The precise meaning of an interactive stream is implementation-defined, and may depend on the underlying operating system.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_defpar.htm">Macro DEFPARAMETER, DEFVAR</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>There may be additional (implementation-defined) compile-time or run-time side effects, as long as such effects do not interfere with the correct operation of conforming programs.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/t_fixnum.htm">Type FIXNUM</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>A fixnum is an integer whose value is between most-negative-fixnum and most-positive-fixnum inclusive. Exactly which integers are fixnums is implementation-defined. The type fixnum is required to be a supertype of (signed-byte 16).</q></p>
               </td>
             </tr>
             <tr>
