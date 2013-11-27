@@ -1565,164 +1565,165 @@
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/01_eba.htm">1.5.2.1 Use of Implementation-Defined<br />Language Features</a></th>
-              <td>
-                <p><q></q></p>
-              </td>
+              <td></td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/01_db.htm">1.4.2 Error Terminology</a></th>
-              <td>
-                <p><q></q></p>
-              </td>
+              <td></td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_chareq.htm">Function CHAR=, CHAR/=, CHAR&lt;, CHAR&gt;...</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>char= returns true if all characters are the same; otherwise, it returns false. If two characters differ in any implementation-defined attributes, then they are not char=.</q></p>
+                <p><q>If two characters have identical implementation-defined attributes, then their ordering by char&lt; is consistent with the numerical ordering by the predicate char&lt; on their codes.</q></p>
+                <p><q>char-equal, char-not-equal, char-lessp, char-greaterp, char-not-greaterp, and char-not-lessp are similar to char=, char/=, char&lt;, char&gt;, char&lt;=, char&gt;=, respectively, except that they ignore differences in case and might have an implementation-defined behavior for non-simple characters. For example, an implementation might define that char-equal, etc. ignore certain implementation-defined attributes. The effect, if any, of each implementation-defined attribute upon these functions must be specified as part of the definition of that attribute.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_step.htm">Macro STEP</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The specific nature of the interaction, including which I/O streams are used and whether the stepping has lexical or dynamic scope, is implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/01_f.htm">1.6 Language Extensions</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>A language extension is any documented implementation-defined behavior of a defined name in this standard that varies from the behavior described in this standard, or a documented consequence of a situation that the standard specifies as undefined, unspecified, or extendable by the implementation.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/01_dde.htm">1.4.4.5 The ``Class Precedence List'' Section<br />of a Dictionary Entry</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>It is permissible for other (implementation-defined) classes to appear in the implementation's class precedence list for the class.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/25_aa.htm">25.1.1 Top level loop</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The top level loop is not completely specified; thus the user interface is implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/19_caaa.htm">19.3.1.1.1 The Host part<br />of a Logical Pathname Namestring</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The logical pathname host name "SYS" is reserved for the implementation. The existence and meaning of SYS: logical pathnames is implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/19_bbdf.htm">19.2.2.4.6 Restrictions on Examining<br />a Pathname Version Component</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Other symbols [than nil, :unspecific and :wild] and integers have implementation-defined meaning.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/01_eab.htm">1.5.1.2 Documentation of<br />Implementation-Dependent Features</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>A conforming implementation shall be accompanied by a document that provides a definition of all implementation-defined aspects of the language defined by this specification.</q></p>
+                <p><small>(Does any existing implementation actually do this??)</small></p>
+                <p></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/01_dac.htm">1.4.1.3 Special Symbols</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Common Lisp specifies input and output with respect to a non-interactive stream model. The specific details of how interactive input and output are mapped onto that non-interactive model are implementation-defined.</q></p>
+                <p><q>Sometimes, the non-interactive stream model calls for a newline. How that newline character is interactively entered is an implementation-defined detail of the user interface [...]</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/26_glo_d.htm">Glossary D</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>debugger n. a facility that allows the user to handle a condition interactively. For example, the debugger might permit interactive selection of a restart from among the active restarts, and it might perform additional implementation-defined services for the purposes of debugging.</q></p>
+                <p><q>derived type n. a type specifier which is defined in terms of an expansion into another type specifier. deftype defines derived types, and there may be other implementation-defined operators which do so as well.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_ed.htm">Function ED</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>If <var>x</var> is a function name, the text of its definition is edited. The means by which the function text is obtained is implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/26_glo_p.htm">Glossary P</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>printer control variable n. a variable whose specific purpose is to control some action of the Lisp printer; that is, one of the variables in Figure 22-1, or else some implementation-defined variable which is defined by the implementation to be a printer control variable.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/03_bdbb.htm">3.2.4.2.2 Definition of Similarity</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Implementations providing additional, implementation-defined attributes must define whether and how non-simple characters can be regarded as similar.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_char_u.htm">Function CHAR-UPCASE, CHAR-DOWNCASE</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The result only ever differs from character in its code attribute; all implementation-defined attributes are preserved.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/22_caa.htm">22.3.1.1 Tilde C: Character</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>~C prints the character as if by using write-char if it is a simple character. Characters that are not simple are not necessarily printed as if by write-char, but are displayed in an implementation-defined, abbreviated format.</q></p>
+                <p><q>~:C is the same as ~C for printing characters, but other characters are ``spelled out.'' [...] For characters that are not simple and not printing, what is spelled out is implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/m_w_std_.htm">Macro WITH-STANDARD-IO-SYNTAX</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>Within the dynamic extent of the body of forms, all reader/printer control variables, including any implementation-defined ones not specified by this standard, are bound to values that produce standard read/print behavior.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_logica.htm">Accessor<br />LOGICAL-PATHNAME-TRANSLATIONS</a></th>
               <td>
-                <p><q></q></p>
-              </td>
-            </tr>
-            <tr>
-              <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/v_pr_rda.htm">Variable *PRINT-READABLY*</a></th>
-              <td>
-                <p><q></q></p>
+                <p><q>Returns the host's list of translations. Each translation is a list of at least two elements: from-wildcard and to-wildcard. Any additional elements are implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_cmp__1.htm">Function COMPILE-FILE-PATHNAME</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>output-file---a pathname designator. The default is implementation-defined.</q></p>
+                <p><q>The defaults for the output-file are taken from the pathname that results from merging the input-file with the value of *default-pathname-defaults*, except that the type component should default to the appropriate implementation-defined default type for compiled files.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/t_short_.htm">Type SHORT-FLOAT, SINGLE-FLOAT,<br />DOUBLE-FLOAT, LONG-FLOAT</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>The precise definition of these categories is implementation-defined.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/t_base_c.htm">Type BASE-CHAR</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>No upper bound is specified for the number of characters in the base-char repertoire; the size of that repertoire is implementation-defined. The lower bound is 96, the number of standard characters.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/26_glo_i.htm">Glossary I</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>I/O customization variable n. one of the stream variables in the next figure, or some other (implementation-defined) stream variable that is defined by the implementation to be an I/O customization variable.</q></p>
+                <p><q>implementation-defined adj. implementation-dependent, but required by this specification to be defined by each conforming implementation and to be documented by the corresponding implementor.</q></p>
+                <p><q>internal time unit n. a unit of time equal to 1/n of a second, for some implementation-defined integer value of n. See the variable internal-time-units-per-second.</q></p>
+                <p><q>iteration form n. a compound form whose operator is named in the next figure, or a compound form that has an implementation-defined operator and that is defined by the implementation to be an iteration form.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/22_acg.htm">22.1.3.7 Printing Other Vectors</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>If *print-readably* is true, the vector prints in an implementation-defined manner; see the variable *print-readably*.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/f_procla.htm">Function PROCLAIM</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>An implementation is free to support other (implementation-defined) declaration identifiers as well.</q></p>
               </td>
             </tr>
             <tr>
               <th><a href="/home/hexstream/quicklisp/HyperSpec/Body/13_ad.htm">13.1.4 Character Categories</a></th>
               <td>
-                <p><q></q></p>
+                <p><q>There are several (overlapping) categories of characters that have no formally associated type but that are nevertheless useful to name. They include [...] For each implementation-defined attribute of a character, the documentation for that implementation must specify whether characters that differ only in that attribute are permitted to differ in whether are not they are members of one of the aforementioned categories.</q></p>
               </td>
             </tr>
             <tr>
