@@ -6,7 +6,7 @@
 
 #content ol li.tree {
     background-color: rgba(0, 0, 0, 0.05);
-    border: thin solid black;
+    border: thin solid gray;
     padding: 0.2em 0.4em;
 }
 
