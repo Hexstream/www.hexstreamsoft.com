@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Checklists | Worknotes | HexstreamSoft</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
     <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
     <script type="text/javascript">
 
@@ -78,7 +79,7 @@
 
     </nav>
 
-    <p id="last-updated">This page was last updated on <time datetime="2014-01-28">28 january 2014</time>.</p>
+    <p id="last-updated">This page was last updated on <time datetime="2014-01-31">31 january 2014</time>.</p>
 
     <div id="content">
       <header id="page-header">
@@ -86,7 +87,42 @@
         <p class="description">Consistent execution of multi-step procedures.</p>
       </header>
 
-      Stub.
+      <section>
+        <h1>Creating a new project</h1>
+        <ol>
+          <li>
+            Create local repository:
+            <ol>
+              <li><code>cp -r hexstream-project-template <var>new-project</var></code></li>
+              <li><code>cd <var>new-project</var>/master</code></li>
+              <li><code>rm -rf .git</code></li>
+              <li><code>git init</code></li>
+              <li>Remove, rename and add files as necessary.</li>
+              <li>Update file contents as necessary (especially README if there is one).</li>
+              <li><code>git add .</code></li>
+              <li><code>git commit -m 'Initial commit.'</code></li>
+            </ol>
+          </li>
+          <li>
+            Create repository on <a href="https://github.com/">github</a>:
+            <ol>
+              <li>Create repository, usually reusing the description from README.</li>
+              <li>Follow on-screen instructions for "existing repository" (add remote, push)</li>
+              <li>Refresh page.</li>
+            </ol>
+          </li>
+          <li>
+            Update worknotes:
+            <ol>
+              <li>Add link to project in the appropriate category.</li>
+              <li>Add project entry in the appropriate table.</li>
+              <li>Cross-reference from appropriate metaprojects.</li>
+              <li>Update "last updated" date.</li>
+              <li>Commit, push to live (website), push to origin (github).</li>
+            </ol>
+          </li>
+        </ol>
+      </section>
 
     </div>
 
