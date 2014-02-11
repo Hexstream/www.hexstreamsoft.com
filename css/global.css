@@ -197,6 +197,10 @@ table {
     border: solid medium gray;
 }
 
+table th.supercolumn {
+    text-align: center;
+}
+
 table table {
     margin-top: 0;
     margin-bottom: 0;
