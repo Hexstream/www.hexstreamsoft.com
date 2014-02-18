@@ -2,10 +2,6 @@
     padding: 0.4em 0.6em;
 }
 
-#content table a {
-    text-decoration: none;
-}
-
 #content table .latest-date, #content table .quicklisp-since {
     text-align: right;
 }

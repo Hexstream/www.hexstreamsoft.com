@@ -197,6 +197,10 @@ table {
     border: solid medium gray;
 }
 
+table th > a:only-child, table td > a:only-child {
+    text-decoration: none;
+}
+
 table th.supercolumn {
     text-align: center;
 }
