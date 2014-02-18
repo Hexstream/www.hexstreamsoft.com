@@ -348,6 +348,12 @@ table tr > th:first-child {
     text-align: right;
 }
 
+table tr > th.library-name {
+    text-align: left;
+}
+
+
+
 li + li {
     margin-top: 0.5em;
 }

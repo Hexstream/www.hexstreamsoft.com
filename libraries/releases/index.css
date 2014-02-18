@@ -1,11 +1,3 @@
-#content th {
-    text-align: center;
-}
-
-#content th.name {
-    text-align: left;
-}
-
 #content th, #content td {
     padding: 0.4em 0.6em;
 }
