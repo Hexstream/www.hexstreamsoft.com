@@ -35,6 +35,22 @@
 
         <div class="level-separator"></div>
 
+        <nav class="navbox" id="releases_navbox">
+          <h1>
+            <a class="here">
+              Releases
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </a>
+          </h1>
+          <ul>
+            <li><a href="latest-versions/">Latest versions</a></li>
+            <li><a href="timeline/">Timeline</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
         <nav id="projects_navbox" class="navbox">
           <h1>
             <a href="../">Libraries</a>
@@ -70,7 +86,7 @@
 
     </nav>
 
-    <p id="last-updated">This page was last updated on <time datetime="2014-02-10">10 february 2014</time>.</p>
+    <p id="last-updated">This page was last updated on <time datetime="2014-02-18">18 february 2014</time>.</p>
 
     <div id="content">
 
@@ -79,128 +95,23 @@
         <p class="description">Quicklisp automatically handles everything, for the most part.</p>
       </header>
 
-      <table>
-        <thead>
-          <tr>
-            <th rowspan="2" class="library-name">Library name</th>
-            <th colspan="2" class="supercolumn">Latest release</th>
-            <th colspan="2" class="supercolumn">Quicklisp availability</th>
-          </tr>
-          <tr>
-            <th class="latest-version">Version</th>
-            <th class="latest-date">Date</th>
-            <th class="quicklisp-latest">Version</th>
-            <th class="quicklisp-since">Unchanged since</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr id="map-bind">
-            <th class="library-name"><a href="../map-bind/">map-bind</a></th>
-            <td class="latest-version"><a href="../map-bind/map-bind_latest.tar.gz">1.0</a></td>
-            <td class="latest-date">8 aug 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/08/august-2012-update-now-available.html">August 2012</a></td>
-          </tr>
-          <tr id="positional-lambda">
-            <th class="library-name"><a href="../positional-lambda/">positional-lambda</a></th>
-            <td class="latest-version"><a href="../positional-lambda/positional-lambda_latest.tar.gz">2.0</a></td>
-            <td class="latest-date">30 sept 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/10/october-2012-dist-update-now-available.html">October 2012</a></td>
-          </tr>
-          <tr id="enhanced-eval-when">
-            <th class="library-name"><a href="../enhanced-eval-when/">enhanced-eval-when</a></th>
-            <td class="latest-version"><a href="../enhanced-eval-when/enhanced-eval-when_latest.tar.gz">1.0</a></td>
-            <td class="latest-date">29 oct 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
-          </tr>
-          <tr id="enhanced-multiple-value-bind">
-            <th class="library-name"><a href="../enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a></th>
-            <td class="latest-version"><a href="../enhanced-multiple-value-bind/enhanced-multiple-value-bind_latest.tar.gz">1.0.1</a></td>
-            <td class="latest-date">23 oct 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
-          </tr>
-          <tr id="macro-level">
-            <th class="library-name"><a href="../macro-level/">macro-level</a></th>
-            <td class="latest-version"><a href="../macro-level/macro-level_latest.tar.gz">1.0.1</a></td>
-            <td class="latest-date">4 oct 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/10/october-2012-dist-update-now-available.html">October 2012</a></td>
-          </tr>
-          <tr id="cartesian-product-switch">
-            <th class="library-name"><a href="../cartesian-product-switch/">cartesian-product-switch</a></th>
-            <td class="latest-version"><a href="../cartesian-product-switch/cartesian-product-switch_latest.tar.gz">2.0</a></td>
-            <td class="latest-date">2 sept 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/09/september-2012-update-now-available.html">September 2012</a></td>
-          </tr>
-          <tr id="place-modifiers">
-            <th class="library-name"><a href="../place-modifiers/">place-modifiers</a></th>
-            <td class="latest-version"><a href="../place-modifiers/place-modifiers_latest.tar.gz">2.1</a></td>
-            <td class="latest-date">22 oct 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
-          </tr>
-          <tr id="anaphoric-variants">
-            <th class="library-name"><a href="../anaphoric-variants/">anaphoric-variants</a></th>
-            <td class="latest-version"><a href="../anaphoric-variants/anaphoric-variants_latest.tar.gz">1.0.1</a></td>
-            <td class="latest-date">22 sept 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/10/october-2012-dist-update-now-available.html">October 2012</a></td>
-          </tr>
-          <tr id="multiple-value-variants">
-            <th class="library-name"><a href="../multiple-value-variants/">multiple-value-variants</a></th>
-            <td class="latest-version"><a href="../multiple-value-variants/multiple-value-variants_latest.tar.gz">1.0</a></td>
-            <td class="latest-date">10 nov 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
-          </tr>
-          <tr id="parse-number-range">
-            <th class="library-name"><a href="../parse-number-range/">parse-number-range</a></th>
-            <td class="latest-version"><a href="../parse-number-range/parse-number-range_latest.tar.gz">1.0</a></td>
-            <td class="latest-date">26 oct 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
-          </tr>
-          <tr id="bubble-operator-upwards">
-            <th class="library-name"><a href="../bubble-operator-upwards/">bubble-operator-upwards</a></th>
-            <td class="latest-version"><a href="../bubble-operator-upwards/bubble-operator-upwards_latest.tar.gz">1.0</a></td>
-            <td class="latest-date">4 nov 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
-          </tr>
-          <tr id="incognito-keywords">
-            <th class="library-name"><a href="../incognito-keywords/">incognito-keywords</a></th>
-            <td class="latest-version"><a href="../incognito-keywords/incognito-keywords_latest.tar.gz">1.0</a></td>
-            <td class="latest-date">28 oct 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/12/december-2012-quicklisp-dist-update-now.html">December 2012</a></td>
-          </tr>
-          <tr id="symbol-namespaces">
-            <th class="library-name"><a href="../symbol-namespaces/">symbol-namespaces</a></th>
-            <td class="latest-version"><a href="../symbol-namespaces/symbol-namespaces_latest.tar.gz">1.0</a></td>
-            <td class="latest-date">9 dec 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/12/december-2012-quicklisp-dist-update-now.html">December 2012</a></td>
-          </tr>
-          <tr id="clhs">
-            <th class="library-name"><a href="../clhs/">clhs</a></th>
-            <td class="latest-version"><a href="../clhs/clhs_latest.tar.gz">0.6.1</a></td>
-            <td class="latest-date">23 sept 2012</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/05/may-2012-quicklisp-dist-update.html">May 2012</a></td>
-          </tr>
-          <tr id="place-utils">
-            <th class="library-name"><a href="../place-utils/">place-utils</a></th>
-            <td class="latest-version"><a href="../place-utils/place-utils_latest.tar.gz">0.1</a></td>
-            <td class="latest-date">16 april 2011</td>
-            <td class="quicklisp-latest good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/05/may-2012-quicklisp-dist-update.html">May 2012</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <nav class="navlist">
+
+        <a onmouseup="this.blur();" href="latest-versions/">
+          <section>
+            <h1>Latest versions</h1>
+            <p>What one would get from the latest tarballs and quicklisp dist.</p>
+          </section>
+        </a>
+
+        <a onmouseup="this.blur();" href="timeline/">
+          <section>
+            <h1>Timeline</h1>
+            <p>Sequences of releases and their eventual availability in Quicklisp.</p>
+          </section>
+        </a>
+
+      </nav>
 
     </div>
 
