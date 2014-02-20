@@ -43,23 +43,26 @@
           </h1>
           <ul>
             <li>
+              <a href="#introduction">Introduction</a>
+            </li>
+            <li class="highlight">
               <a href="#all-standard-symbols">All standard symbols</a>
             </li>
           </ul>
           <ul>
             <li>
-              <a href="namespaces/" class="inlining-node">Namespaces</a>
+              <a href="namespaces/" class="inlining-node stub">Namespaces</a>
               <ul class="inlined-nodes">
-                <li>
+                <li class="highlight">
                   <a href="namespaces/operators/">Operators</a>
                 </li>
-                <li>
+                <li class="highlight">
                   <a href="namespaces/variables/">Variables</a>
                 </li>
-                <li>
+                <li class="highlight">
                   <a href="namespaces/type-specifiers/">Type specifiers</a>
                 </li>
-                <li>
+                <li class="stub">
                   <a href="namespaces/lambda-lists/">Lambda lists</a>
                 </li>
                 <li>
@@ -77,69 +80,69 @@
               </ul>
             </li>
             <li>
-              <a href="themes/" class="inlining-node">Themes</a>
+              <a href="themes/" class="inlining-node stub">Themes</a>
               <ul class="inlined-nodes">
-                <li>
+                <li class="highlight">
                   <a href="themes/data-structures/">Data structures</a>
                 </li>
-                <li>
+                <li class="highlight">
                   <a href="themes/thin-wrappers/">Thin wrappers</a>
                 </li>
-                <li>
+                <li class="stub">
                   <a href="themes/environments/">Environments</a>
                 </li>
-                <li>
+                <li class="highlight">
                   <a href="themes/lambda-lists/">Lambda lists</a>
                 </li>
-                <li>
+                <li class="stub">
                   <a href="themes/args-and-retvals/">Args and retvals</a>
                 </li>
-                <li>
+                <li class="stub">
                   <a href="themes/coercion/">Coercion</a>
                 </li>
-                <li>
+                <li class="highlight">
                   <a href="themes/comparisons/">Comparisons</a>
                 </li>
-                <li>
+                <li class="highlight">
                   <a href="themes/structural-sharing/">Structural sharing</a>
                 </li>
-                <li>
+                <li class="stub">
                   <a href="themes/reading-and-printing/">Reading and printing</a>
                 </li>
-                <li>
+                <li class="stub">
                   <a href="themes/debugging/">Debugging</a>
                 </li>
-                <li>
+                <li class="stub">
                   <a href="themes/safety/">Safety</a>
                 </li>
-                <li>
+                <li class="stub">
                   <a href="themes/optimization/">Optimization</a>
                 </li>
-                <li>
+                <li class="stub">
                   <a href="themes/documentation/">Documentation</a>
                 </li>
-                <li>
+                <li class="highlight">
                   <a href="themes/obsoletion/">Obsoletion</a>
                 </li>
-                <li>
+                <li class="highlight">
                   <a href="themes/unspecified-behavior/">Unspecified behavior</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="cross-references/" class="inlining-node">Cross-references</a>
+              <a href="cross-references/" class="inlining-node stub">Cross-references</a>
               <ul class="inlined-nodes">
                 <li>
-                  <a href="cross-references/clhs/">CLHS</a>
+                  <a href="cross-references/clhs/" class="stub">CLHS</a>
                   <a class="direct-link" href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm"><span>⬈</span></a>
                 </li>
                 <li>
-                  <a href="cross-references/mop/">MOP</a>
+                  <a href="cross-references/mop/" class="stub">MOP</a>
                   <a class="direct-link" href="http://alu.org/mop/index.html"><span>⬈</span></a>
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="stub">
               <a href="datasets/" class="inlining-node">Datasets</a>
               <ul class="inlined-nodes">
               </ul>
@@ -189,12 +192,24 @@
 
     </nav>
 
+    <p id="last-updated">This page was last updated on <time datetime="2014-02-20">20 february 2014</time>.</p>
+
     <div id="content">
 
       <header id="page-header">
         <h1>Notes and tips:<br />Standard Common Lisp symbols</h1>
         <p class="description">Informal yet helpful information on the standard symbols and their bindings.</p>
       </header>
+
+      <section id="introduction">
+
+        <h1><a href="#introduction" class="anchor">&#x2693;</a>Introduction</h1>
+
+        <p>Welcome to my very ambitious "article". This is <em>still incomplete and not quite at the level of my vision</em>, but there's already <strong>quite a lot of very useful information</strong> in here, if I do say so myself. Given my 7 intensive years of Common Lisp experience, during which I spent tons of time reading the HyperSpec and actually using the language almost exclusively, I expect that the information presented here is <strong>much more accurate</strong> than for your average (possibly outdated) Common Lisp article. Of course, please report any accuracies. Some omissions are unfortunately to be expected given the incomplete state of the article. (Maybe I shouldn't call this an "article", but whatever.)</p>
+
+        <p>The menu on the left lists the various sections and their pages. Menu items <span class="highlight">in green</span> denote particularly interesting pages that you should check first. Menu items <span class="stub">in red</span> denote stubs that don't yet contain any useful information whatsoever. Those that are neither green nor red have at least <em>some</em> amount of information on them, though not necessarily much.</p>
+
+      </section>
 
       <section id="all-standard-symbols">
 
@@ -203,6 +218,8 @@
         <p>The <a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">HyperSpec</a> provides a <a href="http://www.lispworks.com/documentation/HyperSpec/Front/X_AllSym.htm">handy list of all symbols on one page</a>, useful for all kinds of research.<br />Sometimes nothing beats a good old manual exhaustive linear scan...</p>
         <p>A <a href="http://www.lispworks.com/documentation/HyperSpec/Data/Map_Sym.txt">machine-readable version of the list</a> is also available.</p>
         <p>By the way, don't get intimidated by Common Lisp's 978 symbols count, it's inflated by various factors such as "symbol duplications" and 20 c[ad]r variations.</p>
+
+        <p>The following "sparse table" effectively includes and supercedes, among other things, my old "Common Lisp tips" tweets collection.</p>
 
         <table id="all-standard-symbols-table">
           <thead>
