@@ -41,6 +41,19 @@
 
 
   <url>
+    <loc>http://www.hexstreamsoft.com/libraries/releases/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/releases/latest-versions/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/releases/timeline/</loc>
+  </url>
+
+
+  <url>
     <loc>http://www.hexstreamsoft.com/libraries/clhs/</loc>
   </url>
 
@@ -152,36 +165,35 @@
 
 
   <url>
-    <loc>http://www.hexstreamsoft.com/tweets/</loc>
-  </url>
-
-  <url>
-    <loc>http://www.hexstreamsoft.com/tweets/cl-tips/</loc>
-  </url>
-
-  <url>
-    <loc>http://www.hexstreamsoft.com/tweets/cl-rants/</loc>
-  </url>
-
-  <url>
-    <loc>http://www.hexstreamsoft.com/tweets/future-lisp-dialect-ideas/</loc>
-  </url>
-
-  <url>
-    <loc>http://www.hexstreamsoft.com/tweets/programming-remarks/</loc>
-  </url>
-
-  <url>
-    <loc>http://www.hexstreamsoft.com/tweets/cl-promotion/</loc>
-  </url>
-
-
-  <url>
     <loc>http://www.hexstreamsoft.com/worknotes/</loc>
   </url>
 
   <url>
     <loc>http://www.hexstreamsoft.com/worknotes/introduction.html</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/worknotes/workstacks/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/worknotes/checklists/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/worknotes/metaprojects/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/worknotes/metaprojects/hexstream-cl-essentials/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/worknotes/metaprojects/loopless2/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/worknotes/metaprojects/hexstream-web/</loc>
   </url>
 
 

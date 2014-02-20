@@ -6,19 +6,15 @@
     <title>HexstreamSoft: Public Domain Common Lisp R&amp;D</title>
     <link href="css/global.css" rel="stylesheet" type="text/css" />
     <link href="index.css" rel="stylesheet" type="text/css" />
-    <script src="http://use.edgefonts.net/sanvito-pro-display.js" async></script>
-    <script type="text/javascript">
+    <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-1783234-3']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
+      ga('create', 'UA-1783234-3', 'hexstreamsoft.com');
+      ga('send', 'pageview');
     </script>
   </head>
 
@@ -53,13 +49,6 @@
         </section>
       </a>
 
-      <a onmouseup="this.blur();" href="tweets/">
-        <section>
-          <h1>Categorised Common Lisp tweets</h1>
-          <p>Last (manual) sync with my twitter account: 7 october 2012.</p>
-        </section>
-      </a>
-
       <a onmouseup="this.blur();" href="worknotes/">
         <section>
           <h1>Worknotes</h1>
@@ -88,7 +77,7 @@
       <p>I use <a href="http://unlicense.org/">the Unlicense</a> to <a href="resources/#unlicense">maximize the effective value of my work</a>.</p>
     </div>
 
-    <p id="last-updated">This page was last updated on <time datetime="2013-07-12">12 july 2013</time>.</p>
+    <p id="last-updated">This page was last updated on <time datetime="2014-02-20">20 february 2014</time>.</p>
 
     <section id="news">
       <header>
@@ -96,64 +85,62 @@
       </header>
       <ol reversed>
         <li>
-          <article class="news-item" id="12_july_2013">
+          <article class="news-item" id="20_february_2014">
             <h1 class="date">
-              <a href="#12_july_2013"><time datetime="2013-07-12">12 july 2013</time></a>
+              <a href="#20_february_2014"><time datetime="2014-02-20">20 february 2014</time></a>
               <span class="border-fix"></span>
             </h1>
             <div class="body">
               <p>New article: "<a href="articles/notes-tips-standard-common-lisp-symbols/">Notes and tips: Standard Common Lisp symbols</a>".</p>
-            </div>
-          </article>
-        </li>
-        <li>
-          <article class="news-item" id="26_may_2013">
-            <h1 class="date">
-              <a href="#26_may_2013"><time datetime="2013-05-26">26 may 2013</time></a>
-              <span class="border-fix"></span>
-            </h1>
-            <div class="body">
-              <p>I've just finished a second round of markup upgrades for the documentation pages of <a href="libraries/">all my libraries</a>.<br />The quality is not perfect nor entirely consistent, but it's still a huge improvement, overall!</p>
-              <p>What I'd like to do next (among other things) is significantly expand the actual content of these pages,<br />such that all my ready-to-use libraries are comprehensively documented!</p>
-            </div>
-          </article>
-        </li>
-        <li>
-          <article class="news-item" id="8_april_2013">
-            <h1 class="date">
-              <a href="#8_april_2013"><time datetime="2013-04-08">8 april 2013</time></a>
-              <span class="border-fix"></span>
-            </h1>
-            <div class="body">
-              <p>I finally finished upgrading all library pages to the new design! (Doing this by hand is sad.)
-              <br />These pages now thus meet some minimal standards of usability and presentation.</p>
-              <p>What I want to do next for these pages is majorly update their content and presentation!
-                <br />In particular, more examples would be helpful.</p>
-            </div>
-          </article>
-        </li>
-        <li>
-          <article class="news-item" id="22_march_2013">
-            <h1 class="date">
-              <a href="#22_march_2013"><time datetime="2013-03-22">22 march 2013</time></a>
-              <span class="border-fix"></span>
-            </h1>
-            <div class="body">
-              <p>The site is now confirmed to be valid HTML5 and CSS3, as advertised in the new <a href="#footer">footer</a>.
-                <br />Validation links are included.</p>
-              <p>The old clunky library pages have not yet received these upgrades. I must get to them <abbr title="As Soon As Possible">ASAP</abbr>!</p>
-              <p><small>I should eventually get an automated process in place to ensure the validity of HTML and CSS with a git-push hook...</small></p>
+              <p>I didn't publish this before because I have a much bigger vision for it, but I finally realized that not publishing it in its current state is outright irresponsible, because it's already AWESOME, in my 100% biased opinion.</p>
             </div>
           </article>
         </li>
         <li>
           <article class="news-item" id="15_march_2013">
             <h1 class="date">
-              <a href="#15_march_2013"><time datetime="2013-03-15">15 march 2013</time></a>
+              <a href="#8_feb_2014"><time datetime="2014-02-08">8 february 2014</time></a>
               <span class="border-fix"></span>
             </h1>
             <div class="body">
-              <p>I just finished a MASSIVE redesign of the site! Now only the library pages would need a serious upgrade...<br />Also I need to fix the tweets pages because they take forever to load.</p>
+              <p><small>(<strong>Way</strong> overdue status report. Sorry! Also this is probably not well-written.)</small></p>
+              <section>
+                <h1>What I did in 2013</h1>
+                <section>
+                  <h1>Summary</h1>
+                  <p>2013 is pretty easy to summarize: I worked on my website. That's pretty much it.</p>
+                  <p>At the start of 2013, my site didn't have much content at all and was really ugly. Whereas now, in the beginning of 2014 there's quite a bit more content (though not quite enough for my tastes) and everything is much better structured and presented (I'm fairly satisfied on that front, though it could use some improvements).</p>
+                </section>
+                <section>
+                  <h1>"BahagonTools" template import and other improvements</h1>
+                  <p>From March 1st 2013 to April 30th 2013 (exactly 2 months) I worked on my website every day, incidentally getting a 61 days streak on github. That was quite a nice run. The first thing I did is dig up the HTML and CSS from my old "<a href="https://github.com/Hexstream/bahagontools">BahagonTools</a>" mega-project. It was a "manual import of templates", one might call it. That instantly boosted the visual presentation of the site. And then I made a series of restructurations of content, notably I organized my <a href="libraries/">15 ready-to-use libraries</a> in categories.</p>
+                </section>
+                <section>
+                  <h1>Incomplete, unpublished mega-article</h1>
+                  <p>The second big thing I did in 2013 was working on my "Notes and Tips: Standard Common Lisp symbols" mega-"article" from july to december. I have a really big vision for it and I'm quite convinced this will be a masterpiece. For now it's already pretty nice but still incomplete. It's not published yet but if you want to go look at it from the <a href="https://github.com/Hexstream/com.hexstreamsoft/tree/notes-tips-cl-symbols">notes-tips-cl-symbols branch</a> I can't stop you.</p>
+                  <p>I stopped working on my mega-article for now, because if I want to realize my vision for it without going completely insane I'll have to have support from my old web framework, and to have that I have to get back to Actual Programming™, which is what I wanted to do anyway because I don't really feel like I'm living if I'm not spending a sizeable portion of my time programming.</p>
+                </section>
+                <section>
+                  <h1>Non-productivity</h1>
+                  <p>On the non-productive front, in 2013 I played way too much <a href="http://bombermine.com">Bombermine</a>, especially in december and in the first part of january, that was pretty much the only thing I was doing and that was obviously unsustainable, so I had to put a drastic end to that. I'm a bipolar and tend to do things either intensively or not at all, so I dropped Bombermine completely and on january 22 I made a strong public commitment not to play it again until January 1st 2015 at the earliest. So that takes care of that.</p>
+                  <p>(There's a bit more to my bombermine story, but it's no longer particularly relevant so I won't recount it, at least for now.)</p>
+                </section>
+                <section>
+                  <h1>Worknotes</h1>
+                  <p>In 2013 I started implementing my "<a href="worknotes/">worknotes</a>" strategy for being able to efficiently work on multiple projects "at the same time" (in a similar fashion to how operating systems execute multiple programs "at the same time") without getting lost.</p>
+                  <p>In 2014 I started by synchronizing my worknotes, my github repos and my local repos. This was a somewhat painful process which wasn't aided by the fact that I had a hard disk crash the first time I tried to do it. (The hard disk was 10+ years old so the crash was way overdue.) Various delays ensued and I had some morale problems, in part because getting back to Actual Programming™ after such a long time (8 months?) was a bit scary. Getting back to working on dozens of interrelated projects you don't remember the details of can be a bit intimidating. Fortunately this time around I have the worknotes weapon.</p>
+                  <p>I also made 2 important additions to my worknotes concept: "<a href="worknotes/workstacks/">workstacks</a>" and "<a href="worknotes/checklists/">checklists</a>". For now there's only one of each but these are sure to become a staple of my workflows.</p>
+                  <p>I'm still not quite disciplined enough to write down each and every work item before I actually do the work item, but I've made some progress. Some emacs support for worknotes would definitely help, and before someone suggests it, no, I don't have time to check org-mode and anyway <abbr title="Not Invented Here">NIH</abbr>.</p>
+                </section>
+              </section>
+              <section>
+                <h1>What I want to do in 2014</h1>
+                <p>I'm already exhausted from writing all the above and I'm otherwise tired, so I'll cut this short. 2014 will be one hell of a year for me, things are really coming together this time, I think. I've been thinking that for many years in a row but whatever.</p>
+                <p>I expect to finish many new libraries in 2014. Several of those are quite important to me and will result in my adopting a new Common Lisp style, which will be not quite as conservative as the one I've been using until now, but I'm sure it will be for the best.</p>
+                <p>One thing I wanted to do in May 2013 was "significantly expand the actual content of [my library pages], such that all my ready-to-use libraries are comprehensively documented", but really that should happen after I'm done reviving my old web framework or well, at least hextml (which will be renamed to hexstream-html).</p>
+                <p>On the <a href="https://twitter.com/StreamLisp">Stream Lisp</a> front, I'll definitely at least make a big messy braindump for it in 2014. I think I have so many of the right answers in my head and I'm tired of seeing people (apparently) get things wrong regarding the future of Lisp.</p>
+                <p>So, that's it for now I guess. I really think I'll turn things around this year.</p>
+              </section>
             </div>
           </article>
         </li>

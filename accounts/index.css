@@ -13,3 +13,16 @@ th.name {
 #full-name, #nickname {
     margin-top: -0.5em;
 }
+
+#custom-timelines {
+    line-height: 1em;
+}
+
+#custom-timelines a {
+    margin-left: 1em;
+    text-decoration: none;
+}
+
+#custom-timelines a:first-child {
+    margin-left: 0;
+}

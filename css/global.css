@@ -201,6 +201,14 @@ table th {
     white-space: nowrap;
 }
 
+table th > a:only-child, table td > a:only-child {
+    text-decoration: none;
+}
+
+table th.supercolumn {
+    text-align: center;
+}
+
 table table {
     margin-top: 0;
     margin-bottom: 0;
@@ -347,6 +355,12 @@ td, th {
 table tr > th:first-child {
     text-align: right;
 }
+
+table tr > th.library-name {
+    text-align: left;
+}
+
+
 
 li + li {
     margin-top: 0.5em;

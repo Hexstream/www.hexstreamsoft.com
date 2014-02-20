@@ -6,19 +6,15 @@
     <title>Hexstream's worknotes</title>
     <link href="../css/global.css" rel="stylesheet" type="text/css" />
     <link href="index.css" rel="stylesheet" type="text/css" />
-    <script src="http://use.edgefonts.net/sanvito-pro-display.js" async></script>
-    <script type="text/javascript">
+    <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-1783234-3']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
+      ga('create', 'UA-1783234-3', 'hexstreamsoft.com');
+      ga('send', 'pageview');
     </script>
   </head>
 
@@ -47,6 +43,22 @@
           </h1>
           <ul>
             <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="workstacks/">Workstacks</a></li>
+            <li><a href="checklists/">Checklists</a></li>
+            <li>
+              <a href="metaprojects/" class="inlining-node">Metaprojects</a>
+              <ul class="inlined-nodes">
+                <li>
+                  <a href="metaprojects/hexstream-cl-essentials/">CL Essentials</a>
+                </li>
+                <li>
+                  <a href="metaprojects/loopless2/">Loopless 2</a>
+                </li>
+                <li>
+                  <a href="metaprojects/hexstream-web/">Hexstream Web</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
 
@@ -61,7 +73,6 @@
           <ul>
             <li><a href="../introduction.html">Introduction</a></li>
             <li><a href="../libraries/">Libraries</a></li>
-            <li><a href="../tweets/">Tweets</a></li>
             <li>
               <a class="here">
                 Worknotes
@@ -78,7 +89,7 @@
 
     </nav>
 
-    <p id="last-updated">This page was last updated on <time datetime="2013-11-13">13 november 2013</time>.</p>
+    <p id="last-updated">This page was last updated on <time datetime="2014-02-12">12 february 2014</time>.</p>
 
     <div id="content">
 
@@ -94,7 +105,7 @@
           <thead>
             <tr>
               <th><a href="#ready-to-use">Ready to use</a> (<span class="item-count">15</span>)</th>
-              <th><a href="#not-yet-ready">Not yet ready</a> (<span class="item-count">37</span>)</th>
+              <th><a href="#not-yet-ready">Not yet ready</a> (<span class="item-count">48</span>)</th>
               <th><a href="#not-yet-scavenged">Not yet scavenged</a> (<span class="item-count">22</span>)</th>
               <th><a href="#metaprojects">Metaprojects</a> (<span class="item-count">4</span>)</th>
             </tr>
@@ -123,6 +134,7 @@
               <td>
                 <ul>
                   <li><a href="#com.hexstreamsoft">com.hexstreamsoft</a></li>
+                  <li><a href="#org.stream-lisp">org.stream-lisp</a></li>
                   <li><a href="#hextml">hextml</a></li>
                   <li><a href="#hecss">hecss</a></li>
                   <li><a href="#definitions-systems">definitions-systems</a></li>
@@ -159,6 +171,16 @@
                   <li><a href="#weak-symbol">weak-symbol</a></li>
                   <li><a href="#system-dependable">system-dependable</a></li>
                   <li><a href="#rotx">rotx</a></li>
+                  <li><a href="#combining-alternatives">combining-alternatives</a></li>
+                  <li><a href="#throwaway-scripts">throwaway-scripts</a></li>
+                  <li><a href="#hexstream-emacs-init">hexstream-emacs-init</a></li>
+                  <li><a href="#hexstream-html-doc-mode">hexstream-html-doc-mode</a></li>
+                  <li><a href="#with-loop-edge-cases">with-loop-edge-cases</a></li>
+                  <li><a href="#hexstream-sbcl-init">hexstream-sbcl-init</a></li>
+                  <li><a href="#map-symbol-definitions">map-symbol-definitions</a></li>
+                  <li><a href="#elevator-restarts-game">elevator-restarts-game</a></li>
+                  <li><a href="#hexstream-screenrc">hexstream-screenrc</a></li>
+                  <li><a href="#evaluated-flet">evaluated-flet</a></li>
                 </ul>
               </td>
               <td>
@@ -561,7 +583,7 @@
 
       <section>
 
-        <h1 id="not-yet-ready">All not-yet-ready projects (<span class="item-count">37</span>) <a href="#not-yet-ready" class="anchor">&#x2693;</a></h1>
+        <h1 id="not-yet-ready">All not-yet-ready projects (<span class="item-count">38</span>) <a href="#not-yet-ready" class="anchor">&#x2693;</a></h1>
         <table class="projects-table">
           <col />
           <col />
@@ -592,8 +614,6 @@
                 <ul>
                   <li><a href="#html-documentation">Adopt HTML documentation.</a></li>
                   <li>Put a "last updated" date at the top of every page.</li>
-                  <li>Fix tweets pages, they take forever to load. Remove dependency on twitter widgets. Make my own formatting instead.</li>
-                  <li>Promote many cl-tips and future-lisp-dialect-ideas (and maybe other categories) tweets to upgraded (non-tweet) versions on a dedicated page, similarly to how the "Resources" page was created.</li>
                   <li class="blocked">Partly blocked by <a href="#hextml">hextml</a>.</li>
                   <li class="blocked">Partly blocked by <a href="#hecss">hecss</a>.</li>
                   <li>Extract documentation of libraries into their respective repositories. The content and presentation should make sense standalone and the online version with the elaborate navigation structure should be generated from it. <span class="blocked">Blocked by <a href="#hextml">hextml</a> and <a href="#hecss">hecss</a>.</span></li>
@@ -608,6 +628,22 @@
                   <li>Make a summary table of the various categorisations of each library.</li>
                   <li>Add at least one example for each library in library category pages.</li>
                   <li>Add recommendation for <a href="https://www.nearlyfreespeech.net/">nearlyfreespeech.net</a> (my web host) in "Resources".</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="project-name" id="org.stream-lisp" rowspan="2">
+                <div>
+                  <a href="#org.stream-lisp" class="anchor">&#x2693;</a> org.stream-lisp [<a href="https://github.com/Hexstream/org.stream-lisp">G</a>]
+                </div>
+              </th>
+              <td>Stub</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td class="project-items" colspan="2">
+                <ul>
+                  <li><a href="#initial-review">Initial review.</a></li>
                 </ul>
               </td>
             </tr>
@@ -661,6 +697,7 @@
             <tr>
               <td class="project-items" colspan="2">
                 <ul>
+                  <li class="blocked">Blocked by <a href="#option-lists">option-lists</a>.</li>
                   <li><a href="#initial-review">Initial review.</a></li>
                   <li><a href="#html-documentation">Adopt HTML documentation.</a></li>
                   <li><span class="blocked">Blocks <a href="#map-bind">map-bind</a>.</span></li>
@@ -670,6 +707,7 @@
                   <li><span class="blocked">Blocks <a href="#anaphoric-variants">anaphoric-variants</a>.</span></li>
                   <li><span class="blocked">Blocks <a href="#multiple-value-variants">multiple-value-variants</a>.</span></li>
                   <li><span class="blocked">Blocks <a href="#symbol-namespaces">symbol-namespaces</a>.</span></li>
+                  <li><span class="blocked">Blocks <a href="#explicit-bind">explicit-bind</a>.</span></li>
                 </ul>
               </td>
             </tr>
@@ -704,6 +742,7 @@
                 <ul>
                   <li><a href="#initial-review">Initial review.</a></li>
                   <li><a href="#html-documentation">Adopt HTML documentation.</a></li>
+                  <li><span class="blocked">Blocks <a href="#explicit-bind">explicit-bind</a>.</span></li>
                 </ul>
               </td>
             </tr>
@@ -755,6 +794,7 @@
                 <ul>
                   <li><a href="#initial-review">Initial review.</a></li>
                   <li><a href="#html-documentation">Adopt HTML documentation.</a></li>
+                  <li><span class="blocked">Blocks <a href="#definitions-systems">definitions-systems</a>.</span></li>
                 </ul>
               </td>
             </tr>
@@ -821,6 +861,10 @@
             <tr>
               <td class="project-items" colspan="2">
                 <ul>
+                  <li class="blocked">Blocked by <a href="#definitions-systems">definitions-systems</a>.</li>
+                  <li class="blocked">Blocked by <a href="#first-class-declarations">first-class-declarations</a> and <a href="#triage-declarations">triage-declarations</a>.</li>
+                  <li class="blocked">Blocked by <a href="#evaluated-flet">evaluated-flet</a>.</li>
+                  <li class="blocked">Partly blocked by <a href="#with-shadowed-bindings">with-shadowed-bindings</a>.</li>
                   <li><a href="#initial-review">Initial review.</a></li>
                   <li><a href="#html-documentation">Adopt HTML documentation.</a></li>
                 </ul>
@@ -1083,6 +1127,7 @@
                 <ul>
                   <li><a href="#initial-review">Initial review.</a></li>
                   <li><a href="#html-documentation">Adopt HTML documentation.</a></li>
+                  <li><span class="blocked">Partly blocks <a href="#explicit-bind">explicit-bind</a>.</span></li>
                 </ul>
               </td>
             </tr>
@@ -1236,6 +1281,167 @@
                 <ul>
                   <li><a href="#initial-review">Initial review.</a></li>
                   <li><a href="#html-documentation">Adopt HTML documentation.</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="project-name" id="combining-alternatives" rowspan="2">
+                <div>
+                  <a href="#combining-alternatives" class="anchor">&#x2693;</a> combining-alternatives [<a href="https://github.com/Hexstream/combining-alternatives">G</a>]
+                </div>
+              </th>
+              <td>Early design stage</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td class="project-items" colspan="2">
+                <ul>
+                  <li><a href="#initial-review">Initial review.</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="project-name" id="throwaway-scripts" rowspan="2">
+                <div>
+                  <a href="#throwaway-scripts" class="anchor">&#x2693;</a> throwaway-scripts [<a href="https://github.com/Hexstream/throwaway-scripts">G</a>]
+                </div>
+              </th>
+              <td>Early design stage</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td class="project-items" colspan="2">
+                <ul>
+                  <li><a href="#initial-review">Initial review.</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="project-name" id="hexstream-emacs-init" rowspan="2">
+                <div>
+                  <a href="#hexstream-emacs-init" class="anchor">&#x2693;</a> hexstream-emacs-init [<a href="https://github.com/Hexstream/hexstream-emacs-init">G</a>]
+                </div>
+              </th>
+              <td>Raw and undocumented</td>
+              <td>Very low</td>
+            </tr>
+            <tr>
+              <td class="project-items" colspan="2">
+                <ul>
+                  <li><a href="#initial-review">Initial review.</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="project-name" id="hexstream-html-doc-mode" rowspan="2">
+                <div>
+                  <a href="#hexstream-html-doc-mode" class="anchor">&#x2693;</a> hexstream-html-doc-mode [<a href="https://github.com/Hexstream/hexstream-html-doc-mode">G</a>]
+                </div>
+              </th>
+              <td>Usable but raw and undocumented</td>
+              <td>Very low</td>
+            </tr>
+            <tr>
+              <td class="project-items" colspan="2">
+                <ul>
+                  <li><a href="#initial-review">Initial review.</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="project-name" id="with-loop-edge-cases" rowspan="2">
+                <div>
+                  <a href="#with-loop-edge-cases" class="anchor">&#x2693;</a> with-loop-edge-cases [<a href="https://github.com/Hexstream/with-loop-edge-cases">G</a>]
+                </div>
+              </th>
+              <td>Early design stage</td>
+              <td>Medium</td>
+            </tr>
+            <tr>
+              <td class="project-items" colspan="2">
+                <ul>
+                  <li><a href="#initial-review">Initial review.</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="project-name" id="hexstream-sbcl-init" rowspan="2">
+                <div>
+                  <a href="#hexstream-sbcl-init" class="anchor">&#x2693;</a> hexstream-sbcl-init [<a href="https://github.com/Hexstream/hexstream-sbcl-init">G</a>]
+                </div>
+              </th>
+              <td>Raw and undocumented</td>
+              <td>Very low</td>
+            </tr>
+            <tr>
+              <td class="project-items" colspan="2">
+                <ul>
+                  <li><a href="#initial-review">Initial review.</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="project-name" id="map-symbol-definitions" rowspan="2">
+                <div>
+                  <a href="#map-symbol-definitions" class="anchor">&#x2693;</a> map-symbol-definitions [<a href="https://github.com/Hexstream/map-symbol-definitions">G</a>]
+                </div>
+              </th>
+              <td>Unknown</td>
+              <td>Very low</td>
+            </tr>
+            <tr>
+              <td class="project-items" colspan="2">
+                <ul>
+                  <li><a href="#initial-review">Initial review.</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="project-name" id="elevator-restarts-game" rowspan="2">
+                <div>
+                  <a href="#elevator-restarts-game" class="anchor">&#x2693;</a> elevator-restarts-game [<a href="https://github.com/Hexstream/elevator-restarts-game">G</a>]
+                </div>
+              </th>
+              <td>Unknown</td>
+              <td>Very low</td>
+            </tr>
+            <tr>
+              <td class="project-items" colspan="2">
+                <ul>
+                  <li><a href="#initial-review">Initial review.</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="project-name" id="hexstream-screenrc" rowspan="2">
+                <div>
+                  <a href="#hexstream-screenrc" class="anchor">&#x2693;</a> hexstream-screenrc [<a href="https://github.com/Hexstream/hexstream-screenrc">G</a>]
+                </div>
+              </th>
+              <td>Trivial and mostly undocumented</td>
+              <td>Very low</td>
+            </tr>
+            <tr>
+              <td class="project-items" colspan="2">
+                <ul>
+                  <li><a href="#initial-review">Initial review.</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th class="project-name" id="evaluated-flet" rowspan="2">
+                <div>
+                  <a href="#evaluated-flet" class="anchor">&#x2693;</a> evaluated-flet [<a href="https://github.com/Hexstream/evaluated-flet">G</a>]
+                </div>
+              </th>
+              <td>Incomplete</td>
+              <td>Medium</td>
+            </tr>
+            <tr>
+              <td class="project-items" colspan="2">
+                <ul>
+                  <li><a href="#initial-review">Initial review.</a></li>
+                  <li><span class="blocked">Blocks <a href="#explicit-bind">explicit-bind</a>.</span></li>
                 </ul>
               </td>
             </tr>
@@ -1396,6 +1602,7 @@
                 <ul>
                   <li><a href="#initial-review">Initial review.</a></li>
                   <li><a href="#html-documentation">Adopt HTML documentation.</a></li>
+                  <li><span class="blocked">Blocks <a href="#explicit-bind">explicit-bind</a>.</span></li>
                 </ul>
               </td>
             </tr>
@@ -1653,7 +1860,7 @@
                   <a href="#initial-review" class="anchor">&#x2693;</a> Initial review.
                 </div>
               </th>
-              <td><a href="#hextml">hextml</a>, <a href="#hecss">hecss</a>, <a href="#definitions-systems">definitions-systems</a>, <a href="#first-class-lambda-lists">first-class-lambda-lists</a>, <a href="#first-class-declarations">first-class-declarations</a>, <a href="#type-maker">type-maker</a>, <a href="#flexiconf">flexiconf</a>, <a href="#option-lists">option-lists</a>, <a href="#cl-native-terminfo">cl-native-terminfo</a>, <a href="#clos-relations">clos-relations</a>, <a href="#automixin">automixin</a>, <a href="#explicit-bind">explicit-bind</a>, <a href="#lispy-format">lispy-format</a>, <a href="#hextest">hextest</a>, <a href="#phased-generic-functions">phased-generic-functions</a>, <a href="#leanify-expand">leanify-expand</a>, <a href="#clhs-urltools">clhs-urltools</a>, <a href="#return-values-hints">return-values-hints</a>, <a href="#mc-logger">mc-logger</a>, <a href="#hexstream-stumpwmrc">hexstream-stumpwmrc</a>, <a href="#adaptable-reader">adaptable-reader</a>, <a href="#easy-backquote-nesting">easy-backquote-nesting</a>, <a href="#bigname">bigname</a>, <a href="#hexql">hexql</a>, <a href="#linkval">linkval</a>, <a href="#com.hexstreamsoft.lib.form">com.hexstreamsoft.lib.form</a>, <a href="#local-clhs-helper">local-clhs-helper</a>, <a href="#trivial-declaration-identifiers">trivial-declaration-identifiers</a>, <a href="#loopless-accumulators">loopless-accumulators</a>, <a href="#with-shadowed-bindings">with-shadowed-bindings</a>, <a href="#loopless-iterators-minimal">loopless-iterators-minimal</a>, <a href="#loopless-map-minimal">loopless-map-minimal</a>, <a href="#hexstream-shared-html-css">hexstream-shared-html-css</a>, <a href="#loopless-formerly-private">loopless-formerly-private</a>, <a href="#triage-declarations">triage-declarations</a>, <a href="#destructuring-bind-star">destructuring-bind-star</a>, <a href="#loopless">loopless</a>, <a href="#com.hexstreamsoft.lib">com.hexstreamsoft.lib</a>, <a href="#com.hexstreamsoft.lib.web">com.hexstreamsoft.lib.web</a>, <a href="#hexttp-config">hexttp-config</a>, <a href="#stream-lisp">stream-lisp</a>, <a href="#clsdb">clsdb</a>, <a href="#bounds-arithmetic">bounds-arithmetic</a>, <a href="#hevent">hevent</a>, <a href="#hexstream-color">hexstream-color</a>, <a href="#rearrange-args">rearrange-args</a>, <a href="#loopless-map">loopless-map</a>, <a href="#loopless-iterators">loopless-iterators</a>, <a href="#clos-featuresets">clos-featuresets</a>, <a href="#interdependent-bindings">interdependent-bindings</a>, <a href="#hexstream-project-template">hexstream-project-template</a>, <a href="#bahagontools">bahagontools</a>, <a href="#defmacro-system">defmacro-system</a>, <a href="#weak-symbol">weak-symbol</a>, <a href="#system-dependable">system-dependable</a>, <a href="#rotx">rotx</a>, <a href="#botchlog">botchlog</a>.</td>
+              <td><a href="#hextml">hextml</a>, <a href="#hecss">hecss</a>, <a href="#definitions-systems">definitions-systems</a>, <a href="#first-class-lambda-lists">first-class-lambda-lists</a>, <a href="#first-class-declarations">first-class-declarations</a>, <a href="#type-maker">type-maker</a>, <a href="#flexiconf">flexiconf</a>, <a href="#option-lists">option-lists</a>, <a href="#cl-native-terminfo">cl-native-terminfo</a>, <a href="#clos-relations">clos-relations</a>, <a href="#automixin">automixin</a>, <a href="#explicit-bind">explicit-bind</a>, <a href="#lispy-format">lispy-format</a>, <a href="#hextest">hextest</a>, <a href="#phased-generic-functions">phased-generic-functions</a>, <a href="#leanify-expand">leanify-expand</a>, <a href="#clhs-urltools">clhs-urltools</a>, <a href="#return-values-hints">return-values-hints</a>, <a href="#mc-logger">mc-logger</a>, <a href="#hexstream-stumpwmrc">hexstream-stumpwmrc</a>, <a href="#adaptable-reader">adaptable-reader</a>, <a href="#easy-backquote-nesting">easy-backquote-nesting</a>, <a href="#bigname">bigname</a>, <a href="#hexql">hexql</a>, <a href="#linkval">linkval</a>, <a href="#com.hexstreamsoft.lib.form">com.hexstreamsoft.lib.form</a>, <a href="#local-clhs-helper">local-clhs-helper</a>, <a href="#trivial-declaration-identifiers">trivial-declaration-identifiers</a>, <a href="#loopless-accumulators">loopless-accumulators</a>, <a href="#with-shadowed-bindings">with-shadowed-bindings</a>, <a href="#loopless-iterators-minimal">loopless-iterators-minimal</a>, <a href="#loopless-map-minimal">loopless-map-minimal</a>, <a href="#hexstream-shared-html-css">hexstream-shared-html-css</a>, <a href="#loopless-formerly-private">loopless-formerly-private</a>, <a href="#triage-declarations">triage-declarations</a>, <a href="#destructuring-bind-star">destructuring-bind-star</a>, <a href="#loopless">loopless</a>, <a href="#com.hexstreamsoft.lib">com.hexstreamsoft.lib</a>, <a href="#com.hexstreamsoft.lib.web">com.hexstreamsoft.lib.web</a>, <a href="#hexttp-config">hexttp-config</a>, <a href="#stream-lisp">stream-lisp</a>, <a href="#clsdb">clsdb</a>, <a href="#bounds-arithmetic">bounds-arithmetic</a>, <a href="#hevent">hevent</a>, <a href="#hexstream-color">hexstream-color</a>, <a href="#rearrange-args">rearrange-args</a>, <a href="#loopless-map">loopless-map</a>, <a href="#loopless-iterators">loopless-iterators</a>, <a href="#clos-featuresets">clos-featuresets</a>, <a href="#interdependent-bindings">interdependent-bindings</a>, <a href="#hexstream-project-template">hexstream-project-template</a>, <a href="#bahagontools">bahagontools</a>, <a href="#defmacro-system">defmacro-system</a>, <a href="#weak-symbol">weak-symbol</a>, <a href="#system-dependable">system-dependable</a>, <a href="#rotx">rotx</a>, <a href="#combining-alternatives">combining-alternatives</a>, <a href="#throwaway-scripts">throwaway-scripts</a>, <a href="#hexstream-emacs-init">hexstream-emacs-init</a>, <a href="#hexstream-html-doc-mode">hexstream-html-doc-mode</a>, <a href="#with-loop-edge-cases">with-loop-edge-cases</a>, <a href="#hexstream-sbcl-init">hexstream-sbcl-init</a>, <a href="#map-symbol-definitions">map-symbol-definitions</a>, <a href="#elevator-restarts-game">elevator-restarts-game</a>, <a href="#hexstream-screenrc">hexstream-screenrc</a>, <a href="#evaluated-flet">evaluated-flet</a>, <a href="#botchlog">botchlog</a>.</td>
               <td>Critical</td>
             </tr>
             <tr id="html-documentation">
