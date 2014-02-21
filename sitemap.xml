@@ -163,6 +163,126 @@
     <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/</loc>
   </url>
 
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/operators/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/variables/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/type-specifiers/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/lambda-lists/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/restart-kinds/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/declaration-identifiers/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/documentation-types/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/method-combination-types/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/data-structures/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/thin-wrappers/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/environments/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/lambda-lists/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/args-and-retvals/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/coercion/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/comparisons/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/structural-sharing/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/reading-and-printing/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/debugging/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/safety/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/optimization/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/documentation/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/obsoletion/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/unspecified-behavior/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/cross-references/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/cross-references/clhs/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/cross-references/clhs/sections/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/cross-references/mop/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/datasets/</loc>
+  </url>
+
 
   <url>
     <loc>http://www.hexstreamsoft.com/worknotes/</loc>
