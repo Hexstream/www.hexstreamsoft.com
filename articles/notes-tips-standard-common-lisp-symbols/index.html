@@ -243,7 +243,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dad.htm">Lambda list keyword</a></th>
               <td>
                 <div class="topic">
-                  <p>This <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disables keyword arguments checking</a>. It's effectively a "subclause" of <a href="#&amp;key">&amp;key</a>. It can appear in any lambda list that can accept <a href="#&amp;key">&amp;key</a>. It's often useful in combination with &amp;rest (and &amp;key) to receive arbitrary keyword arguments for the purpose of forwarding them to a function with APPLY.</p>
+                  <p>This <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disables keyword arguments checking</a>. It's effectively a "subclause" of <a class="symbol"href="#&amp;key">&amp;key</a>. It can appear in any lambda list that can accept <a class="symbol" href="#&amp;key">&amp;key</a>. It's often useful in combination with &amp;rest (and &amp;key) to receive arbitrary keyword arguments for the purpose of forwarding them to a function with APPLY.</p>
                 </div>
                 <div class="topic">
                   <p>If a generic-function specifies &amp;allow-other-keys, then none of its methods needs to. This is very convenient for INITIALIZE-INSTANCE and friends, for instance.</p>
@@ -295,7 +295,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm">Lambda list keyword</a></th>
               <td>
                 <div class="topic">
-                  <p>This is effectively the same as <a href="#&amp;rest">&amp;rest</a> except it requests an indentation of 2 and can only appear in macro lambda lists.</p>
+                  <p>This is effectively the same as <a class="symbol" href="#&amp;rest">&amp;rest</a> except it requests an indentation of 2 and can only appear in macro lambda lists.</p>
                 </div>
               </td>
             </tr>
@@ -311,7 +311,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dd.htm">Lambda list keyword</a></th>
               <td>
                 <div class="topic">
-                  <p>This is sometimes needed to gain access to the compile-time lexical environment in which a macro call appears for the purpose of forwarding it to functions invoked during macroexpansion which need this information such as (from the HyperSpec) <a href="#macro-function">macro-function</a>, <a href="#get-setf-expansion">get-setf-expansion</a>, <a href="#compiler-macro-function">compiler-macro-function</a> or <a href="#macroexpand">macroexpand</a>.</p>
+                  <p>This is sometimes needed to gain access to the compile-time lexical environment in which a macro call appears for the purpose of forwarding it to functions invoked during macroexpansion which need this information such as (from the HyperSpec) <a class="symbol" href="#macro-function">macro-function</a>, <a class="symbol" href="#get-setf-expansion">get-setf-expansion</a>, <a class="symbol" href="#compiler-macro-function">compiler-macro-function</a> or <a class="symbol" href="#macroexpand">macroexpand</a>.</p>
                 </div>
               </td>
             </tr>
@@ -333,14 +333,14 @@
                   <p>lisptip: "<a href="http://lisptips.com/post/37350128056/duplicated-keyword-arguments">Duplicated keyword arguments</a>"</p>
                 </div>
                 <div class="topic">
-                  <p>Processing of <a href="#&amp;key">&amp;key</a> arguments is generally slower than for other kinds of arguments, due to somewhat more complex processing most of which may well happen at runtime, but unless you're dealing with performance-critical code there usually isn't cause for concern.</p>
+                  <p>Processing of <a class="symbol" href="#&amp;key">&amp;key</a> arguments is generally slower than for other kinds of arguments, due to somewhat more complex processing most of which may well happen at runtime, but unless you're dealing with performance-critical code there usually isn't cause for concern.</p>
                 </div>
                 <div class="topic">
-                  <p>Use <a href="#&amp;allow-other-keys">&amp;allow-other-keys</a> to <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disable keyword arguments checking</a> from the callee side.</p>
-                  <p>My nomination for "weirdest Common Lisp feature": the caller can always <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disable keyword arguments checking</a> in any <a href="#&amp;key">&amp;key</a> arguments context by passing <code class="common-lisp">:allow-other-keys t</code>. It's sometimes convenient to use this feature to capture a few arguments explicitly and then forward the rest to another function with <a href="#apply">apply</a>, sidestepping the need to explicitly remove unwanted keyword arguments from the list.</p>
+                  <p>Use <a class="symbol" href="#&amp;allow-other-keys">&amp;allow-other-keys</a> to <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disable keyword arguments checking</a> from the callee side.</p>
+                  <p>My nomination for "weirdest Common Lisp feature": the caller can always <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dada.htm">disable keyword arguments checking</a> in any <a class="symbol" href="#&amp;key">&amp;key</a> arguments context by passing <code class="common-lisp">:allow-other-keys t</code>. It's sometimes convenient to use this feature to capture a few arguments explicitly and then forward the rest to another function with <a class="symbol" href="#apply">apply</a>, sidestepping the need to explicitly remove unwanted keyword arguments from the list.</p>
                 </div>
                 <div class="topic">
-                  <p>Use <a href="#&amp;rest">&amp;rest</a> to capture a list of all keyword arguments in the order they appear in the call.</p>
+                  <p>Use <a class="symbol" href="#&amp;rest">&amp;rest</a> to capture a list of all keyword arguments in the order they appear in the call.</p>
                 </div>
               </td>
             </tr>
@@ -356,8 +356,8 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_dab.htm">Lambda list keyword</a></th>
               <td>
                 <div class="topic">
-                  <p>I'd recommend almost always using <a href="#&amp;key">&amp;key</a> instead of <a href="#&amp;optional">&amp;optional</a> in public interfaces. This is because having several <a href="#&amp;optional">&amp;optional</a> arguments is inconvenient (you might need to explicitly provide several default values just to get at the positional argument you wanted to use) and confusing (the arbitrariness of the order increases exponentially), and thus if many new optional arguments had to be added one would use <a href="#&amp;key">&amp;key</a> arguments... But then <a href="#&amp;optional">&amp;optional</a> and <a href="#&amp;key">&amp;key</a> really don't mix well. Indeed only two macros in Common Lisp do so and they have still tripped up many users. So it's generally better to use <a href="#&amp;key">&amp;key</a>.</p>
-                  <p><a href="#&amp;key">&amp;key</a> also makes for more explicit calls, which are arguably easier to read, especially with spotty knowledge of an API.</p>
+                  <p>I'd recommend almost always using <a class="symbol" href="#&amp;key">&amp;key</a> instead of <a class="symbol" href="#&amp;optional">&amp;optional</a> in public interfaces. This is because having several <a class="symbol" href="#&amp;optional">&amp;optional</a> arguments is inconvenient (you might need to explicitly provide several default values just to get at the positional argument you wanted to use) and confusing (the arbitrariness of the order increases exponentially), and thus if many new optional arguments had to be added one would use <a class="symbol" href="#&amp;key">&amp;key</a> arguments... But then <a class="symbol" href="#&amp;optional">&amp;optional</a> and <a class="symbol" href="#&amp;key">&amp;key</a> really don't mix well. Indeed only two macros in Common Lisp do so and they have still tripped up many users. So it's generally better to use <a class="symbol" href="#&amp;key">&amp;key</a>.</p>
+                  <p><a class="symbol" href="#&amp;key">&amp;key</a> also makes for more explicit calls, which are arguably easier to read, especially with spotty knowledge of an API.</p>
                 </div>
               </td>
             </tr>
@@ -376,7 +376,7 @@
                   <p>Can be used with &amp;key to capture all keyword arguments (even those not known in advance but allowed by &amp;allow-other-keys or <code class="common-lisp">:allow-other-keys t</code>) in the order they appear in the call. This order is of particular interest for macros that need to ensure that keyword arguments are evaluated in the same order that the caller intended. This is an often overlooked issue. The easiest way to arrange for a macro to evaluate keyword arguments in the right order is to expand to a function call.</p>
                 </div>
                 <div class="topic">
-                  <p><a href="#apply">apply</a> is very related.</p>
+                  <p><a class="symbol" href="#apply">apply</a> is very related.</p>
                 </div>
               </td>
             </tr>
@@ -420,7 +420,7 @@
                   <p>lisptip: "<a href="http://lisptips.com/post/30978863226/a-simple-repl">A simple REPL</a>"</p>
                 </div>
                 <div class="topic">
-                  <p>Primary value only. Use <a href="#/">/</a> to get all values.</p>
+                  <p>Primary value only. Use <a class="symbol" href="#/">/</a> to get all values.</p>
                 </div>
               </td>
             </tr>
@@ -655,7 +655,7 @@
               <td>
                 <div class="topic">
                   <p>Pathname for current .lisp file: <code class="common-lisp">#.(or *compile-file-truename* *load-truename*)</code>.</p>
-                  <p>This works reliably with <a href="#load">load</a>, <a href="#compile-file">compile-file</a>, <cite class="common-lisp library"><a href="http://common-lisp.net/project/asdf/">ASDF</a></cite>, <a href="http://www.gnu.org/software/emacs/">Emacs</a>, <a href="http://common-lisp.net/project/slime/">Slime</a> and .fasl (compiled) files!</p>
+                  <p>This works reliably with <a class="symbol" href="#load">load</a>, <a class="symbol" href="#compile-file">compile-file</a>, <cite class="common-lisp library"><a href="http://common-lisp.net/project/asdf/">ASDF</a></cite>, <a href="http://www.gnu.org/software/emacs/">Emacs</a>, <a href="http://common-lisp.net/project/slime/">Slime</a> and .fasl (compiled) files!</p>
                 </div>
               </td>
             </tr>
@@ -1345,12 +1345,12 @@
                     <dt>Integer division</dt>
                     <dd>
                       <p>In many languages, returns an integer result and loses the remainder. For example, dividing 3 by 2 would yield 1 and the remainder of 1 would be lost.</p>
-                      <p>Common Lisp supports this type of division with <a href="#floor">floor</a> and <a href="#truncate">truncate</a> when using 2 integer arguments (but these functions can do much more).</p>
+                      <p>Common Lisp supports this type of division with <a class="symbol" href="#floor">floor</a> and <a class="symbol" href="#truncate">truncate</a> when using 2 integer arguments (but these functions can do much more).</p>
                     </dd>
                     <dt>Floating-point division</dt>
                     <dd>
                       <p>Floating-point numbers have many inherent limitations regarding accuracy. For example, the result of dividing 1 by 3 can't be representated accurately using floating-point numbers. The real result is 1/3 or 0.333... but a floating-point representation might yield 0.33333334 as an answer.</p>
-                      <p>Common Lisp supports this type of division. Simply pass floating-point numbers to <a href="#/">/</a>:</p>
+                      <p>Common Lisp supports this type of division. Simply pass floating-point numbers to <a class="symbol" href="#/">/</a>:</p>
                       <pre class="example"><code class="common-lisp">(/ 1.0 3) → 0.33333334</code></pre>
                       (Results may vary depending on the kinds of floats the current Common Lisp implementation supports.)
                     </dd>
@@ -1447,7 +1447,7 @@
                   <pre class="example"><code class="common-lisp">(1+ <var>number</var>) == (+ <var>number</var> 1)</code></pre>
                 </div>
                 <div class="topic">
-                  <p><a href="#incf">incf</a> increments a place.</p>
+                  <p><a class="symbol" href="#incf">incf</a> increments a place.</p>
                 </div>
               </td>
             </tr>
@@ -1472,7 +1472,7 @@
                   <pre class="example"><code class="common-lisp">(1- <var>number</var>) == (- <var>number</var> 1)</code></pre>
                 </div>
                 <div class="topic">
-                  <p><a href="#decf">decf</a> decrements a place.</p>
+                  <p><a class="symbol" href="#decf">decf</a> decrements a place.</p>
                 </div>
               </td>
             </tr>
@@ -1699,7 +1699,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_add_me.htm">Generic function</a></th>
               <td>
                 <div class="topic">
-                  <p>The usual way of adding a method to a generic-function is with <a href="#defmethod">defmethod</a>.</p>
+                  <p>The usual way of adding a method to a generic-function is with <a class="symbol" href="#defmethod">defmethod</a>.</p>
                 </div>
               </td>
             </tr>
@@ -1715,7 +1715,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_adjoin.htm">Function</a></th>
               <td>
                 <div class="topic">
-                  <p>The modify-macro equivalent is <a href="#pushnew">pushnew</a>.</p>
+                  <p>The modify-macro equivalent is <a class="symbol" href="#pushnew">pushnew</a>.</p>
                 </div>
               </td>
             </tr>
@@ -1858,7 +1858,7 @@
                 </div>
                 <div class="topic">
                   <p>All arguments are copied except the last one. The result shares structure with the last argument.</p>
-                  <p>If you need to ensure that all arguments are copied including the last one, use <code class="common-lisp">(<a href="#concatenate">concatenate</a> 'list ...)</code>.</p>
+                  <p>If you need to ensure that all arguments are copied including the last one, use <code class="common-lisp">(<a class="symbol" href="#concatenate">concatenate</a> 'list ...)</code>.</p>
                 </div>
                 <div class="topic">
                   <p><q>[The result] will be a list unless the last list was not a list and all preceding lists were null.</q></p>
@@ -1880,7 +1880,7 @@
                   <p>Yes, this is just a function!</p>
                 </div>
                 <div class="topic">
-                  <p>Note that <a href="#apply">apply</a> accepts any number of arguments to pass to the function (first argument). Only the last argument to <a href="#apply">apply</a> will be "spread".</p>
+                  <p>Note that <a class="symbol" href="#apply">apply</a> accepts any number of arguments to pass to the function (first argument). Only the last argument to <a class="symbol" href="#apply">apply</a> will be "spread".</p>
                   <p>This is very convenient and can reduce consing to a minimum in many common use-cases, one of which is overriding keyword parameters:</p>
                   <pre class="example"><code class="common-lisp">(lambda (function &amp;rest keys &amp;key (n 1) &amp;allow-other-keys)
   (apply function :n (- n) keys))
@@ -1889,10 +1889,10 @@
   (apply function (list* :n (- n) keys)))</code></pre>
                 </div>
                 <div class="topic">
-                  <p>Note that beyond simple cases, <a href="#apply">apply</a> often prevents many optimizations due to its dynamic nature.</p>
+                  <p>Note that beyond simple cases, <a class="symbol" href="#apply">apply</a> often prevents many optimizations due to its dynamic nature.</p>
                 </div>
                 <div class="topic">
-                  <p>If the number of arguments is known in advance, then <a href="#funcall">funcall</a> usually suffices.</p>
+                  <p>If the number of arguments is known in advance, then <a class="symbol" href="#funcall">funcall</a> usually suffices.</p>
                 </div>
               </td>
             </tr>
@@ -2000,7 +2000,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_array.htm">System class</a></th>
               <td>
                 <div class="topic">
-                  <p>Little-known array functions: <a href="#array-total-size">array-total-size</a>, <a href="#array-rank">array-rank</a>, <a href="#array-dimension">array-dimension</a>, <a href="#row-major-aref">row-major-aref</a>, <a href="#array-row-major-index">array-row-major-index</a>, <a href="#array-in-bounds-p.">array-in-bounds-p</a>.</p>
+                  <p>Little-known array functions: <a class="symbol" href="#array-total-size">array-total-size</a>, <a class="symbol" href="#array-rank">array-rank</a>, <a class="symbol" href="#array-dimension">array-dimension</a>, <a class="symbol" href="#row-major-aref">row-major-aref</a>, <a class="symbol" href="#array-row-major-index">array-row-major-index</a>, <a class="symbol" href="#array-in-bounds-p.">array-in-bounds-p</a>.</p>
                 </div>
               </td>
             </tr>
@@ -2183,7 +2183,7 @@
                   <p><q>Since the product of no arguments is one, the array total size of a zero-dimensional array is one.</q></p>
                 </div>
                 <div class="topic">
-                  <p>See also: <a href="#row-major-aref">row-major-aref</a></p>
+                  <p>See also: <a class="symbol" href="#row-major-aref">row-major-aref</a></p>
                 </div>
               </td>
             </tr>
@@ -2414,7 +2414,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/t_atom.htm">Type</a></th>
               <td>
                 <div class="topic">
-                  <p><a href="#atom">atom</a> is not a "perfect dual" to <a href="#cons">cons</a> because it's just a type so you can't dispatch on it.</p>
+                  <p><a class="symbol" href="#atom">atom</a> is not a "perfect dual" to <a class="symbol" href="#cons">cons</a> because it's just a type so you can't dispatch on it.</p>
                 </div>
               </td>
             </tr>
@@ -2725,14 +2725,14 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_block.htm">Special operator</a></th>
               <td>
                 <div class="topic">
-                  <p>Informally, this is the static, lexical counterpart of <a href="#catch">catch</a>.</p>
+                  <p>Informally, this is the static, lexical counterpart of <a class="symbol" href="#catch">catch</a>.</p>
                 </div>
                 <div class="topic">
-                  <p><a href="#block">block</a> is generally preferable to <a href="#catch">catch</a> because it's easier to reason about.</p>
+                  <p><a class="symbol" href="#block">block</a> is generally preferable to <a class="symbol" href="#catch">catch</a> because it's easier to reason about.</p>
                 </div>
                 <div class="topic">
-                  <p>Most code definition constructs such as <a href="#defun">defun</a> are wrapped in an implicit block of the same name as the unit being defined.</p>
-                  <p>Most iteration constructs are wrapped in an implicit <code class="common-lisp">(block nil)</code> which you can <a href="#return">return</a> from.</p>
+                  <p>Most code definition constructs such as <a class="symbol" href="#defun">defun</a> are wrapped in an implicit block of the same name as the unit being defined.</p>
+                  <p>Most iteration constructs are wrapped in an implicit <code class="common-lisp">(block nil)</code> which you can <a class="symbol" href="#return">return</a> from.</p>
                 </div>
               </td>
             </tr>
@@ -3044,7 +3044,7 @@
                   <p><q>Conditional operations, such as if, permit the use of generalized booleans, not just booleans; any non-nil value, not just t, counts as true for a generalized boolean. However, as a matter of convention, the symbol t is considered the canonical value to use even for a generalized boolean when no better choice presents itself.</q></p>
                 </div>
                 <div class="topic">
-                  <p>I'm bummed that there isn't a <a href="#boolean">boolean</a> function that converts a generalized boolean to a boolean. :(</p>
+                  <p>I'm bummed that there isn't a <a class="symbol" href="#boolean">boolean</a> function that converts a generalized boolean to a boolean. :(</p>
                 </div>
               </td>
             </tr>
@@ -3433,7 +3433,7 @@
               </th>
               <td>
                 <div class="topic">
-                  <p>I prefer <a href="#fourth">fourth</a>.</p>
+                  <p>I prefer <a class="symbol" href="#fourth">fourth</a>.</p>
                 </div>
               </td>
             </tr>
@@ -3454,7 +3454,7 @@
               </th>
               <td>
                 <div class="topic">
-                  <p>I prefer <a href="#third">third</a>.</p>
+                  <p>I prefer <a class="symbol" href="#third">third</a>.</p>
                 </div>
               </td>
             </tr>
@@ -3475,7 +3475,7 @@
               </th>
               <td>
                 <div class="topic">
-                  <p>I prefer <a href="#second">second</a>.</p>
+                  <p>I prefer <a class="symbol" href="#second">second</a>.</p>
                 </div>
               </td>
             </tr>
@@ -3535,7 +3535,7 @@
                   <p>Normally accesses the car slot of a cons, but <code class="common-lisp">(car nil) → nil</code>.</p>
                 </div>
                 <div class="topic">
-                  <p>In contexts where the car of a cons to access is semantically the first element of a list, using <a href="#first">first</a> might indicate intent better.</p>
+                  <p>In contexts where the car of a cons to access is semantically the first element of a list, using <a class="symbol" href="#first">first</a> might indicate intent better.</p>
                 </div>
               </td>
             </tr>
@@ -3551,7 +3551,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm">Macro</a></th>
               <td>
                 <div class="topic">
-                  <p><a href="#pairlis">One of</a> my nominations for "most glaring X3J13 concession": Besides <code class="common-lisp standard marker">t</code>, <a href="#case">case</a> also accepts <code class="common-lisp standard marker">otherwise</code> to designate the "otherwise" clause. (Does anyone use the <code class="common-lisp standard marker">otherwise</code> notation??)</p>
+                  <p><a href="#pairlis">One of</a> my nominations for "most glaring X3J13 concession": Besides <code class="common-lisp standard marker">t</code>, <a class="symbol" href="#case">case</a> also accepts <code class="common-lisp standard marker">otherwise</code> to designate the "otherwise" clause. (Does anyone use the <code class="common-lisp standard marker">otherwise</code> notation??)</p>
                 </div>
               </td>
             </tr>
@@ -3567,7 +3567,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_catch.htm">Special operator</a></th>
               <td>
                 <div class="topic">
-                  <p><a href="#block">block</a> is generally preferable to <a href="#catch">catch</a> because it's easier to reason about.</p>
+                  <p><a class="symbol" href="#block">block</a> is generally preferable to <a class="symbol" href="#catch">catch</a> because it's easier to reason about.</p>
                 </div>
                 <div class="topic">
                   <p>This doesn't really have anything to do with exception handling.</p>
@@ -3843,10 +3843,10 @@
               </th>
               <td>
                 <div class="topic">
-                  <p>This is the most useful of the operators in the "CXR" family besides <a href="#car">car</a> and <a href="#cdr">cdr</a>. Its primary utility is helping to traverse plists, most commonly with <a href="#loop">loop</a> or <a href="#do">do</a>. It would be less useful if more direct support for iteration over plists was added...</p>
+                  <p>This is the most useful of the operators in the "CXR" family besides <a class="symbol" href="#car">car</a> and <a class="symbol" href="#cdr">cdr</a>. Its primary utility is helping to traverse plists, most commonly with <a class="symbol" href="#loop">loop</a> or <a class="symbol" href="#do">do</a>. It would be less useful if more direct support for iteration over plists was added...</p>
                 </div>
                 <div class="topic">
-                  <p>Personally I don't use operators in the "CXR" family besides <a href="#car">car</a>, <a href="#cdr">cdr</a> and <a href="#cddr">cddr</a>. You might also prefer the arguably more "modern" alternatives I like to use.</p>
+                  <p>Personally I don't use operators in the "CXR" family besides <a class="symbol" href="#car">car</a>, <a class="symbol" href="#cdr">cdr</a> and <a class="symbol" href="#cddr">cddr</a>. You might also prefer the arguably more "modern" alternatives I like to use.</p>
                   <p>I guess the multiple "CXR" variations must have been a more important convenience shortcut notation when list processing had a much bigger role in Lisp...</p>
                 </div>
               </td>
@@ -3866,7 +3866,7 @@
                   <p>Normally accesses the "cdr" slot of a cons, but <code class="common-lisp">(cdr nil) → nil</code>.</p>
                 </div>
                 <div class="topic">
-                  <p>In contexts where the "cdr" of a cons to access is semantically the rest of a list, using <a href="#rest">rest</a> might indicate intent better.</p>
+                  <p>In contexts where the "cdr" of a cons to access is semantically the rest of a list, using <a class="symbol" href="#rest">rest</a> might indicate intent better.</p>
                 </div>
               </td>
             </tr>
@@ -4829,7 +4829,7 @@
               </th>
               <td>
                 <div class="topic">
-                  <pre class="example"><code class="common-lisp">(consp <var>object</var>) == (not (<a href="#atom">atom</a> <var>object</var>))</code></pre>
+                  <pre class="example"><code class="common-lisp">(consp <var>object</var>) == (not (<a class="symbol" href="#atom">atom</a> <var>object</var>))</code></pre>
                 </div>
               </td>
             </tr>
@@ -4919,7 +4919,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cp_lis.htm">Function</a></th>
               <td>
                 <div class="topic">
-                  <p>Differs from <a href="#copy-seq">copy-seq</a> with a list argument only in that it correctly handles dotted lists.</p>
+                  <p>Differs from <a class="symbol" href="#copy-seq">copy-seq</a> with a list argument only in that it correctly handles dotted lists.</p>
                 </div>
                 <div class="topic">
                   <p><q>The consequences are undefined if <var>list</var> is a circular list.</q></p>
@@ -5283,7 +5283,7 @@
                   <p>Redefining a DEFGENERIC with removed :method options will automatically remove the corresponding methods, which is quite convenient.</p>
                 </div>
                 <div class="topic">
-                  <p><a href="#defgeneric">defgeneric</a> expands to a call to <a href="#ensure-generic-function">ensure-generic-function</a>.</p>
+                  <p><a class="symbol" href="#defgeneric">defgeneric</a> expands to a call to <a class="symbol" href="#ensure-generic-function">ensure-generic-function</a>.</p>
                 </div>
               </td>
             </tr>
@@ -5356,8 +5356,8 @@
               <td>
                 <div class="topic">
                   <p>This is the most general and powerful way to make new kinds of setfable places, but also the most complex.</p>
-                  <p>In simple cases, <a href="#defun">defining a setf-function</a> or using the simple form of <a href="#defsetf">defsetf</a> often suffices.</p>
-                  <p>It's also possible to make local setf functions with <a href="#flet">flet</a> or <a href="#labels">labels</a>.<br />Just use <code class="common-lisp">(setf <var>name</var>)</code> as function name.</p>
+                  <p>In simple cases, <a href="#defun">defining a setf-function</a> or using the simple form of <a class="symbol" href="#defsetf">defsetf</a> often suffices.</p>
+                  <p>It's also possible to make local setf functions with <a class="symbol" href="#flet">flet</a> or <a class="symbol" href="#labels">labels</a>.<br />Just use <code class="common-lisp">(setf <var>name</var>)</code> as function name.</p>
                   <p>If even that is not powerful enough for you, you might like <a href="../../libraries/place-utils/setf-expanderlet.html">setf-expanderlet</a>.</p>
                 </div>
               </td>
@@ -5479,7 +5479,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defstr.htm">Macro</a></th>
               <td>
                 <div class="topic">
-                  <p>I'd recommend always using <a href="#defclass">defclass</a> instead, unless you absolutely, provably need the better performance of structures. In a good Common Lisp implementation, normal classes are probably much more performant than you'd think given their quite dynamic nature.</p>
+                  <p>I'd recommend always using <a class="symbol" href="#defclass">defclass</a> instead, unless you absolutely, provably need the better performance of structures. In a good Common Lisp implementation, normal classes are probably much more performant than you'd think given their quite dynamic nature.</p>
                 </div>
                 <div class="topic">
                   <p>There's no portable way to directly instantiate a DEFSTRUCT structure using a <code class="common-lisp">(:constructor nil)</code> option (unless a non-nil :constructor option is also specified), but doing it can still be useful to declare "abstract structures" that another DEFSTRUCT can then "inherit" from with the <code class="common-lisp standard marker">:include</code> option.</p>
@@ -5522,7 +5522,7 @@
                   <p>Note that the first argument is a "function name", which includes not only symbols but also lists of the form <code class="common-lisp">(setf <var>name</var>)</code>, used to define setf functions.</p>
                 </div>
                 <div class="topic">
-                  <p>If you need to actually use (and not just refer to) the function you're defining at compile-time (including at macroexpansion-time) in the same file, you'll need to wrap your defun with <a href="#eval-when">eval-when</a>.</p>
+                  <p>If you need to actually use (and not just refer to) the function you're defining at compile-time (including at macroexpansion-time) in the same file, you'll need to wrap your defun with <a class="symbol" href="#eval-when">eval-when</a>.</p>
                 </div>
               </td>
             </tr>
@@ -5560,7 +5560,7 @@
               </th>
               <td>
                 <div class="topic">
-                  <p>You can think of this as "n<a href="#remove">remove</a>".</p>
+                  <p>You can think of this as "n<a class="symbol" href="#remove">remove</a>".</p>
                 </div>
               </td>
             </tr>
@@ -5711,7 +5711,7 @@
                   <p>lisptip: "<a href="http://lisptips.com/post/14259866907/describing-objects">Describing objects</a>"</p>
                 </div>
                 <div class="topic">
-                  <p><q><a href="#describe-object">describe-object</a> is called by <a href="#describe">describe</a>; it must not be called by the user.</q></p>
+                  <p><q><a class="symbol" href="#describe-object">describe-object</a> is called by <a class="symbol" href="#describe">describe</a>; it must not be called by the user.</q></p>
                 </div>
               </td>
             </tr>
@@ -6121,7 +6121,7 @@
               <td>
                 <div class="topic">
                   <p>Like all sequence functions, honors a vector's fill pointer, if any.</p>
-                  <p><q><a href="#aref">aref</a> may be used to access vector elements that are beyond the vector's fill pointer.</q></p>
+                  <p><q><a class="symbol" href="#aref">aref</a> may be used to access vector elements that are beyond the vector's fill pointer.</q></p>
                 </div>
               </td>
             </tr>
@@ -6215,13 +6215,13 @@
               </th>
               <td>
                 <div class="topic">
-                  <p><a href="#eq">eq</a> basically compares two memory addresses. This makes for very efficient comparisons.</p>
-                  <p>It also means it can't reliably compare numbers and characters. Never use <a href="#eq">eq</a> to compare values that might involve numbers or characters. Use <a href="#eql">eql</a> in that case.</p>
+                  <p><a class="symbol" href="#eq">eq</a> basically compares two memory addresses. This makes for very efficient comparisons.</p>
+                  <p>It also means it can't reliably compare numbers and characters. Never use <a class="symbol" href="#eq">eq</a> to compare values that might involve numbers or characters. Use <a class="symbol" href="#eql">eql</a> in that case.</p>
                 </div>
                 <div class="topic">
                   <blockquote>
                     <p>Most Common Lisp operators use eql rather than eq to compare objects, or else they default to eql and only use eq if specifically requested to do so. However, the following operators are defined to use eq rather than eql in a way that cannot be overridden by the code which employs them:</p>
-                    <p><a href="#catch">catch</a>, <a href="#get">get</a>, <a href="#get-properties">get-properties</a>, <a href="#getf">getf</a>, <a href="#remf">remf</a>, <a href="#remprop">remprop</a>, <a href="#throw">throw</a>.</p>
+                    <p><a class="symbol" href="#catch">catch</a>, <a class="symbol" href="#get">get</a>, <a class="symbol" href="#get-properties">get-properties</a>, <a class="symbol" href="#getf">getf</a>, <a class="symbol" href="#remf">remf</a>, <a class="symbol" href="#remprop">remprop</a>, <a class="symbol" href="#throw">throw</a>.</p>
                   </blockquote>
                 </div>
               </td>
@@ -6244,11 +6244,11 @@
               </th>
               <td>
                 <div class="topic">
-                  <p><a href="#eql">eql</a> is a simple extension to <a href="#eq">eq</a> that guarantees a meaningful result when comparing numbers and characters.</p>
-                  <p>Comparing numbers and characters with <a href="#eq">eq</a> would ignore the fact that two semantically equivalent number or character values might live at different addresses.</p>
-                  <p>For instance, <code class="common-lisp">(eq (1+ most-positive-fixnum) (1+ most-positive-fixnum))</code> might very well return nil. This would be the case if two separate bignum values were allocated. <a href="#eql">eql</a> or <a href="#=">=</a> in this case would reliably return T.</p>
-                  <p>Various other Common Lisp implementation choices might also make <a href="#eq">eq</a> comparisons of numbers and characters unreliable, such as optimizations that put "unboxed" values of numbers in registers or on the stack. These might of course vary in effects depending on the specific context of each invocation of <a href="#eq">eq</a>.</p>
-                  <p>Bottom line, never use <a href="#eq">eq</a> to compare values that might involve numbers or characters.</p>
+                  <p><a class="symbol" href="#eql">eql</a> is a simple extension to <a class="symbol" href="#eq">eq</a> that guarantees a meaningful result when comparing numbers and characters.</p>
+                  <p>Comparing numbers and characters with <a class="symbol" href="#eq">eq</a> would ignore the fact that two semantically equivalent number or character values might live at different addresses.</p>
+                  <p>For instance, <code class="common-lisp">(eq (1+ most-positive-fixnum) (1+ most-positive-fixnum))</code> might very well return nil. This would be the case if two separate bignum values were allocated. <a class="symbol" href="#eql">eql</a> or <a class="symbol" href="#=">=</a> in this case would reliably return T.</p>
+                  <p>Various other Common Lisp implementation choices might also make <a class="symbol" href="#eq">eq</a> comparisons of numbers and characters unreliable, such as optimizations that put "unboxed" values of numbers in registers or on the stack. These might of course vary in effects depending on the specific context of each invocation of <a class="symbol" href="#eq">eq</a>.</p>
+                  <p>Bottom line, never use <a class="symbol" href="#eq">eq</a> to compare values that might involve numbers or characters.</p>
                 </div>
                 <div class="topic">
                   <p><q>If an implementation supports positive and negative zeros as distinct values, then (eql 0.0 -0.0) returns false. Otherwise, when the syntax -0.0 is read it is interpreted as the value 0.0, and so (eql 0.0 -0.0) returns true.</q></p>
@@ -6365,9 +6365,9 @@
                   <p>In at least 99% of cases where one might think of using this, there's a better way.</p>
                 </div>
                 <div class="topic">
-                  <p>One mistake many newbies make is using <a href="#eval">eval</a> at macroexpansion time. That's almost certainly a mistake. The primary job of a macro is returning an expansion. It's the expansion that will do the actual work at runtime, including any side-effects.</p>
+                  <p>One mistake many newbies make is using <a class="symbol" href="#eval">eval</a> at macroexpansion time. That's almost certainly a mistake. The primary job of a macro is returning an expansion. It's the expansion that will do the actual work at runtime, including any side-effects.</p>
                   <p>Macros should almost never produce side-effects as part of the macroexpansion process, especially as one macro call might be expanded multiple times for various reasons.</p>
-                  <p>See <a href="#eval-when">eval-when</a>.</p>
+                  <p>See <a class="symbol" href="#eval-when">eval-when</a>.</p>
                 </div>
               </td>
             </tr>
@@ -6393,13 +6393,13 @@
      ...))</code></pre>
                 </div>
                 <div class="topic">
-                  <p>In more than 99% of cases where <a href="#eval-when">eval-when</a> is needed, one needs to specify all situations:</p>
+                  <p>In more than 99% of cases where <a class="symbol" href="#eval-when">eval-when</a> is needed, one needs to specify all situations:</p>
                   <pre class="example"><code class="common-lisp">(eval-when (:compile-toplevel :load-toplevel :execute)
   ...)</code></pre>
                   <p>Think that's too long? You might like <a href="http://www.hexstreamsoft.com/libraries/enhanced-eval-when/">enhanced-eval-when</a>, which lets you do:</p>
                   <pre class="example"><code class="common-lisp">(eval-when t
   (defun my-function ...))</code></pre>
-                  <p><a href="#eval-when">eval-when</a> without all situations specified is not particularly useful (outside of a few expert cases) and notoriously difficult to reason about.</p>
+                  <p><a class="symbol" href="#eval-when">eval-when</a> without all situations specified is not particularly useful (outside of a few expert cases) and notoriously difficult to reason about.</p>
                 </div>
               </td>
             </tr>
@@ -6526,7 +6526,7 @@
                   <pre class="example"><code class="common-lisp">(fboundp 'unwind-protect) → t</code></pre>
                 </div>
                 <div class="topic">
-                  <p>As for <a href="#boundp">boundp</a>, this examines only the global environment. Lexical bindings are ignored.</p>
+                  <p>As for <a class="symbol" href="#boundp">boundp</a>, this examines only the global environment. Lexical bindings are ignored.</p>
                 </div>
                 <div class="topic">
                   <p>Accepts a "function name": <q>A symbol or a list (setf symbol).</q></p>
@@ -6741,7 +6741,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_file_s.htm">Function</a></th>
               <td>
                 <div class="topic">
-                  <p>This has nothing to do with determining the length of a file. See <a href="#file-length">file-length</a>.</p>
+                  <p>This has nothing to do with determining the length of a file. See <a class="symbol" href="#file-length">file-length</a>.</p>
                 </div>
                 <div class="topic">
                   <p><q>The returned value corresponds to the current state of stream at the time of the call and might not be the same if it is called again when the state of the stream has changed.</q></p>
@@ -6948,7 +6948,7 @@
                 </div>
                 <div class="topic">
                   <p>Synchronous. The operation will have completed by the time the function returns.</p>
-                  <p>See also: <a href="#force-output">force-output</a>. (asynchronous)</p>
+                  <p>See also: <a class="symbol" href="#force-output">force-output</a>. (asynchronous)</p>
                 </div>
               </td>
             </tr>
@@ -7211,7 +7211,7 @@
                 </div>
                 <div class="topic">
                   <p>Asynchronous. The operation may or may not have completed by the time the function returns.</p>
-                  <p>See also: <a href="#finish-output">finish-output</a>. (synchronous)</p>
+                  <p>See also: <a class="symbol" href="#finish-output">finish-output</a>. (synchronous)</p>
                 </div>
               </td>
             </tr>
@@ -7252,27 +7252,27 @@
                     <tbody>
                       <tr>
                         <th>~W</th>
-                        <td><a href="#write">write</a></td>
-                        <td><a href="#write-to-string">write-to-string</a></td>
+                        <td><a class="symbol" href="#write">write</a></td>
+                        <td><a class="symbol" href="#write-to-string">write-to-string</a></td>
                       </tr>
                       <tr>
                         <th>~S</th>
-                        <td><a href="#prin1">prin1</a></td>
-                        <td><a href="#prin1-to-string">prin1-to-string</a></td>
+                        <td><a class="symbol" href="#prin1">prin1</a></td>
+                        <td><a class="symbol" href="#prin1-to-string">prin1-to-string</a></td>
                       </tr>
                       <tr>
                         <th>~A</th>
-                        <td><a href="#princ">princ</a></td>
-                        <td><a href="#princ-to-string">princ-to-string</a></td>
+                        <td><a class="symbol" href="#princ">princ</a></td>
+                        <td><a class="symbol" href="#princ-to-string">princ-to-string</a></td>
                       </tr>
                       <tr>
                         <th>~%</th>
-                        <td><a href="#terpri">terpri</a></td>
+                        <td><a class="symbol" href="#terpri">terpri</a></td>
                         <td></td>
                       </tr>
                       <tr>
                         <th>~&</th>
-                        <td><a href="#fresh-line">fresh-line</a></td>
+                        <td><a class="symbol" href="#fresh-line">fresh-line</a></td>
                         <td></td>
                       </tr>
                     </tbody>
@@ -7392,7 +7392,7 @@
                   <p>Yes, this is just a function!</p>
                 </div>
                 <div class="topic">
-                  <p><a href="#funcall">funcall</a> is really just a thin wrapper over <a href="#apply">apply</a> that allows for more convenient function calling notation and easier optimization:</p>
+                  <p><a class="symbol" href="#funcall">funcall</a> is really just a thin wrapper over <a class="symbol" href="#apply">apply</a> that allows for more convenient function calling notation and easier optimization:</p>
                   <pre class="example"><code class="common-lisp">(funcall function arg1 arg2 arg3)
 ==
 (apply function (list arg1 arg2 arg3))</code></pre>
@@ -7438,7 +7438,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_fn_kwd.htm">Generic function</a></th>
               <td>
                 <div class="topic">
-                  <p>Probably most useful in <a href="#define-method-combination">define-method-combination</a>.</p>
+                  <p>Probably most useful in <a class="symbol" href="#define-method-combination">define-method-combination</a>.</p>
                 </div>
                 <div class="topic">
                   <p>Note that the standard only specifies this to work on standard methods and not, for instance, "normal" functions.</p>
@@ -7461,7 +7461,7 @@
                   <p>A common question is: "How to get the code from a function?"<br />This function does that... maybe!</p>
                   <p><q>The primary value, <var>lambda-expression</var>, is <var>function</var>'s defining lambda expression, or nil if the information is not available. [...] Any implementation may legitimately return nil as the <var>lambda-expression</var> of any function.</q></p>
                   <p><small>Life is hard!</small></p>
-                  <p>A common workaround is to make a wrapper macro around <a href="#defun">defun</a> that saves the body of the function being defined somewhere.</p>
+                  <p>A common workaround is to make a wrapper macro around <a class="symbol" href="#defun">defun</a> that saves the body of the function being defined somewhere.</p>
                 </div>
               </td>
             </tr>
@@ -7556,7 +7556,7 @@
               </th>
               <td>
                 <div class="topic">
-                  <p>Use <a href="#gensym">gensym</a> instead.</p>
+                  <p>Use <a class="symbol" href="#gensym">gensym</a> instead.</p>
                 </div>
               </td>
             </tr>
@@ -7681,10 +7681,10 @@
               <td>
                 <div class="topic">
                   <p>One of those relatively obscure functions that may deserve a bit more recognition...</p>
-                  <p><a href="http://www.xach.com/naggum/articles/3247672165664225@naggum.no.txt">Erik Naggum found a nice use for it</a>. While searching for a use for <a href="#nreconc">nreconc</a>, no less!</p>
+                  <p><a href="http://www.xach.com/naggum/articles/3247672165664225@naggum.no.txt">Erik Naggum found a nice use for it</a>. While searching for a use for <a class="symbol" href="#nreconc">nreconc</a>, no less!</p>
                 </div>
                 <div class="topic">
-                  <p><a href="#getf">getf</a> is a simpler version that searches for only one property and returns only its value (or a supplied default, if not found).</p>
+                  <p><a class="symbol" href="#getf">getf</a> is a simpler version that searches for only one property and returns only its value (or a supplied default, if not found).</p>
                 </div>
               </td>
             </tr>
@@ -7733,7 +7733,7 @@
               </th>
               <td>
                 <div class="topic">
-                  <p><q>There is no way (using <a href="#getf">getf</a>) to distinguish an absent property from one whose value is default; but see <a href="#get-properties">get-properties</a>.</q></p>
+                  <p><q>There is no way (using <a class="symbol" href="#getf">getf</a>) to distinguish an absent property from one whose value is default; but see <a class="symbol" href="#get-properties">get-properties</a>.</q></p>
                 </div>
                 <div class="topic">
                   <pre class="example"><code class="common-lisp">(getf <var>plist</var> <var>indicator</var> <var>default</var>)
@@ -7763,21 +7763,21 @@
                   <p><q>The secondary value, <var>present-p</var>, can be used to distinguish the absence of an entry from the presence of an entry that has a value of <var>default</var>.</q></p>
                 </div>
                 <div class="topic">
-                  <p>To remove an entry from the hash-table, use <a href="#remhash">remhash</a>.</p>
-                  <p>To efficiently remove all entries from the hash-table, use <a href="#clrhash">clrhash</a>.</p>
+                  <p>To remove an entry from the hash-table, use <a class="symbol" href="#remhash">remhash</a>.</p>
+                  <p>To efficiently remove all entries from the hash-table, use <a class="symbol" href="#clrhash">clrhash</a>.</p>
                   <p>There are three standard operators for iterating over all entries of a hash-table:</p>
                   <dl>
-                    <dt><a href="#maphash">maphash</a></dt>
+                    <dt><a class="symbol" href="#maphash">maphash</a></dt>
                     <dd><pre class="example"><code class="common-lisp">(maphash (lambda (key value)
            ...)
          hash-table)</code></pre></dd>
-                    <dt><a href="#with-hash-table-iterator">with-hash-table-iterator</a></dt>
+                    <dt><a class="symbol" href="#with-hash-table-iterator">with-hash-table-iterator</a></dt>
                     <dd><pre class="example"><code class="common-lisp">(with-hash-table-iterator (entry hash-table)
   (loop (multiple-value-bind (more key value) (entry)
           (unless more
             (return))
           ...)))</code></pre></dd>
-                    <dt><a href="#loop">loop</a></dt>
+                    <dt><a class="symbol" href="#loop">loop</a></dt>
                     <dd><p>TODO. Le <i>sigh</i>.</p></dd>
                   </dl>
                 </div>
@@ -7819,7 +7819,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_handle.htm">Macro</a></th>
               <td>
                 <div class="topic">
-                  <p>By the time a <a href="#handler-bind">handler-bind</a> handler is executed, <strong>the dynamic context has not yet been unwound</strong>.</p>
+                  <p>By the time a <a class="symbol" href="#handler-bind">handler-bind</a> handler is executed, <strong>the dynamic context has not yet been unwound</strong>.</p>
                   <pre class="example"><code class="common-lisp">(block nil
   (let ((*dynamic-context* 'outer))
     (declare (special *dynamic-context*))
@@ -7830,7 +7830,7 @@
       (let ((*dynamic-context* 'inner))
         (declare (special *dynamic-context*))
         (signal "Test.")))))</code></pre>
-                  <p>Compare to <a href="#handler-case">handler-case</a>.</p>
+                  <p>Compare to <a class="symbol" href="#handler-case">handler-case</a>.</p>
                 </div>
               </td>
             </tr>
@@ -7851,7 +7851,7 @@
               </th>
               <td>
                 <div class="topic">
-                  <p>By the time a <a href="#handler-case">handler-case</a> clause is executed, <strong>the dynamic context has already been unwound</strong>.</p>
+                  <p>By the time a <a class="symbol" href="#handler-case">handler-case</a> clause is executed, <strong>the dynamic context has already been unwound</strong>.</p>
                   <pre class="example"><code class="common-lisp">(block nil
   (let ((*dynamic-context* 'outer))
     (declare (special *dynamic-context*))
@@ -7860,10 +7860,10 @@
                     (signal "Test."))
       (simple-condition ()
         (return *dynamic-context*)))))</code></pre>
-                  <p>Compare to <a href="#handler-bind">handler-bind</a>.</p>
+                  <p>Compare to <a class="symbol" href="#handler-bind">handler-bind</a>.</p>
                 </div>
                 <div class="topic">
-                  <p>It took me an embarassing amount of time to realize this is loosely modeled on <a href="#typecase">typecase</a>.</p>
+                  <p>It took me an embarassing amount of time to realize this is loosely modeled on <a class="symbol" href="#typecase">typecase</a>.</p>
                 </div>
               </td>
             </tr>
@@ -7950,7 +7950,7 @@
               <td>
                 <div class="topic">
                   <p>Returns some implementation-dependent size which has to do with the internal size of the hash-table. This value is greater or equal to the actual number of items in hash-table.</p>
-                  <p>You might be looking for <a href="#hash-table-count">hash-table-count</a>.</p>
+                  <p>You might be looking for <a class="symbol" href="#hash-table-count">hash-table-count</a>.</p>
                 </div>
               </td>
             </tr>
@@ -8119,7 +8119,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_init_i.htm">Generic function</a></th>
               <td>
                 <div class="topic">
-                  <p>Immediately forwards to <a href="#shared-initialize">shared-initialize</a>.</p>
+                  <p>Immediately forwards to <a class="symbol" href="#shared-initialize">shared-initialize</a>.</p>
                 </div>
                 <div class="topic">
                   <p>Here's a way to canonicalize ("transform") an initarg very "early" in the object instance initialization process. The canonicalization will affect all <code class="common-lisp standard function operator">initialize-instance</code> :before, :after and primary methods (thus including slots initialized by an ":initarg" option.)</p>
@@ -8424,7 +8424,7 @@
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">Special operator</a></th>
               <td>
                 <div class="topic">
-                  <p>All local functions declared within the <a href="#labels">labels</a> invocation are in scope of eachother and themselves, thus permitting mutual recursion and self-recursion.</p>
+                  <p>All local functions declared within the <a class="symbol" href="#labels">labels</a> invocation are in scope of eachother and themselves, thus permitting mutual recursion and self-recursion.</p>
                 </div>
               </td>
             </tr>
@@ -8510,7 +8510,7 @@ is semantically equivalent to the function form
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_last.htm">Function</a></th>
               <td>
                 <div class="topic">
-                  <p><q><a href="#last">last</a> returns the last <var>n</var> conses (not the last <var>n</var> elements) of list).</q></p>
+                  <p><q><a class="symbol" href="#last">last</a> returns the last <var>n</var> conses (not the last <var>n</var> elements) of list).</q></p>
                   <p>To get the last element, just do <code class="common-lisp">(first (last <var>list</var>))</code>.</p>
                 </div>
                 <div class="topic">
@@ -8984,7 +8984,7 @@ is semantically equivalent to the function form
                   <p>Constructs an improper (dotted) list unless the last argument is a proper (nil-terminated) list.</p>
                 </div>
                 <div class="topic">
-                  <p>For many use-cases, can be thought of as a variant of <a href="#cons">cons</a> that allows to prepend any number of list elements (instead of just one) to a list.</p>
+                  <p>For many use-cases, can be thought of as a variant of <a class="symbol" href="#cons">cons</a> that allows to prepend any number of list elements (instead of just one) to a list.</p>
                   <p>This is particularly useful to add elements to or override elements from a plist:</p>
                   <pre class="example"><code class="common-lisp">(let ((plist '(:old c :overridden d)))
   (destructuring-bind (&amp;rest new-plist &amp;key old new overridden)
@@ -9022,7 +9022,7 @@ B</code></pre>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_l.htm">Function</a></th>
               <td>
                 <div class="topic">
-                  <p>This is not a faster variant of <a href="#length">length</a> for lists.</p>
+                  <p>This is not a faster variant of <a class="symbol" href="#length">length</a> for lists.</p>
                   <p>In fact, it's a probably-slower variant that can reliably detect circular lists and return nil in that case.</p>
                 </div>
               </td>
@@ -9058,7 +9058,7 @@ B</code></pre>
               <td>
                 <div class="topic">
                   <p><q>If <var>object</var> is a cons, listp does not check whether <var>object</var> is a proper list; it returns true for any kind of list.</q></p>
-                  <p>To check if something is a proper list, see <a href="#last">last</a>.</p>
+                  <p>To check if something is a proper list, see <a class="symbol" href="#last">last</a>.</p>
                 </div>
                 <div class="topic">
                   <pre class="example"><code class="common-lisp">(listp <var>object</var>) == (typep <var>object</var> 'list)
@@ -10094,7 +10094,7 @@ B</code></pre>
               </th>
               <td>
                 <div class="topic">
-                  <p><a href="#member">member</a> returns a tail of the list. How to get the "head"?</p>
+                  <p><a class="symbol" href="#member">member</a> returns a tail of the list. How to get the "head"?</p>
                   <pre class="example"><code class="common-lisp">(let ((<var>list</var> '(a b 7 c)))
   (ldiff <var>list</var> (member-if #'numberp <var>list</var>)))
 → (A B)</code></pre>
@@ -10539,7 +10539,7 @@ B</code></pre>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_multip.htm">Special operator</a></th>
               <td>
                 <div class="topic">
-                  <p><a href="#multiple-value-call">multiple-value-call</a> helped me understand continuation-passing-style: returning values is equivalent to calling a continuation with those values.</p>
+                  <p><a class="symbol" href="#multiple-value-call">multiple-value-call</a> helped me understand continuation-passing-style: returning values is equivalent to calling a continuation with those values.</p>
                 <p>It also showed me how function arguments and return values are such close duals of each other. Future languages, please take return values more seriously!</p>
                 </div>
                 <div class="topic">
@@ -10679,7 +10679,7 @@ B</code></pre>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_nconc.htm">Function</a></th>
               <td>
                 <div class="topic">
-                  <p>My nomination for "most little-used feature in Common Lisp": <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_df.htm">",." is to ",@"</a> as <a href="#nconc">nconc</a> is to <a href="#append">append</a>. It makes sense that it's so little used because it's pretty hard to reason about (at least to me) and the potential efficiency gains are probably not worth the trouble in most cases.</p>
+                  <p>My nomination for "most little-used feature in Common Lisp": <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_df.htm">",." is to ",@"</a> as <a class="symbol" href="#nconc">nconc</a> is to <a class="symbol" href="#append">append</a>. It makes sense that it's so little used because it's pretty hard to reason about (at least to me) and the potential efficiency gains are probably not worth the trouble in most cases.</p>
                 </div>
               </td>
             </tr>
@@ -11208,7 +11208,7 @@ B</code></pre>
                   <p>lisptip: "<a href="http://lisptips.com/post/11136367093/touching-a-file">Touching a file</a>"</p>
                 </div>
                 <div class="topic">
-                  <p>Use <a href="#with-open-file">with-open-file</a> unless you need the file to remain open for further processing.</p>
+                  <p>Use <a class="symbol" href="#with-open-file">with-open-file</a> unless you need the file to remain open for further processing.</p>
                 </div>
               </td>
             </tr>
@@ -11590,7 +11590,7 @@ B</code></pre>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_peek_c.htm">Function</a></th>
               <td>
                 <div class="topic">
-                  <p>To check if the next character in a stream is immediately available, use <a href="#read-char-no-hang">read-char-no-hang</a>.</p>
+                  <p>To check if the next character in a stream is immediately available, use <a class="symbol" href="#read-char-no-hang">read-char-no-hang</a>.</p>
                 </div>
               </td>
             </tr>
@@ -12006,15 +12006,15 @@ B</code></pre>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_pr_unr.htm">Macro</a></th>
               <td>
                 <div class="topic">
-                  <p>The cornerstone of most simple user <a href="#print-object">print-object</a> methods!</p>
+                  <p>The cornerstone of most simple user <a class="symbol" href="#print-object">print-object</a> methods!</p>
                 </div>
                 <div class="topic">
                   <p>You'll almost always want to supply <code class="common-lisp">:type t</code>.</p>
                 </div>
                 <div class="topic">
-                  <p>This is specified as always returning nil, not the <var>object</var>. That's a very curious choice, since <a href="#print-unreadable-object">print-unreadable-object</a> is typically used as the core of <a href="#print-object">print-object</a> methods, which are specified as returning the <var>object</var> that has been printed.</p>
-                  <p>But don't worry, users are not supposed to call <a href="#print-object">print-object</a> anyway, and given that the universe hasn't collapsed yet, I can only assume that all implementations have learned not to rely on the value returned by <a href="#print-object">print-object</a> long ago.</p>
-                  <p>There's probably not much point to auditing all your code to make sure <a href="#print-object">print-object</a> methods correctly return the <a href="#object">object</a> that was printed.</p>
+                  <p>This is specified as always returning nil, not the <var>object</var>. That's a very curious choice, since <a class="symbol" href="#print-unreadable-object">print-unreadable-object</a> is typically used as the core of <a class="symbol" href="#print-object">print-object</a> methods, which are specified as returning the <var>object</var> that has been printed.</p>
+                  <p>But don't worry, users are not supposed to call <a class="symbol" href="#print-object">print-object</a> anyway, and given that the universe hasn't collapsed yet, I can only assume that all implementations have learned not to rely on the value returned by <a class="symbol" href="#print-object">print-object</a> long ago.</p>
+                  <p>There's probably not much point to auditing all your code to make sure <a class="symbol" href="#print-object">print-object</a> methods correctly return the <a class="symbol" href="#object">object</a> that was printed.</p>
                 </div>
               </td>
             </tr>
@@ -12059,7 +12059,7 @@ B</code></pre>
               </th>
               <td>
                 <div class="topic">
-                  <p>Simply combines a <code class="common-lisp">(block nil)</code>, <a href="#let">let</a> and <a href="#tagbody">tagbody</a>.</p>
+                  <p>Simply combines a <code class="common-lisp">(block nil)</code>, <a class="symbol" href="#let">let</a> and <a class="symbol" href="#tagbody">tagbody</a>.</p>
                 </div>
               </td>
             </tr>
@@ -12080,7 +12080,7 @@ B</code></pre>
               </th>
               <td>
                 <div class="topic">
-                  <p>Simply combines a <code class="common-lisp">(block nil)</code>, <a href="#let*">let*</a> and <a href="#tagbody">tagbody</a>.</p>
+                  <p>Simply combines a <code class="common-lisp">(block nil)</code>, <a class="symbol" href="#let*">let*</a> and <a class="symbol" href="#tagbody">tagbody</a>.</p>
                 </div>
               </td>
             </tr>
@@ -12219,7 +12219,7 @@ B</code></pre>
               </th>
               <td>
                 <div class="topic">
-                  <p>Use <a href="#psetf">psetf</a>, which supports a strict superset of the functionality.</p>
+                  <p>Use <a class="symbol" href="#psetf">psetf</a>, which supports a strict superset of the functionality.</p>
                 </div>
               </td>
             </tr>
@@ -12261,7 +12261,7 @@ B</code></pre>
               </th>
               <td>
                 <div class="topic">
-                  <p>Thin wrapper over <a href="#adjoin">adjoin</a>.</p>
+                  <p>Thin wrapper over <a class="symbol" href="#adjoin">adjoin</a>.</p>
                 </div>
               </td>
             </tr>
@@ -12512,7 +12512,7 @@ B</code></pre>
               </th>
               <td>
                 <div class="topic">
-                  <p>Thin wrapper over <a href="#with-input-from-string">with-input-from-string</a> and <a href="#read">read</a> (or <a href="#read-preserving-whitespace">read-preserving-whitespace</a>).</p>
+                  <p>Thin wrapper over <a class="symbol" href="#with-input-from-string">with-input-from-string</a> and <a class="symbol" href="#read">read</a> (or <a class="symbol" href="#read-preserving-whitespace">read-preserving-whitespace</a>).</p>
                 </div>
               </td>
             </tr>
@@ -13089,7 +13089,7 @@ B</code></pre>
                   <p>lisptip: "<a href="http://lisptips.com/post/12321870014/working-on-multidimensional-arrays">Working on multidimensional arrays</a>"</p>
                 </div>
                 <div class="topic">
-                  <p>See also: <a href="#array-total-size">array-total-size</a>.</p>
+                  <p>See also: <a class="symbol" href="#array-total-size">array-total-size</a>.</p>
                 </div>
               </td>
             </tr>
@@ -13113,7 +13113,7 @@ B</code></pre>
                   <p>Use <code class="common-lisp">(setf car)</code> instead.</p>
                 </div>
                 <div class="topic">
-                  <p><a href="#rplaca">rplaca</a> differs from <code class="common-lisp">(setf car)</code> in that it returns the cons, not the new value.</p>
+                  <p><a class="symbol" href="#rplaca">rplaca</a> differs from <code class="common-lisp">(setf car)</code> in that it returns the cons, not the new value.</p>
                 </div>
               </td>
             </tr>
@@ -13137,7 +13137,7 @@ B</code></pre>
                   <p>Use <code class="common-lisp">(setf cdr)</code> instead.</p>
                 </div>
                 <div class="topic">
-                  <p><a href="#rplacd">rplacd</a> differs from <code class="common-lisp">(setf cdr)</code> in that it returns the cons, not the new value.</p>
+                  <p><a class="symbol" href="#rplacd">rplacd</a> differs from <code class="common-lisp">(setf cdr)</code> in that it returns the cons, not the new value.</p>
                 </div>
               </td>
             </tr>
@@ -13414,7 +13414,7 @@ B</code></pre>
               </th>
               <td>
                 <div class="topic">
-                  <p>Use <a href="#setf">setf</a>, which supports a strict superset of the functionality.</p>
+                  <p>Use <a class="symbol" href="#setf">setf</a>, which supports a strict superset of the functionality.</p>
                 </div>
               </td>
             </tr>
@@ -14373,10 +14373,10 @@ B</code></pre>
                   <p>lisptip: "<a href="http://lisptips.com/post/12412470017/string-functions">String functions</a>" (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/c_sequen.htm">sequence functions</a> also work on strings)</p>
                 </div>
                 <div class="topic">
-                  <p><q><a href="#coerce">coerce</a> can be used to convert a sequence of characters to a string.</q></p>
+                  <p><q><a class="symbol" href="#coerce">coerce</a> can be used to convert a sequence of characters to a string.</q></p>
                 </div>
                 <div class="topic">
-                  <p><q><a href="#prin1-to-string">prin1-to-string</a>, <a href="#princ-to-string">princ-to-string</a>, <a href="#write-to-string">write-to-string</a>, or <a href="#format">format</a> (with a first argument of nil) can be used to get a string representation of a number or any other object.</q></p>
+                  <p><q><a class="symbol" href="#prin1-to-string">prin1-to-string</a>, <a class="symbol" href="#princ-to-string">princ-to-string</a>, <a class="symbol" href="#write-to-string">write-to-string</a>, or <a class="symbol" href="#format">format</a> (with a first argument of nil) can be used to get a string representation of a number or any other object.</q></p>
                 </div>
               </td>
             </tr>
@@ -14974,7 +14974,7 @@ B</code></pre>
                 <div class="topic">
                   <blockquote>
                     <pre class="example"><code class="common-lisp">(symbol-function <var>symbol</var>) == (fdefinition <var>symbol</var>)</code></pre>
-                    <p>However, <a href="#fdefinition">fdefinition</a> accepts arguments other than just symbols.</p>
+                    <p>However, <a class="symbol" href="#fdefinition">fdefinition</a> accepts arguments other than just symbols.</p>
                   </blockquote>
                 </div>
               </td>
@@ -15131,7 +15131,7 @@ B</code></pre>
                   <p><q>The boolean representing true, and the canonical generalized boolean representing true. Although any object other than nil is considered true, t is generally used when there is no special reason to prefer one such object over another.</q></p>
                 </div>
                 <div class="topic">
-                  <p>Note that predicate functions generally return a generalized-boolean, not necessarily a <a href="#boolean">boolean</a>.</p>
+                  <p>Note that predicate functions generally return a generalized-boolean, not necessarily a <a class="symbol" href="#boolean">boolean</a>.</p>
                 </div>
               </td>
             </tr>
@@ -15245,7 +15245,7 @@ B</code></pre>
               <td>
                 <div class="topic">
                   <p><q>terpri outputs a newline to <var>output-stream</var>.</q></p>
-                  <p><strong>That's all it does!</strong> It doesn't flush the output or anything.<br />Use <a href="#finish-output">finish-output</a> or <a href="#force-output">force-output</a> for that.</p>
+                  <p><strong>That's all it does!</strong> It doesn't flush the output or anything.<br />Use <a class="symbol" href="#finish-output">finish-output</a> or <a class="symbol" href="#force-output">force-output</a> for that.</p>
                 </div>
                 <div class="topic">
                   <pre class="example"><code class="common-lisp">(terpri <var>output-stream</var>) == (write-char #\Newline <var>output-stream</var>)</code></pre>
@@ -15551,7 +15551,7 @@ B</code></pre>
                   <p>For instance, on SBCL:</p>
                   <pre class="example"><code class="common-lisp">(values (type-of -1) (type-of 1) (type-of 2))
 → FIXNUM, BIT, (INTEGER 0 536870911)</code></pre>
-                  <p><a href="#class-of">class-of</a> is more likely to be useful:</p>
+                  <p><a class="symbol" href="#class-of">class-of</a> is more likely to be useful:</p>
                   <pre class="example"><code class="common-lisp">(values (class-of -1) (class-of 1) (class-of 2))
 → #&lt;BUILT-IN-CLASS FIXNUM&gt;
   #&lt;BUILT-IN-CLASS FIXNUM&gt;
@@ -15571,7 +15571,7 @@ B</code></pre>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_tpcase.htm">Macro</a></th>
               <td>
                 <div class="topic">
-                  <p>The <var>otherwise-clause</var> can be introduced by either <a href="#t">t</a> or <a href="#otherwise">otherwise</a>.</p>
+                  <p>The <var>otherwise-clause</var> can be introduced by either <a class="symbol" href="#t">t</a> or <a class="symbol" href="#otherwise">otherwise</a>.</p>
                 </div>
               </td>
             </tr>
@@ -15591,7 +15591,7 @@ B</code></pre>
                   <p>The latter form will also never require putting the result of <var>foo</var> in a variable if it's complex and/or involves non-idempotent side-effects. I expect the performance of these two statements to be equivalent in most good implementations (but didn't verify).</p>
                 </div>
                 <div class="topic">
-                  <p>The list form of the <a href="#function">function</a> type specifier can be used only for declaration, not discrimination: it can't be used with <a href="#typep">typep</a>.</p>
+                  <p>The list form of the <a class="symbol" href="#function">function</a> type specifier can be used only for declaration, not discrimination: it can't be used with <a class="symbol" href="#typep">typep</a>.</p>
                 </div>
               </td>
             </tr>
@@ -15768,7 +15768,7 @@ B</code></pre>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_unwind.htm">Special operator</a></th>
               <td>
                 <div class="topic">
-                  <p>Many macros are a simple wrapper around <a href="#unwind-protect">unwind-protect</a>, such as <a href="#with-open-file">with-open-file</a>.</p>
+                  <p>Many macros are a simple wrapper around <a class="symbol" href="#unwind-protect">unwind-protect</a>, such as <a class="symbol" href="#with-open-file">with-open-file</a>.</p>
                 </div>
               </td>
             </tr>
@@ -16170,7 +16170,7 @@ B</code></pre>
               <th><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_in_f.htm">Macro</a></th>
               <td>
                 <div class="topic">
-                  <p>My nomination for "most obscure Common Lisp feature hidden in plain sight": <a href="#with-input-from-string">with-input-from-string</a>'s <var>index</var> argument. Somewhat complicated semantics.</p>
+                  <p>My nomination for "most obscure Common Lisp feature hidden in plain sight": <a class="symbol" href="#with-input-from-string">with-input-from-string</a>'s <var>index</var> argument. Somewhat complicated semantics.</p>
                 </div>
               </td>
             </tr>
