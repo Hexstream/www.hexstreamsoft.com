@@ -1,2 +1,3 @@
 RedirectPermanent /projects/ http://www.hexstreamsoft.com/libraries/
+RedirectMatch ^/tweets/.*/ /tweets/
 ErrorDocument 404 /404.html
