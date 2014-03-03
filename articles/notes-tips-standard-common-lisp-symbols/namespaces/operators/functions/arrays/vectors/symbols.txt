@@ -1,0 +1,8 @@
+fill-pointer
+simple-vector-p
+svref
+vector
+vector-push
+vector-push-extend
+vector-pop
+vectorp

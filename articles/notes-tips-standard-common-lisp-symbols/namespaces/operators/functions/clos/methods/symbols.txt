@@ -1,0 +1,8 @@
+add-method
+remove-method
+compute-applicable-methods
+find-method
+function-keywords
+method-qualifiers
+no-applicable-method
+no-next-method

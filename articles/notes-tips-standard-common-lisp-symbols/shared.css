@@ -20,6 +20,28 @@
     padding: 0.2em 0.4em;
 }
 
+
+nav.datasets {
+    position: absolute;
+    right: 0;
+    top: 3.05em;
+    margin: 0;
+    z-index: 1;
+    background: #ECECEC;
+    border: solid thin gray;
+}
+
+nav.datasets ul {
+    margin: 0;
+    font-size: smaller;
+    padding: 0.2em 0.4em;
+}
+
+nav.datasets a {
+    text-decoration: none;
+}
+
+
 .topic {
     border-top: dashed thin #9D9D9D; /*dashed thin #9D9D9D;*/
     margin-left: -0.5em;

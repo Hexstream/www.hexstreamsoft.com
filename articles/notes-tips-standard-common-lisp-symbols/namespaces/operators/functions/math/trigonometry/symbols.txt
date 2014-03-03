@@ -1,0 +1,12 @@
+sin
+cos
+tan
+sinh
+asin
+cosh
+acos
+tanh
+atan
+asinh
+acosh
+atanh

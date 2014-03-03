@@ -1,0 +1,10 @@
+assert
+check-type
+handler-bind
+handler-case
+ignore-errors
+restart-bind
+restart-case
+with-compilation-unit
+with-condition-restarts
+with-simple-restart

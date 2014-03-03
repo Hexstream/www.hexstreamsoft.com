@@ -1,0 +1,10 @@
+abort
+continue
+muffle-warning
+store-value
+use-value
+find-restart
+compute-restarts
+invoke-restart
+invoke-restart-interactively
+restart-name

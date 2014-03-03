@@ -1,0 +1,13 @@
+setf
+psetf
+psetq
+multiple-value-setq
+rotatef
+shiftf
+incf
+decf
+push
+pushnew
+pop
+remf
+in-package

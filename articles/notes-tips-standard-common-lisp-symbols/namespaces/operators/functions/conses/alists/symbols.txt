@@ -1,0 +1,9 @@
+acons
+copy-alist
+pairlis
+assoc
+assoc-if
+assoc-if-not
+rassoc
+rassoc-if
+rassoc-if-not

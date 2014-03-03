@@ -21,34 +21,46 @@ ol, ul {
     z-index: 1;
 }
 
+article, section {
+    position: relative;
+}
+
 .section-nav {
+    position: relative;
+    left: auto;
+}
+
+.section-nav .navbox {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-nav .navbox-next {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-nav .navbox-previous {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.section-nav:first-child {
     position: absolute;
-    left: -12.5em;
+    left: -14.5em;
     z-index: 1;
 }
 
-.section-nav a:first-child.navbox-previous {
+.section-nav:first-child .navbox {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.section-nav:first-child a:first-child.navbox-previous {
     margin-top: -1.4em;
 }
 
-h1 + .section-nav {
-    position: static;
-}
-
-h1 + .section-nav .navbox {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-h1 + .section-nav .navbox-next {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-h1 + .section-nav .navbox-previous {
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .end-of-section-indicator {
     font-size: smaller;

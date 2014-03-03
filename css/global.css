@@ -69,7 +69,7 @@ h1 a {
 #content > section > h1, #content > nav > h1, #content > section > header, #content > nav > header {
     position: relative;
     padding: 0.5em;
-    margin: 2em -1em 1em -1em;
+    margin: 2em 0 1em 0;
     text-align: center;
     border: solid thin gray;
     background-color: #ECECEC;

@@ -1,0 +1,11 @@
+cond
+and
+or
+when
+unless
+case
+ccase
+ecase
+typecase
+ctypecase
+etypecase

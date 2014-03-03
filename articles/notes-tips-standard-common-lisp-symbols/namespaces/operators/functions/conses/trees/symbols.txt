@@ -1,0 +1,10 @@
+copy-tree
+sublis
+nsublis
+subst
+subst-if
+subst-if-not
+nsubst
+nsubst-if
+nsubst-if-not
+tree-equal
