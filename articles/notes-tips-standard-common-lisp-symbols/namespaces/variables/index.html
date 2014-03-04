@@ -167,12 +167,20 @@
 
     </nav>
 
+    <p id="last-updated">This page was last updated on <time datetime="2014-03-03">3 march 2014</time>.</p>
+
     <div id="content">
 
       <header id="page-header">
         <h1>Variables</h1>
         <p class="description"></p>
       </header>
+
+      <nav class="datasets">
+        <ul>
+          <li><a href="symbols.txt">symbol names</a></li>
+        </ul>
+      </nav>
 
       <section id="special-variables">
 
@@ -182,6 +190,12 @@
           <span class="separator"> » </span>
           <a class="here">Special variables</a>
         </h1>
+
+        <nav class="datasets">
+          <ul>
+            <li><a href="special-variables/symbols.txt">symbol names</a></li>
+          </ul>
+        </nav>
 
         <nav class="section-nav">
 
@@ -235,6 +249,12 @@
             <a class="here">Lisp Reader</a>
           </h1>
 
+          <nav class="datasets">
+            <ul>
+              <li><a href="special-variables/lisp-reader/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
           <ul>
             <li><a class="symbol" href="../../#*read-base*">*read-base*</a></li>
             <li><a class="symbol" href="../../#*read-default-float-format*">*read-default-float-format*</a></li>
@@ -242,6 +262,7 @@
             <li><a class="symbol" href="../../#*read-suppress*">*read-suppress*</a></li>
             <li><a class="symbol" href="../../#*readtable*">*readtable*</a></li>
           </ul>
+
         </section>
 
         <section id="lisp-printer-variables">
@@ -254,6 +275,12 @@
             <span class="separator"> » </span>
             <a class="here">Lisp Printer</a>
           </h1>
+
+          <nav class="datasets">
+            <ul>
+              <li><a href="special-variables/lisp-printer/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
 
           <ul>
             <li><a class="symbol" href="../../#*print-array*">*print-array*</a></li>
@@ -285,6 +312,12 @@
             <a class="here">Streams</a>
           </h1>
 
+          <nav class="datasets">
+            <ul>
+              <li><a href="special-variables/streams/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
           <ul>
             <li><a class="symbol" href="../../#*debug-io*">*debug-io*</a></li>
             <li><a class="symbol" href="../../#*error-output*">*error-output*</a></li>
@@ -306,6 +339,12 @@
             <span class="separator"> » </span>
             <a class="here">REPL</a>
           </h1>
+
+          <nav class="datasets">
+            <ul>
+              <li><a href="special-variables/repl/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
 
           <ul>
             <li><a class="symbol" href="../../#*">*</a></li>
@@ -332,6 +371,12 @@
             <a class="here">Files</a>
           </h1>
 
+          <nav class="datasets">
+            <ul>
+              <li><a href="special-variables/files/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
           <ul>
             <li><a class="symbol" href="../../#*compile-file-pathname*">*compile-file-pathname*</a></li>
             <li><a class="symbol" href="../../#*compile-file-truename*">*compile-file-truename*</a></li>
@@ -355,6 +400,12 @@
             <a class="here">Misc</a>
           </h1>
 
+          <nav class="datasets">
+            <ul>
+              <li><a href="special-variables/misc/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
           <ul>
             <li><a class="symbol" href="../../#*break-on-signals*">*break-on-signals*</a></li>
             <li><a class="symbol" href="../../#*debugger-hook*">*debugger-hook*</a></li>
@@ -366,6 +417,7 @@
             <li><a class="symbol" href="../../#*package*">*package*</a></li>
             <li><a class="symbol" href="../../#*random-state*">*random-state*</a></li>
           </ul>
+
         </section>
 
         <nav class="end-of-section-indicator">
@@ -428,6 +480,12 @@
           <a class="here">Constants</a>
         </h1>
 
+        <nav class="datasets">
+          <ul>
+            <li><a href="constants/symbols.txt">symbol names</a></li>
+          </ul>
+        </nav>
+
         <section id="implementation-limits">
 
           <h1>
@@ -438,6 +496,12 @@
             <span class="separator"> » </span>
             <a class="here">Implementation limits</a>
           </h1>
+
+          <nav class="datasets">
+            <ul>
+              <li><a href="constants/implementation-limits/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
 
           <section id="length-limits">
 
@@ -451,6 +515,12 @@
               <span class="separator"> » </span>
               <a class="here">Length</a>
             </h1>
+
+            <nav class="datasets">
+              <ul>
+                <li><a href="constants/implementation-limits/length/symbols.txt">symbol names</a></li>
+              </ul>
+            </nav>
 
             <p>The following are all upper exclusive bounds.</p>
             <ul>
@@ -475,6 +545,13 @@
               <span class="separator"> » </span>
               <a class="here">Floats</a>
             </h1>
+
+            <nav class="datasets">
+              <ul>
+                <li><a href="constants/implementation-limits/floats/symbols.txt">symbol names</a></li>
+              </ul>
+            </nav>
+
             <p>(&lt;= short single double long)</p>
             <table>
               <thead>
@@ -581,6 +658,12 @@
               <a class="here">Misc</a>
             </h1>
 
+            <nav class="datasets">
+              <ul>
+                <li><a href="constants/implementation-limits/misc/symbols.txt">symbol names</a></li>
+              </ul>
+            </nav>
+
             <ul>
               <li><a class="symbol" href="../../#char-code-limit">char-code-limit</a> &lt; (integer 96)</li>
               <li><a class="symbol" href="../../#internal-time-units-per-second">internal-time-units-per-second</a> = (integer 1)</li>
@@ -608,6 +691,12 @@
             <a class="here">Boole</a>
           </h1>
 
+          <nav class="datasets">
+            <ul>
+              <li><a href="constants/boole/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
           <ul>
             <li><a class="symbol" href="../../#boole-1">boole-1</a></li>
             <li><a class="symbol" href="../../#boole-2">boole-2</a></li>
@@ -629,6 +718,7 @@
         </section>
 
         <section id="misc-constants">
+
           <h1>
             <a href="#misc-constants" class="anchor">&#x2693;</a>
             <a href="#">Variables</a>
@@ -637,6 +727,12 @@
             <span class="separator"> » </span>
             <a class="here">Misc</a>
           </h1>
+
+          <nav class="datasets">
+            <ul>
+              <li><a href="constants/misc/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
 
           <ul>
             <li><a class="symbol" href="../../#lambda-list-keywords">lambda-list-keywords</a></li>

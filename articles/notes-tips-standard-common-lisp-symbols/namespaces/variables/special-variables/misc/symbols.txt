@@ -1,0 +1,9 @@
+*break-on-signals*
+*debugger-hook*
+*default-pathname-defaults*
+*features*
+*gensym-counter*
+*macroexpand-hook*
+*modules*
+*package*
+*random-state*
