@@ -1,0 +1,7 @@
+number
+real
+complex
+rational
+float
+integer
+ratio

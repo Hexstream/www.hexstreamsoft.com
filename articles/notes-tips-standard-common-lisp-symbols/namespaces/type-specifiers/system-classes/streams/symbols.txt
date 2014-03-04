@@ -1,0 +1,8 @@
+stream
+synonym-stream
+broadcast-stream
+concatenated-stream
+echo-stream
+file-stream
+string-stream
+two-way-stream

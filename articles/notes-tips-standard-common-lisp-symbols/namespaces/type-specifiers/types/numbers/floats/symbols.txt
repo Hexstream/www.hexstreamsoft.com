@@ -1,0 +1,4 @@
+short-float
+single-float
+double-float
+long-float

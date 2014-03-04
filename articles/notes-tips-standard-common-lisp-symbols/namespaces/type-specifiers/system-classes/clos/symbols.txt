@@ -1,0 +1,9 @@
+class
+built-in-class
+standard-class
+structure-class
+generic-function
+standard-generic-function
+method
+standard-method
+method-combination

@@ -1,0 +1,16 @@
+cell-error
+control-error
+end-of-file
+file-error
+package-error
+parse-error
+print-not-readable
+program-error
+reader-error
+simple-type-error
+storage-condition
+stream-error
+type-error
+unbound-slot
+unbound-variable
+undefined-function
