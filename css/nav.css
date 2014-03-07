@@ -183,7 +183,7 @@ table > tbody > tr > th > div:only-child > .anchor {
     margin-left: -0.5em;
 }
 
-#content section h1 .anchor {
+#content section .anchor {
     position: absolute;
     left: 0;
     top: 50%;

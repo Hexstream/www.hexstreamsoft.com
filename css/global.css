@@ -75,6 +75,10 @@ h1 a {
     background-color: #ECECEC;
 }
 
+#content > section > header, #content > nav > header {
+    margin: 2.5em 0 1.5em 0;
+}
+
 #content > section section > h1, #content > section section > header {
     position: relative;
     padding: 0.4em;
@@ -100,6 +104,10 @@ header {
 header h1 {
     text-align: center;
     margin: 0 auto 1em;
+}
+
+header .description {
+    margin: -1.3em 0 0;
 }
 
 #page-header {
@@ -396,4 +404,8 @@ li li {
 
 a.tweet {
     color: cadetblue;
+}
+
+.quick-note {
+    text-align: center;
 }
