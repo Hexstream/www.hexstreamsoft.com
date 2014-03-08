@@ -13,9 +13,10 @@
 #page-header h1 {
     text-align: center;
     font-size: 6em;
+    line-height: 1em;
 }
 
-#shrug {
+#pony {
     position: fixed;
     z-index: 1;
     margin-left: auto;
