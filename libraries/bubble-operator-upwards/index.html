@@ -243,7 +243,13 @@
       <p><code class="common-lisp library function operator">bubble-operator-upwards</code> is a function that "bubbles an operator upwards" in a form, demultiplexing all alternative branches by way of cartesian product. This operation is notably useful for easy implementation of certain kinds of shorthand notations in macros. A <code class="common-lisp library function operator">cartesian-product</code> function is also exported, as it's needed to implement the main function.</p>
 
       <section id="examples">
-        <h1><a href="#examples" class="anchor">&#x2693;</a>Examples</h1>
+
+        <h1 class="breadcrumbs">
+          <a href="#examples" class="anchor">&#x2693;</a>
+          <a href="#">bubble-operator-upwards</a>
+          <span class="separator"> » </span>
+          <a class="here">Examples</a>
+        </h1>
 
         <pre class="example"><code class="common-lisp">(<code class="common-lisp library function operator">bubble-operator-upwards</code> 'and '(plate (and ham eggs) beans))
 =&gt;
@@ -272,7 +278,12 @@
 
       <section id="api">
 
-        <h1><a href="#api" class="anchor">&#x2693;</a>API</h1>
+        <h1 class="breadcrumbs">
+          <a href="#api" class="anchor">&#x2693;</a>
+          <a href="#">bubble-operator-upwards</a>
+          <span class="separator"> » </span>
+          <a class="here">API</a>
+        </h1>
 
         <p>First of all, in the way of packages there's the <code class="common-lisp library package">bubble-operator-upwards</code> package, which is also nicknamed <code class="common-lisp library package">bubble-op-up.</code> It exports the functions <code class="common-lisp library function operator">bubble-operator-upwards</code> and <code class="common-lisp library function operator">cartesian-product</code>. Explicitly <code class="common-lisp">(:import-from)</code> only those you need or explicitly package-qualify the symbols. Don't <code class="common-lisp">(:use)</code>!</p>
 

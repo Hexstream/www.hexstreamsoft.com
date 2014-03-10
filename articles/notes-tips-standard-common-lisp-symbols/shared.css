@@ -1,26 +1,3 @@
-#content > section > h1, #content > section > section > h1, #content > section > section > section > h1 {
-    text-align: left;
-    font-size: large;
-    padding-left: 2em;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-    margin-left: 0;
-}
-
-#content > section > h1 > a, #content > section > section > h1 a, #content > section > section > section > h1 a {
-    opacity: 0.5;
-}
-
-#content > section > h1 .here, #content > section > section > h1 .here, #content > section > section > section > h1 .here {
-    opacity: 1;
-}
-
-#content > section > h1 > .related-group > a, #content > section > section > h1 > .related-group > a, #content > section > section > section > h1 > .related-group > a {
-    border: thin solid;
-    padding: 0.2em 0.4em;
-}
-
-
 nav.datasets {
     position: absolute;
     right: 0;

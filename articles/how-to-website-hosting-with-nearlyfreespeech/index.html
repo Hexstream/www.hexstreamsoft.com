@@ -44,7 +44,8 @@
           <ul>
             <li><a href="#preamble">Preamble</a></li>
             <li><a href="#overview">Overview</a></li>
-            <li><a href="#step-by-step">Step by step guide</a></li>
+            <li><a href="#initial-setup">Initial setup</a></li>
+            <li><a href="#managing-your-website">Managing your site</a></li>
           </ul>
         </nav>
 
@@ -90,7 +91,7 @@
 
     </nav>
 
-    <p id="last-updated">This page was last updated on <time datetime="2014-03-07">7 march 2014</time>.</p>
+    <p id="last-updated">This page was last updated on <time datetime="2014-03-09">9 march 2014</time>.</p>
 
     <div id="content">
 
@@ -107,35 +108,67 @@
 
       <section id="preamble">
 
-        <header>
+        <h1 class="breadcrumbs">
           <a href="#preamble" class="anchor">&#x2693;</a>
-          <h1>Preamble</h1>
-          <p class="description">My website history and motivations for writing this article.</p>
-        </header>
+          <a href="#">NFS hosting</a>
+          <span class="separator"> » </span>
+          <a class="here">Preamble</a>
+        </h1>
 
-        <p>I've been using <a href="https://www.nearlyfreespeech.net/">NearlyFreeSpeech</a> to host <a href="http://www.hexstreamsoft.com">this website (hexstreamsoft.com)</a> since 2011.</p>
+        <section id="my-website-history">
 
-        <p>At first, I didn't have much content, so I was content with updating the site through fairly manual means, sometimes even just <a href="http://en.wikipedia.org/wiki/Secure_Shell">ssh</a>ing in, launching a remote <a href="https://www.gnu.org/software/emacs/">emacs</a> instance and making minor edits that way.</p>
+          <h1 class="breadcrumbs">
+            <a href="#my-website-history" class="anchor">&#x2693;</a>
+            <a href="#">NFS hosting</a>
+            <span class="separator"> » </span>
+            <a href="#preamble">Preamble</a>
+            <span class="separator"> » </span>
+            <a class="here">My website history</a>
+          </h1>
 
-        <p>Obviously that was a really bad way to go about things, but fortunately <a href="https://github.com/Hexstream/com.hexstreamsoft/commit/9ca0ea4ff82cf05a3f131ca0d19cdfa9accef2a5">in February 2013</a> I somehow figured out that NearlyFreeSpeech does have support for updating one's website via <a href="http://git-scm.com/">git</a> pushes. <strong>This has been a revolution for me.</strong></p>
+          <p>I've been using <a href="https://www.nearlyfreespeech.net/">NearlyFreeSpeech</a> to host <a href="http://www.hexstreamsoft.com">this website (hexstreamsoft.com)</a> since 2011.</p>
 
-        <p><strong>For some reason, NearlyFreeSpeech does not advertise their git support anywhere.</strong> I think that's a shame, since in my view it's one of the best ways to go about things. Hence, I've decided to write this guide to describe my setup, which I love so much and might appeal to others too.</p>
+          <p>At first, I didn't have much content, so I was content with updating the site through fairly manual means, sometimes even just <a href="http://en.wikipedia.org/wiki/Secure_Shell">ssh</a>ing in, launching a remote <a href="https://www.gnu.org/software/emacs/">emacs</a> instance and making minor edits that way.</p>
 
-        <p><small>(I dream of even better setups, but that's a discussion for another day.)</small></p>
+          <p>Obviously that was a really bad way to go about things, but fortunately <a href="https://github.com/Hexstream/com.hexstreamsoft/commit/9ca0ea4ff82cf05a3f131ca0d19cdfa9accef2a5">in February 2013</a> I somehow figured out that NearlyFreeSpeech does have support for updating one's website via <a href="http://git-scm.com/">git</a> pushes. <strong>This has been a revolution for me.</strong></p>
 
-        <p>I'd also like to say that <strong>managing your own website is a lot of fun</strong>! I think there's too many people that settle for, say, a hosted blog (such as tumblr, wordpress or blogger) just because they overestimate the complexities of managing a "real" website. It really isn't that hard. I hope this article helps some people getting started by giving some good answers to important questions that might otherwise discourage them.</p>
+        </section>
+
+        <section id="my-motivations-for-writing-this">
+
+          <h1 class="breadcrumbs">
+            <a href="#my-motivations-for-writing-this" class="anchor">&#x2693;</a>
+            <a href="#">NFS hosting</a>
+            <span class="separator"> » </span>
+            <a href="#preamble">Preamble</a>
+            <span class="separator"> » </span>
+            <a class="here">My motivations for writing this article</a>
+          </h1>
+
+          <p><strong>For some reason, NearlyFreeSpeech does not advertise their git support anywhere.</strong> I think that's a shame, since in my view it's one of the best ways to go about things. Hence, I've decided to write this guide to describe my setup, which I love so much and might appeal to others too.</p>
+
+          <p><small>(I dream of even better setups, but that's a discussion for another day.)</small></p>
+
+          <p>I'd also like to say that <strong>managing your own website is a lot of fun</strong>! I think there's too many people that settle for, say, a hosted blog (such as tumblr, wordpress or blogger) just because they overestimate the complexities of managing a "real" website. It really isn't that hard. I hope this article helps some people getting started by giving some good answers to important questions that might otherwise discourage them.</p>
+
+        </section>
 
       </section>
 
       <section id="overview">
 
-        <h1>Overview <a href="#overview" class="anchor">&#x2693;</a></h1>
+        <h1 class="breadcrumbs">
+          <a href="#overview" class="anchor">&#x2693;</a>
+          <a href="#">NFS hosting</a>
+          <span class="separator"> » </span>
+          <a class="here">Overview</a>
+        </h1>
 
         <p><b>TODO.</b></p>
 
       </section>
 
-      <section id="step-by-step">
+      <section id="initial-setup">
 
         <nav class="section-nav">
 
@@ -143,39 +176,79 @@
 
             <a href="#overview" class="navbox-previous">⬆</a>
 
-            <nav class="navbox" id="step-by-step_navbox">
+            <nav class="navbox" id="initial-setup_navbox">
               <h1>
-                <a class="here">Step by step guide</a>
+                <a class="here">Initial setup</a>
                 <span class="here-indicator-left"> </span>
                 <span class="here-indicator-right"> </span>
               </h1>
               <ul>
+                <li><a href="#signing-up">NFS signup</a></li>
+                <li><a href="#dns-setup">DNS setup</a></li>
+                <li><a href="#ssh-setup">SSH setup</a></li>
                 <li>
-                  <a href="#initial-setup" class="inlining-node">Initial setup</a>
+                  <a href="#git-setup" class="inlining-node">git setup</a>
                   <ul class="inlined-nodes">
-                    <li><a href="#signing-up">NFS signup</a></li>
-                    <li><a href="#dns-setup">DNS setup</a></li>
-                    <li><a href="#ssh-setup">SSH setup</a></li>
-                    <li>
-                      <a href="#git-setup" class="inlining-node">git setup</a>
-                      <ul class="inlined-nodes">
-                        <li><a href="#local-git-repo-setup">Local repository</a></li>
-                        <li><a href="#origin-git-repo-setup">Origin repository</a></li>
-                        <li><a href="#remote-git-repo-setup">Remote repository</a></li>
-                      </ul>
-                    </li>
+                    <li><a href="#local-git-repo-setup">Local repository</a></li>
+                    <li><a href="#origin-git-repo-setup">Origin repository</a></li>
+                    <li><a href="#remote-git-repo-setup">Remote repository</a></li>
                   </ul>
                 </li>
-                <li>
-                  <a href="#managing-your-website" class="inlining-node">Managing your site</a>
-                  <ul class="inlined-nodes">
-                    <li><a href="#preparing-an-update">Preparing an update</a></li>
-                    <li><a href="#uploading-an-update">Uploading an update</a></li>
-                    <li><a href="#backing-up-an-update">Backing up an update</a></li>
-                    <li><a href="#uploading-a-temporary-file">Uploading a tmp file</a></li>
-                    <li><a href="#checking-your-traffic">Checking your traffic</a></li>
-                  </ul>
-                </li>
+              </ul>
+            </nav>
+
+            <a href="#managing-your-website" class="navbox-next">⬇</a>
+
+          </nav>
+
+        </nav>
+
+        <h1 class="breadcrumbs">
+          <a href="#initial-setup" class="anchor">&#x2693;</a>
+          <a href="#">NFS hosting</a>
+          <span class="separator"> » </span>
+          <a class="here">Initial setup</a>
+        </h1>
+
+        <section id="signing-up">
+
+          <h1 class="breadcrumbs">
+            <a href="#signing-up" class="anchor">&#x2693;</a>
+            <a href="#">NFS hosting</a>
+            <span class="separator"> » </span>
+            <a href="#initial-setup">Initial setup</a>
+            <span class="separator"> » </span>
+            <a class="here">Signing up for a NearlyFreeSpeech account</a>
+          </h1>
+
+          <p>➔ This is a very simple process, just <a href="https://www.nearlyfreespeech.net/signup/">follow the instructions</a>.<br />Please complete the first four steps on that page.</p>
+
+          <p class="good-news">✔ I really like that their <a href="https://www.nearlyfreespeech.net/signup/signup">signup form</a> has only 3 required fields <small>(and one optional)</small>, in particular.</p>
+
+        </section>
+
+      </section>
+
+      <section id="managing-your-website">
+
+        <nav class="section-nav">
+
+          <nav class="ancestors-nav">
+
+            <a href="#overview" class="navbox-previous">⬆</a>
+
+            <nav class="navbox" id="managing-your-website_navbox">
+              <h1>
+                <a class="here">Managing your site</a>
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </h1>
+              <ul>
+                <li><a href="#preparing-an-update">Preparing an update</a></li>
+                <li><a href="#uploading-an-update">Uploading an update</a></li>
+                <li><a href="#backing-up-an-update">Backing up an update</a></li>
+                <li><a href="#uploading-a-temporary-file">Uploading a tmp file</a></li>
+                <li><a href="#checking-your-traffic">Checking your traffic</a></li>
               </ul>
             </nav>
 
@@ -183,17 +256,12 @@
 
         </nav>
 
-        <h1>Step by step guide <a href="#step-by-step-guide" class="anchor">&#x2693;</a></h1>
-
-        <section id="signing-up">
-
-          <h1>Signing up for a NearlyFreeSpeech account <a href="#signing-up" class="anchor">&#x2693;</a></h1>
-
-          <p>➔ This is a very simple process, just <a href="https://www.nearlyfreespeech.net/signup/">follow the instructions</a>.<br />Please complete the first four steps on that page. We'll do the last one ("set up a web site") together.</p>
-
-          <p class="good-news">✔ I really like that their <a href="https://www.nearlyfreespeech.net/signup/signup">signup form</a> has only 3 required fields <small>(and one optional)</small>, in particular.</p>
-
-        </section>
+        <h1 class="breadcrumbs">
+          <a href="#managing-your-website" class="anchor">&#x2693;</a>
+          <a href="#">NFS hosting</a>
+          <span class="separator"> » </span>
+          <a class="here">Managing your website</a>
+        </h1>
 
       </section>
 

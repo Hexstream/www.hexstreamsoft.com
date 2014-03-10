@@ -124,8 +124,15 @@
         <p class="description">Flexible mass updating of places.</p>
       </header>
 
-      <section>
-        <h1>Description</h1>
+      <section id="description">
+
+        <h1 class="breadcrumbs">
+          <a href="#description" class="anchor">&#x2693;</a>
+          <a href="#">bulkf</a>
+          <span class="separator"> » </span>
+          <a class="here">Description</a>
+        </h1>
+
         <dl>
           <dt><pre>Modify Macro <code class="common-lisp library macro operator">bulkf</code> <var>update-function-form</var> &amp;rest <var>mode-markers-and-items</var>
   &rArr; <var>results</var></pre></dt>
@@ -159,8 +166,15 @@
         </dl>
       </section>
 
-      <section>
-        <h1>Examples</h1>
+      <section id="examples">
+
+        <h1 class="breadcrumbs">
+          <a href="#examples" class="anchor">&#x2693;</a>
+          <a href="#">bulkf</a>
+          <span class="separator"> » </span>
+          <a class="here">Examples</a>
+        </h1>
+
         <p><code class="common-lisp library macro operator">bulkf</code> is very versatile and can be used to easily implement many different types of modify macros. Here are just a few examples:</p>
         <pre class="example"><code class="common-lisp">(<code class="common-lisp standard macro operator">defun</code> <var>bulkf-transfer</var> (<var>quantity</var> <var>source</var> <var>destination</var>)
   (<code class="common-lisp standard function operator">values</code> (<code class="common-lisp standard function operator">-</code> <var>source</var> <var>quantity</var>)

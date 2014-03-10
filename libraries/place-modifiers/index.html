@@ -49,15 +49,7 @@
             <li><a href="#hundreds-of-modify-macros">100's modify-macros</a></li>
             <li><a href="#why-not-by-hand">Why not by hand?</a></li>
             <li><a href="#modify-return-values"><code class="common-lisp library macro operator">modify</code> return values</a></li>
-            <li>
-              <a href="#place-modification-expression-vs-place" class="inlining-node"><abbr title="place-modification-expression">PME</abbr> VS place</a>
-              <ul class="inlined-nodes">
-                <li><a href="#conservative-recursion-through-spots">Conservative spots</a></li>
-                <li><a href="#inconceivable-places">Inconceivable places</a></li>
-                <li><a href="#explicit-place">Explicit <code class="common-lisp library marker">:place</code></a></li>
-                <li><a href="#top-level">Top-level</a></li>
-              </ul>
-            </li>
+            <li><a href="#place-modification-expression-vs-place"><abbr title="place-modification-expression">PME</abbr> VS place</a></li>
 
             <li><a href="#multiple-place-modification-expressions">Multiple <abbr title="place-modification-expression">PME</abbr>s</a></li>
             <li><a href="#place-modifier-variants">Place-modifier variants</a></li>
@@ -272,7 +264,12 @@
 
       <section id="trivial-examples">
 
-        <h1><a href="#trivial-examples" class="anchor">&#x2693;</a> 3 trivial examples</h1>
+        <h1 class="breadcrumbs">
+          <a href="#trivial-examples" class="anchor">&#x2693;</a>
+          <a href="#">place-modifiers</a>
+          <span class="separator"> » </span>
+          <a class="here">3 trivial examples</a>
+        </h1>
 
         <pre class="example"><code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">let</a> ((<var>place</var> 7))
   (<code class="common-lisp library macro operator">modify</code> (<code class="common-lisp library marker">1+</code> <var>place</var>))
@@ -306,7 +303,12 @@
 
       <section id="hundreds-of-modify-macros">
 
-        <h1><a href="#hundreds-of-modify-macros" class="anchor">&#x2693;</a> Equivalent to hundreds of modify macros!</h1>
+        <h1 class="breadcrumbs">
+          <a href="#hundreds-of-modify-macros" class="anchor">&#x2693;</a>
+          <a href="#">place-modifiers</a>
+          <span class="separator"> » </span>
+          <a class="here">Equivalent to hundreds of modify macros!</a>
+        </h1>
 
         <p>Not very exciting so far. But <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_incf_.htm">incf</a></code>, <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_push.htm">push</a></code> and <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_pshnew.htm">pushnew</a></code> give you access to 3 modify-macros, whereas <code class="common-lisp library macro operator">modify</code> gives you access to literally <em>hundreds</em>!</p>
 
@@ -344,7 +346,12 @@
 
       <section id="why-not-by-hand">
 
-        <h1><a href="#why-not-by-hand" class="anchor">&#x2693;</a> Why not just write it out by hand?</h1>
+        <h1 class="breadcrumbs">
+          <a href="#why-not-by-hand" class="anchor">&#x2693;</a>
+          <a href="#">place-modifiers</a>
+          <span class="separator"> » </span>
+          <a class="here">Why not just write it out by hand?</a>
+        </h1>
 
         <p>One might wonder, why not just write this instead?</p>
 
@@ -383,7 +390,12 @@
 
       <section id="modify-return-values">
 
-        <h1><a href="#modify-return-values" class="anchor">&#x2693;</a> <code class="common-lisp library macro operator">modify</code> return values, <code class="common-lisp library marker">:old</code></h1>
+        <h1 class="breadcrumbs">
+          <a href="#modify-return-values" class="anchor">&#x2693;</a>
+          <a href="#">place-modifiers</a>
+          <span class="separator"> » </span>
+          <a class="here"><code class="common-lisp library macro operator">modify</code> return values, <code class="common-lisp library marker">:old</code></a>
+        </h1>
 
         <p><code class="common-lisp library macro operator">modify</code> normally returns the new value(s) of the place, per the usual conventions:</p>
 
@@ -403,7 +415,36 @@
 
       <section id="place-modification-expression-vs-place">
 
-        <h1><a href="#place-modification-expression-vs-place" class="anchor">&#x2693;</a> place-modification-expression VS place</h1>
+        <nav class="section-nav">
+
+          <nav class="ancestors-nav">
+
+            <nav class="navbox" id="pme-vs-place_navbox">
+              <h1>
+                <a class="here"><abbr title="place-modification-expression">PME</abbr> VS place</a>
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </h1>
+              <ul>
+                <li><a href="#conservative-recursion-through-spots">Conservative spots</a></li>
+                <li><a href="#inconceivable-places">Inconceivable places</a></li>
+                <li><a href="#explicit-place">Explicit <code class="common-lisp library marker">:place</code></a></li>
+                <li><a href="#top-level">Top-level</a></li>
+              </ul>
+            </nav>
+
+            <a href="#multiple-place-modification-expressions" class="navbox-next">⬇</a>
+
+          </nav>
+
+        </nav>
+
+        <h1 class="breadcrumbs">
+          <a href="#place-modification-expression-vs-place" class="anchor">&#x2693;</a>
+          <a href="#">place-modifiers</a>
+          <span class="separator"> » </span>
+          <a class="here"><abbr title="place-modification-expression">PME</abbr> VS place</a>
+        </h1>
 
         <p>Some place-modifiers are also valid places. One example is <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_aref.htm">aref</a></code>. In the following example, how does <code class="common-lisp library macro operator">modify</code> know which of <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_aref.htm">aref</a> <var>object</var> 0)</code> or <var>object</var> should be interpreted as being the place to modify?</p>
 
@@ -415,17 +456,31 @@ or #(E), (E) ?</code></pre>
 
         <section id="conservative-recursion-through-spots">
 
-        <h1><a href="#conservative-recursion-through-spots" class="anchor">&#x2693;</a> Conservative recursion through "spots" by default</h1>
+          <h1 class="breadcrumbs">
+            <a href="#conservative-recursion-through-spots" class="anchor">&#x2693;</a>
+            <a href="#">place-modifiers</a>
+            <span class="separator"> » </span>
+            <a href="#place-modification-expression-vs-place"><abbr title="place-modification-expression">PME</abbr> VS place</a>
+            <span class="separator"> » </span>
+            <a class="here">Conservative recursion through "spots"</a>
+          </h1>
 
-        <p>It's simple: <code class="common-lisp library macro operator">modify</code> is "conservative" by default, so as soon as it encounters a possible place while recursing through the "spots" (described and explained below), then it will treat that as the place. This is the most intuitive possible default and is usually what you want.</p>
+          <p>It's simple: <code class="common-lisp library macro operator">modify</code> is "conservative" by default, so as soon as it encounters a possible place while recursing through the "spots" (described and explained below), then it will treat that as the place. This is the most intuitive possible default and is usually what you want.</p>
 
-        <p>In the above example, <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_aref.htm">aref</a> <var>object</var> 0)</code> is the place to modify, not <var>object</var>.</p>
+          <p>In the above example, <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_aref.htm">aref</a> <var>object</var> 0)</code> is the place to modify, not <var>object</var>.</p>
 
-      </section>
+        </section>
 
       <section id="inconceivable-places">
 
-        <h1><a href="#inconceivable-places" class="anchor">&#x2693;</a> Inconceivable places</h1>
+        <h1 class="breadcrumbs">
+          <a href="#inconceivable-places" class="anchor">&#x2693;</a>
+          <a href="#">place-modifiers</a>
+          <span class="separator"> » </span>
+          <a href="#place-modification-expression-vs-place"><abbr title="place-modification-expression">PME</abbr> VS place</a>
+          <span class="separator"> » </span>
+          <a class="here">Inconceivable places</a>
+        </h1>
 
         <p>Some place-modifiers are known to <code class="common-lisp library macro operator">modify</code> as being "inconceivable places", which allows conservative recursion to proceed (at least) one step further, much conveniently:</p>
 
@@ -438,7 +493,14 @@ or #(E), (E) ?</code></pre>
 
       <section id="explicit-place">
 
-        <h1><a href="#explicit-place" class="anchor">&#x2693;</a> Speculative recursion through "spots" in search of explicit :place form</h1>
+        <h1 class="breadcrumbs">
+          <a href="#explicit-place" class="anchor">&#x2693;</a>
+          <a href="#">place-modifiers</a>
+          <span class="separator"> » </span>
+          <a href="#place-modification-expression-vs-place"><abbr title="place-modification-expression">PME</abbr> VS place</a>
+          <span class="separator"> » </span>
+          <a class="here">Speculative recursion through "spots" (:place)</a>
+        </h1>
 
         <p>After finding the <a href="#conservative-recursion-through-spots">most conservative place</a>, <code class="common-lisp library macro operator">modify</code> will still speculatively recurse through the remaining "spots" in search of a <code class="common-lisp library marker">:place</code> "local special form", which would explicitly indicate at what level lies the intended place, overriding the conservative behavior.</p>
 
@@ -451,7 +513,14 @@ or #(E), (E) ?</code></pre>
 
       <section id="top-level">
 
-        <h1><a href="#top-level" class="anchor">&#x2693;</a>Possible place at top-level: treated as place-modification-expression</h1>
+        <h1 class="breadcrumbs">
+          <a href="#top-level" class="anchor">&#x2693;</a>
+          <a href="#">place-modifiers</a>
+          <span class="separator"> » </span>
+          <a href="#place-modification-expression-vs-place"><abbr title="place-modification-expression">PME</abbr> VS place</a>
+          <span class="separator"> » </span>
+          <a class="here">Possible place at top-level: treated as <abbr title="place-modification-expression">PME</abbr></a>
+        </h1>
 
         <p>Of course, the "top-level" (ignoring <code class="common-lisp library marker">:old</code>) of <code class="common-lisp library macro operator">modify</code> can only accept a place-modification-expression and not a place, so there can be no ambiguity there:</p>
 
@@ -466,7 +535,12 @@ or #(E), (E) ?</code></pre>
 
       <section id="multiple-place-modification-expressions">
 
-        <h1><a href="#multiple-place-modification-expressions" class="anchor">&#x2693;</a> Multiple place-modification-expressions: <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/hyperspec/body/m_setf_.htm">setf</a></code>-like</h1>
+        <h1 class="breadcrumbs">
+          <a href="#multiple-place-modification-expressions" class="anchor">&#x2693;</a>
+          <a href="#">place-modifiers</a>
+          <span class="separator"> » </span>
+          <a class="here">Multiple place-modification-expressions: <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/hyperspec/body/m_setf_.htm">setf</a></code>-like</a>
+        </h1>
 
         <p><code class="common-lisp library macro operator">modify</code> can accept multiple place-modification-expressions, in which case the modifications will happen in sequence, much in the same way as <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/hyperspec/body/m_setf_.htm">setf</a></code> with multiple places.</p>
 
@@ -487,7 +561,12 @@ or #(E), (E) ?</code></pre>
 
       <section id="place-modifier-variants">
 
-        <h1><a href="#place-modifier-variants" class="anchor">&#x2693;</a> Place-modifier variants</h1>
+        <h1 class="breadcrumbs">
+          <a href="#place-modifier-variants" class="anchor">&#x2693;</a>
+          <a href="#">place-modifiers</a>
+          <span class="separator"> » </span>
+          <a class="here">Place-modifier variants</a>
+        </h1>
 
         <p>Up to this point, we've always used the "primary variant", which is the one you'll need most often, but each place-modifier kind can have up to 4 variants, though most only have one or two. The "variant" determines which argument is treated as the "spot", positionally.</p>
 
@@ -497,7 +576,12 @@ or #(E), (E) ?</code></pre>
 
       <section id="variants-statistics">
 
-        <h1><a href="#variants-statistics" class="anchor">&#x2693;</a> Some statistics about place-modifier variants</h1>
+        <h1 class="breadcrumbs">
+          <a href="#variants-statistics" class="anchor">&#x2693;</a>
+          <a href="#">place-modifiers</a>
+          <span class="separator"> » </span>
+          <a class="here">Some statistics about place-modifier variants</a>
+        </h1>
 
         <pre class="example"><code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">let</a> ((<var>variant-counts</var> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_vector.htm">vector</a> 0 0 0 0)))
   (<code class="common-lisp library function operator">place-modifiers:map-infos</code>

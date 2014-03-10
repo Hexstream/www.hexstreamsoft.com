@@ -1,13 +1,20 @@
 @import "../../css/category.css";
 @import "../../css/factsheet.css";
 
-#content > section > header > .factsheet {
+.library-header {
+    padding: 0.5em;
+    margin: 2em 0 1em 0;
+    border: solid thin gray;
+    background-color: #ECECEC;
+}
+
+.library-header .factsheet {
     float: right;
     margin: 0;
     font-size: smaller;
     vertical-align: middle;
 }
 
-#content > section > header > .factsheet td {
+.library-header .factsheet td {
     text-align: left;
 }

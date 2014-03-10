@@ -66,28 +66,6 @@ h1 a {
     margin-right: 2em;
 }
 
-#content > section > h1, #content > nav > h1, #content > section > header, #content > nav > header {
-    position: relative;
-    padding: 0.5em;
-    margin: 2em 0 1em 0;
-    text-align: center;
-    border: solid thin gray;
-    background-color: #ECECEC;
-}
-
-#content > section > header, #content > nav > header {
-    margin: 2.5em 0 1.5em 0;
-}
-
-#content > section section > h1, #content > section section > header {
-    position: relative;
-    padding: 0.4em;
-    margin: 2em 0 1em 0;
-    text-align: center;
-    border: solid thin gray;
-    background-color: #ECECEC;
-}
-
 ul {
     margin: 1em 2em;
 }
