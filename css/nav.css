@@ -191,7 +191,15 @@ dt {
     position: relative;
 }
 
-dt .anchor {
+#content h1 .anchor {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -0.6em;
+    margin-left: 0.6em;
+}
+
+#content dt .anchor {
     position: absolute;
     left: 0;
     margin-top: 0.1em;
@@ -211,12 +219,4 @@ table > tbody > tr > th > div:only-child > .anchor {
     padding: 0.5em 0.4em;
     margin-top: -1em;
     margin-left: -0.5em;
-}
-
-#content section .anchor {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -0.6em;
-    margin-left: 0.6em;
 }
