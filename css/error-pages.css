@@ -1,4 +1,4 @@
-.breadcrumbs {
+nav.breadcrumbs {
     position: relative;
     z-index: 2;
     display: table;
@@ -6,7 +6,7 @@
     margin: 2em auto 3em;
 }
 
-.breadcrumbs a {
+nav.breadcrumbs a {
     padding-right: 0.5em;
 }
 
