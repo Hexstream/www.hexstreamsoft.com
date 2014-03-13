@@ -93,3 +93,7 @@
 .navlist-group .navlist:first-child {
     margin-top: 0;
 }
+
+.navlist .warning-incomplete {
+    color: red;
+}

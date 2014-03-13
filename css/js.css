@@ -1,0 +1,8 @@
+noscript.warning {
+    font-weight: bold;
+    color: red;
+}
+
+.javascript-is-enabled {
+    color: green;
+}

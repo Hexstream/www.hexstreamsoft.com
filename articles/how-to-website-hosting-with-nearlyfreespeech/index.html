@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>How-to: Website hosting with NearlyFreeSpeech</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/js.css" rel="stylesheet" type="text/css" />
     <link href="shared.css" rel="stylesheet" type="text/css" />
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script src="http://use.edgefonts.net/sanvito-pro-display.js" async></script>
@@ -17,8 +18,9 @@
       ga('create', 'UA-1783234-3', 'hexstreamsoft.com');
       ga('send', 'pageview');
     </script>
+    <script src="article-customization.js"></script>
   </head>
-  <body>
+  <body onload="init();">
 
     <nav id="site-nav">
 
@@ -46,6 +48,9 @@
             <li><a href="#overview">Overview</a></li>
             <li><a href="#initial-setup">Initial setup</a></li>
             <li><a href="#managing-your-website">Managing your site</a></li>
+          </ul>
+          <ul>
+            <li><a href="#customize-this-article">Customize this article</a></li>
           </ul>
         </nav>
 
@@ -91,7 +96,7 @@
 
     </nav>
 
-    <p id="last-updated">This page was last updated on <time datetime="2014-03-11">11 march 2014</time>.</p>
+    <p id="last-updated">This page was last updated on <time datetime="2014-03-12">12 march 2014</time>.</p>
 
     <div id="content">
 
@@ -100,11 +105,13 @@
         <p class="description">Easily managing a low-tech, dirt cheap static website with git, using linux.</p>
       </header>
 
-      <p><b>INCOMPLETE. IN PROGRESS.</b></p>
+      <p class="warning-incomplete">INCOMPLETE. IN PROGRESS.</p>
 
       <p class="quick-note"><small><em>(This article is intended for a broader audience than most of the content on this website.)</em></small></p>
 
       <p class="quick-note"><small><em>(This article assumes you're using linux and have at least basic command line skills.)</em></small></p>
+
+      <p class="quick-note"><small><em>(This article features <strong>optional</strong> <a href="#customize-this-article">customization options</a> requiring javascript.<br /><noscript class="warning">✘ Javascript is disabled. These options will be visible but disabled.</noscript><span class="javascript-is-enabled"></span>)</em></small></p>
 
       <section id="preamble">
 
@@ -114,6 +121,24 @@
           <span class="separator"> » </span>
           <a class="here">Preamble</a>
         </h1>
+
+        <nav class="section-nav">
+
+          <nav class="navbox" id="preamble_navbox">
+            <h1>
+              <a class="here">Preamble</a>
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </h1>
+            <ul>
+              <li><a href="#my-website-history">My website history</a></li>
+              <li><a href="#my-motivations-for-writing-this">My motivations</a></li>
+            </ul>
+          </nav>
+
+          <a href="#overview" class="navbox-next">⬇</a>
+
+        </nav>
 
         <section id="my-website-history">
 
@@ -221,7 +246,7 @@
             <a class="here">Signing up for a NearlyFreeSpeech account</a>
           </h1>
 
-          <p>➔ This is a very simple process, just <a href="https://www.nearlyfreespeech.net/signup/">follow the instructions</a>.<br />Please complete the first four steps on that page.</p>
+          <p>➔ This is a very simple process, just <a href="https://www.nearlyfreespeech.net/signup/">follow the instructions</a>.<br />Please complete the first 4 steps on that page.</p>
 
           <p class="good-news">✔ I really like that their <a href="https://www.nearlyfreespeech.net/signup/signup">signup form</a> has only 3 required fields <small>(and one optional)</small>, in particular.</p>
 
@@ -344,7 +369,19 @@
 
           </section>
 
+          <nav class="end-of-section-indicator">
+            <a href="#git-setup">
+              "<span>git setup</span>" end.
+            </a>
+          </nav>
+
         </section>
+
+        <nav class="end-of-section-indicator">
+          <a href="#initial-setup">
+            "<span>Initial setup</span>" end.
+          </a>
+        </nav>
 
       </section>
 
@@ -370,6 +407,8 @@
                 <li><a href="#checking-your-traffic">Checking your traffic</a></li>
               </ul>
             </nav>
+
+            <a href="#customize-this-article" class="navbox-next">⬇</a>
 
           </nav>
 
@@ -427,21 +466,6 @@
 
         </section>
 
-        <section id="uploading-an-update">
-
-          <h1 class="breadcrumbs">
-            <a href="#uploading-an-update" class="anchor">&#x2693;</a>
-            <a href="#">NFS hosting</a>
-            <span class="separator"> » </span>
-            <a href="#managing-your-website">Managing your website</a>
-            <span class="separator"> » </span>
-            <a class="here">Uploading an update</a>
-          </h1>
-
-          <p><b>TODO.</b></p>
-
-        </section>
-
         <section id="uploading-a-temporary-file">
 
           <h1 class="breadcrumbs">
@@ -472,6 +496,25 @@
 
         </section>
 
+        <nav class="end-of-section-indicator">
+          <a href="#managing-your-website">
+            "<span>Managing your website</span>" end.
+          </a>
+        </nav>
+
+      </section>
+
+      <section id="customize-this-article">
+
+        <h1 class="breadcrumbs">
+          <a href="#customize-this-article" class="anchor">&#x2693;</a>
+          <a href="#">NFS hosting</a>
+          <span class="separator"> » </span>
+          <a class="here">Customize this article</a>
+        </h1>
+
+        <p><b>TODO.</b></p>
+
       </section>
 
     </div>
@@ -482,6 +525,7 @@
         <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fhow-to-website-hosting-with-nearlyfreespeech%2F"><span class="checkmark">✔</span> HTML5</a></span>
         <span class="page-badge"><a href="https://github.com/Hexstream/com.hexstreamsoft/blob/master/articles/how-to-website-hosting-with-nearlyfreespeech/index.html"><span class="checkmark">✔</span> Public Domain</a></span>
         <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fhow-to-website-hosting-with-nearlyfreespeech%2F"><span class="checkmark">✔</span> CSS3</a></span>
+        <span class="page-badge"><a href="http://en.wikipedia.org/wiki/Progressive_enhancement"><span class="checkmark">✔</span> Progressive enhancement</a></span>
       </div>
     </div>
 

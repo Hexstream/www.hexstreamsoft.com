@@ -387,3 +387,9 @@ a.tweet {
 .quick-note {
     text-align: center;
 }
+
+.warning-incomplete {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
