@@ -1,7 +1,12 @@
-var js_enabled_elements;
+"use strict"
 
 function init () {
-    js_enabled_elements = document.getElementsByClassName("javascript-is-enabled");
+    var js_enabled_elements = document.getElementsByClassName("javascript-is-enabled");
 
-    document.createTextNode("✔ Javascript is enabled.");
+    for (var i = 0; i < js_enabled_elements.length; i++) {
+        var element = js_enabled_elements[i];
+        var text = document.createTextNode("✔ Javascript is enabled.");
+        element.appendChild(text);
+    }
+
 }
