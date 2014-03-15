@@ -1,7 +1,7 @@
-#content th, #content td {
+main th, main td {
     padding: 0.4em 0.6em;
 }
 
-#content table .latest-date, #content table .quicklisp-since {
+main table .latest-date, main table .quicklisp-since {
     text-align: right;
 }

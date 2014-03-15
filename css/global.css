@@ -45,13 +45,13 @@ dd ul li, dd ol li {
     font-size: smaller;
 }
 
-#content {
+main {
     margin: 3em 1.5em 1.5em 12.5em;
     position: relative;
     z-index: 2;
 }
 
-#content + #footer > div {
+main + #footer > div {
     margin-left: 12.5em;
     margin-right: 1.5em;
     border: medium solid transparent;
@@ -61,7 +61,7 @@ h1 a {
     text-decoration: none;
 }
 
-#content > section {
+main > section {
     margin-left: 2em;
     margin-right: 2em;
 }

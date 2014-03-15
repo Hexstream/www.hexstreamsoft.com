@@ -191,7 +191,7 @@ dt {
     position: relative;
 }
 
-#content h1 .anchor {
+main h1 .anchor {
     position: absolute;
     left: 0;
     top: 50%;
@@ -199,7 +199,7 @@ dt {
     margin-left: 0.6em;
 }
 
-#content dt .anchor {
+main dt .anchor {
     position: absolute;
     left: 0;
     margin-top: 0.1em;

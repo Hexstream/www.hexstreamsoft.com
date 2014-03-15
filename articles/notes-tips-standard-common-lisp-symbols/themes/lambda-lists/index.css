@@ -26,12 +26,12 @@
     padding: 0.5em 0;
 }
 
-#content table td ul {
+main table td ul {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-#content table td ul li + li {
+main table td ul li + li {
     margin-top: 0.2em;
 }
 
