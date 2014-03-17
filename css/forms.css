@@ -55,12 +55,12 @@
 }
 
 .input-form #header-row {
-    border-bottom: double hsl(0, 0, 77.77%);
+    border-bottom: double gray;
 }
 
 .input-form .separator-lines {
-    border-top: dashed hsl(0, 0, 77.77%);
-    border-bottom: dashed hsl(0, 0, 77.77%);
+    border-top: dashed gray;
+    border-bottom: dashed gray;
 }
 
 .input-form .input-line {
