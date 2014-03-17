@@ -1,0 +1,23 @@
+@import "../../css/forms.css";
+
+p {
+    line-height: 1.4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#notes-column {
+    display: table;
+    width: 20em;
+}
+
+.separator-lines {
+    border-top: dashed hsl(0, 0%, 77%);
+    border-bottom: dashed hsl(0, 0%, 77%);
+}
+
+.input-line {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}

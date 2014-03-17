@@ -1,0 +1,69 @@
+.input-line label {
+    font-size: smaller;
+}
+
+.input-notice {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    font-size: 66%;
+    text-align: right;
+    font-style: italic;
+    line-height: 1.2em;
+}
+
+.input-notices.compact .input-notice {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.success {
+    color: green;
+}
+
+.failure {
+    color: red;
+}
+
+
+.input-form {
+    display: table;
+    margin: 1em auto 0;
+}
+
+.input-form th {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+.input-form .input-cell {
+    padding-left: 1.5em;
+}
+
+.input-form .notes-cell {
+    padding-right: 1.5em;
+}
+
+.input-form .notes-cell p {
+    line-height: 1.4em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+.input-form .details {
+    font-size: x-small;
+    font-style: italic;
+}
+
+.input-form #header-row {
+    border-bottom: double hsl(0, 0, 77.77%);
+}
+
+.input-form .separator-lines {
+    border-top: dashed hsl(0, 0, 77.77%);
+    border-bottom: dashed hsl(0, 0, 77.77%);
+}
+
+.input-form .input-line {
+    display: table;
+    margin: 1.5em auto;
+}
