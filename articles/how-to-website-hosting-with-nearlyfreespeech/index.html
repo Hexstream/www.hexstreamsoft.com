@@ -95,12 +95,12 @@
 
     </nav>
 
-    <p id="last-updated">This page was last updated on <time datetime="2014-03-17">17 march 2014</time>.</p>
+    <p id="last-updated">This page was last updated on <time datetime="2014-03-19">19 march 2014</time>.</p>
 
     <main>
 
       <header id="page-header">
-        <h1>How-to: Website hosting <br />with NearlyFreeSpeech</h1>
+        <h1>How-to: Website hosting <br />with <a href="http://www.nearlyfreespeech.net">NearlyFreeSpeech</a></h1>
         <p class="description">Easily managing a low-tech, dirt cheap static website with git, using linux.</p>
       </header>
 
@@ -208,16 +208,10 @@
               </h1>
               <ul>
                 <li><a href="#signing-up">NFS signup</a></li>
+                <li><a href="#nfs-site-setup">NFS site setup</a></li>
                 <li><a href="#dns-setup">DNS setup</a></li>
                 <li><a href="#ssh-setup">SSH setup</a></li>
-                <li>
-                  <a href="#git-setup" class="inlining-node">git setup</a>
-                  <ul class="inlined-nodes">
-                    <li><a href="#local-git-repo-setup">Local repository</a></li>
-                    <li><a href="#origin-git-repo-setup">Origin repository</a></li>
-                    <li><a href="#live-git-repo-setup">Live repository</a></li>
-                  </ul>
-                </li>
+                <li><a href="#git-setup">git setup</a></li>
               </ul>
             </nav>
 
@@ -248,6 +242,155 @@
           <p>➔ This is a very simple process, just <a href="https://www.nearlyfreespeech.net/signup/">follow the instructions</a>.<br />Please complete the first 4 steps on that page.</p>
 
           <p class="good-news">✔ I really like that their <a href="https://www.nearlyfreespeech.net/signup/signup">signup form</a> has only 3 required fields <small>(and one optional)</small>, in particular.</p>
+
+        </section>
+
+        <section id="nfs-site-setup">
+
+          <nav class="section-nav">
+
+            <nav class="ancestors-nav">
+
+              <a href="#signing-up" class="navbox-previous">⬆</a>
+
+              <nav class="navbox" id="git-setup_navbox">
+                <h1>
+                  <a class="here">NFS site setup</a>
+                  <span class="here-indicator-left"> </span>
+                  <span class="here-indicator-right"> </span>
+                </h1>
+                <ul>
+                  <li><a href="#nfs-site-setup-short-name">"Pick a Short Name"</a></li>
+                  <li><a href="#nfs-site-setup-custom-domain-name">"Use another name?"</a></li>
+                  <li><a href="#nfs-site-setup-dns-email-forwarding">DNS and email fwd</a></li>
+                  <li><a href="#nfs-site-setup-server-type">"Server Type"</a></li>
+                  <li><a href="#nfs-site-setup-confirm">"Confirm Site Details"</a></li>
+                </ul>
+              </nav>
+
+              <a href="#dns-setup" class="navbox-next">⬇</a>
+
+            </nav>
+
+          </nav>
+
+          <h1 class="breadcrumbs">
+            <a href="#nfs-site-setup" class="anchor">&#x2693;</a>
+            <a href="#">NFS hosting</a>
+            <span class="separator"> » </span>
+            <a href="#initial-setup">Initial setup</a>
+            <span class="separator"> » </span>
+            <a class="here"><abbr title="NearlyFreeSpeech">NFS</abbr> site setup</a>
+          </h1>
+
+          <p>➔ Now, you need to <a href="https://members.nearlyfreespeech.net/sites/new?init=1">create a new site</a> ("step 5"). Login as necessary.<br /><small>(In fact, due to some security checks it's better if you're not already logged in, else you'd need to follow the equivalent link on NearlyFreeSpeech...)</small></p>
+
+          <p>You'll be presented with a nice "wizard" that streamlines the initial setup.<br />We'll do these steps together, since I have some extra explaining to do.</p>
+
+          <p>Note that all the decisions you take with this wizard can be changed later by going into your account and updating the appropriate settings, but this is outside the scope of this how-to.</p>
+
+          <p><small>Unfortunately, due to the way the wizard is coded, once you have completed a step it's not possible to go back without losing your state. In that case, the easiest thing to do is to logout (using the link at the top right of the page) and <a href="https://members.nearlyfreespeech.net/sites/new?init=1">start over</a></small>.)</p>
+
+          <section id="nfs-site-setup-short-name">
+
+            <h1 class="breadcrumbs">
+              <a href="#nfs-site-setup-short-name" class="anchor">&#x2693;</a>
+              <a href="#">NFS hosting</a>
+              <span class="separator"> » </span>
+              <a href="#initial-setup">Initial setup</a>
+              <span class="separator"> » </span>
+              <a href="#nfs-site-setup"><abbr title="NearlyFreeSpeech">NFS</abbr> site setup</a>
+              <span class="separator"> » </span>
+              <a class="here">① "Pick a Short Name"</a>
+            </h1>
+
+            <p>➔ Simply follow the instructions on the page to choose an appropriate "short site name".</p>
+
+            <p><i>The short site name I chose is: </i> <input type="text" id="wizard_short-site-name" data-var="short-site-name" /></p>
+
+          </section>
+
+          <section id="nfs-site-setup-custom-domain-name">
+
+            <h1 class="breadcrumbs">
+              <a href="#nfs-site-setup-custom-domain-name" class="anchor">&#x2693;</a>
+              <a href="#">NFS hosting</a>
+              <span class="separator"> » </span>
+              <a href="#initial-setup">Initial setup</a>
+              <span class="separator"> » </span>
+              <a href="#nfs-site-setup"><abbr title="NearlyFreeSpeech">NFS</abbr> site setup</a>
+              <span class="separator"> » </span>
+              <a class="here">② "Use another name?"</a>
+            </h1>
+
+            <p>➔ If you want your new site to be accessible via a custom domain name, enter it to set it up as an alias.</p>
+
+            <p>Else, your site will only be accessible through the "short name", as <code><var data-var="short-site-name">short-site-name</var>.nfshost.net</code>.</p>
+
+            <p>If you want to use your <var>example.com</var> domain name, then I recommend you enter <var>www.example.com</var> as the alias and later setup a redirect from <var>example.com</var> to <var>www.example.com</var>.</p>
+
+            <p><small>It's also possible to do it the other way around, but I like to do it this way because a web server is just one of many different services you could run using a domain name, so to me it doesn't make much sense to give it priority over services.</small></p>
+
+            <p><input type="checkbox" data-var="custom-domain"/> <i>I want to use this custom domain name: </i> <input type="text" id="wizard_custom-domain" data-var="alias" /></p>
+
+          </section>
+
+          <section id="nfs-site-setup-dns-email-forwarding">
+
+            <h1 class="breadcrumbs">
+              <a href="#nfs-site-setup-dns-email-forwarding" class="anchor">&#x2693;</a>
+              <a href="#">NFS hosting</a>
+              <span class="separator"> » </span>
+              <a href="#initial-setup">Initial setup</a>
+              <span class="separator"> » </span>
+              <a href="#nfs-site-setup"><abbr title="NearlyFreeSpeech">NFS</abbr> site setup</a>
+              <span class="separator"> » </span>
+              <a class="here">②½ DNS and email forwarding</a>
+            </h1>
+
+            <p>If you did elect to use a custom domain name, the wizard will now show an intermediary step to ask if you want to manage DNS and email through NearlyFreeSpeech or if you want to manage it yourself (or through another third-party service).</p>
+
+            <p>Now, you <em>could</em> use NearlyFreeSpeech to manage your DNS and email forwarding, if you want, but they do charge a certain amount for it. Most registrars (through which all domain registration is done) already provide such services for free, so I'll assume you'll want to use your registrar's services. In that case, you'll want to check the <q>I will set up my own DNS and email</q> option.</p>
+
+          </section>
+
+          <section id="nfs-site-setup-server-type">
+
+            <h1 class="breadcrumbs">
+              <a href="#nfs-site-setup-server-type" class="anchor">&#x2693;</a>
+              <a href="#">NFS hosting</a>
+              <span class="separator"> » </span>
+              <a href="#initial-setup">Initial setup</a>
+              <span class="separator"> » </span>
+              <a href="#nfs-site-setup"><abbr title="NearlyFreeSpeech">NFS</abbr> site setup</a>
+              <span class="separator"> » </span>
+              <a class="here">③ "Server Type"</a>
+            </h1>
+
+            <p>➔ Pick the <q>[Production] Static Content - No PHP or CGI (Stochastic)</q> option.</p>
+
+            <p>This is the only option that has <q>Base Daily Cost: <i>none</i></q>.</p>
+
+            <p>The other options are outside the scope of this article.</p>
+
+          </section>
+
+          <section id="nfs-site-setup-confirm">
+
+            <h1 class="breadcrumbs">
+              <a href="#nfs-site-setup-confirm" class="anchor">&#x2693;</a>
+              <a href="#">NFS hosting</a>
+              <span class="separator"> » </span>
+              <a href="#initial-setup">Initial setup</a>
+              <span class="separator"> » </span>
+              <a href="#nfs-site-setup"><abbr title="NearlyFreeSpeech">NFS</abbr> site setup</a>
+              <span class="separator"> » </span>
+              <a class="here">④ "Confirm Site Details"</a>
+            </h1>
+
+            <p>➔ Simply review the information and click on <q>Create Now</q> if everything's fine, else there's a handy button to start over.</p>
+
+          </section>
 
         </section>
 
