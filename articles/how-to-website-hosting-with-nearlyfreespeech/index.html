@@ -95,22 +95,26 @@
 
     </nav>
 
-    <p id="last-updated">This page was last updated on <time datetime="2014-03-19">19 march 2014</time>.</p>
+    <p id="last-updated">This page was last updated on <time datetime="2014-03-21">21 march 2014</time>.</p>
 
     <main>
 
       <header id="page-header">
-        <h1>How-to: Website hosting <br />with <a href="http://www.nearlyfreespeech.net">NearlyFreeSpeech</a></h1>
+        <h1>How-to: Website&nbsp;hosting with&nbsp;<a href="http://www.nearlyfreespeech.net">NearlyFreeSpeech</a></h1>
         <p class="description">Easily managing a low-tech, dirt cheap static website with git, using linux.</p>
       </header>
 
-      <p class="warning-incomplete">INCOMPLETE. IN PROGRESS.</p>
+      <aside>
+        <p class="warning-incomplete">INCOMPLETE. IN PROGRESS.</p>
 
-      <p class="quick-note"><small><em>This article is intended for a broader audience than most of the content on this website.</em></small></p>
+        <p class="quick-note"><small><em>I'm not affiliated with NearlyFreeSpeech, just one of their happy customers and fans.</em></small></p>
 
-      <p class="quick-note"><small><em>This article assumes you're using linux and have at least basic command line skills.</em></small></p>
+        <p class="quick-note"><small><em>This article is intended for a broader audience than most of the content on this website.</em></small></p>
 
-      <p class="quick-note"><small><em>This article features <strong>optional</strong> <a href="#customize-this-article">customization options</a> requiring javascript.<br /><noscript class="warning">✘ Javascript is disabled. These options will be visible but disabled.</noscript><span class="javascript-is-enabled"></span></em></small></p>
+        <p class="quick-note"><small><em>This article assumes you're using linux and have at least basic command line skills.</em></small></p>
+
+        <p class="quick-note"><small><em>This article features <strong>optional</strong> <a href="#customize-this-article">customization options</a> requiring javascript.<br /><noscript class="warning">✘ Javascript is disabled. These options will be visible but disabled.</noscript><span class="javascript-is-enabled"></span></em></small></p>
+      </aside>
 
       <section id="preamble">
 
@@ -181,14 +185,61 @@
 
       <section id="overview">
 
+        <nav class="section-nav">
+
+          <nav class="ancestors-nav">
+
+            <a href="#my-motivations-for-writing-this" class="navbox-previous">⬆</a>
+
+            <nav class="navbox" id="overview_navbox">
+              <h1>
+                <a class="here">Overview</a>
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </h1>
+              <ul>
+                <li><a href="#overview-low-tech">Low-tech, static site</a></li>
+                <li><a href="#overview-dirt-cheap">Dirt cheap, not "free"</a></li>
+                <li><a href="#overview-git">Using git</a></li>
+                <li><a href="#overview-git">Using linux</a></li>
+                <li><a href="#overview-lock-in">Very low lock-in</a></li>
+                <li><a href="#overview-open-source-tools">Free open-source tools</a></li>
+              </ul>
+            </nav>
+
+            <a href="#initial-setup" class="navbox-next">⬇</a>
+
+          </nav>
+
+        </nav>
+
         <h1 class="breadcrumbs">
           <a href="#overview" class="anchor">&#x2693;</a>
           <a href="#">NFS hosting</a>
           <span class="separator"> » </span>
-          <a class="here">Overview</a>
+          <a class="here">Overview: goals and scope of this article</a>
         </h1>
 
-        <p><b>TODO.</b></p>
+        <dl>
+          <dt id="overview-low-tech">Low-tech, static website <a href="#overview-low-tech" class="anchor">⚓</a></dt>
+          <dd>
+            <p>Forget complicated dynamic frameworks, for simpler needs it's often better to <em>stick to the fundamentals</em> like raw HTML(5) and CSS(3). If you want to upgrade to a more complex but flexible solution later, most of what you've learned will still be helpful. You'll be able to reuse your knowledge.</p>
+            <p>Raw HTML(5) and CSS(3) also has the advantage of being a more conservative choice. Pretty much every web framework out there says they're the best, but by definition they can't all be. If you start with the fundamentals, you'll be better prepared to evaluate their claims and make your own decisions, or maybe even write your own framework, if you're so inclined.</p>
+          </dd>
+          <dt id="overview-dirt-cheap">Dirt cheap, but not "free" either. No bullshit. <a href="#overview-dirt-cheap" class="anchor">⚓</a></dt>
+          <dd></dd>
+          <dt id="overview-git">Using git <a href="#overview-git" class="anchor">⚓</a></dt>
+          <dd></dd>
+          <dt id="overview-linux">Using linux <a href="#overview-linux" class="anchor">⚓</a></dt>
+          <dd>
+            <p>Linux is the best operating system available today, and incidentally also the only one I use on a regular basis, so in this article I'll assume you're using it too. After all, there's no point talking about things I don't have a clue about. <small><em>(lol?)</em></small></p>
+            <p>Linux is also by far the most popular operating system on servers, so it's a good idea to learn it and use it on the desktop too.</p>
+          </dd>
+          <dt id="overview-lock-in">Very low lock-in <a href="#overview-lock-in" class="anchor">⚓</a></dt>
+          <dd></dd>
+          <dt id="overview-open-source-tools">Rely on free, popular, open-source tools <a href="#overview-open-source-tools" class="anchor">⚓</a></dt>
+          <dd></dd>
+        </dl>
 
       </section>
 
