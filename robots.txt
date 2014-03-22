@@ -4,3 +4,4 @@ User-agent: *
 Disallow: /tmp/
 Disallow: 404.html
 Disallow: 500.html
+Disallow: 400.html
