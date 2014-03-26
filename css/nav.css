@@ -83,18 +83,22 @@ article, section {
 }
 
 
-nav.breadcrumbs {
+.breadcrumbs-and-extras > nav {
+    float: left;
+}
+
+nav.breadcrumbs, .breadcrumbs-and-extras > nav {
     margin: 0.5em 0.5em 1em;
     background: #FFCC99;
     border: medium solid black;
     text-decoration: none;
 }
 
-nav.breadcrumbs a {
+nav.breadcrumbs a, .breadcrumbs-and-extras > nav a {
     text-decoration: inherit;
 }
 
-nav.breadcrumbs > a, nav.breadcrumbs > span {
+nav.breadcrumbs > a, nav.breadcrumbs > span, .breadcrumbs-and-extras > nav > a, .breadcrumbs-and-extras > nav > span {
     float: left;
     padding: 0.175em 0.25em;
 }
@@ -103,15 +107,15 @@ nav.breadcrumbs > span {
     font-weight: bolder;
 }
 
-nav.breadcrumbs > a:first-child {
+nav.breadcrumbs > a:first-child, .breadcrumbs-and-extras > nav > a:first-child {
     padding-left: 0.5em;
 }
 
-nav.breadcrumbs > a.here {
+nav.breadcrumbs > a.here, .breadcrumbs-and-extras > nav > a:last-child {
     padding-right: 0.5em;
 }
 
-nav.breadcrumbs a:hover, nav.breadcrumbs a:focus {
+nav.breadcrumbs a:hover, nav.breadcrumbs a:focus, .breadcrumbs-and-extras > nav a:hover {
     background: #FFDD99;
     outline-style: none;
 }
