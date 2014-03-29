@@ -1,0 +1,5 @@
+GIT_WORK_TREE=/home/public/ git checkout -f
+
+# Remove canonical self-links in production
+sed -i -e '/<nav id="meta-nav"/{x;N;N;N;x
+}' $(find /home/public/ -name '*.html')
