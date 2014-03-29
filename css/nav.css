@@ -95,7 +95,18 @@ nav.breadcrumbs, .breadcrumbs-and-extras > nav {
 }
 
 nav.breadcrumbs a, .breadcrumbs-and-extras > nav a {
+    position: relative;
     text-decoration: inherit;
+}
+
+.breadcrumbs-and-extras > nav a meter {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    margin-top: 0.2em;
+    height: 0.5em;
 }
 
 nav.breadcrumbs > a, nav.breadcrumbs > span, .breadcrumbs-and-extras > nav > a, .breadcrumbs-and-extras > nav > span {
