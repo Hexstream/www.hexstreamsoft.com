@@ -145,6 +145,12 @@ nav.breadcrumbs a.here:hover, nav.breadcrumbs a.here:focus {
 }
 
 
+.start-browsing + .start-browsing {
+    margin-left: -0.5em;
+    border-left: none;
+}
+
+
 /* Need the extra weight for this one, to override some global.css rules. */
 h1.breadcrumbs {
     position: relative;
