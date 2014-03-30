@@ -2,7 +2,4 @@ Sitemap: http://www.hexstreamsoft.com/sitemap.xml
 
 User-agent: *
 Disallow: /tmp/
-Disallow: 500.html
-Disallow: 404.html
-Disallow: 403.html
-Disallow: 400.html
+Disallow: /error-pages/

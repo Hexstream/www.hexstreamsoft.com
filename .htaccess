@@ -1,6 +1,6 @@
 RedirectPermanent /projects/ http://www.hexstreamsoft.com/libraries/
 RedirectMatch ^/tweets/.*/ /tweets/
-ErrorDocument 500 /500.html
-ErrorDocument 404 /404.html
-ErrorDocument 403 /403.html
-ErrorDocument 400 /400.html
+ErrorDocument 500 /error-pages/500.html
+ErrorDocument 404 /error-pages/404.html
+ErrorDocument 403 /error-pages/403.html
+ErrorDocument 400 /error-pages/400.html
