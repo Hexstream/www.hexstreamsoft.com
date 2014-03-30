@@ -46,7 +46,7 @@ dd ul li, dd ol li {
 }
 
 main {
-    margin: 3em 1.5em 1.5em 12.5em;
+    margin: 4em 1.5em 1.5em 12.5em;
     position: relative;
     z-index: 2;
 }

@@ -99,7 +99,7 @@ nav.breadcrumbs a, .breadcrumbs-and-extras > nav a {
     text-decoration: inherit;
 }
 
-.breadcrumbs-and-extras > nav a meter {
+.breadcrumbs-and-extras > nav a meter, .breadcrumbs-and-extras > nav a span {
     position: absolute;
     left: 0;
     right: 0;
@@ -107,6 +107,15 @@ nav.breadcrumbs a, .breadcrumbs-and-extras > nav a {
     width: 100%;
     margin-top: 0.2em;
     height: 0.5em;
+
+}
+
+.breadcrumbs-and-extras > nav a span {
+    text-align: center;
+    font-size: smaller;
+    white-space: pre;
+    margin-top: 0.2em;
+    color: black;
 }
 
 nav.breadcrumbs > a, nav.breadcrumbs > span, .breadcrumbs-and-extras > nav > a, .breadcrumbs-and-extras > nav > span {
