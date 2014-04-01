@@ -1,5 +1,9 @@
 @import "css/news.css";
 
+body {
+    overflow-x: hidden;
+}
+
 #page-header {
     margin-top: 1.65em;
     margin-bottom: 2em;
