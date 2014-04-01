@@ -18,17 +18,15 @@
     text-decoration: inherit;
 }
 
-.navlist a {
-    display: block;
-}
-
 .navlist section {
     margin: 0;
     margin-bottom: 0;
+    position: relative;
     background: #ECECEC;
 }
 
 .navlist section > a {
+    display: block;
     padding: 0.5em 1em;
     border: thin solid black;
 }
@@ -83,6 +81,38 @@
 }
 
 
+.navlist .quick-links {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    white-space: nowrap;
+    margin-left: 1em;
+    letter-spacing: 0.2em;
+}
+
+.navlist .quick-links > div {
+    position: absolute;
+    top: 50%;
+    line-height: 2em;
+    margin-top: -1em;
+}
+
+.navlist .quick-links a {
+    padding: 1em;
+    border: thin solid;
+    border-color: transparent;
+    opacity: .4;
+}
+
+.navlist .quick-links a:hover, .navlist .quick-links a:focus {
+    background: #ECE0A5;
+    outline-style: none;
+    border-color: gray;
+    opacity: 1;
+}
+
+
 .navlist-group {
     display: table;
     margin-left: auto;
@@ -96,6 +126,7 @@
 .navlist-group .navlist:first-child {
     margin-top: 0;
 }
+
 
 .navlist .warning-incomplete {
     color: red;
