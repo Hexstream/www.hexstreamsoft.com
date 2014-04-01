@@ -36,6 +36,18 @@ body {
 }
 
 
+#best-viewed-in {
+    border-top: dashed medium #DDDDDD;
+    margin-bottom: -1em;
+}
+
+#best-viewed-in p {
+    text-align: center;
+    line-height: 1.8em;
+    opacity: 0.6;
+}
+
+
 #glorious-announcement {
     text-align: center;
     font-size: x-large;
