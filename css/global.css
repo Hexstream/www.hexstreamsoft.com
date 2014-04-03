@@ -37,13 +37,37 @@ dd ul li, dd ol li {
     margin-bottom: 0.4em;
 }
 
+
 #last-updated {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 0.2em 0.5em;
-    font-size: smaller;
+    margin: 0.5em 0.5em 1em;
+    background: #FFCC99;
+    border: medium solid black;
+    text-decoration: none;
 }
+
+#last-updated > span {
+    display: none;
+}
+
+#last-updated > time {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+#last-updated:after {
+    content: "Page last updated on";
+    position: absolute;
+    right: 0;
+    top: 100%;
+    font-size: smaller;
+    text-align: right;
+    margin-top: 0.1em;
+    white-space: nowrap;
+}
+
 
 main {
     margin: 4em 1.5em 1.5em 12.5em;
