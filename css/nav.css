@@ -130,7 +130,7 @@ nav.breadcrumbs > a:first-child, .breadcrumbs-and-extras > nav > a:first-child {
     padding-left: 0.5em;
 }
 
-nav.breadcrumbs > a.here, .breadcrumbs-and-extras > nav > a:last-child {
+nav.breadcrumbs > a:nth-last-child(2), .breadcrumbs-and-extras > nav > a:last-child {
     padding-right: 0.5em;
 }
 
