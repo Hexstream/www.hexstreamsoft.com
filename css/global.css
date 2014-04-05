@@ -68,6 +68,10 @@ dd ul li, dd ol li {
     white-space: nowrap;
 }
 
+#last-updated:hover {
+    z-index: 2;
+}
+
 
 main {
     margin: 4em 1.5em 1.5em 12.5em;
