@@ -110,7 +110,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-04-02">2 april 2014</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-04-05">5 april 2014</time><span>.</span></p>
 
     <main>
 
@@ -191,11 +191,11 @@
               <li>
                 <p>Finally, assuming you're using <a href="http://www.gnu.org/software/emacs/">Emacs</a>+<a href="http://common-lisp.net/project/slime/">Slime</a>, all that's left to do is to tell Emacs to use your local copy of the <abbr>CLHS</abbr> instead of the online version on LispWorks' site.</p>
 
-                <p>Run <code>(clhs:print-emacs-setup-form)</code> in the REPL, and arrange for Emacs to evaluate the form that will be printed (looking like <code>(setq common-lisp-hyperspec-root "file:/[...]/HyperSpec/")</code>).</p>
+                <p>Run <code>(clhs:print-emacs-setup-form)</code> in the <abbr title="Read-Eval-Print-Loop">REPL</abbr> and follow the instructions.</p>
 
-                <p>One way to do that is to put the point (cursor) after the closing parenthesis and invoke M-x eval-last-sexp. This will effect the change for the current Emacs session.</p>
+                <p>One easy way to make Emacs evaluate a form is to put the point (cursor) after the closing parenthesis and invoke <kbd>M-x eval-last-sexp</kbd>. This will affect the current Emacs session only.</p>
 
-                <p>Put the form in your <code>~/.emacs</code> init file to persist the changes for subsequent Emacs sessions.</p></li>
+                <p>Putting a form in your <code>~/.emacs</code> init file would affect any subsequent Emacs sessions.</p></li>
             </ol>
 
       </section>
