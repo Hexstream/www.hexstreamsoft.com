@@ -43,8 +43,9 @@ dd ul li, dd ol li {
     top: 0;
     right: 0;
     margin: 0.5em 0.5em 1em;
-    background: #FFCC99;
+    line-height: 1.2em;
     border: medium solid black;
+    background: #FFCC99;
     text-decoration: none;
 }
 
@@ -53,8 +54,8 @@ dd ul li, dd ol li {
 }
 
 #last-updated > time {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    display: block;
+    padding: 0.175em 0.5em;
 }
 
 #last-updated:after {
