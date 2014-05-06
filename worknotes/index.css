@@ -1,20 +1,8 @@
-#project-categories-table th {
-    text-align: center;
-}
-
-#project-categories-table td {
-    vertical-align: top;
-}
-
-#introduction {
-    clear: left;
-}
-
-th.project-name, .metaproject-summary, td {
+th.project-name, .task-summary, td {
     padding: 1em 0.5em;
 }
 
-.project-name, .metaproject-summary {
+.project-name, .task-summary {
     text-align: right;
     vertical-align: top;
 }
@@ -24,21 +12,8 @@ ul {
     margin-bottom: 0;
 }
 
-
 .projects-table col {
     width: 33%;
-}
-
-#metaprojects-summary-column {
-    width: 30%;
-}
-
-#metaprojects-awaiting-processing-column {
-    width: 60%;
-}
-
-#metaprojects-psi-column {
-    width: 10%;
 }
 
 .blocked {

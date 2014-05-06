@@ -350,7 +350,6 @@ table > tbody > tr > th > div:only-child, table > tbody > tr > td > div:only-chi
 
 th {
     text-align: left;
-    padding-left: 0.5em;
     background-color: #E0E0E0;
 }
 
@@ -364,7 +363,7 @@ td {
 
 td, th {
     border: solid thin lightgray;
-    padding: 1em 0.5em;
+    padding: 0.4em 0.6em;
 }
 
 table tr > th:first-child {

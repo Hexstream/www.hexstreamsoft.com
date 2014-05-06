@@ -1,0 +1,66 @@
+@import "../../libraries/libraries.css";
+
+#page-header {
+    margin-bottom: 1em;
+}
+
+#state-heads-up {
+    text-align: center;
+}
+
+#state-heads-up p {
+    margin: 0.5em;
+}
+
+#state-heads-up p + p {
+    margin-top: -0.25em;
+}
+
+#state-heads-up > a {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.25em 0.75em;
+    font-size: x-large;
+    text-decoration: none;
+    border: thin solid;
+}
+
+#state-heads-up.ready-to-use-version-available > a {
+    color: green;
+    border-color: green;
+}
+
+#state-heads-up.ready-to-use-version-not-yet-available > a {
+    font-size: large;
+    color: #B82334;
+    border-color: #B82334;
+}
+
+#state-heads-up.library-being-scavenged > a {
+    color: #B82334;
+    border-color: #B82334;
+}
+
+#state-heads-up.ready-to-use-version-available > a:hover {
+    background: green;
+    color: white;
+}
+
+#state-heads-up > p {
+    font-size: smaller;
+}
+
+.blocked {
+    color: red;
+    font-style: italic;
+}
+
+.factsheet {
+    max-width: 20em;
+}
+
+/* I'm too tired of this reorganization to populate this right now. */
+#dependencies-table {
+    display: none;
+}

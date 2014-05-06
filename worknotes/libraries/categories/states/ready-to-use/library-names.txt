@@ -1,0 +1,15 @@
+map-bind
+positional-lambda
+enhanced-eval-when
+enhanced-multiple-value-bind
+macro-level
+cartesian-product-switch
+place-modifiers
+anaphoric-variants
+multiple-value-variants
+parse-number-range
+bubble-operator-upwards
+incognito-keywords
+symbol-namespaces
+clhs
+place-utils

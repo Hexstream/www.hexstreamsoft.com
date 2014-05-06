@@ -1,4 +1,6 @@
 introduction.html
+libraries/
+websites/
 workstacks/
 checklists/
 metaprojects/

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jean-Philippe Paradis" />
+    <link rel="author" href="http://www.hexstreamsoft.com/introduction.html" />
+    <link rel="license" href="http://www.hexstreamsoft.com/UNLICENSE" />
+    <link rel="prev" href="../multiple-value-variants/" />
+    <link rel="next" href="../bubble-operator-upwards/" />
+    <meta name="description" content="Worknotes for the ready-to-use parse-number-range library." />
+    <title>parse-number-range | Ready to use | Libraries | Worknotes | HexstreamSoft</title>
+    <link href="../../../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="../libraries.css" rel="stylesheet" type="text/css" />
+    <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1783234-3', 'hexstreamsoft.com');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+
+    <nav id="site-nav">
+
+      <nav class="breadcrumbs-and-extras">
+
+        <nav class="breadcrumbs">
+          <a href="../../../">HexstreamSoft</a>
+          <span class="separator"> » </span>
+          <a href="../../">Worknotes</a>
+          <span class="separator"> » </span>
+          <a href="../">Libraries</a>
+          <span class="separator"> » </span>
+          <a href="../categories/states/ready-to-use/">Ready to use</a>
+          <span class="separator"> » </span>
+          <a class="here">parse-number-range</a>
+          <div class="float-clear"></div>
+        </nav>
+
+        <nav id="meta-nav">
+          <a href="http://www.hexstreamsoft.com/worknotes/libraries/parse-number-range/">
+            <abbr title="Canonical">C</abbr>
+          </a>
+          <a href="https://github.com/Hexstream/hexstreamsoft.com/blob/master/worknotes/libraries/parse-number-range/index.html">
+            <abbr title="Source">S</abbr>
+          </a>
+        </nav>
+
+        <nav>
+          <a class="sequential-link prev" href="../multiple-value-variants/">←</a>
+          <a href="../categories/states/ready-to-use/">
+            Ready-to-use libraries
+            <span>10/15</span>
+          </a>
+          <a class="sequential-link next" href="../bubble-operator-upwards/">→</a>
+        </nav>
+
+        <div class="float-clear"></div>
+
+      </nav>
+
+
+
+      <nav class="ancestors-nav">
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox">
+          <h1>
+            <a href="../">Libraries</a>
+          </h1>
+          <ul>
+            <li>
+              <a href="../categories/states/ready-to-use/">
+                Ready to use
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+            <li><a href="../categories/states/not-yet-ready/">Not yet ready</a></li>
+            <li><a href="../categories/states/not-yet-scavenged/">Not yet scavenged</a></li>
+          </ul>
+          <ul>
+            <li><a href="../metaprojects/">Metaprojects</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="worknotes_navbox">
+          <h1>
+            <a href="../../">Worknotes</a>
+          </h1>
+          <ul>
+            <li>
+              <a href="../">
+                Libraries
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+            <li><a href="../../websites/">Websites</a></li>
+          </ul>
+          <ul>
+            <li><a href="../../workstacks/">Workstacks</a></li>
+            <li><a href="../../checklists/">Checklists</a></li>
+            <li><a href="../../tasks/">Tasks</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="main_navbox">
+          <h1>
+            <a href="../../../">HexstreamSoft</a>
+          </h1>
+          <ul>
+            <li><a href="../../../introduction.html">Introduction</a></li>
+            <li><a href="../../../libraries/">Libraries</a></li>
+            <li><a href="../../../articles/">Articles</a></li>
+            <li>
+              <a href="../../">
+                Worknotes
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+            <li><a href="../../../accounts/">Accounts</a></li>
+            <li><a href="../../../resources/">Resources</a></li>
+          </ul>
+        </nav>
+
+      </nav>
+
+    </nav>
+
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-05-06">6 may 2014</time><span>.</span></p>
+
+    <main>
+
+      <header id="page-header">
+        <h1>parse-number-range worknotes</h1>
+      </header>
+
+      <aside id="state-heads-up" class="ready-to-use-version-available">
+        <a href="http://www.hexstreamsoft.com/libraries/parse-number-range/">✔ A ready-to-use version of this library is available. ➡</a>
+        <p>Please visit <em>that</em> page for general information about this library.</p>
+        <p><em>This</em> worknotes page only presents information about future developments.</p>
+      </aside>
+
+      <div id="project-info">
+
+        <table class="factsheet">
+          <tbody>
+            <tr>
+              <th class="project-state property">State</th>
+              <td class="project-state good-news" colspan="2">Ready to use</td>
+            </tr>
+            <tr>
+              <th class="project-status property">Status</th>
+              <td class="project-status" colspan="2">Features pending.</td>
+            </tr>
+            <tr>
+              <th class="project-psi property"><a href="https://twitter.com/HexstreamSoft/status/303814185534488576" class="tweet">PSI</a></th>
+              <td class="project-psi" colspan="2">Low</td>
+            </tr>
+          </tbody>
+
+        </table>
+
+        <nav class="navbox" id="external-projects_navbox">
+          <h1>Related pages</h1>
+          <ul>
+            <li><a href="../../../libraries/parse-number-range/">Go to library's home</a></li>
+            <li><a href="https://github.com/Hexstream/parse-number-range">See on Github</a></li>
+          </ul>
+        </nav>
+
+        <table id="dependencies-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Blocked by</th>
+              <th>Blocks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Directly</th>
+              <td>Nothing</td>
+              <td>Nothing</td>
+            </tr>
+            <tr>
+              <th>Indirectly</th>
+              <td>Nothing</td>
+              <td>Nothing</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <ul>
+        <li><a href="../../tasks/#html-documentation">Adopt HTML documentation.</a></li>
+        <li>Doc: Add usage examples.</li>
+        <li>Doc: Add an example of implementing hypothetical <code class="common-lisp library macro operator">do-index</code> (or "do-range"?) macro similar to <code class="common-lisp">dotimes</code>. (Don't implement declarations handling but point that fact out.)</li>
+        <li>API: Add a way to request different biases in <code class="common-lisp library function operator">flags-to-keywords</code>.</li>
+        <li>API: Add a function somewhat reminiscent of <code class="common-lisp standard function operator">get-setf-expansion</code> taking the fundamental values as input and returning initialization, end test and stepping forms as multiple values.</li>
+        <li>API: The semantics of <code class="common-lisp library function operator">unparse</code> with a <var>clause-kinds</var> of 2 elements is messy. Maybe just disallow that (or rework semantics). Technically a backwards-incompatible change but probably doesn't matter in this case.</li>
+        <li>API: The semantics of <code class="common-lisp library function operator">unparse</code> with a <var>clause-kinds</var> of 1 element is straightforward but of questionable utility. Maybe just disallow that also. Technically a backwards-incompatible change but hopefully doesn't matter in this case.</li>
+        <li>Impl: Refactor out whatever "stupid repetition" the comment above <code class="common-lisp library function operator">kind</code> is talking about...</li>
+      </ul>
+
+    </main>
+
+    <footer id="footer">
+      <div>
+        <a href="#" class="back-to-top">⬆</a>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Fworknotes%2Flibraries%2Fparse-number-range%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="https://github.com/Hexstream/hexstreamsoft.com/blob/master/worknotes/libraries/parse-number-range/index.html"><span class="checkmark">✔</span> Public Domain</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Fworknotes%2Flibraries%2Fparse-number-range%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,7 +1,3 @@
-main th, main td {
-    padding: 0.4em 0.6em;
-}
-
 main table .latest-date, main table .quicklisp-since {
     text-align: right;
 }

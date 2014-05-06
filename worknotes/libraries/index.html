@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jean-Philippe Paradis" />
+    <link rel="author" href="http://www.hexstreamsoft.com/introduction.html" />
+    <link rel="license" href="http://www.hexstreamsoft.com/UNLICENSE" />
+    <meta name="description" content="?" />
+    <title>Library worknotes</title>
+    <link href="../../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script src="http://use.edgefonts.net/sanvito-pro-display.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1783234-3', 'hexstreamsoft.com');
+      ga('send', 'pageview');
+    </script>
+  </head>
+
+  <body>
+
+    <nav id="site-nav">
+
+      <nav class="breadcrumbs-and-extras">
+
+        <nav class="breadcrumbs">
+          <a href="../../">HexstreamSoft</a>
+          <span class="separator"> » </span>
+          <a href="../">Worknotes</a>
+          <span class="separator"> » </span>
+          <a class="here">Libraries</a>
+          <div class="float-clear"></div>
+        </nav>
+
+        <nav id="meta-nav">
+          <a href="http://www.hexstreamsoft.com/worknotes/libraries/">
+            <abbr title="Canonical">C</abbr>
+          </a>
+          <a href="https://github.com/Hexstream/hexstreamsoft.com/blob/master/worknotes/libraries/index.html">
+            <abbr title="Source">S</abbr>
+          </a>
+        </nav>
+
+        <nav class="start-browsing">
+          <a href="categories/states/ready-to-use/">Start browsing categories</a>
+        </nav>
+
+        <nav class="start-browsing">
+          <a href="map-bind/">Start browsing libraries</a>
+        </nav>
+
+        <div class="float-clear"></div>
+
+      </nav>
+
+      <nav class="ancestors-nav">
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox">
+          <h1>
+            <a class="here">
+              Libraries
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </a>
+          </h1>
+          <ul>
+            <li><a href="categories/states/ready-to-use/">Ready to use</a></li>
+            <li><a href="categories/states/not-yet-ready/">Not yet ready</a></li>
+            <li><a href="categories/states/not-yet-scavenged/">Not yet scavenged</a></li>
+          </ul>
+          <ul>
+            <li>
+              <a href="metaprojects/" class="inlining-node">Metaprojects</a>
+              <ul class="inlined-nodes">
+                <li>
+                  <a href="metaprojects/hexstream-cl-essentials/">CL Essentials</a>
+                </li>
+                <li>
+                  <a href="metaprojects/loopless2/">Loopless 2</a>
+                </li>
+                <li>
+                  <a href="metaprojects/hexstream-web/">Hexstream Web</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="worknotes_navbox">
+          <h1>
+            <a href="../">Worknotes</a>
+          </h1>
+          <ul>
+            <li>
+              <a class="here">
+                Libraries
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+            <li><a href="../websites/">Websites</a></li>
+          </ul>
+          <ul>
+            <li><a href="../workstacks/">Workstacks</a></li>
+            <li><a href="../checklists/">Checklists</a></li>
+            <li><a href="../tasks/">Tasks</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
+        <nav class="navbox" id="main_navbox">
+          <h1>
+            <a href="../../">
+              HexstreamSoft
+            </a>
+          </h1>
+          <ul>
+            <li><a href="../../introduction.html">Introduction</a></li>
+            <li><a href="../../libraries/">Libraries</a></li>
+            <li><a href="../../articles/">Articles</a></li>
+            <li>
+              <a href="../">
+                Worknotes
+                <span class="here-indicator-left"> </span>
+                <span class="here-indicator-right"> </span>
+              </a>
+            </li>
+            <li><a href="../../accounts/">Accounts</a></li>
+            <li><a href="../../resources/">Resources</a></li>
+          </ul>
+        </nav>
+
+      </nav>
+
+    </nav>
+
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-05-06">6 may 2014</time><span>.</span></p>
+
+    <main>
+
+      <header id="page-header">
+        <h1>Library worknotes</h1>
+        <p class="description">Worknotes about my Common Lisp libraries.</p>
+      </header>
+
+      <nav class="navboxes">
+
+        <nav class="group">
+
+          <h1><a href="categories/states/">States</a></h1>
+
+          <div class="body">
+
+            <nav class="navbox">
+              <h1>
+                <a href="categories/states/ready-to-use/">Ready to use</a>
+                <span class="item-count">(<span>15</span>)</span>
+              </h1>
+              <ul>
+                <li><a href="map-bind/">map-bind</a></li>
+                <li><a href="positional-lambda/">positional-lambda</a></li>
+                <li><a href="enhanced-eval-when/">enhanced-eval-when</a></li>
+                <li><a href="enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a></li>
+                <li><a href="macro-level/">macro-level</a></li>
+              </ul>
+              <ul>
+                <li><a href="cartesian-product-switch/">cartesian-product-switch</a></li>
+                <li><a href="place-modifiers/">place-modifiers</a></li>
+                <li><a href="anaphoric-variants/">anaphoric-variants</a></li>
+                <li><a href="multiple-value-variants/">multiple-value-variants</a></li>
+              </ul>
+              <ul>
+                <li><a href="parse-number-range/">parse-number-range</a></li>
+                <li><a href="bubble-operator-upwards/">bubble-operator-upwards</a></li>
+              </ul>
+              <ul>
+                <li><a href="incognito-keywords/">incognito-keywords</a></li>
+                <li><a href="symbol-namespaces/">symbol-namespaces</a></li>
+              </ul>
+              <ul>
+                <li><a href="clhs/">clhs</a></li>
+                <li><a href="place-utils/">place-utils</a></li>
+              </ul>
+            </nav>
+
+            <nav class="navbox">
+              <h1>
+                <a href="categories/states/not-yet-ready/">Not yet ready</a>
+                <span class="item-count">(<span>46</span>)</span>
+              </h1>
+              <ul>
+                <li><a href="hextml/">hextml</a></li>
+                <li><a href="hecss/">hecss</a></li>
+                <li><a href="definitions-systems/">definitions-systems</a></li>
+                <li><a href="first-class-lambda-lists/">first-class-lambda-lists</a></li>
+                <li><a href="first-class-declarations/">first-class-declarations</a></li>
+                <li><a href="type-maker/">type-maker</a></li>
+                <li><a href="flexiconf/">flexiconf</a></li>
+                <li><a href="option-lists/">option-lists</a></li>
+                <li><a href="cl-native-terminfo/">cl-native-terminfo</a></li>
+                <li><a href="clos-relations/">clos-relations</a></li>
+                <li><a href="automixin/">automixin</a></li>
+                <li><a href="explicit-bind/">explicit-bind</a></li>
+                <li><a href="lispy-format/">lispy-format</a></li>
+                <li><a href="hextest/">hextest</a></li>
+                <li><a href="phased-generic-functions/">phased-generic-functions</a></li>
+                <li><a href="leanify-expand/">leanify-expand</a></li>
+                <li><a href="clhs-urltools/">clhs-urltools</a></li>
+                <li><a href="return-values-hints/">return-values-hints</a></li>
+                <li><a href="mc-logger/">mc-logger</a></li>
+                <li><a href="hexstream-stumpwmrc/">hexstream-stumpwmrc</a></li>
+                <li><a href="adaptable-reader/">adaptable-reader</a></li>
+                <li><a href="easy-backquote-nesting/">easy-backquote-nesting</a></li>
+                <li><a href="bigname/">bigname</a></li>
+                <li><a href="hexql/">hexql</a></li>
+                <li><a href="linkval/">linkval</a></li>
+                <li><a href="com.hexstreamsoft.lib.form/">com.hexstreamsoft.lib.form</a></li>
+                <li><a href="with-shadowed-bindings/">with-shadowed-bindings</a></li>
+                <li><a href="stream-lisp/">stream-lisp</a></li>
+                <li><a href="bounds-arithmetic/">bounds-arithmetic</a></li>
+                <li><a href="hexstream-color/">hexstream-color</a></li>
+                <li><a href="clos-featuresets/">clos-featuresets</a></li>
+                <li><a href="interdependent-bindings/">interdependent-bindings</a></li>
+                <li><a href="hexstream-project-template/">hexstream-project-template</a></li>
+                <li><a href="weak-symbol/">weak-symbol</a></li>
+                <li><a href="system-dependable/">system-dependable</a></li>
+                <li><a href="rotx/">rotx</a></li>
+                <li><a href="combining-alternatives/">combining-alternatives</a></li>
+                <li><a href="throwaway-scripts/">throwaway-scripts</a></li>
+                <li><a href="hexstream-emacs-init/">hexstream-emacs-init</a></li>
+                <li><a href="hexstream-html-doc-mode/">hexstream-html-doc-mode</a></li>
+                <li><a href="with-loop-edge-cases/">with-loop-edge-cases</a></li>
+                <li><a href="hexstream-sbcl-init/">hexstream-sbcl-init</a></li>
+                <li><a href="map-symbol-definitions/">map-symbol-definitions</a></li>
+                <li><a href="elevator-restarts-game/">elevator-restarts-game</a></li>
+                <li><a href="hexstream-screenrc/">hexstream-screenrc</a></li>
+                <li><a href="evaluated-flet/">evaluated-flet</a></li>
+              </ul>
+            </nav>
+
+            <nav class="navbox">
+              <h1>
+                <a href="categories/states/not-yet-scavenged/">Not yet scavenged</a>
+                <span class="item-count">(<span>22</span>)</span>
+              </h1>
+              <ul>
+                <li><a href="place-utils/">place-utils</a></li>
+                <li><a href="local-clhs-helper/">local-clhs-helper</a></li>
+                <li><a href="trivial-declaration-identifiers/">trivial-declaration-identifiers</a></li>
+                <li><a href="loopless-accumulators/">loopless-accumulators</a></li>
+                <li><a href="loopless-iterators-minimal/">loopless-iterators-minimal</a></li>
+                <li><a href="loopless-map-minimal/">loopless-map-minimal</a></li>
+                <li><a href="hexstream-shared-html-css/">hexstream-shared-html-css</a></li>
+                <li><a href="loopless-formerly-private/">loopless-formerly-private</a></li>
+                <li><a href="triage-declarations/">triage-declarations</a></li>
+                <li><a href="destructuring-bind-star/">destructuring-bind-star</a></li>
+                <li><a href="loopless/">loopless</a></li>
+                <li><a href="com.hexstreamsoft.lib/">com.hexstreamsoft.lib</a></li>
+                <li><a href="com.hexstreamsoft.lib.web/">com.hexstreamsoft.lib.web</a></li>
+                <li><a href="hexttp-config/">hexttp-config</a></li>
+                <li><a href="clsdb/">clsdb</a></li>
+                <li><a href="hevent/">hevent</a></li>
+                <li><a href="rearrange-args/">rearrange-args</a></li>
+                <li><a href="loopless-map/">loopless-map</a></li>
+                <li><a href="loopless-iterators/">loopless-iterators</a></li>
+                <li><a href="bahagontools/">bahagontools</a></li>
+                <li><a href="defmacro-system/">defmacro-system</a></li>
+                <li><a href="botchlog/">botchlog</a></li>
+              </ul>
+            </nav>
+
+            <div class="float-clear"></div>
+
+          </div>
+
+        </nav>
+
+      </nav>
+
+    </main>
+
+    <footer id="footer">
+      <div>
+        <a href="#" class="back-to-top">⬆</a>
+        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Fworknotes%2Flibraries%2F"><span class="checkmark">✔</span> HTML5</a></span>
+        <span class="page-badge"><a href="https://github.com/Hexstream/hexstreamsoft.com/blob/master/worknotes/libraries/index.html"><span class="checkmark">✔</span> Public Domain</a></span>
+        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Fworknotes%2Flibraries%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      </div>
+    </footer>
+
+  </body>
+</html>
