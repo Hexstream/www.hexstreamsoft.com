@@ -1,3 +1,0 @@
-hexstream-cl-essentials/
-loopless2/
-hexstream-web/

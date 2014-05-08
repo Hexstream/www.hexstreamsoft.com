@@ -1,4 +1,5 @@
 RedirectPermanent /projects/ http://www.hexstreamsoft.com/libraries/
+RedirectPermanent /worknotes/ http://worknotes.hexstreamsoft.com/
 RedirectMatch ^/tweets/.*/ /tweets/
 ErrorDocument 500 /error-pages/500.html
 ErrorDocument 404 /error-pages/404.html
