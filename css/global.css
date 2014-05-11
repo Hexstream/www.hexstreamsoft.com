@@ -419,7 +419,7 @@ a.tweet {
     margin: 0.8em auto;
 }
 
-.warning-incomplete {
+.state-warning {
     text-align: center;
     color: red;
     font-weight: bold;
