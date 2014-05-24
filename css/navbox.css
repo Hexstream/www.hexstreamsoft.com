@@ -299,3 +299,7 @@
     background: #FFCC99;
     opacity: 1;
 }
+
+#page-header + nav.navbox > h1 {
+    margin-top: 0;
+}
