@@ -125,7 +125,22 @@
 
         <h1>2014</h1>
 
-        <p class="summary">No new releases so far, but there are many to come this year.</p>
+        <div class="summary">
+          <p><del>No new releases so far, but there are many to come this year.</del></p>
+          <p><ins>Ok, the year is not going as I planned at all, so I don't know.</ins></p>
+          <p>(That's not to say it's a bad year, but I'm simply not focussing on libraries as I thought I would do.)</p>
+        </div>
+
+        <dl>
+
+          <dt>24 july 2014</dt>
+          <dd>
+            <p>multiple-value-variants 1.0.1</p>
+            <p>The upcoming version of SBCL breaks positional-lambda's (reasonable?) assumption that all code embedded in an invocation of the backquote reader-macro is reachable through cons-walking.</p>
+            <p>multiple-value-variants <a href="https://github.com/Hexstream/multiple-value-variants/commit/c08a1fa4e8d61b8d26c5e6dd5f4ec2278b2241b1">now uses non-backquoted code</a> in its 3 invocations of <code>plambda</code>, as a "temporary" (but likely long-lasting) workaround.</p>
+          </dd>
+
+        </dl>
 
       </section>
 
