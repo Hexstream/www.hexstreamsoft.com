@@ -106,7 +106,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-07-24">24 july 2014</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-08-05">5 august 2014</time><span>.</span></p>
 
     <main>
 
@@ -133,9 +133,15 @@
 
         <dl>
 
+          <dt>5 august 2014</dt>
+          <dd id="clhs-0.6.2">
+            <p><a href="../../clhs/">clhs</a> 0.6.2</p>
+            <p>It has been <a href="https://github.com/Hexstream/clhs/pull/8">brought to my attention</a> that CLISP (quite capriciously) throws an error on <code>(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_probe_.htm">probe-file</a> <var>directory</var>)</code>. The CLHS wrapper <a href="https://github.com/Hexstream/clhs/commit/30102ba13fa85f4d2fd5b2852e96ed316b491526">now uses</a> <code><a href="http://clisp.org/impnotes.html#probe-path">ext:probe-pathname</a></code> on that implementation.</p>
+          </dd>
+
           <dt>24 july 2014</dt>
-          <dd>
-            <p>multiple-value-variants 1.0.1</p>
+          <dd id="multiple-value-variants-1.0.1">
+            <p><a href="../../multiple-value-variants/">multiple-value-variants</a> 1.0.1</p>
             <p>The upcoming version of SBCL breaks positional-lambda's (reasonable?) assumption that all code embedded in an invocation of the backquote reader-macro is reachable through cons-walking.</p>
             <p>multiple-value-variants <a href="https://github.com/Hexstream/multiple-value-variants/commit/c08a1fa4e8d61b8d26c5e6dd5f4ec2278b2241b1">now uses non-backquoted code</a> in its 3 invocations of <code>plambda</code>, as a "temporary" (but likely long-lasting) workaround.</p>
           </dd>
