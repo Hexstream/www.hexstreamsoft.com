@@ -1,7 +1,0 @@
-*debug-io*
-*error-output*
-*query-io*
-*standard-input*
-*standard-output*
-*terminal-io*
-*trace-output*

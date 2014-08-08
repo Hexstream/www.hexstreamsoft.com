@@ -1,8 +1,0 @@
-ceiling
-fceiling
-floor
-ffloor
-round
-fround
-truncate
-ftruncate

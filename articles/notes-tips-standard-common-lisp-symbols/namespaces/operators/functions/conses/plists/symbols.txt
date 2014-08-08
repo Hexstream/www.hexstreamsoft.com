@@ -1,2 +1,0 @@
-getf
-get-properties

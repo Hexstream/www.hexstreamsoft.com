@@ -1,6 +1,0 @@
-array-dimension-limit
-array-rank-limit
-array-total-size-limit
-call-arguments-limit
-lambda-parameters-limit
-multiple-values-limit

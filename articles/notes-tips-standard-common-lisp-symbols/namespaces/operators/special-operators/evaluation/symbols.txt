@@ -1,4 +1,0 @@
-eval-when
-load-time-value
-quote
-function

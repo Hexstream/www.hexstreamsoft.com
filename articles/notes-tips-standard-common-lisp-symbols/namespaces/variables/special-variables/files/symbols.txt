@@ -1,8 +1,0 @@
-*compile-file-pathname*
-*compile-file-truename*
-*compile-print*
-*compile-verbose*
-*load-pathname*
-*load-print*
-*load-truename*
-*load-verbose*

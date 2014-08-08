@@ -1,9 +1,0 @@
-signed-byte
-unsigned-byte
-bit
-fixnum
-bignum
-short-float
-single-float
-double-float
-long-float

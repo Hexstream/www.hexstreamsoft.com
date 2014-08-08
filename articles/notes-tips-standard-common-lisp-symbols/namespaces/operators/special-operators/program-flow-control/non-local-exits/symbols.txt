@@ -1,7 +1,0 @@
-block
-return-from
-catch
-throw
-tagbody
-go
-unwind-protect

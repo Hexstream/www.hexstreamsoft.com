@@ -1,8 +1,0 @@
-flet
-labels
-macrolet
-symbol-macrolet
-progv
-let
-let*
-setq

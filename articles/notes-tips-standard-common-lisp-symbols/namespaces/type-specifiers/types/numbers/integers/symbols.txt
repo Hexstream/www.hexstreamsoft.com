@@ -1,5 +1,0 @@
-signed-byte
-unsigned-byte
-bit
-fixnum
-bignum

@@ -1,4 +1,0 @@
-char-code-limit
-internal-time-units-per-second
-most-negative-fixnum
-most-positive-fixnum

@@ -1,9 +1,0 @@
-readtablep
-readtable-case
-copy-readtable
-get-macro-character
-set-macro-character
-make-dispatch-macro-character
-get-dispatch-macro-character
-set-dispatch-macro-character
-set-syntax-from-char

@@ -1,8 +1,0 @@
-special-operator-p
-macro-function
-compiler-macro-function
-symbol-value
-symbol-function
-fdefinition
-makunbound
-fmakunbound

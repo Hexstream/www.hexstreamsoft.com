@@ -1,8 +1,0 @@
-operators/
-variables/
-type-specifiers/
-lambda-lists/
-restart-kinds/
-declaration-identifiers/
-documentation-types/
-method-combination-types/

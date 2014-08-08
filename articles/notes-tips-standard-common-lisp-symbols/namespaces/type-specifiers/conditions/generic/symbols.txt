@@ -1,8 +1,0 @@
-condition
-error
-serious-condition
-simple-condition
-simple-error
-simple-warning
-style-warning
-warning
