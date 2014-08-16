@@ -65,6 +65,11 @@ table.breadcrumbs .vertical-separation {
     padding: 0.48em 0.5em;
 }
 
+.breadcrumbs-and-extras > div > div + div nav {
+    margin-top: 0.1em;
+}
+
+
 .spacer {
     margin-top: 0.5em;
     margin-bottom: 1em;

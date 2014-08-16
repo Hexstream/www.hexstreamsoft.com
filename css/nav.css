@@ -87,11 +87,15 @@ article, section {
     background: white;
 }
 
-.breadcrumbs-and-extras > nav {
+.breadcrumbs-and-extras nav, .breadcrumbs-and-extras > div {
     float: left;
 }
 
-nav.breadcrumbs, .breadcrumbs-and-extras > nav {
+.breadcrumbs-and-extras div.float-clear {
+    float: none;
+}
+
+nav.breadcrumbs, .breadcrumbs-and-extras nav {
     position: relative;
     margin: 0.5em 0.5em 1em;
     background: #FFCC99;
@@ -99,12 +103,12 @@ nav.breadcrumbs, .breadcrumbs-and-extras > nav {
     text-decoration: none;
 }
 
-nav.breadcrumbs a, .breadcrumbs-and-extras > nav a {
+nav.breadcrumbs a, .breadcrumbs-and-extras nav a {
     position: relative;
     text-decoration: inherit;
 }
 
-.breadcrumbs-and-extras > nav a meter, .breadcrumbs-and-extras > nav a span {
+.breadcrumbs-and-extras nav a meter, .breadcrumbs-and-extras nav a span {
     position: absolute;
     left: 0;
     right: 0;
@@ -114,7 +118,7 @@ nav.breadcrumbs a, .breadcrumbs-and-extras > nav a {
     height: 0.5em;
 }
 
-.breadcrumbs-and-extras > nav a span {
+.breadcrumbs-and-extras nav a span {
     text-align: center;
     font-size: smaller;
     white-space: pre;
@@ -122,7 +126,7 @@ nav.breadcrumbs a, .breadcrumbs-and-extras > nav a {
     color: black;
 }
 
-nav.breadcrumbs > a, nav.breadcrumbs > span, .breadcrumbs-and-extras > nav > a, .breadcrumbs-and-extras > nav > span {
+nav.breadcrumbs > a, nav.breadcrumbs > span, .breadcrumbs-and-extras nav > a, .breadcrumbs-and-extras nav > span {
     float: left;
     padding: 0.175em 0.25em;
 }
@@ -131,15 +135,15 @@ nav.breadcrumbs > span {
     font-weight: bolder;
 }
 
-nav.breadcrumbs > a:first-child, .breadcrumbs-and-extras > nav > a:first-child {
+nav.breadcrumbs > a:first-child, .breadcrumbs-and-extras nav > a:first-child {
     padding-left: 0.5em;
 }
 
-nav.breadcrumbs > a:nth-last-child(2), .breadcrumbs-and-extras > nav > a:last-child {
+nav.breadcrumbs > a:nth-last-child(2), .breadcrumbs-and-extras nav > a:last-child {
     padding-right: 0.5em;
 }
 
-nav.breadcrumbs a:hover, nav.breadcrumbs a:focus, .breadcrumbs-and-extras > nav a:hover {
+nav.breadcrumbs a:hover, nav.breadcrumbs a:focus, .breadcrumbs-and-extras nav a:hover {
     background: #FFDD99;
     outline-style: none;
 }
