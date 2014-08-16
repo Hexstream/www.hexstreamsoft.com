@@ -6,6 +6,7 @@ table.breadcrumbs {
 
 table.breadcrumbs a {
     display: block;
+    float: left;
     text-decoration: none;
     padding: 0.175em 0.25em;
 }
