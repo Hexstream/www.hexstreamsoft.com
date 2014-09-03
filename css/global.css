@@ -212,6 +212,18 @@ table {
     border: solid medium gray;
 }
 
+.sparse-table {
+    background-color: #ECECEC;
+    background-image: url("../images/not-applicable.svg");
+    background-position: top left;
+    background-attachment: scroll;
+}
+
+.sparse-table .not-applicable {
+    color: transparent;
+    background: transparent;
+}
+
 table th {
     white-space: nowrap;
 }
