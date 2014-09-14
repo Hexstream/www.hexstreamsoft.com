@@ -1,5 +1,5 @@
-@import "../../css/category.css";
-@import "../../css/factsheet.css";
+@import "http://global.hexstreamsoft.com/css/category.css";
+@import "http://global.hexstreamsoft.com/css/factsheet.css";
 
 .library-header {
     padding: 0.5em;
