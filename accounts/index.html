@@ -52,6 +52,23 @@
 
         <div class="level-separator"></div>
 
+        <nav class="navbox">
+          <h1>
+            <a class="here">
+              Accounts
+              <span class="here-indicator-left"> </span>
+              <span class="here-indicator-right"> </span>
+            </a>
+          </h1>
+          <ul>
+            <li><a href="#actively-used">Actively used</a></li>
+            <li><a href="#occasionally-used">Occasionally used</a></li>
+            <li><a href="#almost-never-used">Almost never used</a></li>
+          </ul>
+        </nav>
+
+        <div class="level-separator"></div>
+
         <nav class="navbox" id="main_navbox">
           <h1>
             <a href="../">HexstreamSoft</a>
@@ -72,7 +89,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-02-27">27 february 2014</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-09-19">19 september 2014</time><span>.</span></p>
 
     <main>
       <header id="page-header">
@@ -84,114 +101,180 @@
       <p id="nickname">For more than a decade, I've been going by "Hexstream" online, whenever possible.</p>
       <p id="introduction">The following is a full list of my programming-related accounts.</p>
 
-      <table>
-        <thead>
-          <tr>
-            <th class="service">Service</th>
-            <th class="name">Name</th>
-            <th class="comments">Comments</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th class="service">Github</th>
-            <td class="name link-cell">
-              <div>
-                <a href="https://github.com/Hexstream"><div>Hexstream</div></a>
-              </div>
-            </td>
-            <td class="comments"><p>50+ work-in-progress projects. See also <a href="http://worknotes.hexstreamsoft.com/">my worknotes</a>.</p></td>
-          </tr>
-          <tr>
-            <th class="service">Twitter</th>
-            <td class="name link-cell">
-              <div>
-                <a href="http://twitter.com/HexstreamSoft"><div>@HexstreamSoft</div></a>
-              </div>
-            </td>
-            <td class="comments">
-              <p>Mostly Common Lisp, programming, innovation.</p>
-              <!-- I won't have time for this "custom timelines" stuff anytime soon, after all.
-              <p id="custom-timelines"><small>Work-in-progress "custom timelines" (make your own with <a href="https://tweetdeck.twitter.com/">TweetDeck</a>):<br />
-                <a href="https://twitter.com/HexstreamSoft/timelines/432657006344667136">Programming</a>, <a href="https://twitter.com/HexstreamSoft/timelines/432656352544968706">Lisp</a>, <a href="https://twitter.com/HexstreamSoft/timelines/432698359682326528">Common Lisp</a>, <a href="https://twitter.com/HexstreamSoft/timelines/432698962953261056">Language design and DSLs</a>,<br /><a href="https://twitter.com/HexstreamSoft/timelines/432636794580914176">Documentation</a>, <a href="https://twitter.com/HexstreamSoft/timelines/432653489039106048">Philosophy</a>, <a href="https://twitter.com/HexstreamSoft/timelines/432638233063587841">Open Access</a>.</small></p>
-              -->
-            </td>
-          </tr>
-          <tr>
-            <th class="service">Twitter</th>
-            <td class="name link-cell">
-              <div>
-                <a href="http://twitter.com/StreamLisp"><div>@StreamLisp</div></a>
-              </div>
-            </td>
-            <td class="comments"><p>New dialect derived from Common Lisp, at early concept stage.</p></td>
-          </tr>
-          <tr>
-            <th class="service">Launchpad</th>
-            <td class="name link-cell">
-              <div>
-                <a href="https://bugs.launchpad.net/~hexstream"><div>Hexstream</div></a>
-              </div>
-            </td>
-            <td class="comments"><p>Many <a href="http://sbcl.org">SBCL</a> issue reports.</p></td>
-          </tr>
-          <tr>
-            <th class="service">Cliki</th>
-            <td class="name link-cell">
-              <div>
-                <a href="http://cliki.net/Jean-Philippe%20Paradis"><div>Jean-Philippe Paradis</div></a>
-              </div>
-            </td>
-            <td class="comments">
-              <p>This is a valuable source of quality traffic for me!
-              <br />It's worth taking the time to make pages for your projects.</p>
-            </td>
-          </tr>
-          <tr>
-            <th class="service">Common Lisp<br />Directory</th>
-            <td class="name link-cell">
-              <div>
-                <a href="http://www.cl-user.net/asp/persons/Hexstream"><div>Hexstream</div></a>
-              </div>
-            </td>
-            <td class="comments">
-              <p>I recently created an account there.
-                <br />I have yet to create pages for my libraries there.</p>
-            </td>
-          </tr>
-          <tr>
-            <th class="service">Reddit</th>
-            <td class="name link-cell">
-              <div>
-                <a href="http://www.reddit.com/user/Hexstream"><div>Hexstream</div></a>
-              </div>
-            </td>
-            <td class="comments"><p>I consult <a href="http://www.reddit.com/r/lisp">/r/lisp</a> occasionally and participate rarely.</p></td>
-          </tr>
-          <tr>
-            <th class="service">Hacker News</th>
-            <td class="name link-cell">
-              <div>
-                <a href="https://news.ycombinator.com/user?id=Hexstream"><div>Hexstream</div></a>
-              </div>
-            </td>
-            <td class="comments">
-              <p>I spent way too much time on there for a few years, many years ago.
-                <br />I don't really use this anymore. A 25 days noprocrast helps.
-                <br />Warning: I think I might have said a lot of really stupid things there.</p></td>
-          </tr>
+      <section id="actively-used">
 
-          <tr>
-            <th class="service">Google+</th>
-            <td class="name link-cell">
-              <div>
-                <a><div>Hexstream</div></a>
-              </div>
-            </td>
-            <td class="comments"><p>Google+ wasn't bringing me significant value so I deleted my account.</p></td>
-          </tr>
-        </tbody>
-      </table>
+        <h1 class="breadcrumbs">
+          <a href="#actively-used" class="anchor">⚓</a>
+          <a href="#">Accounts</a>
+          <span class="separator"> » </span>
+          <a class="here">Actively used</a>
+        </h1>
+
+        <table>
+          <thead>
+            <tr>
+              <th class="service">Service</th>
+              <th class="name">Name</th>
+              <th class="comments">Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="service">Github</th>
+              <td class="name link-cell">
+                <div>
+                  <a href="https://github.com/Hexstream"><div>Hexstream</div></a>
+                </div>
+              </td>
+              <td class="comments"><p>50+ work-in-progress projects. See also <a href="http://worknotes.hexstreamsoft.com/">my worknotes</a>.</p></td>
+            </tr>
+            <tr>
+              <th class="service">Twitter</th>
+              <td class="name link-cell">
+                <div>
+                  <a href="http://twitter.com/HexstreamSoft"><div>@HexstreamSoft</div></a>
+                </div>
+              </td>
+              <td class="comments">
+                <p>Mostly Common Lisp, programming, innovation.</p>
+                <!-- I won't have time for this "custom timelines" stuff anytime soon, after all.
+                     <p id="custom-timelines"><small>Work-in-progress "custom timelines" (make your own with <a href="https://tweetdeck.twitter.com/">TweetDeck</a>):<br />
+                         <a href="https://twitter.com/HexstreamSoft/timelines/432657006344667136">Programming</a>, <a href="https://twitter.com/HexstreamSoft/timelines/432656352544968706">Lisp</a>, <a href="https://twitter.com/HexstreamSoft/timelines/432698359682326528">Common Lisp</a>, <a href="https://twitter.com/HexstreamSoft/timelines/432698962953261056">Language design and DSLs</a>,<br /><a href="https://twitter.com/HexstreamSoft/timelines/432636794580914176">Documentation</a>, <a href="https://twitter.com/HexstreamSoft/timelines/432653489039106048">Philosophy</a>, <a href="https://twitter.com/HexstreamSoft/timelines/432638233063587841">Open Access</a>.</small></p>
+                     -->
+              </td>
+            </tr>
+            <tr>
+              <th class="service">Keybase</th>
+              <td class="name link-cell">
+                <div>
+                  <a href="https://keybase.io/hexstream"><div>hexstream</div></a>
+                </div>
+              </td>
+              <td class="comments"><p>I'm participating in the keybase.io alpha. Exciting stuff!</p></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+      <section id="occasionally-used">
+
+        <h1 class="breadcrumbs">
+          <a href="#occasionally-used" class="anchor">⚓</a>
+          <a href="#">Accounts</a>
+          <span class="separator"> » </span>
+          <a class="here">Occasionally used</a>
+        </h1>
+
+        <table>
+          <thead>
+            <tr>
+              <th class="service">Service</th>
+              <th class="name">Name</th>
+              <th class="comments">Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="service">Twitter</th>
+              <td class="name link-cell">
+                <div>
+                  <a href="http://twitter.com/StreamLisp"><div>@StreamLisp</div></a>
+                </div>
+              </td>
+              <td class="comments"><p>New dialect derived from Common Lisp, at early concept stage.</p></td>
+            </tr>
+            <tr>
+              <th class="service">Launchpad</th>
+              <td class="name link-cell">
+                <div>
+                  <a href="https://bugs.launchpad.net/~hexstream"><div>Hexstream</div></a>
+                </div>
+              </td>
+              <td class="comments"><p>Many <a href="http://sbcl.org">SBCL</a> issue reports.</p></td>
+            </tr>
+            <tr>
+              <th class="service">Cliki</th>
+              <td class="name link-cell">
+                <div>
+                  <a href="http://cliki.net/Jean-Philippe%20Paradis"><div>Jean-Philippe Paradis</div></a>
+                </div>
+              </td>
+              <td class="comments">
+                <p>This is a valuable source of quality traffic for me!
+                  <br />It's worth taking the time to make pages for your projects.</p>
+              </td>
+            </tr>
+            <tr>
+              <th class="service">Reddit</th>
+              <td class="name link-cell">
+                <div>
+                  <a href="http://www.reddit.com/user/Hexstream"><div>Hexstream</div></a>
+                </div>
+              </td>
+              <td class="comments"><p>I consult <a href="http://www.reddit.com/r/lisp">/r/lisp</a> occasionally and participate rarely.</p></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+      <section id="almost-never-used">
+
+        <h1 class="breadcrumbs">
+          <a href="#almost-never-used" class="anchor">⚓</a>
+          <a href="#">Accounts</a>
+          <span class="separator"> » </span>
+          <a class="here">Almost never used</a>
+        </h1>
+
+        <table>
+          <thead>
+            <tr>
+              <th class="service">Service</th>
+              <th class="name">Name</th>
+              <th class="comments">Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="service">Common Lisp<br />Directory</th>
+              <td class="name link-cell">
+                <div>
+                  <a href="http://www.cl-user.net/asp/persons/Hexstream"><div>Hexstream</div></a>
+                </div>
+              </td>
+              <td class="comments">
+                <p>I created an account there a while ago.
+                  <br />I have yet to create pages for my libraries there.</p>
+              </td>
+            </tr>
+            <tr>
+              <th class="service">Hacker News</th>
+              <td class="name link-cell">
+                <div>
+                  <a href="https://news.ycombinator.com/user?id=Hexstream"><div>Hexstream</div></a>
+                </div>
+              </td>
+              <td class="comments">
+                <p>I spent way too much time on there for a few years, many years ago.
+                  <br />I completely stopped using it years ago. It's too much of a timesink.
+                  <br />Warning: I think I might have said a lot of really stupid things there.</p></td>
+            </tr>
+
+            <tr>
+              <th class="service">Google+</th>
+              <td class="name link-cell">
+                <div>
+                  <a><div>Hexstream</div></a>
+                </div>
+              </td>
+              <td class="comments"><p>Google+ wasn't bringing me significant value so I deleted my account.</p></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
 
       <p id="contact-me">If you have questions or comments, contact me. My email address is <a href="mailto:hexstream@hexstreamsoft.com">hexstream@hexstreamsoft.com</a>.</p>
 

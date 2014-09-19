@@ -6,6 +6,10 @@ th.name {
     text-align: center;
 }
 
+#introduction + section > h1 {
+    margin-top: 0;
+}
+
 #full-name, #nickname, #introduction, #contact-me {
     text-align: center;
 }
