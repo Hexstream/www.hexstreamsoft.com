@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/categories/macros/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/categories/macros/simple/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/categories/macros/extensible/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/categories/macros/utilities/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/categories/data-structures/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/categories/uncategorized/</loc>
+  </url>
+
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/releases/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/releases/latest-versions/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/releases/timeline/</loc>
+  </url>
+
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/clhs/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/macro-level/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/map-bind/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/positional-lambda/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/positional-lambda/examples.html</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/place-modifiers/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/anaphoric-variants/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/cartesian-product-switch/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/enhanced-multiple-value-bind/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/enhanced-eval-when/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/parse-number-range/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/incognito-keywords/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/bubble-operator-upwards/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/multiple-value-variants/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/symbol-namespaces/</loc>
+  </url>
+
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/place-utils/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/place-utils/setf-expanderlet.html</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/place-utils/with-resolved-places.html</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/place-utils/updatef.html</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/place-utils/bulkf.html</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/place-utils/funcallf-applyf.html</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/place-utils/cachef.html</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/place-utils/oldf.html</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/place-utils/readf.html</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/place-utils/tracef.html</loc>
+  </url>
+
+</urlset>

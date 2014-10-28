@@ -1,4 +1,4 @@
-Sitemap: http://www.hexstreamsoft.com/sitemap.xml
+Sitemap: http://www.hexstreamsoft.com/sitemap-index.xml
 
 User-agent: *
 Disallow: /tmp/

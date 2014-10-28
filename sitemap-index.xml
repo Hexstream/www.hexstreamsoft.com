@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <sitemap>
+
+    <loc>http://www.hexstreamsoft.com/sitemap.xml</loc>
+
+
+    <loc>http://www.hexstreamsoft.com/libraries/sitemap.xml</loc>
+
+
+    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/sitemap.xml</loc>
+
+    <!-- One-page "Getting started with the Common Lisp HyperSpec" is in global sitemap. -->
+
+    <loc>http://www.hexstreamsoft.com/articles/common-lisp-format-reference/sitemap.xml</loc>
+
+    <loc>http://www.hexstreamsoft.com/articles/how-to-website-hosting-with-nearlyfreespeech/sitemap.xml</loc>
+
+  </sitemap>
+
+</sitemapindex>
