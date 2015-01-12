@@ -79,12 +79,16 @@
 
         <div class="level-separator"></div>
 
-        <nav class="navbox empty" id="library_navbox">
+        <nav class="navbox">
           <h1>
             <a class="here">clhs</a>
             <span class="here-indicator-left"> </span>
             <span class="here-indicator-right"> </span>
           </h1>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#emacs-integration">Emacs integration</a></li>
+          </ul>
         </nav>
 
         <div class="level-separator"></div>
@@ -148,7 +152,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-10-10">10 october 2014</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-01-12">12 january 2015</time><span>.</span></p>
 
     <main>
 
@@ -297,46 +301,70 @@
         <p><b>However, </b>if you want to make ANY changes to it, you should first carefully read and understand the <a href="https://github.com/Hexstream/clhs/blob/master/LICENSE">LICENSE</a> and <a href="https://github.com/Hexstream/clhs/blob/master/README">README</a> files and legal documents referenced therein, including <a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal">this one</a>.</p>
       </div>
 
-      <p>The HyperSpec-7-0 directory in this thin ASDF wrapper is a complete and unmodified copy of Lispworks' Common Lisp HyperSpec version 7.0 (referenced from <a href="http://www.lispworks.com/documentation/common-lisp.html">http://www.lispworks.com/documentation/common-lisp.html</a>).
-        <br />Redistribution of the HyperSpec is made with permission from LispWorks per the terms and restrictions set forth at <a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal">http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal</a>.
-        <br />You may further redistribute the HyperSpec subject to the same <a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal">terms and restrictions</a>.</p>
+      <section id="introduction">
 
-      <p>This thin ASDF wrapper was prepared by Jean-Philippe Paradis (<a href="mailto:hexstream@gmail.com">hexstream@gmail.com</a>) for inclusion in Quicklisp and is not endorsed by LispWorks Ltd. Common Lisp HyperSpec is a registered trademark of LispWorks Ltd. Jean-Philippe Paradis is not a lawyer, has not consulted a lawyer, and prepared this thin ASDF wrapper as a community service on a "good faith, best-effort" basis.</p>
+        <h1 class="breadcrumbs">
+          <a href="#introduction" class="anchor">⚓</a>
+          <a href="#">CLHS (thin ASDF wrapper)</a>
+          <span class="separator"> » </span>
+          <a class="here">Introduction</a>
+        </h1>
 
-      <p>The <a href="ftp://ftp.lispworks.com/pub/software_tools/reference/HyperSpec-7-0.tar.gz">original download</a> was a <code>.tar.gz</code> file and has been uncompressed for your convenience. The primary use cases for downloading the HyperSpec to your hard drive instead of using <a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">the online documentation</a> are to benefit from the increased responsiveness inherent in browsing a local resource and to ensure reliable, fast access from anywhere while on the go (ex: laptop, smartphone).</p>
+        <p>The HyperSpec-7-0 directory in this thin ASDF wrapper is a complete and unmodified copy of Lispworks' Common Lisp HyperSpec version 7.0 (referenced from <a href="http://www.lispworks.com/documentation/common-lisp.html">http://www.lispworks.com/documentation/common-lisp.html</a>).
+          <br />Redistribution of the HyperSpec is made with permission from LispWorks per the terms and restrictions set forth at <a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal">http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal</a>.
+          <br />You may further redistribute the HyperSpec subject to the same <a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal">terms and restrictions</a>.</p>
 
-      <p>Use <code class="common-lisp">(clhs:print-emacs-setup-form)</code> to print the command used to tell Emacs to use your new local copy of CLHS.</p>
+        <p>This thin ASDF wrapper was prepared by Jean-Philippe Paradis (<a href="mailto:hexstream@gmail.com">hexstream@gmail.com</a>) for inclusion in Quicklisp and is not endorsed by LispWorks Ltd. Common Lisp HyperSpec is a registered trademark of LispWorks Ltd. Jean-Philippe Paradis is not a lawyer, has not consulted a lawyer, and prepared this thin ASDF wrapper as a community service on a "good faith, best-effort" basis.</p>
 
-      <p>(Note that the default setup involves automatic creation and usage of a symlink that points to the 'HyperSpec' directory within the "real top-level" 'HyperSpec-7-0' directory. Don't redistribute the former without the latter!)</p>
+        <p>The <a href="ftp://ftp.lispworks.com/pub/software_tools/reference/HyperSpec-7-0.tar.gz">original download</a> was a <code>.tar.gz</code> file and has been uncompressed for your convenience. The primary use cases for downloading the HyperSpec to your hard drive instead of using <a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">the online documentation</a> are to benefit from the increased responsiveness inherent in browsing a local resource and to ensure reliable, fast access from anywhere while on the go (ex: laptop, smartphone).</p>
 
-      <p id="slime-lookup-commands">Slime has commands to quickly get at what you want in the HyperSpec.
-        They are:</p>
+      </section>
 
-      <dl>
-        <dt><dfn>slime-documentation-lookup</dfn> (C-c C-d h)</dt>
-        <dd>Lookup a symbol (such as "make-instance").</dd>
+      <section id="emacs-integration">
 
-        <dt><dfn>common-lisp-hyperspec-lookup-reader-macro</dfn> (C-c C-d #)</dt>
-        <dd>Lookup a reader-macro (such as "#'" or "(").</dd>
+        <h1 class="breadcrumbs">
+          <a href="#emacs-integration" class="anchor">⚓</a>
+          <a href="#">CLHS (thin ASDF wrapper)</a>
+          <span class="separator"> » </span>
+          <a class="here">Emacs integration</a>
+        </h1>
 
-        <dt><dfn>common-lisp-hyperspec-format</dfn> (C-c C-d ~)</dt>
-        <dd>Lookup a FORMAT directive (such as "~A").</dd>
-      </dl>
+        <p>Use <code class="common-lisp">(clhs:print-emacs-setup-form)</code> to print the command used to tell Emacs to use your new local copy of CLHS.</p>
+
+        <p>(Note that the default setup involves automatic creation and usage of a symlink that points to the 'HyperSpec' directory within the "real top-level" 'HyperSpec-7-0' directory. Don't redistribute the former without the latter!)</p>
+
+        <p id="slime-lookup-commands">Slime has commands to quickly get at what you want in the HyperSpec.
+          They are:</p>
+
+        <dl>
+          <dt><dfn>slime-documentation-lookup</dfn> (C-c C-d h)</dt>
+          <dd>Lookup a symbol (such as "make-instance").</dd>
+
+          <dt><dfn>common-lisp-hyperspec-lookup-reader-macro</dfn> (C-c C-d #)</dt>
+          <dd>Lookup a reader-macro (such as "#'" or "(").</dd>
+
+          <dt><dfn>common-lisp-hyperspec-format</dfn> (C-c C-d ~)</dt>
+          <dd>Lookup a FORMAT directive (such as "~A").</dd>
+        </dl>
 
 
-      <p>If the default browser used is not the one you wanted, here's how
-        you might tell Emacs to use Firefox instead:</p>
+        <p>If the default browser used is not the one you wanted, here's how
+          you might tell Emacs to use Firefox instead:</p>
 
-      <pre class="example"><code class="emacs-lisp">(setq browse-url-firefox-program "firefox")</code></pre>
+        <pre class="example"><code class="emacs-lisp">(setq browse-url-firefox-program "firefox")</code></pre>
 
-      <p>Or Google Chrome:</p>
+        <p>Or Google Chrome:</p>
 
-      <pre class="example"><code class="emacs-lisp">(setq browse-url-browser-function 'browse-url-generic)
+        <pre class="example"><code class="emacs-lisp">(setq browse-url-browser-function 'browse-url-generic)
 (setq browse-url-generic-program "google-chrome")</code></pre>
+
+      </section>
+
+
 
 
       <p><small>Common Lisp HyperSpec(tm) is a registered trademark of <a href="http://www.lispworks.com">LispWorks Ltd</a>.
-          <br>The author of this library is not affiliated with LispWorks Ltd.</small></p>
+          <br />The author of this library is not affiliated with LispWorks Ltd.</small></p>
 
     </main>
 
