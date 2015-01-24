@@ -14,6 +14,14 @@ th.name {
     text-align: center;
 }
 
+#contact-me p {
+    margin-bottom: 0;
+}
+
+#contact-me p + p {
+    margin-top: 0.25em;
+}
+
 #full-name, #nickname {
     margin-top: -0.5em;
 }
