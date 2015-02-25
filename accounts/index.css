@@ -10,7 +10,7 @@ th.name {
     margin-top: 0;
 }
 
-#full-name, #nickname, #introduction, #contact-me {
+#introduction, #contact-me {
     text-align: center;
 }
 
@@ -20,10 +20,6 @@ th.name {
 
 #contact-me p + p {
     margin-top: 0.25em;
-}
-
-#full-name, #nickname {
-    margin-top: -0.5em;
 }
 
 #custom-timelines {
