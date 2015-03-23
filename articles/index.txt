@@ -1,3 +1,2 @@
 notes-tips-standard-common-lisp-symbols/
 getting-started-with-the-clhs/
-how-to-website-hosting-with-nearlyfreespeech/
