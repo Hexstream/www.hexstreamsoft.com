@@ -1,3 +1,11 @@
+p {
+    text-align: center;
+}
+
+td p {
+    text-align: left;
+}
+
 td {
     padding: 0;
 }
@@ -10,16 +18,12 @@ th.name {
     margin-top: 0;
 }
 
-#introduction, #contact-me {
-    text-align: center;
-}
-
-#contact-me p {
+#email p {
     margin-bottom: 0;
 }
 
-#contact-me p + p {
-    margin-top: 0.25em;
+#email p + p {
+    margin-top: 0.1em;
 }
 
 #custom-timelines {
