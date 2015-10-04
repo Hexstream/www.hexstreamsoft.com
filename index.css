@@ -60,3 +60,7 @@ body {
     line-height: 1.8em;
     opacity: 0.6;
 }
+
+#best-viewed-in .multiline-parentheses {
+    padding: 0 0.8em;
+}
