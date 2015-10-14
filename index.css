@@ -1,31 +1,15 @@
-@import "http://global.hexstreamsoft.com/css/news.css";
-
-body {
-    overflow-x: hidden;
-}
-
 #page-header {
     margin-top: 1.65em;
-    margin-bottom: 2em;
 }
 
 #page-header h1 {
-    letter-spacing: 0.15em;
     font-size: 4em;
+    letter-spacing: 0.15em;
 }
 
 #page-header .description {
     font-size: x-large;
-    margin-top: -0.2em;
     letter-spacing: 0.05em;
-    word-spacing: 0.1em;
-    line-height: 1em;
-}
-
-#page-header .author-line {
-    font-size: large;
-    letter-spacing: 0.06em;
-    word-spacing: 0.12em;
     line-height: 1em;
 }
 
