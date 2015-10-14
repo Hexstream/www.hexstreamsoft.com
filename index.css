@@ -29,19 +29,13 @@ body {
     line-height: 1em;
 }
 
-.navlist .quick-links a.image {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 40%;
-    color: transparent;
-}
-
 #twitter-quick-link {
     background-image: url("images/twitter-logo.png");
 }
 
 #github-quick-link {
     background-image: url("images/github-logo.png");
+    background-size: 2.4em;
 }
 
 #unlicense {
