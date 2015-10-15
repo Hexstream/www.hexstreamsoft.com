@@ -2,24 +2,10 @@ main table .latest-date, main table .quicklisp-since {
     text-align: right;
 }
 
-
 main td a {
     text-decoration: none;
 }
 
-.alt {
-    opacity: 0.3;
-}
-
-.alt:hover {
-    opacity: 1;
-}
-
-a.alt {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    line-height: 1.4em;
-    margin-top: -0.7em;
-    font-size: x-small;
+.quick-note {
+    margin: -0.5em auto 1.5em;
 }
