@@ -1,40 +1,71 @@
-.project-name, .anchor {
-    font-weight: bold;
+section > h1 + .description {
+    display: table;
+    margin: -1.2em 0 0 2.2em;
+    padding: 0.2em;
+    padding-top: 0.25em;
+    opacity: 0.6;
 }
 
-table > tbody > tr > th {
-    border-top: solid medium gray;
+
+.library .summary {
+    display: flex;
+    flex-flow: column;
 }
 
-td {
-    padding-top: 1.5em;
+.library .summary > .main {
+    display: flex;
+    flex-flow: column;
+    flex: 1 0;
 }
 
-.ok {
-    color: green;
+.library .summary > .main > * {
+    flex: 1 0;
+    margin: 1em 0;
 }
 
-.minor-fail {
-    color: gray;
+.library .summary > .main > .examples {
+    border: thin solid lightgray;
 }
 
-.fail {
-    color: red;
+.library .summary > .extra {
+    flex: none;
 }
 
-.test-star {
-    text-decoration: none;
+.library .summary > .extra > .factsheet {
+    width: 20em;
 }
 
-.quickload {
-    white-space: pre;
+.factsheet td {
+    text-align: left;
 }
 
-.navboxes .navbox {
-    width: 13em;
+p code {
+    white-space: normal;
 }
 
-.navboxes .group.anonymous > .body {
-    padding-top: 0;
-    padding-bottom: 0;
+
+/* 11em site-nav + 3em left/right <main> margin + 25em .description + 25em .examples */
+@media (min-width: 64em) {
+
+    .library .summary > .main {
+        flex-flow: row;
+    }
+
+    .library .summary > .main > .examples {
+        margin-left: 1.5em;
+    }
+
+}
+
+/* 11em site-nav + 3em left/right <main> margin + 25em .description + 25em .examples + 20em .extra */
+@media (min-width: 84em) {
+
+    .library .summary {
+        flex-flow: row;
+    }
+
+    .library .summary > .extra {
+        margin-left: 1.5em;
+    }
+
 }

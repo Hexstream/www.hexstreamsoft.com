@@ -1,2 +1,0 @@
-incognito-keywords
-symbol-namespaces
