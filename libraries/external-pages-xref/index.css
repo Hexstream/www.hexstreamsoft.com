@@ -3,23 +3,6 @@
     margin-top: -1.2em;
 }
 
-#external-pages-xref-table {
-    font-size: larger;
-}
-
-#external-pages-xref-table tbody th, #external-pages-xref-table tbody td {
-    padding: 0;
-}
-
-#external-pages-xref-table tbody td {
+.navtable td {
     text-align: center;
-}
-
-#external-pages-xref-table tbody th a, #external-pages-xref-table tbody td a {
-    display: block;
-    padding: 0.4em 0.6em;
-}
-
-#external-pages-xref-table tbody th a:hover, #external-pages-xref-table tbody td a:hover {
-    background: #ECE0A5;
 }

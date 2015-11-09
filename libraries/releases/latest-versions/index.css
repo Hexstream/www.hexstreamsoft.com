@@ -1,11 +1,11 @@
-main table .latest-date, main table .quicklisp-since {
-    text-align: right;
-}
-
-main td a {
-    text-decoration: none;
-}
-
 .quick-note {
     margin: -0.5em auto 1.5em;
+}
+
+.navtable {
+    font-size: medium;
+}
+
+main table .latest-date, main table .quicklisp-since {
+    text-align: right;
 }
