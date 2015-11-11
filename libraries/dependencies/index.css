@@ -1,0 +1,37 @@
+#dependencies-table th, #dependencies-table td {
+    border: thin solid darkgray;
+}
+
+#dependencies-table .anchor {
+    border-color: transparent;
+}
+
+#dependencies-table thead th.colgroup-header {
+    text-align: center;
+}
+
+#dependencies-table thead th {
+    text-align: left;
+}
+
+#dependencies-table thead .library-name {
+    vertical-align: bottom;
+}
+
+#dependencies-table tbody .anchor {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    font-size: medium;
+}
+
+#dependencies-table tbody {
+    vertical-align: top;
+}
+
+#dependencies-table a {
+    text-decoration: none;
+}
+
+#dependencies-table a:hover, #dependencies-table a:focus {
+    text-decoration: underline;
+}

@@ -24,6 +24,22 @@
     margin: 0 0.5em 1em 1em;
 }
 
+#dependencies-table .details-link {
+    padding: 0;
+}
+
+#dependencies-table .details-link a {
+    display: block;
+    text-align: center;
+    opacity: 0.5;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+#dependencies-table .details-link a:hover, #dependencies-table .details-link a:focus {
+    opacity: 1;
+}
+
 #dependencies-table ul {
     margin: 0;
 }
