@@ -25,14 +25,6 @@
 
 
   <url>
-    <loc>http://www.hexstreamsoft.com/libraries/clhs/</loc>
-  </url>
-
-  <url>
-    <loc>http://www.hexstreamsoft.com/libraries/macro-level/</loc>
-  </url>
-
-  <url>
     <loc>http://www.hexstreamsoft.com/libraries/map-bind/</loc>
   </url>
 
@@ -45,6 +37,22 @@
   </url>
 
   <url>
+    <loc>http://www.hexstreamsoft.com/libraries/enhanced-eval-when/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/enhanced-multiple-value-bind/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/macro-level/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/cartesian-product-switch/</loc>
+  </url>
+
+  <url>
     <loc>http://www.hexstreamsoft.com/libraries/place-modifiers/</loc>
   </url>
 
@@ -53,15 +61,7 @@
   </url>
 
   <url>
-    <loc>http://www.hexstreamsoft.com/libraries/cartesian-product-switch/</loc>
-  </url>
-
-  <url>
-    <loc>http://www.hexstreamsoft.com/libraries/enhanced-multiple-value-bind/</loc>
-  </url>
-
-  <url>
-    <loc>http://www.hexstreamsoft.com/libraries/enhanced-eval-when/</loc>
+    <loc>http://www.hexstreamsoft.com/libraries/multiple-value-variants/</loc>
   </url>
 
   <url>
@@ -69,19 +69,19 @@
   </url>
 
   <url>
-    <loc>http://www.hexstreamsoft.com/libraries/incognito-keywords/</loc>
-  </url>
-
-  <url>
     <loc>http://www.hexstreamsoft.com/libraries/bubble-operator-upwards/</loc>
   </url>
 
   <url>
-    <loc>http://www.hexstreamsoft.com/libraries/multiple-value-variants/</loc>
+    <loc>http://www.hexstreamsoft.com/libraries/incognito-keywords/</loc>
   </url>
 
   <url>
     <loc>http://www.hexstreamsoft.com/libraries/symbol-namespaces/</loc>
+  </url>
+
+  <url>
+    <loc>http://www.hexstreamsoft.com/libraries/clhs/</loc>
   </url>
 
 
