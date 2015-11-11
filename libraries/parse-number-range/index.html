@@ -411,7 +411,7 @@
             <dt><pre>Function <dfn><code class="common-lisp library function operator">unparse</code></dfn> <var>from</var> <var>to</var> <var>limit-kind</var> <var>by</var> <var>direction</var> &amp;key <var>clause-kinds</var>
   =&gt; <var>range</var></pre></dt>
 
-            <dt>
+            <dd>
               <p>As you might have guessed, this does the reverse of <code class="common-lisp library function operator">parse</code>...</p>
 
               <p><code class="common-lisp library function operator">unparse</code> uses <code class="common-lisp library function operator">flags-to-keywords</code> internally and thus inherits its biases.</p>
@@ -423,7 +423,7 @@
               <p>If the list has 2 elements, then those clauses will appear in the order specified but no order is specified between the other elements and these ones and between the other elements among themselves. <small>(Yeah, a less simplistic implementation would allow simpler and more useful semantics.)</small></p>
 
               <p>If the list has 3 elements, then the order is completely specified, explicitly.</p>
-            </dt>
+            </dd>
 
             <dt><pre>Function <dfn><code class="common-lisp library function operator">canonicalize</code></dfn> <var>range</var> &amp;key (<var>clause-kinds</var> <code class="common-lisp library marker">:preserve</code>)
                                  (<var>keyword-policy</var> <code class="common-lisp library marker">:strict</code>)</pre></dt>
