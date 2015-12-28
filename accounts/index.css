@@ -6,6 +6,10 @@ td p {
     text-align: left;
 }
 
+table th.name {
+    text-align: center;
+}
+
 td {
     padding: 0;
 }
