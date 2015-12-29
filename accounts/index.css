@@ -10,6 +10,10 @@ table th.name {
     text-align: center;
 }
 
+table .link-cell {
+    min-width: 8em;
+}
+
 td {
     padding: 0;
 }
