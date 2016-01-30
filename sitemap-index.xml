@@ -3,21 +3,21 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <sitemap>
-    <loc>http://www.hexstreamsoft.com/sitemap.xml</loc>
+    <loc>https://www.hexstreamsoft.com/sitemap.xml</loc>
   </sitemap>
 
   <sitemap>
-    <loc>http://www.hexstreamsoft.com/libraries/sitemap.xml</loc>
+    <loc>https://www.hexstreamsoft.com/libraries/sitemap.xml</loc>
   </sitemap>
 
   <sitemap>
-    <loc>http://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/sitemap.xml</loc>
+    <loc>https://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/sitemap.xml</loc>
   </sitemap>
 
   <!-- One-page "Getting started with the Common Lisp HyperSpec" is in global sitemap. -->
 
   <sitemap>
-    <loc>http://www.hexstreamsoft.com/articles/common-lisp-format-reference/sitemap.xml</loc>
+    <loc>https://www.hexstreamsoft.com/articles/common-lisp-format-reference/sitemap.xml</loc>
   </sitemap>
 
 </sitemapindex>

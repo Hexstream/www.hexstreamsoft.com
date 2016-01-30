@@ -3,30 +3,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>http://www.hexstreamsoft.com/</loc>
+    <loc>https://www.hexstreamsoft.com/</loc>
   </url>
 
   <url>
-    <loc>http://www.hexstreamsoft.com/introduction.html</loc>
+    <loc>https://www.hexstreamsoft.com/introduction.html</loc>
   </url>
 
   <!-- Sitemap: libraries/sitemap.xml -->
 
   <url>
-    <loc>http://www.hexstreamsoft.com/articles/</loc>
+    <loc>https://www.hexstreamsoft.com/articles/</loc>
   </url>
 
   <!-- Usually one sitemap index per article but this one is a single page. -->
   <url>
-    <loc>http://www.hexstreamsoft.com/articles/getting-started-with-the-clhs/</loc>
+    <loc>https://www.hexstreamsoft.com/articles/getting-started-with-the-clhs/</loc>
   </url>
 
   <url>
-    <loc>http://www.hexstreamsoft.com/accounts/</loc>
+    <loc>https://www.hexstreamsoft.com/accounts/</loc>
   </url>
 
   <url>
-    <loc>http://www.hexstreamsoft.com/resources/</loc>
+    <loc>https://www.hexstreamsoft.com/resources/</loc>
   </url>
 
 </urlset>
