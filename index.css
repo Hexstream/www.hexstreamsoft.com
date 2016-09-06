@@ -42,14 +42,3 @@
 #best-viewed-in .multiline-parentheses {
     padding: 0 0.8em;
 }
-
-#feel-the-bern {
-    display: table;
-    margin: 2.5em auto;
-    text-align: center;
-    outline: none;
-}
-
-#feel-the-bern p {
-    margin: 0.5em 0;
-}
