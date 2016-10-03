@@ -1,3 +1,8 @@
+main {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 #page-header h1 {
     font-size: 4em;
     letter-spacing: 0.15em;
