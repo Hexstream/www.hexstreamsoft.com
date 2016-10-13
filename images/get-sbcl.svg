@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.1"
+     viewBox="0 0 2 2">
+
+  <title>(get 'SBCL)</title>
+
+  <rect id="top-left-square"
+        x="0" y="0" width="0.98" height="0.98"
+        fill="#00E000" stroke="none"/>
+  <rect id="top-right-square"
+        x="1.02" y="0" width="0.98" height="0.98"
+        fill="#DDDD22" stroke="none"/>
+  <rect id="bottom-left-square"
+        x="0" y="1.02" width="0.98" height="0.98"
+        fill="#555555" stroke="none"/>
+  <rect id="bottom-right-square"
+        x="1.02" y="1.02" width="0.98" height="0.98"
+        fill="#AA0000" stroke="none"/>
+
+</svg>
