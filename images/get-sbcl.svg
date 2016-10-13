@@ -3,21 +3,40 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
      version="1.1"
-     viewBox="0 0 2 2">
+     viewBox="0 0 2 2"
+     width="100" height="100">
 
   <title>(get 'SBCL)</title>
 
-  <rect id="top-left-square"
-        x="0" y="0" width="0.98" height="0.98"
-        fill="#00E000" stroke="none"/>
-  <rect id="top-right-square"
-        x="1.02" y="0" width="0.98" height="0.98"
-        fill="#DDDD22" stroke="none"/>
-  <rect id="bottom-left-square"
-        x="0" y="1.02" width="0.98" height="0.98"
-        fill="#555555" stroke="none"/>
-  <rect id="bottom-right-square"
-        x="1.02" y="1.02" width="0.98" height="0.98"
-        fill="#AA0000" stroke="none"/>
+  <defs>
+    <rect id="square"
+          width="0.96" height="0.96"
+          stroke="none"/>
+  </defs>
+
+  <rect id="background"
+        x="0" y="0" width="2" height="2"
+        fill="#FFFFFF" stroke="none"/>
+
+  <use xlink:href="#square"
+       id="top-left-square"
+       x="0" y="0"
+       transform="translate(0, 0)"
+       fill="#00E000"/>
+  <use xlink:href="#square"
+       id="top-right-square"
+       x="1" y="0"
+       transform="translate(0.04, 0)"
+       fill="#DDDD22"/>
+  <use xlink:href="#square"
+       id="bottom-left-square"
+       x="0" y="1"
+       transform="translate(0, 0.04)"
+       fill="#555555"/>
+  <use xlink:href="#square"
+       id="bottom-right-square"
+       x="1" y="1"
+       transform="translate(0.04, 0.04)"
+       fill="#AA0000"/>
 
 </svg>
