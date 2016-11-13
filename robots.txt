@@ -3,4 +3,3 @@ Sitemap: http://www.hexstreamsoft.com/sitemap-index.xml
 User-agent: *
 Disallow: /tmp/
 Disallow: /error-pages/
-Disallow: /scripts/
