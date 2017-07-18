@@ -27,9 +27,62 @@ main {
     background-size: 2.4em;
 }
 
-#unlicense {
-    margin-bottom: -1.5em;
+#prominent {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 1em 0 0;
+}
+
+#prominent .notice {
+    height: 5em;
+
     border-color: transparent;
+    margin: 0 0 1em;
+}
+
+#prominent .notice:before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 5em;
+    height: 5em;
+    background-size: contain;
+    margin-right: 0.5em;
+    opacity: 0.75;
+}
+
+#prominent .notice p {
+    width: 25em;
+}
+
+#prominent .notice strong {
+    font-size: larger;
+}
+
+#unlicense:before {
+    background-image: url("https://global.hexstreamsoft.com/images/logos/public-domain.svg");
+}
+
+#join-my-favorite-common-lisp-discord-server {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min-content;
+    width: initial;
+    justify-content: center;
+    white-space: nowrap;
+    color: #7289DA;
+    text-decoration: none;
+}
+
+#join-my-favorite-common-lisp-discord-server:before {
+    background-image: url("https://global.hexstreamsoft.com/images/logos/discord.svg");
+}
+
+
+#join-my-favorite-common-lisp-discord-server > div {
+    flex: none;
 }
 
 
