@@ -64,27 +64,6 @@ main {
     background-image: url("https://global.hexstreamsoft.com/images/logos/public-domain.svg");
 }
 
-#join-my-favorite-common-lisp-discord-server {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: min-content;
-    width: initial;
-    justify-content: center;
-    white-space: nowrap;
-    color: #7289DA;
-    text-decoration: none;
-}
-
-#join-my-favorite-common-lisp-discord-server:before {
-    background-image: url("https://global.hexstreamsoft.com/images/logos/discord.svg");
-}
-
-
-#join-my-favorite-common-lisp-discord-server > div {
-    flex: none;
-}
-
 
 #best-viewed-in {
     border-top: dashed medium #DDDDDD;
