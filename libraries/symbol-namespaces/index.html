@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
@@ -8,28 +9,26 @@
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <link rel="prev" href="../incognito-keywords/" />
     <meta name="description" content="Defines a new kind of package that's named by a symbol rather than a string and that maps from existing symbols to their respective &quot;implicitly managed&quot; counterparts." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>symbol-namespaces | Libraries | HexstreamSoft</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../libraries.css" rel="stylesheet" type="text/css" />
     <script src="https://global.hexstreamsoft.com/scripts/global.js"></script>
     <script src="../../scripts/global.js"></script>
   </head>
+
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="../../">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="../">Libraries</a>
-          <span class="separator"> » </span>
-          <a href="../#data-structures">Data structures</a>
-          <span class="separator"> » </span>
-          <a class="here">symbol-namespaces</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="../">Libraries</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../#data-structures">Data structures</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">symbol-namespaces</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/libraries/symbol-namespaces/">
@@ -47,119 +46,31 @@
           <a class="sequential-link prev" href="../incognito-keywords/">←</a>
           <a href="../">
             Libraries
-            <span>13/15   2/2</span>
+            <span>13/15</span>
           </a>
           <a class="sequential-link next" href="../clhs/">⇥</a>
         </nav>
 
-        <nav>
-          <a class="sequential-link prev" href="../bubble-operator-upwards/">←</a>
-          <a href="../">
-            Categories
-            <span>4/5</span>
-          </a>
-          <a class="sequential-link next" href="../clhs/">→</a>
-        </nav>
+      </div>
 
-        <div class="float-clear"></div>
+    </nav>
 
-      </nav>
+    <nav class="ancestors-nav">
 
-
-
-      <nav class="ancestors-nav">
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="library_navbox">
-          <h1>
-            <a class="here">symbol-namespaces</a>
-            <span class="here-indicator-left"> </span>
-            <span class="here-indicator-right"> </span>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
-            <li><a href="#packages">Packages</a></li>
-            <li><a href="#api-overview">API overview</a></li>
-            <li>
-              <a href="#api-details" class="inlining-node">API details</a>
-              <span class="item-count">(<span>15</span>)</span>
-              <ul class="inlined-nodes">
-                <li><a href="#define"><code class="common-lisp library macro operator">define</code></a></li>
-                <li><a href="#ensure"><code class="common-lisp library function operator">ensure</code></a></li>
-                <li><a href="#locate"><code class="common-lisp library function operator">locate</code></a></li>
-                <li><a href="#name"><code class="common-lisp library function operator">name</code></a></li>
-                <li><a href="#name-mixin"><code class="common-lisp library class">name-mixin</code></a></li>
-                <li><a href="#namespace"><code class="common-lisp library class">namespace</code></a></li>
-                <li><a href="#intern-symbol"><code class="common-lisp library function operator">intern-symbol</code></a></li>
-                <li><a href="#find-symbol"><code class="common-lisp library function operator">find-symbol</code></a></li>
-                <li><a href="#packages-class"><code class="common-lisp library class">packages</code></a></li>
-                <li><a href="#intern-package"><code class="common-lisp library function operator">intern-package</code></a></li>
-                <li><a href="#find-package"><code class="common-lisp library function operator">find-package</code></a></li>
-                <li><a href="#make-package-name"><code class="common-lisp library function operator">make-package-name</code></a></li>
-                <li><a href="#packages-identity-mixin"><code class="common-lisp library class">packages-identity-mixin</code></a></li>
-                <li><a href="#packages-name-mixin"><code class="common-lisp library class">packages-name-mixin</code></a></li>
-                <li><a href="#standard-namespace"><code class="common-lisp library class">standard-namespace</code></a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1><a href="../#data-structures">Data structures</a></h1>
-          <ul>
-            <li><a href="../incognito-keywords/">incognito-keywords</a></li>
-            <li>
-              <a class="here">
-                symbol-namespaces
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"></span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1 class="box-header">
-            <a href="../">Libraries</a>
-          </h1>
-          <ul>
-            <li><a href="../#macros">Macros</a></li>
-            <li>
-              <a href="../#data-structures">
-                Data structures
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"></span>
-              </a>
-            </li>
-            <li><a href="../#uncategorized">Uncategorized</a></li>
-          </ul>
-          <ul>
-            <li><a href="../releases/">Releases</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1>
-            <a href="../../">HexstreamSoft</a>
-          </h1>
-          <ul>
-            <li><a href="../">Libraries <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
-            <li><a href="../../articles/">Articles</a></li>
-            <li><a href="../../accounts/">Accounts</a></li>
-            <li><a href="../../resources/">Resources</a></li>
+            <li><a href="https://www.hexstreamsoft.com/libraries/" class="ancestor">Libraries</a></li>
+            <li><a href="https://www.hexstreamsoft.com/articles/">Articles</a></li>
+            <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
+            <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
           <ul>
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
@@ -171,128 +82,146 @@
         <p class="description">A simple data structure in Quicklisp.</p>
       </header>
 
+      <nav class="tabs">
+        <ul>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#api-overview">API overview</a></li>
+          <li><a href="#api-details">API details</a></li>
+        </ul>
+      </nav>
+
       <div id="project-info">
-        <table class="factsheet">
-          <tbody>
-            <tr>
-              <th class="project-author property">Project author</th>
-              <td class="project-author" colspan="2"><a href="../../introduction.html">Jean-Philippe Paradis</a></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-type property">Project type</th>
-              <td class="project-type" colspan="2">Library</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="library-programming-language property">Programming language</th>
-              <td class="library-programming-language" colspan="2">Common Lisp</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-status property">Status</th>
-              <td class="project-status good-news" colspan="2">Ready-to-use</td>
-            </tr>
-            <tr>
-              <th class="project-license property"><a href="https://github.com/Hexstream/symbol-namespaces/blob/master/UNLICENSE">License</a></th>
-              <td class="project-license good-news" colspan="2"><a href="../../resources/#unlicense">Public Domain</a></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="library-type property">Library type</th>
-              <td class="library-type" colspan="2">Data structure</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-complexity property">Project complexity</th>
-              <td class="project-complexity" colspan="2">Simple</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-latest-release" rowspan="2"><a href="https://tarballs.hexstreamsoft.com/libraries/latest/symbol-namespaces_latest.tar.gz">Latest release</a></th>
-              <th class="project-latest-release-version property">Version</th>
-              <td class="project-latest-release-version">1.0</td>
-            </tr>
-            <tr>
-              <th class="project-latest-release-date property">Date</th>
-              <td class="project-latest-release-date">9 dec 2012</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-quicklisp" rowspan="2">
-                Quicklisp
-                <br />
-                <span class="as-of-dist">(<a href="http://blog.quicklisp.org/2012/12/december-2012-quicklisp-dist-update-now.html">Dec 2012 dist</a> and later)</span>
-              </th>
-              <th class="project-quicklisp-status property">Status</th>
-              <td class="project-quicklisp-status good-news">Available</td>
-            </tr>
-            <tr>
-              <th class="project-quicklisp-version property">Version</th>
-              <td class="project-quicklisp-version good-news">Latest</td>
-            </tr>
-          </tbody>
 
-        </table>
+        <div class="scroll" id="factsheet-wrapper">
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="project-author property">Project author</th>
+                <td class="project-author" colspan="2"><a href="../../introduction.html">Jean-Philippe Paradis</a></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-type property">Project type</th>
+                <td class="project-type" colspan="2">Library</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="library-programming-language property">Programming language</th>
+                <td class="library-programming-language" colspan="2">Common Lisp</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-status property">Status</th>
+                <td class="project-status good-news" colspan="2">Ready-to-use</td>
+              </tr>
+              <tr>
+                <th class="project-license property"><a href="https://github.com/Hexstream/symbol-namespaces/blob/master/UNLICENSE">License</a></th>
+                <td class="project-license good-news" colspan="2"><a href="../../resources/#unlicense">Public Domain</a></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Data structure</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Simple</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-latest-release" rowspan="2"><a href="https://tarballs.hexstreamsoft.com/libraries/latest/symbol-namespaces_latest.tar.gz">Latest release</a></th>
+                <th class="project-latest-release-version property">Version</th>
+                <td class="project-latest-release-version">1.0</td>
+              </tr>
+              <tr>
+                <th class="project-latest-release-date property">Date</th>
+                <td class="project-latest-release-date">9 dec 2012</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-quicklisp" rowspan="2">
+                  Quicklisp
+                  <br />
+                  <span class="as-of-dist">(<a href="http://blog.quicklisp.org/2012/12/december-2012-quicklisp-dist-update-now.html">Dec 2012 dist</a> and later)</span>
+                </th>
+                <th class="project-quicklisp-status property">Status</th>
+                <td class="project-quicklisp-status good-news">Available</td>
+              </tr>
+              <tr>
+                <th class="project-quicklisp-version property">Version</th>
+                <td class="project-quicklisp-version good-news">Latest</td>
+              </tr>
+            </tbody>
 
-        <nav class="navbox" id="external-projects_navbox">
-          <h1>
-            <a href="../external-pages-xref/">External library pages</a>
-          </h1>
-          <ul>
-            <li><a href="http://github.com/Hexstream/symbol-namespaces">Github</a></li>
-            <li><a href="http://quickdocs.org/symbol-namespaces">Quickdocs</a></li>
-            <li><a href="http://cliki.net/symbol-namespaces">CLiki</a></li>
-            <li><a href="http://common-lisp.net/project/cl-test-grid/library/symbol-namespaces.html">cl-test-grid</a></li>
-          </ul>
-        </nav>
+          </table>
+        </div>
 
-        <table id="dependencies-table">
-          <thead>
-            <tr>
-              <th class="details-link chomp top left"><a href="../dependencies/">⬉</a></th>
-              <th>Depends on</th>
-              <th>Depended on by</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Directly</th>
-              <td>
-                <ul>
-                  <li><a href="../map-bind/">map-bind</a></li>
-                </ul>
-              </td>
-              <td>Nothing</td>
-            </tr>
-            <tr>
-              <th>Indirectly</th>
-              <td>Nothing</td>
-              <td>Nothing</td>
-            </tr>
-          </tbody>
-        </table>
+        <div id="external-links-and-dependencies-table">
+          <nav class="tabs contains-title" id="external-links">
+            <h1>
+              <a href="../external-pages-xref/">External library pages</a>
+            </h1>
+            <ul>
+              <li><a href="http://github.com/Hexstream/symbol-namespaces">Github</a></li>
+              <li><a href="http://quickdocs.org/symbol-namespaces">Quickdocs</a></li>
+              <li><a href="http://cliki.net/symbol-namespaces">CLiki</a></li>
+              <li><a href="http://common-lisp.net/project/cl-test-grid/library/symbol-namespaces.html">cl-test-grid</a></li>
+            </ul>
+          </nav>
+
+          <table id="dependencies-table">
+            <thead>
+              <tr>
+                <th class="details-link chomp top left"><a href="../dependencies/">⬉</a></th>
+                <th>Depends on</th>
+                <th>Depended on by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Directly</th>
+                <td>
+                  <ul>
+                    <li><a href="../map-bind/">map-bind</a></li>
+                  </ul>
+                </td>
+                <td>Nothing</td>
+              </tr>
+              <tr>
+                <th>Indirectly</th>
+                <td>Nothing</td>
+                <td>Nothing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <section id="introduction">
+
+          <p><cite class="common-lisp library">symbol-namespaces</cite> defines a new kind of package that's named by a symbol rather than a string and that maps from existing symbols to their respective "implicitly managed" counterparts. The motivating use-case is to conceptually allow multiple definitions of the same kind on a single symbol, without conflicts.</p>
+
+        </section>
 
       </div>
 
-      <p><cite class="common-lisp library">symbol-namespaces</cite> defines a new kind of package that's named by a symbol rather than a string and that maps from existing symbols to their respective "implicitly managed" counterparts. The motivating use-case is to conceptually allow multiple definitions of the same kind on a single symbol, without conflicts.</p>
-
       <section id="packages">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#packages" class="anchor">⚓</a>
           </span>
-          <a href="#">symbol-namespaces</a>
-          <span class="separator"> » </span>
-          <a class="here">Packages</a>
+          <div class="breadcrumbs">
+            <a href="#">symbol-namespaces</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Packages</a></span>
+          </div>
         </h1>
 
         <p><cite class="common-lisp library">symbol-namespaces</cite> exports a single package called <code class="common-lisp library package">symbol-namespaces</code>, also nicknamed <code class="common-lisp library package">symspaces</code> and <code class="common-lisp library package">symspace</code>. This package is designed for explicit qualification of symbols, such as <code class="common-lisp">symspace:namespace</code>. Don't <code class="common-lisp">(:use)</code>!</p>
@@ -303,13 +232,14 @@
 
       <section id="api-overview">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#api-overview" class="anchor">⚓</a>
           </span>
-          <a href="#">symbol-namespaces</a>
-          <span class="separator"> » </span>
-          <a class="here">API overview</a>
+          <div class="breadcrumbs">
+            <a href="#">symbol-namespaces</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">API overview</a></span>
+          </div>
         </h1>
 
         <p>The only strict guarantee obeyed by all namespace classes is that they inherit from <code class="common-lisp library class">symspace:namespace</code> and implement <code class="common-lisp library function operator">symspace:find-symbol</code> and <code class="common-lisp library function operator">symspace:intern-symbol</code>.</p>
@@ -335,14 +265,35 @@
 
       <section id="api-details">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#api-details" class="anchor">⚓</a>
           </span>
-          <a href="#">symbol-namespaces</a>
-          <span class="separator"> » </span>
-          <a class="here">API details</a>
+          <div class="breadcrumbs">
+            <a href="#">symbol-namespaces</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">API details</a></span>
+          </div>
         </h1>
+
+        <nav class="tabs">
+          <ul>
+            <li><a href="#define"><code class="common-lisp library macro operator">define</code></a></li>
+            <li><a href="#ensure"><code class="common-lisp library function operator">ensure</code></a></li>
+            <li><a href="#locate"><code class="common-lisp library function operator">locate</code></a></li>
+            <li><a href="#name"><code class="common-lisp library function operator">name</code></a></li>
+            <li><a href="#name-mixin"><code class="common-lisp library class">name-mixin</code></a></li>
+            <li><a href="#namespace"><code class="common-lisp library class">namespace</code></a></li>
+            <li><a href="#intern-symbol"><code class="common-lisp library function operator">intern-symbol</code></a></li>
+            <li><a href="#find-symbol"><code class="common-lisp library function operator">find-symbol</code></a></li>
+            <li><a href="#packages-class"><code class="common-lisp library class">packages</code></a></li>
+            <li><a href="#intern-package"><code class="common-lisp library function operator">intern-package</code></a></li>
+            <li><a href="#find-package"><code class="common-lisp library function operator">find-package</code></a></li>
+            <li><a href="#make-package-name"><code class="common-lisp library function operator">make-package-name</code></a></li>
+            <li><a href="#packages-identity-mixin"><code class="common-lisp library class">packages-identity-mixin</code></a></li>
+            <li><a href="#packages-name-mixin"><code class="common-lisp library class">packages-name-mixin</code></a></li>
+            <li><a href="#standard-namespace"><code class="common-lisp library class">standard-namespace</code></a></li>
+          </ul>
+        </nav>
 
         <dl>
 
@@ -446,11 +397,17 @@
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fsymbol-namespaces%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fsymbol-namespaces%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fsymbol-namespaces%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fsymbol-namespaces%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

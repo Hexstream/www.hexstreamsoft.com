@@ -2,26 +2,70 @@
 @import "https://global.hexstreamsoft.com/css/cl.css";
 
 #project-info {
-    position: relative;
-    margin: 2em 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 2em 0 0 0;
 }
 
-#project-info .factsheet {
-    position: relative;
-    z-index: 2;
+#project-info #factsheet-wrapper {
+    flex: none;
+    margin-left: 1em;
+    margin-right: 0;
 }
 
-#external-projects_navbox {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
+#project-info #external-links-and-dependencies-table {
+    flex: 1 0 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    min-width: max-content;
+    margin-left: 0.5em;
+}
+
+#project-info #external-links-and-dependencies-table .tabs {
+    flex-flow: column;
+    align-items: center;
+}
+
+#project-info #introduction {
+    flex: 1 1 0;
+    order: -1;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 20em;
+}
+
+@media (max-width: 50em) {
+    #project-info #factsheet-wrapper {
+        margin-left: 1em;
+    }
+
+    #project-info #introduction {
+        order: initial;
+    }
+
+    #project-info #external-links-and-dependencies-table {
+        flex: none;
+    }
+}
+
+@media (max-width: 34em) {
+    #project-info #factsheet-wrapper {
+        flex: 0 1 auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #project-info #external-links-and-dependencies-table {
+        min-width: initial;
+        flex: 0 1 auto;
+    }
 }
 
 
 #dependencies-table {
     font-size: smaller;
-    float: right;
     margin: 0 0.5em 1em 1em;
 }
 
@@ -54,4 +98,15 @@
 #dependencies-table li {
     margin: 0;
     padding: 0.175em 0em;
+}
+
+#documentation {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#documentation > :first-child {
+    margin-top: 0;
 }

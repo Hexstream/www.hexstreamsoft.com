@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
     <link rel="author" href="https://www.hexstreamsoft.com/introduction.html" />
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <meta name="description" content="I should really get the articles party going." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Programming articles by Jean-Philippe Paradis (mostly about Common Lisp)</title>
     <link href="../css/global.css" rel="stylesheet" type="text/css" />
     <script src="https://global.hexstreamsoft.com/scripts/global.js"></script>
     <script src="../scripts/global.js"></script>
   </head>
+
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="../">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a class="here">Articles</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a class="here">Articles</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/articles/">
@@ -37,99 +38,85 @@
           </a>
         </nav>
 
-        <div class="float-clear"></div>
+      </div>
 
-      </nav>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-07-29">29 july 2015</time><span>.</span></p>
 
-      <nav class="ancestors-nav">
+    </nav>
 
-        <div class="level-separator"></div>
+    <nav class="ancestors-nav">
 
-        <nav class="navbox" id="articles_navbox">
-          <h1>
-            <a class="here">Articles <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
-            <li><a href="notes-tips-standard-common-lisp-symbols/"><abbr title="Common Lisp">CL</abbr> symbols</a></li>
-            <li><a href="getting-started-with-the-clhs/">CLHS FAQ</a></li>
-            <li><a href="common-lisp-format-reference/">FORMAT reference</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1>
-            <a href="../">HexstreamSoft</a>
-          </h1>
-          <ul>
-            <li><a href="../libraries/">Libraries</a></li>
-            <li>
-              <a class="here">
-                Articles
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li><a href="../accounts/">Accounts</a></li>
-            <li><a href="../resources/">Resources</a></li>
+            <li><a href="https://www.hexstreamsoft.com/libraries/">Libraries</a></li>
+            <li><a class="here">Articles</a></li>
+            <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
+            <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
           <ul>
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-07-29">29 july 2015</time><span>.</span></p>
-
     <main>
+
       <header id="page-header">
         <h1>Programming articles</h1>
         <p class="description">Mostly about Common Lisp.</p>
       </header>
 
-      <nav class="navlist-group">
+      <div class="fit-content">
 
-        <nav class="navlist">
+        <nav class="navlists column">
 
-          <section>
-            <a href="notes-tips-standard-common-lisp-symbols/">
-              <h1>Notes and tips: Standard Common Lisp symbols</h1>
-              <p>Informal yet helpful information on the standard symbols and their bindings.</p>
-            </a>
-          </section>
+          <nav class="navlist column">
 
-          <section>
-            <a href="getting-started-with-the-clhs/">
-              <h1>Getting started with the Common Lisp HyperSpec</h1>
-              <p>Learn about the <em>definitive</em> Common Lisp reference and how to use it more effectively.</p>
-            </a>
-          </section>
+            <section>
+              <a href="notes-tips-standard-common-lisp-symbols/">
+                <h1>Notes and tips: Standard Common Lisp symbols</h1>
+                <p>Informal yet helpful information on the standard symbols and their bindings.</p>
+              </a>
+            </section>
 
-          <section>
-            <a href="common-lisp-format-reference/">
-              <h1>Common Lisp FORMAT reference</h1>
-            </a>
-          </section>
+            <section>
+              <a href="getting-started-with-the-clhs/">
+                <h1>Getting started with the Common Lisp HyperSpec</h1>
+                <p>Learn about the <em>definitive</em> Common Lisp reference and how to use it more effectively.</p>
+              </a>
+            </section>
+
+            <section>
+              <a href="common-lisp-format-reference/">
+                <h1>Common Lisp FORMAT reference</h1>
+              </a>
+            </section>
+
+          </nav>
 
         </nav>
 
-      </nav>
-
-
+      </div>
 
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

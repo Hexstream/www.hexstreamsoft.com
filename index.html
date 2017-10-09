@@ -8,6 +8,7 @@
     <link rel="author" href="https://www.hexstreamsoft.com/introduction.html" />
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <meta name="description" content="By Jean-Philippe Paradis (Hexstream). I have 7 intensive years of Common Lisp experience and 15 libraries in Quicklisp, with many more to come!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>HexstreamSoft: Public Domain Common Lisp R&amp;D</title>
     <link href="css/global.css" rel="stylesheet" type="text/css" />
     <link href="https://global.hexstreamsoft.com/css/homepage.css" rel="stylesheet" type="text/css" />
@@ -18,14 +19,13 @@
 
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="https://abc.hexstream.xyz/">Hexstream</a>
-          <div class="float-clear"></div>
-        </nav>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/">
@@ -39,108 +39,105 @@
           </a>
         </nav>
 
-        <div class="float-clear"></div>
+      </div>
 
-      </nav>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2017-08-18">18 august 2017</time><span>.</span></p>
 
     </nav>
-
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2017-08-18">18 august 2017</time><span>.</span></p>
 
     <main>
 
       <header id="page-header">
         <h1>HexstreamSoft</h1>
-        <p class="description">Public Domain Common Lisp R&amp;D</p>
-        <p class="additional-info">by Jean-Philippe Paradis (Hexstream)</p>
+        <p class="description">Public Domain Common&nbsp;Lisp R&amp;D</p>
+        <p class="additional-info">by <span class="nowrap">Jean-Philippe Paradis</span> (Hexstream)</p>
       </header>
 
-      <nav class="navlist-group">
+      <div class="fit-content contains-navlists">
 
-        <nav class="navlist">
+        <nav class="navlists column">
 
-          <section>
-            <a href="introduction.html">
-              <h1>Introduction</h1>
-              <p>Hello! I have 7 intensive years of Common Lisp experience.</p>
-            </a>
-          </section>
+          <nav class="navlist column">
 
-        </nav>
+            <section>
+              <a href="introduction.html">
+                <h1>Introduction</h1>
+                <p>Hello! I have 7 intensive years of Common Lisp experience.</p>
+              </a>
+            </section>
 
-        <nav class="navlist">
+          </nav>
 
-          <section>
-            <a href="libraries/">
-              <h1>Common Lisp libraries</h1>
-              <p>15 ready-to-use libraries in Quicklisp, with many more to come!</p>
-            </a>
-          </section>
+          <nav class="navlist column">
 
-          <section>
-            <a href="articles/">
-              <h1>Programming articles</h1>
-              <p>Mostly about Common Lisp.</p>
-            </a>
-            <div class="quick-links">
-              <div>
-                <a href="articles/notes-tips-standard-common-lisp-symbols/">CL tips</a><a href="articles/common-lisp-format-reference/clhs-summary/#subsections-summary-table">cl:format</a>
-              </div>
-            </div>
-          </section>
+            <section>
+              <a href="libraries/">
+                <h1>Common Lisp libraries</h1>
+                <p>15 ready-to-use libraries in Quicklisp, with many more to come!</p>
+              </a>
+            </section>
 
-          <section>
-            <a href="accounts/">
-              <h1>My accounts</h1>
-              <p>My programming-related accounts on third-party websites.</p>
-            </a>
-            <div class="quick-links">
-              <div>
-                <a href="http://twitter.com/HexstreamSoft" class="image" id="twitter-quick-link">Twitter</a><a href="https://github.com/Hexstream" class="image" id="github-quick-link">Github</a>
-              </div>
-            </div>
-          </section>
+            <section class="contains-extras">
+              <a href="articles/">
+                <h1>Programming articles</h1>
+                <p>Mostly about Common Lisp.</p>
+              </a>
+              <ul class="extras">
+                <li><a href="articles/notes-tips-standard-common-lisp-symbols/"><span>CL tips</span></a></li>
+                <li><a href="articles/common-lisp-format-reference/clhs-summary/#subsections-summary-table"><span>Epic FORMAT table!</span></a></li>
+              </ul>
+            </section>
 
-          <section>
-            <a href="resources/">
-              <h1>Programming resources</h1>
-              <p>Helpful links and recommendations.</p>
-            </a>
-            <div class="quick-links">
-              <div>
-                <a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">CLHS</a><a href="http://www.w3.org/TR/html5/">HTML5</a>
-              </div>
-            </div>
-          </section>
+            <section class="contains-extras">
+              <a href="accounts/">
+                <h1>My accounts</h1>
+                <p>My programming-related accounts on third-party websites.</p>
+              </a>
+              <ul class="extras">
+                <li><a href="http://twitter.com/HexstreamSoft" class="image" id="twitter-quick-link"><span>Twitter</span></a></li>
+                <li><a href="https://github.com/Hexstream" class="image" id="github-quick-link"><span>GitHub</span></a></li>
+                <li><a href="accounts/#discord" class="image" id="discord-quick-link"><span>Discord</span></a></li>
+              </ul>
+            </section>
 
-        </nav>
+            <section class="contains-extras">
+              <a href="resources/">
+                <h1>Programming resources</h1>
+                <p>Helpful links and recommendations.</p>
+              </a>
+              <ul class="extras">
+                <li><a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm"><span>CLHS</span></a></li>
+                <li><a href="http://www.w3.org/TR/html5/"><span>HTML5</span></a></li>
+              </ul>
+            </section>
 
-        <nav class="navlist">
+          </nav>
 
-          <section>
-            <a href="https://worknotes.hexstreamsoft.com/">
-              <h1>Worknotes</h1>
-              <p>With 50+ work-in-progress projects, I can't hold all the state in my head anymore.
-                <br />Spy on me as I work if you want!</p>
-            </a>
-          </section>
+          <nav class="navlist column">
 
-          <section>
-            <a href="https://status-quo.hexstreamsoft.com/">
-              <h1>Status quo</h1>
-              <p>I'm documenting what tools I'm using and how, primarily for my own purposes.
-                <br />You're welcome to have a look!</p>
-            </a>
-            <div class="status-indicators">
-              <div>
-                <span class="incomplete">⚠ Incomplete</span>
-              </div>
-            </div>
-          </section>
+            <section>
+              <a href="https://worknotes.hexstreamsoft.com/">
+                <h1>Worknotes</h1>
+                <p>With 50+ work-in-progress projects, I can't hold all the state in my head anymore.
+                  <br />Spy on me as I work if you want!</p>
+              </a>
+            </section>
+
+            <section>
+              <a href="https://status-quo.hexstreamsoft.com/">
+                <h1>Status quo</h1>
+                <p>I'm documenting what tools I'm using and how, primarily for my own purposes.
+                  <br />You're welcome to have a look!</p>
+              </a>
+              <p class="status-indicator incomplete"><span>⚠ Incomplete</span></p>
+            </section>
+
+          </nav>
 
         </nav>
 
-      </nav>
+      </div>
+
 
       <section id="prominent">
 
@@ -185,18 +182,28 @@
 
     </main>
 
-    <footer id="best-viewed-in">
-      <p>This website is best viewed in any modern standards-compliant browser.<br />I nonetheless recommend <a href="https://www.google.com/chrome/browser/desktop/index.html">Google Chrome</a>.<br /><span class="multiline-parentheses"><small><span class="multiline-parenthese">(</span>Firefox has an endless stream of transient rendering bugs I don't care to work around.</small><br /><small>I have no idea what my website even looks like in <abbr title="Internet Explorer">IE</abbr> and I don't care, at least for now.<span class="multiline-parenthese">)</span></small></span></p>
-      <p>Sorry, absolutely no attempt has been made to optimize for mobile devices as of yet.</p>
-    </footer>
+    <div id="footers">
 
-    <footer id="footer">
-      <div>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2F"><span class="checkmark">✔</span> CSS3</a></span>
-      </div>
-    </footer>
+      <footer id="best-viewed-in">
+        <p>This website is best viewed in any modern standards-compliant browser.<br />I nonetheless recommend <a href="https://www.google.com/chrome/">Google Chrome</a>.</p>
+      </footer>
+
+      <footer id="footer">
+        <div class="back-to-top left">
+          <a href="#">⬆</a>
+        </div>
+        <div class="main">
+          <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2F">✔ HTML5</a>
+          <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+          <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2F">✔ CSS3</a>
+          <a>✔ Mobile-friendly</a>
+        </div>
+        <div class="back-to-top right">
+          <a href="#">⬆</a>
+        </div>
+      </footer>
+
+    </div>
 
   </body>
 

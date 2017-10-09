@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
@@ -8,28 +9,26 @@
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <link rel="prev" href="../clhs/" />
     <meta name="description" content="Provides a few utilities relating to setfable places. Notably provides SETF-EXPANDERLET (and WITH-RESOLVED-PLACES, which uses it)." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>place-utils | Libraries | HexstreamSoft</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../libraries.css" rel="stylesheet" type="text/css" />
     <script src="https://global.hexstreamsoft.com/scripts/global.js"></script>
     <script src="../../scripts/global.js"></script>
   </head>
+
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="../../">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="../">Libraries</a>
-          <span class="separator"> » </span>
-          <a href="../#uncategorized">Uncategorized</a>
-          <span class="separator"> » </span>
-          <a class="here">place-utils</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="../">Libraries</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../#uncategorized">Uncategorized</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">place-utils</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/libraries/place-utils/">
@@ -47,109 +46,30 @@
           <a class="sequential-link prev" href="../clhs/">←</a>
           <a href="../">
             Libraries
-            <span>15/15   2/2</span>
+            <span>15/15</span>
           </a>
         </nav>
 
-        <nav>
-          <a class="sequential-link prev" href="../symbol-namespaces/">←</a>
-          <a href="../">
-            Categories
-            <span>5/5</span>
-          </a>
-        </nav>
+      </div>
 
-        <nav class="start-browsing">
-          <a href="setf-expanderlet.html">Start browsing utilities</a>
-        </nav>
+    </nav>
 
-        <div class="float-clear"></div>
+    <nav class="ancestors-nav">
 
-      </nav>
-
-
-
-      <nav class="ancestors-nav">
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="place-utils_navbox">
-          <h1 class="box-header">
-            <a class="here">
-              place-utils
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"></span>
-            </a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
-            <li><a href="setf-expanderlet.html">setf-expanderlet</a></li>
-            <li><a href="with-resolved-places.html">with-resolved-places</a></li>
-            <li><a href="updatef.html">updatef</a></li>
-            <li><a href="bulkf.html">bulkf</a></li>
-            <li><a href="funcallf-applyf.html">funcallf/applyf</a></li>
-            <li><a href="cachef.html">cachef</a></li>
-            <li><a href="oldf.html">oldf</a></li>
-            <li><a href="readf.html">readf</a></li>
-            <li><a href="tracef.html">tracef</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1><a href="../#uncategorized">Uncategorized</a></h1>
-          <ul>
-            <li><a href="../clhs/">clhs</a></li>
-            <li>
-              <a class="here">
-                place-utils
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"></span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="projects_navbox">
-          <h1 class="box-header">
-            <a href="../">Libraries</a>
-          </h1>
-          <ul>
-            <li><a href="../#macros">Macros</a></li>
-            <li><a href="../#data-structures">Data structures</a></li>
-            <li>
-              <a href="../#uncategorized">
-                Uncategorized
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"></span>
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li><a href="../releases/">Releases</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1>
-            <a href="../../">HexstreamSoft</a>
-          </h1>
-          <ul>
-            <li><a href="../">Libraries <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
-            <li><a href="../../articles/">Articles</a></li>
-            <li><a href="../../accounts/">Accounts</a></li>
-            <li><a href="../../resources/">Resources</a></li>
+            <li><a href="https://www.hexstreamsoft.com/libraries/" class="ancestor">Libraries</a></li>
+            <li><a href="https://www.hexstreamsoft.com/articles/">Articles</a></li>
+            <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
+            <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
           <ul>
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
@@ -162,191 +82,762 @@
       </header>
 
       <div id="project-info">
-        <table class="factsheet">
-          <tbody>
-            <tr>
-              <th class="project-author property">Project author</th>
-              <td class="project-author" colspan="2"><a href="../../introduction.html">Jean-Philippe Paradis</a></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-type property">Project type</th>
-              <td class="project-type" colspan="2">Library</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="library-programming-language property">Programming language</th>
-              <td class="library-programming-language" colspan="2">Common Lisp</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-status property">Status</th>
-              <td class="project-status good-news" colspan="2">Ready-to-use</td>
-            </tr>
-            <tr>
-              <th class="project-license property"><a href="https://github.com/Hexstream/place-utils/blob/master/UNLICENSE">License</a></th>
-              <td class="project-license good-news" colspan="2"><a href="../../resources/#unlicense">Public Domain</a></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="library-type property">Library type</th>
-              <td class="library-type" colspan="2">Thematic utilities</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-complexity property">Project complexity</th>
-              <td class="project-complexity" colspan="2">Simple</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-latest-release" rowspan="2"><a href="https://tarballs.hexstreamsoft.com/libraries/latest/place-utils_latest.tar.gz">Latest release</a></th>
-              <th class="project-latest-release-version property">Version</th>
-              <td class="project-latest-release-version">0.1</td>
-            </tr>
-            <tr>
-              <th class="project-latest-release-date property">Date</th>
-              <td class="project-latest-release-date">16 april 2011</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-quicklisp" rowspan="2">
-                Quicklisp
-                <br />
-                <span class="as-of-dist">(<a href="http://blog.quicklisp.org/2012/05/may-2012-quicklisp-dist-update.html">May 2012 dist</a> and later)</span>
-              </th>
-              <th class="project-quicklisp-status property">Status</th>
-              <td class="project-quicklisp-status good-news">Available</td>
-            </tr>
-            <tr>
-              <th class="project-quicklisp-version property">Version</th>
-              <td class="project-quicklisp-version good-news">Latest</td>
-            </tr>
-          </tbody>
 
-        </table>
+        <div class="scroll" id="factsheet-wrapper">
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="project-author property">Project author</th>
+                <td class="project-author" colspan="2"><a href="../../introduction.html">Jean-Philippe Paradis</a></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-type property">Project type</th>
+                <td class="project-type" colspan="2">Library</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="library-programming-language property">Programming language</th>
+                <td class="library-programming-language" colspan="2">Common Lisp</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-status property">Status</th>
+                <td class="project-status good-news" colspan="2">Ready-to-use</td>
+              </tr>
+              <tr>
+                <th class="project-license property"><a href="https://github.com/Hexstream/place-utils/blob/master/UNLICENSE">License</a></th>
+                <td class="project-license good-news" colspan="2"><a href="../../resources/#unlicense">Public Domain</a></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Thematic utilities</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Simple</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-latest-release" rowspan="2"><a href="https://tarballs.hexstreamsoft.com/libraries/latest/place-utils_latest.tar.gz">Latest release</a></th>
+                <th class="project-latest-release-version property">Version</th>
+                <td class="project-latest-release-version">0.1</td>
+              </tr>
+              <tr>
+                <th class="project-latest-release-date property">Date</th>
+                <td class="project-latest-release-date">16 april 2011</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-quicklisp" rowspan="2">
+                  Quicklisp
+                  <br />
+                  <span class="as-of-dist">(<a href="http://blog.quicklisp.org/2012/05/may-2012-quicklisp-dist-update.html">May 2012 dist</a> and later)</span>
+                </th>
+                <th class="project-quicklisp-status property">Status</th>
+                <td class="project-quicklisp-status good-news">Available</td>
+              </tr>
+              <tr>
+                <th class="project-quicklisp-version property">Version</th>
+                <td class="project-quicklisp-version good-news">Latest</td>
+              </tr>
+            </tbody>
 
-        <nav class="navbox" id="external-projects_navbox">
-          <h1>
-            <a href="../external-pages-xref/">External library pages</a>
-          </h1>
-          <ul>
-            <li><a href="http://github.com/Hexstream/place-utils">Github</a></li>
-            <li><a href="http://quickdocs.org/place-utils">Quickdocs</a></li>
-            <li><a href="http://cliki.net/place-utils">CLiki</a></li>
-            <li><a href="http://common-lisp.net/project/cl-test-grid/library/place-utils.html">cl-test-grid</a></li>
-          </ul>
-        </nav>
+          </table>
+        </div>
 
-        <table id="dependencies-table">
-          <thead>
-            <tr>
-              <th class="details-link chomp top left"><a href="../dependencies/">⬉</a></th>
-              <th>Depends on</th>
-              <th>Depended on by</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Directly</th>
-              <td>Nothing</td>
-              <td>Nothing</td>
-            </tr>
-            <tr>
-              <th>Indirectly</th>
-              <td>Nothing</td>
-              <td>Nothing</td>
-            </tr>
-          </tbody>
-        </table>
+        <div id="external-links-and-dependencies-table">
+          <nav class="tabs contains-title" id="external-links">
+            <h1>
+              <a href="../external-pages-xref/">External library pages</a>
+            </h1>
+            <ul>
+              <li><a href="http://github.com/Hexstream/place-utils">Github</a></li>
+              <li><a href="http://quickdocs.org/place-utils">Quickdocs</a></li>
+              <li><a href="http://cliki.net/place-utils">CLiki</a></li>
+              <li><a href="http://common-lisp.net/project/cl-test-grid/library/place-utils.html">cl-test-grid</a></li>
+            </ul>
+          </nav>
+
+          <table id="dependencies-table">
+            <thead>
+              <tr>
+                <th class="details-link chomp top left"><a href="../dependencies/">⬉</a></th>
+                <th>Depends on</th>
+                <th>Depended on by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Directly</th>
+                <td>Nothing</td>
+                <td>Nothing</td>
+              </tr>
+              <tr>
+                <th>Indirectly</th>
+                <td>Nothing</td>
+                <td>Nothing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <section id="introduction">
+
+          <p>place-utils provides a few utilities relating to setfable places.</p>
+
+        </section>
 
       </div>
 
-      <p>place-utils provides a few utilities relating to setfable places.</p>
-
-      <nav class="navlist">
-
-        <section>
-          <a href="setf-expanderlet.html">
-            <h1>setf-expanderlet</h1>
-            <p>Introduce local setf-expanders.</p>
-          </a>
-        </section>
-
-        <section>
-          <a href="with-resolved-places.html">
-            <h1>with-resolved-places</h1>
-            <p>Evaluate subforms once, then access repeatedly safely.</p>
-          </a>
-        </section>
-
-        <section>
-          <a href="updatef.html">
-            <h1>updatef</h1>
-            <p>Like setf, except supply update functions (to be called with old values) instead of new values.</p>
-          </a>
-        </section>
-
-        <section>
-          <a href="bulkf.html">
-            <h1>bulkf</h1>
-            <p>Flexible mass updating of places.</p>
-            <p>An update function receives the old values as arguments<br />and returns the values to write back as multiple values.</p>
-          </a>
-        </section>
-
-        <section>
-          <a href="funcallf-applyf.html">
-            <h1>funcallf/applyf</h1>
-            <p>Store into a place the result of calling an update function with the old value of the place,<br>possibly along with additional regular arguments.</p>
-          </a>
-        </section>
-
-        <section>
-          <a href="cachef.html">
-            <h1>cachef</h1>
-            <p>Compute the value of a place only when it's first read.</p>
-          </a>
-        </section>
-
-        <section>
-          <a href="oldf.html">
-            <h1>oldf</h1>
-            <p>Make the storing form of a place return old value(s).</p>
-          </a>
-        </section>
-
-        <section>
-          <a href="readf.html">
-            <h1>readf</h1>
-            <p>Easily make a place work in non-place contexts.</p>
-          </a>
-        </section>
-
-        <section>
-          <a href="tracef.html">
-            <h1>tracef</h1>
-            <p>Output debug info when a particular place is accessed.</p>
-          </a>
-        </section>
-
-
+      <nav class="tabs">
+        <ul>
+          <li><a href="#setf-expanderlet">setf-expanderlet</a></li>
+          <li><a href="#with-resolved-places">with-resolved-places</a></li>
+          <li><a href="#updatef">updatef</a></li>
+          <li><a href="#bulkf">bulkf</a></li>
+          <li><a href="#funcallf-applyf">funcallf-applyf</a></li>
+          <li><a href="#cachef">cachef</a></li>
+          <li><a href="#oldf">oldf</a></li>
+          <li><a href="#readf">readf</a></li>
+          <li><a href="#tracef">tracef</a></li>
+        </ul>
       </nav>
+
+      <section id="setf-expanderlet">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#setf-expanderlet" class="anchor">⚓</a>
+          </span>
+          <div class="breadcrumbs">
+            <a href="#">place-utils</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">setf-expanderlet</a></span>
+          </div>
+        </h1>
+
+        <p class="description">Introduce local setf-expanders.</p>
+
+        <dl>
+
+          <dt><pre>Macro <code class="common-lisp library macro operator">setf-expanderlet</code> (&amp;rest <var>bindings</var>) &amp;body <var>body</var>
+  &rArr; <var>results</var></pre></dt>
+
+          <dd>
+            <p><code class="common-lisp library macro operator">setf-expanderlet</code> introduces local setf-expanders. This opens possibilities for more complex local setf-expanders than can be handled by Common Lisp's built-in support for local setf functions (which must evaluate all their arguments once from left to right and can only accept one new value at a time).</p>
+            <p><code class="common-lisp library macro operator">setf-expanderlet</code> is to <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defi_3.htm">define-setf-expander</a></code> as <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">macrolet</a></code> is to <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defmac.htm">defmacro</a></code>. The <var>bindings</var> of <code class="common-lisp library macro operator">setf-expanderlet</code> have much the same semantics as their counterparts in <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_flet_.htm">macrolet</a></code>, except the job of each expander is to return a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_aab.htm">setf expansion</a> (5 values), not a normal expansion (a form).</p>
+            <p>As an example of what <code class="common-lisp library macro operator">setf-expanderlet</code> can let one accomplish, <code class="common-lisp library macro operator">with-resolved-places</code> is trivially implemented in terms of it.</p>
+            <p><b>Implementation note:</b> Surprisingly enough, this implementation of <code class="common-lisp library macro operator">setf-expanderlet</code> is written fully portably. As far as I can tell, the only caveat is that the name of the local setf-expander is unconditionally made a local macro. This macro, if used in a non-place context, simply expands to a form that evaluates the subforms and then reads the place.</p>
+            <p>In contrast, "real" setf-expanders as defined by <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defi_3.htm">define-setf-expander</a></code> don't affect the semantics of the operator in non-place contexts, which is useful if the operator is a function. However, if the original operator is simple enough that it's implemented as a function, you can probably just use a local setf function anyway so I don't think the aforementioned caveat is very important.</p>
+          </dd>
+        </dl>
+
+      </section>
+
+      <section id="with-resolved-places">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#with-resolved-places" class="anchor">⚓</a>
+          </span>
+          <div class="breadcrumbs">
+            <a href="#">place-utils</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">with-resolved-places</a></span>
+          </div>
+        </h1>
+
+        <p class="description">Evaluate subforms once, then access repeatedly safely.</p>
+
+        <dl>
+          <dt><pre>Macro <code class="common-lisp library macro operator">with-resolved-places</code> (&amp;rest <var>bindings</var>) &amp;body <var>body</var>
+  &rArr; <var>results</var></pre></dt>
+          <dd>
+            <p>Each <var>binding</var> is of the form <code class="common-lisp">(<var>resolved-place</var> <var>unresolved-place</var>)</code>.</p>
+            <p>At the time <code class="common-lisp library macro operator">with-resolved-places</code> is entered, the subforms of each <var>unresolved-place</var> are evaluated and bound to their temporary variables. Within <var>body</var> (an implicit <code class="common-lisp standard macro operator">progn</code>), each <var>resolved-place</var> can be used to access (read and/or write) the corresponding <var>unresolved-place</var>, perhaps repeatedly, without evaluating the subforms again.</p>
+            <div class="scroll">
+              <pre class="example"><code class="common-lisp">(let* ((<var>my-list</var> (list 0 1 2))
+       (<var>my-other-list</var> <var>my-list</var>))
+       (<code class="common-lisp library macro operator">with-resolved-places</code> ((<var>second</var> (second (princ <var>my-list</var>))))
+       (setf <var>my-list</var> nil <var>second</var> 8)
+       (incf <var>second</var> 2)
+  (list <var>my-list</var> <var>my-other-list</var> <var>second</var>)))
+
+-| (0 1 2)
+&rArr; (NIL (0 10 2) 10)</code></pre>
+            </div>
+            <p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_aaa.htm">CLHS 5.1.1.1 Evaluation of Subforms to Places</a></p>
+            <p>In the absence of <code class="common-lisp library macro operator">with-resolved-places</code>, in situations where multiple evaluation of subforms for different accesses is not desirable, one would traditionally bind the results of the evaluation of the troublesome subforms (with <code class="common-lisp standard special-operator operator">let</code> or <code class="common-lisp standard special-operator operator">let*</code>) in an ad-hoc way on an as-needed basis, manually replicating part of the job of <a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_aab.htm">setf expanders</a>.</p>
+          </dd>
+        </dl>
+
+      </section>
+
+      <section id="updatef">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#updatef" class="anchor">⚓</a>
+          </span>
+          <div class="breadcrumbs">
+            <a href="#">place-utils</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">updatef</a></span>
+          </div>
+        </h1>
+
+        <p class="description">Like setf, except supply update functions (to be called with old values) instead of new values.</p>
+
+        <dl>
+          <dt><pre>Modify Macro <code class="common-lisp library macro operator">updatef</code> &amp;rest <var>places-and-update-functions</var>
+  &rArr; <var>results</var></pre></dt>
+          <dd>
+            <p><code class="common-lisp library macro operator">updatef</code> is exactly like <code class="common-lisp standard macro operator">setf</code>, except that instead of directly providing new values to store into the place, one provides update functions that will be called with the corresponding old value. Each store variable is bound to the result of calling the corresponding update function with the old value, then the storing form is evaluated.</p>
+            <div class="scroll">
+              <pre class="example"><code class="common-lisp">(defun double (<var>number</var>) (* <var>number</var> 2))
+
+(let ((<var>a</var> 2) (<var>b</var> 8))
+  (<code class="common-lisp library macro operator">updatef</code> (values <var>a</var> <var>b</var>) #'double)
+  (values <var>a</var> <var>b</var>))
+
+&rArr; 4, NIL</code></pre>
+              </div>
+            <div class="scroll">
+              <pre class="example"><code class="common-lisp">(let ((<var>a</var> 2) (<var>b</var> 8))
+  (<code class="common-lisp library macro operator">updatef</code> <var>a</var> #'1+
+           <var>a</var> #'double
+           <var>b</var> #'-)
+  (values <var>a</var> <var>b</var>))
+
+&rArr; 6, -8</code></pre>
+            </div>
+
+            <div class="scroll">
+              <pre class="example"><code class="common-lisp">(let ((<var>a</var> #(1 2)))
+  (<code class="common-lisp library macro operator">updatef</code> (aref (print <var>a</var>) (print 1))
+           (print #'double))
+  <var>a</var>)
+  -| #(1 2)
+  -| 1
+  -| #&lt;FUNCTION DOUBLE&gt;
+
+&rArr; #(1 4)</code></pre>
+            </div>
+
+        </dd>
+      </dl>
+
+      </section>
+
+      <section id="bulkf">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#bulkf" class="anchor">⚓</a>
+          </span>
+          <div class="breadcrumbs">
+            <a href="#">place-utils</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">bulkf</a></span>
+          </div>
+        </h1>
+
+        <p class="description">Flexible mass updating of places. An update function receives the old values as arguments and returns the values to write back as multiple values.</p>
+
+        <nav class="tabs">
+          <ul>
+            <li><a href="#bulkf_description">Description</a></li>
+            <li><a href="#bulkf_examples">Examples</a></li>
+          </ul>
+        </nav>
+
+        <section id="bulkf_description">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#bulkf_description" class="anchor">⚓</a>
+            </span>
+            <div class="breadcrumbs">
+              <a href="#">place-utils</a>
+              <span class="crumb"><span class="s"> » </span><a href="#bulkf">bulkf</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Description</a></span>
+            </div>
+          </h1>
+
+          <dl>
+            <dt><pre>Modify Macro <code class="common-lisp library macro operator">bulkf</code> <var>update-function-form</var> &amp;rest <var>mode-markers-and-items</var>
+  &rArr; <var>results</var></pre></dt>
+            <dd>
+              <p><code class="common-lisp library macro operator">bulkf</code> allows mass updating of places.</p>
+              <p><var>update-function-form</var> is evaluated first to produce <var>update-function</var>. The arguments and return values of this function depend on <var>mode-markers-and-items</var> and are described below.</p>
+              <p><var>mode-markers-and-items</var> is a list of <var>mode-markers</var> and <var>items</var> to be processed from left to right at macroexpansion-time. A <var>mode-marker</var> is one of the symbols <code class="common-lisp library marker">:access</code>, <code class="common-lisp library marker">:read</code>, <code class="common-lisp library marker">:write</code> or <code class="common-lisp library marker">:pass</code>. Any other form is an <var>item</var>. Whenever a <var>mode-marker</var> is encountered, the mode with that name becomes the current mode and remains so until the next <var>mode-marker</var>. The current mode at the start of <var>mode-markers-and-items</var> is <code class="common-lisp library marker">:access</code> mode. There are 4 different types of <var>items</var>, corresponding to the 4 different modes that can be the current mode at the time the <var>item</var> is encountered. Here are the semantics of each type of item:</p>
+
+              <dl>
+
+                <dt><dfn><code class="common-lisp library marker">:access</code></dfn></dt>
+                <dd><p><var>item</var> is a place that will be both read from and written to. At runtime, the subforms of the place are evaluated and the place is read. The primary value is contributed as an additional argument to <var>update-function</var>. <var>update-function</var> also returns an additional value that will be written back into the place (reusing the temporary variables bound to the results of the subforms).</p></dd>
+
+                <dt><dfn><code class="common-lisp library marker">:read</code></dfn></dt>
+                <dd><p><var>item</var> is a place that will be read from. At runtime, the subforms of the place are evaluated and the place is read. The primary value is contributed as an additional argument to <var>update-function</var>.</p></dd>
+
+                <dt><dfn><code class="common-lisp library marker">:write</code></dfn></dt>
+                <dd><p><var>item</var> is a place that will be written to. <var>update-function</var> returns an additional value that will be written into the place. The evaluation of the subforms of the place happens at the same time as it would have happened if the place had been read from.</p></dd>
+
+                <dt><dfn><code class="common-lisp library marker">:pass</code></dfn></dt>
+                <dd><p><var>item</var> is a form to be evaluated normally. Its primary value is passed as an additional argument to <var>update-function</var>.</p></dd>
+
+              </dl>
+
+              <p>If <var>update-function</var> returns more values than there are places to write to (<code class="common-lisp library marker">:access</code> and <code class="common-lisp library marker">:write</code> <var>items</var>), the additional values are ignored. If it returns less values than there are of these places, the remaining ones are set to <code class="common-lisp standard constant">nil</code>. <code class="common-lisp library macro operator">bulkf</code> returns the values that were written into these places. This might be more or less values than were returned by <var>update-function</var>. If a place to be written to has more than one store variable, the remaining such variables are set to <code class="common-lisp standard constant">nil</code> prior to evaluation of the storing form.</p>
+
+              <p><code class="common-lisp library macro operator">bulkf</code> accepts an optional unevaluated argument before <var>update-function-form</var> (as very first argument). This must be the symbol <code class="common-lisp">funcall</code> or <code class="common-lisp">apply</code> and determines which operator will be used to call the <var>update-function</var> with its arguments. The default is <code>funcall</code>, which is expected to be used an overwhelming majority of the time. This is the reason this argument has not been made a normal required parameter.</p>
+
+            </dd>
+
+          </dl>
+        </section>
+
+        <section id="bulkf_examples">
+
+          <h1 class="breadcrumbs-bar">
+            <span class="section-relative-nav">
+              <a href="#bulkf_examples" class="anchor">⚓</a>
+            </span>
+            <div class="breadcrumbs">
+              <a href="#">place-utils</a>
+              <span class="crumb"><span class="s"> » </span><a href="#bulkf">bulkf</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Examples</a></span>
+            </div>
+          </h1>
+
+          <p><code class="common-lisp library macro operator">bulkf</code> is very versatile and can be used to easily implement many different types of modify macros. Here are just a few examples:</p>
+
+          <div class="scroll">
+            <pre class="example"><code class="common-lisp">(<code class="common-lisp standard macro operator">defun</code> <var>bulkf-transfer</var> (<var>quantity</var> <var>source</var> <var>destination</var>)
+  (<code class="common-lisp standard function operator">values</code> (<code class="common-lisp standard function operator">-</code> <var>source</var> <var>quantity</var>)
+          (<code class="common-lisp standard function operator">+</code> <var>destination</var> <var>quantity</var>)))
+
+(<code class="common-lisp standard macro operator">defmacro</code> <var>transferf</var> (<var>quantity</var> <var>source</var> <var>destination</var>)
+  `(<code class="common-lisp library macro operator">bulkf</code> #'<var>bulkf-transfer</var>
+          <code class="common-lisp library marker">:pass</code> ,<var>quantity</var>
+          <code class="common-lisp library marker">:access</code> ,<var>source</var> ,<var>destination</var>))
+
+(let ((<var>account-amounts</var> (<code class="common-lisp standard function operator">list</code> 35 90)))
+  (<code class="common-lisp standard special-operator operator">multiple-value-call</code> #'<code class="common-lisp standard function operator">values</code>
+    (<var>transferf</var> 10
+               (<code class="common-lisp standard function operator">first</code> <var>account-amounts</var>)
+               (<code class="common-lisp standard function operator">second</code> <var>account-amounts</var>))
+    <var>account-amounts</var>))
+&rArr; 25, 100, (25 100)</code></pre>
+          </div>
+
+          <div class="scroll">
+            <pre class="example"><code class="common-lisp">(<code class="common-lisp standard macro operator">defun</code> <var>bulkf-init</var> (<var>value</var> <var>number-of-places</var>)
+  (<code class="common-lisp standard function operator">values-list</code> (<code class="common-lisp standard function operator">make-list</code> <var>number-of-places</var>
+                          :initial-element <var>value</var>)))
+
+(<code class="common-lisp standard macro operator">defmacro</code> <var>initf</var> (<var>value</var> &amp;rest <var>places</var>)
+  `(<code class="common-lisp library macro operator">bulkf</code> #'<var>bulkf-init</var>
+          <code class="common-lisp library marker">:pass</code> ,<var>value</var> ,(<code class="common-lisp standard function operator">length</code> <var>places</var>)
+          <code class="common-lisp library marker">:write</code> ,@<var>places</var>))
+
+(<code class="common-lisp standard special-operator operator">let</code> (<var>a</var> <var>b</var> (<var>c</var> (<code class="common-lisp standard function operator">make-list</code> 3 :initial-element nil)))
+  (<var>initf</var> 0 <var>a</var> <var>b</var> (<code class="common-lisp standard function operator">second</code> <var>c</var>))
+  (<code class="common-lisp standard function operator">values</code> <var>a</var> <var>b</var> <var>c</var>))
+&rArr; 0, 0, (NIL 0 NIL)</code></pre>
+          </div>
+
+          <div class="scroll">
+            <pre class="example"><code class="common-lisp">(<code class="common-lisp standard macro operator">defun</code> <var>bulkf-spread</var> (<var>spread-function</var> <var>sum-function</var>
+                     &amp;rest <var>place-values</var>)
+  (<code class="common-lisp standard function operator">values-list</code>
+   (let ((<var>number-of-places</var> (length <var>place-values</var>)))
+     (<code class="common-lisp standard function operator">make-list</code> <var>number-of-places</var>
+                :initial-element
+                (<code class="common-lisp standard function operator">funcall</code> <var>spread-function</var>
+                         (<code class="common-lisp standard function operator">apply</code> <var>sum-function</var> <var>place-values</var>)
+                         <var>number-of-places</var>)))))
+
+(<code class="common-lisp standard macro operator">defmacro</code> <var>spreadf</var> (<var>spread-function</var> <var>sum-function</var> &amp;rest <var>places</var>)
+  `(<code class="common-lisp library macro operator">bulkf</code> #'<var>bulkf-spread</var> <code class="common-lisp library marker">:pass</code> ,<var>spread-function</var> ,<var>sum-function</var>
+          <code class="common-lisp library marker">:access</code> ,@<var>places</var>))
+
+(<code class="common-lisp standard special-operator operator">let</code> ((<var>a</var> 5) (<var>b</var> (<code class="common-lisp standard function operator">list</code> 10 18 20)))
+  (<var>spreadf</var> #'<code class="common-lisp standard function operator">/</code> #'<code class="common-lisp standard function operator">+</code> <var>a</var> (<code class="common-lisp standard function operator">first</code> <var>b</var>) (<code class="common-lisp standard function operator">second</code> <var>b</var>))
+  (<code class="common-lisp standard function operator">values</code> <var>a</var> <var>b</var>))
+&rArr; 11, (11 11 20)
+
+(<code class="common-lisp standard special-operator operator">let</code> ((<var>a</var> 2) (<var>b</var> (<code class="common-lisp standard function operator">list</code> 2 4 8)))
+  (<var>spreadf</var> #'<code class="common-lisp standard function operator">*</code> #'<code class="common-lisp standard function operator">*</code> <var>a</var> (<code class="common-lisp standard function operator">first</code> <var>b</var>) (<code class="common-lisp standard function operator">second</code> <var>b</var>) (<code class="common-lisp standard function operator">third</code> <var>b</var>))
+  (<code class="common-lisp standard function operator">values</code> <var>a</var> <var>b</var>))
+&rArr; 512, (512, 512, 512)</code></pre>
+          </div>
+
+          <div class="scroll">
+            <pre class="example"><code class="common-lisp">(<code class="common-lisp standard macro operator">defun</code> <var>bulkf-map</var> (<var>function</var> &amp;rest <var>place-values</var>)
+  (<code class="common-lisp standard function operator">values-list</code> (<code class="common-lisp standard function operator">mapcar</code> <var>function</var> <var>place-values</var>)))
+
+(<code class="common-lisp standard macro operator">defmacro</code> <var>mapf</var> (<var>function</var> &amp;rest <var>places</var>)
+  `(<code class="common-lisp library macro operator">bulkf</code> #'<var>bulkf-map</var> <code class="common-lisp library marker">:pass</code> ,<var>function</var> <code class="common-lisp library marker">:access</code> ,@<var>places</var>))
+
+(<code class="common-lisp standard special-operator operator">let</code> ((<var>a</var> 0) (<var>b</var> 5) (<var>c</var> (<code class="common-lisp standard function operator">list</code> 10 15)))
+  (<code class="common-lisp standard function operator">values</code> (<code class="common-lisp standard macro operator">multiple-value-list</code> (<var>mapf</var> #'<code class="common-lisp standard function operator">1+</code> <var>a</var> <var>b</var> (<code class="common-lisp standard function operator">second</code> <var>c</var>)))
+          <var>a</var> <var>b</var> <var>c</var>))
+&rArr; (1 6 16), 1, 6, (10 16)</code></pre>
+          </div>
+
+          <div class="scroll">
+            <pre class="example"><code class="common-lisp">(<code class="common-lisp standard macro operator">defun</code> <var>bulkf-steal</var> (<var>sum-function</var> <var>steal-function</var>
+                    <var>initial-assets</var> &amp;rest <var>target-assets</var>)
+  (<code class="common-lisp standard special-operator operator">let</code> (<var>stolen</var> <var>leftovers</var>)
+    (<code class="common-lisp standard function operator">mapc</code> (<code class="common-lisp standard macro operator">lambda</code> (<var>assets</var>)
+            (<code class="common-lisp standard macro operator">multiple-value-bind</code> (<var>steal</var> <var>leftover</var>)
+                (<code class="common-lisp standard function operator">funcall</code> <var>steal-function</var> <var>assets</var>)
+              (<code class="common-lisp standard macro operator">push</code> <var>steal</var> <var>stolen</var>)
+              (<code class="common-lisp standard macro operator">push</code> <var>leftover</var> <var>leftovers</var>)))
+          <var>target-assets</var>)
+    (<code class="common-lisp standard function operator">values-list</code>
+     (<code class="common-lisp standard function operator">cons</code> (<code class="common-lisp standard function operator">apply</code> <var>sum-function</var>
+                  (<code class="common-lisp standard function operator">cons</code> <var>initial-assets</var> (<code class="common-lisp standard function operator">nreverse</code> <var>stolen</var>)))
+           (<code class="common-lisp standard function operator">nreverse</code> <var>leftovers</var>)))))
+
+(<code class="common-lisp standard macro operator">defmacro</code> <var>stealf</var> (<var>sum-function</var> <var>steal-function</var> <var>hideout</var> &amp;rest <var>targets</var>)
+  `(<code class="common-lisp library macro operator">bulkf</code> #'<var>bulkf-steal</var> <code class="common-lisp library marker">:pass</code> ,<var>sum-function</var> ,<var>steal-function</var>
+          <code class="common-lisp library marker">:access</code> ,<var>hideout</var> ,@<var>targets</var>))
+
+(<code class="common-lisp standard special-operator operator">let</code> ((<var>cave</var> :initial-assets)
+      (<var>museum</var> '(:paintings :collection))
+      (<var>house</var> 20000)
+      (<var>triplex</var> (list :nothing-valuable :random-stuff 400)))
+  (<var>stealf</var> #'<code class="common-lisp standard function operator">list</code>
+          (<code class="common-lisp standard macro operator">lambda</code> (<var>assets</var>)
+            (if (eq <var>assets</var> :nothing-valuable)
+                (values nil <var>assets</var>)
+                (values <var>assets</var> (<code class="common-lisp standard special-operator operator">if</code> (<code class="common-lisp standard function operator">numberp</code> <var>assets</var>) 0 nil))))
+          <var>cave</var> <var>museum</var> <var>house</var> (<code class="common-lisp standard function operator">first</code> <var>triplex</var>) (<code class="common-lisp standard function operator">second</code> <var>triplex</var>) (<code class="common-lisp standard function operator">third</code> <var>triplex</var>))
+  (<code class="common-lisp standard function operator">values</code> <var>cave</var> <var>museum</var> <var>house</var> <var>triplex</var>))
+&rArr;
+(:INITIAL-ASSETS (:PAINTINGS :COLLECTION) 20000 NIL :RANDOM-STUFF 400)
+NIL
+0
+(:NOTHING-VALUABLE NIL 0)</code></pre>
+          </div>
+
+        </section>
+
+        <nav class="end-of-section-indicator">
+          <a href="#bulkf">
+            "<span>bulkf</span>" end.
+          </a>
+        </nav>
+
+      </section>
+
+      <section id="funcallf-applyf">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#funcallf-applyf" class="anchor">⚓</a>
+          </span>
+          <div class="breadcrumbs">
+            <a href="#">place-utils</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">funcallf-applyf</a></span>
+          </div>
+        </h1>
+
+        <p class="description">Store into a place the result of calling an update function with the old value of the place, possibly along with additional regular arguments.</p>
+
+        <dl>
+
+          <dt><pre>Modify Macro <dfn><code class="common-lisp library macro operator">funcallf</code></dfn> <var>function-form</var> <var>place</var> &amp;rest <var>other-arg-forms</var>
+  &rArr; <var>results</var></pre></dt>
+          <dd>
+            <p><code class="common-lisp library macro operator">funcallf</code> updates a place by calling a function with the old value of the place as first argument, possibly along with other arguments. The result of the function is stored into the place. Specifically:</p>
+            <ol>
+              <li>Evaluate <var>function-form</var> to produce <var>function</var>;</li>
+              <li>Evaluate the subforms of <var>place</var>, then read the primary value of <var>place</var> to produce <var>old-place-value</var>;</li>
+              <li>Evaluate each <var>other-arg-form</var> normally to produce <var>other-arg</var>;</li>
+              <li>Store into the <var>place</var> the primary value returned by calling <var>function</var> with <var>old-place-value</var> and <var>other-args</var> as arguments. If <var>place</var> has more than one store variable, the remaining such variables are bound to <code>nil</code> prior to evaluation of the storing form.</li>
+            </ol>
+          </dd>
+
+          <dt><pre>Modify Macro <dfn><code class="common-lisp library macro operator">applyf</code></dfn> <var>function</var> <var>place</var> &amp;rest <var>other-args</var>
+  &rArr; <var>results</var></pre></dt>
+          <dd><p>Same as <code class="common-lisp library macro operator">funcallf</code> except <code class="common-lisp standard function operator">apply</code> is used to call the <var>function</var> with the primary value of <var>place</var> and <var>other-args</var>.</p></dd>
+
+        </dl>
+
+      </section>
+
+      <section id="cachef">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#cachef" class="anchor">⚓</a>
+          </span>
+          <div class="breadcrumbs">
+            <a href="#">place-utils</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">cachef</a></span>
+          </div>
+        </h1>
+
+        <p class="description">Compute the value of a place only when it's first read.</p>
+
+        <dl>
+          <dt><pre>Accessor Modifier <code class="common-lisp library macro operator">cachef</code> <var>cachedp-place</var> <var>cache-place</var> <var>init-form</var>
+                         &amp;key <var>test</var> <var>new-cachedp</var> <var>init-form-evaluates-to</var></pre></dt>
+          <dd>
+            <p><code class="common-lisp library macro operator">cachef</code> allows one to compute the value of a place only when it's first read.</p>
+            <p>The consequences are undefined if <var>cachedp-place</var> or <var>cache-place</var> involves more than one value. I initially planned to support multiple values everywhere but finally decided that it's overkill. An implementation is permitted to extend the semantics to support multiple values. <small>(With that out of the way, the rest of the description will be simpler.)</small></p>
+            <p><code class="common-lisp library macro operator">cachef</code> has two major modes of operation: <a href="#cachef_ICC-eval">"in-cache cachedp" (ICC) mode</a> and <a href="#cachef_OOCC-eval">"out-of-cache cachedp" (OOCC) mode</a>. The former is selected if <var>cachedp-place</var> is <code class="common-lisp standard constant">nil</code> at macroexpansion-time, else the latter is selected.</p>
+            <p>Let's first describe the semantics of the arguments without regard to their order in the lambda list nor the time at which they're evaluated. After, we'll see the order of evaluation step-by-step for both modes.</p>
+
+            <p>An important notion of <code class="common-lisp library macro operator">cachef</code> is, of course, how it tests to see if the cache is full or empty. The way this is done is to call <var>test-function</var> (the result of evaluating <var>test</var>) with an appropriate argument. In <a href="#cachef_ICC-eval">ICC mode</a>, <var>test-function</var> is called with the value of <var>cache-place</var>. In <a href="#cachef_OOCC-eval">OOCC mode</a>, it's called with the value of <var>cachedp-place</var>. Either way, the cache is considered full or empty if <var>test-function</var> returns generalized <code class="common-lisp standard glossary">true</code> or <code class="common-lisp standard glossary">false</code>, respectively.</p>
+
+            <p>Whenever <var>cache-place</var> is about to be read, if the cache is empty, it's first filled with <var>init-form</var>. The semantics of <var>init-form</var> are described below. In <a href="#cachef_ICC-eval">ICC mode</a>, it's assumed that the new value tests as a full cache (else, the cache will be &ldquo;re-filled&rdquo; next time). In <a href="#cachef_OOCC-eval">OOCC mode</a>, whenever the cache is written to (regardless of if this write results from a cache-miss or a direct request), <var>cachedp-place</var> is set to the value of <var>new-cachedp</var>. It's an error to supply <var>new-cachedp</var> in <a href="#cachef_ICC-eval">ICC mode</a>, as it's not needed (<var>init-form</var> somewhat fulfills its role).</p>
+            <p><var>init-form</var> is a form that either evaluates to the values to store into the cache, or to a function that performs such an evaluation, depending on whether <var>init-form-evaluates-to</var> is <code class="common-lisp library marker">:value</code> or <code class="common-lisp library marker">:function</code> (at macroexpansion-time), respectively. The former is convenient in simple scenarios where there is no &ldquo;distance&rdquo; between the evaluation of subforms and access to the cache, while the latter is more likely to be correct in more complex cases (such as when used with <code class="common-lisp library macro operator">with-resolved-places</code>) by virtue of capturing the lexical context in which the subforms are evaluated instead of whichever one is current at the place in the code where the cache is accessed.</p>
+            <p><var>cache-place</var> holds the cached value if the cache is full, or a placeholder value if the cache is empty. In <a href="#cachef_ICC-eval">ICC mode</a>, this value itself is tested to see if the cache is full or empty. For instance, a value of <code class="common-lisp standard constant">nil</code> might indicate an empty cache, while any other value indicates a full cache (this is the default behavior, as <var>test</var> defaults to <code class="common-lisp">'#'identity</code>). Of course, in this case there's no way to distinguish between an empty cache and a full cache containing <code class="common-lisp standard constant">nil</code>. A possible workaround would be to use a gensym as a "cache-is-empty" marker, however this might not be performance-friendly. For instance, if the cache only ever contains values of type <code class="common-lisp">(mod 1024)</code>, one might want to declare this type, but a gensym is not valid. One would have to declare a type of <code class="common-lisp">(or symbol (mod 1024))</code>. In this case, <a href="#cachef_OOCC-eval">OOCC mode</a> might be preferable, as the <var>cachedp-place</var> can be declared to be of type <code class="common-lisp standard type-specifier">boolean</code> (for example) while the <var>cache-place</var> can be declared to be of the exact type of values that might be stored in the cache.</p>
+
+            <section id="cachef_ICC-eval">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#cachef_ICC-eval" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">place-utils</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#cachef">cachef</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">In-Cache-Cachedp (ICC) evaluation order</a></span>
+                </div>
+              </h1>
+
+              <p>At the time subforms of the <code class="common-lisp library macro operator">cachef</code> place are evaluated:</p>
+              <ol>
+                <li>If <var>init-form-evaluates-to</var> is <code>:function</code>, <var>init-form</var> is evaluated to produce <var>init-form-function</var>.</li>
+                <li><var>test</var> is evaluated to produce <var>test-function</var>.</li>
+              </ol>
+              <p>At the time an attempt is made to read the value of the <code class="common-lisp library macro operator">cachef</code> place:</p>
+              <ol>
+                <li><var>test-function</var> is called with the value of <var>cache-place</var>, producing <var>fullp</var>.</li>
+                <li>If <var>fullp</var> is generalized true, the value of <var>cache-place</var> that was read in step 1 is simply returned. Else, <var>cache-place</var> is assigned the result of evaluating the <var>init-form</var> and that value is returned.</li>
+              </ol>
+              <p>At the time a value is assigned to the <code class="common-lisp library macro operator">cachef</code> place, the value is simply stored into <var>cache-place</var> directly and it's assumed that calling <var>test-function</var> with this value the next time the <code class="common-lisp library macro operator">cachef</code> place is read will return generalized true, indicating a full cache.</p>
+            </section>
+
+            <section id="cachef_OOCC-eval">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#cachef_OOCC-eval" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">place-utils</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#cachef">cachef</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Out-Of-Cache-Cachedp (OOCC) evaluation order</a></span>
+                </div>
+              </h1>
+
+              <p>At the time subforms of the <code class="common-lisp library macro operator">cachef</code> place are evaluated:</p>
+              <ol>
+                <li>The subforms of <var>cachedp-place</var> are evaluated.</li>
+                <li>The subforms of <var>cache-place</var> are evaluated.</li>
+                <li>If <var>init-form-evaluates-to</var> is <code class="common-lisp library marker">:function</code>, <var>init-form</var> is evaluated to produce <var>init-form-function</var>.</li>
+                <li><var>test</var> and <var>new-cachedp</var> are evaluated in the order they appear.</li>
+              </ol>
+              <p>At the time an attempt is made to read the value of the <code class="common-lisp library macro operator">cachef</code> place:</p>
+              <ol>
+                <li><var>test-function</var> is called with the value of <var>cachedp-place</var>, producing <var>fullp</var>.</li>
+                <li>If <var>fullp</var> is generalized true, The value of <var>cache-place</var> that was read in step 1 is simply returned. Else, <var>cache-place</var> is assigned the result of evaluating the <var>init-form</var> and that value is returned.</li>
+              </ol>
+              <p>At the time a value is assigned to the <code class="common-lisp library macro operator">cachef</code> place, the value is stored into <var>cache-place</var> and the result of evaluating <var>new-cachedp</var> (that was evaluated along with the subforms previously) is stored into <var>cachedp-place</var>.</p>
+            </section>
+
+            <section id="cachef_examples">
+
+              <h1 class="breadcrumbs-bar">
+                <span class="section-relative-nav">
+                  <a href="#cachef_examples" class="anchor">⚓</a>
+                </span>
+                <div class="breadcrumbs">
+                  <a href="#">place-utils</a>
+                  <span class="crumb"><span class="s"> » </span><a href="#cachef">cachef</a></span>
+                  <span class="crumb"><span class="s"> » </span><a class="here">Examples</a></span>
+                </div>
+              </h1>
+
+              <div class="scroll">
+                <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>cache</var> "cached-string"))
+  (<code class="common-lisp standard macro operator">incf</code> (<code class="common-lisp library macro operator">cachef</code> nil <var>cache</var> 0 :test #'<code class="common-lisp standard function operator">numberp</code>) (<code class="common-lisp standard function operator">print</code> (<code class="common-lisp standard function operator">+</code> 5 2)))
+  <var>cache</var>)
+-| 7
+&rArr; 7</code></pre>
+              </div>
+
+              <div class="scroll">
+                <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>cache</var> 20))
+  (<code class="common-lisp standard macro operator">incf</code> (<code class="common-lisp library macro operator">cachef</code> nil <var>cache</var> 0 :test #'<code class="common-lisp standard function operator">numberp</code>) (<code class="common-lisp standard function operator">print</code> (<code class="common-lisp standard function operator">+</code> 5 2)))
+  <var>cache</var>)
+-| 7
+&rArr; 27</code></pre>
+              </div>
+
+              <div class="scroll">
+                <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>values</var> (<code class="common-lisp standard function operator">list</code> :empty :placeholder)))
+  (<code class="common-lisp library macro operator">cachef</code> (<code class="common-lisp standard function operator">first</code> <var>values</var>) (<code class="common-lisp standard function operator">second</code> (<code class="common-lisp standard function operator">print</code> <var>values</var>))
+          :computed-value
+          :test (<code class="common-lisp standard macro operator">lambda</code> (<var>marker</var>)
+                  (<code class="common-lisp standard macro operator">ecase</code> <var>marker</var>
+                    (:full t)
+                    (:empty nil)))
+          :new-cachedp <code class="common-lisp library marker">:full</code>)
+  values)
+-| (:EMPTY :PLACEHOLDER)
+&rArr; (:FULL :COMPUTED-VALUE)</code></pre>
+              </div>
+
+            </section>
+          </dd>
+        </dl>
+
+        <nav class="end-of-section-indicator">
+          <a href="#cachef">
+            "<span>cachef</span>" end.
+          </a>
+        </nav>
+
+      </section>
+
+      <section id="oldf">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#oldf" class="anchor">⚓</a>
+          </span>
+          <div class="breadcrumbs">
+            <a href="#">place-utils</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">oldf</a></span>
+          </div>
+        </h1>
+
+        <p class="description">Make the storing form of a place return old value(s).</p>
+
+        <dl>
+          <dt><pre>Accessor Modifier <code class="common-lisp library macro operator">oldf</code> <var>place</var></pre></dt>
+          <dd>
+            <p><code class="common-lisp library macro operator">oldf</code> simply modifies the behavior of the storing form of <var>place</var> so that it returns the old values of the place instead of the new ones.</p>
+            <div class="scroll">
+              <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>a</var> 5))
+  (<code class="common-lisp standard function operator">values</code> (<code class="common-lisp standard macro operator">incf</code> (<code class="common-lisp library macro operator">oldf</code> <var>a</var>) 2)
+          <var>a</var>))
+&rArr; 5, 7</code></pre>
+            </div>
+            <div class="scroll">
+              <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>a</var> 5))
+  (<code class="common-lisp standard function operator">values</code> (<code class="common-lisp standard macro operator">setf</code> (<code class="common-lisp library macro operator">oldf</code> <var>a</var>) 10)
+          <var>a</var>))
+&rArr; 5, 10</code></pre>
+            </div>
+            <div class="scroll">
+              <pre class="example"><code class="common-lisp">(<code class="common-lisp standard special-operator operator">let</code> ((<var>list</var> '(1 2 3)))
+  (<code class="common-lisp standard function operator">values</code> (<code class="common-lisp standard macro operator">push</code> 0 (<code class="common-lisp library macro operator">oldf</code> <var>list</var>))
+          <var>list</var>))
+&rArr; (1 2 3), (0 1 2 3)</code></pre>
+            </div>
+          </dd>
+        </dl>
+
+      </section>
+
+      <section id="readf">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#readf" class="anchor">⚓</a>
+          </span>
+          <div class="breadcrumbs">
+            <a href="#">place-utils</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">readf</a></span>
+          </div>
+        </h1>
+
+        <p class="description">Easily make a place work in non-place contexts.</p>
+
+        <dl>
+          <dt><pre>Accessor Modifier <code class="common-lisp library macro operator">readf</code> <var>place</var></pre></dt>
+          <dd>
+            <p>This is a most highly trivial accessor modifier useful to easily make a place work in non-place contexts.</p>
+            <p>A recurring pattern is that you invent a new type of place modifier, so you define a new setf-expander. When the place modifier is called in a regular, non-place context, you just want to evaluate the subforms appropriately and then read the place.</p>
+            <p>To use <code class="common-lisp library macro operator">readf</code>, simply make a macro with the same name and parameters as the setf-expander. Expand to <code class="common-lisp">`(readf ,<var>whole</var>)</code>, where <var>whole</var> is the <var>&amp;whole</var> variable in your lambda list. (Don't worry, this doesn't result in an infinite recursive expansion.)</p>
+            <p>(I'm still wondering if <code class="common-lisp library macro operator">readf</code> makes any sense at all or if there's a much simpler way to do this... <code class="common-lisp library macro operator">cachef</code>, <code class="common-lisp library macro operator">oldf</code> and <code class="common-lisp library macro operator">tracef</code> use it so there appears to be at least some marginal value...)</p>
+          </dd>
+        </dl>
+
+      </section>
+
+      <section id="tracef">
+
+        <h1 class="breadcrumbs-bar">
+          <span class="section-relative-nav">
+            <a href="#tracef" class="anchor">⚓</a>
+          </span>
+          <div class="breadcrumbs">
+            <a href="#">place-utils</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">tracef</a></span>
+          </div>
+        </h1>
+
+        <p class="description">Output debug info when a particular place is accessed.</p>
+
+        <dl>
+          <dt><pre>Accessor Modifier <code class="common-lisp library macro operator">tracef</code> <var>place</var></pre></dt>
+          <dd>
+            <p><code class="common-lisp library macro operator">tracef</code> returns the setf-expander of <var>place</var>, modified so that relevant debug information is printed (in an unspecified format) on <code class="common-lisp standard variable">*trace-output*</code> as well as performing the normal behavior.</p>
+            <p>Debug information is printed when a subform is evaluated and when the place is read from or written to.</p>
+            <div class="scroll">
+              <pre class="example"><code class="common-lisp">(let ((a (list 2)))
+  (incf (tracef (car (print a)))
+        3))
+-| (2)
+-| TRACEF: Place: (CAR (PRINT A))
+-| TRACEF: Action: Evaluate Subform
+-| TRACEF: Subform: (PRINT A)
+-| TRACEF: Result: (2)
+-|
+-| TRACEF: Place: (CAR (PRINT A))
+-| TRACEF: Action: Read
+-| TRACEF: Values: (2)
+-|
+-| TRACEF: Place: (CAR (PRINT A))
+-| TRACEF: Action: Write
+-| TRACEF: Values: (5)
+&rArr; 5
+</code></pre>
+            </div>
+          </dd>
+        </dl>
+
+      </section>
 
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fplace-utils%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

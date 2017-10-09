@@ -1,5 +1,3 @@
-#dependencies-table {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
+#footer .main > a.caution {
+    color: orange;
 }

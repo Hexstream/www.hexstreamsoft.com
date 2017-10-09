@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
     <link rel="author" href="https://www.hexstreamsoft.com/introduction.html" />
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <meta name="description" content="15 ready-to-use libraries in Quicklisp, with many more to come!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Public Domain Common Lisp libraries by Jean-Philippe Paradis | HexstreamSoft</title>
     <link href="../css/global.css" rel="stylesheet" type="text/css" />
     <link href="https://global.hexstreamsoft.com/css/factsheet.css" rel="stylesheet" type="text/css" />
@@ -17,16 +19,14 @@
 
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="../">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a class="here">Libraries</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a class="here">Libraries</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/libraries/">
@@ -44,82 +44,31 @@
           <a href="map-bind/">Start browsing library pages</a>
         </nav>
 
-        <div class="float-clear"></div>
+      </div>
 
-      </nav>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-11-11">11 november 2015</time><span>.</span></p>
 
-      <nav class="ancestors-nav">
+    </nav>
 
-        <div class="level-separator"></div>
+    <nav class="ancestors-nav">
 
-        <nav class="navbox" id="projects_navbox">
-          <h1>
-            <a class="here">
-              Libraries
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
-            <li>
-              <a href="#macros" class="inlining-node">Macros</a>
-              <ul class="inlined-nodes">
-                <li><a href="#simple-macros">Simple</a></li>
-                <li><a href="#extensible-macros">Extensible</a></li>
-                <li><a href="#macro-utilities">Utilities</a></li>
-              </ul>
-            </li>
-            <li><a href="#data-structures">Data structures</a></li>
-            <li><a href="#uncategorized">Uncategorized</a></li>
-          </ul>
-          <ul>
-            <li>
-              <a href="releases/" class="inlining-node">Releases</a>
-              <ul class="inlined-nodes">
-                <li>
-                  <a href="releases/latest-versions/">Latest versions</a>
-                </li>
-                <li>
-                  <a href="releases/timeline/">Timeline</a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="dependencies/">Dependencies</a></li>
-            <li><a href="external-pages-xref/">External pages xref</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1>
-            <a href="../">
-              HexstreamSoft
-            </a>
-          </h1>
-          <ul>
-            <li>
-              <a class="here">
-                Libraries
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li><a href="../articles/">Articles</a></li>
-            <li><a href="../accounts/">Accounts</a></li>
-            <li><a href="../resources/">Resources</a></li>
+            <li><a class="here">Libraries</a></li>
+            <li><a href="https://www.hexstreamsoft.com/articles/">Articles</a></li>
+            <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
+            <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
           <ul>
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
-
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-11-11">11 november 2015</time><span>.</span></p>
 
     <main>
 
@@ -128,156 +77,148 @@
         <p class="description">15 ready-to-use libraries in Quicklisp, with many more to come!</p>
       </header>
 
-      <nav class="navbox-groups contains-direct-links">
+      <nav class="tab-groups" id="libraries-index">
 
-        <nav>
-
+        <nav class="tabs contains-title">
           <h1><a href="#macros">Macros</a></h1>
-
-          <div class="body">
-            <nav class="navbox">
-              <h1>
-                <a href="#simple-macros">Simple macros</a>
-              </h1>
+          <ul>
+            <li class="contains-children">
+              <a href="#simple-macros">Simple macros</a>
               <ul>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#map-bind">map-bind</a>
                   <a href="map-bind/" class="direct-link"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#positional-lambda">positional-lambda</a>
                   <a href="positional-lambda/" class="direct-link"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#enhanced-eval-when">enhanced-eval-when</a>
                   <a href="enhanced-eval-when/" class="direct-link"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#enhanced-multiple-value-bind">enhanced-multiple-value-bind</a>
                   <a href="enhanced-multiple-value-bind/" class="direct-link"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#macro-level">macro-level</a>
                   <a href="macro-level/" class="direct-link"><span>⬈</span></a>
                 </li>
               </ul>
-            </nav>
-
-            <nav class="navbox">
-              <h1>
-                <a href="#extensible-macros">Extensible macros</a>
-              </h1>
+            </li>
+            <li class="contains-children">
+              <a href="#extensible-macros">Extensible macros</a>
               <ul>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#cartesian-product-switch">cartesian-product-switch</a>
                   <a href="cartesian-product-switch/" class="direct-link"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#place-modifiers">place-modifiers</a>
                   <a href="place-modifiers/" class="direct-link"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#anaphoric-variants">anaphoric-variants</a>
                   <a href="anaphoric-variants/" class="direct-link"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#multiple-value-variants">multiple-value-variants</a>
                   <a href="multiple-value-variants/" class="direct-link"><span>⬈</span></a>
                 </li>
               </ul>
-            </nav>
-
-            <nav class="navbox">
-              <h1>
-                <a href="#macro-utilities">Macro utilities</a>
-              </h1>
+            </li>
+            <li class="contains-children">
+              <a href="#macro-utilities">Macro utilities</a>
               <ul>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#parse-number-range">parse-number-range</a>
                   <a href="parse-number-range/" class="direct-link"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#bubble-operator-upwards">bubble-operator-upwards</a>
                   <a href="bubble-operator-upwards/" class="direct-link"><span>⬈</span></a>
                 </li>
               </ul>
-            </nav>
-
-          </div>
-
+            </li>
+          </ul>
         </nav>
 
-        <nav class="anonymous">
-
-          <div class="body">
-
-            <nav class="navbox">
-              <h1>
-                <a href="#data-structures">Data structures</a>
-              </h1>
+        <nav class="tabs contains-title">
+          <h1><a>&nbsp;</a></h1>
+          <ul>
+            <li class="contains-children">
+              <a href="#data-structures">Data structures</a>
               <ul>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#incognito-keywords">incognito-keywords</a>
                   <a href="incognito-keywords/" class="direct-link"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#symbol-namespaces">symbol-namespaces</a>
                   <a href="symbol-namespaces/" class="direct-link"><span>⬈</span></a>
                 </li>
               </ul>
-            </nav>
-
-            <nav class="navbox">
-              <h1>
-                <a href="#uncategorized">Uncategorized</a>
-              </h1>
+            </li>
+            <li class="contains-children">
+              <a href="#uncategorized">Uncategorized</a>
               <ul>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#clhs">clhs</a>
                   <a href="clhs/" class="direct-link"><span>⬈</span></a>
                 </li>
-                <li>
+                <li class="contains-direct-link">
                   <a href="#place-utils">place-utils</a>
                   <a href="place-utils/" class="direct-link"><span>⬈</span></a>
                 </li>
               </ul>
-            </nav>
-
-          </div>
-
+            </li>
+          </ul>
         </nav>
 
       </nav>
 
-      <div class="notice note">
-        <b>ℹ</b>
-        <div>
-          <p>This page is undergoing a redesign.<br />Thank you for your patience!</p>
-        </div>
-      </div>
+      <nav class="tabs" id="misc-index">
+        <ul>
+          <li class="contains-children">
+            <a href="releases/">Releases</a>
+            <ul>
+              <li>
+                <a href="releases/latest-versions/">Latest versions</a>
+              </li>
+              <li>
+                <a href="releases/timeline/">Timeline</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="dependencies/">Dependencies</a></li>
+          <li><a href="external-pages-xref/">External pages xref</a></li>
+        </ul>
+      </nav>
 
       <section id="macros">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#macros" class="anchor">⚓</a>
           </span>
-          <a href="#">Libraries</a>
-          <span class="separator"> » </span>
-          <a class="here">Macros</a>
+          <div class="breadcrumbs">
+            <a href="#">Libraries</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Macros</a></span>
+          </div>
         </h1>
 
         <section id="simple-macros">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#simple-macros" class="anchor">⚓</a>
             </span>
-            <a href="#">Libraries</a>
-            <span class="separator"> » </span>
-            <a href="#macros">Macros</a>
-            <span class="separator"> » </span>
-            <a class="here">Simple macros</a>
+            <div class="breadcrumbs">
+              <a href="#">Libraries</a>
+              <span class="crumb"><span class="s"> » </span><a href="#macros">Macros</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Simple macros</a></span>
+            </div>
           </h1>
 
           <p class="description">Macros that don't need to be extensible.</p>
@@ -286,14 +227,14 @@
 
             <header>
 
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
-                  <span class="of">1/5</span>
                   <a href="#map-bind" class="anchor">⚓</a>
                 </span>
-                <a class="ellipsis">...</a>
-                <span class="separator"> » </span>
-                <a class="here">map-bind</a>
+                <div class="breadcrumbs">
+                  <a class="ellipsis">...</a>
+                  <span class="crumb"><span class="s"> » </span><a class="here">map-bind</a></span>
+                </div>
               </h1>
 
               <a href="map-bind/" class="details-link">Go to library page ⬈</a>
@@ -302,18 +243,9 @@
 
             <div class="summary">
 
-              <div class="main">
+              <p class="description">Allows visual grouping of variables with their corresponding values (not necessarily 1:1) in calls to mapping operators when using an inline LAMBDA. Does so in a way that automatically supports virtually every existing and future mapping operator, all lambda keywords and FUNCALL/APPLY/MULTIPLE-VALUE-CALL variations.</p>
 
-                <p class="description">Allows visual grouping of variables with their corresponding values (not necessarily 1:1) in calls to mapping operators when using an inline LAMBDA. Does so in a way that automatically supports virtually every existing and future mapping operator, all lambda keywords and FUNCALL/APPLY/MULTIPLE-VALUE-CALL variations.</p>
-
-                <div class="examples">
-                  <p>TODO: example(s)</p>
-                </div>
-
-              </div>
-
-              <div class="extra">
-
+              <div class="scroll">
                 <table class="factsheet">
                   <tbody>
                     <tr>
@@ -328,7 +260,6 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
 
             </div>
@@ -339,14 +270,14 @@
 
             <header>
 
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
-                  <span class="of">2/5</span>
                   <a href="#positional-lambda" class="anchor">⚓</a>
                 </span>
-                <a class="ellipsis">...</a>
-                <span class="separator"> » </span>
-                <a class="here">positional-lambda</a>
+                <div class="breadcrumbs">
+                  <a class="ellipsis">...</a>
+                  <span class="crumb"><span class="s"> » </span><a class="here">positional-lambda</a></span>
+                </div>
               </h1>
 
               <a href="positional-lambda/" class="details-link">Go to library page ⬈</a>
@@ -355,18 +286,9 @@
 
             <div class="summary">
 
-              <div class="main">
+              <p class="description">A concise, intuitive and flexible syntax for trivial lambdas that eschews explicit (and often contextually-redundant) naming of parameter variables in favor of positional references, with support for a used or ignored &amp;rest parameter and automatic declaration of ignored parameters when logical "gaps" are left in the positional references. Further convenience features are provided.</p>
 
-                <p class="description">A concise, intuitive and flexible syntax for trivial lambdas that eschews explicit (and often contextually-redundant) naming of parameter variables in favor of positional references, with support for a used or ignored &amp;rest parameter and automatic declaration of ignored parameters when logical "gaps" are left in the positional references. Further convenience features are provided.</p>
-
-                <div class="examples">
-                  <p>TODO: example(s)</p>
-                </div>
-
-              </div>
-
-              <div class="extra">
-
+              <div class="scroll">
                 <table class="factsheet">
                   <tbody>
                     <tr>
@@ -381,7 +303,6 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
 
             </div>
@@ -392,14 +313,14 @@
 
             <header>
 
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
-                  <span class="of">3/5</span>
                   <a href="#enhanced-eval-when" class="anchor">⚓</a>
                 </span>
-                <a class="ellipsis">...</a>
-                <span class="separator"> » </span>
-                <a class="here">enhanced-eval-when</a>
+                <div class="breadcrumbs">
+                  <a class="ellipsis">...</a>
+                  <span class="crumb"><span class="s"> » </span><a class="here">enhanced-eval-when</a></span>
+                </div>
               </h1>
 
               <a href="enhanced-eval-when/" class="details-link">Go to library page ⬈</a>
@@ -408,18 +329,12 @@
 
             <div class="summary">
 
-              <div class="main">
-
-                <p class="description">Provides an enhanced EVAL-WHEN macro that supports<br /><code>(eval-when t ...)</code> as a shorthand for<br /><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code>, addressing concerns about verbosity. An ENHANCED-EVAL-WHEN alias is also supported, as well as an EVAL-ALWAYS macro and package nickname, for good measure.</p>
-
-                <div class="examples">
-                  <p>TODO: example(s)</p>
-                </div>
-
+              <div class="description">
+                <p>Provides an enhanced EVAL-WHEN macro that supports<br /><code>(eval-when t ...)</code> as a shorthand for<br /><code>(eval-when (:compile-toplevel :load-toplevel :execute) ...)</code>, addressing concerns about verbosity. An ENHANCED-EVAL-WHEN alias is also supported, as well as an EVAL-ALWAYS macro and package nickname, for good measure.</p>
+                <p>As <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_eval_w.htm">eval-when</a></code> with all situations specified is used an overwhelming majority of the time by most users, these shorthands can really come handy!</p>
               </div>
 
-              <div class="extra">
-
+              <div class="scroll">
                 <table class="factsheet">
                   <tbody>
                     <tr>
@@ -434,7 +349,6 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
 
             </div>
@@ -445,14 +359,14 @@
 
             <header>
 
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
-                  <span class="of">4/5</span>
                   <a href="#enhanced-multiple-value-bind" class="anchor">⚓</a>
                 </span>
-                <a class="ellipsis">...</a>
-                <span class="separator"> » </span>
-                <a class="here">enhanced-multiple-value-bind</a>
+                <div class="breadcrumbs">
+                  <a class="ellipsis">...</a>
+                  <span class="crumb"><span class="s"> » </span><a class="here">enhanced-multiple-value-bind</a></span>
+                </div>
               </h1>
 
               <a href="enhanced-multiple-value-bind/" class="details-link">Go to library page ⬈</a>
@@ -461,18 +375,9 @@
 
             <div class="summary">
 
-              <div class="main">
+              <p class="description">Provides an enhanced MULTIPLE-VALUE-BIND macro that adds support for lambda keywords by expanding to a MULTIPLE-VALUE-CALL when necessary. This makes catching multiple-value &amp;rest and &amp;key much more lightweight and convenient. A MULTIPLE-VALUE-&amp;BIND alias is supported.</p>
 
-                <p class="description">Provides an enhanced MULTIPLE-VALUE-BIND macro that adds support for lambda keywords by expanding to a MULTIPLE-VALUE-CALL when necessary. This makes catching multiple-value &amp;rest and &amp;key much more lightweight and convenient. A MULTIPLE-VALUE-&amp;BIND alias is supported.</p>
-
-                <div class="examples">
-                  <p>TODO: example(s)</p>
-                </div>
-
-              </div>
-
-              <div class="extra">
-
+              <div class="scroll">
                 <table class="factsheet">
                   <tbody>
                     <tr>
@@ -487,7 +392,6 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
 
             </div>
@@ -498,14 +402,14 @@
 
             <header>
 
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
-                  <span class="of">5/5</span>
                   <a href="#macro-level" class="anchor">⚓</a>
                 </span>
-                <a class="ellipsis">...</a>
-                <span class="separator"> » </span>
-                <a class="here">macro-level</a>
+                <div class="breadcrumbs">
+                  <a class="ellipsis">...</a>
+                  <span class="crumb"><span class="s"> » </span><a class="here">macro-level</a></span>
+                </div>
               </h1>
 
               <a href="macro-level/" class="details-link">Go to library page ⬈</a>
@@ -514,18 +418,9 @@
 
             <div class="summary">
 
-              <div class="main">
+              <p class="description">Saves on indentation while being more concise and direct.<br /><code>(macro-level ...)</code> == <code>(macrolet ((m () ...)) (m))</code></p>
 
-                <p class="description">Saves on indentation while being more concise and direct.<br /><code>(macro-level ...)</code> == <code>(macrolet ((m () ...)) (m))</code></p>
-
-                <div class="examples">
-                  <p>TODO: example(s)</p>
-                </div>
-
-              </div>
-
-              <div class="extra">
-
+              <div class="scroll">
                 <table class="factsheet">
                   <tbody>
                     <tr>
@@ -540,7 +435,6 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
 
             </div>
@@ -557,15 +451,15 @@
 
         <section id="extensible-macros">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#extensible-macros" class="anchor">⚓</a>
             </span>
-            <a href="#">Libraries</a>
-            <span class="separator"> » </span>
-            <a href="#macros">Macros</a>
-            <span class="separator"> » </span>
-            <a class="here">Extensible macros</a>
+            <div class="breadcrumbs">
+              <a href="#">Libraries</a>
+              <span class="crumb"><span class="s"> » </span><a href="#macros">Macros</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Extensible macros</a></span>
+            </div>
           </h1>
 
           <p class="description">Language extensions implemented as extensible macros.</p>
@@ -574,14 +468,14 @@
 
             <header>
 
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
-                  <span class="of">1/4</span>
                   <a href="#cartesian-product-switch" class="anchor">⚓</a>
                 </span>
-                <a class="ellipsis">...</a>
-                <span class="separator"> » </span>
-                <a class="here">cartesian-product-switch</a>
+                <div class="breadcrumbs">
+                  <a class="ellipsis">...</a>
+                  <span class="crumb"><span class="s"> » </span><a class="here">cartesian-product-switch</a></span>
+                </div>
               </h1>
 
               <a href="cartesian-product-switch/" class="details-link">Go to library page ⬈</a>
@@ -590,18 +484,9 @@
 
             <div class="summary">
 
-              <div class="main">
+              <p class="description">Chooses the appropriate form to execute according to the combined results of multiple tests. This is a straightforward and efficient alternative to the convoluted ad-hoc conditionals one might otherwise resort to.</p>
 
-                <p class="description">Chooses the appropriate form to execute according to the combined results of multiple tests. This is a straightforward and efficient alternative to the convoluted ad-hoc conditionals one might otherwise resort to.</p>
-
-                <div class="examples">
-                  <p>TODO: example(s)</p>
-                </div>
-
-              </div>
-
-              <div class="extra">
-
+              <div class="scroll">
                 <table class="factsheet">
                   <tbody>
                     <tr>
@@ -616,7 +501,6 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
 
             </div>
@@ -627,14 +511,14 @@
 
             <header>
 
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
-                  <span class="of">2/4</span>
                   <a href="#place-modifiers" class="anchor">⚓</a>
                 </span>
-                <a class="ellipsis">...</a>
-                <span class="separator"> » </span>
-                <a class="here">place-modifiers</a>
+                <div class="breadcrumbs">
+                  <a class="ellipsis">...</a>
+                  <span class="crumb"><span class="s"> » </span><a class="here">place-modifiers</a></span>
+                </div>
               </h1>
 
               <a href="place-modifiers/" class="details-link">Go to library page ⬈</a>
@@ -643,18 +527,9 @@
 
             <div class="summary">
 
-              <div class="main">
+              <p class="description">Essentially gives access to hundreds of modify-macros through one single macro: MODIFY.</p>
 
-                <p class="description">Essentially gives access to hundreds of modify-macros through one single macro: MODIFY.</p>
-
-                <div class="examples">
-                  <p>TODO: example(s)</p>
-                </div>
-
-              </div>
-
-              <div class="extra">
-
+              <div class="scroll">
                 <table class="factsheet">
                   <tbody>
                     <tr>
@@ -669,7 +544,6 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
 
             </div>
@@ -680,14 +554,14 @@
 
             <header>
 
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
-                  <span class="of">3/4</span>
                   <a href="#anaphoric-variants" class="anchor">⚓</a>
                 </span>
-                <a class="ellipsis">...</a>
-                <span class="separator"> » </span>
-                <a class="here">anaphoric-variants</a>
+                <div class="breadcrumbs">
+                  <a class="ellipsis">...</a>
+                  <span class="crumb"><span class="s"> » </span><a class="here">anaphoric-variants</a></span>
+                </div>
               </h1>
 
               <a href="anaphoric-variants/" class="details-link">Go to library page ⬈</a>
@@ -696,18 +570,9 @@
 
             <div class="summary">
 
-              <div class="main">
+              <p class="description">Gives access to anaphoric variants of operators through one macro: ANAPHORIC. The user explicitly provides a variable name, preserving sanity, in contrast to the traditional use of an evil implicit variable (&quot;IT&quot;). Some operators can bind additional handy variables when explicitly requested.</p>
 
-                <p class="description">Gives access to anaphoric variants of operators through one macro: ANAPHORIC. The user explicitly provides a variable name, preserving sanity, in contrast to the traditional use of an evil implicit variable (&quot;IT&quot;). Some operators can bind additional handy variables when explicitly requested.</p>
-
-                <div class="examples">
-                  <p>TODO: example(s)</p>
-                </div>
-
-              </div>
-
-              <div class="extra">
-
+              <div class="scroll">
                 <table class="factsheet">
                   <tbody>
                     <tr>
@@ -722,7 +587,6 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
 
             </div>
@@ -733,14 +597,14 @@
 
             <header>
 
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
-                  <span class="of">4/4</span>
                   <a href="#multiple-value-variants" class="anchor">⚓</a>
                 </span>
-                <a class="ellipsis">...</a>
-                <span class="separator"> » </span>
-                <a class="here">multiple-value-variants</a>
+                <div class="breadcrumbs">
+                  <a class="ellipsis">...</a>
+                  <span class="crumb"><span class="s"> » </span><a class="here">multiple-value-variants</a></span>
+                </div>
               </h1>
 
               <a href="multiple-value-variants/" class="details-link">Go to library page ⬈</a>
@@ -749,18 +613,9 @@
 
             <div class="summary">
 
-              <div class="main">
+              <p class="description">Gives access to multiple-value variants of operators through one macro: MULTIPLE-VALUE. There are built-in variants for some standard operators; it's easy to create your own variants for other operators. The multiple-value mapping operators are especially useful.</p>
 
-                <p class="description">Gives access to multiple-value variants of operators through one macro: MULTIPLE-VALUE. There are built-in variants for some standard operators; it's easy to create your own variants for other operators. The multiple-value mapping operators are especially useful.</p>
-
-                <div class="examples">
-                  <p>TODO: example(s)</p>
-                </div>
-
-              </div>
-
-              <div class="extra">
-
+              <div class="scroll">
                 <table class="factsheet">
                   <tbody>
                     <tr>
@@ -775,7 +630,6 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
 
             </div>
@@ -792,15 +646,15 @@
 
         <section id="macro-utilities">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#macro-utilities" class="anchor">⚓</a>
             </span>
-            <a href="#">Libraries</a>
-            <span class="separator"> » </span>
-            <a href="#macros">Macros</a>
-            <span class="separator"> » </span>
-            <a class="here">Macro utilities</a>
+            <div class="breadcrumbs">
+              <a href="#">Libraries</a>
+              <span class="crumb"><span class="s"> » </span><a href="#macros">Macros</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Macro utilities</a></span>
+            </div>
           </h1>
 
           <p class="description">Utilities that help write macros more easily.</p>
@@ -809,14 +663,14 @@
 
             <header>
 
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
-                  <span class="of">1/2</span>
                   <a href="#parse-number-range" class="anchor">⚓</a>
                 </span>
-                <a class="ellipsis">...</a>
-                <span class="separator"> » </span>
-                <a class="here">parse-number-range</a>
+                <div class="breadcrumbs">
+                  <a class="ellipsis">...</a>
+                  <span class="crumb"><span class="s"> » </span><a class="here">parse-number-range</a></span>
+                </div>
               </h1>
 
               <a href="parse-number-range/" class="details-link">Go to library page ⬈</a>
@@ -825,18 +679,9 @@
 
             <div class="summary">
 
-              <div class="main">
+              <p class="description">Parses LOOP's convenient &quot;for-as-arithmetic&quot; syntax into 5 simple values: from, to, limit-kind (:inclusive, :exclusive or nil if unbounded), by (step) and direction (+ or -). Further related utilities are provided. Intended for easy implementation of analogous functionality in other constructs.</p>
 
-                <p class="description">Parses LOOP's convenient &quot;for-as-arithmetic&quot; syntax into 5 simple values: from, to, limit-kind (:inclusive, :exclusive or nil if unbounded), by (step) and direction (+ or -). Further related utilities are provided. Intended for easy implementation of analogous functionality in other constructs.</p>
-
-                <div class="examples">
-                  <p>TODO: example(s)</p>
-                </div>
-
-              </div>
-
-              <div class="extra">
-
+              <div class="scroll">
                 <table class="factsheet">
                   <tbody>
                     <tr>
@@ -851,7 +696,6 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
 
             </div>
@@ -862,14 +706,14 @@
 
             <header>
 
-              <h1 class="breadcrumbs">
+              <h1 class="breadcrumbs-bar">
                 <span class="section-relative-nav">
-                  <span class="of">2/2</span>
                   <a href="#bubble-operator-upwards" class="anchor">⚓</a>
                 </span>
-                <a class="ellipsis">...</a>
-                <span class="separator"> » </span>
-                <a class="here">bubble-operator-upwards</a>
+                <div class="breadcrumbs">
+                  <a class="ellipsis">...</a>
+                  <span class="crumb"><span class="s"> » </span><a class="here">bubble-operator-upwards</a></span>
+                </div>
               </h1>
 
               <a href="bubble-operator-upwards/" class="details-link">Go to library page ⬈</a>
@@ -878,18 +722,9 @@
 
             <div class="summary">
 
-              <div class="main">
+              <p class="description">Demultiplexes all alternative branches in a form by way of cartesian product. This operation is notably useful for easy implementation of certain kinds of shorthand notations in macros. A cartesian-product function is also exported, as it's needed to implement the main function.</p>
 
-                <p class="description">Demultiplexes all alternative branches in a form by way of cartesian product. This operation is notably useful for easy implementation of certain kinds of shorthand notations in macros. A cartesian-product function is also exported, as it's needed to implement the main function.</p>
-
-                <div class="examples">
-                  <p>TODO: example(s)</p>
-                </div>
-
-              </div>
-
-              <div class="extra">
-
+              <div class="scroll">
                 <table class="factsheet">
                   <tbody>
                     <tr>
@@ -904,7 +739,6 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
 
             </div>
@@ -929,13 +763,14 @@
 
       <section id="data-structures">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#data-structures" class="anchor">⚓</a>
           </span>
-          <a href="#">Libraries</a>
-          <span class="separator"> » </span>
-          <a class="here">Data structures</a>
+          <div class="breadcrumbs">
+            <a href="#">Libraries</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Data structures</a></span>
+          </div>
         </h1>
 
         <p class="description">Don't neglect your data structures, lest they become data strictures!</p>
@@ -944,14 +779,14 @@
 
           <header>
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
-                <span class="of">1/2</span>
                 <a href="#incognito-keywords" class="anchor">⚓</a>
               </span>
-              <a class="ellipsis">...</a>
-              <span class="separator"> » </span>
-              <a class="here">incognito-keywords</a>
+              <div class="breadcrumbs">
+                <a class="ellipsis">...</a>
+                <span class="crumb"><span class="s"> » </span><a class="here">incognito-keywords</a></span>
+              </div>
             </h1>
 
             <a href="incognito-keywords/" class="details-link">Go to library page ⬈</a>
@@ -960,18 +795,9 @@
 
           <div class="summary">
 
-            <div class="main">
+            <p class="description">Introduces a new kind of keyword that looks just like any non-keyword symbol and allows safe usage of convenient but clashy symbol names by multiple libraries without conflicts through sharing. Some names that might benefit are <code>alist</code>, <code>blist</code>, <code>plist</code>, <code>macro</code>, <code>operator</code>, <code>index</code>, <code>&amp;doc</code>, <code>&amp;decl</code>, <code>&amp;rest+</code>, <code>&amp;destructure</code>, <code>&amp;ignored</code> and <code>&amp;ignorable</code>.</p>
 
-              <p class="description">Introduces a new kind of keyword that looks just like any non-keyword symbol and allows safe usage of convenient but clashy symbol names by multiple libraries without conflicts through sharing. Some names that might benefit are (alist blist plist macro operator index &amp;doc &amp;decl &amp;rest+ &amp;destructure &amp;ignored &amp;ignorable).</p>
-
-              <div class="examples">
-                <p>TODO: example(s)</p>
-              </div>
-
-            </div>
-
-            <div class="extra">
-
+            <div class="scroll">
               <table class="factsheet">
                 <tbody>
                   <tr>
@@ -986,8 +812,7 @@
                   </tr>
                 </tbody>
               </table>
-
-            </div>
+              </div>
 
           </div>
 
@@ -997,14 +822,14 @@
 
           <header>
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
-                <span class="of">2/2</span>
                 <a href="#symbol-namespaces" class="anchor">⚓</a>
               </span>
-              <a class="ellipsis">...</a>
-              <span class="separator"> » </span>
-              <a class="here">symbol-namespaces</a>
+              <div class="breadcrumbs">
+                <a class="ellipsis">...</a>
+                <span class="crumb"><span class="s"> » </span><a class="here">symbol-namespaces</a></span>
+              </div>
             </h1>
 
             <a href="symbol-namespaces/" class="details-link">Go to library page ⬈</a>
@@ -1013,18 +838,9 @@
 
           <div class="summary">
 
-            <div class="main">
+            <p class="description">Defines a new kind of package that's named by a symbol rather than a string and that maps from existing symbols to their respective "implicitly managed" counterparts. The motivating use-case is to conceptually allow multiple definitions of the same kind on a single symbol, without conflicts.</p>
 
-              <p class="description">Defines a new kind of package that's named by a symbol rather than a string and that maps from existing symbols to their respective "implicitly managed" counterparts. The motivating use-case is to conceptually allow multiple definitions of the same kind on a single symbol, without conflicts.</p>
-
-              <div class="examples">
-                <p>TODO: example(s)</p>
-              </div>
-
-            </div>
-
-            <div class="extra">
-
+            <div class="scroll">
               <table class="factsheet">
                 <tbody>
                   <tr>
@@ -1039,8 +855,7 @@
                   </tr>
                 </tbody>
               </table>
-
-            </div>
+              </div>
 
           </div>
 
@@ -1056,13 +871,14 @@
 
       <section id="uncategorized">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#uncategorized" class="anchor">⚓</a>
           </span>
-          <a href="#">Libraries</a>
-          <span class="separator"> » </span>
-          <a class="here">Uncategorized</a>
+          <div class="breadcrumbs">
+            <a href="#">Libraries</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Uncategorized</a></span>
+          </div>
         </h1>
 
         <p class="description">Odds and ends to reach ends against all odds.</p>
@@ -1071,14 +887,14 @@
 
           <header>
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
-                <span class="of">1/2</span>
                 <a href="#clhs" class="anchor">⚓</a>
               </span>
-              <a class="ellipsis">...</a>
-              <span class="separator"> » </span>
-              <a class="here">clhs</a>
+              <div class="breadcrumbs">
+                <a class="ellipsis">...</a>
+                <span class="crumb"><span class="s"> » </span><a class="here">clhs</a></span>
+              </div>
             </h1>
 
             <a href="clhs/" class="details-link">Go to library page ⬈</a>
@@ -1087,18 +903,9 @@
 
           <div class="summary">
 
-            <div class="main">
+            <p class="description">Intends to make it even easier to install a copy of the CLHS locally.</p>
 
-              <p class="description">Intends to make it even easier to install a copy of the CLHS locally.</p>
-
-              <div class="examples">
-                <p>TODO: example(s)</p>
-              </div>
-
-            </div>
-
-            <div class="extra">
-
+            <div class="scroll">
               <table class="factsheet">
                 <tbody>
                   <tr>
@@ -1117,8 +924,7 @@
                   </tr>
                 </tbody>
               </table>
-
-            </div>
+              </div>
 
           </div>
 
@@ -1128,14 +934,14 @@
 
           <header>
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
-                <span class="of">2/2</span>
                 <a href="#place-utils" class="anchor">⚓</a>
               </span>
-              <a class="ellipsis">...</a>
-              <span class="separator"> » </span>
-              <a class="here">place-utils</a>
+              <div class="breadcrumbs">
+                <a class="ellipsis">...</a>
+                <span class="crumb"><span class="s"> » </span><a class="here">place-utils</a></span>
+              </div>
             </h1>
 
             <a href="place-utils/" class="details-link">Go to library page ⬈</a>
@@ -1144,18 +950,9 @@
 
           <div class="summary">
 
-            <div class="main">
+            <p class="description">Provides a few utilities relating to setfable places.</p>
 
-              <p class="description">Provides a few utilities relating to setfable places.</p>
-
-              <div class="examples">
-                <p>TODO: example(s)</p>
-              </div>
-
-            </div>
-
-            <div class="extra">
-
+            <div class="scroll">
               <table class="factsheet">
                 <tbody>
                   <tr>
@@ -1170,8 +967,7 @@
                   </tr>
                 </tbody>
               </table>
-
-            </div>
+              </div>
 
           </div>
 
@@ -1189,11 +985,17 @@
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

@@ -1,30 +1,40 @@
-main {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-#page-header h1 {
-    font-size: 4em;
-    letter-spacing: 0.15em;
-}
-
 #page-header .description {
     font-size: x-large;
-    letter-spacing: 0.1em;
-    word-spacing: -0.05em;
+    margin-top: 0.2em;
+    line-height: 1.4em;
 }
 
-#page-header p + p {
-    margin-top: 0.4em;
+@media (max-width: 36em) {
+    .navlist section.contains-extras {
+        flex-flow: column;
+    }
+
+    .navlist section.contains-extras > .extras {
+        justify-content: flex-start;
+        padding-left: 0.5em;
+    }
 }
 
-#twitter-quick-link {
-    background-image: url("images/twitter-logo.png");
+@media (min-width: 34em) {
+    #page-header h1 {
+        font-size: 4em;
+        letter-spacing: 0.15em;
+    }
+
+    #page-header .description {
+        letter-spacing: 0.1em;
+        word-spacing: -0.05em;
+    }
+
+    #page-header p + p {
+        margin-top: 0.4em;
+    }
 }
 
-#github-quick-link {
-    background-image: url("images/github-logo.png");
-    background-size: 2.4em;
+@media (max-width: 24em) {
+    #page-header h1 {
+        font-size: 13vw;
+    }
 }
 
 #prominent {
@@ -36,24 +46,20 @@ main {
 
 #prominent .notice {
     height: 5em;
-
     border-color: transparent;
-    margin: 0 0 1em;
+    margin: 0;
 }
 
 #prominent .notice:before {
     content: "";
+    flex: none;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 5em;
-    height: 5em;
+    min-height: 5em;
     background-size: contain;
     margin-right: 0.5em;
     opacity: 0.75;
-}
-
-#prominent .notice p {
-    width: 26.5em;
 }
 
 #prominent .notice strong {
@@ -67,15 +73,34 @@ main {
 
 #best-viewed-in {
     border-top: dashed medium #DDDDDD;
-    margin-bottom: -1em;
 }
 
 #best-viewed-in p {
     text-align: center;
-    line-height: 1.8em;
+    margin: 0.7em 0;
     opacity: 0.6;
 }
 
-#best-viewed-in .multiline-parentheses {
-    padding: 0 0.8em;
+.navlist > section .quick-links {
+    display: flex;
+    flex-flow: row wrap;
+    flex: none;
+    align-items: stretch;
+}
+
+.navlist > section .quick-links > a {
+    display: flex;
+    align-items: center;
+}
+
+#twitter-quick-link {
+    background-image: url("https://global.hexstreamsoft.com/images/logos/twitter.svg");
+}
+
+#github-quick-link {
+    background-image: url("https://global.hexstreamsoft.com/images/logos/github.svg");
+}
+
+#discord-quick-link {
+    background-image: url("https://global.hexstreamsoft.com/images/logos/discord.svg");
 }

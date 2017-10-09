@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
     <link rel="author" href="https://www.hexstreamsoft.com/introduction.html" />
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <meta name="description" content="Latest releases and quicklisp availability of public domain Common Lisp libraries by Jean-Philippe Paradis (Hexstream)." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Latest versions | Releases | Libraries | HexstreamSoft</title>
     <link href="../../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="index.css" rel="stylesheet" type="text/css" />
@@ -16,20 +18,16 @@
 
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="../../../">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="../../">Libraries</a>
-          <span class="separator"> » </span>
-          <a href="../">Releases</a>
-          <span class="separator"> » </span>
-          <a class="here">Latest versions</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="../../">Libraries</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../">Releases</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">Latest versions</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/libraries/releases/latest-versions/">
@@ -40,65 +38,49 @@
           </a>
         </nav>
 
-        <div class="float-clear"></div>
+      </div>
 
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-10-15">15 october 2015</time><span>.</span></p>
+
+    </nav>
+
+    <nav class="ancestors-nav">
+
+      <nav class="tabs contains-title">
+        <h1><a href="../">Releases</a></h1>
+        <ul>
+          <li><a class="here">Latest versions</a></li>
+          <li><a href="../timeline/">Timeline</a></li>
+        </ul>
       </nav>
 
-      <nav class="ancestors-nav">
+      <nav class="tabs contains-title">
+        <h1><a href="../../" class="ancestor">Libraries</a></h1>
+        <ul>
+          <li><a href="../../">Categories</a></li>
+          <li><a href="../" class="ancestor">Releases</a></li>
+          <li><a href="../../dependencies/">Dependencies</a></li>
+          <li><a href="../../external-pages-xref/">External pages xref</a></li>
+        </ul>
+      </nav>
 
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="releases_navbox">
-          <h1>
-            <a href="../">Releases</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
-            <li><a class="here">Latest versions <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
-            <li><a href="../timeline/">Timeline</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav id="projects_navbox" class="navbox">
-          <h1>
-            <a href="../../">Libraries</a>
-          </h1>
-          <ul>
-            <li><a href="../../">Categories</a></li>
-            <li><a href="../">Releases <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1>
-            <a href="../../../">HexstreamSoft</a>
-          </h1>
-          <ul>
-            <li>
-              <a href="../../">
-                Libraries
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li><a href="../../../articles/">Articles</a></li>
-            <li><a href="../../../accounts/">Accounts</a></li>
-            <li><a href="../../../resources/">Resources</a></li>
+            <li><a href="https://www.hexstreamsoft.com/libraries/" class="ancestor">Libraries</a></li>
+            <li><a href="https://www.hexstreamsoft.com/articles/">Articles</a></li>
+            <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
+            <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
           <ul>
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
-
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2015-10-15">15 october 2015</time><span>.</span></p>
 
     <main>
 
@@ -109,197 +91,205 @@
 
       <p class="quick-note">Click on the latest release version number to download that version.<br />(But it's usually better to do <code>(<a href="http://www.quicklisp.org/">ql</a>:quickload "<var>library-name</var>")</code>.)</p>
 
-      <table class="navtable">
-        <thead>
-          <tr>
-            <th rowspan="2" class="library-name">Library name</th>
-            <th colspan="2" class="supercolumn">Latest release</th>
-            <th colspan="2" class="supercolumn">Quicklisp availability</th>
-          </tr>
-          <tr>
-            <th class="latest-version">Version</th>
-            <th class="latest-date">Date</th>
-            <th class="quicklisp-latest">Version</th>
-            <th class="quicklisp-since">Unchanged since</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr id="map-bind">
-            <th class="library-name"><a href="../../map-bind/">map-bind</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/map-bind_latest.tar.gz">1.0</a>
-              </div>
-            </td>
-            <td class="latest-date noa">8 aug 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/08/august-2012-update-now-available.html">August 2012</a></td>
-          </tr>
-          <tr id="positional-lambda">
-            <th class="library-name"><a href="../../positional-lambda/">positional-lambda</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/positional-lambda_latest.tar.gz">2.0</a>
-              </div>
-            </td>
-            <td class="latest-date noa">30 sept 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/10/october-2012-dist-update-now-available.html">October 2012</a></td>
-          </tr>
-          <tr id="enhanced-eval-when">
-            <th class="library-name"><a href="../../enhanced-eval-when/">enhanced-eval-when</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/enhanced-eval-when_latest.tar.gz">1.0</a>
-              </div>
-            </td>
-            <td class="latest-date noa">29 oct 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
-          </tr>
-          <tr id="enhanced-multiple-value-bind">
-            <th class="library-name"><a href="../../enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/enhanced-multiple-value-bind_latest.tar.gz">1.0.1</a>
-              </div>
-            </td>
-            <td class="latest-date noa">23 oct 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
-          </tr>
-          <tr id="macro-level">
-            <th class="library-name"><a href="../../macro-level/">macro-level</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/macro-level_latest.tar.gz">1.0.1</a>
-              </div>
-            </td>
-            <td class="latest-date noa">4 oct 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/10/october-2012-dist-update-now-available.html">October 2012</a></td>
-          </tr>
-          <tr id="cartesian-product-switch">
-            <th class="library-name"><a href="../../cartesian-product-switch/">cartesian-product-switch</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/cartesian-product-switch_latest.tar.gz">2.0</a>
-              </div>
-            </td>
-            <td class="latest-date noa">2 sept 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/09/september-2012-update-now-available.html">September 2012</a></td>
-          </tr>
-          <tr id="place-modifiers">
-            <th class="library-name"><a href="../../place-modifiers/">place-modifiers</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/place-modifiers_latest.tar.gz">2.1</a>
-              </div>
-            </td>
-            <td class="latest-date noa">22 oct 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
-          </tr>
-          <tr id="anaphoric-variants">
-            <th class="library-name"><a href="../../anaphoric-variants/">anaphoric-variants</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/anaphoric-variants_latest.tar.gz">1.0.1</a>
-              </div>
-            </td>
-            <td class="latest-date noa">22 sept 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/10/october-2012-dist-update-now-available.html">October 2012</a></td>
-          </tr>
-          <tr id="multiple-value-variants">
-            <th class="library-name"><a href="../../multiple-value-variants/">multiple-value-variants</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/multiple-value-variants_latest.tar.gz">1.0.1</a>
-              </div>
-            </td>
-            <td class="latest-date noa">24 july 2014</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2014/08/august-2014-dist-update-now-available.html">August 2014</a></td>
-          </tr>
-          <tr id="parse-number-range">
-            <th class="library-name"><a href="../../parse-number-range/">parse-number-range</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/parse-number-range_latest.tar.gz">1.0</a>
-              </div>
-            </td>
-            <td class="latest-date noa">26 oct 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
-          </tr>
-          <tr id="bubble-operator-upwards">
-            <th class="library-name"><a href="../../bubble-operator-upwards/">bubble-operator-upwards</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/bubble-operator-upwards_latest.tar.gz">1.0</a>
-              </div>
-            </td>
-            <td class="latest-date noa">4 nov 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
-          </tr>
-          <tr id="incognito-keywords">
-            <th class="library-name"><a href="../../incognito-keywords/">incognito-keywords</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/incognito-keywords_latest.tar.gz">1.0</a>
-              </div>
-            </td>
-            <td class="latest-date noa">28 oct 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/12/december-2012-quicklisp-dist-update-now.html">December 2012</a></td>
-          </tr>
-          <tr id="symbol-namespaces">
-            <th class="library-name"><a href="../../symbol-namespaces/">symbol-namespaces</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/symbol-namespaces_latest.tar.gz">1.0</a>
-              </div>
-            </td>
-            <td class="latest-date noa">9 dec 2012</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/12/december-2012-quicklisp-dist-update-now.html">December 2012</a></td>
-          </tr>
-          <tr id="clhs">
-            <th class="library-name"><a href="../../clhs/">clhs</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/clhs_latest.tar.gz">0.6.3</a>
-              </div>
-            </td>
-            <td class="latest-date noa">12 march 2015</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2015/04/april-2015-quicklisp-dist-update-now.html">April 2015</a></td>
-          </tr>
-          <tr id="place-utils">
-            <th class="library-name"><a href="../../place-utils/">place-utils</a></th>
-            <td class="latest-version">
-              <div>
-                <a href="https://tarballs.hexstreamsoft.com/libraries/latest/place-utils_latest.tar.gz">0.1</a>
-              </div>
-            </td>
-            <td class="latest-date noa">16 april 2011</td>
-            <td class="quicklisp-latest noa good-news">Latest</td>
-            <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/05/may-2012-quicklisp-dist-update.html">May 2012</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="scroll">
+        <table class="navtable">
+          <thead>
+            <tr>
+              <th rowspan="2" class="library-name">Library name</th>
+              <th colspan="2" class="supercolumn">Latest release</th>
+              <th colspan="2" class="supercolumn">Quicklisp availability</th>
+            </tr>
+            <tr>
+              <th class="latest-version">Version</th>
+              <th class="latest-date">Date</th>
+              <th class="quicklisp-latest">Version</th>
+              <th class="quicklisp-since">Unchanged since</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="map-bind">
+              <th class="library-name"><a href="../../map-bind/">map-bind</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/map-bind_latest.tar.gz">1.0</a>
+                </div>
+              </td>
+              <td class="latest-date noa">8 aug 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/08/august-2012-update-now-available.html">August 2012</a></td>
+            </tr>
+            <tr id="positional-lambda">
+              <th class="library-name"><a href="../../positional-lambda/">positional-lambda</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/positional-lambda_latest.tar.gz">2.0</a>
+                </div>
+              </td>
+              <td class="latest-date noa">30 sept 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/10/october-2012-dist-update-now-available.html">October 2012</a></td>
+            </tr>
+            <tr id="enhanced-eval-when">
+              <th class="library-name"><a href="../../enhanced-eval-when/">enhanced-eval-when</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/enhanced-eval-when_latest.tar.gz">1.0</a>
+                </div>
+              </td>
+              <td class="latest-date noa">29 oct 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
+            </tr>
+            <tr id="enhanced-multiple-value-bind">
+              <th class="library-name"><a href="../../enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/enhanced-multiple-value-bind_latest.tar.gz">1.0.1</a>
+                </div>
+              </td>
+              <td class="latest-date noa">23 oct 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
+            </tr>
+            <tr id="macro-level">
+              <th class="library-name"><a href="../../macro-level/">macro-level</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/macro-level_latest.tar.gz">1.0.1</a>
+                </div>
+              </td>
+              <td class="latest-date noa">4 oct 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/10/october-2012-dist-update-now-available.html">October 2012</a></td>
+            </tr>
+            <tr id="cartesian-product-switch">
+              <th class="library-name"><a href="../../cartesian-product-switch/">cartesian-product-switch</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/cartesian-product-switch_latest.tar.gz">2.0</a>
+                </div>
+              </td>
+              <td class="latest-date noa">2 sept 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/09/september-2012-update-now-available.html">September 2012</a></td>
+            </tr>
+            <tr id="place-modifiers">
+              <th class="library-name"><a href="../../place-modifiers/">place-modifiers</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/place-modifiers_latest.tar.gz">2.1</a>
+                </div>
+              </td>
+              <td class="latest-date noa">22 oct 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
+            </tr>
+            <tr id="anaphoric-variants">
+              <th class="library-name"><a href="../../anaphoric-variants/">anaphoric-variants</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/anaphoric-variants_latest.tar.gz">1.0.1</a>
+                </div>
+              </td>
+              <td class="latest-date noa">22 sept 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/10/october-2012-dist-update-now-available.html">October 2012</a></td>
+            </tr>
+            <tr id="multiple-value-variants">
+              <th class="library-name"><a href="../../multiple-value-variants/">multiple-value-variants</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/multiple-value-variants_latest.tar.gz">1.0.1</a>
+                </div>
+              </td>
+              <td class="latest-date noa">24 july 2014</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2014/08/august-2014-dist-update-now-available.html">August 2014</a></td>
+            </tr>
+            <tr id="parse-number-range">
+              <th class="library-name"><a href="../../parse-number-range/">parse-number-range</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/parse-number-range_latest.tar.gz">1.0</a>
+                </div>
+              </td>
+              <td class="latest-date noa">26 oct 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
+            </tr>
+            <tr id="bubble-operator-upwards">
+              <th class="library-name"><a href="../../bubble-operator-upwards/">bubble-operator-upwards</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/bubble-operator-upwards_latest.tar.gz">1.0</a>
+                </div>
+              </td>
+              <td class="latest-date noa">4 nov 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">November 2012</a></td>
+            </tr>
+            <tr id="incognito-keywords">
+              <th class="library-name"><a href="../../incognito-keywords/">incognito-keywords</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/incognito-keywords_latest.tar.gz">1.0</a>
+                </div>
+              </td>
+              <td class="latest-date noa">28 oct 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/12/december-2012-quicklisp-dist-update-now.html">December 2012</a></td>
+            </tr>
+            <tr id="symbol-namespaces">
+              <th class="library-name"><a href="../../symbol-namespaces/">symbol-namespaces</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/symbol-namespaces_latest.tar.gz">1.0</a>
+                </div>
+              </td>
+              <td class="latest-date noa">9 dec 2012</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/12/december-2012-quicklisp-dist-update-now.html">December 2012</a></td>
+            </tr>
+            <tr id="clhs">
+              <th class="library-name"><a href="../../clhs/">clhs</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/clhs_latest.tar.gz">0.6.3</a>
+                </div>
+              </td>
+              <td class="latest-date noa">12 march 2015</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2015/04/april-2015-quicklisp-dist-update-now.html">April 2015</a></td>
+            </tr>
+            <tr id="place-utils">
+              <th class="library-name"><a href="../../place-utils/">place-utils</a></th>
+              <td class="latest-version">
+                <div>
+                  <a href="https://tarballs.hexstreamsoft.com/libraries/latest/place-utils_latest.tar.gz">0.1</a>
+                </div>
+              </td>
+              <td class="latest-date noa">16 april 2011</td>
+              <td class="quicklisp-latest noa good-news">Latest</td>
+              <td class="quicklisp-since"><a href="http://blog.quicklisp.org/2012/05/may-2012-quicklisp-dist-update.html">May 2012</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Freleases%2Flatest-versions%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Freleases%2Flatest-versions%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Freleases%2Flatest-versions%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Freleases%2Flatest-versions%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

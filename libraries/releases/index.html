@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
     <link rel="author" href="https://www.hexstreamsoft.com/introduction.html" />
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <meta name="description" content="Public Domain Common Lisp libraries release history of Jean-Philippe Paradis (Hexstream). Quicklisp automatically handles everything, for the most part." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Releases | Libraries | HexstreamSoft</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="index.css" rel="stylesheet" type="text/css" />
@@ -16,18 +18,15 @@
 
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="../../">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="../">Libraries</a>
-          <span class="separator"> » </span>
-          <a class="here">Releases</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="../">Libraries</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">Releases</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/libraries/releases/">
@@ -38,69 +37,41 @@
           </a>
         </nav>
 
-        <div class="float-clear"></div>
+      </div>
 
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-02-18">18 february 2014</time><span>.</span></p>
+
+    </nav>
+
+    <nav class="ancestors-nav">
+
+      <nav class="tabs contains-title">
+        <h1><a href="../" class="ancestor">Libraries</a></h1>
+        <ul>
+          <li><a href="../">Categories</a></li>
+          <li><a class="here">Releases</a></li>
+          <li><a href="../dependencies/">Dependencies</a></li>
+          <li><a href="../external-pages-xref/">External pages xref</a></li>
+        </ul>
       </nav>
 
-      <nav class="ancestors-nav">
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="releases_navbox">
-          <h1>
-            <a class="here">
-              Releases
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
-            <li><a href="latest-versions/">Latest versions</a></li>
-            <li><a href="timeline/">Timeline</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav id="projects_navbox" class="navbox">
-          <h1>
-            <a href="../">Libraries</a>
-          </h1>
-          <ul>
-            <li><a href="../">Categories</a></li>
-            <li><a class="here">Releases <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1>
-            <a href="../../">HexstreamSoft</a>
-          </h1>
-          <ul>
-            <li>
-              <a href="../">
-                Libraries
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li><a href="../../articles/">Articles</a></li>
-            <li><a href="../../accounts/">Accounts</a></li>
-            <li><a href="../../resources/">Resources</a></li>
+            <li><a href="https://www.hexstreamsoft.com/libraries/" class="ancestor">Libraries</a></li>
+            <li><a href="https://www.hexstreamsoft.com/articles/">Articles</a></li>
+            <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
+            <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
           <ul>
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
-
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-02-18">18 february 2014</time><span>.</span></p>
 
     <main>
 
@@ -109,32 +80,42 @@
         <p class="description">Quicklisp automatically handles everything, for the most part.</p>
       </header>
 
-      <nav class="navlist">
+      <nav class="navlists column">
 
-        <section>
-          <a href="latest-versions/">
-            <h1>Latest versions</h1>
-            <p>What one would get from the latest tarballs and quicklisp dist.</p>
-          </a>
-        </section>
+        <nav class="navlist column">
 
-        <section>
-          <a href="timeline/">
-            <h1>Timeline</h1>
-            <p>Sequences of releases and their eventual availability in Quicklisp.</p>
-          </a>
-        </section>
+          <section>
+            <a href="latest-versions/">
+              <h1>Latest versions</h1>
+              <p>What one would get from the latest tarballs and quicklisp dist.</p>
+            </a>
+          </section>
+
+          <section>
+            <a href="timeline/">
+              <h1>Timeline</h1>
+              <p>Sequences of releases and their eventual availability in Quicklisp.</p>
+            </a>
+          </section>
+
+        </nav>
 
       </nav>
 
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Freleases%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Freleases%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Freleases%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Freleases%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

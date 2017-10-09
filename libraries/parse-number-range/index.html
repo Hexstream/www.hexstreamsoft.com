@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
@@ -8,30 +9,27 @@
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <link rel="next" href="../bubble-operator-upwards/" />
     <meta name="description" content="Parses LOOP's convenient for-as-arithmetic syntax into 5 simple values: from, to, limit-kind (:inclusive, :exclusive or nil if unbounded), by (step) and direction (+ or -))." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>parse-number-range | Libraries | HexstreamSoft</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../libraries.css" rel="stylesheet" type="text/css" />
     <script src="https://global.hexstreamsoft.com/scripts/global.js"></script>
     <script src="../../scripts/global.js"></script>
   </head>
+
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="../../">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="../">Libraries</a>
-          <span class="separator"> » </span>
-          <a href="../#macros">Macros</a>
-          <span class="separator"> » </span>
-          <a href="../#macro-utilities">Utilities</a>
-          <span class="separator"> » </span>
-          <a class="here">parse-number-range</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="../">Libraries</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../#macros">Macros</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../#macro-utilities">Utilities</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">parse-number-range</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/libraries/parse-number-range/">
@@ -49,238 +47,165 @@
           <a class="sequential-link prev" href="../multiple-value-variants/">⇤</a>
           <a href="../">
             Libraries
-            <span>10/15   1/2</span>
+            <span>10/15</span>
           </a>
           <a class="sequential-link next" href="../bubble-operator-upwards/">→</a>
         </nav>
 
-        <nav>
-          <a class="sequential-link prev" href="../multiple-value-variants/">←</a>
-          <a href="../">
-            Categories
-            <span>3/5</span>
-          </a>
-          <a class="sequential-link next" href="../incognito-keywords/">→</a>
-        </nav>
+      </div>
 
-        <div class="float-clear"></div>
+    </nav>
 
-      </nav>
+    <nav class="ancestors-nav">
 
-
-      <nav class="ancestors-nav">
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox empty" id="library_navbox">
-          <h1>
-            <a class="here">parse-number-range</a>
-            <span class="here-indicator-left"> </span>
-            <span class="here-indicator-right"> </span>
-          </h1>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1>
-            <a href="../#macro-utilities">Macro utilities</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
-            <li>
-              <a class="here">
-                parse-number-range
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li><a href="../bubble-operator-upwards/">bubble-operator-upwards</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1>
-            <a href="../#macros">Macros</a>
-          </h1>
-          <ul>
-            <li><a href="../#simple-macros">Simple</a></li>
-            <li><a href="../#extensible-macros">Extensible</a></li>
-            <li>
-              <a href="../#macro-utilities">
-                Utilities
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1 class="box-header">
-            <a href="../">Libraries</a>
-          </h1>
-          <ul>
-            <li>
-              <a href="../#macros">
-                Macros
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"></span>
-              </a>
-            </li>
-            <li><a href="../#data-structures">Data structures</a></li>
-            <li><a href="../#uncategorized">Uncategorized</a></li>
-          </ul>
-          <ul>
-            <li><a href="../releases/">Releases</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1>
-            <a href="../../">HexstreamSoft</a>
-          </h1>
-          <ul>
-            <li><a href="../">Libraries <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
-            <li><a href="../../articles/">Articles</a></li>
-            <li><a href="../../accounts/">Accounts</a></li>
-            <li><a href="../../resources/">Resources</a></li>
+            <li><a href="https://www.hexstreamsoft.com/libraries/" class="ancestor">Libraries</a></li>
+            <li><a href="https://www.hexstreamsoft.com/articles/">Articles</a></li>
+            <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
+            <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
           <ul>
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
 
     <main>
+
       <header id="page-header">
         <h1>parse-number-range</h1>
         <p class="description">A simple thematic utilities library in Quicklisp.</p>
       </header>
 
       <div id="project-info">
-        <table class="factsheet">
-          <tbody>
-            <tr>
-              <th class="project-author property">Project author</th>
-              <td class="project-author" colspan="2"><a href="../../introduction.html">Jean-Philippe Paradis</a></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-type property">Project type</th>
-              <td class="project-type" colspan="2">Library</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="library-programming-language property">Programming language</th>
-              <td class="library-programming-language" colspan="2">Common Lisp</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-status property">Status</th>
-              <td class="project-status good-news" colspan="2">Ready-to-use</td>
-            </tr>
-            <tr>
-              <th class="project-license property"><a href="https://github.com/Hexstream/parse-number-range/blob/master/UNLICENSE">License</a></th>
-              <td class="project-license good-news" colspan="2"><a href="../../resources/#unlicense">Public Domain</a></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="library-type property">Library type</th>
-              <td class="library-type" colspan="2">Thematic utilities</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-complexity property">Project complexity</th>
-              <td class="project-complexity" colspan="2">Simple</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-latest-release" rowspan="2"><a href="https://tarballs.hexstreamsoft.com/libraries/latest/parse-number-range_latest.tar.gz">Latest release</a></th>
-              <th class="project-latest-release-version property">Version</th>
-              <td class="project-latest-release-version">1.0</td>
-            </tr>
-            <tr>
-              <th class="project-latest-release-date property">Date</th>
-              <td class="project-latest-release-date">26 oct 2012</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-quicklisp" rowspan="2">
-                Quicklisp
-                <br />
-                <span class="as-of-dist">(<a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">Nov 2012 dist</a> and later)</span>
-              </th>
-              <th class="project-quicklisp-status property">Status</th>
-              <td class="project-quicklisp-status good-news">Available</td>
-            </tr>
-            <tr>
-              <th class="project-quicklisp-version property">Version</th>
-              <td class="project-quicklisp-version good-news">Latest</td>
-            </tr>
-          </tbody>
 
-        </table>
+        <div class="scroll" id="factsheet-wrapper">
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="project-author property">Project author</th>
+                <td class="project-author" colspan="2"><a href="../../introduction.html">Jean-Philippe Paradis</a></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-type property">Project type</th>
+                <td class="project-type" colspan="2">Library</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="library-programming-language property">Programming language</th>
+                <td class="library-programming-language" colspan="2">Common Lisp</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-status property">Status</th>
+                <td class="project-status good-news" colspan="2">Ready-to-use</td>
+              </tr>
+              <tr>
+                <th class="project-license property"><a href="https://github.com/Hexstream/parse-number-range/blob/master/UNLICENSE">License</a></th>
+                <td class="project-license good-news" colspan="2"><a href="../../resources/#unlicense">Public Domain</a></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Thematic utilities</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Simple</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-latest-release" rowspan="2"><a href="https://tarballs.hexstreamsoft.com/libraries/latest/parse-number-range_latest.tar.gz">Latest release</a></th>
+                <th class="project-latest-release-version property">Version</th>
+                <td class="project-latest-release-version">1.0</td>
+              </tr>
+              <tr>
+                <th class="project-latest-release-date property">Date</th>
+                <td class="project-latest-release-date">26 oct 2012</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-quicklisp" rowspan="2">
+                  Quicklisp
+                  <br />
+                  <span class="as-of-dist">(<a href="http://blog.quicklisp.org/2012/11/november-2012-quicklisp-dist-update-now.html">Nov 2012 dist</a> and later)</span>
+                </th>
+                <th class="project-quicklisp-status property">Status</th>
+                <td class="project-quicklisp-status good-news">Available</td>
+              </tr>
+              <tr>
+                <th class="project-quicklisp-version property">Version</th>
+                <td class="project-quicklisp-version good-news">Latest</td>
+              </tr>
+            </tbody>
 
-        <nav class="navbox" id="external-projects_navbox">
-          <h1>
-            <a href="../external-pages-xref/">External library pages</a>
-          </h1>
-          <ul>
-            <li><a href="http://github.com/Hexstream/parse-number-range">Github</a></li>
-            <li><a href="http://quickdocs.org/parse-number-range">Quickdocs</a></li>
-            <li><a href="http://cliki.net/parse-number-range">CLiki</a></li>
-            <li><a href="http://common-lisp.net/project/cl-test-grid/library/parse-number-range.html">cl-test-grid</a></li>
-          </ul>
-        </nav>
+          </table>
+        </div>
 
-        <table id="dependencies-table">
-          <thead>
-            <tr>
-              <th class="details-link chomp top left"><a href="../dependencies/">⬉</a></th>
-              <th>Depends on</th>
-              <th>Depended on by</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Directly</th>
-              <td>
-                <ul>
-                  <li><a href="../map-bind/">map-bind</a></li>
-                  <li><a href="../enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a></li>
-                  <li><a href="../cartesian-product-switch/">cartesian-product-switch</a></li>
-                </ul>
-              </td>
-              <td>Nothing</td>
-            </tr>
-            <tr>
-              <th>Indirectly</th>
-              <td>Nothing</td>
-              <td>Nothing</td>
-            </tr>
-          </tbody>
-        </table>
+        <div id="external-links-and-dependencies-table">
+          <nav class="tabs contains-title" id="external-links">
+            <h1>
+              <a href="../external-pages-xref/">External library pages</a>
+            </h1>
+            <ul>
+              <li><a href="http://github.com/Hexstream/parse-number-range">Github</a></li>
+              <li><a href="http://quickdocs.org/parse-number-range">Quickdocs</a></li>
+              <li><a href="http://cliki.net/parse-number-range">CLiki</a></li>
+              <li><a href="http://common-lisp.net/project/cl-test-grid/library/parse-number-range.html">cl-test-grid</a></li>
+            </ul>
+          </nav>
+
+          <table id="dependencies-table">
+            <thead>
+              <tr>
+                <th class="details-link chomp top left"><a href="../dependencies/">⬉</a></th>
+                <th>Depends on</th>
+                <th>Depended on by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Directly</th>
+                <td>
+                  <ul>
+                    <li><a href="../map-bind/">map-bind</a></li>
+                    <li><a href="../enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a></li>
+                    <li><a href="../cartesian-product-switch/">cartesian-product-switch</a></li>
+                  </ul>
+                </td>
+                <td>Nothing</td>
+              </tr>
+              <tr>
+                <th>Indirectly</th>
+                <td>Nothing</td>
+                <td>Nothing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <section id="introduction">
+
+          <p><cite class="common-lisp library">parse-number-range</cite> parses <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm">loop</a></code>'s convenient <a href="http://www.lispworks.com/documentation/HyperSpec/Body/06_abaa.htm">for-as-arithmetic</a> syntax into 5 simple values: <var>from</var>, <var>to</var>, <var>limit-kind</var> (<code class="common-lisp library marker">:inclusive</code>, <code class="common-lisp library marker">:exclusive</code> or <code class="common-lisp library marker">nil</code> if unbounded), <var>by</var> (step) and <var>direction</var> (<code class="common-lisp library marker">+</code> or <code class="common-lisp library marker">-</code>)). Further related utilities are provided. Intended for easy implementation of analogous functionality in other constructs.</p>
+
+        </section>
 
       </div>
-
-      <p><cite class="common-lisp library">parse-number-range</cite> parses <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm">loop</a></code>'s convenient <a href="http://www.lispworks.com/documentation/HyperSpec/Body/06_abaa.htm">for-as-arithmetic</a> syntax into 5 simple values: <var>from</var>, <var>to</var>, <var>limit-kind</var> (<code class="common-lisp library marker">:inclusive</code>, <code class="common-lisp library marker">:exclusive</code> or <code class="common-lisp library marker">nil</code> if unbounded), <var>by</var> (step) and <var>direction</var> (<code class="common-lisp library marker">+</code> or <code class="common-lisp library marker">-</code>)). Further related utilities are provided. Intended for easy implementation of analogous functionality in other constructs.</p>
 
       <p>Here's the package name, along with 2 nicknames:</p>
 
@@ -294,29 +219,30 @@
 
       <section id="api">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#api" class="anchor">⚓</a>
           </span>
-          <a href="#">parse-number-range</a>
-          <span class="separator"> » </span>
-          <a class="here">API</a>
+          <div class="breadcrumbs">
+            <a href="#">parse-number-range</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">API</a></span>
+          </div>
         </h1>
 
         <section id="api-generalities">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#api-generalities" class="anchor">⚓</a>
             </span>
-            <a href="#">parse-number-range</a>
-            <span class="separator"> » </span>
-            <a href="#api">API</a>
-            <span class="separator"> » </span>
-            <a class="here">Generalities</a>
+            <div class="breadcrumbs">
+              <a href="#">parse-number-range</a>
+              <span class="crumb"><span class="s"> » </span><a href="#api">API</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Generalities</a></span>
+            </div>
           </h1>
 
-          Here are the 5 "fundamental" values returned from <code class="common-lisp library function operator">parse</code> and accepted by <code class="common-lisp library function operator">unparse</code>:
+          <p>Here are the 5 "fundamental" values returned from <code class="common-lisp library function operator">parse</code> and accepted by <code class="common-lisp library function operator">unparse</code>:</p>
 
           <dl>
 
@@ -337,23 +263,23 @@
 
           </dl>
 
-          Some functions accept a <var>keyword-policy</var> &amp;key argument, which must be either <code class="common-lisp library marker">:strict</code> or <code class="common-lisp library marker">:loose</code>. <code class="common-lisp">(from 1 to 10)</code> would be valid with <code class="common-lisp library marker">:loose</code> but not with <code class="common-lisp library marker">:strict</code>, which demands <code class="common-lisp">(:from 1 :to 10)</code>.
+          <p>Some functions accept a <var>keyword-policy</var> &amp;key argument, which must be either <code class="common-lisp library marker">:strict</code> or <code class="common-lisp library marker">:loose</code>. <code class="common-lisp">(from 1 to 10)</code> would be valid with <code class="common-lisp library marker">:loose</code> but not with <code class="common-lisp library marker">:strict</code>, which demands <code class="common-lisp">(:from 1 :to 10)</code>.</p>
 
-          <strong>Use of <code class="common-lisp library marker">:loose</code> is strongly discouraged</strong>, as it's an unnecessary and evil feature that typically results in arbitrary interning of symbols in arbitrary packages.
+          <p><strong>Use of <code class="common-lisp library marker">:loose</code> is strongly discouraged</strong>, as it's an unnecessary and evil feature that typically results in arbitrary interning of symbols in arbitrary packages.</p>
 
         </section>
 
         <section id="parse-api">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#parse-api" class="anchor">⚓</a>
             </span>
-            <a href="#">parse-number-range</a>
-            <span class="separator"> » </span>
-            <a href="#api">API</a>
-            <span class="separator"> » </span>
-            <a class="here">Parse API</a>
+            <div class="breadcrumbs">
+              <a href="#">parse-number-range</a>
+              <span class="crumb"><span class="s"> » </span><a href="#api">API</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Parse API</a></span>
+            </div>
           </h1>
 
           <dl>
@@ -387,32 +313,35 @@
 
               <p><code class="common-lisp library function operator">parse</code> can compute and return 3 additional pieces of information, on request:</p>
 
-              <table>
-                <thead>
-                  <tr>
-                    <th>return value</th>
-                    <th>request-keyword</th>
-                    <th>description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th><var>clause-kinds</var></th>
-                    <td>:clause-kinds-p</td>
-                    <td><p>The clause kinds that were present,<br />in the order they appeared in.</p></td>
-                  </tr>
-                  <tr>
-                    <th><var>clause-keywords</var></th>
-                    <td>:clause-keywords-p</td>
-                    <td><p>The clause keywords that were present,<br />in the order they appeared in.</p></td>
-                  </tr>
-                  <tr>
-                    <th><var>clauses-alist</var></th>
-                    <td>:clauses-alist-p</td>
-                    <td><p>Alist: (<var>clause-kind</var> . <var>clause-keyword</var>)</p></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>return value</th>
+                      <th>request-keyword</th>
+                      <th>description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th><var>clause-kinds</var></th>
+                      <td>:clause-kinds-p</td>
+                      <td><p>The clause kinds that were present,<br />in the order they appeared in.</p></td>
+                    </tr>
+                    <tr>
+                      <th><var>clause-keywords</var></th>
+                      <td>:clause-keywords-p</td>
+                      <td><p>The clause keywords that were present,<br />in the order they appeared in.</p></td>
+                    </tr>
+                    <tr>
+                      <th><var>clauses-alist</var></th>
+                      <td>:clauses-alist-p</td>
+                      <td><p>Alist: (<var>clause-kind</var> . <var>clause-keyword</var>)</p></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
             </dd>
 
             <dt><pre>Function <dfn><code class="common-lisp library function operator">unparse</code></dfn> <var>from</var> <var>to</var> <var>limit-kind</var> <var>by</var> <var>direction</var> &amp;key <var>clause-kinds</var>
@@ -443,15 +372,15 @@
 
         <section id="info-api">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#info-api" class="anchor">⚓</a>
             </span>
-            <a href="#">parse-number-range</a>
-            <span class="separator"> » </span>
-            <a href="#api">API</a>
-            <span class="separator"> » </span>
-            <a class="here">Info API</a>
+            <div class="breadcrumbs">
+              <a href="#">parse-number-range</a>
+              <span class="crumb"><span class="s"> » </span><a href="#api">API</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Info API</a></span>
+            </div>
           </h1>
 
           <dl>
@@ -460,35 +389,38 @@
 
             <dd><p>This function takes a <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_loop.htm">loop</a></code> keyword and returns the following information:</p>
 
-              <table>
-                <thead>
-                  <tr>
-                    <th>Argument</th>
-                    <th colspan="3">Return values</th>
-                  </tr>
-                  <tr>
-                    <th><var>keyword</var></th>
-                    <th><var>kind</var></th>
-                    <th><var>direction</var></th>
-                    <th><var>limit-kind</var></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><th>:from</th><td>:from</td><td>nil</td><td>nil</td></tr>
-                  <tr><th>:downfrom</th><td>:from</td><td>-</td><td>nil</td></tr>
-                  <tr><th>:upfrom</th><td>:from</td><td>+</td><td>nil</td></tr>
-                </tbody>
-                <tbody>
-                  <tr><th>:to</th><td>:to</td><td>nil</td><td>:inclusive</td></tr>
-                  <tr><th>:upto</th><td>:to</td><td>+</td><td>:inclusive</td></tr>
-                  <tr><th>:downto</th><td>:to</td><td>-</td><td>:inclusive</td></tr>
-                  <tr><th>:below</th><td>:to</td><td>+</td><td>:exclusive</td></tr>
-                  <tr><th>:above</th><td>:to</td><td>-</td><td>:exclusive</td></tr>
-                </tbody>
-                <tbody>
-                  <tr><th>:by</th><td>:by</td><td>nil</td><td>nil</td></tr>
-                </tbody>
-              </table>
+              <div class="scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Argument</th>
+                      <th colspan="3">Return values</th>
+                    </tr>
+                    <tr>
+                      <th><var>keyword</var></th>
+                      <th><var>kind</var></th>
+                      <th><var>direction</var></th>
+                      <th><var>limit-kind</var></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><th>:from</th><td>:from</td><td>nil</td><td>nil</td></tr>
+                    <tr><th>:downfrom</th><td>:from</td><td>-</td><td>nil</td></tr>
+                    <tr><th>:upfrom</th><td>:from</td><td>+</td><td>nil</td></tr>
+                  </tbody>
+                  <tbody>
+                    <tr><th>:to</th><td>:to</td><td>nil</td><td>:inclusive</td></tr>
+                    <tr><th>:upto</th><td>:to</td><td>+</td><td>:inclusive</td></tr>
+                    <tr><th>:downto</th><td>:to</td><td>-</td><td>:inclusive</td></tr>
+                    <tr><th>:below</th><td>:to</td><td>+</td><td>:exclusive</td></tr>
+                    <tr><th>:above</th><td>:to</td><td>-</td><td>:exclusive</td></tr>
+                  </tbody>
+                  <tbody>
+                    <tr><th>:by</th><td>:by</td><td>nil</td><td>nil</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
             </dd>
 
 
@@ -510,7 +442,9 @@
               <ul>
                 <li>
                   <p>The <var>direction</var> and <var>limit-kind</var> will always be represented in the <var>to-keyword</var>, and never in the <var>from-keyword</var>, except for the following exception:</p>
-                  <pre class="example"><code class="common-lisp">(flags-to-keywords '- :exclusive) =&gt; :downfrom, nil</code></pre>
+                  <div class="scroll">
+                    <pre class="example"><code class="common-lisp">(flags-to-keywords '- :exclusive) =&gt; :downfrom, nil</code></pre>
+                  </div>
                 </li>
                 <li><p>:to is always returned in preference to :upto.</p></li>
               </ul>
@@ -526,11 +460,17 @@
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fparse-number-range%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fparse-number-range%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fparse-number-range%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fparse-number-range%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

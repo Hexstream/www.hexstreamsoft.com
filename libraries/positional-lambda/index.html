@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
@@ -9,30 +10,27 @@
     <link rel="prev" href="../map-bind/" />
     <link rel="next" href="../enhanced-eval-when/" />
     <meta name="description" content="A concise, intuitive and flexible syntax (macro) for trivial lambdas that eschews explicit naming of parameter variables in favor of positional references." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>positional-lambda | Libraries | HexstreamSoft</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../libraries.css" rel="stylesheet" type="text/css" />
     <script src="https://global.hexstreamsoft.com/scripts/global.js"></script>
     <script src="../../scripts/global.js"></script>
   </head>
+
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="../../">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="../">Libraries</a>
-          <span class="separator"> » </span>
-          <a href="../#macros">Macros</a>
-          <span class="separator"> » </span>
-          <a href="../#simple-macros">Simple</a>
-          <span class="separator"> » </span>
-          <a class="here">positional-lambda</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="../">Libraries</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../#macros">Macros</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../#simple-macros">Simple</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">positional-lambda</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/libraries/positional-lambda/">
@@ -50,239 +48,167 @@
           <a class="sequential-link prev" href="../map-bind/">←</a>
           <a href="../">
             Libraries
-            <span>2/15   2/5</span>
+            <span>2/15</span>
           </a>
           <a class="sequential-link next" href="../enhanced-eval-when/">→</a>
         </nav>
 
-        <nav>
-          <a href="../">
-            Categories
-            <span>1/5</span>
-          </a>
-          <a class="sequential-link next" href="../cartesian-product-switch/">→</a>
-        </nav>
+      </div>
 
-        <div class="float-clear"></div>
+    </nav>
 
-      </nav>
+    <nav class="ancestors-nav">
 
-
-
-      <nav class="ancestors-nav">
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox empty" id="library_navbox">
-          <h1>
-            <a class="here">positional-lambda</a>
-            <span class="here-indicator-left"> </span>
-            <span class="here-indicator-right"> </span>
-          </h1>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="simple-macro-projects_navbox">
-          <h1 class="box-header">
-            <a href="../#simple-macros">Simple macros</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
-            <li><a href="../map-bind/">map-bind</a></li>
-            <li>
-              <a class="here">
-                positional-lambda
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li><a href="../enhanced-eval-when/">enhanced-eval-when</a></li>
-            <li><a href="../enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a></li>
-            <li><a href="../macro-level/">macro-level</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1>
-            <a href="../#macros">Macros</a>
-          </h1>
-          <ul>
-            <li>
-              <a href="../#simple-macros">
-                Simple
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li><a href="../#extensible-macros">Extensible</a></li>
-            <li><a href="../#macro-utilities">Utilities</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox">
-          <h1 class="box-header">
-            <a href="../">Libraries</a>
-          </h1>
-          <ul>
-            <li>
-              <a href="../#macros">
-                Macros
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"></span>
-              </a>
-            </li>
-            <li><a href="../#data-structures">Data structures</a></li>
-            <li><a href="../#uncategorized">Uncategorized</a></li>
-          </ul>
-          <ul>
-            <li><a href="../releases/">Releases</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1>
-            <a href="../../">HexstreamSoft</a>
-          </h1>
-          <ul>
-            <li><a href="../">Libraries <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
-            <li><a href="../../articles/">Articles</a></li>
-            <li><a href="../../accounts/">Accounts</a></li>
-            <li><a href="../../resources/">Resources</a></li>
+            <li><a href="https://www.hexstreamsoft.com/libraries/" class="ancestor">Libraries</a></li>
+            <li><a href="https://www.hexstreamsoft.com/articles/">Articles</a></li>
+            <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
+            <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
           <ul>
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
 
     <main>
+
       <header id="page-header">
         <h1>positional-lambda</h1>
         <p class="description">A simple (but crucial) concision macro in Quicklisp.</p>
       </header>
 
       <div id="project-info">
-        <table class="factsheet">
-          <tbody>
-            <tr>
-              <th class="project-author property">Project author</th>
-              <td class="project-author" colspan="2"><a href="../../introduction.html">Jean-Philippe Paradis</a></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-type property">Project type</th>
-              <td class="project-type" colspan="2">Library</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="library-programming-language property">Programming language</th>
-              <td class="library-programming-language" colspan="2">Common Lisp</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-status property">Status</th>
-              <td class="project-status good-news" colspan="2">Ready-to-use</td>
-            </tr>
-            <tr>
-              <th class="project-license property"><a href="https://github.com/Hexstream/positional-lambda/blob/master/UNLICENSE">License</a></th>
-              <td class="project-license good-news" colspan="2"><a href="../../resources/#unlicense">Public Domain</a></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="library-type property">Library type</th>
-              <td class="library-type" colspan="2">Concision macro</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-complexity property">Project complexity</th>
-              <td class="project-complexity" colspan="2">Simple</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-latest-release" rowspan="2"><a href="https://tarballs.hexstreamsoft.com/libraries/latest/positional-lambda_latest.tar.gz">Latest release</a></th>
-              <th class="project-latest-release-version property">Version</th>
-              <td class="project-latest-release-version">2.0</td>
-            </tr>
-            <tr>
-              <th class="project-latest-release-date property">Date</th>
-              <td class="project-latest-release-date">30 sept 2012</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th class="project-quicklisp" rowspan="2">
-                Quicklisp
-                <br />
-                <span class="as-of-dist">(<a href="http://blog.quicklisp.org/2012/10/october-2012-dist-update-now-available.html">Oct 2012 dist</a> and later)</span>
-              </th>
-              <th class="project-quicklisp-status property">Status</th>
-              <td class="project-quicklisp-status good-news">Available</td>
-            </tr>
-            <tr>
-              <th class="project-quicklisp-version property">Version</th>
-              <td class="project-quicklisp-version good-news">Latest</td>
-            </tr>
-          </tbody>
 
-        </table>
+        <div class="scroll" id="factsheet-wrapper">
 
-        <nav class="navbox" id="external-projects_navbox">
-          <h1>
-            <a href="../external-pages-xref/">External library pages</a>
-          </h1>
-          <ul>
-            <li><a href="http://github.com/Hexstream/positional-lambda">Github</a></li>
-            <li><a href="http://quickdocs.org/positional-lambda">Quickdocs</a></li>
-            <li><a href="http://cliki.net/positional-lambda">CLiki</a></li>
-            <li><a href="http://common-lisp.net/project/cl-test-grid/library/positional-lambda.html">cl-test-grid</a></li>
-          </ul>
-        </nav>
+          <table class="factsheet">
+            <tbody>
+              <tr>
+                <th class="project-author property">Project author</th>
+                <td class="project-author" colspan="2"><a href="../../introduction.html">Jean-Philippe Paradis</a></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-type property">Project type</th>
+                <td class="project-type" colspan="2">Library</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="library-programming-language property">Programming language</th>
+                <td class="library-programming-language" colspan="2">Common Lisp</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-status property">Status</th>
+                <td class="project-status good-news" colspan="2">Ready-to-use</td>
+              </tr>
+              <tr>
+                <th class="project-license property"><a href="https://github.com/Hexstream/positional-lambda/blob/master/UNLICENSE">License</a></th>
+                <td class="project-license good-news" colspan="2"><a href="../../resources/#unlicense">Public Domain</a></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="library-type property">Library type</th>
+                <td class="library-type" colspan="2">Concision macro</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-complexity property">Project complexity</th>
+                <td class="project-complexity" colspan="2">Simple</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-latest-release" rowspan="2"><a href="https://tarballs.hexstreamsoft.com/libraries/latest/positional-lambda_latest.tar.gz">Latest release</a></th>
+                <th class="project-latest-release-version property">Version</th>
+                <td class="project-latest-release-version">2.0</td>
+              </tr>
+              <tr>
+                <th class="project-latest-release-date property">Date</th>
+                <td class="project-latest-release-date">30 sept 2012</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th class="project-quicklisp" rowspan="2">
+                  Quicklisp
+                  <br />
+                  <span class="as-of-dist">(<a href="http://blog.quicklisp.org/2012/10/october-2012-dist-update-now-available.html">Oct 2012 dist</a> and later)</span>
+                </th>
+                <th class="project-quicklisp-status property">Status</th>
+                <td class="project-quicklisp-status good-news">Available</td>
+              </tr>
+              <tr>
+                <th class="project-quicklisp-version property">Version</th>
+                <td class="project-quicklisp-version good-news">Latest</td>
+              </tr>
+            </tbody>
 
-        <table id="dependencies-table">
-          <thead>
-            <tr>
-              <th class="details-link chomp top left"><a href="../dependencies/">⬉</a></th>
-              <th>Depends on</th>
-              <th>Depended on by</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Directly</th>
-              <td>
-                <ul>
-                  <li><a href="../map-bind/">map-bind</a></li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                   <li><a href="../multiple-value-variants/">multiple-value-variants</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>Indirectly</th>
-              <td>Nothing</td>
-              <td>Nothing</td>
-            </tr>
-          </tbody>
-        </table>
+          </table>
+
+        </div>
+
+        <div id="external-links-and-dependencies-table">
+          <nav class="tabs contains-title" id="external-links">
+            <h1>
+              <a href="../external-pages-xref/">External library pages</a>
+            </h1>
+            <ul>
+              <li><a href="http://github.com/Hexstream/positional-lambda">Github</a></li>
+              <li><a href="http://quickdocs.org/positional-lambda">Quickdocs</a></li>
+              <li><a href="http://cliki.net/positional-lambda">CLiki</a></li>
+              <li><a href="http://common-lisp.net/project/cl-test-grid/library/positional-lambda.html">cl-test-grid</a></li>
+            </ul>
+          </nav>
+
+          <table id="dependencies-table">
+            <thead>
+              <tr>
+                <th class="details-link chomp top left"><a href="../dependencies/">⬉</a></th>
+                <th>Depends on</th>
+                <th>Depended on by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Directly</th>
+                <td>
+                  <ul>
+                    <li><a href="../map-bind/">map-bind</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a href="../multiple-value-variants/">multiple-value-variants</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Indirectly</th>
+                <td>Nothing</td>
+                <td>Nothing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <section id="introduction">
+
+          <p><dfn><code class="common-lisp library macro operator">plambda</code></dfn> is a concise, intuitive and flexible syntax (macro) for trivial <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code>s that eschews explicit (and often contextually-redundant) naming of parameter variables in favor of positional references, with support for a used or ignored <code class="common-lisp standard lambda-list-keyword"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a></code> parameter and automatic declaration of <code class="common-lisp standard declaration"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a></code>d parameters when logical "gaps" are left in the positional references. Further convenience features are provided.</p>
+
+        </section>
 
       </div>
 
@@ -298,73 +224,99 @@
         </div>
       </div>
 
-      <p><dfn><code class="common-lisp library macro operator">plambda</code></dfn> is a concise, intuitive and flexible syntax (macro) for trivial <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code>s that eschews explicit (and often contextually-redundant) naming of parameter variables in favor of positional references, with support for a used or ignored <code class="common-lisp standard lambda-list-keyword"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a></code> parameter and automatic declaration of <code class="common-lisp standard declaration"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a></code>d parameters when logical "gaps" are left in the positional references. Further convenience features are provided.</p>
+      <section id="documentation">
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> <code class="common-lisp library local marker">:3</code> <code class="common-lisp library local marker">:1</code>))
+        <div class="scroll">
+
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> <code class="common-lisp library local marker">:3</code> <code class="common-lisp library local marker">:1</code>))
 ==
 (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var> <var>third</var>)
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>second</var>))
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_values.htm">values</a> <var>third</var> <var>first</var>))</code></pre>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <code class="common-lisp library local marker">:2</code> <code class="common-lisp library local marker">:1</code> <code class="common-lisp library local marker">:rest</code>))
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <code class="common-lisp library local marker">:2</code> <code class="common-lisp library local marker">:1</code> <code class="common-lisp library local marker">:rest</code>))
 ==
 (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>rest</var>)
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <var>second</var> <var>first</var> <var>rest</var>))</code></pre>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:rest</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <code class="common-lisp library local marker">:2</code> <code class="common-lisp library local marker">:1</code>))
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:rest</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <code class="common-lisp library local marker">:2</code> <code class="common-lisp library local marker">:1</code>))
 ==
 (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>rest</var>)
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>rest</var>))
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <var>second</var> <var>first</var>))</code></pre>
 
-      <p>It's possible to specify a minimum number of required arguments:</p>
+      </div>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:3</code> <code class="common-lisp library local marker">:2</code>)
+        <p>It's possible to specify a minimum number of required arguments:</p>
+
+        <div class="scroll">
+
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:3</code> <code class="common-lisp library local marker">:2</code>)
 ==
 (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var> <var>third</var>)
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>first</var> <var>third</var>))
   <var>second</var>)</code></pre>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:2</code> <code class="common-lisp library local marker">:3</code>) <span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;</a> redundant minimum: 3 > 2.</span>
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:2</code> <code class="common-lisp library local marker">:3</code>) <span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;</a> redundant minimum: 3 > 2.</span>
 ==
 (<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:3</code>)</code></pre>
 
-      <p>Which also has the effect of "pushing back" the <code class="common-lisp standard lambda-list-keyword"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a></code> argument if there's one:</p>
+        </div>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:3</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm">mapcar</a> <code class="common-lisp library local marker">:1</code> <code class="common-lisp library local marker">:rest</code>))
+        <p>Which also has the effect of "pushing back" the <code class="common-lisp standard lambda-list-keyword"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a></code> argument if there's one:</p>
+
+        <div class="scroll">
+
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:3</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm">mapcar</a> <code class="common-lisp library local marker">:1</code> <code class="common-lisp library local marker">:rest</code>))
 ==
 (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var> <var>third</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/03_da.htm#AMrest">&amp;rest</a> <var>rest</var>)
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>second</var> <var>third</var>))
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm">mapcar</a> <var>first</var> <var>rest</var>))</code></pre>
 
-      <p>The first argument to <code class="common-lisp library operator">plambda</code> is treated as a specification of the minimum number of arguments only if it looks like a positional reference and <code class="common-lisp library operator">plambda</code> was invoked with other arguments:</p>
+        </div>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:2</code>)
+        <p>The first argument to <code class="common-lisp library operator">plambda</code> is treated as a specification of the minimum number of arguments only if it looks like a positional reference and <code class="common-lisp library operator">plambda</code> was invoked with other arguments:</p>
+
+        <div class="scroll">
+
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:2</code>)
 ==
 (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var>)
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>first</var>))
   <var>second</var>)</code></pre>
 
-      <p><code class="common-lisp library operator">plambda</code> accepts an implicit <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm">progn</a></code>, not just one expression:</p>
+        </div>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm">print</a> <code class="common-lisp library local marker">:1</code>) <code class="common-lisp library local marker">:2</code>)
+        <p><code class="common-lisp library operator">plambda</code> accepts an implicit <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm">progn</a></code>, not just one expression:</p>
+
+        <div class="scroll">
+
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm">print</a> <code class="common-lisp library local marker">:1</code>) <code class="common-lisp library local marker">:2</code>)
 ==
 (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var>)
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm">print</a> <var>first</var>)
   <var>second</var>)</code></pre>
 
-      <p>Also, <code class="common-lisp library operator">plambda</code>'s <code class="common-lisp library local special-operator operator">:let</code> "local special operator" allows one to "lift" parts of its body outside the <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code> to a <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">let</a></code> without needing to name and then refer to an explicit variable.</p>
+        </div>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:2</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <code class="common-lisp library local marker">:1</code> (<code class="common-lisp library local special-operator operator">:let</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_random.htm">random</a>))))
+        <p>Also, <code class="common-lisp library operator">plambda</code>'s <code class="common-lisp library local special-operator operator">:let</code> "local special operator" allows one to "lift" parts of its body outside the <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code> to a <code class="common-lisp standard special-operator operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">let</a></code> without needing to name and then refer to an explicit variable.</p>
+
+        <div class="scroll">
+
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <code class="common-lisp library local marker">:2</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <code class="common-lisp library local marker">:1</code> (<code class="common-lisp library local special-operator operator">:let</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_random.htm">random</a>))))
 ==
 (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">let</a> ((<var>number</var> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_random.htm">random</a>)))
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var> <var>second</var>)
     (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm">declare</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm">ignore</a> <var>second</var>))
     (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm">list</a> <var>first</var> <var>number</var>)))</code></pre>
 
-      <p>Another feature is <code class="common-lisp library local special-operator operator">:cache</code>, which is like <code class="common-lisp library local special-operator operator">:let</code> except it computes the associated form in its original lexical and dynamic context within the <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code> the first time its evaluation completes and returns the cached value on subsequent evaluations.</p>
+        </div>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm">write</a> <code class="common-lisp library local marker">:1</code> :base (<code class="common-lisp library local special-operator operator">:cache</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_pr_bas.htm">*print-base*</a>)))
+        <p>Another feature is <code class="common-lisp library local special-operator operator">:cache</code>, which is like <code class="common-lisp library local special-operator operator">:let</code> except it computes the associated form in its original lexical and dynamic context within the <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code> the first time its evaluation completes and returns the cached value on subsequent evaluations.</p>
+
+        <div class="scroll">
+
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm">write</a> <code class="common-lisp library local marker">:1</code> :base (<code class="common-lisp library local special-operator operator">:cache</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_pr_bas.htm">*print-base*</a>)))
 ==
 (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm">let</a> (<var>base</var> <var>basep</var>)
   (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> (<var>first</var>)
@@ -373,44 +325,65 @@
                            (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_prog1c.htm">prog1</a> (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_setf_.htm">setf</a> <var>base</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_pr_bas.htm">*print-base*</a>)
                              (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_setf_.htm">setf</a> <var>basep</var> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/v_t.htm">t</a>))))))</code></pre>
 
-      <p>The consequences are undefined if the <code class="common-lisp library local special-operator operator">:let</code> and <code class="common-lisp library local special-operator operator">:cache</code> local special
-operators are nested within themselves or eachother:</p>
+        </div>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<code class="common-lisp library local special-operator operator">:let</code> (<code class="common-lisp library local special-operator operator">:let</code> 1))) <span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;</a> undefined</span></code></pre>
+        <p>The consequences are undefined if the <code class="common-lisp library local special-operator operator">:let</code> and <code class="common-lisp library local special-operator operator">:cache</code> local special operators are nested within themselves or eachother:</p>
 
-      <p><code class="common-lisp library operator">plambda</code> will treat any quoted expressions as opaque, and will treat anything wrapped in the <code class="common-lisp library local special-operator operator">:quote</code> local-special-operator as opaque as well.</p>
+        <div class="scroll">
+
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> (<code class="common-lisp library local special-operator operator">:let</code> (<code class="common-lisp library local special-operator operator">:let</code> 1))) <span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;</a> undefined</span></code></pre>
+
+        </div>
+
+        <p><code class="common-lisp library operator">plambda</code> will treat any quoted expressions as opaque, and will treat anything wrapped in the <code class="common-lisp library local special-operator operator">:quote</code> local-special-operator as opaque as well.</p>
 
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dc.htm">'</a>:1)
+        <div class="scroll">
+
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dc.htm">'</a>:1)
 ==
 (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> () <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dc.htm">'</a>:1)</code></pre>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> () (<code class="common-lisp library local special-operator operator">:quote</code> :1))
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> () (<code class="common-lisp library local special-operator operator">:quote</code> :1))
 ==
 (<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a> () :1)</code></pre>
 
-      <p>Unfortunately, currently <code class="common-lisp library operator">plambda</code> won't do the right thing with some expressions that are quoted via backquote (since there's no easy portable way to walk backquoted expressions).</p>
+        </div>
 
-      <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_df.htm">`</a>(<code class="common-lisp library local marker">:1</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dg.htm">,</a><code class="common-lisp library local marker">:2</code>))
+        <p>Unfortunately, currently <code class="common-lisp library operator">plambda</code> won't do the right thing with some expressions that are quoted via backquote (since there's no easy portable way to walk backquoted expressions).</p>
+
+        <div class="scroll">
+
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library operator">plambda</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_df.htm">`</a>(<code class="common-lisp library local marker">:1</code> <a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dg.htm">,</a><code class="common-lisp library local marker">:2</code>))
 ==
-[<code class="common-lisp library local marker">:1</code> will be erroneously replaced]</code></pre>
+&lbrack;<code class="common-lisp library local marker">:1</code> will be erroneously replaced&rbrack;</code></pre>
 
-      <p>To use <code class="common-lisp library macro operator">plambda</code>, simply <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a> #:positional-lambda #:plambda)</code> from your <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">defpackage</a></code>. Don't <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:use</a>)</code>! "Clashy" symbols might be added to the <code class="common-lisp library package">positional-lambda</code> package in the future.</p>
+        </div>
 
-      <p>positional-lambda should only be used to describe actually trivial <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code>s, <strong>usually no more than 3 lines long</strong>, and should not be used in code returned by macros, because of "capture" issues. <del>In particular, due to the <code class="common-lisp library operator">plambda</code> macro's parsing model, it's not safe to nest multiple invocations.</del> <ins>(Actually, nesting multiple <code class="common-lisp library operator">plambda</code> invocations has been safe for quite a while. The outer invocations will effectively treat any inner ones as being implicitly wrapped in <code class="common-lisp library local special-operator operator">:quote</code>.)</ins></p>
+        <p>To use <code class="common-lisp library macro operator">plambda</code>, simply <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:import-from</a> #:positional-lambda #:plambda)</code> from your <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">defpackage</a></code>. Don't <code class="common-lisp">(<a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm">:use</a>)</code>! "Clashy" symbols might be added to the <code class="common-lisp library package">positional-lambda</code> package in the future.</p>
 
-      <p>However, these are not practical limitations since as <code class="common-lisp library operator">plambda</code>'s expressions get bigger, the benefits of conciseness quickly fade out to be replaced by the problems of implicitness, so hopefully one wouldn't be tempted to use it in these scenarios anyway. The implicitness is not a problem for suitably short <code class="common-lisp library operator">plambda</code> expressions since the surrounding context provides enough contextual information, and explicitly naming variables would then simply provide redundant information.</p>
+        <p>positional-lambda should only be used to describe actually trivial <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_lambda.htm">lambda</a></code>s, <strong>usually no more than 3 lines long</strong>, and should not be used in code returned by macros, because of "capture" issues. <del>In particular, due to the <code class="common-lisp library operator">plambda</code> macro's parsing model, it's not safe to nest multiple invocations.</del> <ins>(Actually, nesting multiple <code class="common-lisp library operator">plambda</code> invocations has been safe for quite a while. The outer invocations will effectively treat any inner ones as being implicitly wrapped in <code class="common-lisp library local special-operator operator">:quote</code>.)</ins></p>
 
-      <p><code class="common-lisp library operator">plambda</code>'s deliberately simplistic "surface parsing" (and replacement) strategy is conceptually and implementationally simple and robust, as opposed to often-brittle "code-walking" where an attempt is made to take into account the actual semantics of forms and operators, often necessitating explicit support when new operators are introduced.</p>
+        <p>However, these are not practical limitations since as <code class="common-lisp library operator">plambda</code>'s expressions get bigger, the benefits of conciseness quickly fade out to be replaced by the problems of implicitness, so hopefully one wouldn't be tempted to use it in these scenarios anyway. The implicitness is not a problem for suitably short <code class="common-lisp library operator">plambda</code> expressions since the surrounding context provides enough contextual information, and explicitly naming variables would then simply provide redundant information.</p>
+
+        <p><code class="common-lisp library operator">plambda</code>'s deliberately simplistic "surface parsing" (and replacement) strategy is conceptually and implementationally simple and robust, as opposed to often-brittle "code-walking" where an attempt is made to take into account the actual semantics of forms and operators, often necessitating explicit support when new operators are introduced.</p>
+
+      </section>
 
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fpositional-lambda%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fpositional-lambda%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fpositional-lambda%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Flibraries%2Fpositional-lambda%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

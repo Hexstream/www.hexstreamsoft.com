@@ -20,7 +20,7 @@
 
       <nav class="breadcrumbs-and-extras">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="../../">HexstreamSoft</a>
           <span class="separator"> » </span>
           <a href="../">Libraries</a>
@@ -31,7 +31,7 @@
           <span class="separator"> » </span>
           <a class="here">with-resolved-places</a>
           <div class="float-clear"></div>
-        </nav>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/libraries/place-utils/with-resolved-places.html">
@@ -125,25 +125,7 @@
         <p class="description">Evaluate subforms once, then access repeatedly safely.</p>
       </header>
 
-      <dl>
-        <dt><pre>Macro <code class="common-lisp library macro operator">with-resolved-places</code> (&amp;rest <var>bindings</var>) &amp;body <var>body</var>
-  &rArr; <var>results</var></pre></dt>
-        <dd>
-          <p>Each <var>binding</var> is of the form <code class="common-lisp">(<var>resolved-place</var> <var>unresolved-place</var>)</code>.</p>
-          <p>At the time <code class="common-lisp library macro operator">with-resolved-places</code> is entered, the subforms of each <var>unresolved-place</var> are evaluated and bound to their temporary variables. Within <var>body</var> (an implicit <code class="common-lisp standard macro operator">progn</code>), each <var>resolved-place</var> can be used to access (read and/or write) the corresponding <var>unresolved-place</var>, perhaps repeatedly, without evaluating the subforms again.</p>
-          <pre class="example"><code class="common-lisp">(let* ((<var>my-list</var> (list 0 1 2))
-       (<var>my-other-list</var> <var>my-list</var>))
-  (<code class="common-lisp library macro operator">with-resolved-places</code> ((<var>second</var> (second (princ <var>my-list</var>))))
-    (setf <var>my-list</var> nil <var>second</var> 8)
-    (incf <var>second</var> 2)
-    (list <var>my-list</var> <var>my-other-list</var> <var>second</var>)))
 
-  -| (0 1 2)
-  &rArr; (NIL (0 10 2) 10)</code></pre>
-          <p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_aaa.htm">CLHS 5.1.1.1 Evaluation of Subforms to Places</a></p>
-          <p>In the absence of <code class="common-lisp library macro operator">with-resolved-places</code>, in situations where multiple evaluation of subforms for different accesses is not desirable, one would traditionally bind the results of the evaluation of the troublesome subforms (with <code class="common-lisp standard special-operator operator">let</code> or <code class="common-lisp standard special-operator operator">let*</code>) in an ad-hoc way on an as-needed basis, manually replicating part of the job of <a href="http://www.lispworks.com/documentation/HyperSpec/Body/05_aab.htm">setf expanders</a>.</p>
-        </dd>
-      </dl>
 
     </main>
 

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
     <link rel="author" href="https://www.hexstreamsoft.com/introduction.html" />
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <meta name="description" content="Links to external resources having to do with Common Lisp, web development and fundamental programming stuff, recommended by Jean-Philippe Paradis (Hexstream)." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>HexstreamSoft: Programming resources</title>
     <link href="../css/global.css" rel="stylesheet" type="text/css" />
     <script src="https://global.hexstreamsoft.com/scripts/global.js"></script>
@@ -15,16 +17,14 @@
 
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="../">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a class="here">Resources</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a class="here">Resources</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/resources/">
@@ -35,55 +35,31 @@
           </a>
         </nav>
 
-        <div class="float-clear"></div>
+      </div>
 
-      </nav>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2016-07-03">3 july 2016</time><span>.</span></p>
 
-      <nav class="ancestors-nav">
+    </nav>
 
-        <div class="level-separator"></div>
+    <nav class="ancestors-nav">
 
-        <nav class="navbox" id="resources_navbox">
-          <h1>
-            <a class="here">
-              Resources
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
-            <li><a href="#tools-I-use">Tools I use</a></li>
-            <li><a href="#references-I-use">References I use</a></li>
-            <li><a href="#distinguished-articles">Distinguished articles</a></li>
-            <li><a href="#heartfelt-recommendations">Recommendations</a></li>
-            <li><a href="#good-stuff">Good stuff</a></li>
-            <li><a href="#fair-warnings">Fair warnings</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1 class="box-header">
-            <a href="../">HexstreamSoft</a>
-          </h1>
-          <ul>
-            <li><a href="../libraries/">Libraries</a></li>
-            <li><a href="../articles/">Articles</a></li>
-            <li><a href="../accounts/">Accounts</a></li>
-            <li><a class="here">Resources <span class="here-indicator-left"> </span> <span class="here-indicator-right"> </span></a></li>
+            <li><a href="https://www.hexstreamsoft.com/libraries/">Libraries</a></li>
+            <li><a href="https://www.hexstreamsoft.com/articles/">Articles</a></li>
+            <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
+            <li><a class="here">Resources</a></li>
           </ul>
           <ul>
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
-
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2016-07-03">3 july 2016</time><span>.</span></p>
 
     <main>
 
@@ -105,233 +81,228 @@
         <div><p>Opinionated!</p></div>
       </div>
 
-      <nav class="navbox-groups contains-direct-links">
+      <nav class="tab-groups">
 
-        <nav class="anonymous">
+        <nav class="tabs contains-title">
+          <h1>
+            <a href="#tools-I-use">Tools I use</a>
+          </h1>
+          <ul>
+            <li class="contains-direct-link">
+              <a href="#unlicense">Unlicense</a>
+              <a class="direct-link" href="http://unlicense.org/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#typematrix-2030">TypeMatrix</a>
+              <a class="direct-link" href="http://typematrix.com/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#dvorak">Dvorak</a>
+              <a class="direct-link" href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#stumpwm">StumpWM</a>
+              <a class="direct-link" href="http://www.nongnu.org/stumpwm/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#emacs">Emacs</a>
+              <a class="direct-link" href="http://www.gnu.org/software/emacs/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#slime">Slime</a>
+              <a class="direct-link" href="http://common-lisp.net/project/slime/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#sbcl">SBCL</a>
+              <a class="direct-link" href="http://sbcl.org/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#quicklisp">Quicklisp</a>
+              <a class="direct-link" href="http://www.quicklisp.org/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#debian">Debian Mate</a>
+              <a class="direct-link" href="https://www.debian.org/"><span>⬈</span></a>
+            </li>
+          </ul>
+        </nav>
 
-          <div class="body">
+        <nav class="tabs contains-title">
+          <h1>
+            <a href="#references-I-use">References I use</a>
+          </h1>
+          <ul>
+            <li class="contains-direct-link">
+              <a href="#clhs">CLHS</a>
+              <a class="direct-link" href="http://www.lispworks.com/documentation/common-lisp.html"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#html5-w3c">HTML5 Specification</a>
+              <a class="direct-link" href="http://www.w3.org/TR/html5/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#css21">CSS 2.1 Specification</a>
+              <a class="direct-link" href="http://www.w3.org/TR/CSS21/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#selectors-level-3">Selectors Level 3</a>
+              <a class="direct-link" href="http://www.w3.org/TR/css3-selectors/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#svg11">SVG 1.1 Specification</a>
+              <a class="direct-link" href="http://www.w3.org/TR/SVG11/"><span>⬈</span></a>
+            </li>
+          </ul>
+        </nav>
 
-            <nav class="navbox" id="tools-I-use_navbox">
-              <h1>
-                <a href="#tools-I-use">Tools I use</a>
-              </h1>
-              <ul>
-                <li>
-                  <a href="#unlicense">Unlicense</a>
-                  <a class="direct-link" href="http://unlicense.org/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#typematrix-2030">TypeMatrix</a>
-                  <a class="direct-link" href="http://typematrix.com/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#dvorak">Dvorak</a>
-                  <a class="direct-link" href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#stumpwm">StumpWM</a>
-                  <a class="direct-link" href="http://www.nongnu.org/stumpwm/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#emacs">Emacs</a>
-                  <a class="direct-link" href="http://www.gnu.org/software/emacs/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#slime">Slime</a>
-                  <a class="direct-link" href="http://common-lisp.net/project/slime/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#sbcl">SBCL</a>
-                  <a class="direct-link" href="http://sbcl.org/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#quicklisp">Quicklisp</a>
-                  <a class="direct-link" href="http://www.quicklisp.org/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#debian">Debian Mate</a>
-                  <a class="direct-link" href="https://www.debian.org/"><span>⬈</span></a>
-                </li>
-              </ul>
-            </nav>
+        <nav class="tabs contains-title">
+          <h1>
+            <a href="#distinguished-articles">Distinguished articles</a>
+          </h1>
+          <ul>
+            <li class="contains-direct-link">
+              <a href="#programmings-dirtiest-little-secret">Programming's Dirtiest Little Secret</a>
+              <a class="direct-link" href="http://steve-yegge.blogspot.ca/2008/09/programmings-dirtiest-little-secret.html"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#equal-rights-and-wrongs-in-lisp">EQUAL rights</a>
+              <a class="direct-link" href="http://www.nhplace.com/kent/PS/EQUAL.html"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#rule-of-least-power">Rule of Least Power</a>
+              <a class="direct-link" href="http://www.w3.org/2001/tag/doc/leastPower.html"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#lisp-monad-tutorial">Lisp monad tutorial</a>
+              <a class="direct-link" href="http://dorophone.blogspot.ca/2011/04/deep-emacs-part-1.html"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#the-process-myth">The Process Myth</a>
+              <a class="direct-link" href="http://randsinrepose.com/archives/the-process-myth/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#leaning-into-it">Leaning into it</a>
+              <a class="direct-link" href="http://xach.com/rpw3/articles/2eOdnZcpIZbVwC7YnZ2dnUVZ_vShnZ2d%40speakeasy.net.html"><span>⬈</span></a>
+            </li>
+          </ul>
+        </nav>
 
-            <nav class="navbox" id="references-I-use_navbox">
-              <h1>
-                <a href="#references-I-use">References I use</a>
-              </h1>
-              <ul>
-                <li>
-                  <a href="#clhs">CLHS</a>
-                  <a class="direct-link" href="http://www.lispworks.com/documentation/common-lisp.html"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#html5-w3c">HTML5 Specification</a>
-                  <a class="direct-link" href="http://www.w3.org/TR/html5/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#css21">CSS 2.1 Specification</a>
-                  <a class="direct-link" href="http://www.w3.org/TR/CSS21/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#selectors-level-3">Selectors Level 3</a>
-                  <a class="direct-link" href="http://www.w3.org/TR/css3-selectors/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#svg11">SVG 1.1 Specification</a>
-                  <a class="direct-link" href="http://www.w3.org/TR/SVG11/"><span>⬈</span></a>
-                </li>
-              </ul>
-            </nav>
+        <nav class="tabs contains-title">
+          <h1>
+            <a href="#heartfelt-recommendations">Heartfelt Recommendations</a>
+          </h1>
+          <ul>
+            <li class="contains-direct-link">
+              <a href="#pcl">Practical Common Lisp</a>
+              <a class="direct-link" href="http://www.gigamonkeys.com/book/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#quickdocs">Quickdocs</a>
+              <a class="direct-link" href="http://quickdocs.org/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#quicklisp-projects-issues">quicklisp-projects issues</a>
+              <a class="direct-link" href="https://github.com/quicklisp/quicklisp-projects/issues"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#cl-test-grid-reports">cl-test-grid reports</a>
+              <a class="direct-link" href="http://common-lisp.net/project/cl-test-grid/library/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#prog21">Prog 21st century</a>
+              <a class="direct-link" href="http://prog21.dadgum.com/archives.html"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#surprising-history-of-copyright">History of copyright</a>
+              <a class="direct-link" href="http://questioncopyright.org/promise"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#us-was-built-on-piracy-and-fraud">US was built on piracy</a>
+              <a class="direct-link" href="https://www.techdirt.com/blog/innovation/articles/20130228/01324622146/yes-us-industrial-revolution-was-built-piracy-fraud.shtml"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#long-painful-history-of-time">History of Time</a>
+              <a class="direct-link" href="http://naggum.no/lugm-time.html"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#codewisdom">@CodeWisdom</a>
+              <a class="direct-link" href="http://twitter.com/CodeWisdom"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#urbandictionary">Urban Dictionary</a>
+              <a class="direct-link" href="http://www.urbandictionary.com/"><span>⬈</span></a>
+            </li>
+          </ul>
+        </nav>
 
-            <nav class="navbox">
-              <h1>
-                <a href="#distinguished-articles">Distinguished articles</a>
-              </h1>
-              <ul>
-                <li>
-                  <a href="#programmings-dirtiest-little-secret">Programming's<br />Dirtiest Little Secret</a>
-                  <a class="direct-link" href="http://steve-yegge.blogspot.ca/2008/09/programmings-dirtiest-little-secret.html"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#equal-rights-and-wrongs-in-lisp">EQUAL rights</a>
-                  <a class="direct-link" href="http://www.nhplace.com/kent/PS/EQUAL.html"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#rule-of-least-power">Rule of Least Power</a>
-                  <a class="direct-link" href="http://www.w3.org/2001/tag/doc/leastPower.html"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#lisp-monad-tutorial">Lisp monad tutorial</a>
-                  <a class="direct-link" href="http://dorophone.blogspot.ca/2011/04/deep-emacs-part-1.html"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#the-process-myth">The Process Myth</a>
-                  <a class="direct-link" href="http://randsinrepose.com/archives/the-process-myth/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#leaning-into-it">Leaning into it</a>
-                  <a class="direct-link" href="http://xach.com/rpw3/articles/2eOdnZcpIZbVwC7YnZ2dnUVZ_vShnZ2d%40speakeasy.net.html"><span>⬈</span></a>
-                </li>
-              </ul>
-            </nav>
+        <nav class="tabs contains-title">
+          <h1>
+            <a href="#good-stuff">Good stuff</a>
+          </h1>
+          <ul>
+            <li class="contains-direct-link">
+              <a href="#planet-lisp">Planet Zach Beane</a>
+              <a class="direct-link" href="http://planet.lisp.org/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#lisptips">lisptips.com</a>
+              <a class="direct-link" href="http://lisptips.com/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#slime-tips">Slime Tips</a>
+              <a class="direct-link" href="http://slime-tips.tumblr.com/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#iterate">Iterate</a>
+              <a class="direct-link" href="http://common-lisp.net/project/iterate/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#lisp-in-small-parts">Lisp in Small Parts</a>
+              <a class="direct-link" href="http://lisp.plasticki.com/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#features-of-common-lisp">Features of CL</a>
+              <a class="direct-link" href="http://random-state.net/features-of-common-lisp.html"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#common-lisp-type-hierarchy">CL Type Hierarchy</a>
+              <a class="direct-link" href="http://sellout.github.com/2012/03/03/common-lisp-type-hierarchy/"><span>⬈</span></a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#parsing-considered-harmful">Parsing Considered Harmful</a>
+              <a class="direct-link" href="http://fare.livejournal.com/75940.html"><span>⬈</span></a>
+            </li>
+          </ul>
 
-            <nav class="navbox" id="heartfelt-recommendations_navbox">
-              <h1>
-                <a href="#heartfelt-recommendations">Heartfelt Recommendations</a>
-              </h1>
-              <ul>
-                <li>
-                  <a href="#pcl">Practical Common Lisp</a>
-                  <a class="direct-link" href="http://www.gigamonkeys.com/book/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#quickdocs">Quickdocs</a>
-                  <a class="direct-link" href="http://quickdocs.org/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#quicklisp-projects-issues">quicklisp-projects issues</a>
-                  <a class="direct-link" href="https://github.com/quicklisp/quicklisp-projects/issues"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#cl-test-grid-reports">cl-test-grid reports</a>
-                  <a class="direct-link" href="http://common-lisp.net/project/cl-test-grid/library/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#prog21">Prog 21st century</a>
-                  <a class="direct-link" href="http://prog21.dadgum.com/archives.html"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#surprising-history-of-copyright">History of copyright</a>
-                  <a class="direct-link" href="http://questioncopyright.org/promise"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#us-was-built-on-piracy-and-fraud">US was built on piracy</a>
-                  <a class="direct-link" href="https://www.techdirt.com/blog/innovation/articles/20130228/01324622146/yes-us-industrial-revolution-was-built-piracy-fraud.shtml"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#long-painful-history-of-time">History of Time</a>
-                  <a class="direct-link" href="http://naggum.no/lugm-time.html"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#codewisdom">@CodeWisdom</a>
-                  <a class="direct-link" href="http://twitter.com/CodeWisdom"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#urbandictionary">Urban Dictionary</a>
-                  <a class="direct-link" href="http://www.urbandictionary.com/"><span>⬈</span></a>
-                </li>
-              </ul>
-            </nav>
+        </nav>
 
-            <nav class="navbox" id="good-stuff_navbox">
-              <h1>
-                <a href="#good-stuff">Good stuff</a>
-              </h1>
-              <ul>
-                <li>
-                  <a href="#planet-lisp">Planet Zach Beane</a>
-                  <a class="direct-link" href="http://planet.lisp.org/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#lisptips">lisptips.com</a>
-                  <a class="direct-link" href="http://lisptips.com/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#slime-tips">Slime Tips</a>
-                  <a class="direct-link" href="http://slime-tips.tumblr.com/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#iterate">Iterate</a>
-                  <a class="direct-link" href="http://common-lisp.net/project/iterate/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#lisp-in-small-parts">Lisp in Small Parts</a>
-                  <a class="direct-link" href="http://lisp.plasticki.com/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#features-of-common-lisp">Features of CL</a>
-                  <a class="direct-link" href="http://random-state.net/features-of-common-lisp.html"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#common-lisp-type-hierarchy">CL Type Hierarchy</a>
-                  <a class="direct-link" href="http://sellout.github.com/2012/03/03/common-lisp-type-hierarchy/"><span>⬈</span></a>
-                </li>
-                <li>
-                  <a href="#parsing-considered-harmful">Parsing Considered Harmful</a>
-                  <a class="direct-link" href="http://fare.livejournal.com/75940.html"><span>⬈</span></a>
-                </li>
-              </ul>
-
-            </nav>
-
-            <nav class="navbox" id="fair-warnings_navbox">
-              <h1>
-                <a href="#fair-warnings">Fair warnings</a>
-              </h1>
-              <ul>
-                <li class="no-direct-link"><a href="#let-over-lambda">Let over Lambda</a></li>
-                <li>
-                  <a href="#paul-graham">Paul Graham</a>
-                  <a class="direct-link" href="http://paulgraham.com/"><span>⬈</span></a>
-                </li>
-              </ul>
-            </nav>
-
-          </div>
-
+        <nav class="tabs contains-title">
+          <h1>
+            <a href="#fair-warnings">Fair warnings</a>
+          </h1>
+          <ul>
+            <li>
+              <a href="#let-over-lambda">Let over Lambda</a>
+            </li>
+            <li class="contains-direct-link">
+              <a href="#paul-graham">Paul Graham</a>
+              <a class="direct-link" href="http://paulgraham.com/"><span>⬈</span></a>
+            </li>
+          </ul>
         </nav>
 
       </nav>
 
       <section id="tools-I-use">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#tools-I-use" class="anchor">⚓</a>
           </span>
-          <a href="#">Resources</a>
-          <span class="separator"> » </span>
-          <a class="here">Tools I use heavily and heartily recommend</a>
+          <div class="breadcrumbs">
+            <a href="#">Resources</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Tools I use heavily and heartily recommend</a></span>
+          </div>
         </h1>
 
         <dl>
@@ -420,13 +391,14 @@
 
       <section id="references-I-use">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#references-I-use" class="anchor">⚓</a>
           </span>
-          <a href="#">Resources</a>
-          <span class="separator"> » </span>
-          <a class="here">Great references I use</a>
+          <div class="breadcrumbs">
+            <a href="#">Resources</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Great references I use</a></span>
+          </div>
         </h1>
 
         <dl>
@@ -462,13 +434,14 @@
 
       <section id="distinguished-articles">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#distinguished-articles" class="anchor">⚓</a>
           </span>
-          <a href="#">Resources</a>
-          <span class="separator"> » </span>
-          <a class="here">Distinguished articles</a>
+          <div class="breadcrumbs">
+            <a href="#">Resources</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Distinguished articles</a></span>
+          </div>
         </h1>
 
         <dl>
@@ -501,13 +474,14 @@
 
       <section id="heartfelt-recommendations">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#heartfelt-recommendations" class="anchor">⚓</a>
           </span>
-          <a href="#">Resources</a>
-          <span class="separator"> » </span>
-          <a class="here">My heartfelt recommendations</a>
+          <div class="breadcrumbs">
+            <a href="#">Resources</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">My heartfelt recommendations</a></span>
+          </div>
         </h1>
 
         <dl>
@@ -552,13 +526,14 @@
 
       <section id="good-stuff">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#good-stuff" class="anchor">⚓</a>
           </span>
-          <a href="#">Resources</a>
-          <span class="separator"> » </span>
-          <a class="here">Good stuff</a>
+          <div class="breadcrumbs">
+            <a href="#">Resources</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Good stuff</a></span>
+          </div>
         </h1>
 
         <dl>
@@ -600,13 +575,14 @@
 
       <section id="fair-warnings">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#fair-warnings" class="anchor">⚓</a>
           </span>
-          <a href="#">Resources</a>
-          <span class="separator"> » </span>
-          <a class="here">Fair warnings</a>
+          <div class="breadcrumbs">
+            <a href="#">Resources</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Fair warnings</a></span>
+          </div>
         </h1>
 
         <dl>
@@ -628,11 +604,17 @@
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top" title="Back to top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Fresources%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Fresources%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Fresources%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Fresources%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 
