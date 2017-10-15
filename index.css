@@ -4,6 +4,12 @@
     line-height: 1.4em;
 }
 
+.navlist section.contains-extras > .extras .new a {
+    color: green;
+    font-weight: bold;
+    opacity: 1;
+}
+
 @media (max-width: 36em) {
     .navlist section.contains-extras {
         flex-flow: column;
