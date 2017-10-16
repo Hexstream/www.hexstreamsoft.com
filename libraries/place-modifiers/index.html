@@ -235,10 +235,10 @@
           <span class="section-relative-nav">
             <a href="#trivial-examples" class="anchor">⚓</a>
           </span>
-          <div class="breadcrumbs">
+          <span class="breadcrumbs">
             <a href="#">place-modifiers</a>
             <span class="crumb"><span class="s"> » </span><a class="here">3 trivial examples</a></span>
-          </div>
+          </span>
         </h1>
 
         <div class="scroll">
@@ -283,10 +283,10 @@
           <span class="section-relative-nav">
             <a href="#hundreds-of-modify-macros" class="anchor">⚓</a>
           </span>
-          <div class="breadcrumbs">
+          <span class="breadcrumbs">
             <a href="#">place-modifiers</a>
             <span class="crumb"><span class="s"> » </span><a class="here">Equivalent to hundreds of modify macros!</a></span>
-          </div>
+          </span>
         </h1>
 
         <p>Not very exciting so far. But <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_incf_.htm">incf</a></code>, <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_push.htm">push</a></code> and <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/m_pshnew.htm">pushnew</a></code> give you access to 3 modify-macros, whereas <code class="common-lisp library macro operator">modify</code> gives you access to literally <em>hundreds</em>!</p>
@@ -339,10 +339,10 @@
           <span class="section-relative-nav">
             <a href="#why-not-by-hand" class="anchor">⚓</a>
           </span>
-          <div class="breadcrumbs">
+          <span class="breadcrumbs">
             <a href="#">place-modifiers</a>
             <span class="crumb"><span class="s"> » </span><a class="here">Why not just write it out by hand?</a></span>
-          </div>
+          </span>
         </h1>
 
         <p>One might wonder, why not just write this instead?</p>
@@ -392,10 +392,10 @@
           <span class="section-relative-nav">
             <a href="#modify-return-values" class="anchor">⚓</a>
           </span>
-          <div class="breadcrumbs">
+          <span class="breadcrumbs">
             <a href="#">place-modifiers</a>
             <span class="crumb"><span class="s"> » </span><a class="here"><code class="common-lisp library macro operator">modify</code> return values, <code class="common-lisp library marker">:old</code></a></span>
-          </div>
+          </span>
         </h1>
 
         <p><code class="common-lisp library macro operator">modify</code> normally returns the new value(s) of the place, per the usual conventions:</p>
@@ -424,10 +424,10 @@
           <span class="section-relative-nav">
             <a href="#place-modification-expression-vs-place" class="anchor">⚓</a>
           </span>
-          <div class="breadcrumbs">
+          <span class="breadcrumbs">
             <a href="#">place-modifiers</a>
             <span class="crumb"><span class="s"> » </span><a class="here"><abbr title="place-modification-expression">PME</abbr> VS place</a></span>
-          </div>
+          </span>
         </h1>
 
         <nav class="tabs">
@@ -455,11 +455,11 @@ or #(E), (E) ?</code></pre>
             <span class="section-relative-nav">
               <a href="#conservative-recursion-through-spots" class="anchor">⚓</a>
             </span>
-            <div class="breadcrumbs">
+            <span class="breadcrumbs">
               <a href="#">place-modifiers</a>
               <span class="crumb"><span class="s"> » </span><a href="#place-modification-expression-vs-place"><abbr title="place-modification-expression">PME</abbr> VS place</a></span>
               <span class="crumb"><span class="s"> » </span><a class="here">Conservative recursion through "spots"</a></span>
-            </div>
+            </span>
           </h1>
 
           <p>It's simple: <code class="common-lisp library macro operator">modify</code> is "conservative" by default, so as soon as it encounters a possible place while recursing through the "spots" (described and explained below), then it will treat that as the place. This is the most intuitive possible default and is usually what you want.</p>
@@ -474,11 +474,11 @@ or #(E), (E) ?</code></pre>
           <span class="section-relative-nav">
             <a href="#inconceivable-places" class="anchor">⚓</a>
           </span>
-          <div class="breadcrumbs">
+          <span class="breadcrumbs">
             <a href="#">place-modifiers</a>
             <span class="crumb"><span class="s"> » </span><a href="#place-modification-expression-vs-place"><abbr title="place-modification-expression">PME</abbr> VS place</a></span>
             <span class="crumb"><span class="s"> » </span><a class="here">Inconceivable places</a></span>
-          </div>
+          </span>
         </h1>
 
         <p>Some place-modifiers are known to <code class="common-lisp library macro operator">modify</code> as being "inconceivable places", which allows conservative recursion to proceed (at least) one step further, much conveniently:</p>
@@ -498,11 +498,11 @@ or #(E), (E) ?</code></pre>
           <span class="section-relative-nav">
             <a href="#explicit-place" class="anchor">⚓</a>
           </span>
-          <div class="breadcrumbs">
+          <span class="breadcrumbs">
             <a href="#">place-modifiers</a>
             <span class="crumb"><span class="s"> » </span><a href="#place-modification-expression-vs-place"><abbr title="place-modification-expression">PME</abbr> VS place</a></span>
             <span class="crumb"><span class="s"> » </span><a class="here">Speculative recursion through "spots" (<code class="common-lisp library marker">:place</code>)</a></span>
-          </div>
+          </span>
         </h1>
 
         <p>After finding the <a href="#conservative-recursion-through-spots">most conservative place</a>, <code class="common-lisp library macro operator">modify</code> will still speculatively recurse through the remaining "spots" in search of a <code class="common-lisp library marker">:place</code> "local special form", which would explicitly indicate at what level lies the intended place, overriding the conservative behavior.</p>
@@ -522,11 +522,11 @@ or #(E), (E) ?</code></pre>
           <span class="section-relative-nav">
             <a href="#top-level" class="anchor">⚓</a>
           </span>
-          <div class="breadcrumbs">
+          <span class="breadcrumbs">
             <a href="#">place-modifiers</a>
             <span class="crumb"><span class="s"> » </span><a href="#place-modification-expression-vs-place"><abbr title="place-modification-expression">PME</abbr> VS place</a></span>
             <span class="crumb"><span class="s"> » </span><a class="here">Possible place at top-level: treated as <abbr title="place-modification-expression">PME</abbr></a></span>
-          </div>
+          </span>
         </h1>
 
         <p>Of course, the "top-level" (ignoring <code class="common-lisp library marker">:old</code>) of <code class="common-lisp library macro operator">modify</code> can only accept a <abbr title="place-modification-expression">PME</abbr> and not a place, so there can be no ambiguity there:</p>
@@ -548,10 +548,10 @@ or #(E), (E) ?</code></pre>
           <span class="section-relative-nav">
             <a href="#multiple-place-modification-expressions" class="anchor">⚓</a>
           </span>
-          <div class="breadcrumbs">
+          <span class="breadcrumbs">
             <a href="#">place-modifiers</a>
             <span class="crumb"><span class="s"> » </span><a class="here">Multiple <abbr title="place-modification-expression">PME</abbr>s: <code class="common-lisp standard macro operator">setf</code>-like</a></span>
-          </div>
+          </span>
         </h1>
 
         <p><code class="common-lisp library macro operator">modify</code> can accept multiple <abbr title="place-modification-expression">PME</abbr>s, in which case the modifications will happen in sequence, much in the same way as <code class="common-lisp standard macro operator"><a href="http://www.lispworks.com/documentation/hyperspec/body/m_setf_.htm">setf</a></code> with multiple places.</p>
@@ -579,10 +579,10 @@ or #(E), (E) ?</code></pre>
           <span class="section-relative-nav">
             <a href="#place-modifier-variants" class="anchor">⚓</a>
           </span>
-          <div class="breadcrumbs">
+          <span class="breadcrumbs">
             <a href="#">place-modifiers</a>
             <span class="crumb"><span class="s"> » </span><a class="here">Place-modifier variants</a></span>
-          </div>
+          </span>
         </h1>
 
         <p>Up to this point, we've always used the "primary variant", which is the one you'll need most often, but each place-modifier kind can have up to 4 variants, though most only have one or two. The "variant" determines which argument is treated as the "spot", positionally.</p>
@@ -597,10 +597,10 @@ or #(E), (E) ?</code></pre>
           <span class="section-relative-nav">
             <a href="#variants-statistics" class="anchor">⚓</a>
           </span>
-          <div class="breadcrumbs">
+          <span class="breadcrumbs">
             <a href="#">place-modifiers</a>
             <span class="crumb"><span class="s"> » </span><a class="here">Some statistics about place-modifier variants</a></span>
-          </div>
+          </span>
         </h1>
 
         <div class="scroll">
