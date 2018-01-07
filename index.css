@@ -1,7 +1,27 @@
+#page-header {
+    margin-bottom: 1.5em;
+}
+
 #page-header .description {
     font-size: x-large;
     margin-top: 0.2em;
     line-height: 1.4em;
+}
+
+#hello {
+    display: table;
+    text-align: center;
+    margin: 2rem auto;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 1.1em;
+    font-style: italic;
+    border-top: thin solid rgba(0, 0, 0, 0.2);
+    border-bottom: thin solid rgba(0, 0, 0, 0.2);
+}
+
+.fit-content.contains-navlists {
+    margin-top: 0;
 }
 
 .navlist section.contains-extras > .extras .new a {
