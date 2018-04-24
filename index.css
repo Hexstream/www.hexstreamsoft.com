@@ -94,19 +94,6 @@
 
 #prominent #unlicense:before {
     background-image: url("https://global.hexstreamsoft.com/images/logos/public-domain.svg");
-    position: relative;
-    left: -0.5em;
-}
-
-#prominent #join-my-favorite-common-lisp-discord-server {
-    margin-top: 1em;
-    color: #7289DA;
-    text-decoration: none;
-}
-
-
-#prominent #join-my-favorite-common-lisp-discord-server:before {
-    background-image: url("https://global.hexstreamsoft.com/images/logos/discord.svg");
 }
 
 @media (max-width: 36em) {
@@ -125,7 +112,7 @@
     }
 
     #prominent .notice > div {
-        text-align: left;
+        text-align: center;
     }
 
     #prominent .notice:before {
