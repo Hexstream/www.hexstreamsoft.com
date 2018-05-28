@@ -81,19 +81,30 @@
     flex: none;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    width: 5em;
+    width: 5rem;
     min-height: 5em;
     background-size: contain;
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
     opacity: 0.75;
-}
-
-#prominent .notice strong {
-    font-size: larger;
 }
 
 #prominent #unlicense:before {
     background-image: url("https://global.hexstreamsoft.com/images/logos/public-domain.svg");
+}
+
+#prominent #psa-about-zach-beane-the-sociopath:before {
+    content: "⚠";
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    color: orange;
+    text-align: center;
+    font-size: 6em;
+    height: auto;
+    min-height: auto;
+    position: relative;
+    left: -0.8rem;
 }
 
 @media (max-width: 36em) {
@@ -103,6 +114,13 @@
 
     #prominent #unlicense:before {
         left: 0;
+    }
+
+}
+
+@media (max-width: 33.8em) {
+    #prominent #psa-about-zach-beane-the-sociopath:before {
+        left: auto;
     }
 }
 
@@ -115,7 +133,8 @@
         text-align: center;
     }
 
-    #prominent .notice:before {
+    #prominent .notice:before,
+    #prominent #psa-about-zach-beane-the-sociopath:before {
         display: none;
     }
 }
