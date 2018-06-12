@@ -5,4 +5,3 @@ ErrorDocument 400 /special/error-pages/400.html
 
 RedirectPermanent /projects/ http://www.hexstreamsoft.com/libraries/
 RedirectPermanent /worknotes/ http://worknotes.hexstreamsoft.com/
-RedirectMatch ^/tweets/.*/ /tweets/
