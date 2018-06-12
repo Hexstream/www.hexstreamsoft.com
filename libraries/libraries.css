@@ -1,11 +1,15 @@
 @import "https://global.hexstreamsoft.com/css/factsheet.css";
 @import "https://global.hexstreamsoft.com/css/cl.css";
 
+#top-nav + main {
+    margin-top: 1.5em;
+}
+
 #project-info {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    margin: 2em 0 0 0;
+    margin: 1em 0 0 0;
 }
 
 #project-info #factsheet-wrapper {
