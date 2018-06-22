@@ -9,6 +9,10 @@
     margin-top: 2em;
 }
 
+#graph :target a {
+    color: green;
+}
+
 @media (max-width: 46.75em) {
     #graph {
         font-size: smaller;
