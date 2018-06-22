@@ -18,7 +18,7 @@
     margin-right: 0;
 }
 
-#project-info #external-links-and-dependencies-table {
+#project-info #external-links-and-dependencies-link {
     flex: 1 0 0;
     display: flex;
     flex-flow: column;
@@ -27,7 +27,7 @@
     margin-left: 0.5em;
 }
 
-#project-info #external-links-and-dependencies-table .tabs {
+#project-info #external-links-and-dependencies-link .tabs {
     flex-flow: column;
     align-items: center;
 }
@@ -49,7 +49,7 @@
         order: initial;
     }
 
-    #project-info #external-links-and-dependencies-table {
+    #project-info #external-links-and-dependencies-link {
         flex: none;
     }
 }
@@ -61,48 +61,12 @@
         margin-right: 0;
     }
 
-    #project-info #external-links-and-dependencies-table {
+    #project-info #external-links-and-dependencies-link {
         min-width: initial;
         flex: 0 1 auto;
     }
 }
 
-
-#dependencies-table {
-    font-size: smaller;
-    margin: 0 0.5em 1em 1em;
-}
-
-#dependencies-table .details-link {
-    padding: 0;
-}
-
-#dependencies-table .details-link a {
-    display: block;
-    text-align: center;
-    opacity: 0.5;
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
-}
-
-#dependencies-table .details-link a:hover, #dependencies-table .details-link a:focus {
-    opacity: 1;
-}
-
-#dependencies-table ul {
-    margin: 0;
-}
-
-#dependencies-table th, #dependencies-table td {
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
-}
-
-
-#dependencies-table li {
-    margin: 0;
-    padding: 0.175em 0em;
-}
 
 #documentation {
     padding-top: 0;
