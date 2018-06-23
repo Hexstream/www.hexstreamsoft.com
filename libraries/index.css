@@ -37,37 +37,3 @@
 #misc-index {
     margin-top: 2em;
 }
-
-
-.library .summary {
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-start;
-}
-
-.library .summary > .description {
-    flex: 1 1 auto;
-    max-width: 50em;
-}
-
-.library .summary > .factsheet {
-    flex: none;
-    width: 20em;
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
-.factsheet td {
-    text-align: left;
-}
-
-p code {
-    white-space: normal;
-}
-
-
-@media (max-width: 55em) {
-    .library .summary {
-        flex-flow: column;
-    }
-}
