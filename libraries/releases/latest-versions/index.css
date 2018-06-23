@@ -9,3 +9,7 @@
 main table .latest-date, main table .quicklisp-since {
     text-align: right;
 }
+
+main table tr:target .library-name a {
+    color: green;
+}
