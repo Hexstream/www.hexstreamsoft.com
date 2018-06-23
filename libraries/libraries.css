@@ -18,7 +18,7 @@
     margin-right: 0;
 }
 
-#project-info #external-links-and-dependencies-link {
+#project-info #external-links-and-further-info {
     flex: 1 0 0;
     display: flex;
     flex-flow: column;
@@ -27,7 +27,7 @@
     margin-left: 0.5em;
 }
 
-#project-info #external-links-and-dependencies-link .tabs {
+#project-info #external-links-and-further-info .tabs {
     flex-flow: column;
     align-items: center;
 }
@@ -49,7 +49,7 @@
         order: initial;
     }
 
-    #project-info #external-links-and-dependencies-link {
+    #project-info #external-links-and-further-info {
         flex: none;
     }
 }
@@ -61,7 +61,7 @@
         margin-right: 0;
     }
 
-    #project-info #external-links-and-dependencies-link {
+    #project-info #external-links-and-further-info {
         min-width: initial;
         flex: 0 1 auto;
     }
