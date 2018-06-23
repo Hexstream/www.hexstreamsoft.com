@@ -24,9 +24,11 @@
     font-size: initial;
 }
 
-#libraries-index .tabs ul .contains-direct-link > a:not(.direct-link) {
+#libraries-index .tabs ul > li.contains-children > ul > li {
     text-align: left;
 }
+
+
 
 #libraries-index .tabs > ul > li > a {
     font-size: larger;
