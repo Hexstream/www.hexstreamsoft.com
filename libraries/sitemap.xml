@@ -6,7 +6,6 @@
     <loc>https://www.hexstreamsoft.com/libraries/</loc>
   </url>
 
-
   <url>
     <loc>https://www.hexstreamsoft.com/libraries/releases/</loc>
   </url>
@@ -17,6 +16,10 @@
 
   <url>
     <loc>https://www.hexstreamsoft.com/libraries/releases/timeline/</loc>
+  </url>
+
+  <url>
+    <loc>https://www.hexstreamsoft.com/libraries/dependencies/</loc>
   </url>
 
   <url>
@@ -84,45 +87,8 @@
     <loc>https://www.hexstreamsoft.com/libraries/clhs/</loc>
   </url>
 
-
   <url>
     <loc>https://www.hexstreamsoft.com/libraries/place-utils/</loc>
-  </url>
-
-  <url>
-    <loc>https://www.hexstreamsoft.com/libraries/place-utils/setf-expanderlet.html</loc>
-  </url>
-
-  <url>
-    <loc>https://www.hexstreamsoft.com/libraries/place-utils/with-resolved-places.html</loc>
-  </url>
-
-  <url>
-    <loc>https://www.hexstreamsoft.com/libraries/place-utils/updatef.html</loc>
-  </url>
-
-  <url>
-    <loc>https://www.hexstreamsoft.com/libraries/place-utils/bulkf.html</loc>
-  </url>
-
-  <url>
-    <loc>https://www.hexstreamsoft.com/libraries/place-utils/funcallf-applyf.html</loc>
-  </url>
-
-  <url>
-    <loc>https://www.hexstreamsoft.com/libraries/place-utils/cachef.html</loc>
-  </url>
-
-  <url>
-    <loc>https://www.hexstreamsoft.com/libraries/place-utils/oldf.html</loc>
-  </url>
-
-  <url>
-    <loc>https://www.hexstreamsoft.com/libraries/place-utils/readf.html</loc>
-  </url>
-
-  <url>
-    <loc>https://www.hexstreamsoft.com/libraries/place-utils/tracef.html</loc>
   </url>
 
 </urlset>
