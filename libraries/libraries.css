@@ -68,3 +68,13 @@ main .tags .tag a[href]:hover, main .tags .tag a[href]:focus {
         white-space: normal;
     }
 }
+
+@supports (transform: translate(-50%)) {
+    @media (min-width: 72em) {
+        #top-nav > .main > nav.sequential-nav {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+}
