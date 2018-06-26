@@ -77,111 +77,102 @@
         </div>
       </div>
 
-      <nav class="tabs">
-        <ul>
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#emacs-integration">Emacs integration</a></li>
-        </ul>
-      </nav>
+      <div class="tags">
+        <span class="tag">
+          <span class="h">License<span>:</span></span>
+          <span class="d">Mostly proprietary</span>
+        </span>
+        <span class="separator">, </span>
+        <span class="tag">
+          <span class="h">Library type<span>:</span></span>
+          <span class="d">Installation helper</span>
+        </span>
+        <span class="separator">, </span>
+        <span class="tag">
+          <span class="h">Project complexity<span>:</span></span>
+          <span class="d">Simple</span>
+        </span>
+      </div>
 
-      <div id="project-info">
+      <div id="external-links-and-further-info">
 
-        <div class="scroll" id="factsheet-wrapper">
-          <table class="factsheet">
-            <tbody>
-              <tr>
-                <th class="project-license-overall" rowspan="4">Project authors</th>
-                <th class="project-license-wrapper-part property">Wrapper</th>
-                <td class="project-license-wrapper-part"><a href="../../">Jean-Philippe Paradis</a></td>
-              </tr>
-              <tr>
-                <th class="project-license-clhs-part property">CL spec</th>
-                <td class="project-license-clhs-part"><a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Authorship">X3J13 Committee</a></td>
-              </tr>
-              <tr>
-                <th class="project-license-clhs-part property"><a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">CLHS</a></th>
-                <td class="project-license-clhs-part"><a href="http://www.nhplace.com/kent/">Kent Pitman</a></td>
-              </tr>
-              <tr>
-                <th class="project-license-clhs-part property"><a href="http://www.lispworks.com/documentation/common-lisp.html">CLHS ©</a></th>
-                <td class="project-license-clhs-part"><a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Authorship">LispWorks Ltd</a></td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="project-license-overall" rowspan="3"><a href="https://github.com/Hexstream/clhs/blob/master/LICENSE">License</a></th>
-                <th class="project-license-overall property">Overall</th>
-                <td class="project-latest-release-version caution">Mostly proprietary</td>
-              </tr>
-              <tr>
-                <th class="project-license-wrapper-part property">Wrapper part</th>
-                <td class="project-license-wrapper-part good-news"><a href="https://tarballs.hexstreamsoft.com/libraries/latest/clhs_latest.tar.gz">Public Domain</a></td>
-              </tr>
-              <tr>
-                <th class="project-license-clhs-part property">CLHS part</th>
-                <td class="project-license-clhs-part watch-out">Proprietary</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="library-type property">Library type</th>
-                <td class="library-type" colspan="2">Installation helper</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="project-complexity property">Project complexity</th>
-                <td class="project-complexity" colspan="2">Simple</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div id="external-links-and-further-info">
-          <nav class="tabs contains-title" id="external-links">
-            <h1>
-              <a href="../external-pages-xref/">External library pages</a>
-            </h1>
-            <ul>
-              <li><a href="http://github.com/Hexstream/clhs">GitHub</a></li>
-              <li><a href="http://quickdocs.org/clhs">Quickdocs</a></li>
-              <li><a href="http://cliki.net/clhs">CLiki</a></li>
-              <li><a href="http://common-lisp.net/project/cl-test-grid/library/clhs.html">cl-test-grid</a></li>
-            </ul>
-          </nav>
-          <nav class="tabs" id="further-info">
-            <ul>
-              <li><a href="../releases/latest-versions/#clhs">Latest release</a></li>
-              <li><a href="../dependencies/#clhs">Dependencies</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <section id="introduction">
-
-          <h1 class="breadcrumbs-bar">
-            <span class="section-relative-nav">
-              <a href="#introduction" class="anchor">⚓</a>
-            </span>
-            <span class="breadcrumbs">
-              <a href="#">CLHS (thin ASDF wrapper)</a>
-              <span class="crumb"><span class="s"> » </span><a class="here">Introduction</a></span>
-            </span>
+        <nav class="tabs contains-title" id="external-links">
+          <h1>
+            <a href="../external-pages-xref/">External library pages</a>
           </h1>
+          <ul>
+            <li><a href="http://github.com/Hexstream/clhs">GitHub</a></li>
+            <li><a href="http://quickdocs.org/clhs">Quickdocs</a></li>
+            <li><a href="http://cliki.net/clhs">CLiki</a></li>
+            <li><a href="http://common-lisp.net/project/cl-test-grid/library/clhs.html">cl-test-grid</a></li>
+          </ul>
+        </nav>
 
-          <p>The HyperSpec-7-0 directory in this thin ASDF wrapper is a complete and unmodified copy of Lispworks' Common Lisp HyperSpec version 7.0 (referenced from <a href="http://www.lispworks.com/documentation/common-lisp.html">http://www.lispworks.com/documentation/common-lisp.html</a>).
-            <br />Redistribution of the HyperSpec is made with permission from LispWorks per the terms and restrictions set forth at <a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal">http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal</a>.
-            <br />You may further redistribute the HyperSpec subject to the same <a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal">terms and restrictions</a>.</p>
-
-          <p>This thin ASDF wrapper was prepared by Jean-Philippe Paradis (<a href="mailto:hexstream@gmail.com">hexstream@gmail.com</a>) for inclusion in Quicklisp and is not endorsed by LispWorks Ltd. Common Lisp HyperSpec is a registered trademark of LispWorks Ltd. Jean-Philippe Paradis is not a lawyer, has not consulted a lawyer, and prepared this thin ASDF wrapper as a community service on a "good faith, best-effort" basis.</p>
-
-          <p>The <a href="ftp://ftp.lispworks.com/pub/software_tools/reference/HyperSpec-7-0.tar.gz">original download</a> was a <code>.tar.gz</code> file and has been uncompressed for your convenience. The primary use cases for downloading the HyperSpec to your hard drive instead of using <a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">the online documentation</a> are to benefit from the increased responsiveness inherent in browsing a local resource and to ensure reliable, fast access from anywhere while on the go (ex: laptop, smartphone).</p>
-
-        </section>
+        <nav class="tabs" id="further-info">
+          <ul>
+            <li><a href="../releases/latest-versions/#clhs">Latest release</a></li>
+            <li><a href="../dependencies/#clhs">Dependencies</a></li>
+          </ul>
+        </nav>
 
       </div>
 
+      <div class="scroll" id="factsheet-wrapper">
+        <table class="factsheet">
+          <tbody>
+            <tr>
+              <th class="project-license-overall" rowspan="4">Project authors</th>
+              <th class="project-license-wrapper-part property">Wrapper</th>
+              <td class="project-license-wrapper-part"><a href="../../">Jean-Philippe Paradis</a></td>
+            </tr>
+            <tr>
+              <th class="project-license-clhs-part property">CL spec</th>
+              <td class="project-license-clhs-part"><a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Authorship">X3J13 Committee</a></td>
+            </tr>
+            <tr>
+              <th class="project-license-clhs-part property"><a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">CLHS</a></th>
+              <td class="project-license-clhs-part"><a href="http://www.nhplace.com/kent/">Kent Pitman</a></td>
+            </tr>
+            <tr>
+              <th class="project-license-clhs-part property"><a href="http://www.lispworks.com/documentation/common-lisp.html">CLHS ©</a></th>
+              <td class="project-license-clhs-part"><a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Authorship">LispWorks Ltd</a></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th class="project-license-overall" rowspan="3"><a href="https://github.com/Hexstream/clhs/blob/master/LICENSE">License</a></th>
+              <th class="project-license-overall property">Overall</th>
+              <td class="project-latest-release-version caution">Mostly proprietary</td>
+            </tr>
+            <tr>
+              <th class="project-license-wrapper-part property">Wrapper part</th>
+              <td class="project-license-wrapper-part good-news"><a href="https://tarballs.hexstreamsoft.com/libraries/latest/clhs_latest.tar.gz">Public Domain</a></td>
+            </tr>
+            <tr>
+              <th class="project-license-clhs-part property">CLHS part</th>
+              <td class="project-license-clhs-part watch-out">Proprietary</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <section id="introduction">
+
+        <p>The HyperSpec-7-0 directory in this thin ASDF wrapper is a complete and unmodified copy of Lispworks' Common Lisp HyperSpec version 7.0 (referenced from <a href="http://www.lispworks.com/documentation/common-lisp.html">http://www.lispworks.com/documentation/common-lisp.html</a>).
+          <br />Redistribution of the HyperSpec is made with permission from LispWorks per the terms and restrictions set forth at <a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal">http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal</a>.
+          <br />You may further redistribute the HyperSpec subject to the same <a href="http://www.lispworks.com/documentation/HyperSpec/Front/Help.htm#Legal">terms and restrictions</a>.</p>
+
+        <p>This thin ASDF wrapper was prepared by Jean-Philippe Paradis (<a href="mailto:hexstream@gmail.com">hexstream@gmail.com</a>) for inclusion in Quicklisp and is not endorsed by LispWorks Ltd. Common Lisp HyperSpec is a registered trademark of LispWorks Ltd. Jean-Philippe Paradis is not a lawyer, has not consulted a lawyer, and prepared this thin ASDF wrapper as a community service on a "good faith, best-effort" basis.</p>
+
+        <p>The <a href="ftp://ftp.lispworks.com/pub/software_tools/reference/HyperSpec-7-0.tar.gz">original download</a> was a <code>.tar.gz</code> file and has been uncompressed for your convenience. The primary use cases for downloading the HyperSpec to your hard drive instead of using <a href="http://www.lispworks.com/documentation/HyperSpec/Front/index.htm">the online documentation</a> are to benefit from the increased responsiveness inherent in browsing a local resource and to ensure reliable, fast access from anywhere while on the go (ex: laptop, smartphone).</p>
+
+      </section>
+
+      <nav class="tabs">
+        <ul>
+          <li><a href="#emacs-integration">Emacs integration</a></li>
+        </ul>
+      </nav>
 
       <section id="emacs-integration">
 

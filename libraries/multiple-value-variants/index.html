@@ -63,66 +63,56 @@
         <p class="description">An operator overlay macro in Quicklisp.</p>
       </header>
 
-      <nav class="tabs" id="library_navbox">
+      <div class="tags">
+        <span class="tag">
+          <span class="h">License<span>:</span></span>
+          <span class="d">Public Domain</span>
+        </span>
+        <span class="separator">, </span>
+        <span class="tag">
+          <span class="h">Library type<span>:</span></span>
+          <span class="d">Operator overlay macro</span>
+        </span>
+        <span class="separator">, </span>
+        <span class="tag">
+          <span class="h">Project complexity<span>:</span></span>
+          <span class="d">Medium</span>
+        </span>
+      </div>
+
+      <div id="external-links-and-further-info">
+        <nav class="tabs contains-title" id="external-links">
+          <h1>
+            <a href="../external-pages-xref/">External library pages</a>
+          </h1>
+          <ul>
+            <li><a href="http://github.com/Hexstream/multiple-value-variants">GitHub</a></li>
+            <li><a href="http://quickdocs.org/multiple-value-variants">Quickdocs</a></li>
+            <li><a href="http://cliki.net/multiple-value-variants">CLiki</a></li>
+            <li><a href="http://common-lisp.net/project/cl-test-grid/library/multiple-value-variants.html">cl-test-grid</a></li>
+          </ul>
+        </nav>
+
+        <nav class="tabs" id="further-info">
+          <ul>
+            <li><a href="../releases/latest-versions/#multiple-value-variants">Latest release</a></li>
+            <li><a href="../dependencies/#multiple-value-variants">Dependencies</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <section id="introduction">
+
+        <p><cite class="common-lisp library">multiple-value-variants</cite> gives access to multiple-value variants of operators through one macro: <code class="common-lisp library macro operator">multiple-value</code>. There are <a href="#built-in-variants">built-in variants</a> for some standard operators; it's easy to create your own variants for other operators. The <a href="#mapcar">multiple-value mapping operators</a> are especially useful.</p>
+
+      </section>
+
+      <nav class="tabs">
         <ul>
           <li><a href="#api-overview">API overview</a></li>
           <li><a href="#built-in-variants" class="inlining-node">Built-in variants</a></li>
         </ul>
       </nav>
-
-      <div id="project-info">
-
-        <div class="scroll" id="factsheet-wrapper">
-          <table class="factsheet">
-            <tbody>
-              <tr>
-                <th class="project-license property"><a href="https://github.com/Hexstream/multiple-value-variants/blob/master/UNLICENSE">License</a></th>
-                <td class="project-license good-news"><a href="../../resources/#unlicense">Public Domain</a></td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="library-type property">Library type</th>
-                <td class="library-type">Operator overlay macro</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="project-complexity property">Project complexity</th>
-                <td class="project-complexity">Medium</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div id="external-links-and-further-info">
-          <nav class="tabs contains-title" id="external-links">
-            <h1>
-              <a href="../external-pages-xref/">External library pages</a>
-            </h1>
-            <ul>
-              <li><a href="http://github.com/Hexstream/multiple-value-variants">GitHub</a></li>
-              <li><a href="http://quickdocs.org/multiple-value-variants">Quickdocs</a></li>
-              <li><a href="http://cliki.net/multiple-value-variants">CLiki</a></li>
-              <li><a href="http://common-lisp.net/project/cl-test-grid/library/multiple-value-variants.html">cl-test-grid</a></li>
-            </ul>
-          </nav>
-
-          <nav class="tabs" id="further-info">
-            <ul>
-              <li><a href="../releases/latest-versions/#multiple-value-variants">Latest release</a></li>
-              <li><a href="../dependencies/#multiple-value-variants">Dependencies</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <section id="introduction">
-
-          <p><cite class="common-lisp library">multiple-value-variants</cite> gives access to multiple-value variants of operators through one macro: <code class="common-lisp library macro operator">multiple-value</code>. There are <a href="#built-in-variants">built-in variants</a> for some standard operators; it's easy to create your own variants for other operators. The <a href="#mapcar">multiple-value mapping operators</a> are especially useful.</p>
-
-        </section>
-
-      </div>
 
       <section id="api-overview">
 

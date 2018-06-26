@@ -62,62 +62,52 @@
         <p class="description">An embarrassingly trivial visual macro in Quicklisp.</p>
       </header>
 
-      <div id="project-info">
+      <div class="tags">
+        <span class="tag">
+          <span class="h">License<span>:</span></span>
+          <span class="d">Public Domain</span>
+        </span>
+        <span class="separator">, </span>
+        <span class="tag">
+          <span class="h">Library type<span>:</span></span>
+          <span class="d">Visual macro</span>
+        </span>
+        <span class="separator">, </span>
+        <span class="tag">
+          <span class="h">Project complexity<span>:</span></span>
+          <span class="d">Embarrassingly trivial</span>
+        </span>
+      </div>
 
-        <div class="scroll" id="factsheet-wrapper">
+      <div id="external-links-and-further-info">
 
-          <table class="factsheet">
-            <tbody>
-              <tr>
-                <th class="project-license property"><a href="https://github.com/Hexstream/macro-level/blob/master/UNLICENSE">License</a></th>
-                <td class="project-license good-news"><a href="../../resources/#unlicense">Public Domain</a></td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="library-type property">Library type</th>
-                <td class="library-type">Visual macro</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th class="project-complexity property">Project complexity</th>
-                <td class="project-complexity">Embarrassingly trivial</td>
-              </tr>
-            </tbody>
-          </table>
+        <nav class="tabs contains-title" id="external-links">
+          <h1>
+            <a href="../external-pages-xref/">External library pages</a>
+          </h1>
+          <ul>
+            <li><a href="http://github.com/Hexstream/macro-level">GitHub</a></li>
+            <li><a href="http://quickdocs.org/macro-level">Quickdocs</a></li>
+            <li><a href="http://cliki.net/macro-level">CLiki</a></li>
+            <li><a href="http://common-lisp.net/project/cl-test-grid/library/macro-level.html">cl-test-grid</a></li>
+          </ul>
+        </nav>
 
-        </div>
+        <nav class="tabs" id="further-info">
+          <ul>
+            <li><a href="../releases/latest-versions/#macro-level">Latest release</a></li>
+            <li><a href="../dependencies/#macro-level">Dependencies</a></li>
+          </ul>
+        </nav>
 
-        <div id="external-links-and-further-info">
+      </div>
 
-          <nav class="tabs contains-title" id="external-links">
-            <h1>
-              <a href="../external-pages-xref/">External library pages</a>
-            </h1>
-            <ul>
-              <li><a href="http://github.com/Hexstream/macro-level">GitHub</a></li>
-              <li><a href="http://quickdocs.org/macro-level">Quickdocs</a></li>
-              <li><a href="http://cliki.net/macro-level">CLiki</a></li>
-              <li><a href="http://common-lisp.net/project/cl-test-grid/library/macro-level.html">cl-test-grid</a></li>
-            </ul>
-          </nav>
+      <section id="introduction">
 
-          <nav class="tabs" id="further-info">
-            <ul>
-              <li><a href="../releases/latest-versions/#macro-level">Latest release</a></li>
-              <li><a href="../dependencies/#macro-level">Dependencies</a></li>
-            </ul>
-          </nav>
+        <p><dfn><code class="common-lisp library macro operator">macro-level</code></dfn> is an embarrassingly trivial convenience macro that saves on indentation while being more concise and direct.</p>
 
-        </div>
-
-        <section id="introduction">
-
-          <p><dfn><code class="common-lisp library macro operator">macro-level</code></dfn> is an embarrassingly trivial convenience macro that saves on indentation while being more concise and direct.</p>
-
-          <div class="scroll">
-            <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">macro-level</code>
+        <div class="scroll">
+          <pre class="example"><code class="common-lisp">(<code class="common-lisp library macro operator">macro-level</code>
   ...)
 ==
 <span class="comment"><a href="http://www.lispworks.com/documentation/HyperSpec/Body/02_dd.htm">;;</a> Canonical indentation. <code class="common-lisp library macro operator">macro-level</code> saves <span class="saved-indentation">11 spaces</span>.</span>
@@ -130,10 +120,8 @@
     ((<var>m</var> ()
   <span class="saved-indentation">     </span>...))
   (<var>m</var>))</code></pre>
-          </div>
-        </section>
-
-      </div>
+        </div>
+      </section>
 
       <section id="documentation">
 

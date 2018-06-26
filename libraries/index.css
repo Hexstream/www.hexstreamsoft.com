@@ -39,3 +39,9 @@
 #misc-index {
     margin-top: 2em;
 }
+
+@media (max-width: 25em) {
+    #page-header h1 {
+        font-size: 13vw;
+    }
+}

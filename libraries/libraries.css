@@ -1,80 +1,70 @@
 @import "https://global.hexstreamsoft.com/css/factsheet.css";
 @import "https://global.hexstreamsoft.com/css/cl.css";
+@import "https://global.hexstreamsoft.com/css/tags.css";
 
 #top-nav + main {
     margin-top: 1.5em;
 }
 
-#project-info {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin: 1em 0 0 0;
+main .tags {
+    font-size: 1.05em;
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#project-info #factsheet-wrapper {
-    flex: none;
-    margin-left: 1em;
+main .tags .tag a {
+    text-decoration: none;
+}
+
+main .tags .tag a[href]:hover, main .tags .tag a[href]:focus {
+    text-decoration: underline;
+}
+
+
+#external-links-and-further-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 0.5em;
+}
+
+#external-links-and-further-info .tabs {
+    flex: 0 1 auto;
+    flex-flow: column;
+    align-items: center;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+#external-links-and-further-info .tabs.contains-title > h1 {
+    margin-left: 0;
     margin-right: 0;
 }
 
-#project-info #external-links-and-further-info {
-    flex: 1 0 0;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    min-width: max-content;
-    margin-left: 0.5em;
+#external-links-and-further-info #further-info {
+    margin-top: 0.6em;
 }
 
-#project-info #external-links-and-further-info .tabs {
-    flex-flow: column;
-    align-items: center;
+#introduction {
+    display: table;
+    padding: 0 1em;
+    border-left: thin solid rgba(0, 0, 0, 0.4);
+    border-right: thin solid rgba(0, 0, 0, 0.4);
+    margin: 2em auto;
+    max-width: 40em;
 }
 
-#project-info #introduction {
-    flex: 1 1 0;
-    order: -1;
-    margin-top: 0;
-    margin-bottom: 0;
-    min-width: 20em;
-}
 
-@media (max-width: 50em) {
-    #project-info #factsheet-wrapper {
-        margin-left: 1em;
+
+@media (max-width: 40em) {
+
+    #introduction {
+        display: block;
     }
 
-    #project-info #introduction {
-        order: initial;
+    p code {
+        white-space: normal;
     }
-
-    #project-info #external-links-and-further-info {
-        flex: none;
-    }
-}
-
-@media (max-width: 34em) {
-    #project-info #factsheet-wrapper {
-        flex: 0 1 auto;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    #project-info #external-links-and-further-info {
-        min-width: initial;
-        flex: 0 1 auto;
-    }
-}
-
-
-#documentation {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-#documentation > :first-child {
-    margin-top: 0;
 }
