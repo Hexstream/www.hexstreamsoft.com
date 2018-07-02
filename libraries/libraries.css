@@ -17,11 +17,6 @@ main .tags .tag.hv {
     white-space: normal;
 }
 
-main .tags .tag.hv .h,
-main .tags .tag.hv .v {
-    white-space: nowrap;
-}
-
 main .tags .tag a {
     text-decoration: none;
 }
