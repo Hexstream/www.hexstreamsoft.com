@@ -2,6 +2,68 @@
 @import "https://global.hexstreamsoft.com/css/cl.css";
 @import "https://global.hexstreamsoft.com/css/tags.css";
 
+main .tags.contains-groups {
+    flex-flow: column;
+    align-items: center;
+}
+
+main .tags.contains-groups > .group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: inherit;
+}
+
+main .tags.contains-groups > .group.prominent {
+    font-size: larger;
+    margin-bottom: 0.5em;
+}
+
+main .tags.contains-groups > .group.prominent .tag {
+    position: relative;
+    padding: 0.4em 0.6em;
+    padding-left: 1.8em;
+    margin-top: 0.7em;
+    background-repeat: no-repeat;
+    background-position: 0.25em center;
+    background-size: auto 70%;
+    opacity: 1;
+}
+
+main .tags.contains-groups > .group.prominent:hover .tag .h {
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: small;
+}
+
+main .tags.contains-groups > .group.prominent:hover .tag .h > span {
+    display: none;
+}
+
+
+
+main .tags .tag.license {
+    background-image: url("https://global.hexstreamsoft.com/images/logos/public-domain.svg");
+}
+
+main .tags .tag.quicklisp {
+    background-image: url("https://non-free.hexstream.xyz/global.hexstreamsoft.com/images/logos/quicklisp.svg");
+}
+
+main .tags .tag.github {
+    background-image: url("https://non-free.hexstream.xyz/global.hexstreamsoft.com/images/logos/github.svg");
+}
+
+
+main .tags .tag.license .h,
+main .tags .tag.quicklisp .h {
+    display: none;
+}
+
+
 #top-nav + main {
     margin-top: 1.5em;
 }
@@ -26,30 +88,10 @@ main .tags .tag a[href]:hover, main .tags .tag a[href]:focus {
 }
 
 
-#external-links-and-further-info {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 0.5em;
+#further-info {
+    margin-top: 0.8em;
 }
 
-#external-links-and-further-info .tabs {
-    flex: 0 1 auto;
-    flex-flow: column;
-    align-items: center;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-}
-
-#external-links-and-further-info .tabs.contains-title > h1 {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-#external-links-and-further-info #further-info {
-    margin-top: 0.6em;
-}
 
 #introduction {
     display: table;
