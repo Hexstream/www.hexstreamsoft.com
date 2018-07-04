@@ -29,7 +29,7 @@ main .tags.contains-groups > .group.prominent .tag {
     opacity: 1;
 }
 
-main .tags.contains-groups > .group.prominent:hover .tag .h {
+main .tags.contains-groups > .group.prominent .tag:hover .h {
     display: block;
     position: absolute;
     bottom: 100%;
@@ -39,7 +39,7 @@ main .tags.contains-groups > .group.prominent:hover .tag .h {
     font-size: small;
 }
 
-main .tags.contains-groups > .group.prominent:hover .tag .h > span {
+main .tags.contains-groups > .group.prominent .tag:hover .h > span {
     display: none;
 }
 
