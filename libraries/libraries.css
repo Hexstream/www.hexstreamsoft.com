@@ -11,6 +11,7 @@ main .tags.contains-groups > .group {
     display: flex;
     flex-flow: row wrap;
     justify-content: inherit;
+    max-width: 100%;
 }
 
 main .tags.contains-groups > .group.prominent {
@@ -73,6 +74,12 @@ main .tags {
     max-width: max-content;
     margin-left: auto;
     margin-right: auto;
+}
+
+main .tags .tag {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 main .tags .tag.hv {
