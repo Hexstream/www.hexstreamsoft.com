@@ -2,18 +2,6 @@
 @import "https://global.hexstreamsoft.com/css/cl.css";
 @import "https://global.hexstreamsoft.com/css/tags.css";
 
-main .tags.contains-groups {
-    flex-flow: column;
-    align-items: center;
-}
-
-main .tags.contains-groups > .group {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: inherit;
-    max-width: 100%;
-}
-
 main .tags.contains-groups > .group.prominent {
     font-size: larger;
     margin-bottom: 0.5em;
