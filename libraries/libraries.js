@@ -50,10 +50,10 @@ const libraries = [
 
 function siblingLibraries (current) {
     function libraryWithIndex (index) {
-        let clampedIndex = (index >= 0 && index < libraries.length) ? index : null;
+        const clampedIndex = (index >= 0 && index < libraries.length) ? index : null;
         return clampedIndex != null ? libraries[clampedIndex] : null;
     }
-    let libraryIndex = libraries.findIndex(element => element.name === current);
+    const libraryIndex = libraries.findIndex(element => element.name === current);
     if (libraryIndex < 0) {
         throw Error("Unrecognized library name \"" + current + "\".");
     }
@@ -63,15 +63,16 @@ function siblingLibraries (current) {
 }
 
 function buildSequentialNavHTML(prevLibrary, nextLibrary, currentIndex, librariesCount) {
+    const librariesDir = document.location.protocol === "file:" ? "https://www.hexstreamsoft.com/libraries/" : "../";
     function makeLink (sibling, prevOrNext, arrow) {
-        return sibling !== null ? `<a class="sequential-link ${prevOrNext}" href="${`../${sibling.name}/`}">${arrow}</a>` : "";
+        return sibling !== null ? `<a class="sequential-link ${prevOrNext}" href="${librariesDir}${`${sibling.name}/`}">${arrow}</a>` : "";
     }
-    let prev = makeLink(prevLibrary, "prev", "←");
-    let next = makeLink(nextLibrary, "next", "→");
+    const prev = makeLink(prevLibrary, "prev", "←");
+    const next = makeLink(nextLibrary, "next", "→");
     return `
 <nav class="sequential-nav">
   ${prev}
-  <a href="../">
+  <a href="${librariesDir}">
     Libraries
     <span>${currentIndex}/${librariesCount}</span>
   </a>
