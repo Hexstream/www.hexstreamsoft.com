@@ -74,7 +74,7 @@ function buildSequentialNavHTML(prevLibrary, nextLibrary, currentIndex, librarie
   ${prev}
   <a href="${librariesDir}">
     Libraries
-    <span>${currentIndex}/${librariesCount}</span>
+    <span class="under">${currentIndex}/${librariesCount}</span>
   </a>
   ${next}
 </nav>`;

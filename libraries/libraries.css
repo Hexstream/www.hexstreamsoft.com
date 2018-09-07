@@ -2,8 +2,8 @@
 @import "https://global.hexstreamsoft.com/css/cl.css";
 @import "https://global.hexstreamsoft.com/css/tags.css";
 
-#top-nav > .main > nav a span,
-#top-nav > .main > .breadcrumbs a span {
+#top-nav > .main > nav a .under,
+#top-nav > .main > .breadcrumbs a .under {
     position: absolute;
     left: 0;
     right: 0;
