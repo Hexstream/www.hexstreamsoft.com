@@ -127,8 +127,15 @@ main .tags .tag a[href]:hover, main .tags .tag a[href]:focus {
 }
 
 @supports (transform: translate(-50%)) {
-    @media (min-width: 72em) {
-        #top-nav > .main > nav.sequential-nav {
+    @media (min-width: 79.5em) {
+        html:not(.browsing-locally) #top-nav > .main > nav.sequential-nav {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+    @media (min-width: 95.9em) {
+        .browsing-locally #top-nav > .main > nav.sequential-nav {
             position: absolute;
             left: 50%;
             transform: translate(-50%);
