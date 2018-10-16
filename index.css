@@ -92,6 +92,20 @@
     background-image: url("https://global.hexstreamsoft.com/images/logos/public-domain.svg");
 }
 
+#prominent > .tabs {
+    transform: translate(2.7em);
+}
+
+#prominent #psa-about-zach-beane-the-sociopath,
+#prominent #psa-about-zach-beane-the-sociopath + .tabs {
+    display: none;
+}
+
+#prominent #psa-about-zach-beane-the-sociopath:target,
+#prominent #psa-about-zach-beane-the-sociopath:target + .tabs {
+    display: flex;
+}
+
 #prominent #psa-about-zach-beane-the-sociopath:before {
     content: "⚠";
     display: flex;
