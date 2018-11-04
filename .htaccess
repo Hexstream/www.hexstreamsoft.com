@@ -3,5 +3,5 @@ ErrorDocument 404 /special/error-pages/404.html
 ErrorDocument 403 /special/error-pages/403.html
 ErrorDocument 400 /special/error-pages/400.html
 
-RedirectPermanent /projects/ http://www.hexstreamsoft.com/libraries/
-RedirectPermanent /worknotes/ http://worknotes.hexstreamsoft.com/
+RedirectPermanent /projects/ https://www.hexstreamsoft.com/libraries/
+RedirectPermanent /worknotes/ https://worknotes.hexstreamsoft.com/
