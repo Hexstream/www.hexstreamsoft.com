@@ -35,6 +35,9 @@ const libraries = [
         name: "bubble-operator-upwards"
     },
     {
+        name: "definitions-systems"
+    },
+    {
         name: "incognito-keywords"
     },
     {

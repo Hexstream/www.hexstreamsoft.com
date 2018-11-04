@@ -9,6 +9,7 @@ anaphoric-variants
 multiple-value-variants
 parse-number-range
 bubble-operator-upwards
+definitions-systems
 incognito-keywords
 symbol-namespaces
 clhs
