@@ -17,6 +17,9 @@ const libraries = [
         name: "macro-level"
     },
     {
+        name: "with-shadowed-bindings"
+    },
+    {
         name: "cartesian-product-switch"
     },
     {
