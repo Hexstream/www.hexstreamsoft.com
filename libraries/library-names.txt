@@ -3,6 +3,7 @@ positional-lambda
 enhanced-eval-when
 enhanced-multiple-value-bind
 macro-level
+its
 with-shadowed-bindings
 cartesian-product-switch
 place-modifiers

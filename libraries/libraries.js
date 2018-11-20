@@ -20,6 +20,9 @@ const libraries = [
         name: "with-shadowed-bindings"
     },
     {
+        name: "its"
+    },
+    {
         name: "cartesian-product-switch"
     },
     {
