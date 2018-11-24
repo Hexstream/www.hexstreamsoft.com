@@ -4,6 +4,7 @@ enhanced-eval-when
 enhanced-multiple-value-bind
 macro-level
 with-shadowed-bindings
+first-time-value
 its
 cartesian-product-switch
 place-modifiers

@@ -20,6 +20,9 @@ const libraries = [
         name: "with-shadowed-bindings"
     },
     {
+        name: "first-time-value"
+    },
+    {
         name: "its"
     },
     {
