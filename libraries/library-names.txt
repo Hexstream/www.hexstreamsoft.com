@@ -1,5 +1,6 @@
 map-bind
 positional-lambda
+trivial-jumptables
 enhanced-eval-when
 enhanced-multiple-value-bind
 macro-level

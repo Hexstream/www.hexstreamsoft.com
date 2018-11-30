@@ -8,6 +8,9 @@ const libraries = [
         name: "positional-lambda"
     },
     {
+        name: "trivial-jumptables"
+    },
+    {
         name: "enhanced-eval-when"
     },
     {
