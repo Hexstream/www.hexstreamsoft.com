@@ -71,8 +71,9 @@
 }
 
 #prominent .notice {
-    height: 5em;
-    border-color: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
     margin: 0;
 }
 
@@ -93,7 +94,13 @@
 }
 
 #prominent > .tabs {
+    margin-top: 0;
+    margin-bottom: 0;
     transform: translate(2.7em);
+}
+
+#prominent #unlicense {
+    margin-bottom: 1em;
 }
 
 #prominent #psa-about-zach-beane-the-sociopath,
@@ -147,10 +154,15 @@
         text-align: center;
     }
 
+    #prominent > .tabs {
+        transform: initial;
+    }
+
     #prominent .notice:before,
     #prominent #psa-about-zach-beane-the-sociopath:before {
         display: none;
     }
+
 }
 
 
