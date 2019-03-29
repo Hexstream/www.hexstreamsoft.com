@@ -30,6 +30,10 @@
     opacity: 1;
 }
 
+.navlist section.new h1 {
+    color: green;
+}
+
 @media (max-width: 36em) {
     .navlist section.contains-extras {
         flex-flow: column;
@@ -141,6 +145,10 @@
 
     #prominent #unlicense:before {
         left: 0;
+    }
+
+    #prominent #psa-about-zach-beane-the-sociopath .learn-yet-even-more {
+        position: initial;
     }
 
 }
