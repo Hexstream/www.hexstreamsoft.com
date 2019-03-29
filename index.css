@@ -128,6 +128,12 @@
     left: -0.8rem;
 }
 
+#prominent #psa-about-zach-beane-the-sociopath .learn-yet-even-more {
+    position: relative;
+    left: -1.1em
+}
+
+
 @media (max-width: 36em) {
     #prominent .notice > div {
         text-align: left;
