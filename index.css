@@ -137,6 +137,18 @@
     left: -1.1em
 }
 
+#prominent #psa-about-zach-beane-the-sociopath small {
+    opacity: 0.5;
+}
+
+#prominent #psa-about-zach-beane-the-sociopath small:hover {
+    opacity: 1;
+}
+
+#prominent #psa-about-zach-beane-the-sociopath small a {
+    text-decoration: none;
+}
+
 
 @media (max-width: 36em) {
     #prominent .notice > div {
