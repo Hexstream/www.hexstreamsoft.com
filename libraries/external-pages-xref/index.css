@@ -1,3 +1,7 @@
 .navtable td {
     text-align: center;
 }
+
+main table tr:target .library-name a {
+    color: green;
+}
