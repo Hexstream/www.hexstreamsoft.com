@@ -17,4 +17,5 @@ definitions-systems
 incognito-keywords
 symbol-namespaces
 clhs
+cesdi
 place-utils

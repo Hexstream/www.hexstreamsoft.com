@@ -59,6 +59,9 @@ const libraries = [
         name: "clhs"
     },
     {
+        name: "cesdi"
+    },
+    {
         name: "place-utils"
     }
 ];
