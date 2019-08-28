@@ -147,6 +147,11 @@
 
 #prominent #psa-about-zach-beane-the-sociopath small a {
     text-decoration: none;
+    white-space: nowrap;
+}
+
+#prominent #psa-about-zach-beane-the-sociopath small a:hover {
+    text-decoration: underline;
 }
 
 
