@@ -35,14 +35,6 @@ th.name {
     margin-top: 0;
 }
 
-#email p {
-    margin-bottom: 0;
-}
-
-#email p + p {
-    margin-top: 0.1em;
-}
-
 #custom-timelines {
     line-height: 1em;
 }
