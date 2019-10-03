@@ -11,6 +11,9 @@ const libraries = [
         name: "trivial-jumptables"
     },
     {
+        name: "with-output-to-stream"
+    },
+    {
         name: "enhanced-eval-when"
     },
     {

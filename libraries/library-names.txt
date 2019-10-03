@@ -1,6 +1,7 @@
 map-bind
 positional-lambda
 trivial-jumptables
+with-output-to-stream
 enhanced-eval-when
 enhanced-multiple-value-bind
 macro-level
