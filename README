@@ -2,19 +2,7 @@ Website's primary location: https://www.hexstreamsoft.com/
 Website source code's primary location: https://github.com/Hexstream/www.hexstreamsoft.com
 
 
-I finally decided to start managing my website's source code with Git,
-so might as well publish it. And then, might as well dump it into the
-public domain. Just for kicks. And because it's my usual modus
-operandi. And because it might help someone somewhere at some point.
-
-The presentation used to be quite crappy, but this changed thanks in
-large part to a partial import of some of the CSS I wrote long ago for
-my old "BahagonTools" project.
-
-I'm writing the HTML and CSS by hand, which is to me unacceptable, but
-I have yet to clean up my old (and awesome in some ways, but
-undocumented) Common Lisp libraries for HTML and CSS (and form
-validation, and lots of other cool stuff). Old story.
+This is the source code for the HexstreamSoft website.
 
 
 This website is in the Public Domain.
