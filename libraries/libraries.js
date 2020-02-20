@@ -62,6 +62,9 @@ const libraries = [
         name: "clhs"
     },
     {
+        name: "enhanced-boolean"
+    },
+    {
         name: "cesdi"
     },
     {
