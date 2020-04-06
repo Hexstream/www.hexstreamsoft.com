@@ -67,21 +67,21 @@
     }
 }
 
-#prominent {
+.prominent {
     display: flex;
     flex-flow: column;
     align-items: center;
     margin: 1em 0 0;
 }
 
-#prominent .notice {
+.prominent .notice {
     padding-top: 0;
     padding-bottom: 0;
     border: none;
     margin: 0;
 }
 
-#prominent .notice:before {
+.prominent .notice:before {
     content: "";
     flex: none;
     background-repeat: no-repeat;
@@ -93,31 +93,31 @@
     opacity: 0.75;
 }
 
-#prominent #unlicense:before {
+.prominent #unlicense:before {
     background-image: url("https://global.hexstreamsoft.com/images/logos/public-domain.svg");
 }
 
-#prominent > .tabs {
+.prominent > .tabs {
     margin-top: 0;
     margin-bottom: 0;
     transform: translate(2.7em);
 }
 
-#prominent #unlicense {
+.prominent #unlicense {
     margin-bottom: 1em;
 }
 
-#prominent #psa-about-zach-beane-the-sociopath,
-#prominent #psa-about-zach-beane-the-sociopath + .tabs {
+.prominent #psa-about-zach-beane-the-sociopath,
+.prominent #psa-about-zach-beane-the-sociopath + .tabs {
     display: none;
 }
 
-#prominent #psa-about-zach-beane-the-sociopath:target,
-#prominent #psa-about-zach-beane-the-sociopath:target + .tabs {
+.prominent #psa-about-zach-beane-the-sociopath:target,
+.prominent #psa-about-zach-beane-the-sociopath:target + .tabs {
     display: flex;
 }
 
-#prominent #psa-about-zach-beane-the-sociopath:before {
+.prominent #psa-about-zach-beane-the-sociopath:before {
     content: "⚠";
     display: flex;
     flex-flow: row;
@@ -132,65 +132,65 @@
     left: -0.8rem;
 }
 
-#prominent #psa-about-zach-beane-the-sociopath .learn-yet-even-more {
+.prominent #psa-about-zach-beane-the-sociopath .learn-yet-even-more {
     position: relative;
     left: -1.1em
 }
 
-#prominent #psa-about-zach-beane-the-sociopath small {
+.prominent #psa-about-zach-beane-the-sociopath small {
     opacity: 0.5;
 }
 
-#prominent #psa-about-zach-beane-the-sociopath small:hover {
+.prominent #psa-about-zach-beane-the-sociopath small:hover {
     opacity: 1;
 }
 
-#prominent #psa-about-zach-beane-the-sociopath small a {
+.prominent #psa-about-zach-beane-the-sociopath small a {
     text-decoration: none;
     white-space: nowrap;
 }
 
-#prominent #psa-about-zach-beane-the-sociopath small a:hover {
+.prominent #psa-about-zach-beane-the-sociopath small a:hover {
     text-decoration: underline;
 }
 
 
 @media (max-width: 36em) {
-    #prominent .notice > div {
+    .prominent .notice > div {
         text-align: left;
     }
 
-    #prominent #unlicense:before {
+    .prominent #unlicense:before {
         left: 0;
     }
 
-    #prominent #psa-about-zach-beane-the-sociopath .learn-yet-even-more {
+    .prominent #psa-about-zach-beane-the-sociopath .learn-yet-even-more {
         position: initial;
     }
 
 }
 
 @media (max-width: 33.8em) {
-    #prominent #psa-about-zach-beane-the-sociopath:before {
+    .prominent #psa-about-zach-beane-the-sociopath:before {
         left: auto;
     }
 }
 
 @media (max-width: 23em) {
-    #prominent {
+    .prominent {
         margin-top: 0;
     }
 
-    #prominent .notice > div {
+    .prominent .notice > div {
         text-align: center;
     }
 
-    #prominent > .tabs {
+    .prominent > .tabs {
         transform: initial;
     }
 
-    #prominent .notice:before,
-    #prominent #psa-about-zach-beane-the-sociopath:before {
+    .prominent .notice:before,
+    .prominent #psa-about-zach-beane-the-sociopath:before {
         display: none;
     }
 
