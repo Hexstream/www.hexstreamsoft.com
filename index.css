@@ -94,7 +94,7 @@
 }
 
 .prominent #unlicense:before {
-    background-image: url("https://global.hexstreamsoft.com/images/logos/public-domain.svg");
+    background-image: url("https://global.hexstream.dev/images/logos/public-domain.svg");
 }
 
 .prominent > .tabs {
@@ -220,11 +220,11 @@
 }
 
 #twitter-quick-link {
-    background-image: url("https://non-free.hexstream.dev/global.hexstreamsoft.com/images/logos/twitter.svg");
+    background-image: url("https://non-free.hexstream.dev/global.hexstream.dev/images/logos/twitter.svg");
 }
 
 #github-quick-link {
-    background-image: url("https://non-free.hexstream.dev/global.hexstreamsoft.com/images/logos/github.svg");
+    background-image: url("https://non-free.hexstream.dev/global.hexstream.dev/images/logos/github.svg");
 }
 
 #patreon-quick-link {

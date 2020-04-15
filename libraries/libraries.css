@@ -1,6 +1,6 @@
-@import "https://global.hexstreamsoft.com/css/factsheet.css";
-@import "https://global.hexstreamsoft.com/css/cl.css";
-@import "https://global.hexstreamsoft.com/css/tags.css";
+@import "https://global.hexstream.dev/css/factsheet.css";
+@import "https://global.hexstream.dev/css/cl.css";
+@import "https://global.hexstream.dev/css/tags.css";
 
 #top-nav > .main > nav a .under,
 #top-nav > .main > .breadcrumbs a .under {
@@ -51,15 +51,15 @@ main .tags.contains-groups > .group.prominent .tag:hover .h > span {
 
 
 main .tags .tag.license {
-    background-image: url("https://global.hexstreamsoft.com/images/logos/public-domain.svg");
+    background-image: url("https://global.hexstream.dev/images/logos/public-domain.svg");
 }
 
 main .tags .tag.quicklisp {
-    background-image: url("https://non-free.hexstream.dev/global.hexstreamsoft.com/images/logos/quicklisp.svg");
+    background-image: url("https://non-free.hexstream.dev/global.hexstream.dev/images/logos/quicklisp.svg");
 }
 
 main .tags .tag.github {
-    background-image: url("https://non-free.hexstream.dev/global.hexstreamsoft.com/images/logos/github.svg");
+    background-image: url("https://non-free.hexstream.dev/global.hexstream.dev/images/logos/github.svg");
 }
 
 
