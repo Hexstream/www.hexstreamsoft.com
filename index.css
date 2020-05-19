@@ -67,6 +67,21 @@
     }
 }
 
+
+#sponsors {
+    margin-top: 0;
+}
+
+#sponsors p {
+    font-size: larger;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+
 .prominent {
     display: flex;
     flex-flow: column;
