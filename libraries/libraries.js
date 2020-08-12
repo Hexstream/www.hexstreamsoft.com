@@ -65,6 +65,9 @@ const libraries = [
         name: "enhanced-boolean"
     },
     {
+        name: "enhanced-find-class"
+    },
+    {
         name: "fakenil"
     },
     {
