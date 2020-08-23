@@ -14,12 +14,12 @@ anaphoric-variants
 multiple-value-variants
 parse-number-range
 bubble-operator-upwards
+cesdi
+enhanced-find-class
 definitions-systems
 incognito-keywords
 symbol-namespaces
 clhs
 enhanced-boolean
-enhanced-find-class
 fakenil
-cesdi
 place-utils

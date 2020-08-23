@@ -50,6 +50,12 @@ const libraries = [
         name: "bubble-operator-upwards"
     },
     {
+        name: "cesdi"
+    },
+    {
+        name: "enhanced-find-class"
+    },
+    {
         name: "definitions-systems"
     },
     {
@@ -65,13 +71,7 @@ const libraries = [
         name: "enhanced-boolean"
     },
     {
-        name: "enhanced-find-class"
-    },
-    {
         name: "fakenil"
-    },
-    {
-        name: "cesdi"
     },
     {
         name: "place-utils"
