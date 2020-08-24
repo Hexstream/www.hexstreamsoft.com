@@ -56,6 +56,9 @@ const libraries = [
         name: "enhanced-find-class"
     },
     {
+        name: "class-options"
+    },
+    {
         name: "definitions-systems"
     },
     {
