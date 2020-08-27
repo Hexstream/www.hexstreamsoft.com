@@ -20,6 +20,9 @@ const libraries = [
         name: "enhanced-multiple-value-bind"
     },
     {
+        name: "evaled-when"
+    },
+    {
         name: "macro-level"
     },
     {
