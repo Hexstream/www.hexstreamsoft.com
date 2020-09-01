@@ -13,6 +13,7 @@
 
 #libraries-index .tabs.contains-title > h1 {
     margin-left: 0;
+    margin-right: 0;
 }
 
 #libraries-index .tabs ul > li.contains-children {
