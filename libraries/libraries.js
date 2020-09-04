@@ -80,6 +80,9 @@ const libraries = [
         name: "fakenil"
     },
     {
+        name: "simple-guess"
+    },
+    {
         name: "place-utils"
     }
 ];
