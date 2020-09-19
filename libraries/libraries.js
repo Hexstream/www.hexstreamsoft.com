@@ -62,6 +62,9 @@ const libraries = [
         name: "class-options"
     },
     {
+        name: "compatible-metaclasses"
+    },
+    {
         name: "definitions-systems"
     },
     {
