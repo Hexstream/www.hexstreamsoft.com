@@ -83,6 +83,9 @@ const libraries = [
         name: "enhanced-boolean"
     },
     {
+        name: "enhanced-typep"
+    },
+    {
         name: "fakenil"
     },
     {
