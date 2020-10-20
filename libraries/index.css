@@ -1,7 +1,3 @@
-#libraries-index {
-    justify-content: center;
-}
-
 #libraries-index .tabs {
     flex-flow: column;
     align-items: center;
