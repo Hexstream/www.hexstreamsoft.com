@@ -1,2 +1,0 @@
-notes-tips-standard-common-lisp-symbols/
-getting-started-with-the-clhs/
