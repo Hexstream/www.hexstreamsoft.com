@@ -5,3 +5,4 @@ ErrorDocument 400 /special/error-pages/400.html
 
 RedirectPermanent /projects/ https://www.hexstreamsoft.com/libraries/
 RedirectPermanent /worknotes/ https://worknotes.hexstreamsoft.com/
+RedirectPermanent /articles/notes-tips-standard-common-lisp-symbols/ https://notes-and-tips.hexstreamsoft.com/
