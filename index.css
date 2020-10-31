@@ -8,6 +8,10 @@
     line-height: 1.4em;
 }
 
+#page-header a {
+    text-decoration: none;
+}
+
 #hello {
     display: table;
     text-align: center;
