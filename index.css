@@ -24,6 +24,11 @@
     border-bottom: thin solid rgba(0, 0, 0, 0.2);
 }
 
+#fundraiser-progress {
+    margin-top: -0.4em;
+    margin-bottom: 1em;
+}
+
 .fit-content.contains-navlists {
     margin-top: 0;
 }
