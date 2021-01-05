@@ -26,7 +26,6 @@
 }
 
 
-
 #libraries-index .tabs > ul > li > a {
     font-size: larger;
     font-weight: bold;
@@ -41,4 +40,27 @@
     #page-header h1 {
         font-size: 13vw;
     }
+}
+
+
+#legend {
+    text-align: center;
+}
+
+.modern {
+    color: green;
+}
+
+.update-pending {
+    color: orangered;
+}
+
+.deprecated {
+    color: crimson;
+}
+
+.modern a,
+.update-pending a,
+.deprecated a {
+    color: inherit;
 }
