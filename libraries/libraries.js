@@ -93,6 +93,9 @@ const libraries = [
     },
     {
         name: "place-utils"
+    },
+    {
+        name: "inheriting-readers"
     }
 ];
 
