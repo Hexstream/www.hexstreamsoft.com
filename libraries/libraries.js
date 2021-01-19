@@ -96,6 +96,9 @@ const libraries = [
     },
     {
         name: "inheriting-readers"
+    },
+    {
+        name: "shared-preferences"
     }
 ];
 
