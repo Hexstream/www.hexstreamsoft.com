@@ -99,6 +99,9 @@ const libraries = [
     },
     {
         name: "shared-preferences"
+    },
+    {
+        name: "enhanced-defclass"
     }
 ];
 
