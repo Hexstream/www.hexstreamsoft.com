@@ -102,6 +102,9 @@ const libraries = [
     },
     {
         name: "enhanced-defclass"
+    },
+    {
+        name: "canonicalized-initargs"
     }
 ];
 
