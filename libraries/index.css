@@ -3,8 +3,10 @@
     align-items: center;
 }
 
-#libraries-index .tabs:first-child {
-    margin-bottom: -1.5em;
+@media (max-width: 55em) {
+    #libraries-index .tabs:first-child {
+        margin-bottom: -1.5em;
+    }
 }
 
 #libraries-index .tabs.contains-title > h1 {

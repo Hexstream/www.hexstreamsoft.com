@@ -98,13 +98,13 @@ const libraries = [
         name: "inheriting-readers"
     },
     {
-        name: "shared-preferences"
-    },
-    {
         name: "enhanced-defclass"
     },
     {
         name: "canonicalized-initargs"
+    },
+    {
+        name: "shared-preferences"
     }
 ];
 
