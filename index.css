@@ -37,6 +37,7 @@
     color: green;
     font-weight: bold;
     opacity: 1;
+    text-align: right;
 }
 
 .navlist section.new h1 {
@@ -51,6 +52,10 @@
     .navlist section.contains-extras > .extras {
         justify-content: flex-start;
         padding-left: 0.5em;
+    }
+
+    .navlist section.contains-extras > .extras .new a br {
+        display: none;
     }
 }
 
