@@ -102,6 +102,11 @@
 }
 
 
+#news article ul {
+    margin-right: 0;
+}
+
+
 #best-viewed-in {
     border-top: dashed medium #DDDDDD;
 }
