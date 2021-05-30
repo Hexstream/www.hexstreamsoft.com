@@ -77,6 +77,10 @@
 }
 
 @media (min-width: 85em) {
+    #top-nav {
+        z-index: 1;
+    }
+
     #page-header {
         margin-top: -2em;
     }
