@@ -139,3 +139,16 @@
 #keybase-quick-link {
     background-image: url("https://non-free.hexstream.dev/global.hexstream.dev/images/logos/keybase.svg");
 }
+
+
+#news .news-item.moved {
+    display: none;
+}
+
+#news .news-item.moved:target {
+    display: block;
+}
+
+#psa-about-phoe {
+    margin-top: 2.5em;
+}
