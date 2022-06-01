@@ -1,5 +1,3 @@
-"use strict";
-
 const phoe_redirects = ["#23_march_2021",
                         "#27_january_2021",
                         "#no-I-never-bought-traffic"];
