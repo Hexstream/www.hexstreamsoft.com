@@ -1,2 +1,7 @@
 *.*~
+#*
 /embed/
+
+public
+
+node_modules
