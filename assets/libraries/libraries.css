@@ -94,6 +94,9 @@ main .tags .tag a[href]:hover, main .tags .tag a[href]:focus {
     border-left: thin solid rgba(0, 0, 0, 0.4);
     border-right: thin solid rgba(0, 0, 0, 0.4);
     margin: 2em auto;
+}
+
+#introduction.autowrap {
     max-width: 40em;
 }
 
