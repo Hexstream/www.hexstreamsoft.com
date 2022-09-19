@@ -1,47 +1,60 @@
-#libraries-index .tabs {
+@media (max-width: 25em) {
+    #page-header h1 {
+        font-size: 13vw;
+    }
+}
+
+
+#libraries .tabs {
     flex-flow: column;
     align-items: center;
 }
 
 @media (max-width: 55em) {
-    #libraries-index .tabs:first-child {
+    #libraries .tabs:first-child {
         margin-bottom: -1.5em;
     }
 }
 
-#libraries-index .tabs.contains-title > h1 {
+#libraries .tabs.contains-title > h1 {
     margin-left: 0;
     margin-right: 0;
 }
 
-#libraries-index .tabs ul > li.contains-children {
+#libraries .tabs ul > li.contains-children {
     align-items: center;
 }
 
-#libraries-index .tabs ul > li.contains-children > ul {
+#libraries .tabs ul > li.contains-children > ul {
     flex-flow: column;
     font-size: initial;
 }
 
-#libraries-index .tabs ul > li.contains-children > ul > li {
+#libraries .tabs ul > li.contains-children > ul > li {
     text-align: left;
 }
 
 
-#libraries-index .tabs > ul > li > a {
+#libraries .tabs > ul > li > a {
     font-size: larger;
     font-weight: bold;
     align-self: stretch;
 }
 
-#misc-index {
+
+#tabs {
     margin-top: 2em;
 }
 
-@media (max-width: 25em) {
-    #page-header h1 {
-        font-size: 13vw;
-    }
+#releases {
+    position: relative;
+}
+
+#releases h1 {
+    position: absolute;
+    bottom: 100%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 

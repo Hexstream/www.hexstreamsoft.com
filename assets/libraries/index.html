@@ -44,7 +44,7 @@
         <p class="description">30+ ready-to-use libraries in Quicklisp, with many more to come!</p>
       </header>
 
-      <nav class="tab-groups" id="libraries-index">
+      <nav class="tab-groups" id="libraries">
 
         <nav class="tabs contains-title">
           <h1><a>Macros</a></h1>
@@ -211,22 +211,27 @@
 
       </nav>
 
-      <nav class="tabs" id="misc-index">
-        <ul>
-          <li class="contains-children">
-            <a href="releases/">Releases</a>
-            <ul>
-              <li>
-                <a href="releases/latest-versions/">Latest versions</a>
-              </li>
-              <li>
-                <a href="releases/timeline/">Timeline</a>
-              </li>
-            </ul>
-          </li>
-          <li><a href="dependencies/">Dependencies</a></li>
-          <li><a href="external-pages-xref/">External pages xref</a></li>
-        </ul>
+      <nav class="tab-groups" id="tabs">
+
+        <nav class="tabs contains-title" id="releases">
+          <h1><a href="releases/">Releases</a></h1>
+          <ul>
+            <li>
+              <a href="releases/latest-versions/">Latest versions</a>
+            </li>
+            <li>
+              <a href="releases/timeline/">Timeline</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="tabs">
+          <ul>
+            <li><a href="dependencies/">Dependencies</a></li>
+            <li><a href="external-pages-xref/">External pages xref</a></li>
+          </ul>
+        </nav>
+
       </nav>
 
       <p id="legend"><b>Legend:</b> <span class="modern">Updated to my modern standards</span>, <span class="update-pending">major update pending</span>, <span class="deprecated">mostly deprecated</span>.</p>
