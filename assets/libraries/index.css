@@ -57,6 +57,14 @@
     margin-right: 0;
 }
 
+a.self-link {
+    color: inherit;
+}
+
+.contains-self-link:target a.self-link {
+    text-decoration: underline;
+}
+
 
 #legend, #sorry-undocumented {
     text-align: center;
