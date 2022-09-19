@@ -5,6 +5,15 @@
 }
 
 
+a.self-link {
+    color: inherit;
+}
+
+.contains-self-link:target a.self-link {
+    text-decoration: underline;
+}
+
+
 #libraries .tabs {
     flex-flow: column;
     align-items: center;
@@ -46,23 +55,19 @@
     margin-top: 2em;
 }
 
-#releases {
+#tabs #highlights {
+    font-weight: bold;
+}
+
+#tabs #releases {
     position: relative;
 }
 
-#releases h1 {
+#tabs #releases h1 {
     position: absolute;
     bottom: 100%;
     margin-left: 0;
     margin-right: 0;
-}
-
-a.self-link {
-    color: inherit;
-}
-
-.contains-self-link:target a.self-link {
-    text-decoration: underline;
 }
 
 
