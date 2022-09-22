@@ -5,46 +5,95 @@
 }
 
 
-a.self-link {
+.contains-self-link > h1 a.self-link {
     color: inherit;
+    text-decoration: none;
 }
 
-.contains-self-link:target a.self-link {
+.contains-self-link:target > h1 a.self-link {
     text-decoration: underline;
 }
 
 
-#libraries .tabs {
+#libraries {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#libraries h1 {
+    margin-top: 0.25rem;
+    text-align: center;
+}
+
+#libraries .group {
+    display: flex;
     flex-flow: column;
     align-items: center;
 }
 
-@media (max-width: 55em) {
-    #libraries .tabs:first-child {
+#libraries .group > h1 {
+    margin: 0.25em;
+    font-size: medium;
+}
+
+#libraries .group > .body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border-radius: 1.4em;
+    border-top: medium solid transparent;
+}
+
+#libraries .group.contains-self-link > .body {
+    border-top: medium solid black;
+}
+
+/* Prevent libraries in nameless group from being misinterpreted as being part of macros group. */
+@media (max-width: 32.375em) {
+    #libraries .group:not(.contains-self-link) > .body {
+        border-top: medium solid black;
+    }
+}
+
+
+#libraries .top-bottom {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 27.75em) {
+    #libraries .top-bottom {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
+
+#libraries .tabs {
+    margin-top: 0;
+}
+
+#libraries .tabs ul {
+    flex-flow: column;
+}
+
+@media (max-width: 52.75em) {
+    #libraries #macros {
         margin-bottom: -1.5em;
     }
 }
 
-#libraries .tabs.contains-title > h1 {
-    margin-left: 0;
-    margin-right: 0;
-}
 
 #libraries .tabs ul > li.contains-children {
     align-items: center;
 }
 
-#libraries .tabs ul > li.contains-children > ul {
-    flex-flow: column;
-    font-size: initial;
-}
-
-#libraries .tabs ul > li.contains-children > ul > li {
+#libraries .libraries .tabs ul > li {
     text-align: left;
 }
 
-
-#libraries .tabs > ul > li > a {
+#libraries .libraries h1 a {
     font-size: larger;
     font-weight: bold;
     align-self: stretch;

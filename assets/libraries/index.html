@@ -33,7 +33,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2022-09-19">19 september 2022</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2022-09-22">22 september 2022</time><span>.</span></p>
 
     </nav>
 
@@ -44,169 +44,209 @@
         <p class="description">30+ ready-to-use libraries in Quicklisp, with many more to come!</p>
       </header>
 
-      <nav class="tab-groups" id="libraries">
+      <nav id="libraries">
 
-        <nav class="tabs contains-title contains-self-link" id="macros">
+        <nav class="group contains-self-link" id="macros">
+
           <h1><a href="#macros" class="self-link">Macros</a></h1>
-          <ul>
-            <li class="contains-children">
-              <a>Simple macros</a>
-              <ul>
-                <li class="deprecated">
-                  <a href="map-bind/">map-bind</a>
-                </li>
-                <li class="update-pending">
-                  <a href="positional-lambda/">positional-lambda</a>
-                </li>
-                <li class="modern">
-                  <a href="trivial-jumptables/">trivial-jumptables</a>
-                </li>
-                <li class="modern">
-                  <a href="with-output-to-stream/">with-output-to-stream</a>
-                </li>
-                <li>
-                  <a href="enhanced-eval-when/">enhanced-eval-when</a>
-                </li>
-                <li>
-                  <a href="enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a>
-                </li>
-                <li class="modern">
-                  <a href="evaled-when/">evaled-when</a>
-                </li>
-                <li>
-                  <a href="macro-level/">macro-level</a>
-                </li>
-                <li class="modern">
-                  <a href="with-shadowed-bindings/">with-shadowed-bindings</a>
-                </li>
-                <li class="modern">
-                  <a href="first-time-value/">first-time-value</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contains-children">
-              <a>Extensible macros</a>
-              <ul>
-                <li>
-                  <a href="its/">its</a>
-                </li>
-                <li class="update-pending">
-                  <a href="cartesian-product-switch/">cartesian-product-switch</a>
-                </li>
-                <li class="update-pending">
-                  <a href="place-modifiers/">place-modifiers</a>
-                </li>
-                <li class="update-pending">
-                  <a href="anaphoric-variants/">anaphoric-variants</a>
-                </li>
-                <li class="deprecated">
-                  <a href="multiple-value-variants/">multiple-value-variants</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contains-children">
-              <a>Macro utilities</a>
-              <ul>
-                <li>
-                  <a href="parse-number-range/">parse-number-range</a>
-                </li>
-                <li>
-                  <a href="bubble-operator-upwards/">bubble-operator-upwards</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+
+          <div class="body">
+
+            <nav class="libraries contains-self-link" id="simple-macros">
+              <h1><a href="#simple-macros" class="self-link">Simple macros</a></h1>
+              <nav class="tabs">
+                <ul>
+                  <li class="deprecated">
+                    <a href="map-bind/">map-bind</a>
+                  </li>
+                  <li class="update-pending">
+                    <a href="positional-lambda/">positional-lambda</a>
+                  </li>
+                  <li class="modern">
+                    <a href="trivial-jumptables/">trivial-jumptables</a>
+                  </li>
+                  <li class="modern">
+                    <a href="with-output-to-stream/">with-output-to-stream</a>
+                  </li>
+                  <li>
+                    <a href="enhanced-eval-when/">enhanced-eval-when</a>
+                  </li>
+                  <li>
+                    <a href="enhanced-multiple-value-bind/">enhanced-multiple-value-bind</a>
+                  </li>
+                  <li class="modern">
+                    <a href="evaled-when/">evaled-when</a>
+                  </li>
+                  <li>
+                    <a href="macro-level/">macro-level</a>
+                  </li>
+                  <li class="modern">
+                    <a href="with-shadowed-bindings/">with-shadowed-bindings</a>
+                  </li>
+                  <li class="modern">
+                    <a href="first-time-value/">first-time-value</a>
+                  </li>
+                </ul>
+              </nav>
+            </nav>
+
+            <div class="top-bottom">
+
+              <nav class="libraries contains-self-link" id="extensible-macros">
+                <h1><a href="#extensible-macros" class="self-link">Extensible macros</a></h1>
+                <nav class="tabs">
+                  <ul>
+                    <li>
+                      <a href="its/">its</a>
+                    </li>
+                    <li class="update-pending">
+                      <a href="cartesian-product-switch/">cartesian-product-switch</a>
+                    </li>
+                    <li class="update-pending">
+                      <a href="place-modifiers/">place-modifiers</a>
+                    </li>
+                    <li class="update-pending">
+                      <a href="anaphoric-variants/">anaphoric-variants</a>
+                    </li>
+                    <li class="deprecated">
+                      <a href="multiple-value-variants/">multiple-value-variants</a>
+                    </li>
+                  </ul>
+                </nav>
+              </nav>
+
+              <nav class="libraries contains-self-link" id="macro-utilities">
+                <h1><a href="#macro-utilities" class="self-link">Macro utilities</a></h1>
+                <nav class="tabs">
+                  <ul>
+                    <li>
+                      <a href="parse-number-range/">parse-number-range</a>
+                    </li>
+                    <li>
+                      <a href="bubble-operator-upwards/">bubble-operator-upwards</a>
+                    </li>
+                  </ul>
+                </nav>
+              </nav>
+
+            </div>
+
+          </div>
+
         </nav>
 
-        <nav class="tabs contains-title">
+        <nav class="group">
+
           <h1><a>&nbsp;</a></h1>
-          <ul>
-            <li class="contains-children">
-              <a href="https://clos-mop.hexstreamsoft.com/" target="_blank">MOP</a>
-              <ul>
-                <li class="modern">
-                  <a href="cesdi/">cesdi</a>
-                </li>
-                <li class="modern">
-                  <a href="enhanced-find-class/">enhanced-find-class</a>
-                </li>
-                <li class="modern">
-                  <a href="class-options/">class-options</a>
-                </li>
-                <li class="modern">
-                  <a href="compatible-metaclasses/">compatible-metaclasses</a>
-                </li>
-                <li class="modern">
-                  <a href="object-class/">object-class</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contains-children">
-              <a>Data structures</a>
-              <ul>
-                <li class="modern">
-                  <a href="definitions-systems/">definitions-systems</a>
-                </li>
-                <li>
-                  <a href="incognito-keywords/">incognito-keywords</a>
-                </li>
-                <li class="deprecated">
-                  <a href="symbol-namespaces/">symbol-namespaces</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contains-children">
-              <a>Uncategorized</a>
-              <ul>
-                <li>
-                  <a href="clhs/">clhs</a>
-                </li>
-                <li class="modern">
-                  <a href="enhanced-boolean/">enhanced-boolean</a>
-                </li>
-                <li class="modern">
-                  <a href="enhanced-typep/">enhanced-typep</a>
-                </li>
-                <li class="modern">
-                  <a href="fakenil/">fakenil</a>
-                </li>
-                <li class="modern">
-                  <a href="simple-guess/">simple-guess</a>
-                </li>
-                <li class="deprecated">
-                  <a href="place-utils/">place-utils</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+
+          <div class="body">
+
+            <nav class="libraries contains-self-link" id="mop">
+              <h1><a href="#mop" class="self-link">MOP</a></h1>
+              <nav class="tabs">
+                <ul>
+                  <li class="modern">
+                    <a href="cesdi/">cesdi</a>
+                  </li>
+                  <li class="modern">
+                    <a href="enhanced-find-class/">enhanced-find-class</a>
+                  </li>
+                  <li class="modern">
+                    <a href="class-options/">class-options</a>
+                  </li>
+                  <li class="modern">
+                    <a href="compatible-metaclasses/">compatible-metaclasses</a>
+                  </li>
+                  <li class="modern">
+                    <a href="object-class/">object-class</a>
+                  </li>
+                </ul>
+              </nav>
+            </nav>
+
+            <nav class="libraries contains-self-link" id="data-structures">
+              <h1><a href="#data-structures" class="self-link">Data structures</a></h1>
+              <nav class="tabs">
+                <ul>
+                  <li class="modern">
+                    <a href="definitions-systems/">definitions-systems</a>
+                  </li>
+                  <li>
+                    <a href="incognito-keywords/">incognito-keywords</a>
+                  </li>
+                  <li class="deprecated">
+                    <a href="symbol-namespaces/">symbol-namespaces</a>
+                  </li>
+                </ul>
+              </nav>
+            </nav>
+
+            <nav class="libraries contains-self-link" id="uncategorized">
+              <h1><a href="#uncategorized" class="self-link">Uncategorized</a></h1>
+              <nav class="tabs">
+                <ul>
+                  <li>
+                    <a href="clhs/">clhs</a>
+                  </li>
+                  <li class="modern">
+                    <a href="enhanced-boolean/">enhanced-boolean</a>
+                  </li>
+                  <li class="modern">
+                    <a href="enhanced-typep/">enhanced-typep</a>
+                  </li>
+                  <li class="modern">
+                    <a href="fakenil/">fakenil</a>
+                  </li>
+                  <li class="modern">
+                    <a href="simple-guess/">simple-guess</a>
+                  </li>
+                  <li class="deprecated">
+                    <a href="place-utils/">place-utils</a>
+                  </li>
+                </ul>
+              </nav>
+            </nav>
+
+          </div>
+
         </nav>
 
-        <nav class="tabs contains-title contains-self-link" id="undocumented">
+        <nav class="group contains-self-link" id="undocumented">
+
           <h1><a href="#undocumented" class="self-link">Undocumented</a></h1>
-          <ul>
-            <li class="contains-children">
-              <a>MOP</a>
-              <ul>
-                <li>
-                  <a href="inheriting-readers/">inheriting-readers</a>
-                </li>
-                <li>
-                  <a href="enhanced-defclass/">enhanced-defclass</a>
-                </li>
-                <li>
-                  <a href="canonicalized-initargs/">canonicalized-initargs</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contains-children">
-              <a>Data structures</a>
-              <ul>
-                <li>
-                  <a href="shared-preferences/">shared-preferences</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+
+          <div class="body">
+
+            <nav class="libraries contains-self-link" id="undocumented_mop">
+              <h1><a href="#undocumented_mop" class="self-link">MOP</a></h1>
+              <nav class="tabs">
+                <ul>
+                  <li>
+                    <a href="inheriting-readers/">inheriting-readers</a>
+                  </li>
+                  <li>
+                    <a href="enhanced-defclass/">enhanced-defclass</a>
+                  </li>
+                  <li>
+                    <a href="canonicalized-initargs/">canonicalized-initargs</a>
+                  </li>
+                </ul>
+              </nav>
+            </nav>
+
+            <nav class="libraries contains-self-link" id="undocumented_data-structures">
+              <h1><a href="#undocumented_data-structures" class="self-link">Data structures</a></h1>
+              <nav class="tabs">
+                <ul>
+                  <li>
+                    <a href="shared-preferences/">shared-preferences</a>
+                  </li>
+                </ul>
+              </nav>
+            </nav>
+
+          </div>
+
         </nav>
 
       </nav>
