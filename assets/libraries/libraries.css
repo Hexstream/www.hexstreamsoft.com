@@ -35,11 +35,11 @@ main .tags .tag.license {
 }
 
 main .tags .tag.quicklisp {
-    background-image: url("https://non-free.hexstream.dev/global.hexstream.dev/images/logos/quicklisp.svg");
+    background-image: url("https://global.hexstream.dev/non-free/images/logos/quicklisp.svg");
 }
 
 main .tags .tag.github {
-    background-image: url("https://non-free.hexstream.dev/global.hexstream.dev/images/logos/github.svg");
+    background-image: url("https://global.hexstream.dev/non-free/images/logos/github.svg");
 }
 
 
