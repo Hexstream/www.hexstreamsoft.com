@@ -11,24 +11,24 @@ p {
     text-align: center;
 }
 
-td p {
+table td p {
     text-align: left;
+}
+
+table td > a:only-child:hover {
+    text-decoration: underline;
 }
 
 table th.name {
     text-align: center;
 }
 
-table .link-cell {
-    min-width: 8em;
-}
-
-td {
-    padding: 0;
-}
-
-th.name {
+table td.name {
     text-align: center;
+}
+
+table td.comments {
+    padding: 0;
 }
 
 #introduction + section > h1 {
