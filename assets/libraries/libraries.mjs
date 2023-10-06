@@ -21,6 +21,9 @@ const libraries = [
         name: "enhanced-eval-when"
     },
     {
+        name: "enhanced-unwind-protect"
+    },
+    {
         name: "enhanced-multiple-value-bind"
     },
     {
