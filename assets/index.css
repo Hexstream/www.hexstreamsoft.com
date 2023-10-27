@@ -148,3 +148,25 @@
 #news .news-item.moved:target {
     display: block;
 }
+
+
+main section > * > li {
+    overflow-x: initial;
+}
+
+#over-9000 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+#news .news-item[id="6_october_2023"] {
+    margin-top: 9.75em;
+}
+
+@media (max-width: 31em) {
+    #news .news-item[id="6_october_2023"] {
+        margin-top: 11.3em;
+    }
+}
