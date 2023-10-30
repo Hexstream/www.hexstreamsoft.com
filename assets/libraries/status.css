@@ -1,0 +1,27 @@
+.modern {
+    color: green;
+}
+
+.update-pending {
+    color: orangered;
+}
+
+.deprecated {
+    color: crimson;
+}
+
+.modern a,
+.update-pending a,
+.deprecated a {
+    color: inherit;
+}
+
+
+#legend {
+    text-align: center;
+}
+
+.scroll + #legend {
+    margin-top: 0;
+    margin-bottom: -0.5em;
+}

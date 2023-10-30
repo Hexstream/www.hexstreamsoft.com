@@ -120,24 +120,6 @@
 }
 
 
-#legend, #sorry-undocumented {
+#sorry-undocumented {
     text-align: center;
-}
-
-.modern {
-    color: green;
-}
-
-.update-pending {
-    color: orangered;
-}
-
-.deprecated {
-    color: crimson;
-}
-
-.modern a,
-.update-pending a,
-.deprecated a {
-    color: inherit;
 }
