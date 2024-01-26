@@ -160,12 +160,6 @@ main section > * > li {
     right: 0;
 }
 
-#news .news-item[id="6_october_2023"] {
-    margin-top: 9.75em;
-}
-
-@media (max-width: 31em) {
-    #news .news-item[id="6_october_2023"] {
-        margin-top: 11.3em;
-    }
+#news .news-item[id="25_october_2023"] {
+    margin-bottom: 7.25em;
 }
