@@ -106,14 +106,13 @@
 }
 
 
-#best-viewed-in {
+#powered-by-cloudflare {
     border-top: dashed medium #DDDDDD;
 }
 
-#best-viewed-in p {
+#powered-by-cloudflare p {
     text-align: center;
     margin: 0.7em 0;
-    opacity: 0.6;
 }
 
 .navlist > section .quick-links {
