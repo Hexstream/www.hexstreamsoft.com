@@ -43,8 +43,7 @@ main .tags .tag.github {
 }
 
 
-main .tags .tag.license .h,
-main .tags .tag.quicklisp .h {
+main .tags .tag:is(.license, .quicklisp) .h {
     display: none;
 }
 
@@ -74,7 +73,7 @@ main .tags .tag a {
     text-decoration: none;
 }
 
-main .tags .tag a[href]:hover, main .tags .tag a[href]:focus {
+main .tags .tag a[href]:is(:hover, :focus) {
     text-decoration: underline;
 }
 

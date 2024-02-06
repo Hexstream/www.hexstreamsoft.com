@@ -37,7 +37,7 @@
     background-color: #ECECEC;
 }
 
-#graph a:hover, #graph a:focus {
+#graph a:is(:hover, :focus) {
     text-decoration: underline;
 }
 

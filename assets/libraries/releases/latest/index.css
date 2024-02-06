@@ -6,7 +6,7 @@
     font-size: medium;
 }
 
-main table .latest-date, main table .quicklisp-since {
+main table :is(.latest-date, .quicklisp-since) {
     text-align: right;
 }
 

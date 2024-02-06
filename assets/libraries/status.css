@@ -10,9 +10,7 @@
     color: crimson;
 }
 
-.modern a,
-.update-pending a,
-.deprecated a {
+:is(.modern, .update-pending, .deprecated) a {
     color: inherit;
 }
 
