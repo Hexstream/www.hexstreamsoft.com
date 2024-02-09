@@ -12,7 +12,7 @@
     margin: 0;
 }
 
-.prominent .notice:before {
+.prominent .notice::before {
     content: "";
     flex: none;
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@
     opacity: 0.75;
 }
 
-.prominent #unlicense:before {
+.prominent #unlicense::before {
     background-image: url("https://global.hexstream.dev/images/logos/public-domain.svg");
 }
 
@@ -44,7 +44,7 @@
         text-align: left;
     }
 
-    .prominent #unlicense:before {
+    .prominent #unlicense::before {
         left: 0;
     }
 }
@@ -62,7 +62,7 @@
         transform: initial;
     }
 
-    .prominent .notice:before {
+    .prominent .notice::before {
         display: none;
     }
 }
