@@ -11,7 +11,7 @@ main .tags.contains-groups > .group.prominent .tag {
     background-repeat: no-repeat;
     background-position: 0.25em center;
     background-size: auto 70%;
-    opacity: 1;
+    opacity: revert;
 }
 
 main .tags.contains-groups > .group.prominent .tag:hover .h {
@@ -69,12 +69,8 @@ main .tags .tag.hv {
     white-space: normal;
 }
 
-main .tags .tag a {
+main .tags .tag a:where(:not([href]:is(:hover, :focus))) {
     text-decoration: none;
-}
-
-main .tags .tag a[href]:is(:hover, :focus) {
-    text-decoration: underline;
 }
 
 

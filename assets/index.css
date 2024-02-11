@@ -29,10 +29,10 @@
 }
 
 .navlist section.contains-extras > .extras .new a {
-    color: green;
-    font-weight: bold;
-    opacity: 1;
     text-align: right;
+    font-weight: bold;
+    color: green;
+    opacity: revert;
 }
 
 .navlist section.new h1 {
@@ -150,7 +150,7 @@
 
 
 main section > * > li {
-    overflow-x: initial;
+    overflow-x: revert;
 }
 
 #over-9000 {

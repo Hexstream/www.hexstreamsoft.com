@@ -59,7 +59,7 @@
     }
 
     .prominent > .tabs {
-        transform: initial;
+        transform: revert;
     }
 
     .prominent .notice::before {

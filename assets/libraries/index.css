@@ -7,11 +7,10 @@
 
 .contains-self-link > h1 a.self-link {
     color: inherit;
-    text-decoration: none;
 }
 
-.contains-self-link:target > h1 a.self-link {
-    text-decoration: underline;
+.contains-self-link:where(:not(:target)) > h1 a.self-link {
+    text-decoration: none;
 }
 
 

@@ -38,7 +38,7 @@
 }
 
 #graph a:is(:hover, :focus) {
-    text-decoration: underline;
+    text-decoration: revert;
 }
 
 #map-bind {
@@ -116,7 +116,7 @@
 }
 
 #graph svg .opacity-fix .dep.also-direct {
-    opacity: 1;
+    opacity: revert;
 }
 
 
