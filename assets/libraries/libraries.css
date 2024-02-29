@@ -8,7 +8,6 @@ main .tags.contains-groups > .group.prominent .tag {
     padding: 0.4em 0.6em;
     padding-left: 1.8em;
     margin-top: 0.7em;
-    background-repeat: no-repeat;
     background-position: 0.25em center;
     background-size: auto 70%;
     opacity: revert;

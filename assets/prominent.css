@@ -15,11 +15,8 @@
 .prominent .notice::before {
     content: "";
     flex: none;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
     width: 5rem;
     min-height: 5em;
-    background-size: contain;
     margin-right: 0.5rem;
     opacity: 0.75;
 }
