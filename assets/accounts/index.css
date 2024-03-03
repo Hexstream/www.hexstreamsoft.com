@@ -12,7 +12,7 @@ p {
 }
 
 table td p {
-    text-align: left;
+    text-align: initial;
 }
 
 table td > a:only-child:hover {

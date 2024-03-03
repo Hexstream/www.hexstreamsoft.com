@@ -7,7 +7,7 @@
 }
 
 main table :is(.latest-date, .quicklisp-since) {
-    text-align: right;
+    text-align: end;
 }
 
 main table tr:target .library-name a {

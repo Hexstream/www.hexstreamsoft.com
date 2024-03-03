@@ -89,7 +89,7 @@
 }
 
 #libraries .libraries .tabs ul > li {
-    text-align: left;
+    text-align: initial;
 }
 
 #libraries .libraries h1 a {

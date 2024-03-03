@@ -38,7 +38,7 @@
 
 @media (max-width: 36em) {
     .prominent .notice > div {
-        text-align: left;
+        text-align: initial;
     }
 
     .prominent #unlicense::before {
