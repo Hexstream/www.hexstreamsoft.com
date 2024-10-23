@@ -1,29 +1,34 @@
-.scroll.contains-table {
-    margin-left: 0;
-}
-
-.scroll.contains-table > table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 p {
     text-align: center;
 }
 
-table td p {
+
+section > .breadcrumbs-bar {
+    margin-bottom: 0;
+}
+
+section .scroll.contains-table {
+    margin-left: 0;
+}
+
+section .scroll.contains-table > table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section table td p {
     text-align: initial;
 }
 
-table td > a:only-child:hover {
+section table td > a:only-child:hover {
     text-decoration: revert;
 }
 
-table :is(th, td).name {
+section table :is(th, td).name {
     text-align: center;
 }
 
-table td.comments {
+section table td.comments {
     padding: 0;
 }
 
@@ -38,9 +43,8 @@ table td.comments {
     margin-top: 0;
 }
 
-#actively-used > h1 {
+#actively-used > .breadcrumbs-bar {
     margin-top: 0;
-    margin-bottom: 0;
 }
 
 #actively-used #email span {
