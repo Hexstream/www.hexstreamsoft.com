@@ -1,4 +1,8 @@
-p {
+main {
+    margin-bottom: 0;
+}
+
+main p {
     text-align: center;
 }
 
@@ -34,7 +38,7 @@ section table td.comments {
 
 
 #introduction {
-    margin-bottom: 0.5em;;
+    margin-bottom: 0.5em;
 }
 
 #introduction + .tab-groups + .tab-groups {
