@@ -60,6 +60,11 @@ section table td.comments {
     margin-right: 0.5em;
 }
 
+#introduction ~ .tab-groups div {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+}
 
 
 #actively-used {
