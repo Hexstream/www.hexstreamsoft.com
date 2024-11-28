@@ -14,29 +14,29 @@
 }
 
 
-#libraries {
+.groups {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
 
-#libraries h1 {
+.groups h1 {
     margin-top: 0.25rem;
     text-align: center;
 }
 
-#libraries .group {
+.groups .group {
     display: flex;
     flex-flow: column;
     align-items: center;
 }
 
-#libraries .group > h1 {
+.groups .group > h1 {
     margin: 0.25em;
     font-size: medium;
 }
 
-#libraries .group > .body {
+.groups .group > .body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -44,58 +44,43 @@
     border-top: medium solid transparent;
 }
 
-#libraries .group.contains-self-link > .body {
+.groups .group.contains-self-link > .body {
     border-top: medium solid black;
 }
 
-/* Prevent libraries in nameless group from being misinterpreted as being part of macros group. */
-@media (max-width: 32.375em) {
-    #libraries .group:not(.contains-self-link) > .body {
+/* Prevent libraries in nameless groups from being misinterpreted as being part of macros group. */
+@media (max-width: 51.5em) {
+    .groups .groups:not(:first-child) .group:not(.contains-self-link) > .body {
         border-top: medium solid black;
     }
 }
 
 
-#libraries .top-bottom {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-}
-
-@media (max-width: 27.75em) {
-    #libraries .top-bottom {
-        flex-flow: row wrap;
-        justify-content: center;
-    }
-}
-
-#libraries .tabs {
+.groups .tabs {
     margin-top: 0;
 }
 
-#libraries .tabs ul {
+.groups .tabs ul {
     flex-flow: column;
 }
 
 @media (max-width: 52.75em) {
-    #libraries #macros {
+    .groups #macros {
         margin-bottom: -1.5em;
     }
 }
 
+.groups #uncategorized .tabs ul li {
+    min-width: 6.9em;
+}
 
-#libraries .tabs ul > li.contains-children {
+
+.groups .tabs ul > li.contains-children {
     align-items: center;
 }
 
-#libraries .libraries .tabs ul > li {
+.groups .libraries .tabs ul > li {
     text-align: initial;
-}
-
-#libraries .libraries h1 a {
-    font-size: larger;
-    font-weight: bold;
-    align-self: stretch;
 }
 
 

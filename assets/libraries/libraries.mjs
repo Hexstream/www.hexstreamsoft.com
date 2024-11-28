@@ -6,16 +6,13 @@ export {
 
 const libraries = [
     {
-        name: "map-bind"
-    },
-    {
-        name: "positional-lambda"
-    },
-    {
-        name: "trivial-jumptables"
-    },
-    {
         name: "with-output-to-stream"
+    },
+    {
+        name: "enhanced-typep"
+    },
+    {
+        name: "enhanced-boolean"
     },
     {
         name: "enhanced-eval-when"
@@ -24,7 +21,19 @@ const libraries = [
         name: "enhanced-unwind-protect"
     },
     {
+        name: "enhanced-find-class"
+    },
+    {
         name: "enhanced-multiple-value-bind"
+    },
+    {
+        name: "map-bind"
+    },
+    {
+        name: "positional-lambda"
+    },
+    {
+        name: "trivial-jumptables"
     },
     {
         name: "evaled-when"
@@ -63,9 +72,6 @@ const libraries = [
         name: "cesdi"
     },
     {
-        name: "enhanced-find-class"
-    },
-    {
         name: "class-options"
     },
     {
@@ -85,12 +91,6 @@ const libraries = [
     },
     {
         name: "clhs"
-    },
-    {
-        name: "enhanced-boolean"
-    },
-    {
-        name: "enhanced-typep"
     },
     {
         name: "fakenil"
