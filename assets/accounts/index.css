@@ -11,15 +11,6 @@ section > .breadcrumbs-bar {
     margin-bottom: 0;
 }
 
-section .scroll.contains-table {
-    margin-left: 0;
-}
-
-section .scroll.contains-table > table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 section table td p {
     text-align: initial;
 }

@@ -5,11 +5,11 @@
 }
 
 
-.contains-self-link > h1 a.self-link {
+nav > h1 > a.self-link {
     color: inherit;
 }
 
-.contains-self-link:where(:not(:target)) > h1 a.self-link {
+nav:where(:not(:target)) > h1 > a.self-link {
     text-decoration: none;
 }
 
@@ -44,13 +44,13 @@
     border-top: medium solid transparent;
 }
 
-.groups .group.contains-self-link > .body {
+.groups .group:has(> h1 > a.self-link) > .body {
     border-top: medium solid black;
 }
 
 /* Prevent libraries in nameless groups from being misinterpreted as being part of macros group. */
 @media (max-width: 51.5em) {
-    .groups .groups:not(:first-child) .group:not(.contains-self-link) > .body {
+    .groups .groups:not(:first-child) .group:not(:has(> h1 > a.self-link)) > .body {
         border-top: medium solid black;
     }
 }
@@ -75,7 +75,7 @@
 }
 
 
-.groups .tabs ul > li.contains-children {
+.groups .tabs ul > li:has(ul) {
     align-items: center;
 }
 

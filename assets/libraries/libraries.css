@@ -1,9 +1,9 @@
-main .tags.contains-groups > .group.prominent {
+main .tags > .group.prominent {
     font-size: larger;
     margin-bottom: 0.5em;
 }
 
-main .tags.contains-groups > .group.prominent .tag {
+main .tags > .group.prominent .tag {
     position: relative;
     padding: 0.4em 0.6em;
     padding-left: 1.8em;
@@ -13,7 +13,7 @@ main .tags.contains-groups > .group.prominent .tag {
     opacity: revert;
 }
 
-main .tags.contains-groups > .group.prominent .tag:hover .h {
+main .tags > .group.prominent .tag:hover .h {
     display: block;
     position: absolute;
     bottom: 100%;
@@ -23,7 +23,7 @@ main .tags.contains-groups > .group.prominent .tag:hover .h {
     font-size: small;
 }
 
-main .tags.contains-groups > .group.prominent .tag:hover .h > span {
+main .tags > .group.prominent .tag:hover .h > span {
     display: none;
 }
 

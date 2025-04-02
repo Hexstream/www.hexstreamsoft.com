@@ -24,11 +24,11 @@
     border-bottom: thin solid rgba(0, 0, 0, 0.2);
 }
 
-.fit-content.contains-navlists {
+.fit-content:has(.navlists) {
     margin-top: 0;
 }
 
-.navlist section.contains-extras > .extras .new a {
+.navlist section > .extras .new a {
     text-align: end;
     font-weight: bold;
     color: green;
@@ -40,16 +40,16 @@
 }
 
 @media (max-width: 36em) {
-    .navlist section.contains-extras {
+    .navlist section:has(.extras) {
         flex-flow: column;
     }
 
-    .navlist section.contains-extras > .extras {
+    .navlist section > .extras {
         justify-content: flex-start;
         padding-left: 0.5em;
     }
 
-    .navlist section.contains-extras > .extras .new a br {
+    .navlist section > .extras .new a br {
         display: none;
     }
 }
