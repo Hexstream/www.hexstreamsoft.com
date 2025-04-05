@@ -1,5 +1,8 @@
-.quick-note {
-    margin: -0.5em auto 1.5em;
+#note {
+    display: table;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0.8em auto;
 }
 
 .navtable {
