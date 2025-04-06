@@ -1,3 +1,7 @@
+main {
+    margin-bottom: 0;
+}
+
 @media (max-width: 25em) {
     #page-header h1 {
         font-size: 13vw;
@@ -76,25 +80,19 @@
 
 
 #tabs {
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
 
 #tabs #highlights {
     font-weight: bold;
 }
 
-#tabs #releases {
-    position: relative;
-}
 
-#tabs #releases h1 {
-    position: absolute;
-    bottom: 100%;
-    margin-left: 0;
-    margin-right: 0;
+#legend {
+    margin-top: 1em;
 }
-
 
 #sorry-undocumented {
     text-align: center;
+    margin-bottom: 1.5em;
 }
