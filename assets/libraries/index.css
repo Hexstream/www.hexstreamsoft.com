@@ -26,9 +26,13 @@ main {
     align-items: center;
 }
 
-.groups .group > h1 {
+.groups .group h1 {
     margin: 0.25em;
     font-size: medium;
+}
+
+.groups .group .libraries h1 {
+    margin-bottom: 0;
 }
 
 .groups .group > .body {
