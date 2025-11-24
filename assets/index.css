@@ -133,6 +133,10 @@
     display: block;
 }
 
+#news #seriously-please-sponsor-me {
+    font-size: 1.18em;
+}
+
 
 main section > * > li {
     overflow-x: revert;
