@@ -87,20 +87,6 @@
 }
 
 
-#sponsors {
-    margin-top: 0;
-}
-
-#sponsors p {
-    font-size: larger;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 0.5em;
-    margin-bottom: 0;
-}
-
-
 #powered-by-cloudflare {
     border-top: dashed medium #DDDDDD;
 }
@@ -134,6 +120,10 @@
     background-image: url("https://global.hexstream.dev/non-free/images/logos/keybase.svg");
 }
 
+
+#news {
+    padding-top: 0;
+}
 
 #news .news-item.moved {
     display: none;

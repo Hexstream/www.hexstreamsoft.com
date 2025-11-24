@@ -31,10 +31,6 @@
     transform: translate(2.7em);
 }
 
-.prominent #unlicense {
-    margin-bottom: 1em;
-}
-
 
 @media (max-width: 36em) {
     .prominent .notice > div {
