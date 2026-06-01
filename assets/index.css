@@ -1,5 +1,13 @@
+#last-updated::after {
+    display: none;
+}
+
+main {
+    position: revert;
+}
+
 #page-header {
-    margin-bottom: 1.5em;
+    position: relative;
 }
 
 #page-header .description {
@@ -12,16 +20,23 @@
     text-decoration: none;
 }
 
-#hello {
+#page-header #anniversary {
     display: table;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto -0.4rem;
     text-align: center;
-    margin: 2rem auto;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    font-size: 1.1em;
-    font-style: italic;
-    border-top: thin solid rgba(0, 0, 0, 0.2);
-    border-bottom: thin solid rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+#page-header #anniversary span {
+    letter-spacing: 0.2em;
+}
+
+#page-header #anniversary a:is(:hover, :focus) {
+    text-decoration: underline;
 }
 
 .fit-content:has(.navlists) {
@@ -68,6 +83,20 @@
     #page-header p + p {
         margin-top: 0.4em;
     }
+
+    #page-header #anniversary {
+        margin-top: 0;
+        margin-bottom: -0.7rem;
+    }
+
+    #page-header #anniversary span {
+        font-size: larger;
+    }
+
+    #last-updated::after {
+        display: flex;
+    }
+
 }
 
 @media (max-width: 24em) {
@@ -82,7 +111,15 @@
     }
 
     #page-header {
+        position: revert;
         margin-top: -2em;
+    }
+
+    #page-header #anniversary {
+        bottom: revert;
+        top: 0;
+        padding-top: var(--breadcrumbs-link-vertical-padding);
+        margin-top: var(--top-nav-margin);
     }
 }
 
